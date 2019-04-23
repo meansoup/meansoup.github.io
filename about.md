@@ -1,3 +1,5 @@
-# About
+---
+title: About
+---
 
 ## meansoup
