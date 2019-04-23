@@ -1,3 +1,3 @@
-# Study
+now, I have only study page.
 
-study for code.
+## [Study](/study/study.md)
