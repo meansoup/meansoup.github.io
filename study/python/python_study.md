@@ -3,4 +3,4 @@ layout: normal
 title: Python Study
 ---
 
-## [kivy](kivy/kivy_study)
+## [kivy](../kivy/kivy_study)
