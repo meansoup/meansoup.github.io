@@ -1,7 +1,9 @@
+---
+layout: normal
+title: chapter 4
+---
 
-# chapter 4
-
-# 예제
+## 예제
 
 1. Screen과 ScreenManager의 사용
 2. color가 하위에까지 영향을 미치는 것
@@ -12,7 +14,7 @@
 7. use gestures
 8. behavior
 
-# 개념
+## 개념
 
 ## ScreenManager
 

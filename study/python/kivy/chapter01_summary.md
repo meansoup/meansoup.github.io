@@ -1,59 +1,59 @@
-
-chapter 1
-==========
+---
+layout: normal
+title: chapter 1
+---
 
 * kivy
-Android, iOS, Linux, windows, Mac OS ÀüºÎ µ¿ÀÛ  
-ÇÙ½É ºÎºĞÀ» CythonÀ¸·Î ±¸ÇöÇÏ°í ´ëºÎºĞÀÇ ±×·¡ÇÈ µ¿ÀÛÀ» directly GPU¿Í ¿¬°áÇÏ¿© ¼Óµµ°¡ ºü¸§  
+Android, iOS, Linux, windows, Mac OS ì „ë¶€ ë™ì‘  
+í•µì‹¬ ë¶€ë¶„ì„ Cythonìœ¼ë¡œ êµ¬í˜„í•˜ê³  ëŒ€ë¶€ë¶„ì˜ ê·¸ë˜í”½ ë™ì‘ì„ directly GPUì™€ ì—°ê²°í•˜ì—¬ ì†ë„ê°€ ë¹ ë¦„  
 
-* FooApp class ´Â ÀÚµ¿À¸·Î foo.kv¿Í ¿¬°áµÊ (FooApp class¸¦ °®´Â ÆÄÀÏ ¸íÀº »ó°ü ¾øÀ½)
+* FooApp class ëŠ” ìë™ìœ¼ë¡œ foo.kvì™€ ì—°ê²°ë¨ (FooApp classë¥¼ ê°–ëŠ” íŒŒì¼ ëª…ì€ ìƒê´€ ì—†ìŒ)
 
-¿¹Á¦
+ì˜ˆì œ
 ----------
 ```
-03 - ÀÌ·¸°Ô widgetÀ» personalize ÇÒ ¼ö ÀÖÀ½. py¿¡ ÇØ´ç À§Á¬ Å¬·¡½º »ı¼º
-04 - ÀÌ·¸°Ô widgetÀ» »ó¼ÓÇÏ¿© »ç¿ëÇÒ ¼ö ÀÖÀ½. MyButton@Button
-05 - layout µé Æ¯¼º È®ÀÎ °¡´É
-06 - <Layout>°°Àº base class·Î º¯°æ»çÇ×À» ÀüÃ¼ Àû¿ë°¡´É
+03 - ì´ë ‡ê²Œ widgetì„ personalize í•  ìˆ˜ ìˆìŒ. pyì— í•´ë‹¹ ìœ„ì ¯ í´ë˜ìŠ¤ ìƒì„±
+04 - ì´ë ‡ê²Œ widgetì„ ìƒì†í•˜ì—¬ ì‚¬ìš©í•  ìˆ˜ ìˆìŒ. MyButton@Button
+05 - layout ë“¤ íŠ¹ì„± í™•ì¸ ê°€ëŠ¥
+06 - <Layout>ê°™ì€ base classë¡œ ë³€ê²½ì‚¬í•­ì„ ì „ì²´ ì ìš©ê°€ëŠ¥
 07 - pagelayout
-08 - kv ÆÄÀÏµéÀ» Builder.load_file ·Î »ç¿ëÇÏ´Â µî kv È°¿ë
+08 - kv íŒŒì¼ë“¤ì„ Builder.load_file ë¡œ ì‚¬ìš©í•˜ëŠ” ë“± kv í™œìš©
 ```
 
-°³³ä
+ê°œë…
 ----------
 ```
 widget		kivy GUI component. the minimal graphical units.
-property	widgetÀÇ ¼Ó¼º Áß ÇÏ³ª (ex/ text)
-self		ÀÚ±â ÀÚ½Å
-root		°èÃş ÃÖ»óÀ§
-id		.kv¿¡¼­ ´Ù¸¥ À§Á¬¿¡¼­ Á¢±ÙÇÒ ¼ö ÀÖµµ·Ï ÇÏ´Â °ª
-
+property	widgetì˜ ì†ì„± ì¤‘ í•˜ë‚˜ (ex/ text)
+self		ìê¸° ìì‹ 
+root		ê³„ì¸µ ìµœìƒìœ„
+id		.kvì—ì„œ ë‹¤ë¥¸ ìœ„ì ¯ì—ì„œ ì ‘ê·¼í•  ìˆ˜ ìˆë„ë¡ í•˜ëŠ” ê°’
 property
 		x, right, center_x
 		y, top, center_y
-		width, height¸¦ °¢ self, root¿¡ ´ëÇØ ¾µ ¼ö ÀÖÀ½
+		width, heightë¥¼ ê° self, rootì— ëŒ€í•´ ì“¸ ìˆ˜ ìˆìŒ
 	
-		size_hint - 0~1 ÀÇ ºñÀ² Å©±â
+		size_hint - 0~1 ì˜ ë¹„ìœ¨ í¬ê¸°
 			size_hint_x, size_hint_y
-		pos_hint - 0~1 ÀÇ ºñÀ² À§Ä¡	
+		pos_hint - 0~1 ì˜ ë¹„ìœ¨ ìœ„ì¹˜	
 ```
 
 layout
 ----------
 ```
 1. FloatLayout
-	size_hint, pos_hint·Î Ã¢¿¡ ´ëÇÑ ºñÀ²·Î±¸¼º
+	size_hint, pos_hintë¡œ ì°½ì— ëŒ€í•œ ë¹„ìœ¨ë¡œêµ¬ì„±
 2. RelativeLayout
-	FloatLayout°ú µ¿ÀÏÇÑµ¥, layout¿¡ ´ëÇÑ ºñÀ²·Î ±¸¼º
+	FloatLayoutê³¼ ë™ì¼í•œë°, layoutì— ëŒ€í•œ ë¹„ìœ¨ë¡œ êµ¬ì„±
 3. GridLayout
-	Çà°ú ¿­·Î layout ±¸¼º
+	í–‰ê³¼ ì—´ë¡œ layout êµ¬ì„±
 4. BoxLayout
-	¼¼·Î³ª °¡·Î·Î ½×´Â ±¸¼º
+	ì„¸ë¡œë‚˜ ê°€ë¡œë¡œ ìŒ“ëŠ” êµ¬ì„±
 5. StackLayout
-	BoxLayout°ú µ¿ÀÏÇÑµ¥, °è¼Ó ¹æÇâÀ¸·Î ½×´Â ±¸¼º
+	BoxLayoutê³¼ ë™ì¼í•œë°, ê³„ì† ë°©í–¥ìœ¼ë¡œ ìŒ“ëŠ” êµ¬ì„±
 6. ScatterLayout
-	RelativeLayout°ú À¯»çÇÑµ¥, rotating, scaling, translating°ú °°Àº ¸ÖÆ¼ÅÍÄ¡ »ç¿ë
+	RelativeLayoutê³¼ ìœ ì‚¬í•œë°, rotating, scaling, translatingê³¼ ê°™ì€ ë©€í‹°í„°ì¹˜ ì‚¬ìš©
 7. PageLayout
-	¸ÖÆ¼ÆäÀÌÁö ÀÌÆåÆ®¸¦ ÁÖ°í, ÈçÈ÷ ´Ù¸¥ layoutµéÀ» ³»ºÎ¿¡ widgetÀ¸·Î »ç¿ë
-	swipe_threshold - ¾î´À ºñÀ²¸¸Å­ ´ç°Ü¾ß ÆäÀÌÁö°¡ ³Ñ¾î°¡´ÂÁö
+	ë©€í‹°í˜ì´ì§€ ì´í™íŠ¸ë¥¼ ì£¼ê³ , í”íˆ ë‹¤ë¥¸ layoutë“¤ì„ ë‚´ë¶€ì— widgetìœ¼ë¡œ ì‚¬ìš©
+	swipe_threshold - ì–´ëŠ ë¹„ìœ¨ë§Œí¼ ë‹¹ê²¨ì•¼ í˜ì´ì§€ê°€ ë„˜ì–´ê°€ëŠ”ì§€
 ```

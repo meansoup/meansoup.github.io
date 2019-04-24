@@ -1,7 +1,9 @@
+---
+layout: normal
+title: chapter 2
+---
 
-# chapter 2
-
-# 예제
+## 예제
 
 1. canvas 그리는 방법에 대한 예제(Triangle ~ Mesh)
 2. line을 원, 삼각형, 사각형 등으로 그리는 예제
@@ -12,7 +14,7 @@
 	toolbax.kv: Push/PopMatrix with canvas.after, self.x/y  
 	drawingspace.kv: default Push/PopMatrix with canvas.before  
 
-# 개념
+## 개념
 
 * **coordinate space**  
 	coordinate space는 제한되지 않으며, bottom-left corner of the screeon을 origin으로 함

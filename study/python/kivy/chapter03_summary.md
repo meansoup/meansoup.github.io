@@ -1,7 +1,9 @@
+---
+layout: normal
+title: chapter 3
+---
 
-# chapter 3
-
-# 예제
+## 예제
 
 1. id와 attribute 사용과 차이 구분 (.kv)
 2. touch event 사용과 comicwidgets의(py/kv) StickMan/DraggableWidgets의 관계
@@ -12,7 +14,7 @@
 7. kivy properties
 8. kivy properties advanced, root 주의
 
-# 개념
+## 개념
 
 * **id**
   * .kv 내에서만 접근 가능함
