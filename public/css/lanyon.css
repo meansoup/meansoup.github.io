@@ -35,13 +35,15 @@
  */
 
 /* Prevent scroll on narrow devices */
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,800');
+
 html,
 body {
   overflow-x: hidden;
 }
 
 html {
-  font-family: "PT Serif", Georgia, "Times New Roman", serif;
+  font-family: "Nanum Gothic", "PT Serif", Georgia, "Times New Roman", serif;
 }
 
 h1, h2, h3, h4, h5, h6 {

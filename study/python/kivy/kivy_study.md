@@ -7,11 +7,14 @@ title: Kivy
 
 0. [parctice code](https://www.packtpub.com/support)
 
-1. [chapter01](chapter01_summary.md)
-> GUI Basic - Building an Interface
-2. [chapter02](chapter02_summary.md)
-> Graphics - the Canvas
-3. [chapter03](chapter03_summary.md)
-> Widget Events - Binding Actions
-4. [chapter04](chapter04_summary.md)
-> Improving the User Experience
+1. [chapter01](../chapter01_summary)  
+    GUI Basic - Building an Interface
+
+2. [chapter02](../chapter02_summary)  
+    Graphics - the Canvas
+
+3. [chapter03](../chapter03_summary)  
+    Widget Events - Binding Actions
+
+4. [chapter04](../chapter04_summary)  
+    Improving the User Experience

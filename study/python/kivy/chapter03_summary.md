@@ -16,15 +16,19 @@ title: chapter 3
 
 ## 개념
 
-* **id**
-  * .kv 내에서만 접근 가능함
-  * 보통 맨 앞에 _를 붙이지만, 구분하기 위함이지 필수는 아님
-* **attribute**
-  * 어떤 widget에 attribute를 생성하고, id를 여기 넣어주면 그 attribute로 접근
-  * commiccreator.kv의 ToolBox에서 drawing_space attribute는 _drawing_space(id)를 가지고 있으며, python에서 drawing_space로 여기에 접근 가능(ex/01)
-  * root도 동일 방식 (ex/01)
+* **id**:  
+  .kv 내에서만 접근 가능함
+  보통 맨 앞에 _를 붙이지만, 구분하기 위함이지 필수는 아님
+
+* **attribute**:  
+  어떤 widget에 attribute를 생성하고, id를 여기 넣어주면 그 attribute로 접근
+  commiccreator.kv의 ToolBox에서 drawing_space attribute는 _drawing_space(id)를 가지고 있으며, python에서 drawing_space로 여기에 접근 가능(ex/01)
+  root도 동일 방식 (ex/01)
+
 * **root**: base widget in the rule hierarchy
+
 * **self**: current widget
+
 * **app**: the instance of the application
 
 ## Touch event
@@ -34,11 +38,15 @@ touch event는 mouse, finger touch, magic pen touch으로 나뉘며, 아래 even
 * **on_touch_down**: new touch start
 * **on_touch_move**: the touch is moved
 * **on_touch_up**: the touch ends
-  * 각 touch event는 parameter(touch)로 여러 정보를 갖는 [MotionEvent](https://kivy.org/doc/stable/api-kivy.input.motionevent.html#kivy.input.motionevent.MotionEvent)를 받음
-  * return value가 hierarchy 구조상 parent에게 touch event를 신경 써야 하는가/아닌가를 알려주는 역할(ex/02 - comicwidgets.py)
-  * 유사하게 super.on_touch_~ 으로 chidren의 event를 신경쓸 수 있음
 
-* **collide_point**는 모든 widget이 app(coordinate space)에서 발생하는 touch event(MotionEvent)를 받지만, 그 event가 특정 widget에서 발생하는지 확인하는 보편적인 방법(ex/02 - comicwidgets.py)
+각 touch event는 parameter(touch)로 여러 정보를 갖는 [MotionEvent](https://kivy.org/doc/stable/api-kivy.input.motionevent.html#kivy.input.motionevent.MotionEvent)를 받음  
+
+return value가 hierarchy 구조상 parent에게 touch event를 신경 써야 하는가/아닌가를 알려주는 역할(ex/02 - comicwidgets.py)  
+
+유사하게 super.on_touch_~ 으로 chidren의 event를 신경쓸 수 있음
+
+* **collide_point**:  
+모든 widget이 app(coordinate space)에서 발생하는 touch event(MotionEvent)를 받지만, 그 event가 특정 widget에서 발생하는지 확인하는 보편적인 방법(ex/02 - comicwidgets.py)
 
 ## dynamic create/deleate canvas
 
@@ -68,24 +76,27 @@ RelativeLayout이 아닌 layout들은 그 상위에 대해 절대적인 coordina
 
 ## bind/unbind
 
-binding의 2가지 방법
-1. at .py, it works for every instance about this class  
-    touch_down의 경우 overriding하여 사용하고, 나머지에 대해 bind 함.  
-    we didn't want the `on_touch_move`, `on_touch_up` events active all the time.  
-    move와 up은 touch_down이 발생한 이후에 발생할 수 있으므로, 이 이벤트들을 항상 active 상태에 두는 것이 아니라, touch_down시에 bind를 통해 관리하도록 하는 것. (ex/05 - toolbox.py)
+binding에는 2가지 방법이 존재한다.
 
-    * [`#:import toolbox toolbox`](https://kivy.org/doc/stable/guide/lang.html#special-syntaxes)으로 toolbox를 .kv에 import 함. (ex/05)
-        1. `ToolCircle(toolbox.kv)` mapping with `ToolCircle(toolbox.py)` by `Builder.load_file('toolbox.kv')`
-        2. `ToolCircle(toolbox.py)` extends `ToolFigure(ToolButton)` in python
-        3. `ToolButton(toolbox.py)` mapping with `ToolButton(toolbox.kv)`
-        4. for use ToolCircle with full operation(py/kv) it needs to import py at kv
-    * `widget.canvas.add`의 사용과 함께, widgetize, end_figure에서 그리는 방법 (ex/05)
+### 1. at .py, it works for every instance about this class  
 
-2. at .kv, it works only for this instance  
-    특정 instance에 대해 bind하기 때문에 collide_point를 사용할 필요가 없음.
+touch_down의 경우 overriding하여 사용하고, 나머지에 대해 bind 함.  
+we didn't want the `on_touch_move`, `on_touch_up` events active all the time.  
+move와 up은 touch_down이 발생한 이후에 발생할 수 있으므로, 이 이벤트들을 항상 active 상태에 두는 것이 아니라, touch_down시에 bind를 통해 관리하도록 하는 것. (ex/05 - toolbox.py)
 
-    * **Button**: `on_press:`와 `on_release:` (ex/06 - generaloptions.kv)
-    * **ToggleButton**: `on_state` - .py에서 'down', 'normal'로 구분
+[`#:import toolbox toolbox`](https://kivy.org/doc/stable/guide/lang.html#special-syntaxes)으로 toolbox를 .kv에 import 함. (ex/05)  
+1. `ToolCircle(toolbox.kv)` mapping with `ToolCircle(toolbox.py)` by `Builder.load_file('toolbox.kv')`
+2. `ToolCircle(toolbox.py)` extends `ToolFigure(ToolButton)` in python
+3. `ToolButton(toolbox.py)` mapping with `ToolButton(toolbox.kv)`
+4. for use ToolCircle with full operation(py/kv) it needs to import py at kv
+* `widget.canvas.add`의 사용과 함께, widgetize, end_figure에서 그리는 방법 (ex/05)
+
+### 2. at .kv, it works only for this instance  
+
+특정 instance에 대해 bind하기 때문에 collide_point를 사용할 필요가 없음.
+
+* **Button**: `on_press:`와 `on_release:` (ex/06 - generaloptions.kv)
+* **ToggleButton**: `on_state` - .py에서 'down', 'normal'로 구분
 
 * `clear_widgets()`: 모든 widget을 지움 (ex/06 - generaloptions.py)
 * `remove_widget(x.children[0])`: 가장 최근에 추가된 widget을 지움

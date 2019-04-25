@@ -18,6 +18,7 @@ title: chapter 2
 
 * **coordinate space**  
 	coordinate space는 제한되지 않으며, bottom-left corner of the screeon을 origin으로 함
+
 * **canvas**  
 	widget에 vector shape를 그릴 수 있음  
 	canvas에 그리는게 아니라, canvas는 coordinate space에 그리는 명령들의 집합  
@@ -30,6 +31,7 @@ title: chapter 2
 * **vertax instruction**  
 	inherit from the VertexInstruction. 어떤걸 그릴 건지에 대한 것.
 	VertexInstruction을 상속하기 때문에 pos, size가 Widget거랑 다름. fixed value를 써야함
+	
 * **context instruction**  
 	inhefit from the CntextInstruction. 어디에, 어떻게 그릴지에 대한 것. (Color, Rotate, Translate, Scale)
 
@@ -39,12 +41,12 @@ title: chapter 2
 **instruction** | **description**
 ----------------|----------------
 Rectangle |
-Ellipse	| 부채꼴 같은 것. 0도가 12시</br> angle_start, angle_end 로 부채꼴을 그릴 수 있음</br> segments 는 몇 개의 선으로 원을 그리는지에 대한 것. 무제한의 선으로 원을 그려야 정확한 원이겠지만, default=180, segments : 3으로 하면 삼각형(ex/01)
+Ellipse	| 부채꼴 같은 것. 0도가 12시<br> angle_start, angle_end 로 부채꼴을 그릴 수 있음<br> segments 는 몇 개의 선으로 원을 그리는지에 대한 것. 무제한의 선으로 원을 그려야 정확한 원이겠지만, default=180, segments : 3으로 하면 삼각형(ex/01)
 Triangle | x,y points 3개 -> 삼각형
 Quad | points 4개 -> 사각형
 Line | points 2개 -> 선 (2개씩 여러 개로 여러 선 그릴 수 있음)
 Point | points 1개 -> 점 (여러 개로 여러 점 찍을 수 있음 ex/01)
-Bezier | 곡선. points를 attractors로 사용. (math formalism.. 수학적)</br> dash_length 는 점선의 길이, dash_offset 은 점선 사이의 거리
+Bezier | 곡선. points를 attractors로 사용. (math formalism.. 수학적)<br> dash_length 는 점선의 길이, dash_offset 은 점선 사이의 거리
 Mesh | 삼각형의 조합으로 이루어지며, 굉장히 수학적
 
 
@@ -56,7 +58,7 @@ coordinate space에 위와 같은 변화들을 주기 위해 사용하는 명령
 ----------------|----------------
 `source: 'kivy.png'` | 이미지를 넣을 수 있음
 `Color: rgba:` | color 설정 가능. 이미지가 있다고 해도, 이미지가 해당 컬러를 갖게 됨(ex/03)
-`Rotate: angle:` | 회전 </br>  `Rotate: axis:` - 어떤 축으로 할지 축을 지정(ex/05)
+`Rotate: angle:` | 회전 <br> `Rotate: axis:` - 어떤 축으로 할지 축을 지정(ex/05)
 `Translate: x: or y:` | 이동. 회전 상태라면, x, y의 방향이 반대가 됨
 `Scale: xyz:` | 각 축에 대한 size를 비율로 지정. 0.5배를 했다면, 원상복구를 위해선 2배를 해줘야 함
 
