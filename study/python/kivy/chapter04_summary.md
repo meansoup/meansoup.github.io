@@ -10,9 +10,11 @@ title: chapter 4
 3. color를 동적으로 setting
 4. stencilView
 5. scatter
-6. recording gestures
-7. use gestures
+6. gestures(recording) 
+7. gestures(use)
 8. behavior
+9. style
+10. factory
 
 ## 개념
 
@@ -119,9 +121,12 @@ ScreenManager는 항상 `Screen` widget을 가져아하고, 다른 Widget을 가
 ## behavior
 
   특정 widget의 classic behavior를 다른 behavior에 사용할 수 있음.  
+
   예를 들어, ButtonBehavior(on_press, onRelease를 사용하기 위한)를 Label이나 Image widget에 사용할 수 있음.  
+
   behavior는 widget의 appearance를 바꾸는 것이 아니라, functionallity만 넣어줌  
   **multiple inheritance**를 통해 사용할 수 있지만, touch가 중복되거나, 동일 property를 갖는 경우에 대해 조심해서 사용해야 함.  
+
   현재는,
    * ButtonBehavior
    * ToggleButtonBehavior
@@ -134,3 +139,23 @@ ScreenManager는 항상 `Screen` widget을 가져아하고, 다른 Widget을 가
 
 ## style
 
+**Window**:  
+window를 import 하여, 몇 가지 application window와 global parameter, event를 설정할 수 있음.  
+`clearcolor` property 를 통해 backgrond color를 설정할 수 있음.
+
+**bold**: bold property로 폰트 설정
+
+**background_normal**, **background_down**:  
+background_normal과 background_down property를 통해, Button의 background image를 설정할 수 있음.  
+  * `<Label>`, `<Button>`에 대한 적용을 한 후, 이를 comicceator에서 적용하여 전체 적용이 되도록 함. (ex/09 - style.kv)
+  * set할 때의 순서도 중요함. Button을 먼저 set하면, Label 것이 overwrite.
+
+## Factory
+
+새로운 class를 등록할 수 있음.
+
+`Factory.register()`으로, kivy에서 'name'으로 사용할 수 있는 class를 등록할 수 있음.  
+등록된 name은 .kv에서 사용 가능.
+`Factory.unregister()`으로, 등록된 name을 해제할 수 있음.
+  * Line을 unregister로 해제하고, register로 새로만든 Line을 등록함으로써 Line을 재정의할 수 있음.  
+    `kwargs` parameter가 Line의 모든 property를 가지고 있는데, 여기서 `kwargs['width']`를 사용하여 Line의 두깨를 바꿀 수 있음.
