@@ -5,7 +5,7 @@ title: Kivy
 
 ## kivy - interactive applications and games in python second edition
 
-0. [parctice code](https://www.packtpub.com/support)
+* [practice code](https://www.packtpub.com/support)
 
 1. [chapter01](../chapter01_summary)  
     GUI Basic - Building an Interface
@@ -18,3 +18,6 @@ title: Kivy
 
 4. [chapter04](../chapter04_summary)  
     Improving the User Experience
+
+5. [chapter05](../chapter05_summary)
+    multi touch game
