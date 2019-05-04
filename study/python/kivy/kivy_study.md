@@ -22,7 +22,5 @@ title: Kivy
 5. [chapter05](../chapter05_summary)  
     multi touch game
 
-<!--
 6. [chapter06](../chapter06_summary)  
     video player
->
