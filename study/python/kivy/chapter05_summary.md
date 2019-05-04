@@ -12,6 +12,7 @@ title: chapter 5
 4. **automatic bind** - dock.py
 5. **concatenation of animation** - fleet.py
 6. **multi touch** - shooter.py
+7. **combine animation**: main.py
   
 ## 개념
 
@@ -80,3 +81,15 @@ kivy는 각 touch에 대한 data들을 제공하여 이를 활용해 multi-touch
 mobile device에서는 keyboard를 사용하지 않아야 할 수 있음.  
 
 어떤 event에 `bind` 할 수 있는 method의 개수는 제한이 없음.
+
+## combining animation
+
+`+` , `&` 을 통해 animation을 combine할 수 있음.
+
+* `+` : one after another.
+* `*` : at the same time.
+
+`Animation1 &= Animation2` 으로 2가 1과 동시에 수행되도록 할 수 있고,  
+`Animation1 += Animation2` 으로 2가 1이 수행된 이후에 수행되도록 할 수 있음.
+
+`+` 의 동작은 [`on_complete`](##Animation)로 animation을 연결한 것과 유사하지만, `on_complete`에서 animation 두 개를 연결해 loop를 만든 것과 같은 동작을 수행할 수는 없음.

@@ -19,5 +19,10 @@ title: Kivy
 4. [chapter04](../chapter04_summary)  
     Improving the User Experience
 
-5. [chapter05](../chapter05_summary)
+5. [chapter05](../chapter05_summary)  
     multi touch game
+
+<!--
+6. [chapter06](../chapter06_summary)  
+    video player
+>
