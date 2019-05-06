@@ -32,4 +32,6 @@ kivy 에서는 video widget을 제공함.
 AsyncImage는 Image와 달리 image가 loading 되는 동안 program을 사용할 수 있도록 함.  
 큰 이미지를 받을 때 사용될 수 있음.
 
+-----
+
 이외에 sidebar, ScrollView와 같은 kivy widget들의 활용.
