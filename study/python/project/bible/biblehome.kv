@@ -1,0 +1,14 @@
+# File name: biblehome.kv
+#:kivy 1.9.0
+
+<BibleHome>:
+    Button:
+        text: 'Hello'
+        color: .8,.9,0,1
+        font_size: 32
+        size_hint: .4, .3
+        pos_hint: {'x': 0, 'top': 1}
+    BiblePage:
+        id: _bible_page
+        size_hint: 1, 1
+        pos_hint: {'x': 0, 'top': 1}

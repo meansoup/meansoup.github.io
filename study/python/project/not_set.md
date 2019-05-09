@@ -22,28 +22,6 @@ build: [link](https://groups.google.com/forum/#!topic/kivy-users/9dnRnvt9j-w)
 example: [link](https://github.com/compagni/Kivy-Sqlite3-Example/blob/master/KivyDB/main.py)
 
 
-## Sqlite3
-
-* [].sql to .db](https://stackoverflow.com/questions/2049109/how-do-i-import-sql-files-into-sqlite-3)
-    1. `sqlite3 database.sqlite3 < db.sql`
-        시간이 굉장히 오래걸림.
-
-* 예시
-
-```
-import sqlite3
-
-conn = sqlite3.connect("sample.splite3")  #.db도 사용, .sql의 경우 변환 필요
-cur = conn.cursor()
-
-sql = "select * from table"
-cur.execute(sql)
-
-res = cur.fetchall()
-# res = cur.fecthone()
-
-conn.close()
-```
 
 ## Q
 

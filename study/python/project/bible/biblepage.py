@@ -1,42 +1,46 @@
 import kivy
 kivy.require('1.9.0')
 
-from kivy.app import App
 from kivy.lang import Builder
-from kivy.uix.floatlayout import FloatLayout
+from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.scrollview import ScrollView
+from kivy.uix.button import Button
 
 from db.bibledb import BibleDB
 from bibleverse import BibleVerse
 
+# Builder.load_file('biblepage.kv')
 Builder.load_file('bibleverse.kv')
 Builder.load_file('bibleverselist.kv')
 
-class BiblePage(FloatLayout):
+class BiblePage(ScrollView):
     page_num = 0
     verse_num = 0
 
-    def __init__(self):
-        pass
+    def __init__(self, **kwargs):
+        super(self.__class__, self).__init__(**kwargs)
         self.find("")
 
     def find(self, condition):
-        db = BibleDB()
-        res = db.find(condition)
+        layout = BoxLayout(orientation='vertical')
+
+        bt = Button(text='hello world', font_size=10)
+        layout.add_widget(bt)
+        verse = BibleVerse("1", "aaaaa")
+        layout.add_widget(verse)
+
+        self.add_widget(layout)
+
+        # db = BibleDB()
+        # res = db.find(condition)gcgvg
         
         # print(res)
     
-    #     for verse in res:
-    #         self.add_verse(verse[2], verse[3])
+        # for verse in res:
+        #     self.add_verse(verse[2], verse[3])
 
-    # def add_verse(self, num, txt):
-    #     list = self.bible_verse_list
-    #     verse = BibleVerse(num, txt)
+    def add_verse(self, num, txt):
+        list = self.bible_verse_list
+        verse = BibleVerse(num, txt)
 
-    #     list.add_widget(verse)
-
-class BiblePageApp(App):
-    def build(self):
-        return BiblePage()
-
-if __name__ == "__main__":
-    BiblePageApp().run()
+        list.add_widget(verse)
