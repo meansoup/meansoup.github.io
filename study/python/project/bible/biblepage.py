@@ -26,8 +26,8 @@ class BiblePage(ScrollView):
 
         bt = Button(text='hello world', font_size=10)
         layout.add_widget(bt)
-        verse = BibleVerse("1", "aaaaa")
-        layout.add_widget(verse)
+        # verse = BibleVerse("1", "aaaaa")
+        # layout.add_widget(verse)
 
         self.add_widget(layout)
 
