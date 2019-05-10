@@ -24,3 +24,8 @@ title: Kivy
 
 6. [chapter06](../chapter06_summary)  
     video player
+
+## etc.
+
+* kivy widget constructor parametor를 추가하는 방법. [property 명시](https://kivy.org/doc/
+stable/api-kivy.properties.html)
