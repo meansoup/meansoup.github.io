@@ -2,7 +2,8 @@ import kivy
 kivy.require('1.9.0')
 
 from kivy.lang import Builder
-from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.gridlayout import GridLayout
+from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.scrollview import ScrollView
 from kivy.uix.button import Button
 from kivy.properties import ListProperty, StringProperty
@@ -11,41 +12,42 @@ from db.bibledb import BibleDB
 
 Builder.load_file('biblepage.kv')
 
-class BibleVerse(BoxLayout):
-    verse_num = StringProperty('')
-    verse_txt = StringProperty('')
+# https://stackoverflow.com/questions/46324709/kivy-label-multiline-text
 
-    def __init__(self, **kwargs):
-        super(BibleVerse, self).__init__(**kwargs)
-        print(str(kwargs))
-
-class BiblePage(ScrollView):
+class BibleVerse(GridLayout):
+    verse_number = StringProperty('')
+    verse_content = StringProperty('')
 
     def __init__(self, **kwargs):
         super(self.__class__, self).__init__(**kwargs)
+
+class BiblePage(ScrollView):
+    layout = None
+    db = None
+
+    def __init__(self, **kwargs):
+        super(self.__class__, self).__init__(**kwargs)
+        self.layout = GridLayout(cols=1, spacing=30, size_hint_y=None)
+        self.layout.bind(minimum_height=self.layout.setter('height'))
+        self.db = BibleDB()
+
         self.find("")
 
     def find(self, condition):
-        layout = BoxLayout(orientation='vertical')
+        self.add_widget(self.layout)
 
-        verse = BibleVerse(verse_num='1', verse_txt='a')
-        layout.add_widget(verse)
-
-        verse = BibleVerse(verse_num='2', verse_txt='b')
-        layout.add_widget(verse)
-
-        self.add_widget(layout)
-
-        # db = BibleDB()
-        # res = db.find(condition)gcgvg
+        verse_str = "1234567890qwertyuiopasdfghjklzxcvbnm1234567890qwertyuiopasdfghjklzxcvbnm1234567890qwertyuiopasdfghjklzxcvbnm1234567890qwertyuiopasdfghjklzxcvbnm1234567890qwertyuiopasdfghjklzxcvbnm1234567890qwertyuiopasdfghjklzxcvbnm1234567890qwertyuiopasdfghjklzxcvbnm1234567890qwertyuiopasdfghjklzxcvbnm1234567890qwertyuiopasdfghjklzxcvbnm1234567890qwertyuiopasdfghjklzxcvbnm1234567890qwertyuiopasdfghjklzxcvbnm1234567890qwertyuiopasdfghjklzxcvbnm1234567890qwertyuiopasdfghjklzxcvbnm1234567890qwertyuiopasdfghjklzxcvbnm1234567890qwertyuiopasdfghjklzxcvbnm1234567890qwertyuiopasdfghjklzxcvbnm1234567890qwertyuiopasdfghjklzxcvbnm1234567890qwertyuiopasdfghjklzxcvbnm1234567890qwertyuiopasdfghjklzxcvbnm1234567890qwertyuiopasdfghjklzxcvbnm"
         
-        # print(res)
-    
-        # for verse in res:
-        #     self.add_verse(verse[2], verse[3])
+        bible_verse = BibleVerse(verse_number=str("abc"), verse_content=verse_str, size_hint_y=.3)
+        self.layout.add_widget(bible_verse)
 
-    def add_verse(self, num, txt):
-        list = self.bible_verse_list
-        verse = BibleVerse(num, txt)
+        bible_verse = BibleVerse(verse_number=str("abc"), verse_content=verse_str, size_hint_y=.3)
+        self.layout.add_widget(bible_verse)
 
-        list.add_widget(verse)
+        res = self.db.find_chapter("1", "1")
+        self.add_verse_list(res)
+
+    def add_verse_list(self, list):
+        for verse in list:
+            bible_verse = BibleVerse(verse_number=str(verse[2]), verse_content=verse[3])
+            self.layout.add_widget(bible_verse)

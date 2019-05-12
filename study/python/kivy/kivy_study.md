@@ -27,5 +27,13 @@ title: Kivy
 
 ## etc.
 
-* kivy widget constructor parametor를 추가하는 방법. [property 명시](https://kivy.org/doc/
-stable/api-kivy.properties.html)
+**Widget Parameter**:  
+kivy widget constructor parametor를 추가하는 방법. [property 명시](https://kivy.org/doc/stable/api-kivy.properties.html).
+
+**font**:  
+한글폰트등의 폰트 적용 방법. 폰트도 StringProperty 임. [`font_name`으로 적용](https://kivy.org/doc/stable/api-kivy.uix.label.html#catering-for-unicode-languages).
+* [눈누](https://noonnu.cc/)에서 무료폰트를 확인할 수 있음.
+
+**connect .kv with .py**:  
+`self.ids.~`으로 접근하는 경우도 있으며,  
+`layout_content=ObjectProperty(None)`와 같이 Property를 생성하면, 해당 .kv 클래스에서 동일 name으로 사용하는 방식. (BiblePage 참고)

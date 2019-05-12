@@ -44,7 +44,8 @@ Android, iOS, Linux, windows, Mac OS 전부 동작
 3. GridLayout  
 	행과 열로 layout 구성
 4. BoxLayout  
-	세로나 가로로 쌓는 구성
+	세로나 가로로 쌓는 구성.  
+	BoxLayout은 child들이 채우는 형식으로 되어있어, ScrollView에 적합하지 않음. 즉, BoxLayout은 child들이 동일한 비율로 layout을 나눠서 채움. 따라서 height 등의 값이 먹히지 않았음
 5. StackLayout  
 	BoxLayout과 동일한데, 계속 방향으로 쌓는 구성
 6. ScatterLayout  

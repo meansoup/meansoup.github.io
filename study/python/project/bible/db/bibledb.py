@@ -8,12 +8,12 @@ class BibleDB():
         BASE_DIR = os.path.dirname(os.path.abspath(__file__)) 
         os.chdir(BASE_DIR)
 
-    def find(self, condition):
+    def find_chapter(self, book, chapter):
         if self.conn is None:
             self.conn = sqlite3.connect('bible.sqlite3')
         
         cur = self.conn.cursor()
-        query = "select * from bibleKorHRV" # where book = {0} and chapter = {1}".format(1, 1)
+        query = "select * from bibleKorHRV where book = {0} and chapter = {1}".format(book, chapter)
         cur.execute(query)
 
         res = cur.fetchall()

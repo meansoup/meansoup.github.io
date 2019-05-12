@@ -3,6 +3,8 @@ layout: normal
 title: Python Study
 ---
 
-## [kivy](../kivy/kivy_study)
+## [Kivy](../kivy/kivy_study)
+
+## [Grammer](../common/Grammer)
 
 ## [Database](../common/database)

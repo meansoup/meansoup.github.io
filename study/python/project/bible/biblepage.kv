@@ -2,11 +2,17 @@
 #:kivy 1.9.0
 
 <BibleVerse>:
-    Button:
-        id: verse_num
-        size_hint: .3, 1
-        text: 'a'
+    cols: 2
     Label:
-        id: verse_txt
-        size_hint: .7, 1
-        text: 'b'
+        id: verse_num
+        size_hint: .1, 1
+        text: root.verse_number
+        font_name: 'font/GyeonggiBatang_Regular.ttf'
+        halign: 'left'
+    Label:
+        id: verse_cont
+        size_hint: .9, 1
+        text: root.verse_content
+        font_name: 'font/GyeonggiBatang_Regular.ttf'
+        halign: 'left'
+        text_size: self.width, None
