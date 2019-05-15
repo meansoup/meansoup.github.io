@@ -1,20 +1,3 @@
-현상황
-page layout의 child들이 height가 적절하게 나오지 않음.
-
-
-[packaging android](https://kivy.org/doc/stable/guide/packaging-android.html)
-
-https://kivy.org/doc/stable/guide/packaging-android.html
-
-[python-for-android](https://github.com/kivy/python-for-android)를 통해 android package를 생성할 수 있음.  
-
-Buildozer 를 사용해서 전체 과정을 자동화할 수 있음.  
-
-## Buildozer
-
-전체 build 과정을 자동화하는 툴.
-현재는 kivy에서 이 방법을 추천하고 있음.  
-
 ## [plyer](https://github.com/kivy/plyer)
 
 plyer에서 여러 android API를 사용할 수 있도록 함.

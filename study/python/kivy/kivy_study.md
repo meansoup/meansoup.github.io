@@ -27,6 +27,8 @@ title: Kivy
 
 ## etc.
 
+[build](../build)
+
 **Widget Parameter**:  
 kivy widget constructor parametor를 추가하는 방법. [property 명시](https://kivy.org/doc/stable/api-kivy.properties.html).
 
@@ -37,3 +39,6 @@ kivy widget constructor parametor를 추가하는 방법. [property 명시](http
 **connect .kv with .py**:  
 `self.ids.~`으로 접근하는 경우도 있으며,  
 `layout_content=ObjectProperty(None)`와 같이 Property를 생성하면, 해당 .kv 클래스에서 동일 name으로 사용하는 방식. (BiblePage 참고)
+
+**label size**:  
+label의 text에 따라 size를 조절해주는 [코드](https://stackoverflow.com/questions/18670687/how-i-can-adjust-variable-height-text-property-kivy)
