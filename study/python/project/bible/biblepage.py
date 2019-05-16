@@ -20,7 +20,7 @@ class BiblePage(ScrollView):
 
     def __init__(self, **kwargs):
         super(self.__class__, self).__init__(**kwargs)
-        self.layout = GridLayout(cols=2, size_hint_y=None)
+        self.layout = GridLayout(cols=2, size_hint_y=None, spacing=10)
         self.layout.bind(minimum_height=self.layout.setter('height'))
         self.add_widget(self.layout)
         self.db = BibleDB()
@@ -36,7 +36,7 @@ class BiblePage(ScrollView):
             self.make_bible_verse(str(verse[2]), verse[3])
 
     def make_bible_verse(self, number, content):
-        self.layout.add_widget(Label(text=number, size_hint_x=.1, size_hint_y=None))
+        self.layout.add_widget(Label(text=number, size_hint_x=.1))
         self.layout.add_widget(self.make_sized_label(content))
 
     def make_sized_label(self, content):
