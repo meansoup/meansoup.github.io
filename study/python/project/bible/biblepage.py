@@ -12,23 +12,29 @@ from kivy.properties import ListProperty, StringProperty
 
 from db.bibledb import BibleDB
 
-Builder.load_file('font/fontlabel.kv')
-
 class BiblePage(ScrollView):
     layout = None
+    layout_exist = False
     db = None
 
     def __init__(self, **kwargs):
         super(self.__class__, self).__init__(**kwargs)
+        self.db = BibleDB()
+        
+        self.find({'book':'1', 'chapter':'1'})
+
+    def make_layout(self):
+        if self.layout_exist is True:
+            self.remove_widget(self.layout)
+
+        self.layout_exist = True
         self.layout = GridLayout(cols=2, size_hint_y=None, spacing=10)
         self.layout.bind(minimum_height=self.layout.setter('height'))
         self.add_widget(self.layout)
-        self.db = BibleDB()
 
-        self.find("")
-
-    def find(self, condition):
-        res = self.db.find_chapter("1", "1")
+    def find(self, book_info):
+        self.make_layout()
+        res = self.db.find_chapter(book_info['book'], book_info['chapter'])
         self.add_verse_list(res)
 
     def add_verse_list(self, list):
@@ -43,5 +49,4 @@ class BiblePage(ScrollView):
         label = Label(text=content, size_hint_y=None)
         label.bind(width=lambda s, w: s.setter('text_size')(s, (w, None)))
         label.bind(texture_size=label.setter('size'))
-
         return label

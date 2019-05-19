@@ -12,3 +12,6 @@ title: Grammer
 keword 형태로 parameter를 넘겨줄 수 있도록 하는데 사용 됨.  
 `key_name='key value'` 형태로 사용함.
 * 일반적으로 kivy 등에서 `**kwargs`를 사용하는 것은, keyword arguments의 약자.
+
+## with
+`with` 는 file에 접근할 때 주로 사용되며, close를 하지 않아도 자동으로 cloase를 해주어 편리하게 사용 됨.

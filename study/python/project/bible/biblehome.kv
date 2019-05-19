@@ -2,11 +2,24 @@
 #:kivy 1.9.0
 
 <BibleHome>:
+    bible_title: _action_previous
+    bible_page: _bible_page
+
     ActionBar:
+        size_hint: 1, .1
         top: root.height
+        disabled: False
+        ActionView:
+            ActionPrevious:
+                id: _action_previous
+                title: '창세기'
+                app_icon: ''
+            ActionTextInput:
+                id: _action_text_input
+            ActionButton:
+                on_press: root.search(_action_text_input.text)
 
     BiblePage:
         id: _bible_page
-        size_hint: None, None
-        size: 300, 500
-        pos_hint: {'x': 0, 'top': 1}
+        size_hint: 1, .9
+        pos_hint: {'x': 0, 'top': .9}
