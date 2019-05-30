@@ -12,10 +12,10 @@
         ActionView:
             ActionPrevious:
                 id: _action_previous
-                title: '창세기'
                 app_icon: ''
             ActionTextInput:
                 id: _action_text_input
+                on_text_validate: root.search(_action_text_input.text)
             ActionButton:
                 on_press: root.search(_action_text_input.text)
 

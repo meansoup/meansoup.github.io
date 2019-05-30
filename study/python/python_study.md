@@ -8,3 +8,5 @@ title: Python Study
 ## [Grammer](../common/grammer)
 
 ## [Database](../common/database)
+
+## [궁금증](../common/curious)

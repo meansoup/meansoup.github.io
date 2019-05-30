@@ -11,13 +11,17 @@ Builder.load_file('font/font.kv')
 Builder.load_file('actionitems.kv')
 
 # action bar
-# 검색 - edittext.  (+ 버튼이 있어야할까 없어야할까)
 # 현재 보는 말씀 ex. 창 1.1
 
 class BibleHome(FloatLayout):
+    def __init__(self, **kwargs):
+        super(self.__class__, self).__init__(**kwargs)
+        self.search("1 1")
+
     def search(self, words):
         bible_info = BibleSearchInfo().to_bible_info(words)
         self.bible_page.find(bible_info)
+        self.bible_title.title = bible_info["book_name"]
 
 class BibleHomeApp(App):
     def build(self):

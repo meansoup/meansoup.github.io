@@ -20,8 +20,6 @@ class BiblePage(ScrollView):
     def __init__(self, **kwargs):
         super(self.__class__, self).__init__(**kwargs)
         self.db = BibleDB()
-        
-        self.find({'book':'1', 'chapter':'1'})
 
     def make_layout(self):
         if self.layout_exist is True:
