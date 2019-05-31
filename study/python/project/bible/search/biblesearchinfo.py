@@ -4,20 +4,21 @@ import re
 import sys
 from enum import Enum
 
+BOOK_FULL_NAME_FILE = 'bible_info.csv'
+BIBLE_BOOK_MAX_CNT = 66
+
 class BookName(Enum):
     FULL = 0
     SHORT = 1
     NUM = 2
 
 class BibleSearchInfo:
-    BOOK_FULL_NAME_FILE = 'bible_info.csv'
-    BIBLE_BOOK_MAX_CNT = 66
     book_name = BookName.FULL
 
     def __init__(self):
         BASE_DIR = os.path.dirname(os.path.abspath(__file__)) 
         os.chdir(BASE_DIR)
-        with open(self.BOOK_FULL_NAME_FILE, 'r', encoding='utf-8') as f:
+        with open(BOOK_FULL_NAME_FILE, 'r', encoding='utf-8') as f:
             self.bible_info = list(csv.reader(f))
 
     def to_bible_info(self, words):
@@ -27,7 +28,7 @@ class BibleSearchInfo:
             if chapter_verse is False:
                 # TODO:: make bible name with full search.
                 pass
-            else
+            else:
                 return {'book_name':self.get_bible_name(book), 'book':book, 'chapter':chapter_verse[0]}
         else:
             # TODO:: make full search about input string.
@@ -36,19 +37,19 @@ class BibleSearchInfo:
         return {'book':'40', 'chapter':'1'}
 
     def bible_info_with_book(self, words):
-        for idx in range(self.BIBLE_BOOK_MAX_CNT):
+        for idx in range(BIBLE_BOOK_MAX_CNT):
             if words.startswith(self.bible_info[idx][BookName.FULL.value]):
                 print(str(self.bible_info[idx]) + " // " + str(BookName.FULL))
                 self.book_name = BookName.FULL
                 return idx + 1
 
-        for idx in range(self.BIBLE_BOOK_MAX_CNT):
+        for idx in range(BIBLE_BOOK_MAX_CNT):
             if words.startswith(self.bible_info[idx][BookName.SHORT.value]):
                 print(str(self.bible_info[idx]) + " // " + str(BookName.SHORT))
                 self.book_name = BookName.SHORT
                 return idx + 1
                 
-        for idx in reversed(range(self.BIBLE_BOOK_MAX_CNT)):
+        for idx in reversed(range(BIBLE_BOOK_MAX_CNT)):
             if words.startswith(str(idx + 1)):
                 print(str(self.bible_info[idx]) + " // " + str(BookName.NUM))
                 self.book_name = BookName.NUM
@@ -74,7 +75,7 @@ class BibleSearchInfo:
         else:
             if self.book_name is BookName.NUM:
                 return (chapter_verse[1], chapter_verse[2])
-            else 
+            else:
                 return (chapter_verse[0], chapter_verse[1])
 
     def get_bible_name(self, book):
