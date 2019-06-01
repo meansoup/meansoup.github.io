@@ -31,7 +31,7 @@ command failed에 대해서는 빨간색 command failed위의 마지막 로그�
 
 * [ErrorReturnCode_127](https://github.com/kivy/buildozer/issues/829)  
     `sudo apt-get install automake`  
-    `sudo apt-get install autoconf`  
+    `sudo apt-get install autoconf`   
     `sudo apt-get install libltdl-dev`  
 
 * [ErrorRetrunCode_1](https://github.com/kivy/buildozer/issues/678#issuecomment-431596608)  
