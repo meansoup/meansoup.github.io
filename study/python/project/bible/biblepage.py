@@ -32,7 +32,11 @@ class BiblePage(ScrollView):
 
     def find(self, book_info):
         self.make_layout()
-        res = self.db.find_chapter(book_info['book'], book_info['chapter'])
+        if book_info['book_name'] is "검색":
+            res = self.db.find_content(book_info['content'])
+        else:
+            res = self.db.find_chapter(book_info['book'], book_info['chapter'])
+        
         self.add_verse_list(res)
 
     def add_verse_list(self, list):

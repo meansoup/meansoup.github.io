@@ -45,7 +45,7 @@ class BibleDB():
         return res
 
 if __name__ == "__main__":
-    db = BibleDB();
+    db = BibleDB()
     res = db.find_content(["여호와", "하나님"])
 
     cnt = 0

@@ -22,19 +22,21 @@ class BibleSearchInfo:
             self.bible_info = list(csv.reader(f))
 
     def to_bible_info(self, words):
+        print("search: " + words)
         book = self.bible_info_with_book(words) 
         if book is not False:
             chapter_verse = self.bible_info_with_chapter_verse(words)
             if chapter_verse is False:
-                # TODO:: make bible name with full search.
-                pass
+                return self.find_content(words)
             else:
                 return {'book_name':self.get_bible_name(book), 'book':book, 'chapter':chapter_verse[0]}
         else:
-            # TODO:: make full search about input string.
-            pass
+            return self.find_content(words)
 
         return {'book':'40', 'chapter':'1'}
+
+    def find_content(self, words):
+        return {'book_name': "검색", 'content': words.split()}
 
     def bible_info_with_book(self, words):
         for idx in range(BIBLE_BOOK_MAX_CNT):
@@ -52,6 +54,7 @@ class BibleSearchInfo:
         for idx in reversed(range(BIBLE_BOOK_MAX_CNT)):
             if words.startswith(str(idx + 1)):
                 print(str(self.bible_info[idx]) + " // " + str(BookName.NUM))
+                print("``" + words + " -- " + str(idx + 1))
                 self.book_name = BookName.NUM
                 return idx + 1
 
@@ -92,3 +95,6 @@ if __name__ == "__main__":
     own.to_bible_info("66 1 4")
     own.to_bible_info("40 13 4")
     own.to_bible_info("1 32")
+
+    ret = own.to_bible_info("여호와 하나님")
+    print(ret['content'])
