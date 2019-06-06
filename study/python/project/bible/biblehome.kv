@@ -23,3 +23,19 @@
         id: _bible_page
         size_hint: 1, .9
         pos_hint: {'x': 0, 'top': .9}
+    
+    FloatButton:
+        size_hint_y: .1
+        width: self.height
+        pos_hint: {'y': .05}
+        x: self.y
+        on_press:
+            _bible_page.move_to_before()    
+
+    FloatButton:
+        size_hint_y: .1
+        width: self.height
+        pos_hint: {'y': .05}
+        x: root.right - self.y - self.width
+        on_press:
+            _bible_page.move_to_next()

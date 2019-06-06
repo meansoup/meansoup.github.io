@@ -16,6 +16,7 @@ class BiblePage(ScrollView):
     layout = None
     layout_exist = False
     db = None
+    old_book_info = None
 
     def __init__(self, **kwargs):
         super(self.__class__, self).__init__(**kwargs)
@@ -31,6 +32,7 @@ class BiblePage(ScrollView):
         self.add_widget(self.layout)
 
     def find(self, book_info):
+        self.old_book_info = book_info
         self.make_layout()
         if book_info['book_name'] is "검색":
             res = self.db.find_content(book_info['content'])
@@ -52,3 +54,11 @@ class BiblePage(ScrollView):
         label.bind(width=lambda s, w: s.setter('text_size')(s, (w, None)))
         label.bind(texture_size=label.setter('size'))
         return label
+
+    def move_to_before(self):
+        if self.book_info['book_name'] is not "검색":
+            self.old_book_info
+        print("before!!!!")
+
+    def move_to_next(self):
+        print("next!!!!")

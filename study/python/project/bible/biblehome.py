@@ -8,7 +8,8 @@ from biblepage import BiblePage
 from search.biblesearchinfo import BibleSearchInfo
 
 Builder.load_file('font/font.kv')
-Builder.load_file('actionitems.kv')
+Builder.load_file('widget/actionitems.kv')
+Builder.load_file('widget/floatbutton.kv')
 
 # action bar
 # 현재 보는 말씀 ex. 창 1.1
