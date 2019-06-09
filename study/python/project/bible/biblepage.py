@@ -10,6 +10,7 @@ from kivy.uix.label import Label
 
 from kivy.properties import ListProperty, StringProperty
 
+from bibleconstants import *
 from db.bibledb import BibleDB
 
 class BiblePage(ScrollView):
@@ -55,10 +56,33 @@ class BiblePage(ScrollView):
         label.bind(texture_size=label.setter('size'))
         return label
 
+    def calc_before_chapter(self):
+        book = self.old_book_info['book']
+        chapter = self.old_book_info['chapter']
+
+        if chapter is 1:
+            if book is 1:
+                return
+            print("calccccc")
+            self.old_book_info['book'] = book - 1
+            self.old_book_info['chapter'] = chapter_count[book]
+        else:
+            self.old_book_info['chapter'] = chapter - 1
+
     def move_to_before(self):
-        if self.book_info['book_name'] is not "검색":
-            self.old_book_info
-        print("before!!!!")
+        if self.old_book_info['book_name'] is "검색":
+            pass
+        else:
+            self.calc_before_chapter()
+            self.find(self.old_book_info)
+            print("before!!!!")
 
     def move_to_next(self):
         print("next!!!!")
+
+if __name__ == "__main__":
+    print(chapter_count)
+    aaa = {'a': 1, 'b': 2}
+    print(aaa)
+    aaa['a'] = 11111
+    print(aaa)

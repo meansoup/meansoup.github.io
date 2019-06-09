@@ -33,8 +33,6 @@ class BibleSearchInfo:
         else:
             return self.find_content(words)
 
-        return {'book':'40', 'chapter':'1'}
-
     def find_content(self, words):
         return {'book_name': "검색", 'content': words.split()}
 
@@ -54,7 +52,6 @@ class BibleSearchInfo:
         for idx in reversed(range(BIBLE_BOOK_MAX_CNT)):
             if words.startswith(str(idx + 1)):
                 print(str(self.bible_info[idx]) + " // " + str(BookName.NUM))
-                print("``" + words + " -- " + str(idx + 1))
                 self.book_name = BookName.NUM
                 return idx + 1
 
@@ -62,6 +59,7 @@ class BibleSearchInfo:
     
     def bible_info_with_chapter_verse(self, words):
         chapter_verse = re.findall("[0-9]+", words)
+        chapter_verse = list(map(int, chapter_verse))
         n = len(chapter_verse)
         print(str(chapter_verse) + " // len: " + str(n))
 
