@@ -21,6 +21,7 @@
 
     BiblePage:
         id: _bible_page
+        bible_title: _action_previous
         size_hint: 1, .9
         pos_hint: {'x': 0, 'top': .9}
     
@@ -30,7 +31,7 @@
         pos_hint: {'y': .05}
         x: self.y
         on_press:
-            _bible_page.move_to_before()    
+            _bible_page.move_to("before")    
 
     FloatButton:
         size_hint_y: .1
@@ -38,4 +39,4 @@
         pos_hint: {'y': .05}
         x: root.right - self.y - self.width
         on_press:
-            _bible_page.move_to_next()
+            _bible_page.move_to("after")

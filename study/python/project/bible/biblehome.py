@@ -5,7 +5,6 @@ from kivy.app import App
 from kivy.lang import Builder
 from kivy.uix.floatlayout import FloatLayout
 from biblepage import BiblePage
-from search.biblesearchinfo import BibleSearchInfo
 
 Builder.load_file('font/font.kv')
 Builder.load_file('widget/actionitems.kv')
@@ -20,9 +19,7 @@ class BibleHome(FloatLayout):
         self.search("1 1")
 
     def search(self, words):
-        bible_info = BibleSearchInfo().to_bible_info(words)
-        self.bible_page.find(bible_info)
-        self.bible_title.title = bible_info["book_name"]
+        self.bible_page.find(words)
 
 class BibleHomeApp(App):
     def build(self):

@@ -10,6 +10,7 @@ from kivy.uix.label import Label
 
 from kivy.properties import ListProperty, StringProperty
 
+from search.biblesearchinfo import BibleSearchInfo
 from bibleconstants import *
 from db.bibledb import BibleDB
 
@@ -32,53 +33,91 @@ class BiblePage(ScrollView):
         self.layout.bind(minimum_height=self.layout.setter('height'))
         self.add_widget(self.layout)
 
-    def find(self, book_info):
-        self.old_book_info = book_info
-        self.make_layout()
-        if book_info['book_name'] is "검색":
-            res = self.db.find_content(book_info['content'])
-        else:
-            res = self.db.find_chapter(book_info['book'], book_info['chapter'])
+    def find(self, search):
+        self.bible_info = BibleSearchInfo().to_bible_info(search)
         
-        self.add_verse_list(res)
+        print(self.bible_info["book_name"])
+        self.bible_title.title = self.bible_info["book_name"]
+        self.make_layout()
+        if self.bible_info['book_name'] == "검색":
+            res = self.db.find_content(self.bible_info['content'])
+            self.add_verse_list_with_book(res)
+        else:
+            res = self.db.find_chapter(self.bible_info['book'], self.bible_info['chapter'])
+            self.add_verse_list(res)
+
+    def add_verse_list_with_book(self, list):
+        ex_words = ""
+        colored_texts = [(text, self.markup_color_text("f08080", text)) for text in self.bible_info['content']]
+
+        for verse in list:
+            words = "%s %s" % (verse[0], verse[1])
+            if ex_words != words:
+                book_chapter = "%s %s장" % (BibleSearchInfo().get_bible_name(verse[0]), verse[1])
+                colored_book_chapter = self.markup_color_text("87cefa", book_chapter)
+                self.make_bible_verse("", colored_book_chapter)
+                ex_words = words
+
+            colored_verse = self.markup_color_texts(verse[3], colored_texts)
+            self.make_bible_verse(str(verse[2]), colored_verse)
 
     def add_verse_list(self, list):
         for verse in list:
             self.make_bible_verse(str(verse[2]), verse[3])
+
+    def markup_color_texts(self, verse, texts):
+        for text in texts:
+            verse = verse.replace(text[0], text[1])
+        return verse
+
+    def markup_color_text(self, color, text):
+        return "[color=%s]%s[/color]" % (color, text)
 
     def make_bible_verse(self, number, content):
         self.layout.add_widget(Label(text=number, size_hint_x=.1))
         self.layout.add_widget(self.make_sized_label(content))
 
     def make_sized_label(self, content):
-        label = Label(text=content, size_hint_y=None)
+        label = Label(text=content, size_hint_y=None, markup=True)
         label.bind(width=lambda s, w: s.setter('text_size')(s, (w, None)))
         label.bind(texture_size=label.setter('size'))
         return label
 
     def calc_before_chapter(self):
-        book = self.old_book_info['book']
-        chapter = self.old_book_info['chapter']
+        book = self.bible_info['book']
+        chapter = self.bible_info['chapter']
 
         if chapter is 1:
             if book is 1:
-                return
-            print("calccccc")
-            self.old_book_info['book'] = book - 1
-            self.old_book_info['chapter'] = chapter_count[book]
+                return "1 1"
+            book = book - 1
+            chapter = chapter_count[book]
         else:
-            self.old_book_info['chapter'] = chapter - 1
+            chapter = chapter - 1
+        return "%s %s" % (book, chapter)
 
-    def move_to_before(self):
-        if self.old_book_info['book_name'] is "검색":
+    def calc_next_chapter(self):
+        book = self.bible_info['book']
+        chapter = self.bible_info['chapter']
+
+        if chapter is chapter_count[book]:
+            if book is 66: # change constant name
+                return "66 22"
+            book = book + 1
+            chapter = 1
+        else:
+            chapter = chapter + 1
+        return "%s %s" % (book, chapter)
+
+    def move_to(self, where):
+        if self.bible_info['book_name'] == "검색":
             pass
         else:
-            self.calc_before_chapter()
-            self.find(self.old_book_info)
-            print("before!!!!")
-
-    def move_to_next(self):
-        print("next!!!!")
+            if where is "before":
+                words = self.calc_before_chapter()
+            elif where is "after":
+                words = self.calc_next_chapter()
+            self.find(words)
 
 if __name__ == "__main__":
     print(chapter_count)

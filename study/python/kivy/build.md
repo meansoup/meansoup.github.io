@@ -52,3 +52,6 @@ command failed에 대해서는 빨간색 command failed위의 마지막 로그�
     buildozer에서 명확한 문제가 나오지 않을때, 위 사이트에서 p4a 명령어를 사용하여 빌드 시, 보다 구체적인 에러 문구를 확인할 수 있음.  
 
     여러가지 깔려있던 open jdk를 전부 지우고 `sudo apt-get install openjdk-8-jdk`를 깔았더니 해결 됨.
+
+* android 실행 시 crash.
+  buildozer 등 프로그램들을 pip3에서 받아야 python3로 실행이 가능.  
