@@ -4,7 +4,6 @@ kivy.require('1.9.0')
 from kivy.lang import Builder
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.floatlayout import FloatLayout
-from kivy.uix.scrollview import ScrollView
 from kivy.uix.button import Button
 from kivy.uix.label import Label
 
@@ -13,8 +12,9 @@ from kivy.properties import ListProperty, StringProperty
 from search.biblesearchinfo import BibleSearchInfo
 from bibleconstants import *
 from db.bibledb import BibleDB
+from widget.endeventscroll import EndEventScroll
 
-class BiblePage(ScrollView):
+class BiblePage(EndEventScroll):
     layout = None
     layout_exist = False
     db = None
@@ -23,6 +23,10 @@ class BiblePage(ScrollView):
     def __init__(self, **kwargs):
         super(self.__class__, self).__init__(**kwargs)
         self.db = BibleDB()
+
+    # implement adding scroll
+    def on_end_event(self):
+        pass
 
     def make_layout(self):
         if self.layout_exist is True:
@@ -55,15 +59,15 @@ class BiblePage(ScrollView):
             if ex_words != words:
                 book_chapter = "%s %s장" % (BibleSearchInfo().get_bible_name(verse[0]), verse[1])
                 colored_book_chapter = self.markup_color_text("87cefa", book_chapter)
-                self.make_bible_verse("", colored_book_chapter)
+                self.make_verse("", colored_book_chapter)
                 ex_words = words
 
             colored_verse = self.markup_color_texts(verse[3], colored_texts)
-            self.make_bible_verse(str(verse[2]), colored_verse)
+            self.make_verse(str(verse[2]), colored_verse)
 
     def add_verse_list(self, list):
         for verse in list:
-            self.make_bible_verse(str(verse[2]), verse[3])
+            self.make_verse(str(verse[2]), verse[3])
 
     def markup_color_texts(self, verse, texts):
         for text in texts:
@@ -73,7 +77,7 @@ class BiblePage(ScrollView):
     def markup_color_text(self, color, text):
         return "[color=%s]%s[/color]" % (color, text)
 
-    def make_bible_verse(self, number, content):
+    def make_verse(self, number, content):
         self.layout.add_widget(Label(text=number, size_hint_x=.1))
         self.layout.add_widget(self.make_sized_label(content))
 

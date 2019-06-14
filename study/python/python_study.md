@@ -9,4 +9,6 @@ title: Python Study
 
 ## [Database](../common/database)
 
-## [궁금증](../common/curious)
+## [테스트](../common/curious)
+
+1. [python 검색 vs query 검색](../common/curious/#python-조건과-sqlite의-조건-속도-차이)

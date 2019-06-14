@@ -42,3 +42,6 @@ kivy widget constructor parametor를 추가하는 방법. [property 명시](http
 
 **label size**:  
 label의 text에 따라 size를 조절해주는 [코드](https://stackoverflow.com/questions/18670687/how-i-can-adjust-variable-height-text-property-kivy)
+
+**[mark up](https://kivy.org/doc/stable/api-kivy.core.text.markup.html)**:  
+`markup=True`와 함께, text에 부분적으로 color, font 등의 수정을 할 수 있음.

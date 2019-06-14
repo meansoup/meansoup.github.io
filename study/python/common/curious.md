@@ -3,7 +3,7 @@ layout: normal
 title: 궁금증
 ---
 
-## python 조건과 sqlite의 조건 속도 차이
+### python 조건과 sqlite의 조건 속도 차이
 
 DB 사용 중 문득 든 생각. 당연하겠지만.. sql 문으로 처리하는게 빠를까?  
 개역한글 성경 db 테스트.  
