@@ -1,12 +1,14 @@
 from kivy.lang import Builder
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.label import Label
-from kivy.properties import ListProperty
+from kivy.uix.behaviors import ButtonBehavior
+from kivy.properties import ListProperty, BooleanProperty
 
 Builder.load_file('widget/verse.kv')
 
-class VerseLabel(GridLayout):
+class VerseLabel(ButtonBehavior, GridLayout):
     info_list = ListProperty([])
+    is_search = BooleanProperty(False)
 
     book = 1
     chapter = 1
@@ -17,7 +19,6 @@ class VerseLabel(GridLayout):
         super(self.__class__, self).__init__(**kwargs)
         self.cols=2
         self.markup=True
-        self.info_list = kwargs.pop('info_list')
         self.make_verse()
 
     def on_info_list(self, instance, value):
@@ -29,6 +30,13 @@ class VerseLabel(GridLayout):
     def make_verse(self):
         self.ids.verse.text = str(self.verse)
         self.ids.content.text = self.content
+
+    def on_press(self):
+        if self.is_search:
+            words = "%s %s" % (self.book, self.chapter)
+            self.parent.parent.find(words)
+
+
 
 class VerseTitle(Label):
     pass

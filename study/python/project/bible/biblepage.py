@@ -16,13 +16,10 @@ from widget.endeventscroll import EndEventScroll
 from widget.verse import VerseLabel
 from widget.verse import VerseTitle
 
-# Builder.load_file('widget/versetitle.kv')
-
 class BiblePage(EndEventScroll):
     layout = None
     layout_exist = False
     db = None
-    old_book_info = None
 
     def __init__(self, **kwargs):
         super(self.__class__, self).__init__(**kwargs)
@@ -56,7 +53,7 @@ class BiblePage(EndEventScroll):
 
     def add_verse_list_with_book(self, list):
         ex_words = ""
-        colored_texts = [(text, self.markup_color_text("f08080", text)) for text in self.bible_info['content']]
+        colored_texts = [(text, "[color=f08080]%s[/color]" % text) for text in self.bible_info['content']]
 
         for verse_info in list:
             words = "%s %s" % (verse_info[0], verse_info[1])
@@ -68,7 +65,7 @@ class BiblePage(EndEventScroll):
 
             verse_info_list = [item for item in verse_info]
             verse_info_list[3] = self.markup_color_texts(verse_info[3], colored_texts)
-            verse = VerseLabel(info_list=verse_info_list, size_hint_y=None)
+            verse = VerseLabel(info_list=verse_info_list, is_search=True, size_hint_y=None)
             self.layout.add_widget(verse)
 
     def add_verse_list(self, list):
@@ -80,9 +77,6 @@ class BiblePage(EndEventScroll):
         for text in texts:
             verse = verse.replace(text[0], text[1])
         return verse
-
-    def markup_color_text(self, color, text):
-        return "[color=%s]%s[/color]" % (color, text)
 
     def calc_before_chapter(self):
         book = self.bible_info['book']
