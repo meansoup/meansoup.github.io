@@ -10,6 +10,7 @@ title: Database
         시간이 굉장히 오래 걸렸음.
 
 * 사용 예  
+fetch로 가져오는 값들은, tuple로 되어 수정이 불가능함. 원하면 list로 변경해야 한다.
 
 ```python
 import sqlite3

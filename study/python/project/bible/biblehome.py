@@ -10,9 +10,6 @@ Builder.load_file('font/font.kv')
 Builder.load_file('widget/actionitems.kv')
 Builder.load_file('widget/floatbutton.kv')
 
-# action bar
-# 현재 보는 말씀 ex. 창 1.1
-
 class BibleHome(FloatLayout):
     def __init__(self, **kwargs):
         super(self.__class__, self).__init__(**kwargs)

@@ -13,6 +13,10 @@ from search.biblesearchinfo import BibleSearchInfo
 from bibleconstants import *
 from db.bibledb import BibleDB
 from widget.endeventscroll import EndEventScroll
+from widget.verse import VerseLabel
+from widget.verse import VerseTitle
+
+# Builder.load_file('widget/versetitle.kv')
 
 class BiblePage(EndEventScroll):
     layout = None
@@ -33,7 +37,7 @@ class BiblePage(EndEventScroll):
             self.remove_widget(self.layout)
 
         self.layout_exist = True
-        self.layout = GridLayout(cols=2, size_hint_y=None, spacing=10)
+        self.layout = GridLayout(cols=1, size_hint_y=None, spacing=10)
         self.layout.bind(minimum_height=self.layout.setter('height'))
         self.add_widget(self.layout)
 
@@ -54,20 +58,23 @@ class BiblePage(EndEventScroll):
         ex_words = ""
         colored_texts = [(text, self.markup_color_text("f08080", text)) for text in self.bible_info['content']]
 
-        for verse in list:
-            words = "%s %s" % (verse[0], verse[1])
+        for verse_info in list:
+            words = "%s %s" % (verse_info[0], verse_info[1])
             if ex_words != words:
-                book_chapter = "%s %s장" % (BibleSearchInfo().get_bible_name(verse[0]), verse[1])
-                colored_book_chapter = self.markup_color_text("87cefa", book_chapter)
-                self.make_verse("", colored_book_chapter)
+                book_chapter = "%s %s장" % (BibleSearchInfo().get_bible_name(verse_info[0]), verse_info[1])
+                verse_title = VerseTitle(text=book_chapter, size_hint_y=None)
+                self.layout.add_widget(verse_title)
                 ex_words = words
 
-            colored_verse = self.markup_color_texts(verse[3], colored_texts)
-            self.make_verse(str(verse[2]), colored_verse)
+            verse_info_list = [item for item in verse_info]
+            verse_info_list[3] = self.markup_color_texts(verse_info[3], colored_texts)
+            verse = VerseLabel(info_list=verse_info_list, size_hint_y=None)
+            self.layout.add_widget(verse)
 
     def add_verse_list(self, list):
-        for verse in list:
-            self.make_verse(str(verse[2]), verse[3])
+        for verse_info in list:
+            verse = VerseLabel(info_list=verse_info, size_hint_y=None)
+            self.layout.add_widget(verse)
 
     def markup_color_texts(self, verse, texts):
         for text in texts:
@@ -76,16 +83,6 @@ class BiblePage(EndEventScroll):
 
     def markup_color_text(self, color, text):
         return "[color=%s]%s[/color]" % (color, text)
-
-    def make_verse(self, number, content):
-        self.layout.add_widget(Label(text=number, size_hint_x=.1))
-        self.layout.add_widget(self.make_sized_label(content))
-
-    def make_sized_label(self, content):
-        label = Label(text=content, size_hint_y=None, markup=True)
-        label.bind(width=lambda s, w: s.setter('text_size')(s, (w, None)))
-        label.bind(texture_size=label.setter('size'))
-        return label
 
     def calc_before_chapter(self):
         book = self.bible_info['book']
