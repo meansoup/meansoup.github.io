@@ -42,12 +42,14 @@ class BiblePage(EndEventScroll):
         self.bible_info = BibleSearchInfo().to_bible_info(search)
         
         print(self.bible_info["book_name"])
-        self.bible_title.title = self.bible_info["book_name"]
         self.make_layout()
         if self.bible_info['book_name'] == "검색":
             res = self.db.find_content(self.bible_info['content'])
+            self.bible_title.title = "%s %s" % (self.bible_info["book_name"], str(len(res)))
+            print("size: " + str(len(res)))
             self.add_verse_list_with_book(res)
         else:
+            self.bible_title.title = "%s %s" % (self.bible_info["book_name"], self.bible_info["chapter"])
             res = self.db.find_chapter(self.bible_info['book'], self.bible_info['chapter'])
             self.add_verse_list(res)
 
