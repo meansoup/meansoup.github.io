@@ -20,14 +20,16 @@ class BiblePage(EndEventScroll):
     layout = None
     layout_exist = False
     db = None
+    verse_list_search = None
 
     def __init__(self, **kwargs):
         super(self.__class__, self).__init__(**kwargs)
         self.db = BibleDB()
 
-    # implement adding scroll
     def on_end_event(self):
-        pass
+        if self.bible_info['book_name'] == "검색":
+            ex_height = self.layout.height
+            self.add_verse_list_search()
 
     def make_layout(self):
         if self.layout_exist is True:
@@ -46,19 +48,27 @@ class BiblePage(EndEventScroll):
         if self.bible_info['book_name'] == "검색":
             res = self.db.find_content(self.bible_info['content'])
             self.bible_title.title = "%s %s" % (self.bible_info["book_name"], str(len(res)))
-            print("size: " + str(len(res)))
-            self.add_verse_list_with_book(res)
+            self.verse_list_search = self.add_verse_list_search_generator(res)
+            self.add_verse_list_search()
         else:
             self.bible_title.title = "%s %s" % (self.bible_info["book_name"], self.bible_info["chapter"])
             res = self.db.find_chapter(self.bible_info['book'], self.bible_info['chapter'])
             self.add_verse_list(res)
 
-    def add_verse_list_with_book(self, list):
+    def add_verse_list_search(self):
+        try:
+            next(self.verse_list_search)
+        except StopIteration:
+            pass
+
+    def add_verse_list_search_generator(self, list):
         ex_words = ""
         colored_texts = [(text, "[color=f08080]%s[/color]" % text) for text in self.bible_info['content']]
-
+        height = 0
+        count = 0
         for verse_info in list:
             words = "%s %s" % (verse_info[0], verse_info[1])
+            count = count + 1
             if ex_words != words:
                 book_chapter = "%s %s장" % (BibleSearchInfo().get_bible_name(verse_info[0]), verse_info[1])
                 verse_title = VerseTitle(text=book_chapter, size_hint_y=None)
@@ -69,6 +79,16 @@ class BiblePage(EndEventScroll):
             verse_info_list[3] = self.markup_color_texts(verse_info[3], colored_texts)
             verse = VerseLabel(info_list=verse_info_list, is_search=True, size_hint_y=None)
             self.layout.add_widget(verse)
+
+            # height가 바로바로 업데이트 되지 않는 것이 문제. 왜? 언제? 업데이트 되는 것인가가 중요.
+            if count % 50 == 0:
+                self.scroll_y = (self.layout.height - height) / self.layout.height
+                height = self.layout.height
+                yield
+
+        # same with upper 'count % 50'
+        self.scroll_y = (self.layout.height - height) / self.layout.height
+        height = self.layout.height
 
     def add_verse_list(self, list):
         for verse_info in list:

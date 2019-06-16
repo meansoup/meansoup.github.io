@@ -56,8 +56,8 @@ kv 파일에서 text에 따라 size를 조절해주도록 하는 [코드](https:
 ```
 와 같이, `text_size`를 `width`로 맞추고, `height`를 width로 정해진 texture_size의 값으로 설정.
 
-
-
+**dynamic added scroll view**:  
+scroll view에 들어갈 widget들이 많을 때, 그걸 동적으로 추가하고 넣어주는 [코드](https://gist.github.com/smglab/a5f4fcfb094f54c44ff0)
 
 **[mark up](https://kivy.org/doc/stable/api-kivy.core.text.markup.html)**:  
 `markup=True`와 함께, text에 부분적으로 color, font 등의 수정을 할 수 있음.

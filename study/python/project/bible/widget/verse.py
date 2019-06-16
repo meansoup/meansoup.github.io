@@ -36,7 +36,5 @@ class VerseLabel(ButtonBehavior, GridLayout):
             words = "%s %s" % (self.book, self.chapter)
             self.parent.parent.find(words)
 
-
-
 class VerseTitle(Label):
     pass
