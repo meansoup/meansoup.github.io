@@ -25,9 +25,10 @@ title: Kivy
 6. [chapter06](../chapter06_summary)  
     video player
 
-## etc.
+## 그 외 study 리스트
 
-[build](../build)
+[build](../build)과정 중 문제점  
+[label size](#label-size)를 text 사이즈에 따라 설정하기  
 
 **Widget Parameter**:  
 kivy widget constructor parametor를 추가하는 방법. [property 명시](https://kivy.org/doc/stable/api-kivy.properties.html).
@@ -40,7 +41,14 @@ kivy widget constructor parametor를 추가하는 방법. [property 명시](http
 `self.ids.~`으로 접근하는 경우도 있으며,  
 `layout_content=ObjectProperty(None)`와 같이 Property를 생성하면, 해당 .kv 클래스에서 동일 name으로 사용하는 방식. (BiblePage 참고)
 
-**label size**:  
+**dynamic added scroll view**:  
+scroll view에 들어갈 widget들이 많을 때, 그걸 동적으로 추가하고 넣어주는 [코드](https://gist.github.com/smglab/a5f4fcfb094f54c44ff0)
+
+**[mark up](https://kivy.org/doc/stable/api-kivy.core.text.markup.html)**:  
+`markup=True`와 함께, text에 부분적으로 color, font 등의 수정을 할 수 있음.
+
+### label size
+
 label의 text에 따라 size를 조절해주는 [코드](https://stackoverflow.com/questions/18670687/how-i-can-adjust-variable-height-text-property-kivy)  
 ```python
     l.bind(width=lambda s, w: s.setter('text_size')(s, (w, None)))
@@ -56,8 +64,9 @@ kv 파일에서 text에 따라 size를 조절해주도록 하는 [코드](https:
 ```
 와 같이, `text_size`를 `width`로 맞추고, `height`를 width로 정해진 texture_size의 값으로 설정.
 
-**dynamic added scroll view**:  
-scroll view에 들어갈 widget들이 많을 때, 그걸 동적으로 추가하고 넣어주는 [코드](https://gist.github.com/smglab/a5f4fcfb094f54c44ff0)
-
-**[mark up](https://kivy.org/doc/stable/api-kivy.core.text.markup.html)**:  
-`markup=True`와 함께, text에 부분적으로 color, font 등의 수정을 할 수 있음.
+**주의사항**:  
+위와 같은 size 조절은 `bind`로 발생함.  
+즉 width와 texture_size가 변경될 때 dynamic하게 코드를 변경하는 것.  
+따라서 위와 같은 코드 바로 뒤에 `l.height`와 같은 코드를 사용해도 height를 구할 수 없음.  
+  - 실제로 scrollview 구현 중 height에 따른 scroll 위치를 적용하는데 애를 먹음.
+  - `l.bind(height=self.lavel_height_changed)`와 같이, height에 bind를 통해 원하는 값들을 처리할 수 있음.

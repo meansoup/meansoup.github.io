@@ -55,3 +55,6 @@ command failed에 대해서는 빨간색 command failed위의 마지막 로그�
 
 * android 실행 시 crash.
   buildozer 등 프로그램들을 pip3에서 받아야 python3로 실행이 가능.  
+
+#### app crash:
+app crash의 경우 앱을 설치한 뒤 `adb logcat > log.txt`으로 로그를 저장하면서 실행하고 로그를 확인하면 됨.  
