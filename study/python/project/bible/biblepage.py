@@ -16,11 +16,15 @@ from widget.endeventscroll import EndEventScroll
 from widget.verse import VerseLabel
 from widget.verse import VerseTitle
 
+
 class BiblePage(EndEventScroll):
     layout = None
     layout_exist = False
     db = None
     verse_list_search = None
+    verse_cnt = 0
+    height_changed_cnt = 0
+    ex_height = 0
 
     def __init__(self, **kwargs):
         super(self.__class__, self).__init__(**kwargs)
@@ -38,9 +42,11 @@ class BiblePage(EndEventScroll):
         self.layout_exist = True
         self.layout = GridLayout(cols=1, size_hint_y=None, spacing=10)
         self.layout.bind(minimum_height=self.layout.setter('height'))
+        self.layout.bind(height=self.height_changed)
         self.add_widget(self.layout)
 
     def find(self, search):
+        self.ex_height = 0
         self.bible_info = BibleSearchInfo().to_bible_info(search)
         
         print(self.bible_info["book_name"])
@@ -64,11 +70,12 @@ class BiblePage(EndEventScroll):
     def add_verse_list_search_generator(self, list):
         ex_words = ""
         colored_texts = [(text, "[color=f08080]%s[/color]" % text) for text in self.bible_info['content']]
-        height = 0
-        count = 0
+        self.verse_cnt = 0
+
         for verse_info in list:
+            self.height_changed_cnt = 0
             words = "%s %s" % (verse_info[0], verse_info[1])
-            count = count + 1
+            self.verse_cnt += 1
             if ex_words != words:
                 book_chapter = "%s %s장" % (BibleSearchInfo().get_bible_name(verse_info[0]), verse_info[1])
                 verse_title = VerseTitle(text=book_chapter, size_hint_y=None)
@@ -78,17 +85,39 @@ class BiblePage(EndEventScroll):
             verse_info_list = [item for item in verse_info]
             verse_info_list[3] = self.markup_color_texts(verse_info[3], colored_texts)
             verse = VerseLabel(info_list=verse_info_list, is_search=True, size_hint_y=None)
+            # verse.bind(height=self.verse_height_changed)
             self.layout.add_widget(verse)
 
-            # height가 바로바로 업데이트 되지 않는 것이 문제. 왜? 언제? 업데이트 되는 것인가가 중요.
-            if count % 50 == 0:
-                self.scroll_y = (self.layout.height - height) / self.layout.height
-                height = self.layout.height
+            if self.verse_cnt % 50 == 0:
                 yield
 
-        # same with upper 'count % 50'
-        self.scroll_y = (self.layout.height - height) / self.layout.height
-        height = self.layout.height
+    def height_changed(self, *args):
+        self.height_changed_cnt += 1
+        # print("[" + str(self.height_changed_cnt) + "] !!height Changed: " + str(args[1]))
+
+        if self.height_changed_cnt is 3: # first - added, second - strange, third - real value.
+            print("ex: " + str(self.ex_height) + " cur: " + str(args[1]))
+            percent = self.ex_height / args[1]
+            self.scroll_y = 1 - percent
+            self.ex_height = args[1]
+
+    # def verse_height_changed(self, *args):
+    #     verse_id = str(args[0])[-8:-1]
+    #     # self.verse_height[verse_id] = args[1]
+    #     if verse_id in self.temp_verse_height:
+    #         print("**")
+    #         self.verse_height[verse_id] = args[1]
+    #     else: 
+    #         print("@")
+    #         self.temp_verse_height[verse_id] = None
+
+    #     # 어차피 verse_height는 비동기적으로 업데이트 되서 더 느리게 되니까
+    #     # verse_cnt가 50인지, 끝까지 왔는지를 확인하지 않아도 됨.
+    #     changed_length = len(self.verse_height)
+    #     if changed_length is self.verse_cnt:
+    #         print("E")
+    #         print(str(self.verse_height))
+    #         print("sum: " + str(sum(self.verse_height.values())))
 
     def add_verse_list(self, list):
         for verse_info in list:
