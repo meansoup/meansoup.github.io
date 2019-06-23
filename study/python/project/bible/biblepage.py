@@ -12,6 +12,7 @@ from kivy.properties import ListProperty, StringProperty
 from search.biblesearchinfo import BibleSearchInfo
 from bibleconstants import *
 from db.bibledb import BibleDB
+from db.bibledb import EngBibleDB
 from widget.endeventscroll import EndEventScroll
 from widget.verse import VerseLabel
 from widget.verse import VerseTitle
@@ -21,6 +22,7 @@ class BiblePage(EndEventScroll):
     layout = None
     layout_exist = False
     db = None
+    edb = None
     verse_list_search = None
     verse_cnt = 0
     height_changed_cnt = 0
@@ -29,6 +31,7 @@ class BiblePage(EndEventScroll):
     def __init__(self, **kwargs):
         super(self.__class__, self).__init__(**kwargs)
         self.db = BibleDB()
+        self.edb = EngBibleDB()
 
     def on_end_event(self):
         if self.bible_info['book_name'] == "검색":
@@ -59,7 +62,8 @@ class BiblePage(EndEventScroll):
         else:
             self.bible_title.title = "%s %s" % (self.bible_info["book_name"], self.bible_info["chapter"])
             res = self.db.find_chapter(self.bible_info['book'], self.bible_info['chapter'])
-            self.add_verse_list(res)
+            eng_res = self.edb.find_chapter(self.bible_info['book'], self.bible_info['chapter'])
+            self.add_verse_list(res, eng_res)
 
     def add_verse_list_search(self):
         try:
@@ -119,9 +123,9 @@ class BiblePage(EndEventScroll):
     #         print(str(self.verse_height))
     #         print("sum: " + str(sum(self.verse_height.values())))
 
-    def add_verse_list(self, list):
-        for verse_info in list:
-            verse = VerseLabel(info_list=verse_info, size_hint_y=None)
+    def add_verse_list(self, list, eng_list):
+        for i in range(len(list)):
+            verse = VerseLabel(info_list=list[i], eng_content=eng_list[i][3], size_hint_y=None)
             self.layout.add_widget(verse)
 
     def markup_color_texts(self, verse, texts):

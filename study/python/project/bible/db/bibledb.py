@@ -5,6 +5,7 @@ class BibleDB():
     conn = None
     conn_open = False
     cur = None
+    language = "bibleKorHRV"
 
     def connect(self):
         if self.conn_open is False:    
@@ -17,7 +18,7 @@ class BibleDB():
     def find_chapter(self, book, chapter):
         self.connect()
 
-        query = "select * from bibleKorHRV where book = {0} and chapter = {1}".format(book, chapter)
+        query = "select * from " + self.language + " where book = {0} and chapter = {1}".format(book, chapter)
         self.cur.execute(query)
 
         res = self.cur.fetchall()
@@ -43,6 +44,9 @@ class BibleDB():
         self.conn_open = False
         
         return res
+
+class EngBibleDB(BibleDB):
+    language = "bibleEngKJV"
 
 if __name__ == "__main__":
     db = BibleDB()
