@@ -47,6 +47,12 @@ scroll view에 들어갈 widget들이 많을 때, 그걸 동적으로 추가하�
 **[mark up](https://kivy.org/doc/stable/api-kivy.core.text.markup.html)**:  
 `markup=True`와 함께, text에 부분적으로 color, font 등의 수정을 할 수 있음.
 
+**action bar**:  
+action bar를 `top: root.height`로 위치 설정을 하였을 때, 윈도우에서 제대로 설정 되었지만, 안드로이드에서는 위에 상태표시줄까지 위치로 잡아 그만큼 잘리는 현상이 발생하였음.  
+해당 코드를 `pos_hint: {'top': 1}`로 해결할 수 있음.  
+
+
+
 ### label size
 
 label의 text에 따라 size를 조절해주는 [코드](https://stackoverflow.com/questions/18670687/how-i-can-adjust-variable-height-text-property-kivy)  
