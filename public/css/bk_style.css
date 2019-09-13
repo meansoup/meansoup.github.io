@@ -590,7 +590,8 @@ h6 {
 }
 
 .footnotes {
-    font-size: 10px;
+    font-size: 12px;
+    line-height: 1.1
 }
 
 .sidebar {
