@@ -21,7 +21,6 @@ tags:
 | <i class="fa fa-twitter"></i> | [@{{ site.owner.twitter }}](https://twitter.com/{{ site.owner.twitter }})  | 
 | - | :- |
 | <i class="fa fa-envelope"></i> | meansoup<br>alsrnr1210@gmail.com<br> Seoul, Korea | 
-<!-- | <i class="fa fa-envelope"></i> | foo<br>XYZ<br>1234 ABC ST<br>Washington, DC 11111   |  -->
 | - | :- |
 | <i class="fa fa-car"></i>  | [Driving directions]({{ site.url }}/directions) | 
 | - | :- |
