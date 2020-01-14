@@ -7,9 +7,10 @@ tag:
 
 Book name: Building RESTful Python Web Services / DJango  
 
-예제 코드: https://github.com/PacktPublishing/Building-RESTful-Python-Web-Services
+예제 코드: [https://github.com/PacktPublishing/Building-RESTful-Python-Web-Services](https://github.com/PacktPublishing/Building-RESTful-Python-Web-Services)
 
-# 1. 장고를 이용한 RESTful API 개발
+공식 quick start: [https://www.django-rest-framework.org/tutorial/quickstart/#testing-our-api](https://www.django-rest-framework.org/tutorial/quickstart/#testing-our-api)  
+- 이 책이 python2 기준으로 하고 장고 버전도 최신이랑 안맞아서.. 세팅 & 테스트 방법만 참고하고 책을 볼 수 없을 것 같다.
 
 ## 장고 가상환경 세팅
 1. `python -m venv %USERPROFILE%\PythonREST\Django01`  
