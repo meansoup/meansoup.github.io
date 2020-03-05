@@ -41,7 +41,6 @@ a[1][0] = -1 # b의 mutable object의 값은 변경됨. 참조하고 있기 때�
 ```
 
 얕은 복사의 방식([stackoverflow](https://stackoverflow.com/questions/2612802/how-to-clone-or-copy-a-list) 참고)은 여러가지가 있음.  
-- .  
 ```python
 b = a.copy()
 
@@ -71,7 +70,7 @@ b = copy.deepcopy(a)
   - user-defined class가 복사 연산이나 복사된 구성요소 집합을 override 하도록 함.
 
 ## 함수 내 반환 시
-reference parameter로 전달된 함수에서, parameter 값을 변경시켜서 올려주고 싶다면 아래와 같이 해야한다.
+reference parameter로 전달된 함수에서, parameter 값을 변경시켜서 올려주고 싶다면 아래와 같이 해야한다.  
 ```python
 def change_param(param: List[int]):
     new = [1, 2, 3] # calculated value
