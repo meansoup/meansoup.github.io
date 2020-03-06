@@ -13,6 +13,7 @@ tag:
 여러가지 다른 부분이 있지만, list와 set의 `x in s`를 비교해본다.  
 list는 기본적으로 sequence type이다.  
 따라서 index를 통해 접근 가능하고 index를 활용한 opration들도 많다.  
+하지만 그렇기 때문에 `in` 검사에 O(n)을 요구한다. 다 확인해봐야하기 때문이다.  
 
 반면,  
 set([python Docs](https://docs.python.org/3.8/library/stdtypes.html#set-types-set-frozenset) 참고)은 **unordered collection of distinct hashable object**이다.  
