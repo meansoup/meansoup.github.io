@@ -22,3 +22,6 @@ set([python Docs](https://docs.python.org/3.8/library/stdtypes.html#set-types-se
 
 반복적으로 `x in s`를 사용할 경우 set을 사용하면 속도를 개선할 수 있다.  
 - list를 set으로 바꾸는 건 O(n). `s = set(l)`  
+
+## 추가 참고
+- [https://www.ics.uci.edu/~pattis/ICS-33/lectures/complexitypython.txt](https://www.ics.uci.edu/~pattis/ICS-33/lectures/complexitypython.txt)
