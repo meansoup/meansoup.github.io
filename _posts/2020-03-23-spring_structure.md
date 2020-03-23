@@ -5,7 +5,7 @@ tag:
   - spring
 ---
 ## spring MVC 설계 구조
-![model](/images/post/spring_model1.JPG)
+![model](/images/post/spring_model.JPG)
 Controller, Service, DAO, View 와 같이 각각의 기능별로 모듈화 시키는 방식으로 유지보수가 수월하다.  
 
 ![model2](/images/post/spring_model2.JPG)  
