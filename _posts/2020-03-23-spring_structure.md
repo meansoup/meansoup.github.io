@@ -4,11 +4,11 @@ title: Spring Structure
 tag:
   - spring
 ---
-## spring MVC 설계 구조
-![model](/image/spring_model1.JPG)
-Controller, Service, DAO, View 와 같이 각각의 기능별로 모듈화 시키는 방식으로 유지보수가 수월하다.  
+## spring MVC 설계 구조
+![model](/image/post/spring_model1.JPG)
+Controller, Service, DAO, View 와 같이 각각의 기능별로 모듈화 시키는 방식으로 유지보수가 수월하다.  
 
-![model2](/image/spring_model2.JPG)  
+![model2](/image/post/spring_model2.JPG)  
 1. DispatcherServlet - 연결을 담당하며 클라이언트한테 요청을 받음.
 2. HandlerMapping - Controller 중 알맞은 것을 찾아서 리턴.
 3. HandlerAdapter - Controller의 Method 중 알맞은 것을 찾아서 호출해서 요청을 처리하고 결과를 Model(혹은 ModelAndView)로 리턴.
@@ -17,7 +17,7 @@ Controller, Service, DAO, View 와 같이 각각의 기능별로 모듈�
 5. View - 응답 생성 (front-end)
 
 # 프로젝트 구조
-![structure](/image/file_structure.JPG)  
+![structure](/image/post/file_structure.JPG)  
 java file - Controller, Service DAO 등을 포함하는 java 파일들이 위치.  
 resource - java 파일 이외의 개발에 필요한 .xml 등의 자원 파일.  
 webapp - 웹과 관련된 파일.  
