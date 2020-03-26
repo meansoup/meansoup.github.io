@@ -153,17 +153,11 @@ Batch로 데이터를 검색하거나 쓸 때 단일 요청으로 더 높은 처
 [DynamoDB javaSDK method Docs](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/dynamodbv2/document/DynamoDB.html), [DynamoDB API reference](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_Operations_Amazon_DynamoDB.html) 참고.
 
 ## 그외 참고 사항
-예약어 자리 표시자 - 표현식에서 속성 이름을 위한 자리 표시자. 
-https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Expressions.ExpressionAttributeNames.html
+예약어 자리 표시자 - 표현식에서 속성 이름을 위한 자리 표시자. ([AWS Docs](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Expressions.ExpressionAttributeNames.html) 참고)  
 
-리터럴 값 자리 표시자 - 표현식에서 속성 값을 위한 자리 표시자.
-https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Expressions.ExpressionAttributeValues.html
-
-조건부 쓰기 수행 - ConditionExpression을 만족하면 쓰기를 수행.
-http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Expressions.SpecifyingConditions.html
-
-처리량 예외 처리 - 처리량이 초과하면 `provisionedThroughputExceededException`으로 알림을 전송하도록 CloudWatch 경보 설정
-https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/metrics-dimensions.html
+리터럴 값 자리 표시자 - 표현식에서 속성 값을 위한 자리 표시자. ([AWS Docs](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Expressions.ExpressionAttributeValues.html) 참고)  
+조건부 쓰기 수행 - ConditionExpression을 만족하면 쓰기를 수행. ([AWS Docs](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Expressions.SpecifyingConditions.html) 참고)  
+처리량 예외 처리 - 처리량이 초과하면 `provisionedThroughputExceededException`으로 알림을 전송하도록 CloudWatch 경보 설정. ([AWS Docs](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/metrics-dimensions.html) 참고)  
 
 ## 효율성 확보
 데이터를 고려하여 파티션 키가 분산될 수 있도록 구현한다.  
