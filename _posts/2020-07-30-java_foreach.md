@@ -32,5 +32,5 @@ tag:
 
 ## 참고자료
 
-[stackoverflow foreach() vs for loop](https://stackoverflow.com/questions/16635398/java-8-iterable-foreach-vs-foreach-loop)
-[homeefficio님의 "for-loop를 Stream.forEach()로 바꾸지 말아야 할 3가지 이유" 번역문](https://homoefficio.github.io/2016/06/26/for-loop-%EB%A5%BC-Stream-forEach-%EB%A1%9C-%EB%B0%94%EA%BE%B8%EC%A7%80-%EB%A7%90%EC%95%84%EC%95%BC-%ED%95%A0-3%EA%B0%80%EC%A7%80-%EC%9D%B4%EC%9C%A0/)
+- [stackoverflow foreach() vs for loop](https://stackoverflow.com/questions/16635398/java-8-iterable-foreach-vs-foreach-loop)  
+- [homeefficio님의 "for-loop를 Stream.forEach()로 바꾸지 말아야 할 3가지 이유" 번역문](https://homoefficio.github.io/2016/06/26/for-loop-%EB%A5%BC-Stream-forEach-%EB%A1%9C-%EB%B0%94%EA%BE%B8%EC%A7%80-%EB%A7%90%EC%95%84%EC%95%BC-%ED%95%A0-3%EA%B0%80%EC%A7%80-%EC%9D%B4%EC%9C%A0/)  
