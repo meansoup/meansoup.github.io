@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Programming with lambdas
+title: [Kotlin in action \#5] Programming with lambdas
 tag:
   - kotlin
 ---
@@ -135,8 +135,8 @@ people.filter(canBeInClub27).size
 
 #### etc
 
-그 외에도 많은 기본 library들이 있다. 대부분 명확하고 간단하다.
-`groupBy`: element 기반으로 list를 map으로 만드는
+그 외에도 많은 기본 library들이 있다. 대부분 명확하고 간단하다.  
+`groupBy`: element 기반으로 list를 map으로 만드는  
 `flatMap`: 2겹의 collection을 풀어서 1겹으로 만드는
 
 ### lazy operation
