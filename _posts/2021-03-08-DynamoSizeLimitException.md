@@ -6,7 +6,7 @@ tag:
   - Dynamo
 ---
 
-오늘은 생각지도 못한 DynamoSizeLimitException에 대해 기록한다. 
+오늘은 생각지도 못한 DynamoSizeLimitException에 대해 기록한다.  
 DynamoDB는 AWS에서 제공하는 NoSql DB이다.
 
 먼저 `DynamoSizeLimitException`가 뭔지에 대해 알아볼 필요가 있다.
@@ -17,7 +17,7 @@ Dynamo에서는 item에 대한 size 제한을 둔다.
 이 size를 넘는 item을 save 요청을 했을 때 Dynamo에서는 **DynamoSizeLimitException**를 반환한다.  
 
 여기에 대해서는 [AWS 공식문서](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html#limits-items)를 참고하면 좋다.  
-> The maximum item size in DynamoDB is 400 KB, which includes both attribute name binary length (UTF-8 length) and attribute value lengths (again binary length)
+> The maximum item size in DynamoDB is 400 KB, which includes both attribute name binary length (UTF-8 length) and attribute value lengths (again binary length)  
 > 그니까 총합 400KB를 넘으면 안된다 이거다
 
 ## 예상치 못한 문제 발생
