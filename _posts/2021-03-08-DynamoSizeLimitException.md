@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [DynamoDB] 생각지도 못한 DynamoSizeLimitException
+title: "[DynamoDB] 생각지도 못한 DynamoSizeLimitException"
 tag:
   - AWS
   - Dynamo

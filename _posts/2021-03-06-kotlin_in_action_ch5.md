@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [Kotlin in action \#5] Programming with lambdas
+title: "[Kotlin in action #5] Programming with lambdas"
 tag:
   - kotlin
 ---

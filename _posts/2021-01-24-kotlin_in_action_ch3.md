@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [Kotlin in action \#3] Defining and Calling Functions
+title: "[Kotlin in action #3] Defining and Calling Functions"
 tag:
   - kotlin
 ---

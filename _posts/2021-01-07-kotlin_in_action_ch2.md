@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [Kotlin in action \#2] Kotlin Basics
+title: "[Kotlin in action #2] Kotlin Basics"
 tag:
   - kotlin
 ---
