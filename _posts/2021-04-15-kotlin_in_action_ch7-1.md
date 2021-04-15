@@ -21,7 +21,7 @@ BigInteger class나 Point class에서 `plus` 함수를 호출하는 대신 `+`�
 
 예제를 보자.
 
-```Kotlin
+```kotlin
 data class Point(val x: Int, val y: Int) {
   operator fun plus(other: Point): Point {
     return Point(x + other.x, y + other.y)
@@ -142,7 +142,7 @@ class에 대해 배울 때 kotlin은 [`==`로 `equals`를 호출한다](https://
 - java처럼 귀찮은 null 체크를 직접하거나 `equals` 내부에서 구현하지 않아도 됨.
 - `a == b`가 `a?.equals(b) ?: (b == null)`로 컴파일 되기 때문.
 
-```Kotlin
+```kotlin
 class Point(val x: Int, val y: Int) {
   override fun equals(obj: Any?): Boolean {
     if (obj === this) return true
@@ -193,7 +193,7 @@ class Person(val firstName: String, val lastName: String): Comparable<Person> {
 
 `Map` `MutableMap`에는 `get`, `set`이 이미 있다.
 
-```Kotlin
+```kotlin
 operator fun Point.get(index: Int): Int {
   return when(index) {
     0 -> x
@@ -284,6 +284,6 @@ operator fun ClosedRange<LocalDate>.iterator(): Iterator<LocalDate> = object : I
 > val newYear = LocalDate.ofYearDay(2017, 1)  
 > val daysOff = newYear.minusDays(1)..newYear  
 > for (dayOff in daysOff) { println(dayOff) }  
-2016-12-31  
-2017-01-01  
 
+2016-12-31  
+2017-01-01

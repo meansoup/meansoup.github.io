@@ -24,7 +24,7 @@ Kotlin에서는 이런 것들을 편하게 하기 위한 Type과 장치들을 �
 Nullable Type과 Non-Nullable Type은 간단하다.  
 예제로 보면 쉽다.  
 
-```Kotlin
+```kotlin
 val nullable: String? = null // Type에 ?을 붙이면 nullable
 val nonNullable: String = x // compile 시점에 error 발생
 ```
