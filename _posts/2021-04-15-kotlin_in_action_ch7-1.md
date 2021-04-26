@@ -76,6 +76,7 @@ return toString().repeat(count)
 }
 ```
 > println('a' * 3)
+
 aaa
 
 유사하게 parameter들과 result의 type이 달라도 된다.  
