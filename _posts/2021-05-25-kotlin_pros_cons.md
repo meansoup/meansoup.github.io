@@ -27,6 +27,17 @@ kotlin은 nullable type과 not nullable type을 구분한다.
 
 not nullable type은 compile 시점에서 NPE를 발생시키기 때문에 runtime에 의도치 않은 NPE가 날 확률이 줄어든다.
 
+```kotlin
+var nullable: String? = null
+var notNullable: String = null
+```
+
+type을 그냥쓰면 not nullable type이고,  
+type에 `?`를 붙여서 nullable type을 사용할 수 있다.  
+
+not nullable type에 위처럼 null을 넣으면 `Kotlin: Null can not be a value of a non-null type`과 같은 compile error가 발생한다.
+
+
 실제로 kotlin 코드를 적용해서 NPE가 감소한 통계가 있다.
 1. android app에서 kotlin 코드를 사용하는 경우 [app crash가 20% 줄어듦](https://developer.android.com/kotlin/first#why).
 2. google home 팀은 kotlin 사용후 [NPE가 30% 감소](https://developer.android.com/stories/apps/google-home#results).
@@ -105,13 +116,7 @@ void getCountry() {
 `?.`와 유사한데, default value를 명시해준다.
 
 ```kotlin
-val t: String = s?: "" // s가 null -> return ""
-
-company?.address?: ""
-```
-
-```kotlin
-fun getCountry(): String? {
+fun getCountry(): String {
     return company?.address?.country?:"kr"
 }
 ```
