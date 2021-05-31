@@ -200,8 +200,8 @@ clean build의 경우 java보다 시간이 더 오래걸린다.
 kotlin은 [증분 컴파일(incremental build)](https://blog.jetbrains.com/ko/kotlin/2020/10/the-dark-secrets-of-fast-compilation-for-kotlin/)을 제공해서 partial build가 가능한 경우 java보다 더 빠르다.  
 - java는 컴파일 회피만을 제공
 
-컴파일 회피: 모듈 단위의 dirty 체크
-증분 컴파일: 파일 단위의 dirty 체크
+**컴파일 회피**: 모듈 단위의 dirty 체크  
+**증분 컴파일**: 파일 단위의 dirty 체크
 
 
 kotlin runtime이 package에 들어가야 해서 배포 시 파일 사이즈가 더 커진다.
