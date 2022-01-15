@@ -193,5 +193,6 @@ List(필요하다면 다른 colletions)를 만들기도 쉽다.
 
 Quick Guide to EasyRandom
 - [https://www.baeldung.com/java-easy-random](https://www.baeldung.com/java-easy-random)
+
 EasyRandom github
 - [https://github.com/j-easy/easy-random](https://github.com/j-easy/easy-random)
