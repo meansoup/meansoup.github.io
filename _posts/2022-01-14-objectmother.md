@@ -10,7 +10,7 @@ tag:
 `ObjectMother`는 우리가 코드를 개발하면서 한 번쯤은 생각해봤고, 또 편의를 위해 조금씩은 작성해봤을 내용의 패턴이다.  
 사실 패턴이란게 다 그렇지 않나 싶다.
 
-간단히 표현하자면 test object를 만들어주는 class라고 할 수 있을 것이다.
+간단히 표현하자면 test object를 만들어주는 class라고 할 수 있을 것이다.  
 패턴을 잘 정의하는 **Martin Fowler**의 글을 참고해서 정리해본다.
 
 ## Object Mother 란?
@@ -50,7 +50,8 @@ tag:
 ## reference
 
 martinfowler의 `ObjectMother`
-- [https://martinfowler.com/bliki/ObjectMother.html](https://martinfowler.com/bliki/ObjectMother.html)
+- [https://martinfowler.com/bliki/ObjectMother.html](https://martinfowler.com/bliki/ObjectMother.html)  
+
 Thoughtworks 논문 '`ObjectMother, Easing Test Object Creation in XP`'
 - [http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.18.4710&rep=rep1&type=pdf](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.18.4710&rep=rep1&type=pdf)
 
@@ -71,10 +72,9 @@ Thoughtworks 논문 '`ObjectMother, Easing Test Object Creation in XP`'
     ItemDTO.setOwner("testOwner");
 ```
 
-테스트에서 이런 코드가 반복되는게 자주 보인다.  
 문제가 많다.
-- 언제까지 이런 코드를 반복할 것인가?
-- 모르고 놓치는 경우보다 귀찮아서 놓치는 경우들이 참 많은데 random value도 아니다.
+- 테스트에서 이런 코드 반복이 많다. 언제까지 이런 코드를 **반복**할 것인가?
+- 모르고 놓치는 경우보다 귀찮아서 안 하는 경우들이 참 많은데 **random value**도 아니다.
 
 ### 실제 코드 sample 2
 
@@ -100,12 +100,11 @@ public static ItemDTO createItemDTO(){
 ```
 
 아직 문제가 많다.
-- 이런 코드가 프로젝트 곳곳에 있다.
+- 이런 코드가 프로젝트 **곳곳**에 있다.
   - 누가 만들었는지, 있는지 기억도 못하기 때문에
   - 심한 경우는 test class 마다 존재하기도 한다
-- 여전히 random 값이 아니다.
+- 여전히 **random value**는 아니다.
   - 값을 받아오기엔 random으로 해야할 게 많고, randomUtil로 모두 넣기 귀찮았나보다.
-  - 물론 잘 만들어진 함수들도 있다.
 
 ### 실제 코드 sample 3
 
@@ -122,8 +121,8 @@ private Usage initTestValue() {
 ```
 
 조금은 쓸만하다.
-- 그치만 언제까지 random으로 한땀 한땀 넣어줄건지.
-- random을 쓰기가 지겹다.
+- 이 정도면 일종의 objectMother라고 할 수 있을 것 같다.
+- 그치만 언제까지 random으로 **한땀 한땀** 넣어줄건지.
 
 
 ## EasyRandom
@@ -140,10 +139,10 @@ Naver에서 관리하고 있는 `FixtureMonkey` 도 있었고,
 - star 수도 가장 많았다.
 
 `EasyRandom`은 굉장히 강력한데, 내가 사용하며 확인된 사항은 다음과 같다.
-1. setter가 없어도 된다.
-2. contructor가 없어도 된다. (private contructor only)
-3. 자동으로 sub class들의 값도 random하게 채워준다.
-4. test object list 생성이 간단하다.
+1. **setter가 없어도 된다.**
+2. **contructor가 없어도 된다**. (private contructor only인 경우)
+3. 자동으로 **sub class들의 값도 random하게 채워준다.**
+4. test object **list 생성이 간단하다.**
 
 setter와 constructor가 없어도 된다는 점이 굉장히 좋았다.
 - 가독성++
@@ -169,8 +168,7 @@ setter와 constructor가 없어도 된다는 점이 굉장히 좋았다.
 ```java
     EasyRandom generator = new EasyRandom();
     Person person = generator.nextObject(Person.class);
-    List<Person> persons = generator.objects(Person.class, 5)
-    .collect(Collectors.toList());
+    List<Person> persons = generator.objects(Person.class, 5).collect(Collectors.toList());
 ```
 
 굉장히 간단하다.  
