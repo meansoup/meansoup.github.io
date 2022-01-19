@@ -32,7 +32,7 @@ tag:
 
 ## Object Mother 장 단점
 
-장 단점은 오역의 여지가 없도록 `ThoughWorks` 논문의 대용을 그대로 발췌했다.
+장 단점은 오역의 여지가 없도록 `ThoughWorks` 논문의 용을 그대로 발췌했다.
 
 ### 장점
 
@@ -116,7 +116,7 @@ private Usage initTestValue() {
     imageSize = RandomUtils.nextLong(100L, 1000L);
     videoSize = RandomUtils.nextLong(100L, 1000L);
 
-    return new Usage(uid, imageCount, videoCount, imageSize, videoSize)
+    return new Usage(uid, imageCount, videoCount, imageSize, videoSize);
 }
 ```
 
