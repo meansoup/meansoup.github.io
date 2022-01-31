@@ -4,7 +4,7 @@ title: ORMs
 tag:
   - database
 parent: db 개념
-grand_parent: database
+grand_parent: Database
 permalink: /docs/db/concept/orms
 ---
 
@@ -24,7 +24,7 @@ SELECT * FROM users WHERE email = 'meansoup@test.com';
 
 ## flow
 
-![orm](/images/post/backend/orm.png)
+![orm](/images/post/database/orm.png)
 
 ORM은 query를 작성해주는 소프트웨어라고 했다.  
 위와 같이 코드로 작성된 object들이 ORM을 통해 database에 query로 변환된다.
