@@ -83,8 +83,8 @@ User findByEmail(String email);
 ## 참고링크
 
 [https://stackoverflow.com/questions/1279613/what-is-an-orm-how-does-it-work-and-how-should-i-use-one](https://stackoverflow.com/questions/1279613/what-is-an-orm-how-does-it-work-and-how-should-i-use-one)  
-[https://blog.bitsrc.io/what-is-an-orm-and-why-you-should-use-it-b2b6f75f5e2a](https://blog.bitsrc.io/what-is-an-orm-and-why-you-should-use-it-b2b6f75f5e2a)  
-
+[https://blog.bitsrc.io/what-is-an-orm-and-why-you-should-use-it-b2b6f75f5e2a](https://blog.bitsrc.io/what-is-an-orm-and-why-you-should-use-it-b2b6f75f5e2a)    
+[https://openclassrooms.com/en/courses/5671811-implement-a-relational-database-with-asp-net-core/6588450-identify-object-relational-mapping-orm-tools-for-net](https://openclassrooms.com/en/courses/5671811-implement-a-relational-database-with-asp-net-core/6588450-identify-object-relational-mapping-orm-tools-for-net)  
 
 각 언어별 유명한 ORM 소프트웨어 리스트.
 - [https://en.wikipedia.org/wiki/List_of_object%E2%80%93relational_mapping_software#Java](https://en.wikipedia.org/wiki/List_of_object%E2%80%93relational_mapping_software#Java)
