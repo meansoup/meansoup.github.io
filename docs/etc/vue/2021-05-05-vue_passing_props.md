@@ -4,7 +4,7 @@ title: "vue 3.0 component props 전달하기"
 tag:
 - vue
 parent: vue
-permalink: /docs/vue
+permalink: /docs/vue/passing-props
 grand_parent: 등등
 ---
 
