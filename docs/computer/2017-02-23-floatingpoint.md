@@ -5,6 +5,8 @@ tag:
   - floating point
 permalink: /docs/computer/floating-point
 parent: computer 기본
+redirect_from:
+  - /2017/02/23/floatingpoint/
 ---
 
 ## 1 is not exactly 1
