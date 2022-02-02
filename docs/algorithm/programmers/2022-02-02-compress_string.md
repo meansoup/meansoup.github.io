@@ -10,7 +10,8 @@ nav_order: 5
 ---
 
 ## 문제
-[https://programmers.co.kr/learn/courses/30/lessons/60057](https://programmers.co.kr/learn/courses/30/lessons/60057)
+programmers의 2022 KAKAO BLIND RECRUITMENT 문제
+- [https://programmers.co.kr/learn/courses/30/lessons/60057](https://programmers.co.kr/learn/courses/30/lessons/60057)
 
 ## 접근 방식
 이번 문제는 푸는데 시간이 정말 오래걸렸는데 원인은 **문제를 제대로 읽지 않았기 때문**이다.  

@@ -10,7 +10,8 @@ nav_order: 5
 ---
 
 ## 문제
-[https://programmers.co.kr/learn/courses/30/lessons/92334](https://programmers.co.kr/learn/courses/30/lessons/92334)
+programmers의 2022 KAKAO BLIND RECRUITMENT 문제
+- [https://programmers.co.kr/learn/courses/30/lessons/92334](https://programmers.co.kr/learn/courses/30/lessons/92334)
 
 ## 접근 방식
 loop를 최대한 줄일 수 있는 방향으로 생각해보기.  
