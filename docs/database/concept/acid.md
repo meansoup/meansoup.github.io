@@ -38,10 +38,10 @@ data의 변경 operation이 **single operation으로** 수행되었는지를 보
 single operation이라는 것은 **부분적인 성공이 없이** 하나의 operation이라는 것을 말한다.  
 즉, **모든 변경이 수행되거나 아무 변경도 수행되지 않는 것**을 말한다.
 
+<div class="code-example" markdown="1">
 예를 들면
 {: .label .label-yellow }
-예를 들면
-{: .label .label-yellow }
+</div>
 ```markdown
 A가 B에게 100원을 이체할 때 Transaction T는 두 작업을 갖게 된다.  
 1. A := A - 100
