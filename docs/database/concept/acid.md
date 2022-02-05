@@ -1,0 +1,92 @@
+---
+layout: post
+title: ACID
+parent: db 개념
+grand_parent: Database
+permalink: /docs/db/concept/acid
+---
+
+## database transaction
+
+database system에서 상호작용의 단위를 말한다.  
+data의 추가, 수정, 삭제의 단계들을 하나로 단일 실행 단위의 작업 집합을 말한다.
+
+예를 들면,  
+A가 B에게 100원을 이체하는 작업에 대해서 아래의 SQL이 모여 하나의 transaction이 된다.  
+```sql
+BEGIN TRANSACTION
+UPDATE accounts SET balance = balance - 100 WHERE name = 'A';
+UPDATE accounts SET balance = balance + 100 WHERE name = 'B';
+COMMIT TRANSACTION
+```
+
+이론적으로 database system은 각각의 transaction에 대해 **ACID**를 보장한다.  
+실제로는 성능 향상을 위해 각 특성들이 종종 완화 되기도 한다.
+
+이런 transaction을 지원하는 database를 transactional database라고 부른다.  
+대부분의 RDB(Relational DB)는 transactional database이다.
+
+
+## ACID(Atomicity Consistency Isolation Durability) 이란?
+
+database transaction이 안전하게 수행된다는 것을 보장하기 위한 성질이다.  
+
+### Atomicity (원자성)
+
+data의 변경 operation이 **single operation으로** 수행되었는지를 보장하는 속성이다.  
+single operation이라는 것은 **부분적인 성공이 없이** 하나의 operation이라는 것을 말한다.  
+즉, **모든 변경이 수행되거나 아무 변경도 수행되지 않는 것**을 말한다.
+
+예를 들면,
+A가 B에게 100원을 이체할 때 Transaction T는 두 작업을 갖게 된다.
+1. A := A - 100
+2. B := B + 100  
+
+여기서 A에서 출금은 성공하고, B에 입금이 실패한다면 **A에서는 돈이 빠졌지만 B에는 이체되지 않는 문제가 발생**한다.  
+원자성은 이런 문제를 해결해준다.
+
+### Consistency (일관성)
+
+transaction이 성공적으로 완료되면 database가 항상 일관성있는 상태로 유지된다는 속성이다.  
+일관성이라는건 data의 손상이나 오류 등으로 인해 database의 rule을 깨지 않는 것을 말한다.  
+
+나는 일관성이 이해하기가 가장 어려웠는데, 쉽게 말하자면 **invalid 한 data를 갖는 transaction 을 받아들이지 않는다는 것**이다.
+즉, valid data가 database에 쓰일 수 있다는 것이다.
+
+예를 들면,  
+A가 B에게 100원을 이체할 때, A가 90원 밖에 가지고 있지 않다면 A는 -10원을 갖게 된다.  
+**계좌 table의 rule이 - 값을 가질 수 없다면 이 transaction은 실패하는 것**이다.  
+여기서 일관성을 말하자면 **계좌는 항상 0 이상의 값을 갖는다 라는 일관된 규칙이 유지되는 것**.
+
+### Isolation (고립성)
+
+transaction이 다른 transaction과 별개로 동작하는 것을 보장하는 속성이다.  
+동일한 table에서 여러 transaction이 발생하더라도 **서로 간섭하거나 영향을 끼치지 않도록** 한다.  
+구체적으로는 **하나의 tranascation의 수정이 반영되기 이전까지 다른 transaction에서 변경 사항을 확인할 수 없는 것**을 말한다.
+
+예를 들면,  
+A가 B에게 100원을 출금하는 작업과, A와 B의 계좌를 조회하는 작업이 동시에 발생한다고 가정하자.
+1. T1 - A := A - 100
+2. T2 - Read(A), Read(B)
+3. T1 - B := B + 100
+
+T1에서 A에서 이체하는 작업만 수행된 사이에 A와 B의 계좌를 읽는 작업이 수행되는 경우.  
+tranaction이 종료되지 않은 상황에서 서로 변경사항을 확인할 수 있다면, **순간적으로 A에서는 돈이 빠졌지만 B에는 이체되지 않은 문제가 발생**한다.  
+고립성은 이런 문제를 해결해준다.  
+
+### Durability (지속성)
+
+transaction이 성공적으로 수행된 경우 영구적으로 반영되고 시스템 오류가 발생하더라도 변경사항이 유지되고 취소되지 않는다.
+
+예를 들면,  
+계좌 이체가 성공하면 이후에 오류가 발생해도 이체된 data는 변경되지 않는다.
+
+
+## reference
+
+http://www.jidum.com/jidums/view.do?jidumId=906  
+https://www.ibm.com/docs/ko/cics-ts/5.4?topic=processing-acid-properties-transactions  
+https://ko.wikipedia.org/wiki/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4_%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98  
+https://www.geeksforgeeks.org/acid-properties-in-dbms/  
+https://mariadb.com/resources/blog/acid-compliance-what-it-means-and-why-you-should-care/  
+https://www.geeksforgeeks.org/sql-transactions/  

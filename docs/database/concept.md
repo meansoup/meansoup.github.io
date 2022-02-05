@@ -1,7 +1,7 @@
 ---
 layout: default
 title: db 개념
-nav_order: 4
+nav_order: 1
 has_children: true
 parent: Database
 permalink: /docs/db/concept
