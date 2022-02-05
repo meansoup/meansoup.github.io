@@ -40,10 +40,9 @@ single operation이라는 것은 **부분적인 성공이 없이** 하나의 ope
 
 예를 들면
 {: .label .label-yellow }
-```markdown
 예를 들면
 {: .label .label-yellow }
-
+```markdown
 A가 B에게 100원을 이체할 때 Transaction T는 두 작업을 갖게 된다.  
 1. A := A - 100
 2. B := B + 100  
