@@ -27,9 +27,10 @@ COMMIT TRANSACTION
 대부분의 RDB(Relational DB)는 transactional database이다.
 
 
-## ACID(Atomicity Consistency Isolation Durability) 이란?
+## ACID 이란?
 
 database transaction이 안전하게 수행된다는 것을 보장하기 위한 성질이다.  
+아래의 네 가지 속성을 따서 ACID라고 부른다.
 
 ### Atomicity (원자성)
 
@@ -38,9 +39,10 @@ single operation이라는 것은 **부분적인 성공이 없이** 하나의 ope
 즉, **모든 변경이 수행되거나 아무 변경도 수행되지 않는 것**을 말한다.
 
 예를 들면,
-A가 B에게 100원을 이체할 때 Transaction T는 두 작업을 갖게 된다.
-1. A := A - 100
-2. B := B + 100  
+{: .label .label-yellow }
+> A가 B에게 100원을 이체할 때 Transaction T는 두 작업을 갖게 된다.  
+> 1. A := A - 100
+> 2. B := B + 100  
 
 여기서 A에서 출금은 성공하고, B에 입금이 실패한다면 **A에서는 돈이 빠졌지만 B에는 이체되지 않는 문제가 발생**한다.  
 원자성은 이런 문제를 해결해준다.
@@ -84,9 +86,9 @@ transaction이 성공적으로 수행된 경우 영구적으로 반영되고 시
 
 ## reference
 
-http://www.jidum.com/jidums/view.do?jidumId=906  
-https://www.ibm.com/docs/ko/cics-ts/5.4?topic=processing-acid-properties-transactions  
-https://ko.wikipedia.org/wiki/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4_%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98  
-https://www.geeksforgeeks.org/acid-properties-in-dbms/  
-https://mariadb.com/resources/blog/acid-compliance-what-it-means-and-why-you-should-care/  
-https://www.geeksforgeeks.org/sql-transactions/  
+[http://www.jidum.com/jidums/view.do?jidumId=906](http://www.jidum.com/jidums/view.do?jidumId=906)  
+[https://www.ibm.com/docs/ko/cics-ts/5.4?topic=processing-acid-properties-transactions](https://www.ibm.com/docs/ko/cics-ts/5.4?topic=processing-acid-properties-transactions)  
+[https://ko.wikipedia.org/wiki/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4_%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98](https://ko.wikipedia.org/wiki/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4_%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98)  
+[https://www.geeksforgeeks.org/acid-properties-in-dbms/](https://www.geeksforgeeks.org/acid-properties-in-dbms/)  
+[https://mariadb.com/resources/blog/acid-compliance-what-it-means-and-why-you-should-care/](https://mariadb.com/resources/blog/acid-compliance-what-it-means-and-why-you-should-care/)  
+[https://www.geeksforgeeks.org/sql-transactions/](https://www.geeksforgeeks.org/sql-transactions/)  
