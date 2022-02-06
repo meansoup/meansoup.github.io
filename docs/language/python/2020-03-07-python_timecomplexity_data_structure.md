@@ -13,8 +13,26 @@ permalink: /docs/algorithm/language/python/time-complexity
 
 고민이 될 때는 아래 링크를 참고해서 각 동작들의 cost를 확인해보는 것도 좋겠다.
 
-python wiki
+## 기본 자료형 time complexity
+
+아래 링크에서 정리된 표를 보면 좋다.
+
 - [https://wiki.python.org/moin/TimeComplexity](https://wiki.python.org/moin/TimeComplexity)
 
-추가 참고 자료
+---
+
+## libary
+
+### heapq
+
+| Operation | Average Big O |
+|-----------|---------------|
+| push      | O(log n)      |
+| pop       | O(log n)      |
+
+- [https://stackoverflow.com/questions/38806202/whats-the-time-complexity-of-functions-in-heapq-library/38833175](https://stackoverflow.com/questions/38806202/whats-the-time-complexity-of-functions-in-heapq-library/38833175)
+
+## reference
+
 - [https://www.ics.uci.edu/~pattis/ICS-33/lectures/complexitypython.txt](https://www.ics.uci.edu/~pattis/ICS-33/lectures/complexitypython.txt)
+- [https://stackoverflow.com/questions/38806202/whats-the-time-complexity-of-functions-in-heapq-library/38833175](https://stackoverflow.com/questions/38806202/whats-the-time-complexity-of-functions-in-heapq-library/38833175)
