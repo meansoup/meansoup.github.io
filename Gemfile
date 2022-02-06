@@ -14,6 +14,7 @@ gem "just-the-docs"
 
 gem 'jekyll-redirect-from'
 gem 'jekyll-sitemap'
+gem 'jekyll-last-modified-at'
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
