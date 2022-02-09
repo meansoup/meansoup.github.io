@@ -7,7 +7,7 @@ permalink: /docs/algorithm/programmers/muzi-mukbang
 --- 
 
 ## 문제
-programmers의 2022 KAKAO BLIND RECRUITMENT 문제
+programmers의 2019 KAKAO BLIND RECRUITMENT 문제
 - [https://programmers.co.kr/learn/courses/30/lessons/42891](https://programmers.co.kr/learn/courses/30/lessons/42891) 
 
 ## 접근 방식 
