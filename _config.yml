@@ -31,7 +31,6 @@ github_username: meansoup
 # theme: "just-the-docs"
 remote_theme: pmarsceill/just-the-docs
 plugins:
-  - jekyll-feed
   - jekyll-redirect-from
 
 # Exclude from processing.
