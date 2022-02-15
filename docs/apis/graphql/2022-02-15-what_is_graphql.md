@@ -7,8 +7,8 @@ permalink: /docs/apis/graphql/what_is_graphql
 ---
 
 기술이 발전하면서 인터넷은 곳곳에서 쓰이게 되었다.  
-와중에 많은 문제가 발생하고 해결되었는데 아직도 해결중인 문제는 **데이터 전송 속도를 올리는 일**이다.
-더 많은 데이터를 손실 없이 빠르게 전송하는 일은 인터넷의 역사와 같이 발전해온다.
+와중에 많은 문제가 발생하고 해결되었는데 아직도 해결중인 문제는 **데이터 전송 속도를 올리는 일**이다.  
+더 많은 데이터를 손실 없이 빠르게 전송하는 일은 인터넷의 역사와 같이 발전해왔다.
 
 현 시점에서 가장 현대적인 해결책이 바로 **graphQL**이다.
 
@@ -16,7 +16,7 @@ permalink: /docs/apis/graphql/what_is_graphql
 ## graphQL 이란?
 
 **graphQL은 API용 query 언어이자 data를 가져오기 위한 query를 수행하는 runtime을 말한다**.  
-이름에서 느껴지듯 `Graph Query Language`의 약자이자 **SQL**과 마찬가지로 query 언어이다.  
+이름에서 느껴지듯 **Graph Query Language**의 약자이자 **SQL**과 마찬가지로 query 언어이다.  
 
 <div class="code-example" markdown="1" style="font-size: 0.8em">
 예시
@@ -88,7 +88,7 @@ facebook에서는 RESTful 서버를 사용하고 있었는데 당시 성능도 �
 REST는 각각의 container에 대해 call을 요청한다.  
 - posts, comments, authors
 
-반면 GraphGL은 graph를 만들어서 필요한 모든 값들을 한 번에 요청한다.
+GraphGL은 graph를 만들어서 필요한 모든 값들을 한 번에 요청한다.
 
 </div>
 
