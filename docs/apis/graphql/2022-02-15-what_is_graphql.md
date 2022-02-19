@@ -3,6 +3,7 @@ layout: post
 title: GraphQL이란?
 parent: GraphQL
 grand_parent: APIs
+nav_order: 1
 permalink: /docs/apis/graphql/what_is_graphql
 ---
 
