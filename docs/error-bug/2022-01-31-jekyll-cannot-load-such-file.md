@@ -1,8 +1,15 @@
+---
+layout: post
+title: "[jekyll] Dependency Error, Jekyll::Errors::MissingDependencyException"
+parent: error & bug
+permalink: /docs/error-bug/kotlin/jekyll-cannot-load-such-file
+---
 
 Dependency 추가 후 jekyll local build 중 에러가 발생했다.  
 
 ## 빌드 에러 메세지
 
+```
 Dependency Error: Yikes! It looks like you don't have jekyll-sitemap or one of its dependencies installed. In order to use Jekyll as currently configured, you'll need to install this gem. If you've run Jekyll with `bundle exec`, ensure that you have included the jekyll-sitemap gem in your Gemfile as well. The full error message from Ruby is: 'cannot load such file -- jekyll-sitemap' If you run into trouble, you can find helpful resources at https://jekyllrb.com/help/!
                     ------------------------------------------------
       Jekyll 4.2.1   Please append `--trace` to the `serve` command
@@ -53,6 +60,7 @@ C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/jekyll-4.2.1/lib/jekyll/external.rb:60:in
          2: from C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/jekyll-4.2.1/lib/jekyll/external.rb:57:in `each'
          1: from C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/jekyll-4.2.1/lib/jekyll/external.rb:58:in `block in require_with_graceful_fail'
 C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/jekyll-4.2.1/lib/jekyll/external.rb:73:in `rescue in block in require_with_graceful_fail': jekyll-sitemap (Jekyll::Errors::MissingDependencyException)
+```
 
 ## 원인
 

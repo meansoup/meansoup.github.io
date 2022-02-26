@@ -8,8 +8,8 @@ parent: pattern
 permalink: /docs/pattern/object-mother
 ---
 
-이번엔 `ObjectMother`라는 패턴에 대해서 정리한다.  
-`ObjectMother`는 우리가 코드를 개발하면서 한 번쯤은 생각해봤고, 또 편의를 위해 조금씩은 작성해봤을 내용의 패턴이다.  
+이번엔 **ObjectMother**라는 패턴에 대해서 정리한다.  
+**ObjectMother**는 우리가 코드를 개발하면서 한 번쯤은 생각해봤고, 또 편의를 위해 조금씩은 작성해봤을 내용의 패턴이다.  
 사실 패턴이란게 다 그렇지 않나 싶다.
 
 간단히 표현하자면 test object를 만들어주는 class라고 할 수 있을 것이다.  
@@ -34,7 +34,7 @@ permalink: /docs/pattern/object-mother
 
 ## Object Mother 장 단점
 
-장 단점은 오역의 여지가 없도록 `ThoughWorks` 논문의 용을 그대로 발췌했다.
+장 단점은 오역의 여지가 없도록 **ThoughWorks** 논문의 내용을 그대로 발췌했다.
 
 ### 장점
 

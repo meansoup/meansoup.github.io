@@ -29,7 +29,9 @@ class ListNode(var `val`: Int) {
 property의 경우엔 저렇게 쓰는게 아니었다.
 
 ## 해결
+
 ```kotlin
     val base = ListNode(0)
     base.next = ListNode(1)
     var next = base.next()
+```
