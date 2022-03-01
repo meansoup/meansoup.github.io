@@ -34,10 +34,12 @@ SQL의 **INSERT, UPDATE, DELETE** 역할을 하는 것이 GraphQL의 **Mutation*
 ### Query
 
 query는 받고싶은 데이터를 필드에 적어서 보낸다.  
+- 이 받고 싶은 필드들을 **selection set**이라고 한다.
 
 <div class="code-example" markdown="1" style="font-size: 0.8em">
 예시
 {: .label .label-yellow}  
+
 
 ```graphql
 query {
@@ -51,6 +53,7 @@ query {
 
 예를 들면 위 query는 github graph api로 호출하는 query이다.  
 1장에서 말한 것처럼 내가 필요한 값들만(id, url, email) query가 가능하다.  
+여기서 viewer와 viewer의 id, url, email이 selection set이다.
 
 그렇다면 결과는
 ```json
@@ -66,7 +69,8 @@ query {
 ```
 
 GraphQL의 장점은 여러 데이터를 한 번에 호출할 수 있다는 것.  
-예를 들면 아래와 같이 query가 가능하다.  
+예를 들면 아래와 같이 query가 가능하다는 것.  
+그리고, **query arguments**로 값들을 지정해서 가져올 수 있다는 것.
 
 ```graphql
 query { 
@@ -100,9 +104,33 @@ query {
   }
 }
 ```
-
-
 </div>
+
+### Field type
+
+GraphQL에서 필드는 scalar type과 object type 중 하나에 속하게 된다.  
+
+#### Scalar type
+
+scalar type은 아래의 다섯가지 type 중 하나를 갖는다.
+- Int
+- Float
+- String
+- Boolean
+- ID
+
+Int와 Float는 json에서 숫자 타입의 데이터를 반환하고,  
+String과 ID는 json에서 문자열 데이터를 반환한다.  
+ID는 유일한 문자열을 반환해야한다.
+
+위의 예시에서 id, url, email 같은 값들이 scalar type이다.  
+
+#### Object type
+
+object type은 type들을 그룹으로 묶어둔 것을 말한다.  
+json에서 value에 key/value set이 무한히 반복될 수 있는 것처럼 object type 안에 계속 object type이 들어있을 수 있다.
+
+위의 예시에서 viewer, repository 같은 값들이 object type이다.
 
 
 
