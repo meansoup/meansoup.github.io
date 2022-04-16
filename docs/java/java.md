@@ -1,9 +1,9 @@
 ---
 layout: default
-title: JVM
+title: Java
 nav_order: 4
 has_children: true
-permalink: /docs/jvm
+permalink: /docs/java
 ---
 
 {: .fs-6 .fw-300 }
