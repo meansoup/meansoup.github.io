@@ -7,9 +7,7 @@ nav_order: 5
 permalink: /docs/ddd/strategic/domain_events
 ---
 
-
-일단 **domain events**를 사용하는 법을 알고나면 이에 중독되서 어떻게 **domain events** 없이 살아왔는지 의아해질 것이다.
-- Vaughn Vernon
+*일단 **domain events**를 사용하는 법을 알고나면 이에 중독되서 어떻게 **domain events** 없이 살아왔는지 의아해질 것이다. - Vaughn Vernon*
 
 
 ### event란?
@@ -39,7 +37,7 @@ domain event는 aggregate에 의해 생성된다.
 ### 장점
 
 domain의 변경에 대한 side effect를 명시적으로 구현할 수 있다.
-- 유비쿼터스 언어에 기반한 도메인 규칙을 도메인 이벤트로 명시적으로 표현할 수도 있는 것.
+- 유비쿼터스 언어에 기반한 도메인 규칙을 도메인 이벤트로 명시적으로 표현할 수 있는 것.
 
 
 ### domain event 맞나?
