@@ -20,7 +20,6 @@ serial GC STW
 parallel GC STW
 - ![parallel](/images/post/java/gc/parallel.jpg)
 
-serial과 parallel의 차이.  
 serial은 GC를 단일 thread로 하기 때문에 위와 같이 thread의 낭비가 크다.  
 parallel은 thread를 효율적으로 사용하고 더 빠르게 GC를 수행할 수 있다.
 
