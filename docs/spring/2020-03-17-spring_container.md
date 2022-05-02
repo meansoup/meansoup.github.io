@@ -1,9 +1,7 @@
 ---
 layout: post
 title: Spring Container
-tag:
-  - spring
-parent: spring
+parent: Spring
 permalink: /docs/spring/container
 ---
 

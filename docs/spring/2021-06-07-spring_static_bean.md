@@ -1,9 +1,7 @@
 ---
 layout: post
 title: "static method class와 spring bean"
-tag:
-  - spring
-parent: spring
+parent: Spring
 permalink: /docs/spring/static-method-vs-bean
 ---
 

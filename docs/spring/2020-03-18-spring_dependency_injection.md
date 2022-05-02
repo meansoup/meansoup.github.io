@@ -1,9 +1,7 @@
 ---
 layout: post
 title: Spring Dependency Injection
-tag:
-  - spring
-parent: spring
+parent: Spring
 permalink: /docs/spring/dependency-injection
 ---
 

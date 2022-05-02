@@ -1,9 +1,7 @@
 ---
 layout: post
 title: Spring Structure
-tag:
-  - spring
-parent: spring
+parent: Spring
 permalink: /docs/spring/structure
 ---
 ## spring MVC 설계 구조
