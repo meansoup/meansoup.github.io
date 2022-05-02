@@ -14,17 +14,17 @@ permalink: /docs/pattern/object-mother
 
 ## Object Mother 란?
 
-테스트에 사용되는 여러 `example objects`를 생성하는데 도움을 주는 클래스이다.  
+테스트에 사용되는 여러 **example objects**를 생성하는데 도움을 주는 클래스이다.  
 
 테스트를 작성할 때 많은 예제 데이터가 필요하고,  
-이런 `data set`을 `test fixture`라고 부른다.
+이런 **data set**을 **test fixture**라고 부른다.
 
-여러 테스트 클래스에서 유사한 `data`가 필요한 경우가 많다.  
-테스트 시점에서 `standard fixtures`를 만들 수 있는 `factory object`를 만드는 것이 합리적이다.  
-`Object Mother`는 이런 factory를 말한다.
+여러 테스트 클래스에서 유사한 **data**가 필요한 경우가 많다.  
+테스트 시점에서 **standard fixtures**를 만들 수 있는 **factory object**를 만드는 것이 합리적이다.  
+**Object Mother**는 이런 factory를 말한다.
 
 이렇게 만들어진 object는 일부 test case에서는 적절하지 않을 수 있다.  
-그렇지만 Folwer는 이런 경우에서 조차도 새로운 object 생성보다 `Object Mother`로 생성한 객체를 수정하는 방향이 더 이해하기 쉽다고 말한다.  
+그렇지만 Folwer는 이런 경우에서 조차도 새로운 object 생성보다 **Object Mother**로 생성한 객체를 수정하는 방향이 더 이해하기 쉽다고 말한다.  
 
 - 참고로 Object Mother라는 단어는 **Thoughtworks** 프로젝트에서 처음 쓰였다.
 
@@ -54,8 +54,8 @@ ObjectMother를 공부하면서[Java에서 ObjectMother 패턴 적용](/docs/jav
 
 ## reference
 
-martinfowler의 `ObjectMother`
+martinfowler의 **ObjectMother**
 - [https://martinfowler.com/bliki/ObjectMother.html](https://martinfowler.com/bliki/ObjectMother.html)  
 
-Thoughtworks 논문 '`ObjectMother, Easing Test Object Creation in XP`'
+Thoughtworks 논문 '**ObjectMother, Easing Test Object Creation in XP**'
 - [http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.18.4710&rep=rep1&type=pdf](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.18.4710&rep=rep1&type=pdf)
