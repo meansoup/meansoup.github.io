@@ -1,8 +1,10 @@
 ---
 layout: post
 title: Spring CRUD vs JPA 차이
-parent: Spring
-permalink: /docs/spring/container
+nav_order: 1
+parent: Spring JPA
+grand_parent: Spring
+permalink: /docs/spring/jpa/crud-vs-jpa
 ---
 
 스프링에서 [ORMs](/docs/database/concept/2022-01-31-orms.md) 개념을 적용한 표준이 JpaRepository이다.  
