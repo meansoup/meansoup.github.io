@@ -1,12 +1,11 @@
 ---
 layout: post
 title: "[OmitStackTraceInFastThrow] java stacktrace 안남는 문제 해결"
-tag:
-  - java
-  - jvm
-parent: java
-grand_parent: language
-permalink: /docs/algorithm/language/java/stacktrace
+parent: 이슈
+grand_parent: Java
+permalink: /docs/java/issue/stacktrace
+redirect_from:
+  - /docs/algorithm/language/java/stacktrace
 ---
 
 java에서 NullPointException(NPE) 발생 시 stackTrace가 남지 않는 문제가 발생했다.  
@@ -28,23 +27,21 @@ exception이 발생하면 full stack trace를 출력하고 이걸 저장했다�
 // test.java
 public class test {
     public static void main(String[] args) {
-        String string = null;
+        String nullStr = null;
         int i = 0;
         while (i <= 13000) {
             i++;
             try {
-                toStr(string);
+                makeException(nullStr);
             } catch (Exception e) {
-                // if (i==1 || i == 13000) 
                 e.printStackTrace();
             }
         }
     }
 
-    private static void toStr(String obj) {
+    private static void makeException(String obj) {
         obj.split("a");
     }
-
 }
 ```
 
