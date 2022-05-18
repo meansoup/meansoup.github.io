@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 제대로 알자, VO
+title: DDD 제대로 알자, VO
 parent: 전술적 설계
 grand_parent: Domain Driven Design
 nav_order: 5
