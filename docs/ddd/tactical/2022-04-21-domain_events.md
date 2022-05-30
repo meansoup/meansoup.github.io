@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 도메인 이벤트 (Domain Events)
+title: DDD 제대로 알자, Domain Events
 parent: 전술적 설계
 grand_parent: Domain Driven Design
 nav_order: 5
