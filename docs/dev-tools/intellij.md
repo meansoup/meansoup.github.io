@@ -1,10 +1,10 @@
 ---
 layout: default
-title: db 개념
+title: intellij 설정하기
 nav_order: 1
 has_children: true
-parent: Database
-permalink: /docs/db/concept
+parent: 개발툴
+permalink: /docs/dev-tools/intellij
 ---
 
 {: .fs-6 .fw-300 }
