@@ -2,7 +2,7 @@
 layout: post
 title: "java와 비교한 kotlin 장단점"
 nav_order: 1
-parent: kotlin
+parent: Kotlin
 permalink: /docs/kotlin/kotlin-vs-java
 ---
 
