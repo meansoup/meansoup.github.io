@@ -1,9 +1,9 @@
 ---
 layout: default
-title: kotlin
-nav_order: 2
+title: Kotlin
+nav_order: 5
 has_children: true
-parent: language
+permalink: /docs/kotlin
 ---
 
 {: .fs-6 .fw-300 }

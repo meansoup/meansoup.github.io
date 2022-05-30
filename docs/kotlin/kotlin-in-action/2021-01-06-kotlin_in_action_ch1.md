@@ -1,11 +1,9 @@
 ---
 layout: post
-title: "kotlin in action #1"
-tag:
-  - kotlin
-parent: kotlin
-grand_parent: language
-permalink: /docs/algorithm/language/kotlin/kotlin-in-action-1
+title: "kotlin in action 정리 #1"
+parent: "kotlin in action 정리하기"
+grand_parent: Kotlin
+permalink: /docs/kotlin/kotlin-in-action/1
 ---
 
 Kotlin in Action으로 Kotlin study 하기.  

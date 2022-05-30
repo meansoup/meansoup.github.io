@@ -1,12 +1,9 @@
 ---
 layout: post
 title: "java와 비교한 kotlin 장단점"
-tag:
-  - kotlin
 nav_order: 1
 parent: kotlin
-grand_parent: language
-permalink: /docs/algorithm/language/kotlin/kotlin-vs-java
+permalink: /docs/kotlin/kotlin-vs-java
 ---
 
 kotlin을 공부하면서 확인한 장단점을 정리해보았다.  

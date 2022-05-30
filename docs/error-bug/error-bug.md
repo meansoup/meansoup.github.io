@@ -1,7 +1,7 @@
 ---
 layout: default
 title: error & bug
-nav_order: 5
+nav_order: 100
 has_children: true
 permalink: /docs/error-bug
 ---

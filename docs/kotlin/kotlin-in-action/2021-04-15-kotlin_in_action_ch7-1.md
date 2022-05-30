@@ -1,11 +1,9 @@
 ---
 layout: post
-title: "kotlin in action #7"
-tag:
-  - kotlin
-parent: kotlin
-grand_parent: language
-permalink: /docs/algorithm/language/kotlin/kotlin-in-action-7-1
+title: "kotlin in action 정리 #7"
+parent: "kotlin in action 정리하기"
+grand_parent: Kotlin
+permalink: /docs/kotlin/kotlin-in-action/7
 ---
 
 ## chapter 7. Operator overloading and other conventions

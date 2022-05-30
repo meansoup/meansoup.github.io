@@ -1,11 +1,9 @@
 ---
 layout: post
-title: "kotlin in action #4"
-tag:
-  - kotlin
-parent: kotlin
-grand_parent: language
-permalink: /docs/algorithm/language/kotlin/kotlin-in-action-4
+title: "kotlin in action 정리 #4"
+parent: "kotlin in action 정리하기"
+grand_parent: Kotlin
+permalink: /docs/kotlin/kotlin-in-action/4
 ---
 
 ## chapter 4. Classes, Objects and Interface
