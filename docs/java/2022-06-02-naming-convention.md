@@ -8,7 +8,7 @@ permalink: /docs/java/naming-convention
 naming은 당연히 class/property/method를 떠나서 명확하고 단순해야 한다.  
 최근 naming으로 작은 논란? 이 있었던 적이 있었다.  
 naming은 *꼭 이래야 한다.* 라는게 없기 때문에 논란이 생기면 사람마다 생각이 달라 정리하기가 어렵다.  
-convention을 명확하게 하기 위해 주요 회사들의 naming convention을 정리해보았다.
+convention을 명확하게 하기 위해 **주요 회사들의 naming convention**을 정리해보았다.
 
 참고로 내가 우리 팀에서 걸렸던 부분은 [약어 convention](#약어-규칙)이고,  
 이걸 정리해서 우리 팀 약어는 여기 정리된 규칙에 맞게 바뀌었다.
@@ -29,7 +29,6 @@ convention을 명확하게 하기 위해 주요 회사들의 naming convention�
 
 - property의 첫 글자는 소문자여야 한다. lowerCamelCase *(W3 / Google)*
 - property는 명사거나 명사구여야 한다. *(W3 / Google)*
-- ~~property는 실제 data가 복수로 구성될 수 있더라도 list-valued property가 아닌 이상 단수형이어야 한다. *(W3)*~~
 
 ### Method
 
