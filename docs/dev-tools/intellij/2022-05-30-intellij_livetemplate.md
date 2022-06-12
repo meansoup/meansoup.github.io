@@ -1,6 +1,6 @@
 ---
 layout: post
-title: intellij live template 사용하기
+title: intellij 의미 없는 시간 줄이기 live template 편
 parent: intellij 설정하기
 grand_parent: 개발툴
 permalink: /docs/dev-tools/intellij/live-template
