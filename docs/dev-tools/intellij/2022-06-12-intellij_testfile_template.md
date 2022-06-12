@@ -71,5 +71,5 @@ class ${NAME} {
 intelij에서는 간단하게 import를 할 수 있지만 테스트 클래스를 자주 생성하는 경우 은근히 도움이 된다.  
 - 그리고 일단 귀찮지 않다.  
 
-추가로, intelij에서는 **Optimize Import**를 하면 사용하지 않는 import는 모두 제거해주니까 추가해두는 것이 아무 문제가 되지 않는다.
-
++ intelij에서는 **Optimize Import**를 하면 사용하지 않는 import는 모두 제거해주니까 추가해두는 것이 아무 문제가 되지 않는다.  
++ Junit5를 설정하면 Java, Kotlin 모두 적용된다.
