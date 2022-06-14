@@ -1,10 +1,8 @@
 ---
 layout: post
 title: "[DynamoDB] 생각지도 못한 DynamoSizeLimitException"
-tag:
-  - AWS
-  - Dynamo
-parent: aws
+parent: DynamoDB
+grand_parent: aws
 permalink: /docs/aws/DynamoSizeLimitException
 ---
 

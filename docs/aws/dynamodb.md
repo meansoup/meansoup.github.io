@@ -1,9 +1,9 @@
 ---
 layout: post
 title: DynamoDB
-tag:
-  - AWS
+nav_order: 1
 parent: aws
+has_children: true
 permalink: /docs/aws/dynamo
 ---
 
