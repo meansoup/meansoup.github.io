@@ -1,9 +1,8 @@
 ---
 layout: post
-title: "SQL vs NoSQL, 왜 nosql을 써야하는가?"
-parent: DynamoDB
-grand_parent: aws
-permalink: /docs/aws/dynamo/why-use-nosql
+title: "SQL vs NoSQL, 왜 nosql?"
+parent: Database
+permalink: /docs/db/why-use-nosql
 ---
 
 AWS에서 진행하는 dynamodb immersion day 세션에 참여할 수 있는 기회가 생겼다.  
@@ -24,7 +23,7 @@ AWS에서 진행하는 dynamodb immersion day 세션에 참여할 수 있는 기
 
 ### hard drive로 보는 Normalization
 
-![5mb hard](/images/post/aws/dynamodb/why-use-nosql/5mbharddrive1956.jpg)
+![5mb hard](/images/post/database/why-use-nosql/5mbharddrive1956.jpg)
 
 1956년 IBM의 5MB hard drive를 한 달 대여하는 비용이 $3200 이었다.
 - 2019년 가격으로 환산하면 약 $30000 이다.
@@ -60,7 +59,7 @@ SQL에서는 ACID 때문에 scale을 늘리는 것이 더 쉽지 않고,
 
 ## Scale up vs Scale out
 
-![scale up vs scale out](/images/post/aws/dynamodb/why-use-nosql/scaleup-scaleout.png)
+![scale up vs scale out](/images/post/database/why-use-nosql/scaleup-scaleout.png)
 
 위와 같이 sql은 ACID 지원등을 이유로 scale up(vertical-scaling)을 해야 하는게 기본이다.  
 반면에 nosql들은 scale out(horizontal scaling)으로 관리할 수 있어 scale 관리가 쉽다.
