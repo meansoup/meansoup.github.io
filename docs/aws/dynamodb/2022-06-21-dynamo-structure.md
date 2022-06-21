@@ -3,6 +3,7 @@ layout: post
 title: "dynamo 이해하기 - dynamo 내부구조"
 parent: DynamoDB
 grand_parent: aws
+nav_order: 1
 permalink: /docs/aws/dynamo/structure
 math: mathjax3
 ---
@@ -58,7 +59,7 @@ dynamo의 내부 architecture에 대해서 배우면 partition에 대한 제약�
 위 개념을 이해하면 제약들을 이해하기 쉽다.
 
 하나의 node는 1KB의 CU만을 갖는다.
-- read는 3개의 node에서 이뤄질 수 있으므로 RCU는 $$ 1KB * 3 = $$  = 3KB.
+- read는 3개의 node에서 이뤄질 수 있으므로 RCU는 $$ 1KB * 3 = 3KB$$.
 - write는 leaderNode에서만 이뤄지므로 WCU는 1KB.
 
 각 node는 10GB의 저장공간을 가지므로 하나의 partition의 max size는 10GB.
