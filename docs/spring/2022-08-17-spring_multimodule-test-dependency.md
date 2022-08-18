@@ -55,6 +55,31 @@ default는 jar.
 jar, pom, war, test-jar 등이 있고, test-jar를 통해 test package를 명시하였다.
 
 
+## attach test-jar
+
+위처럼하면 test를 돌리는데는 문제 없으나, mvn package / deploy 시에 test-jar가 core에서 생성되지 않아 에러가 발생한다.  
+아래와 같이 plugin을 추가해서 해결한다.  
+
+```xml
+  <build>
+    <plugins>
+     <plugin>
+       <groupId>org.apache.maven.plugins</groupId>
+       <artifactId>maven-jar-plugin</artifactId>
+       <version>3.0.2</version>
+       <executions>
+         <execution>
+           <goals>
+             <goal>test-jar</goal>
+           </goals>
+         </execution>
+       </executions>
+     </plugin>
+    </plugins>
+  </build>
+```
+
+
 ## reference
 
 - https://stackoverflow.com/questions/174560/sharing-test-code-in-maven
@@ -62,3 +87,6 @@ jar, pom, war, test-jar 등이 있고, test-jar를 통해 test package를 명시
 maven type
 - https://zditect.com/blog/54005418.html
 - https://www.quora.com/What-is-the-purpose-to-use-type-in-a-maven-dependency
+
+test jar build
+- https://maven.apache.org/guides/mini/guide-attached-tests.html
