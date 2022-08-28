@@ -40,8 +40,8 @@ username은 email 형식의 계정이다.
 - 나는 ~@gmail.com
 
 그래서 DOCER_NAME은
-- 나는 cn********ev/~@gmail.com
-- 혹은 cn********ev/oracleidentitycloudservice/~@gmail.com 이기도 하다는데 난 잘 안됐다.
+- 나는 cn\*\*\*\*\*\*\*\*ev/~@gmail.com
+- 혹은 cn\*\*\*\*\*\*\*\*ev/oracleidentitycloudservice/~@gmail.com 이기도 하다는데 난 잘 안됐다.
 
 ### OCI_AUTH_TOKEN:  
 
@@ -49,6 +49,7 @@ OCI_AUTH_TOKEN은 oracle cloud에서 발급한 토큰을 말한다.
 **Profile > My profile > Auth tokens** 에서 발급 가능.  
 - 당연히 발급받은 토큰은 발급 시점에만 key를 확인할 수 있다.
 - 발급 시에 복사해두고, 그렇지 못했다면 재발급.
+- 나는 3&\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*!8 (특수문자 포함 20자리)
 
 ### 확인 추천
 
