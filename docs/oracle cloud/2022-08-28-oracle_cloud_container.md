@@ -34,7 +34,7 @@ region name은 reference에 명시한 url에서 확인할 수 있다.
 
 tenancy-namespace는 oracle에서 관리하는 tenancy의 id를 가리킨다.  
 **Profile > Tenancy > Object storage namespace** 에서 확인 가능.  
-- 나는 cn********ev (12자리)
+- 나는 cn\*\*\*\*\*\*\*\*ev (12자리)
 
 username은 email 형식의 계정이다.
 - 나는 ~@gmail.com
