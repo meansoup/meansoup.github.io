@@ -3,7 +3,7 @@ layout: post
 title: map key로 쉽게 remove 하는 trick과 outer.this 하기
 parent: Java Tips
 grand_parent: Java
-permalink: /docs/java/tip
+permalink: /docs/java/tip/java_map_key_remove_and_outer_this
 ---
 
 오늘 일하는데 hashmap에서 key들을 받아서 map의 entry를 지우는 코드가 굉장히 지저분했다.  
