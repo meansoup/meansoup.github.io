@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[DynamoDB] 생각지도 못한 DynamoSizeLimitException"
+title: "DynamoSizeLimitException 이슈 정리"
 parent: DynamoDB
 grand_parent: aws
 permalink: /docs/aws/DynamoSizeLimitException
