@@ -2,6 +2,7 @@
 layout: post
 title: "DynamoSizeLimitException 이슈 정리"
 parent: DynamoDB
+nav_order: 1000
 grand_parent: aws
 permalink: /docs/aws/DynamoSizeLimitException
 ---

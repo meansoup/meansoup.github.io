@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "dynamo 내부구조 이해하기"
+title: "single table을 사용하는 이유"
 parent: DynamoDB
 grand_parent: aws
 nav_order: 2
@@ -120,6 +120,8 @@ single table에서는 아래와 같이 table을 설계한다.
 - 모든 데이터를 하나의 테이블에 넣는다. 그게 안되면 가능한 적은 테이블을 사용한다.
 - PK, SK, GS1PK 같은 key name을 맞춘다.
 - entity의 type을 파악할 수 있도록 attribute를 추가하면 좋다.
+- [single table 적용 후기](https://meansoup.github.io/docs/aws/dynamo/single-table-result)
+
 
 ### reference
 
