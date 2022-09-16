@@ -1,11 +1,13 @@
 ---
 layout: post
-title: DDD 제대로 알자, Domain Events
+title: Domain Events
 parent: 전술적 설계
 grand_parent: Domain Driven Design
-nav_order: 5
+nav_order: 8
 permalink: /docs/ddd/tactical/domain_events
 ---
+
+**DDD 제대로 알기 시리즈. Domain Events.**  
 
 *일단 **domain events**를 사용하는 법을 알고나면 이에 중독되서 어떻게 **domain events** 없이 살아왔는지 의아해질 것이다. - Vaughn Vernon*
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "SQL vs NoSQL, 왜 nosql?"
+title: "SQL vs NoSQL"
 parent: Database
 permalink: /docs/db/why-use-nosql
 ---

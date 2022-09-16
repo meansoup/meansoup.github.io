@@ -1,11 +1,13 @@
 ---
 layout: post
-title: DDD 제대로 알자, VO
+title: VO
 parent: 전술적 설계
 grand_parent: Domain Driven Design
 nav_order: 5
 permalink: /docs/ddd/tactical/vo
 ---
+
+**DDD 제대로 알기 시리즈. Value Object.**  
 
 DDD를 꽤나 공부했다고 생각했는데도 개발/설계를 해보면 DDD는 정말 어렵다.  
 개발 사이트나 블로그, 책을 훑어보듯 보면 VO는 참 쉽다.  

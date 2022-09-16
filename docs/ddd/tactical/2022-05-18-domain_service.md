@@ -1,11 +1,14 @@
 ---
 layout: post
-title: DDD 제대로 알자, Domain Service
+title: Domain Service
 parent: 전술적 설계
 grand_parent: Domain Driven Design
-nav_order: 5
+nav_order: 7
 permalink: /docs/ddd/tactical/domain-service
 ---
+
+**DDD 제대로 알기 시리즈. Domain Service.**  
+
 
 개념만 보면 domain은 domain 로직이 있는 곳이다.  
 막상 개발/설계를 해보니 어디까지가 domain service이고 어디까지가 application service 인지의 분간하는게 쉽지가 않다.  
