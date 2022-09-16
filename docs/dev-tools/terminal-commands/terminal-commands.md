@@ -1,9 +1,10 @@
 ---
 layout: default
-title: linux terminal commands
-nav_order: 2
+title: linux commands
+nav_order: 1
 has_children: true
-permalink: /docs/terminal-commands
+parent: 개발툴
+permalink: /docs/dev-tools/linux-commands
 ---
 
 linux 개발에 유용한 terminal 리스트
