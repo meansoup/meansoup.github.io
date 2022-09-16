@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 등등
-nav_order: 10000
+nav_order: 10001
 has_children: true
 permalink: /docs/etc
 ---
