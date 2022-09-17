@@ -1,8 +1,9 @@
 ---
 layout: post
 title: Curl to Code (Python/Java ..)
-parent: tips
-permalink: /docs/tips/curl-to-code
+parent: 사이트
+permalink: /docs/dev-tools/site/curl-to-code
+grand_parent: 개발툴
 ---
 
 api 테스트나 여러 서버의 작업을 위해 request를 curl로 짜는 일이 많다.  
