@@ -80,7 +80,7 @@ class GoogleSignInService {
 }
 ```
 
-이번에 사용한건 코프링.  
+이번에 사용한 backend는 코프링.  
 kotlin/java에서는 GoogleIdTokenVerifier를 사용한다.  
 client에서 받은 idToken을 여기에 넣어주기만 하면 googleIdToken을 받아온다.  
 googleIdToken은 우리가 필요한 여러 데이터들을 갖고 있다.
@@ -92,3 +92,4 @@ googleIdToken은 우리가 필요한 여러 데이터들을 갖고 있다.
 
 - https://cloud.google.com/apigee/docs/api-platform/security/oauth/oauth-introduction?hl=ko
 - https://developers.google.com/identity/openid-connect/openid-connect#authenticatingtheuser
+- https://developers.google.com/identity/protocols/oauth2
