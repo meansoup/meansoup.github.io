@@ -61,6 +61,7 @@ implements 사용과 동일하게 작동하고 어느게 더 좋다하는 것은
 <bean id="testObj" class="com.mean.TestObj"
 init-method="initMethod" destroy-method="destroyMethod" />
 ```
+
 ```java
 public class TestObj {
     public void initMethod() {
