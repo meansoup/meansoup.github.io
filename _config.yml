@@ -32,6 +32,7 @@ github_username: meansoup
 remote_theme: pmarsceill/just-the-docs
 plugins:
   - jekyll-redirect-from
+  - jemoji
 
 # Analytics
 analytics:
