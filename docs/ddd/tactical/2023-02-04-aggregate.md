@@ -3,7 +3,7 @@ layout: post
 title: Aggregate
 parent: 전술적 설계
 grand_parent: Domain Driven Design
-nav_order: 6
+nav_order: 10
 permalink: /docs/ddd/tactical/aggregate
 ---
 
@@ -17,7 +17,7 @@ permalink: /docs/ddd/tactical/aggregate
 2. 너무 걷어내서 고정자를 보호하지 못하는 에그리게잇을 만드는 경우
 
 
-### 큰 aggregate
+## 큰 aggregate
 
 *A는 ~를 포함한다.* 에 중점을 두고 aggregate을 설계한다면 큰 aggregate을 만들기 쉽다.  
 옳지 않다.  
@@ -31,7 +31,7 @@ permalink: /docs/ddd/tactical/aggregate
 - 에그리게잇의 단위가 크기 때문에 트랜잭션이 실패하기 쉽다.
 
 
-### 다수의 aggregate
+## 다수의 aggregate
 
 동시성 문제를 해결하기 위해 아래와 같은 구조를 사용하기도 한다. 
 이런 구조는 aggregate의 invirant를 동시에 발생하는 변경으로부터 보호할 수 있다.
@@ -45,7 +45,7 @@ permalink: /docs/ddd/tactical/aggregate
 **단점**:   
 - 클라이언트가 사용하는 관점에서 여러 개의 작은 aggregate은 불편할 수 있다.  
 
-### 큰 aggregate vs 다수 aggregate
+## 큰 aggregate vs 다수 aggregate
 
 - 큰 에그리게잇은 에그리게잇 내부에서 모두 수행하는 (return void) CQS command로 수행되고
 - 다수 에그리게잇은 각 메소드가 새로운 에그리게잇 인스턴스를 반환하는 (return Aggregate<T>) CQS query로 수행된다
@@ -54,11 +54,13 @@ permalink: /docs/ddd/tactical/aggregate
 - 트랜잭션에 이점이 있다. 큰 aggregate에서 문제가 되는 부분.
 - 클라이언트가 사용하는 관점에서 여러 개의 작은 에그리게잇은 불편할 수 있다.
 
+
 ## 모델링 규칙
 
 ### invirant
 
-invirant는 aggregate의 모델링 규칙을 설명할 때 가장 중요한 개념으로 :star: **언제나 일관성을 유지해야 한다는 비즈니스 규칙**이다.
+invirant는 aggregate의 모델링 규칙을 설명할 때 가장 중요한 개념으로 :star:  
+**언제나 일관성을 유지해야 한다는 비즈니스 규칙**이다.
 
 <div class="code-example" markdown="1" style="font-size: 0.8em">
 예시
@@ -119,10 +121,10 @@ invirant를 알아야 aggregate으로 묶어야 할 객체가 무엇인지 결�
 다이어그램의 `0 ... *` 에 속으면 안된다 0이 되는 경우는 거의 없고 대부분은 시간이 지나면 계속 증가한다.  
 결국 큰 aggregate은 시간이 흐를수록 더 나빠진다.  
 
-거짓 invirant와 컴포지션적 편의성이 설계를 주도했기 때문에 시작부터 문제가 있었다.  
+위 예제를 보면 거짓 invirant와 컴포지션적 편의성이 설계를 주도했기 때문에 시작부터 문제가 있었다.  
 트랜잭션의 성공적인 종료, 성능, 확장성에 안좋은 영향을 미쳤다.
 
-**얼마나 작아야하나?**:  
+**그럼 얼마나 작아야할까?**  
 당연한 말이지만, 무작정 작지도 않고 너무 크지도 않게 필요한 만큼만 작아야 한다.  
 
 aggregate은 도메인 전문가가 규칙으로 구체화하지 않더라도 다른 대상과 일관성을 유지해야 한다.
@@ -204,7 +206,6 @@ public class BacklogItem extends ConcurrencySafeEntity {
 3. 2번과 유사하게 수정이 묶여있는 aggregate에 영향을 미친다면 원자적 일관성 대신 결과적 일관성을 사용해야 한다는 표시일 수 있다.
 
 객체 참조가 아닌 ID를 참조함으로서 이런 상황을 완전히 피할 수 있다.  
-그래서 ID를 쓰는게 좋다.
 
 
 #### 참조(Id)를 가지고 있는 경우
