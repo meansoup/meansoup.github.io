@@ -38,7 +38,7 @@ dynamo의 partitionKey 제한도 그렇지만, s3 key도 이미 서비스 중에
 ## reference
 
 - 처리량 제한 문서
-  - 어딨더라.. 찾는 중 
+  - [https://docs.aws.amazon.com/ko_kr/AmazonS3/latest/userguide/optimizing-performance.html](https://docs.aws.amazon.com/ko_kr/AmazonS3/latest/userguide/optimizing-performance.html) 
 
 - 접두사 수 관련 문서
-  - [https://docs.aws.amazon.com/ko_kr/AmazonS3/latest/userguide/optimizing-performance.html](https://docs.aws.amazon.com/ko_kr/AmazonS3/latest/userguide/optimizing-performance.html)
+  - [https://aws.amazon.com/ko/about-aws/whats-new/2018/07/amazon-s3-announces-increased-request-rate-performance/](https://aws.amazon.com/ko/about-aws/whats-new/2018/07/amazon-s3-announces-increased-request-rate-performance/)
