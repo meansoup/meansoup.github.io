@@ -1,10 +1,8 @@
 ---
 layout: post
 title: "IEEE 754 부동 소수점 계산, floating point calculation"
-tag:
-  - floating point
 permalink: /docs/computer/floating-point
-parent: computer 기본
+parent: algorithm
 math: mathjax3
 ---
 
