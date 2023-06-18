@@ -114,7 +114,7 @@ $$ 0.25 = 0.01_2 $$
 그렇다면 컴퓨터는 어떻게 0.3, 0.1이란 수를 표현할 수 있을까?  
 **IEEE standard 754 표준**을 보면 이를 알 수 있다. IEEE 754에서는 실수에 대해 이렇게 표기하도록 명시한다.  
 
-![ieee spec](/images/post/computer/floating1.png)
+![ieee spec](/images/post/algorithm/floating/floating1.png)
 
 일반적으로 float 타입이 32bit, double 타입이 64bit이므로, single precision이 float 타입, double precision이 double 타입이라고 생각할 수 있다.  
 
@@ -124,7 +124,7 @@ $$ 0.25 = 0.01_2 $$
 
 아래의 수식을 보시면 더 직관적으로 이해할 수 있을 것이다.  
 
-![ieee spec2](/images/post/computer/floating2.png)
+![ieee spec2](/images/post/algorithm/floating/floating2.png)
 
 sign bit는 음수와 양수의 구분을 하고 있다.  
 fraction은 다소 이해가 되지 않을 수 있는데, 값이 $$ 1.1011_2 $$ 이라면, fraction은 1을 제외한 소수점 부분인 1011을 의미한다.  
@@ -198,7 +198,7 @@ IEEE754에서는 위와 같은 실수의 처리에 대해 여러가지 방법을
 
 이 중에서도 JAVA는 JAVA specification에서 다음과 같이 round 처리를 밝힌다.
 
-![java spec](/images/post/computer/floating3.png)
+![java spec](/images/post/algorithm/floating/floating3.png)
 
 **round to nearest**: 가까운 곳으로 rounding 하는 방식.
 
