@@ -2,7 +2,7 @@
 layout: post
 title: 리팩토링 개론
 parent: 리팩토링
-nav_order: 1
+nav_order: 2
 permalink: /docs/refactoring/basic
 ---
 

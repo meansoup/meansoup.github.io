@@ -2,7 +2,7 @@
 layout: post
 title: 복합 리팩토링
 parent: 리팩토링
-nav_order: 1
+nav_order: 3
 permalink: /docs/refactoring/big-refactoring
 ---
 
@@ -12,6 +12,9 @@ permalink: /docs/refactoring/big-refactoring
 
 리팩토링은 시작했다고 끝을 봐야하는건 아니다.  
 기능 추가나 버그 수정시에 시작해서 필요한 만큼만 하면 된다.  
+
+어느정도 센스와 경력이 있는 개발자들은 리팩토링 냄새를 맡고 수정하는 일을 잘 하고 있다.  
+실제 개발에서 리팩토링을 얼마나 잘하느냐는 복합 리팩토링을 어떻게 하느냐가 아닐까 싶다.
 
 ## 복햡 리팩토링은
 
