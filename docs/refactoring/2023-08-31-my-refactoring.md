@@ -5,7 +5,6 @@ parent: 리팩토링
 nav_order: 100
 permalink: /docs/refactoring/my-refactoring
 ---
-# refactoring
 
 ## 리팩토링의 분류
 
