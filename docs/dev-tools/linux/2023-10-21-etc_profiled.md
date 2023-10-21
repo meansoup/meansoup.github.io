@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "linux 환경변수 설정하기 - etc/profile.d"
+title: "linux 환경변수 설정하기 - /etc/profile.d"
 parent: linux
 grand_parent: 개발툴
-permalink: /docs/dev-tools/linux/etc_profile.d
+permalink: /docs/dev-tools/linux/etc_profiled
 ---
 
 ## etc/profile.d

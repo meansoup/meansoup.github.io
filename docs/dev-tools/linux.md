@@ -1,7 +1,7 @@
 ---
 layout: default
 title: linux
-nav_order: 2
+nav_order: 1
 has_children: true
 parent: 개발툴
 permalink: /docs/dev-tools/linux
