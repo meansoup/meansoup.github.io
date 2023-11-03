@@ -2,7 +2,7 @@
 layout: post
 title: intellij 대소문자 변경 단축키
 parent: intellij 설정하기
-grand_parent: 개발툴
+grand_parent: 개발도구
 permalink: /docs/dev-tools/intellij/upper-case
 ---
 

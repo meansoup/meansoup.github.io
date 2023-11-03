@@ -2,7 +2,7 @@
 layout: post
 title: telnet 없을 때 connection 확인하기
 parent: linux commands
-grand_parent: 개발툴
+grand_parent: 개발도구
 permalink: /docs/dev-tools/linux-commands/telnet-by-curl
 nav_order: 1
 ---

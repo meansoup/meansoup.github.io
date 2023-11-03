@@ -2,7 +2,7 @@
 layout: post
 title: "linux 환경변수 설정하기 - /etc/profile.d"
 parent: linux
-grand_parent: 개발툴
+grand_parent: 개발도구
 permalink: /docs/dev-tools/linux/etc_profiled
 ---
 
