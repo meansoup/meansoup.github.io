@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 서비스 관점
+title: PM
 nav_order: 5
 has_children: true
 permalink: /docs/service-management
