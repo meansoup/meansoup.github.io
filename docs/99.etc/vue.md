@@ -1,10 +1,9 @@
 ---
 layout: default
-title: blog
-nav_order: 11
+title: vue
 has_children: true
-parent: 등등
-permalink: /docs/blog
+parent: Etc
+permalink: /docs/vue
 ---
 
 {: .fs-6 .fw-300 }

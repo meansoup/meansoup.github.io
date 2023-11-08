@@ -5,7 +5,7 @@ tag:
 - vue
 parent: vue
 permalink: /docs/vue/config
-grand_parent: 등등
+grand_parent: Etc
 ---
 
 vue로 github.io에 github page를 로딩하기 위해 build 했다.  

@@ -6,7 +6,7 @@ tag:
 - error
 parent: vue
 permalink: /docs/vue/unexpected-token
-grand_parent: 등등
+grand_parent: Etc
 ---
 
 vue에서 `Uncaught SyntaxError: Unexpected token '<'`에러를 받을 때,  

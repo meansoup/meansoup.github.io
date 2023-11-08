@@ -3,7 +3,7 @@ layout: post
 title: flutter theme
 permalink: /docs/flutter/flutter-theme
 parent: flutter
-grand_parent: 등등
+grand_parent: Etc
 ---
 
 

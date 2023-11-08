@@ -2,7 +2,7 @@
 layout: default
 title: kivy
 has_children: true
-parent: 등등
+parent: Etc
 permalink: /docs/kivy
 ---
 

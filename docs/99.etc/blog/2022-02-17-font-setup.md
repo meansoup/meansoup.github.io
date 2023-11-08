@@ -3,7 +3,7 @@ layout: post
 title: jekyll gh page 폰트 설정하기
 permalink: /docs/blog/font
 parent: blog
-grand_parent: 등등
+grand_parent: Etc
 ---
 
 ## TL;DR
