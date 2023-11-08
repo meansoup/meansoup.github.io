@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Object Mother"
-parent: pattern
+parent: 테스트
 permalink: /docs/pattern/object-mother
 ---
 
