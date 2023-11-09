@@ -1,7 +1,7 @@
 ---
 layout: default
 title: PM
-nav_order: 5
+nav_order: 14
 has_children: true
 permalink: /docs/service-management
 ---
