@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Kotlin
-nav_order: 11
+nav_order: 42
 has_children: true
 permalink: /docs/kotlin
 ---
