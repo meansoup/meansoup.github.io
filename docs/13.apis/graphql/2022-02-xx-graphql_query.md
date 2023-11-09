@@ -1,10 +1,10 @@
 ---
-layout: post
-title: GraphQL 쿼리
-parent: GraphQL
-grand_parent: APIs
-nav_order: 2
-permalink: /docs/apis/graphql/graphql_query
+#layout: post
+#title: GraphQL 쿼리
+#parent: GraphQL
+#grand_parent: APIs
+#nav_order: 2
+#permalink: /docs/apis/graphql/graphql_query
 ---
 
 ## 작성중!
