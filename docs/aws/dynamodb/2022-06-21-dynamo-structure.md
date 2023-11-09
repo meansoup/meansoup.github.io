@@ -12,7 +12,7 @@ dynamo를 사용하기 위해서 꼭 알고있어야 하는 값들이 있다.
 WCU, RCU, partition의 max size.  
 **AWS immersion day session 강의**를 들으면서 원래는 외우고 있었던 것들을 이해할 수 있는 시간이 되었다.
 
-[왜 nosql?](/docs/database/2022-06-15-why-use-nosql.md)의 내용도 도움이 된다.
+[왜 nosql?](/docs/33.database/2022-06-15-why-use-nosql.md)의 내용도 도움이 된다.
 
 
 ## partitioning

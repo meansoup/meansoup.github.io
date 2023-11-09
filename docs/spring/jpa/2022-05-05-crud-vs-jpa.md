@@ -7,7 +7,7 @@ grand_parent: Spring
 permalink: /docs/spring/jpa/crud-vs-jpa
 ---
 
-스프링에서 [ORMs](/docs/database/concept/2022-01-31-orms.md) 개념을 적용한 표준이 JpaRepository이다.  
+스프링에서 [ORMs](https://meansoup.github.io/docs/db/concept/orms) 개념을 적용한 표준이 JpaRepository이다.  
 JpaRepository와 CrudRepository의 개념을 명확하게 모르고 사용해왔는데 차이를 정리해본다.
 
 ## 구조
