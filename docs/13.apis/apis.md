@@ -1,7 +1,7 @@
 ---
 layout: default
 title: APIs
-nav_order: 8
+nav_order: 13
 has_children: true
 permalink: /docs/apis/
 ---
