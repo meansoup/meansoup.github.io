@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 리팩토링
+title: Refactoring
 nav_order: 23
 has_children: true
 permalink: /docs/refactoring/

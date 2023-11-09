@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 복합 리팩토링
-parent: 리팩토링
+parent: Refactoring
 nav_order: 3
 permalink: /docs/refactoring/big-refactoring
 ---

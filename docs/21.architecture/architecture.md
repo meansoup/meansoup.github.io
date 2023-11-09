@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 아키텍처
+title: Architecture
 nav_order: 21
 has_children: true
 permalink: /docs/design/

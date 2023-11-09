@@ -3,7 +3,7 @@ layout: default
 title: TDD
 nav_order: 7
 has_children: true
-parent: 테스트
+parent: Test
 permalink: /docs/extreme-programming/tdd
 ---
 

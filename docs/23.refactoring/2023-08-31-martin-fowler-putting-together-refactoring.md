@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 리팩토링 마음가짐
-parent: 리팩토링
+parent: Refactoring
 nav_order: 10
 permalink: /docs/refactoring/putting-together-refactoring
 ---
