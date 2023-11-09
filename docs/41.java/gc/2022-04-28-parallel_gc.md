@@ -8,7 +8,7 @@ permalink: /docs/java/gc/parallel_gc
 math: mathjax3
 ---
 
-앞서 본 [Serial Garbage Collection](/docs/java/gc/2022-04-16-serial_gc.md)은 단점이 명확하다.  
+앞서 본 [Serial Garbage Collection](/docs/41.java/gc/2022-04-16-serial_gc.md)은 단점이 명확하다.  
 Serial은 thraed의 낭비가 크다.  
 multiple CPU 로부터 성능을 뽑아내기 위해 Parallel GC를 사용한다.
 
@@ -36,7 +36,7 @@ default로 N개의 CPU일 때 collection에서 N개의 GC thread를 사용한다
 Parallel GC는 GC가 발생하면 모든 thread를 중지하고 multi-thread를 사용하여 GC 작업을 수행한다.  
 따라서 GC 작업은 중단 없이 효율적으로 수행된다.  
 일반적으로 application 에 사용되는 시간 대비 GC 시간을 최소화할 수 있는 방법이다.  
-그러나 이후에 나오는 다른 GC들에 비해 한 번의 [STW](/docs/java/gc/2022-04-14-gc_basic.md#stw-stop-the-world)는 긴 편이다.
+그러나 이후에 나오는 다른 GC들에 비해 한 번의 [STW](/docs/41.java/gc/2022-04-14-gc_basic.md#stw-stop-the-world)는 긴 편이다.
 
 위와 같은 이유로 **개별의 STW가 길어지는 것은 수용할 수 있으나 전체적인 성능이 중요한 작업을 진행할 때 Parallel GC가 사용되기 적합**하다.  
 - 대표적으로 **batch process**나 대량의 **database query**가 있다.
@@ -70,7 +70,7 @@ Parallel 에서의 우선순위는 아래와 같다.
 
 **Maximum garbage collection pause time**이 충족된 이후에만 **Throughput**을 고려한다.  
 마찬가지로 **Throughput**이 충족되어야 max heap size를 고려한다.
-- [GC 공통 command](/docs/java/gc/2022-04-16-serial_gc.md#공통-command)에서 `-Xmx`를 통해 max heap size를 설정할 수 있다.
+- [GC 공통 command](/docs/41.java/gc/2022-04-16-serial_gc.md#공통-command)에서 `-Xmx`를 통해 max heap size를 설정할 수 있다.
 
 
 ---
