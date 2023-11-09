@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Spring
-nav_order: 9
+nav_order: 31
 has_children: true
 permalink: /docs/spring
 ---
