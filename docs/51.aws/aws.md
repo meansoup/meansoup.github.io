@@ -1,7 +1,7 @@
 ---
 layout: default
 title: aws
-nav_order: 100
+nav_order: 51
 has_children: true
 permalink: /docs/aws
 ---
