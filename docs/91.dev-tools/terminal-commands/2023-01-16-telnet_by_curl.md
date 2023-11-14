@@ -4,7 +4,7 @@ title: telnet 없을 때 connection 확인하기
 parent: linux commands
 grand_parent: 개발도구
 permalink: /docs/dev-tools/linux-commands/telnet-by-curl
-nav_order: 1
+nav_order: 10
 ---
 
 서버에 연결이 잘 되는지를 확인할 때 telnet이나 ping을 사용하곤 한다.  
