@@ -4,6 +4,8 @@ title: java serialize 사용할 때 주의사항
 parent: Java Tips
 grand_parent: Java
 permalink: /docs/java/tip/java-serialize
+sitemap:
+  lastmod: 2023-04-05
 ---
 
 java에서 serialize를 잘 사용하지 않는 편이다.  

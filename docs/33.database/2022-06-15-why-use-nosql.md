@@ -3,6 +3,8 @@ layout: post
 title: "SQL vs NoSQL"
 parent: Database
 permalink: /docs/db/why-use-nosql
+sitemap:
+   lastmod: 2022-06-15
 ---
 
 AWS에서 진행하는 dynamodb immersion day 세션에 참여할 수 있는 기회가 생겼다.  

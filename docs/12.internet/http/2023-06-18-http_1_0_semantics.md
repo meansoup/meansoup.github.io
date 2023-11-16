@@ -5,6 +5,8 @@ parent: http
 nav_order: 2
 grand_parent: internet
 permalink: /docs/internet/http/http1.0/semantics
+sitemap:
+   lastmod: 2023-06-18
 ---
 
 ## multipart form data

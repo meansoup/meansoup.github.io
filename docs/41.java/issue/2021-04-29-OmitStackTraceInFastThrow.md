@@ -6,6 +6,8 @@ grand_parent: Java
 permalink: /docs/java/issue/stacktrace
 redirect_from:
   - /docs/algorithm/language/java/stacktrace
+sitemap:
+  lastmod: 2021-04-29
 ---
 
 java에서 NullPointException(NPE) 발생 시 stackTrace가 남지 않는 문제가 발생했다.  

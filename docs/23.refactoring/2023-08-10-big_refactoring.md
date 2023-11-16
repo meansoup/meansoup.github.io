@@ -4,6 +4,8 @@ title: 복합 리팩토링
 parent: Refactoring
 nav_order: 3
 permalink: /docs/refactoring/big-refactoring
+sitemap:
+  lastmod: 2023-08-10
 ---
 
 복합 리팩토링을 할때는 상황이 변화무쌍하다.  

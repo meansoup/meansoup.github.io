@@ -4,6 +4,8 @@ title: 리팩토링 마음가짐
 parent: Refactoring
 nav_order: 10
 permalink: /docs/refactoring/putting-together-refactoring
+sitemap:
+  lastmod: 2023-08-31
 ---
 
 마틴 파울러의 refactoring 15장의 **Putting It All Together**를 보고 정리한 내용이다.    

@@ -4,6 +4,8 @@ title: "easyRandom - Java에서 테스트 객체 만들기"
 parent: Java 라이브러리
 grand_parent: Java
 permalink: /docs/java/library/easyrandom
+sitemap:
+  lastmod: 2022-01-14
 ---
 
 Java에서 테스트 객체를 만드는걸 고민하다가 [ObjectMother 패턴](/docs/pattern/object-mother)에 대해서 공부하게 되었다.  

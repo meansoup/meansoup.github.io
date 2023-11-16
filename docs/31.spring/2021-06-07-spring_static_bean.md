@@ -3,6 +3,8 @@ layout: post
 title: "static method class와 spring bean"
 parent: Spring
 permalink: /docs/spring/static-method-vs-bean
+sitemap:
+  lastmod: 2021-06-07
 ---
 
 며칠 전 리팩토링을 위해 코드를 보던 중 이상한 걸 발견했다.  

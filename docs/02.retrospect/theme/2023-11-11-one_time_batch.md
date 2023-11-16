@@ -4,6 +4,8 @@ title: 일회성 배치에 대한 회고
 parent: 주제회고
 grand_parent: 회고
 permalink: /docs/retrospect/one-time-batch
+sitemap:
+  lastmod: 2023-11-11
 ---
 
 서버 개발을 하다보면 batch를 수행하게 될 일들이 종종있다.

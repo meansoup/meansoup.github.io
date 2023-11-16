@@ -3,6 +3,8 @@ layout: post
 title: "spring multimodule에서 library module의 test class 사용하기"
 parent: Spring
 permalink: /docs/spring/multimodule-test-dependency
+sitemap:
+  lastmod: 2022-08-17
 ---
 
 springboot multimodule을 사용하면서, test class가 dependency에 추가되지 않는 것을 확인했다.  

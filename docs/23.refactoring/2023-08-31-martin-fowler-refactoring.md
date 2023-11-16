@@ -4,6 +4,8 @@ title: 마틴 파울러의 리팩토링
 parent: Refactoring
 nav_order: 1
 permalink: /docs/refactoring/martin-fowler-refactoring
+sitemap:
+  lastmod: 2023-08-31
 ---
 
 마틴 파울러의 refactoring을 보고 정리한 내용이다.  

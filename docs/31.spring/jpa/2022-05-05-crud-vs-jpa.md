@@ -5,6 +5,8 @@ nav_order: 1
 parent: Spring JPA
 grand_parent: Spring
 permalink: /docs/spring/jpa/crud-vs-jpa
+sitemap:
+  lastmod: 2022-05-05
 ---
 
 스프링에서 [ORMs](https://meansoup.github.io/docs/db/concept/orms) 개념을 적용한 표준이 JpaRepository이다.  

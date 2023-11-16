@@ -5,6 +5,8 @@ parent: GraphQL
 grand_parent: APIs
 nav_order: 1
 permalink: /docs/apis/graphql/what_is_graphql
+sitemap:
+  lastmod: 2022-02-15
 ---
 
 기술이 발전하면서 인터넷은 곳곳에서 쓰이게 되었다.  

@@ -5,6 +5,8 @@ nav_order: 1
 parent: Spring JPA
 grand_parent: Spring
 permalink: /docs/spring/jpa/set-connection-pool
+sitemap:
+  lastmod: 2022-05-12
 ---
 
 DB를 사용한다면 connection pool을 설정하는 것은 필수이다.  

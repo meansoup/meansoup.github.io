@@ -6,6 +6,8 @@ parent: Garbage Collection
 grand_parent: Java
 permalink: /docs/java/gc/parallel_gc
 math: mathjax3
+sitemap:
+  lastmod: 2022-04-28
 ---
 
 앞서 본 [Serial Garbage Collection](/docs/41.java/gc/2022-04-16-serial_gc.md)은 단점이 명확하다.  

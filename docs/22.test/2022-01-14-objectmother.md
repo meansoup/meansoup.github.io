@@ -3,6 +3,8 @@ layout: post
 title: "Object Mother"
 parent: Test
 permalink: /docs/pattern/object-mother
+sitemap:
+  lastmod: 2022-01-14
 ---
 
 이번엔 **ObjectMother**라는 패턴에 대해서 정리한다.  

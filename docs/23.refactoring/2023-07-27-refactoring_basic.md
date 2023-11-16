@@ -4,6 +4,8 @@ title: 리팩토링 개론
 parent: Refactoring
 nav_order: 2
 permalink: /docs/refactoring/basic
+sitemap:
+  lastmod: 2023-07-27
 ---
 
 ## 리팩토링 하는 이유

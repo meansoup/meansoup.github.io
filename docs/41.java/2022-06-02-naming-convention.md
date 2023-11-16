@@ -3,6 +3,8 @@ layout: post
 title: "Java naming convention (Google / MS / Oracle)"
 parent: Java
 permalink: /docs/java/naming-convention
+sitemap:
+  lastmod: 2022-06-02
 ---
 
 naming은 당연히 class/property/method를 떠나서 명확하고 단순해야 한다.  

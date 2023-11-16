@@ -5,6 +5,8 @@ parent: 전술적 설계
 grand_parent: Domain Driven Design
 nav_order: 7
 permalink: /docs/ddd/tactical/domain-service
+sitemap:
+  lastmod: 2022-05-18
 ---
 
 개념만 보면 domain은 domain 로직이 있는 곳이다.  

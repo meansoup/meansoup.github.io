@@ -4,6 +4,8 @@ title: "IEEE 754 부동 소수점 계산, floating point calculation"
 permalink: /docs/computer/floating-point
 parent: Algorithm
 math: mathjax3
+sitemap:
+   lastmod: 2017-02-23
 ---
 
 ## 1 is not exactly 1

@@ -5,6 +5,8 @@ parent: 전술적 설계
 grand_parent: Domain Driven Design
 nav_order: 8
 permalink: /docs/ddd/tactical/domain_events
+sitemap:
+  lastmod: 2022-04-21
 ---
 
 *일단 **domain events**를 사용하는 법을 알고나면 이에 중독되서 어떻게 **domain events** 없이 살아왔는지 의아해질 것이다. - Vaughn Vernon*

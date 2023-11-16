@@ -5,6 +5,8 @@ parent: OAuth
 grand_parent: APIs
 nav_order: 1
 permalink: /docs/apis/oauth/google-login
+sitemap:
+  lastmod: 2023-10-05
 ---
 
 사이드 프로젝트 개발 중, 로그인 기능을 고려하게 되었다.    

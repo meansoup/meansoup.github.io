@@ -4,6 +4,8 @@ title: list type casting 하기
 parent: Java Tips
 grand_parent: Java
 permalink: /docs/java/tip/list-type-casting
+sitemap:
+  lastmod: 2022-09-16
 ---
 
 이번에 작업하면서 list를 casting 할 일이 있었다.  

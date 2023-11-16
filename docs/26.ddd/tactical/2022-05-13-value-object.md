@@ -5,6 +5,8 @@ parent: 전술적 설계
 grand_parent: Domain Driven Design
 nav_order: 5
 permalink: /docs/ddd/tactical/vo
+sitemap:
+  lastmod: 2022-05-13
 ---
 
 DDD를 꽤나 공부했다고 생각했는데도 개발/설계를 해보면 DDD는 정말 어렵다.  
