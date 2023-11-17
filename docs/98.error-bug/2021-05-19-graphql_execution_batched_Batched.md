@@ -5,6 +5,8 @@ tag:
   - error
 parent: error & bug
 permalink: /docs/error-bug/spring/graphql_execution_batched_Batched
+sitemap:
+  lastmod: 2021-05-19
 ---
 
 graphql을 spring에서 사용하려고 하던 중 에러가 났다.  

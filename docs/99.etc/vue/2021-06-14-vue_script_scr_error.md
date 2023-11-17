@@ -7,6 +7,8 @@ tag:
 parent: vue
 permalink: /docs/vue/unexpected-token
 grand_parent: Etc
+sitemap:
+  lastmod: 2021-06-14
 ---
 
 vue에서 `Uncaught SyntaxError: Unexpected token '<'`에러를 받을 때,  

@@ -5,6 +5,8 @@ parent: DynamoDB
 grand_parent: aws
 nav_order: 2
 permalink: /docs/aws/dynamo/single-table
+sitemap:
+  lastmod: 2022-09-15
 ---
 
 dynamodb에서는 RDB를 사용하듯이 table을 많이 사용하는 것을 권장하지 않는다.  

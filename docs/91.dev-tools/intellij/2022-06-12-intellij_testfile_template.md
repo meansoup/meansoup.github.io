@@ -4,6 +4,8 @@ title: intellij 의미 없는 시간 줄이기 test file 편
 parent: intellij 설정하기
 grand_parent: 개발도구
 permalink: /docs/dev-tools/intellij/test-file-template
+sitemap:
+  lastmod: 2022-06-12
 ---
 
 intellij는 개발 시간을 단축할 수 있는 여러 기능들을 제공한다.  

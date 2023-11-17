@@ -3,6 +3,8 @@ layout: post
 title: AWS 비용 효율화
 parent: aws
 permalink: /docs/aws/cost-efficiency
+sitemap:
+  lastmod: 2022-09-27
 ---
 
 연말이 다가오면 회사에선 항상 비용을 줄이라고 한다.  

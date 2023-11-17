@@ -4,6 +4,8 @@ title: jekyll gh page 폰트 설정하기
 permalink: /docs/blog/font
 parent: blog
 grand_parent: Etc
+sitemap:
+  lastmod: 2022-02-17
 ---
 
 ## TL;DR

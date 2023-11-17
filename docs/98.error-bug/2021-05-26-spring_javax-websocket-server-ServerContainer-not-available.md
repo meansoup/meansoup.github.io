@@ -3,6 +3,8 @@ layout: post
 title: "[spring error] javax.websocket.server.ServerContainer not available"
 parent: error & bug
 permalink: /docs/error-bug/spring/javax-websocket-server-ServerContainer-not-available
+sitemap:
+  lastmod: 2021-05-26
 ---
 
 ## 에러 메세지

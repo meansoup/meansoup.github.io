@@ -4,6 +4,8 @@ title: "java와 비교한 kotlin 장단점"
 nav_order: 1
 parent: Kotlin
 permalink: /docs/kotlin/kotlin-vs-java
+sitemap:
+  lastmod: 2021-05-25
 ---
 
 kotlin을 공부하면서 확인한 장단점을 정리해보았다.  

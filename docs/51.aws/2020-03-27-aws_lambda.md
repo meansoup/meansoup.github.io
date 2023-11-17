@@ -5,6 +5,8 @@ tag:
   - AWS
 parent: aws
 permalink: /docs/aws/lambda
+sitemap:
+  lastmod: 2020-03-27
 ---
 
 AWS에서 제공하는 [서버리스 컴퓨팅](https://meansoup.github.io/blog/2020/03/25/aws_terms/#%EC%84%9C%EB%B2%84%EB%A6%AC%EC%8A%A4) 서비스이다.  

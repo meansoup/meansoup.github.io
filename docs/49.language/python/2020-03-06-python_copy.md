@@ -6,6 +6,8 @@ tag:
 parent: python
 grand_parent: language
 permalink: /docs/algorithm/language/python/python-copy
+sitemap:
+  lastmod: 2022-03-06
 ---
 
 파이썬에서는 세 종류의 복사가 있다고 볼 수 있다.  

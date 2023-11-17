@@ -3,6 +3,8 @@ layout: post
 title: "[spring error] log4j2.yml, yaml property not work"
 parent: error & bug
 permalink: /docs/error-bug/spring/yaml-property-not-work
+sitemap:
+  lastmod: 2022-08-10
 ---
 
 spring에서 log4j2.yml, log4j2.yaml를 설정했는데 되지 않는 상황.  

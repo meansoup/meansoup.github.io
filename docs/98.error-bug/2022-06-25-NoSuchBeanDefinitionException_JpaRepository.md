@@ -3,6 +3,8 @@ layout: post
 title: "[spring error] JpaRepository NoSuchBeanDefinitionException"
 parent: error & bug
 permalink: /docs/error-bug/spring/NoSuchBeanDefinitionException_JpaRepository
+sitemap:
+  lastmod: 2022-06-25
 ---
 
 spring에서 Jpa bean이 잘 생성되지 않은 경우

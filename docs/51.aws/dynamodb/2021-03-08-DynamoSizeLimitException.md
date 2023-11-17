@@ -5,6 +5,8 @@ parent: DynamoDB
 nav_order: 1000
 grand_parent: aws
 permalink: /docs/aws/DynamoSizeLimitException
+sitemap:
+  lastmod: 2021-03-08
 ---
 
 오늘은 생각지도 못한 DynamoSizeLimitException에 대해 기록한다.  

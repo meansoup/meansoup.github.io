@@ -6,6 +6,8 @@ tag:
 parent: vue
 permalink: /docs/vue/component
 grand_parent: Etc
+sitemap:
+  lastmod: 2021-05-04
 ---
 
 vue.js 3.x에서 global component를 사용하기.  

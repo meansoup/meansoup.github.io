@@ -6,6 +6,8 @@ grand_parent: aws
 nav_order: 1
 permalink: /docs/aws/dynamo/structure
 math: mathjax3
+sitemap:
+  lastmod: 2022-06-21
 ---
 
 dynamo를 사용하기 위해서 꼭 알고있어야 하는 값들이 있다.  

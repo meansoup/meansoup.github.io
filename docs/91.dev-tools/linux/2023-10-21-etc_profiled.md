@@ -4,6 +4,8 @@ title: "linux 환경변수 설정하기 - /etc/profile.d"
 parent: linux
 grand_parent: 개발도구
 permalink: /docs/dev-tools/linux/etc_profiled
+sitemap:
+  lastmod: 2023-10-21
 ---
 
 ## etc/profile.d

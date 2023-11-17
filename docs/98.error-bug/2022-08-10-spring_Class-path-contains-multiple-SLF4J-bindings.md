@@ -3,6 +3,8 @@ layout: post
 title: "[spring error] log4j2, Class path contains multiple SLF4J bindings"
 parent: error & bug
 permalink: /docs/error-bug/spring/Class-path-contains-multiple-SLF4J-bindings
+sitemap:
+  lastmod: 2022-08-10
 ---
 
 intellij에서 log를 설정한 뒤 test 실행 혹은 application run 중에 경고 같은 에러 발생.  

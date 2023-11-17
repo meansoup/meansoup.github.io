@@ -3,6 +3,8 @@ layout: post
 title: OKE docker registry github action 적용하기
 parent: oci
 permalink: /docs/oci/docker-login
+sitemap:
+  lastmod: 2022-08-28
 ---
 
 ## docker login github action

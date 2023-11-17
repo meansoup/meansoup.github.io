@@ -3,6 +3,8 @@ layout: post
 title: "[kotlin error] ClassNotFoundException: kotlin.jvm.JvmInline"
 parent: error & bug
 permalink: /docs/error-bug/kotlin/ClassNotFoundException_kotlin_jvm_JvmInline
+sitemap:
+  lastmod: 2022-06-23
 ---
 
 kotlin에서 **jackson-module-kotlin**를 사용할 때 에러.

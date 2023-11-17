@@ -5,6 +5,8 @@ parent: linux commands
 grand_parent: 개발도구
 permalink: /docs/dev-tools/linux-commands/telnet-by-curl
 nav_order: 10
+sitemap:
+  lastmod: 2023-01-16
 ---
 
 서버에 연결이 잘 되는지를 확인할 때 telnet이나 ping을 사용하곤 한다.  

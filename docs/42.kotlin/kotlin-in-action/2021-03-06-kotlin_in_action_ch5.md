@@ -4,6 +4,8 @@ title: "kotlin in action 정리 #5"
 parent: "kotlin in action 정리하기"
 grand_parent: Kotlin
 permalink: /docs/kotlin/kotlin-in-action/5
+sitemap:
+  lastmod: 2021-03-06
 ---
 
 ## chapter 5. Programming with lambdas

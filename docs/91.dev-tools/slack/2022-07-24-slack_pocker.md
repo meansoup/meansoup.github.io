@@ -4,6 +4,8 @@ title: slack에서 스마트하게 추정하기
 parent: 슬랙
 grand_parent: 개발도구
 permalink: /docs/dev-tools/slack/pocker-planner
+sitemap:
+  lastmod: 2022-07-24
 ---
 
 원격 근무가 많아지면서 회의하는 방식에 대한 변화도 당연히 생기기 마련이다.  

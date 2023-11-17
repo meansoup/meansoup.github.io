@@ -5,6 +5,8 @@ tag:
   - AWS
 parent: aws
 permalink: /docs/aws/gw-sqs-sns
+sitemap:
+  lastmod: 2020-03-27
 ---
 
 ## Amazon API Gateway

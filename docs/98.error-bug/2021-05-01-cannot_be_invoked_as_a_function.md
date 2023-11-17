@@ -5,6 +5,8 @@ tag:
   - error
 parent: error & bug
 permalink: /docs/error-bug/kotlin/cannot-be-invoked-as-a-function
+sitemap:
+  lastmod: 2021-05-01
 ---
 
 ## 에러 메세지

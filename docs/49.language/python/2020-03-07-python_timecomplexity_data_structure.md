@@ -6,6 +6,8 @@ tag:
 parent: python
 grand_parent: language
 permalink: /docs/algorithm/language/python/time-complexity
+sitemap:
+  lastmod: 2020-03-07
 ---
 
 당연하게도 자료구조에 따라 python operation들의 time complexity가 달라진다.  

@@ -4,6 +4,8 @@ title: flutter theme
 permalink: /docs/flutter/flutter-theme
 parent: flutter
 grand_parent: Etc
+sitemap:
+  lastmod: 2023-01-27
 ---
 
 

@@ -3,6 +3,8 @@ layout: post
 title: "[intellij error] Maven 3.3.1+ requires JDK 1.7+"
 parent: error & bug
 permalink: /docs/error-bug/intellij/maven-jdk-version
+sitemap:
+   lastmod: 2022-08-06
 ---
 
 intellij에서 maven build 혹은 package 시 발생한 에러.  

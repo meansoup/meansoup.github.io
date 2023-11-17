@@ -6,6 +6,8 @@ tag:
 parent: c++
 grand_parent: language
 permalink: /docs/algorithm/language/cpp/token-passing-operator
+sitemap:
+  lastmod: 2019-09-23
 ---
 
 일하면서 신가하게 본 cpp 코드에 대해서 정리해보려고 한다.  

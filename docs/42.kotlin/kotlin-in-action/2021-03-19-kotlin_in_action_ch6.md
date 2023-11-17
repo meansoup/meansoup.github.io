@@ -4,6 +4,8 @@ title: "kotlin in action 정리 #6"
 parent: "kotlin in action 정리하기"
 grand_parent: Kotlin
 permalink: /docs/kotlin/kotlin-in-action/6
+sitemap:
+  lastmod: 2021-03-19
 ---
 
 ## chapter 6. The Kotlin Type System

@@ -3,6 +3,8 @@ layout: post
 title: "[spring error] ConflictingBeanDefinitionException: Annotation-specified bean name"
 parent: error & bug
 permalink: /docs/error-bug/spring/ConflictingBeanDefinitionException
+sitemap:
+   lastmod: 2022-08-01
 ---
 
 spring에서 테스트 수행중 발생한 에러.  

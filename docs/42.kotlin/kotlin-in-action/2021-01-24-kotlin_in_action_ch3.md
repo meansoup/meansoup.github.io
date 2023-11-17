@@ -4,6 +4,8 @@ title: "kotlin in action 정리 #3"
 parent: "kotlin in action 정리하기"
 grand_parent: Kotlin
 permalink: /docs/kotlin/kotlin-in-action/3
+sitemap:
+  lastmod: 2021-01-24
 ---
 
 ## chapter 3. Defining and Calling Functions

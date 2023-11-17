@@ -3,6 +3,8 @@ layout: post
 title: "[spring error] Unable to find a @SpringBootConfiguration"
 parent: error & bug
 permalink: /docs/error-bug/spring/Unable_to_find_a_SpringBootConfiguration
+sitemap:
+  lastmod: 2022-06-24
 ---
 
 spring에서 **Unable to find a @SpringBootConfiguration**가 발생할 때 에러.  

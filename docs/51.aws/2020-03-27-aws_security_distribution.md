@@ -5,6 +5,8 @@ tag:
   - AWS
 parent: aws
 permalink: /docs/aws/security-deploy
+sitemap:
+  lastmod: 2020-03-27
 ---
 
 ##  애플리케이션 보안

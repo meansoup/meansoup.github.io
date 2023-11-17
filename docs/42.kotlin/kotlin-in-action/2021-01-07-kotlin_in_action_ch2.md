@@ -4,6 +4,8 @@ title: "kotlin in action 정리 #2"
 parent: "kotlin in action 정리하기"
 grand_parent: Kotlin
 permalink: /docs/kotlin/kotlin-in-action/2
+sitemap:
+  lastmod: 2021-01-07
 ---
 
 ## chapter 2. Kotlin Basics

@@ -3,6 +3,8 @@ layout: post
 title: "[spring error] repackage failed: Unable to find main class"
 parent: error & bug
 permalink: /docs/error-bug/spring/repackage-failed-Unable-to-find-main-class
+sitemap:
+  lastmod: 2022-08-08
 ---
 
 intellij에서 maven package 시 발생한 에러.  

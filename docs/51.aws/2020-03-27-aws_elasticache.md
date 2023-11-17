@@ -5,6 +5,8 @@ tag:
   - AWS
 parent: aws
 permalink: /docs/aws/elasticache
+sitemap:
+  lastmod: 2020-03-27
 ---
 
 ElastiCache는 인 메모리 캐시를 쉽게 배포/운영/조정할 수 있게 해주는 서비스.  

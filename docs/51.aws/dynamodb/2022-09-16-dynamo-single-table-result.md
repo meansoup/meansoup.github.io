@@ -5,6 +5,8 @@ parent: DynamoDB
 grand_parent: aws
 nav_order: 3
 permalink: /docs/aws/dynamo/single-table-result
+sitemap:
+  lastmod: 2022-09-16
 ---
 
 우리 팀은 dynamodb를 많이 쓰고 있다.  

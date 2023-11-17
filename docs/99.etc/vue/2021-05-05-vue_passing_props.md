@@ -6,6 +6,8 @@ tag:
 parent: vue
 permalink: /docs/vue/passing-props
 grand_parent: Etc
+sitemap:
+  lastmod: 2021-05-05
 ---
 
 [component 적용](/docs/vue/component)을 한 뒤에 component의 props를 전달하는 방법이다.  

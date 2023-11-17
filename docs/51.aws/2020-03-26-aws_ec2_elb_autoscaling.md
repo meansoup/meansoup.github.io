@@ -5,6 +5,8 @@ tag:
   - AWS
 parent: aws
 permalink: /docs/aws/basic-service
+sitemap:
+  lastmod: 2020-03-26
 ---
 
 AWS에서 가장 기본적으로 사용되는 서비스는 EC2와 이와 같이 사용되는 ELB, Auto Scaling이 있다.

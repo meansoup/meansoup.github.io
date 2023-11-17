@@ -5,6 +5,8 @@ parent: S3
 grand_parent: aws
 nav_order: 1
 permalink: /docs/aws/s3/throughput
+sitemap:
+  lastmod: 2023-06-17
 ---
 
 우리는 팀 내에서 storage로 대부분 S3를 사용하고 있다.  

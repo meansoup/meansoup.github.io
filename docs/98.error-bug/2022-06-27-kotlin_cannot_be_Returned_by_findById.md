@@ -3,6 +3,8 @@ layout: post
 title: "[spring error] kotlin cannot be returned by findById(), findById() should return Optional"
 parent: error & bug
 permalink: /docs/error-bug/spring/kotlin_cannot_be_Returned_by_findById
+sitemap:
+  lastmod: 2022-06-27
 ---
 
 kotlin에서 jpa findById 사용하기.  

@@ -5,6 +5,8 @@ tag:
   - AWS
 parent: aws
 permalink: /docs/aws/container
+sitemap:
+  lastmod: 2020-03-27
 ---
 
 container란 배포를 쉽게할 수 있는 방법으로 사용한다.  
