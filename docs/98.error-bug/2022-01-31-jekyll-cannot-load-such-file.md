@@ -4,7 +4,7 @@ title: "[jekyll] Dependency Error, Jekyll::Errors::MissingDependencyException"
 parent: error & bug
 permalink: /docs/error-bug/kotlin/jekyll-cannot-load-such-file
 sitemap:
-   lastmod: 2022-01-31
+  lastmod: 2022-01-31
 ---
 
 Dependency 추가 후 jekyll local build 중 에러가 발생했다.  

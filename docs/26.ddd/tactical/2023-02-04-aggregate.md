@@ -6,7 +6,7 @@ grand_parent: Domain Driven Design
 nav_order: 10
 permalink: /docs/ddd/tactical/aggregate
 sitemap:
-   lastmod: 2023-02-04
+  lastmod: 2023-02-04
 ---
 
 *에그리게잇은 모든 DDD의 전술적인 지침 중에서도 무엇보다 정확히 규명되지 않은 패턴 중 하나다. - Vaughn Vernon*

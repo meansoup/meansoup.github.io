@@ -5,7 +5,7 @@ parent: Refactoring
 nav_order: 100
 permalink: /docs/refactoring/my-refactoring
 sitemap:
-   lastmod: 2023-08-31
+  lastmod: 2023-08-31
 ---
 
 ## 리팩토링의 분류

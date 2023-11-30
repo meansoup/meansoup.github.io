@@ -5,7 +5,7 @@ parent: "kotlin in action 정리하기"
 grand_parent: Kotlin
 permalink: /docs/kotlin/kotlin-in-action/1
 sitemap:
-   lastmod: 2021-01-06
+  lastmod: 2021-01-06
 ---
 
 Kotlin in Action으로 Kotlin study 하기.  
