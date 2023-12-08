@@ -15,7 +15,7 @@ DB를 사용한다면 connection pool을 설정하는 것은 필수이다.
 
 ## connection pool 확인
 
-setting 전에 [어떤 connection pool을 사용하고 있는지 확인](docs/spring/jpa/2022-05-11-connection-pool-find.md)해야 한다.
+setting 전에 [어떤 connection pool을 사용하고 있는지 확인](/docs/spring/jpa/find-connection-pool)해야 한다.
 - default는 **Hikari**
 
 ## 현재 db의 connection 확인
@@ -43,7 +43,7 @@ spring.datasource.hikari.minimum-idle=10 # 최소 pool size
 ## connection pool 주의사항
 
 당연하게도 JPA의 property 세팅은 instance 단위이고 maximum 10이고 instance가 20 대이면 200개의 connection이 생길 수 있다.  
-이를 고려하여 DB(Mysql 등)의 Max Connection을 넉넉하게 유지해야 한다.
+이를 고려하여 DB(Mysql 등)의 Max Connection을 넉넉하게 유지해야 한다.  
 
 
 ### reference
