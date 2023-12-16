@@ -17,7 +17,6 @@ gem 'jekyll-redirect-from'
 gem 'jekyll-sitemap'
 gem 'jekyll-paginate'
 gem "github-pages"
-gem 'jekyll-spaceship', group: :jekyll_plugins
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.

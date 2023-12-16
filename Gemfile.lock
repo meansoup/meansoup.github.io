@@ -165,11 +165,6 @@ GEM
       jekyll (>= 3.3, < 5.0)
     jekyll-sitemap (1.4.0)
       jekyll (>= 3.7, < 5.0)
-    jekyll-spaceship (0.10.2)
-      gemoji (~> 3.0)
-      jekyll (>= 3.6, < 5.0)
-      nokogiri (~> 1.6)
-      rainbow (~> 3.0)
     jekyll-swiss (1.0.0)
     jekyll-theme-architect (0.1.1)
       jekyll (~> 3.5)
@@ -291,7 +286,6 @@ DEPENDENCIES
   jekyll-paginate
   jekyll-redirect-from
   jekyll-sitemap
-  jekyll-spaceship
   just-the-docs
   minima (~> 2.5)
   tzinfo (~> 1.2)

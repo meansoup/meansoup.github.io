@@ -33,7 +33,6 @@ remote_theme: pmarsceill/just-the-docs
 plugins:
   - jekyll-redirect-from
   - jemoji
-  - jekyll-spaceship
 
 # Analytics
 analytics:
