@@ -4,7 +4,7 @@ curl -> 서버
 note left: GET /greeting HTTP/1.0
 curl<-- 서버
 note right
-HTTP//1.0 200 OK
+HTTP/1.0 200 OK
   <html>...</html>
 end note
 @enduml
