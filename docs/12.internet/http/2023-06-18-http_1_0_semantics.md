@@ -16,6 +16,10 @@ http의 단순 전송은 크게 신경쓸게 없다.
 보통 http 응답은 한 번에 한 파일씩 반환하므로 경계를 신경쓸 필요가 없다.
 그런데 multipart를 이용하는 경우 한 번의 요청에 여러 파일을 전송할 수 있으므로 받는 쪽에서 파일을 나눠야 한다.
 
+<div class="code-example" markdown="1" style="font-size: 0.8em">
+예시
+{: .label .label-yellow}
+
 ```
 Content-Type: multipart/form-data; boundary=boundary-example
 
@@ -31,9 +35,10 @@ This is the content of the file.
 
 --boundary-example--
 ```
+</div>
 
-Content-Type은 multipart/form-data,  
-boundary에는 랜덤하게 생성된 경계 문자열이 들어가고,  
+**Content-Type**은 **multipart/form-data**.  
+boundary에는 랜덤하게 생성된 경계 문자열이 들어간다.  
 body는 이 경계 문자열로 블록이 나뉜다.
 - 경계 문자열에 --이 prefix로 붙는다
 
