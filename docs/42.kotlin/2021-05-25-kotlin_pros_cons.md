@@ -11,9 +11,15 @@ sitemap:
 kotlin을 공부하면서 확인한 장단점을 정리해보았다.  
 kotlin은 java의 많은 것들을 녹여내면서, 최대한 편리하고 간결하게 사용할 수 있다는 특징이 있다.
 
-## 장점
+장점
+1. [java와의 호환](#java와의-호환)
+2. [안전한 코드](#안전한-코드)
+3. [간결하고 명확한 코드](#간결하고-명확한-코드)
+4. [확장 함수](#확장-함수)
+5. [구글 공식 언어](#구글-공식-언어)
 
-### 1. java와의 호환
+
+## java와의 호환
 
 java와 유사하여 java 개발자가 쉽게 kotlin을 사용할 수 있다.  
 즉 러닝커브가 낮다는 것.
@@ -23,7 +29,7 @@ java와 kotlin 코드를 하나의 프로젝트에서 같이 사용할 수도 �
 
 ![kotlin-compile](/images/post/kotlin_in_action/1_1.jpg)
 
-### 2. 안전한 코드
+## 안전한 코드
 
 kotlin에서 가장 대표적인 특징 중 하나는 nullable type의 지원이다.  
 kotlin은 nullable type과 not nullable type을 구분한다.  
@@ -44,16 +50,14 @@ var notNullable: String = null
 ```
 </div>
 
-실제로 kotlin 코드를 적용해서 NPE가 감소한 통계가 있다.
-1. android app에서 kotlin 코드를 사용하는 경우 [app crash가 20% 줄어듦](https://developer.android.com/kotlin/first#why).
-2. google home 팀은 kotlin 사용후 [NPE가 30% 감소](https://developer.android.com/stories/apps/google-home#results).
-
-### 3. 간결하고 명확한 코드
+## 간결하고 명확한 코드
 
 kotlin은 java에서 불편하고 가독성이 떨어지는 코드들을 많이 개선했다.  
 그 중 가장 대표적인 것이 nullable type operator와 type cast operator이다.  
 
-#### 보일러 플레이팅
+실제로 kotlin 코드 적용 이후 <u>코드가 줄어든 통계</u>[^1]가 있다.
+
+### 보일러 플레이팅
 
 kotlin의 class는 type에 따라  class를 제공하여 보일러 플레이팅 코드가 굉장히 줄어든다.  
 
@@ -75,9 +79,7 @@ class Car(val model: String, var number: String)
 - `number`에 대한 getter/setter
 </div>
 
-kotlin 코드 적용 이후 <u>코드가 줄어든 통계</u>[^1]가 있다.
-
-#### safe call operator
+### safe call operator
 
 `?.`으로 간단하고 명료하게 null 검사와 함수 호출을 가능하게 한다.
 
@@ -116,7 +118,7 @@ void getCountry() {
 ```
 </div>
 
-#### elvis operator
+### elvis operator
 
 `?.`와 유사한데, default value를 명시해준다.
 
@@ -151,7 +153,7 @@ void getCountry() {
 ```
 </div>
 
-#### smart cast
+### smart cast
 
 kotlin은 type cast에 `is`와 `as`를 제공한다.  
 이 중에 `is`는 `instanceof`와 유사한데, compiler가 `smart cast`를 해줘서 더 편리하다.  
@@ -178,7 +180,7 @@ fun eval(e: Expr): Int {
 ```
 </div>
 
-### 4. 확장 함수
+## 확장 함수
 
 확장 함수는 클래스 밖에 선언된 함수를 말한다.  
 기존의 api들을 재작성하지 않고 기능을 사용할 수 있어서, kotlin에서 **java의 클래스들을 그대로 사용하면서 기능을 추가**하기 위한 목적으로도 사용된다.  
@@ -193,14 +195,18 @@ fun String?.isNullOrBlank(): Boolean = this == null || this.isBlank()
 
 확장 함수로 kotlin은 [OO와 FP 모두 사용할 수 있다](https://kotlinlang.org/docs/faq.html#is-kotlin-an-object-oriented-language-or-a-functional-one).
 
-### 5. 구글 공식 언어
+## 구글 공식 언어
 
 무료 오픈소스 언어이자, 구글 공식 언어로의 채택.
 
+---
 
-## 단점
+단점
+1. [빌드 시간 & 크기](#빌드-시간--크기)
+2. [자바가 아니다](#자바가-아니다)
+3. [학습 리소스의 제한](#학습-리소스의-제한)
 
-### 빌드 시간 & 크기
+## 빌드 시간 & 크기
 
 clean build의 경우 java보다 시간이 더 오래걸린다.  
 kotlin은 [증분 컴파일(incremental build)](https://blog.jetbrains.com/ko/kotlin/2020/10/the-dark-secrets-of-fast-compilation-for-kotlin/)을 제공해서 partial build가 가능한 경우 java보다 더 빠르다.  
@@ -212,7 +218,7 @@ kotlin은 [증분 컴파일(incremental build)](https://blog.jetbrains.com/ko/ko
 
 kotlin runtime이 package에 들어가야 해서 배포 시 파일 사이즈가 더 커진다.
 
-### 자바가 아니다
+## 자바가 아니다
 
 java와 유사하지만 자바가 아니다.  
 분명히 세세한 사용들에 공부와 검색이 필요할 것이다.  
@@ -220,7 +226,7 @@ java와 유사하지만 자바가 아니다.
 **java 6**을 베이스로 코틀린이 만들어졌다.  
 **java 6**이후의 버전들과 다른 개념들이 존재한다.
 
-### 학습 리소스의 제한
+## 학습 리소스의 제한
 
 아무래도 java 보다는 자료들이 부족하다.  
 검색하는데 더 많은 시간이 필요할 것이다.
