@@ -75,9 +75,7 @@ class Car(val model: String, var number: String)
 - `number`에 대한 getter/setter
 </div>
 
-kotlin 코드 적용 이후 코드가 줄어든 통계가 있다.  
-1. kotlinlang에서는 [rough하게 40%](https://kotlinlang.org/docs/faq.html#what-advantages-does-kotlin-give-me-over-the-java-programming-language) 정도의 라인 수가 줄어드는 것을 확인.
-2. google home 팀은 [코드 size 33%](https://developer.android.com/kotlin/first) 줄어듦
+kotlin 코드 적용 이후 <u>코드가 줄어든 통계</u>[^1]가 있다.
 
 #### safe call operator
 
@@ -226,3 +224,9 @@ java와 유사하지만 자바가 아니다.
 
 아무래도 java 보다는 자료들이 부족하다.  
 검색하는데 더 많은 시간이 필요할 것이다.
+
+
+
+-----
+[^1]: 1. kotlinlang에서는 [rough하게 40%](https://kotlinlang.org/docs/faq.html#what-advantages-does-kotlin-give-me-over-the-java-programming-language) 정도의 라인 수가 줄어드는 것을 확인.  
+  2. google home 팀은 [코드 size 33%](https://developer.android.com/kotlin/first) 줄어듦.  
