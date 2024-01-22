@@ -30,16 +30,19 @@ kotlin은 nullable type과 not nullable type을 구분한다.
 
 not nullable type은 compile 시점에서 NPE를 발생시키기 때문에 runtime에 의도치 않은 NPE가 날 확률이 줄어든다.
 
+type을 그냥쓰면 not nullable type이고, type에 `?`를 붙여서 nullable type을 사용할 수 있다.
+
+<div class="code-example" markdown="1" style="font-size: 0.8em">
+예시
+{: .label .label-yellow}
+
+아래처럼 not nullable type에 null을 넣으면 `Kotlin: Null can not be a value of a non-null type`과 같은 compile error가 발생한다.
+
 ```kotlin
 var nullable: String? = null
 var notNullable: String = null
 ```
-
-type을 그냥쓰면 not nullable type이고,  
-type에 `?`를 붙여서 nullable type을 사용할 수 있다.  
-
-not nullable type에 위처럼 null을 넣으면 `Kotlin: Null can not be a value of a non-null type`과 같은 compile error가 발생한다.
-
+</div>
 
 실제로 kotlin 코드를 적용해서 NPE가 감소한 통계가 있다.
 1. android app에서 kotlin 코드를 사용하는 경우 [app crash가 20% 줄어듦](https://developer.android.com/kotlin/first#why).
@@ -58,15 +61,19 @@ kotlin은 class 생성 시 `Getter/Setter`와 `AllArgsConstructor`를 기본으�
 
 `data class`를 사용하면 `@lombok.Data` 처럼 `equals()`, `hashCode()`, `toString()`을 제공한다. 
 
+<div class="code-example" markdown="1" style="font-size: 0.8em">
+예시
+{: .label .label-yellow}
+
 ```kotlin
 class Car(val model: String, var number: String)
 ```
 
-위 코드에서 `Car`은 아래와 같은 기능이 제공된다.  
+위 코드에서 `Car`은 아래와 같은 기능이 제공된다.
 - AllArgsConstructor
 - `model`에 대한 getter
 - `number`에 대한 getter/setter
-
+</div>
 
 kotlin 코드 적용 이후 코드가 줄어든 통계가 있다.  
 1. kotlinlang에서는 [rough하게 40%](https://kotlinlang.org/docs/faq.html#what-advantages-does-kotlin-give-me-over-the-java-programming-language) 정도의 라인 수가 줄어드는 것을 확인.
@@ -76,9 +83,9 @@ kotlin 코드 적용 이후 코드가 줄어든 통계가 있다.
 
 `?.`으로 간단하고 명료하게 null 검사와 함수 호출을 가능하게 한다.
 
-<details>
-  <summary>kotlin class 코드</summary>
-  <div markdown="1">
+<div class="code-example" markdown="1" style="font-size: 0.8em">
+예시
+{: .label .label-yellow}
 
 ```kotlin
 class Address(val country: String?)
@@ -88,16 +95,12 @@ class Person(val company: Company?) {
         return company?.address?.country;
     }
 }
-```
 
-  </div>
-</details>
-
-```kotlin
 fun getCountry(): String? {
     return company?.address?.country
 }
 ```
+
 위 kotlin 코드는 아래 java 코드와 같다.
 
 ```java
@@ -113,16 +116,22 @@ void getCountry() {
     return company.getAddress().getCountry();
 }
 ```
+</div>
 
 #### elvis operator
 
 `?.`와 유사한데, default value를 명시해준다.
+
+<div class="code-example" markdown="1" style="font-size: 0.8em">
+예시
+{: .label .label-yellow}
 
 ```kotlin
 fun getCountry(): String {
     return company?.address?.country?:"kr"
 }
 ```
+
 위 kotlin 코드는 아래 java 코드와 같다.
 
 ```java
@@ -142,26 +151,24 @@ void getCountry() {
     return company.getAddress().getCountry();
 }
 ```
+</div>
 
 #### smart cast
 
 kotlin은 type cast에 `is`와 `as`를 제공한다.  
 이 중에 `is`는 `instanceof`와 유사한데, compiler가 `smart cast`를 해줘서 더 편리하다.  
 
-<details>
-  <summary>kotlin class 코드</summary>
-  <div markdown="1">
+<div class="code-example" markdown="1" style="font-size: 0.8em">
+예시
+{: .label .label-yellow}
+
+java 코드로 작성할 경우 `instanceof` 이후에 명시적으로 type cast를 해주어야 하는 코드를 kotlin에서는 `is`를 통해 처리할 수 있다.
 
 ```kotlin
 interface Expr
 class Num(val value: Int): Expr
 class Sum(val left: Expr, val right: Expr): Expr
-```
 
-  </div>
-</details>
-
-```kotlin
 fun eval(e: Expr): Int {
     if (e is Num) {
         return e.value
@@ -171,9 +178,7 @@ fun eval(e: Expr): Int {
     }
 }
 ```
-
-java 코드로 작성할 경우 `instanceof` 이후에 명시적으로 type cast를 해주어야 하는 코드를 kotlin에서는 `is`를 통해 위와 같이 처리할 수 있다.
-
+</div>
 
 ### 4. 확장 함수
 
