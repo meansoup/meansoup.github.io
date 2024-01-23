@@ -240,5 +240,4 @@ java와 유사하지만 자바가 아니다.
 
 
 -----
-[^1]: kotlinlang에서는 [rough하게 40%](https://kotlinlang.org/docs/faq.html#what-advantages-does-kotlin-give-me-over-the-java-programming-language) 정도의 라인 수가 줄어드는 것을 확인.  
-  google home 팀은 [코드 size 33%](https://developer.android.com/kotlin/first) 줄어듦.  
+[^1]: kotlinlang에서는 [rough하게 40%](https://kotlinlang.org/docs/faq.html#what-advantages-does-kotlin-give-me-over-the-java-programming-language) 정도의 라인 수가 줄어드는 것을 확인.<br> google home 팀은 [코드 size 33%](https://developer.android.com/kotlin/first) 줄어듦.
