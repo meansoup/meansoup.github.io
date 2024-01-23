@@ -11,6 +11,8 @@ sitemap:
 kotlin을 공부하면서 확인한 장단점을 정리해보았다.  
 kotlin은 java의 많은 것들을 녹여내면서, 최대한 편리하고 간결하게 사용할 수 있다는 특징이 있다.
 
+---
+
 장점
 1. [java와의 호환](#java와의-호환)
 2. [안전한 코드](#안전한-코드)
@@ -186,12 +188,17 @@ fun eval(e: Expr): Int {
 기존의 api들을 재작성하지 않고 기능을 사용할 수 있어서, kotlin에서 **java의 클래스들을 그대로 사용하면서 기능을 추가**하기 위한 목적으로도 사용된다.  
 확장 함수에서는 private, protected로 선언되지 않은 변수나 함수를 모두 자연스럽게 (내것 마냥) 호출할 수 있다.  
 
+<div class="code-example" markdown="1" style="font-size: 0.8em">
+예시
+{: .label .label-yellow}
+
 ```kotlin
 fun String?.isNullOrBlank(): Boolean = this == null || this.isBlank()
 ```
 
-예를 들면, 위처럼 기본 타입에 대해서도 확장 함수를 작성할 수 있다.  
-실제로 위와 유사한 코드가 이미 있다.
+위 코드처럼 기본 타입에 대해서도 확장 함수를 작성할 수 있다.  
+실제로 위와 유사한 코드가 코틀린에 이미 정의되어 있고 이를 통해 kotlin은 다양한 기능을 제공한다.
+</div>
 
 확장 함수로 kotlin은 [OO와 FP 모두 사용할 수 있다](https://kotlinlang.org/docs/faq.html#is-kotlin-an-object-oriented-language-or-a-functional-one).
 
@@ -232,7 +239,6 @@ java와 유사하지만 자바가 아니다.
 검색하는데 더 많은 시간이 필요할 것이다.
 
 
-
 -----
-[^1]: kotlinlang에서는 [rough하게 40%](https://kotlinlang.org/docs/faq.html#what-advantages-does-kotlin-give-me-over-the-java-programming-language) 정도의 라인 수가 줄어드는 것을 확인.
+[^1]: kotlinlang에서는 [rough하게 40%](https://kotlinlang.org/docs/faq.html#what-advantages-does-kotlin-give-me-over-the-java-programming-language) 정도의 라인 수가 줄어드는 것을 확인.  
   google home 팀은 [코드 size 33%](https://developer.android.com/kotlin/first) 줄어듦.  
