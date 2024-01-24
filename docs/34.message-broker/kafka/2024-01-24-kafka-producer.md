@@ -9,8 +9,7 @@ sitemap:
   lastmod: 2024-01-24
 ---
 
-Producer Job에는 클러스터에 대한 메타데이터 가져오기가 포함된다.  
-producer는 할당된 파티션의 leader replica에만 쓸 수 있는데, 사용자는 topic만 알고 있으므로 메타데이터는 producer가 쓸 브로커를 결정하는데 도움이 된다.  
+Producer는 메시지를 카프카 topic으로 보내는 도구이다.
 
 ## producer option
 
