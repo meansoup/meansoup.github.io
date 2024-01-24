@@ -18,7 +18,8 @@ Disallow: /docs/ddd/tactical/$
 Disallow: /docs/spring/$
 Disallow: /docs/spring/jpa$
 Disallow: /docs/db/$
-Disallow: /docs/db/concept/$
+Disallow: /docs/message-broker/$
+Disallow: /docs/message-broker/kafka/$
 Disallow: /docs/java/$
 Disallow: /docs/java/gc/$
 Disallow: /docs/java/issue/$
