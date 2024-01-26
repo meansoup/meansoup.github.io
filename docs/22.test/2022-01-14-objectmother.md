@@ -50,9 +50,8 @@ sitemap:
 
 ### Java에서 objectMother 적용하기
 
-ObjectMother를 공부하면서[Java에서 ObjectMother 패턴 적용](/docs/java/library/easyrandom)하기 위해 도움이 되는 라이브러리들을 찾아보았고,  
-실제 우리 팀 코드에 적용을 해 보았다.  
-굉장히 간단한데 실제 패턴을 적용해서 얻는 이점이 많았다.
+ObjectMother를 공부하면서 [Java에서 ObjectMother 패턴 적용](/docs/java/library/easyrandom)하기 위해 도움이 되는 라이브러리들을 찾아보았고, 실제 우리 팀 코드에 적용을 해 보았다.  
+굉장히 간단한데 실제 패턴을 적용해서 얻는 이점이 많았다. java에서 적용하며 얻은 이점들은 위 페이지에 정리한다.  
 
 ## reference
 

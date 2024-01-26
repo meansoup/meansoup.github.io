@@ -9,13 +9,16 @@ sitemap:
 ---
 
 Java에서 테스트 객체를 만드는걸 고민하다가 [ObjectMother 패턴](/docs/pattern/object-mother)에 대해서 공부하게 되었다.  
-그러고 찾은게 바로 **EasyRandom**.
-- mother 패턴을 모른다면 한 번은 공부하고 가면 좋겠다.
+그러고 찾은게 바로 **EasyRandom**.   
+mother 패턴을 모른다면 위 페이지에서 개념을 보고가면 좋겠다.  
 
 ObjectMother와 EasyRandom을 팀 내에 소개했는데 이를 적용하고 테스트 작성에 대한 효율이 눈에 띄기 좋아졌다.  
-- 지금 우리 팀원들은 테스트 작성할 때 무조건 이 방식을 사용하는 정도.
+지금 우리 팀원들은 테스트 작성할 때 **무조건** 이 방식을 사용하는 정도.
 
-장점이 몇 가지 있는데,  
+## 장점
+
+**ObjectMother 패턴**을 설명하는 페이지에도 적혀 있지만 이 간단한 패턴으로 얻은 명확한 장점들이 있다.
+
 1. 이곳저곳 산개되었던 객체 생성 로직을 하나로 묶을 수 있었다.  
   - test Class/Method마다 객체를 만들던 로직이 있었는데, `ItemMother`와 같이 mother 패턴을 적용하면서 이런 로직이 사라졌다.
   - `Item`의 테스트 객체를 만들기 전에 `ItemMother`가 있는지를 보고 없으면 만들고 있으면 사용하는 방식.
@@ -50,7 +53,7 @@ ObjectMother와 EasyRandom을 팀 내에 소개했는데 이를 적용하고 테
 오래된 프로젝트의 테스트 코드에서 심심찮게 보이는 반복 호출을 위한 테스트 함수.
 
 ```java
-public static ItemDTO createItemDTO(){
+public static ItemDTO createItemDTO() {
     long crrntTime = System.currentTimeMillis();
     Meta meta = MetaTest.create();
 
@@ -89,25 +92,25 @@ private static ItemDTO initTestValue() {
 ```
 
 조금은 쓸만하다.
-- 이 정도면 일종의 objectMother라고 할 수 있을 것 같다.
-- 그치만 언제까지 random으로 **한땀 한땀** 넣어줄건지.
-
-그리고 생성로직이 산개되어 있고 네이밍이 명확하지 않다는 문제는 여전하다.
+이 정도면 일종의 objectMother라고 할 수 있을 것 같다.  
+그렇지만
+- 언제까지 random으로 **한땀 한땀** 넣어줄건지.
+- 생성로직이 산개되어 있고 네이밍이 명확하지 않다는 문제는 여전하다.
 
 ## EasyRandom
 
 **ObjectMother**의 역할을 하는 프로젝트들이 찾아보니 몇 개 있었다.  
 굉장히 유명하고 보편적으로 사용되는 프로젝트들은 아니지만 흥미로웠다.
 
-Naver에서 관리하고 있는 `FixtureMonkey` 도 있었고,  
-약간은 올드한 네이밍의 `PODAM`,  
-조금 궤가 다르지만 param test에 random하게 값을 채워주는 `AutoParams` 들을 사용해봤다.
+Naver에서 관리하고 있는 **FixtureMonkey** 도 있었고,  
+약간은 올드한 네이밍의 **PODAM**,  
+조금 궤가 다르지만 param test에 random하게 값을 채워주는 **AutoParams** 들을 사용해봤다.
 
-가장 쓰기 편하고 효율적인 프로젝트는 `EasyRandom`이었다.
+가장 쓰기 편하고 효율적인 프로젝트는 **EasyRandom**이었다.
 - 이름 값 한다.
 - star 수도 가장 많았다.
 
-`EasyRandom`은 굉장히 강력한데, 내가 사용하며 확인된 사항은 다음과 같다.
+**EasyRandom**은 굉장히 강력한데, 내가 사용하며 확인된 사항은 다음과 같다.
 1. **setter가 없어도 된다.**
 2. **contructor가 없어도 된다**. (private contructor only인 경우)
 3. 자동으로 **sub class들의 값도 random하게 채워준다.**
@@ -118,11 +121,11 @@ setter와 constructor가 없어도 된다는 점이 굉장히 좋았다.
 
 특정 entity의 경우 private consturctor만 갖고 factory에서 생성을 하는데, factory는 또 dto를 받는 번거로운 구조를 갖는 경우가 있었다.  
 이런 경우 항상 테스트에서 dto 생성 후 entity를 만드는 test 이해도를 떨어뜨리는 작업을 했어야 했다.  
-`EasyRandom`은 이런 단점들을 보완해준다.
+**EasyRandom**은 이런 단점들을 보완해준다.
 
-### 사용법
+## 사용법
 
-1. add dependency
+우선 dependency를 추가한다.  
 
 ```xml
 <dependency>
@@ -132,7 +135,7 @@ setter와 constructor가 없어도 된다는 점이 굉장히 좋았다.
 </dependency>
 ```
 
-2. use
+### 기본 사용
 
 ```java
     EasyRandom generator = new EasyRandom();
@@ -144,7 +147,7 @@ setter와 constructor가 없어도 된다는 점이 굉장히 좋았다.
 List(필요하다면 다른 colletions)를 만들기도 쉽다.  
 위에서 언급한 장점들까지 고려한다면 random value object 생성을 한 줄에!
 
-3. use with param
+### parameter와 함께 사용
 
 ```java
     EasyRandomParameters parameters = new EasyRandomParameters();
@@ -154,9 +157,7 @@ List(필요하다면 다른 colletions)를 만들기도 쉽다.
     Person person = generator.nextObject(Person.class);
 ```
 
-특정 param이나 value에 조건을 더할 수도 있다.  
-- 아주 간단하게.
-
+아주 간단하게 특정 param이나 value에 조건을 더할 수도 있다.
 
 ### 적용된 코드 예시
 
@@ -170,7 +171,7 @@ public class ItemDTOMother {
   private static ItemDTO generateDeleted() {
     ItemDTO item = generate();
     item.setStatus("DELETED");
-    return item
+    return item;
   }
 }
 ```
