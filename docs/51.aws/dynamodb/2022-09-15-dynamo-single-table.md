@@ -18,16 +18,15 @@ AWS에서 성능과 비용 개선을 위해 가이드를 자주 하기도 한다
 ## relational design
 
 기존의 관계형 DB에서는 일반적으로 여러 table을 두고 사용한다.  
-각 table은 다른 table의 foreign key를 갖고 있는데,  
-multiple tables에서 join query로 마치 single-table-view를 생성해서 사용한다.
+각 table은 다른 table의 foreign key를 갖고, multiple tables에서 join query로 마치 single-table-view를 생성해서 사용한다.
 
 이런 query는 편리하고 유연하지만, DB 내부에선 굉장히 비싼 operation이고 horiziontal scale out이 어렵다.
 
 
 ## dynamodb design
 
-RDB에서는 scale의 한계가 있지만 dynamodb에서는 scale의 한계가 없다.
-- [SQL vs NoSQL](https://meansoup.github.io/docs/db/why-use-nosql) 참고
+RDB에서는 scale의 한계가 있지만 dynamodb에서는 scale의 한계가 없다.  
+이건 <u>SQL과 NoSQL의 차이</u>[^1]이다.
 
 dynamodb의 중요한 goal 중 하나인데, scale이 증가하더라도 예측 가능한 performance를 제공할 수 있도록 디자인 한다는 것.  
 그래서 dynamodb는 scale 할 수 없는 operation 들을 제공하지 않고 있고, join도 그렇다.
@@ -66,9 +65,9 @@ dynamo의 RCU/WCU에는 두 가지 과금 정책이 있는데 ondemand와 provis
 
 ondemand가 더 싸보이지만 enterprise 급에서는 대부분 provisioned를 사용한다.  
 
-이유는 두 가지.
-- 급격한 db 요청이 몰릴 때, ondemand에서 RCU/WCU를 늘리더라도 시간이 걸리고 그 사이에 장애가 발생한다. (물론 빨리 늘지만 그래도 시간이 걸린다)
-- provisioned로 계약하면 ondemand 보다 가격이 저렴하다.
+대체적으로 두 가지 이유 때문이다. 
+1. 급격한 db 요청이 몰릴 때, ondemand에서 RCU/WCU를 늘리더라도 시간이 걸리고 그 사이에 장애가 발생한다. (물론 빨리 늘지만 그래도 시간이 걸린다)
+2. provisioned로 계약하면 ondemand 보다 가격이 저렴하다.
 
 provision는 당연히 서비스에서 사용되는 수치보다 한참 넉넉하게 설정하는 편이다.  
 10개의 table에 대해 provision이 여유롭게 설정된 것과, 1개의 table로 합쳐서 여유롭게 설정되는 차이에서 비용 절약이 발생한다.  
@@ -88,7 +87,7 @@ GSI와 LSI.
 등에 대해 알고 배워야 한다.  
 
 join은 정답같은 query가 있다고 한다면 dynamo table design은 설계하는 사람마다 다 다르기 때문에 더 어렵기도 하다.  
-근데 단점에 학습곡선을 넣는건 적을게 별로 없다는 얘기가 아닐까 싶다. 배우는건 당연하지.
+근데 단점에 학습곡선을 넣는건 단점이 별로 없다는 얘기가 아닐까 싶다. 배우는건 당연하지.
 
 ### 새로운 access pattern을 추가하기 어렵다.
 
@@ -130,3 +129,7 @@ single table에서는 아래와 같이 table을 설계한다.
 - https://aws.amazon.com/blogs/compute/creating-a-single-table-design-with-amazon-dynamodb/
 - https://www.alexdebrie.com/posts/dynamodb-single-table/
 - https://medium.com/till-engineering/single-table-design-aws-dynamodb-cffd230a371f
+
+---
+
+[^1]: SQL은 기본적으로 scale up, NoSQL은 scale out으로 확장한다. [SQL vs NoSQL](/docs/db/why-use-nosql) 참고
