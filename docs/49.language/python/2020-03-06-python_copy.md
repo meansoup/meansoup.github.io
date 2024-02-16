@@ -1,6 +1,7 @@
 ---
 layout: post
 title: copy in Python
+sidebar_label: copy in Python
 tag:
   - python
 parent: python

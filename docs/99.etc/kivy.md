@@ -1,6 +1,7 @@
 ---
 layout: default
 title: kivy
+sidebar_label: kivy
 has_children: true
 parent: Etc
 permalink: /docs/kivy

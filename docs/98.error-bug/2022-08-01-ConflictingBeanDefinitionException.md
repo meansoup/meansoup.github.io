@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "[spring error] ConflictingBeanDefinitionException: Annotation-specified bean name"
+sidebar_label: "[spring error] ConflictingBeanDefinitionException: Annotation-specified bean name"
 parent: error & bug
 permalink: /docs/error-bug/spring/ConflictingBeanDefinitionException
 sitemap:

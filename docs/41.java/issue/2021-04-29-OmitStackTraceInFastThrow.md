@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "[OmitStackTraceInFastThrow] java stacktrace 안남는 문제 해결"
+sidebar_label: "[OmitStackTraceInFastThrow] java stacktrace 안남는 문제 해결"
 parent: 이슈
 grand_parent: Java
 permalink: /docs/java/issue/stacktrace

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 8년차 개발자의 면접 질문하기
+sidebar_label: 8년차 개발자의 면접 질문하기
 parent: career
 nav_order: 1
 permalink: /docs/career/interview-question

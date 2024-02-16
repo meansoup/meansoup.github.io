@@ -1,6 +1,7 @@
 ---
 layout: post
 title: map key로 쉽게 remove 하는 trick과 outer.this 하기
+sidebar_label: map key로 쉽게 remove 하는 trick과 outer.this 하기
 parent: Java Tips
 grand_parent: Java
 permalink: /docs/java/tip/java_map_key_remove_and_outer_this

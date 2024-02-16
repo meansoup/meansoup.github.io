@@ -1,6 +1,7 @@
 ---
 layout: default
 title: GraphQL
+sidebar_label: GraphQL
 nav_order: 1
 has_children: true
 parent: APIs

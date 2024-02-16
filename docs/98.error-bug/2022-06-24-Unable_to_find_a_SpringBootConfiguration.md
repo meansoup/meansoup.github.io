@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "[spring error] Unable to find a @SpringBootConfiguration"
+sidebar_label: "[spring error] Unable to find a @SpringBootConfiguration"
 parent: error & bug
 permalink: /docs/error-bug/spring/Unable_to_find_a_SpringBootConfiguration
 sitemap:

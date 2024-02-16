@@ -1,6 +1,7 @@
 ---
 layout: post
 title: DynamoDB
+sidebar_label: DynamoDB
 nav_order: 1
 parent: aws
 has_children: true

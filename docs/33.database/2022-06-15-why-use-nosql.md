@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "SQL vs NoSQL"
+sidebar_label: "SQL vs NoSQL"
 parent: Database
 permalink: /docs/db/why-use-nosql
 sitemap:

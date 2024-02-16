@@ -1,6 +1,7 @@
 ---
 layout: post
 title: kafka consumer 이해하기
+sidebar_label: kafka consumer 이해하기
 nav_order: 4
 parent: kafka
 grand_parent: Message Broker

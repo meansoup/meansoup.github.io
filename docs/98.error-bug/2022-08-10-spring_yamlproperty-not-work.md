@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "[spring error] log4j2.yml, yaml property not work"
+sidebar_label: "[spring error] log4j2.yml, yaml property not work"
 parent: error & bug
 permalink: /docs/error-bug/spring/yaml-property-not-work
 sitemap:

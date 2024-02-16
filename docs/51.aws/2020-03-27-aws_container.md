@@ -1,6 +1,7 @@
 ---
 layout: post
 title: container
+sidebar_label: container
 tag:
   - AWS
 parent: aws

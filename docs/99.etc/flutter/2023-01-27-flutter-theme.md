@@ -1,6 +1,7 @@
 ---
 layout: post
 title: flutter theme
+sidebar_label: flutter theme
 permalink: /docs/flutter/flutter-theme
 parent: flutter
 grand_parent: Etc

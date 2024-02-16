@@ -1,6 +1,7 @@
 ---
 layout: post
 title: API Gateway, SQS, SNS
+sidebar_label: API Gateway, SQS, SNS
 tag:
   - AWS
 parent: aws

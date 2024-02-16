@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 리팩토링 개론
+sidebar_label: 리팩토링 개론
 parent: Refactoring
 nav_order: 2
 permalink: /docs/refactoring/basic

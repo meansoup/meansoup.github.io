@@ -1,6 +1,7 @@
 ---
 layout: default
 title: 슬랙
+sidebar_label: 슬랙
 nav_order: 1
 has_children: true
 parent: 개발도구

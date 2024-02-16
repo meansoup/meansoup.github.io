@@ -1,6 +1,7 @@
 ---
 layout: default
 title: 전술적 설계
+sidebar_label: 전술적 설계
 nav_order: 1
 has_children: true
 parent: Domain Driven Design

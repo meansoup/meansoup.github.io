@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Object Mother"
+sidebar_label: "Object Mother"
 parent: Test
 permalink: /docs/pattern/object-mother
 sitemap:

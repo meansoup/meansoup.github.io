@@ -1,6 +1,7 @@
 ---
 layout: post
 title: http 1.0 semantics
+sidebar_label: http 1.0 semantics
 parent: http
 nav_order: 2
 grand_parent: internet

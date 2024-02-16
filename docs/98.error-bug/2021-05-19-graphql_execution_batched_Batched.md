@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "[spring error] java.lang.NoClassDefFoundError: graphql/execution/batched/Batched"
+sidebar_label: "[spring error] java.lang.NoClassDefFoundError: graphql/execution/batched/Batched"
 tag:
   - error
 parent: error & bug

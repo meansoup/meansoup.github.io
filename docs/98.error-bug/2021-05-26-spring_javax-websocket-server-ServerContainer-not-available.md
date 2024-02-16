@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "[spring error] javax.websocket.server.ServerContainer not available"
+sidebar_label: "[spring error] javax.websocket.server.ServerContainer not available"
 parent: error & bug
 permalink: /docs/error-bug/spring/javax-websocket-server-ServerContainer-not-available
 sitemap:

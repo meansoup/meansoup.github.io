@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "[spring error] kotlin cannot be returned by findById(), findById() should return Optional"
+sidebar_label: "[spring error] kotlin cannot be returned by findById(), findById() should return Optional"
 parent: error & bug
 permalink: /docs/error-bug/spring/kotlin_cannot_be_Returned_by_findById
 sitemap:

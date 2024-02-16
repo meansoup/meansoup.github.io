@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "[GC type] 2. Parallel GC"
+sidebar_label: "[GC type] 2. Parallel GC"
 nav_order: 3
 parent: Garbage Collection
 grand_parent: Java

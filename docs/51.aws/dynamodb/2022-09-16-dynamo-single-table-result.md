@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "single table 적용 후기"
+sidebar_label: "single table 적용 후기"
 parent: DynamoDB
 grand_parent: aws
 nav_order: 3

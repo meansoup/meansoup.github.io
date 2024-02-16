@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "vue 3.0 global component"
+sidebar_label: "vue 3.0 global component"
 tag:
 - vue
 parent: vue

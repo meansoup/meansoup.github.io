@@ -1,6 +1,7 @@
 ---
 layout: default
 title: linux
+sidebar_label: linux
 nav_order: 1
 has_children: true
 parent: 개발도구

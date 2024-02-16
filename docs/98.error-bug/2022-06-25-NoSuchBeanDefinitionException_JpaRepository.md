@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "[spring error] JpaRepository NoSuchBeanDefinitionException"
+sidebar_label: "[spring error] JpaRepository NoSuchBeanDefinitionException"
 parent: error & bug
 permalink: /docs/error-bug/spring/NoSuchBeanDefinitionException_JpaRepository
 sitemap:

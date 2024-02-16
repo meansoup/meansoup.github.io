@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "[spring error] log4j2, Class path contains multiple SLF4J bindings"
+sidebar_label: "[spring error] log4j2, Class path contains multiple SLF4J bindings"
 parent: error & bug
 permalink: /docs/error-bug/spring/Class-path-contains-multiple-SLF4J-bindings
 sitemap:

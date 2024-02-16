@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 마틴 파울러의 리팩토링
+sidebar_label: 마틴 파울러의 리팩토링
 parent: Refactoring
 nav_order: 1
 permalink: /docs/refactoring/martin-fowler-refactoring

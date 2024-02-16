@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Domain Driven Design
+sidebar_label: Domain Driven Design
 nav_order: 26
 has_children: true
 permalink: /docs/ddd

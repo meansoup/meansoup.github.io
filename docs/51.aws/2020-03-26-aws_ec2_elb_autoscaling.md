@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 기본 서비스
+sidebar_label: 기본 서비스
 tag:
   - AWS
 parent: aws

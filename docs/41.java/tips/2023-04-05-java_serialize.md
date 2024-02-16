@@ -1,6 +1,7 @@
 ---
 layout: post
 title: java serialize 사용할 때 주의사항
+sidebar_label: java serialize 사용할 때 주의사항
 parent: Java Tips
 grand_parent: Java
 permalink: /docs/java/tip/java-serialize

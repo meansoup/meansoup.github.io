@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 일회성 배치에 대한 회고
+sidebar_label: 일회성 배치에 대한 회고
 parent: 주제회고
 grand_parent: 회고
 permalink: /docs/retrospect/one-time-batch

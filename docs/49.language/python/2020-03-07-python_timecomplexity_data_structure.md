@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Time Complexity in Python data-structure
+sidebar_label: Time Complexity in Python data-structure
 tag:
   - python
 parent: python

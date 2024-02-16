@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "spring multimodule에서 library module의 test class 사용하기"
+sidebar_label: "spring multimodule에서 library module의 test class 사용하기"
 parent: Spring
 permalink: /docs/spring/multimodule-test-dependency
 sitemap:

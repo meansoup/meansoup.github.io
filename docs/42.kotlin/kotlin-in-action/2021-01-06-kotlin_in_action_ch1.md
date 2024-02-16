@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "kotlin in action 정리 #1"
+sidebar_label: "kotlin in action 정리 #1"
 parent: "kotlin in action 정리하기"
 grand_parent: Kotlin
 permalink: /docs/kotlin/kotlin-in-action/1

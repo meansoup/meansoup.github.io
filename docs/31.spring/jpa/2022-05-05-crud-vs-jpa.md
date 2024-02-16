@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Spring CRUD vs JPA 차이
+sidebar_label: Spring CRUD vs JPA 차이
 nav_order: 1
 parent: Spring JPA
 grand_parent: Spring

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Spring Connection Pool 확인하기
+sidebar_label: Spring Connection Pool 확인하기
 nav_order: 1
 parent: Spring JPA
 grand_parent: Spring

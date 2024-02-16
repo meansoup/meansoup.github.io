@@ -1,6 +1,7 @@
 ---
 layout: post
 title: OCI cloud shell에서 kubectl 설정하기
+sidebar_label: OCI cloud shell에서 kubectl 설정하기
 parent: oci
 permalink: /docs/oci/kubectl_shell
 sitemap:

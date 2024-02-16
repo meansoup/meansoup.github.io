@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 보안, 배포
+sidebar_label: 보안, 배포
 tag:
   - AWS
 parent: aws

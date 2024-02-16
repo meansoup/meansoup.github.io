@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "[jekyll] Dependency Error, Jekyll::Errors::MissingDependencyException"
+sidebar_label: "[jekyll] Dependency Error, Jekyll::Errors::MissingDependencyException"
 parent: error & bug
 permalink: /docs/error-bug/kotlin/jekyll-cannot-load-such-file
 sitemap:

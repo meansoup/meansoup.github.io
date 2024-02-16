@@ -1,6 +1,7 @@
 ---
 layout: default
 title: 이슈
+sidebar_label: 이슈
 nav_order: 1
 has_children: true
 parent: Java

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: S3 처리량 제한
+sidebar_label: S3 처리량 제한
 parent: S3
 grand_parent: aws
 nav_order: 1

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "[kotlin error] cannot be invoked as a function. The function 'invoke()' is not found"
+sidebar_label: "[kotlin error] cannot be invoked as a function. The function 'invoke()' is not found"
 tag:
   - error
 parent: error & bug

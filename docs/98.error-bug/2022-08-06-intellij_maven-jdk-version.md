@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "[intellij error] Maven 3.3.1+ requires JDK 1.7+"
+sidebar_label: "[intellij error] Maven 3.3.1+ requires JDK 1.7+"
 parent: error & bug
 permalink: /docs/error-bug/intellij/maven-jdk-version
 sitemap:

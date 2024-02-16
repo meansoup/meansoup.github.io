@@ -1,6 +1,7 @@
 ---
 layout: post
 title: kafka 아키텍처 이해하기
+sidebar_label: kafka 아키텍처 이해하기
 nav_order: 2
 parent: kafka
 grand_parent: Message Broker

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "config.js"
+sidebar_label: "config.js"
 tag:
 - vue
 parent: vue

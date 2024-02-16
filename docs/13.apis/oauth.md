@@ -1,6 +1,7 @@
 ---
 layout: default
 title: OAuth
+sidebar_label: OAuth
 nav_order: 2
 has_children: true
 parent: APIs

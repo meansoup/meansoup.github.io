@@ -1,6 +1,7 @@
 ---
 layout: post
 title: OKE docker registry github action 적용하기
+sidebar_label: OKE docker registry github action 적용하기
 parent: oci
 permalink: /docs/oci/docker-login
 sitemap:

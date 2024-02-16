@@ -1,6 +1,7 @@
 ---
 layout: post
 title: AWS 비용 효율화
+sidebar_label: AWS 비용 효율화
 parent: aws
 permalink: /docs/aws/cost-efficiency
 sitemap:

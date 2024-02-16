@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "[kotlin error] ClassNotFoundException: kotlin.jvm.JvmInline"
+sidebar_label: "[kotlin error] ClassNotFoundException: kotlin.jvm.JvmInline"
 parent: error & bug
 permalink: /docs/error-bug/kotlin/ClassNotFoundException_kotlin_jvm_JvmInline
 sitemap:

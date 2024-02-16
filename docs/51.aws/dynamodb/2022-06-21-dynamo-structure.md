@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "dynamo 내부구조 이해하기"
+sidebar_label: "dynamo 내부구조 이해하기"
 parent: DynamoDB
 grand_parent: aws
 nav_order: 1

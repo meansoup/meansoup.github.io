@@ -1,6 +1,7 @@
 ---
 layout: post
 title: kafka producer 이해하기
+sidebar_label: kafka producer 이해하기
 nav_order: 3
 parent: kafka
 grand_parent: Message Broker

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: VO
+sidebar_label: VO
 parent: 전술적 설계
 grand_parent: Domain Driven Design
 nav_order: 5

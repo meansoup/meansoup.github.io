@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Domain Service
+sidebar_label: Domain Service
 parent: 전술적 설계
 grand_parent: Domain Driven Design
 nav_order: 7

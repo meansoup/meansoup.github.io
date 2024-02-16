@@ -1,6 +1,7 @@
 ---
 layout: post
 title: ElastiCache
+sidebar_label: ElastiCache
 tag:
   - AWS
 parent: aws

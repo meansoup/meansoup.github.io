@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Uncaught SyntaxError: Unexpected token '<' 에러"
+sidebar_label: "Uncaught SyntaxError: Unexpected token '<' 에러"
 tag:
 - vue
 - error

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Aggregate
+sidebar_label: Aggregate
 parent: 전술적 설계
 grand_parent: Domain Driven Design
 nav_order: 10

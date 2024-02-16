@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 현업에서 내가 생각하는 리팩토링
+sidebar_label: 현업에서 내가 생각하는 리팩토링
 parent: Refactoring
 nav_order: 100
 permalink: /docs/refactoring/my-refactoring

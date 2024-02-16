@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Token Passing Operator in C++
+sidebar_label: Token Passing Operator in C++
 tag:
   - c++
 parent: c++

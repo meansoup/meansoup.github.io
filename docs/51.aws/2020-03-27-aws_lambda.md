@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Lambda
+sidebar_label: Lambda
 tag:
   - AWS
 parent: aws

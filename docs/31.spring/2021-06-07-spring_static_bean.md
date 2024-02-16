@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "static method class와 spring bean"
+sidebar_label: "static method class와 spring bean"
 parent: Spring
 permalink: /docs/spring/static-method-vs-bean
 sitemap:

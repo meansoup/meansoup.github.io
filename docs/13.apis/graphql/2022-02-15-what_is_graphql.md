@@ -1,6 +1,7 @@
 ---
 layout: post
 title: GraphQL이란?
+sidebar_label: GraphQL이란?
 parent: GraphQL
 grand_parent: APIs
 nav_order: 1

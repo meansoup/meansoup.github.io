@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Java naming convention (Google / MS / Oracle)"
+sidebar_label: "Java naming convention (Google / MS / Oracle)"
 parent: Java
 permalink: /docs/java/naming-convention
 sitemap:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Spring JPA connection pool 조정하기
+sidebar_label: Spring JPA connection pool 조정하기
 nav_order: 1
 parent: Spring JPA
 grand_parent: Spring

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: kotlin in action 정리하기
+sidebar_label: kotlin in action 정리하기
 nav_order: 2
 has_children: true
 parent: Kotlin

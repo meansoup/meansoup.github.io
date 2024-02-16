@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 구글 아이디로 로그인 구현하기
+sidebar_label: 구글 아이디로 로그인 구현하기
 parent: OAuth
 grand_parent: APIs
 nav_order: 1

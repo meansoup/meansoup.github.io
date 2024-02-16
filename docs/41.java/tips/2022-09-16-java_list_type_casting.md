@@ -1,6 +1,7 @@
 ---
 layout: post
 title: list type casting 하기
+sidebar_label: list type casting 하기
 parent: Java Tips
 grand_parent: Java
 permalink: /docs/java/tip/list-type-casting
