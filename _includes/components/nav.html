@@ -35,7 +35,7 @@ It might be more efficient to sort the pages at each level separately.
             <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
         </button>
         {%- endif -%}
-        <a href="{{ node.url | relative_url }}" class="nav-list-link">{{ node.title }}</a>
+        <a href="{{ node.url | relative_url }}" class="nav-list-link">{{ node.sidebar_label }}</a>
         {%- if node.has_children -%}
         {%- assign children_list = second_level_pages
         | where: "parent", node.title -%}
@@ -50,7 +50,7 @@ It might be more efficient to sort the pages at each level separately.
                     <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
                 </button>
                 {%- endif -%}
-                <a href="{{ child.url | relative_url }}" class="nav-list-link">{{ child.title }}</a>
+                <a href="{{ child.url | relative_url }}" class="nav-list-link">{{ child.sidebar_label }}</a>
                 {%- if child.has_children -%}
                 {%- assign grand_children_list = third_level_pages
                 | where: "parent", child.title
@@ -61,7 +61,7 @@ It might be more efficient to sort the pages at each level separately.
                 <ul class="nav-list">
                     {%- for grand_child in grand_children_list -%}
                     <li class="nav-list-item">
-                        <a href="{{ grand_child.url | relative_url }}" class="nav-list-link">{{ grand_child.title }}</a>
+                        <a href="{{ grand_child.url | relative_url }}" class="nav-list-link">{{ grand_child.sidebar_label }}</a>
                     </li>
                     {%- endfor -%}
                 </ul>
