@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[GC type] 2. Parallel GC"
+title: "Parallel GC는 무엇이고 언제 쓰기 좋은걸까?"
 sidebar_label: "[GC type] 2. Parallel GC"
 nav_order: 3
 parent: Garbage Collection
@@ -8,7 +8,7 @@ grand_parent: Java
 permalink: /docs/java/gc/parallel_gc
 math: mathjax3
 sitemap:
-  lastmod: 2022-04-28
+  lastmod: 2024-02-16
 ---
 
 앞서 본 [Serial Garbage Collection](/docs/41.java/gc/2022-04-16-serial_gc.md)은 단점이 명확하다.  
