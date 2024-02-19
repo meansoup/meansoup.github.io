@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "DynamoSizeLimitException 이슈 정리"
-sidebar_label: "DynamoSizeLimitException 이슈 정리"
+sidebar_label: "DynamoSizeLimitException"
 parent: DynamoDB
 nav_order: 1000
 grand_parent: aws

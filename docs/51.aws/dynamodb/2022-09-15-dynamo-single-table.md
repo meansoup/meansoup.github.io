@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "single table을 사용하는 이유"
-sidebar_label: "single table을 사용하는 이유"
+sidebar_label: "single table"
 parent: DynamoDB
 grand_parent: aws
 nav_order: 2
