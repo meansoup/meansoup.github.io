@@ -1,7 +1,7 @@
 ---
 layout: post
 title: DDD의 기둥 Ubiquitous Language
-sidebar_label: DDD의 기둥 Ubiquitous Language
+sidebar_label: Ubiquitous Language
 parent: 전략적 설계
 grand_parent: Domain Driven Design
 nav_order: 1
