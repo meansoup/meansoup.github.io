@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "easyRandom - Java에서 테스트 객체 만들기"
-sidebar_label: "easyRandom - Java에서 테스트 객체 만들기"
+sidebar_label: EasyRandom
 parent: Java 라이브러리
 grand_parent: Java
 permalink: /docs/java/library/easyrandom
@@ -182,8 +182,5 @@ public class ItemDTOMother {
 
 ## reference
 
-Quick Guide to EasyRandom
-- [https://www.baeldung.com/java-easy-random](https://www.baeldung.com/java-easy-random)
-
-EasyRandom github
-- [https://github.com/j-easy/easy-random](https://github.com/j-easy/easy-random)
+- Quick Guide to EasyRandom, [https://www.baeldung.com/java-easy-random](https://www.baeldung.com/java-easy-random)
+- EasyRandom github, [https://github.com/j-easy/easy-random](https://github.com/j-easy/easy-random)
