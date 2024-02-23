@@ -1,7 +1,7 @@
 ---
 layout: post
-title: link local ip address
-sidebar_label: link local ip address 개념 명확하게 이해하기
+title: "link local ip address 개념 명확하게 이해하기"
+sidebar_label: Link-local Address
 parent: internet
 nav_order: 10
 permalink: /docs/internet/link-local
