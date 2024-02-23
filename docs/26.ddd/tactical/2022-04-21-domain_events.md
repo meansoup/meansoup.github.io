@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Domain Events
+title: "DDD의 Domain Events란? DDD에서 transaction을 관리하는 방법"
 sidebar_label: Domain Events
 parent: 전술적 설계
 grand_parent: Domain Driven Design
 nav_order: 8
 permalink: /docs/ddd/tactical/domain_events
 sitemap:
-  lastmod: 2022-04-21
+  lastmod: 2024-02-23
 ---
 
 *일단 **domain events**를 사용하는 법을 알고나면 이에 중독되서 어떻게 **domain events** 없이 살아왔는지 의아해질 것이다. - Vaughn Vernon*
@@ -41,6 +41,9 @@ domain event는 aggregate에 의해 생성된다.
 
 domain의 변경에 대한 side effect를 명시적으로 구현할 수 있다.
 - 유비쿼터스 언어에 기반한 도메인 규칙을 도메인 이벤트로 명시적으로 표현할 수 있는 것.
+
+다른 aggregate에 대한 수정이 필요한 경우 이를 분리할 수 있다.
+- DDD에서는 하나의 transaction에서 하나의 aggregate만 수정해야 한다. 이 규칙을 지킬 수 있는 방법이면서 꼭 사용해야하는 케이스이다.
 
 
 ### domain event 맞나?

@@ -1,23 +1,22 @@
 ---
 layout: post
-title: Domain Service
+title: "DDD의 Domain Service란? Domain Service를 모른다면 DDD를 할 줄 모르는 것이다"
 sidebar_label: Domain Service
 parent: 전술적 설계
 grand_parent: Domain Driven Design
 nav_order: 7
 permalink: /docs/ddd/tactical/domain-service
 sitemap:
-  lastmod: 2022-05-18
+  lastmod: 2024-02-23
 ---
 
 개념만 보면 domain은 domain 로직이 있는 곳이다.  
 막상 개발/설계를 해보니 어디까지가 domain service이고 어디까지가 application service 인지의 분간하는게 쉽지가 않다.  
+어떤 팀원들은 domain service는 모르고 entity나 vo에 domain service의 로직이 들어가거나, domain 로직을 domain 밖에 구현하는 경우도 있다.  
 
 설계 할때는 이게 맞다 저게 맞다 토론을 하곤 하는데 항상 돌이켜보면 어딘가는 잘못 설계된 것 같다.  
-아직 DDD에 대한 이해가 많이 부족한 것 같다.
-
-최근에 *이거 되게 이상한데? 어디에 둬야하지?* 싶은 로직이 있었다.  
-그걸 명확하게 하기 위해 domain service를 다시 보았다.
+DDD의 도메인을 이해하는데 절대 빠질 수 없는 요소는 domain service이다.  
+domain service에 대해 명확하게 이해해야 domain 로직을 지키는 온전한 도메인 개발을 해낼 수 있다.
 
 
 ## 도메인 서비스 (domain service)

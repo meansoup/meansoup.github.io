@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Aggregate
+title: "DDD의 Aggregate란? Aggregate를 적절하게 만들기"
 sidebar_label: Aggregate
 parent: 전술적 설계
 grand_parent: Domain Driven Design
 nav_order: 10
 permalink: /docs/ddd/tactical/aggregate
 sitemap:
-  lastmod: 2023-02-04
+   lastmod: 2024-02-23
 ---
 
 *에그리게잇은 모든 DDD의 전술적인 지침 중에서도 무엇보다 정확히 규명되지 않은 패턴 중 하나다. - Vaughn Vernon*
@@ -257,7 +257,7 @@ public class BacklogItem extends ConcurrencySafeEntity {
 }
 ```
 
-이렇게 domain event를 발행해서 다른 트랜잭션에서 다른 aggregate을 수정하도록 한다.
+이렇게 <u>domain event를 발행해서 다른 트랜잭션에서 다른 aggregate을 수정</u>[^1]하도록 한다.
 
 #### 결과적 일관성 사용 여부 결정하기
 
@@ -305,3 +305,7 @@ two-phase commit transaction을 엄격하게 지켜야하는 경우도 고려가
 ### reference
 
 - Implement Domain Driven Design (chapter5 Entity), Vaughn Vernon
+
+---
+
+[^1]: domain event를 통해 side effect으로 발생한 aggregate의 transaction을 분리할 수 있다. [domain event](/docs/ddd/tactical/domain_events) 참고

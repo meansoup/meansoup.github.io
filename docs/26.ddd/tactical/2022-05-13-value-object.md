@@ -1,13 +1,13 @@
 ---
 layout: post
-title: VO
+title: "DDD의 VO란? 쉽지만 어려운 VO 완벽하게 이해하기"
 sidebar_label: VO
 parent: 전술적 설계
 grand_parent: Domain Driven Design
 nav_order: 5
 permalink: /docs/ddd/tactical/vo
 sitemap:
-  lastmod: 2022-05-13
+  lastmod: 2024-02-23
 ---
 
 DDD를 꽤나 공부했다고 생각했는데도 개발/설계를 해보면 DDD는 정말 어렵다.  
