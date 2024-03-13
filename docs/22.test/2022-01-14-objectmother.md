@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Object Mother"
+title: "Object Mother, 테스트에 가장 중요한 패턴"
 sidebar_label: "Object Mother"
 parent: Test
 permalink: /docs/pattern/object-mother
 sitemap:
-  lastmod: 2022-01-14
+  lastmod: 2024-03-13
 ---
 
 이번엔 **ObjectMother**라는 패턴에 대해서 정리한다.  
