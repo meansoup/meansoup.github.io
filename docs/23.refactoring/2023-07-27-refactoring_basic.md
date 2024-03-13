@@ -1,12 +1,12 @@
 ---
 layout: post
-title: 리팩토링 개론
-sidebar_label: 리팩토링 개론
+title: "리팩토링 why? when? what?"
+sidebar_label: "리팩토링 why?"
 parent: Refactoring
 nav_order: 2
 permalink: /docs/refactoring/basic
 sitemap:
-  lastmod: 2023-07-27
+  lastmod: 2024-03-14
 ---
 
 ## 리팩토링 하는 이유

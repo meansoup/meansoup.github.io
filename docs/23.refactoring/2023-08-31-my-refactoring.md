@@ -1,12 +1,12 @@
 ---
 layout: post
-title: 현업에서 내가 생각하는 리팩토링
-sidebar_label: 현업에서 내가 생각하는 리팩토링
+title: 현업에서 진행하는 대규모 리팩토링 프로세스
+sidebar_label: 나의 리팩토링
 parent: Refactoring
 nav_order: 100
 permalink: /docs/refactoring/my-refactoring
 sitemap:
-  lastmod: 2023-08-31
+  lastmod: 2024-03-14
 ---
 
 ## 리팩토링의 분류
