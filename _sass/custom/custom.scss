@@ -16,3 +16,18 @@ h1, h2, h3 {
 h4, h5, h6 {
     margin-top: 2.0em !important;
 }
+
+.youtube_video_wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+}
+
+.youtube_video_wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
