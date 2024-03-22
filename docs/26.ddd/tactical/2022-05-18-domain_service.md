@@ -10,6 +10,16 @@ sitemap:
   lastmod: 2024-02-23
 ---
 
+{: .note-title }
+> DDD tactical components    
+> 
+> [VO](/docs/ddd/tactical/vo){: .btn }
+> [Entity](/docs/ddd/tactical/entity){: .btn }
+> [Domain Service](/docs/ddd/tactical/domain-service){: .btn .btn-purple }
+> [Domain Events](/docs/ddd/tactical/domain_events){: .btn }
+> [Aggregate](/docs/ddd/tactical/aggregate){: .btn } 
+
+
 개념만 보면 domain은 domain 로직이 있는 곳이다.  
 막상 개발/설계를 해보니 어디까지가 domain service이고 어디까지가 application service 인지의 분간하는게 쉽지가 않다.  
 어떤 팀원들은 domain service는 모르고 entity나 vo에 domain service의 로직이 들어가거나, domain 로직을 domain 밖에 구현하는 경우도 있다.  

@@ -10,6 +10,16 @@ sitemap:
    lastmod: 2024-02-23
 ---
 
+{: .note-title }
+> DDD tactical components
+>
+> [VO](/docs/ddd/tactical/vo){: .btn }
+> [Entity](/docs/ddd/tactical/entity){: .btn }
+> [Domain Service](/docs/ddd/tactical/domain-service){: .btn }
+> [Domain Events](/docs/ddd/tactical/domain_events){: .btn }
+> [Aggregate](/docs/ddd/tactical/aggregate){: .btn .btn-purple }
+
+
 *에그리게잇은 모든 DDD의 전술적인 지침 중에서도 무엇보다 정확히 규명되지 않은 패턴 중 하나다. - Vaughn Vernon*
 
 ## aggregate?

@@ -10,6 +10,16 @@ sitemap:
   lastmod: 2024-02-23
 ---
 
+{: .note-title }
+> DDD tactical components
+>
+> [VO](/docs/ddd/tactical/vo){: .btn .btn-purple }
+> [Entity](/docs/ddd/tactical/entity){: .btn }
+> [Domain Service](/docs/ddd/tactical/domain-service){: .btn }
+> [Domain Events](/docs/ddd/tactical/domain_events){: .btn }
+> [Aggregate](/docs/ddd/tactical/aggregate){: .btn }
+
+
 DDD를 꽤나 공부했다고 생각했는데도 개발/설계를 해보면 DDD는 정말 어렵다.  
 개발 사이트나 블로그, 책을 훑어보듯 보면 VO는 참 쉽다.  
 value를 저장하고 바뀌면 안되는 녀석.

@@ -10,6 +10,17 @@ sitemap:
   lastmod: 2024-02-23
 ---
 
+{: .note-title }
+> DDD tactical components
+>
+> [VO](/docs/ddd/tactical/vo){: .btn }
+> [Entity](/docs/ddd/tactical/entity){: .btn }
+> [Domain Service](/docs/ddd/tactical/domain-service){: .btn }
+> [Domain Events](/docs/ddd/tactical/domain_events){: .btn .btn-purple }
+> [Aggregate](/docs/ddd/tactical/aggregate){: .btn }
+
+
+
 *일단 **domain events**를 사용하는 법을 알고나면 이에 중독되서 어떻게 **domain events** 없이 살아왔는지 의아해질 것이다. - Vaughn Vernon*
 
 
