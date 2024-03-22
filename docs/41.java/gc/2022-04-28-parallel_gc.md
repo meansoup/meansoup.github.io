@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Parallel GC는 무엇이고 언제 쓰기 좋은걸까?"
-sidebar_label: "[GC type] 2. Parallel GC"
+sidebar_label: "2. Parallel GC"
 nav_order: 3
 parent: Garbage Collection
 grand_parent: Java
@@ -10,6 +10,14 @@ math: mathjax3
 sitemap:
   lastmod: 2024-02-16
 ---
+
+{: .note-title }
+> Java GC Type
+>
+> [Serial GC](/docs/java/gc/serial_gc){: .btn }
+> [Parallel GC](/docs/java/gc/parallel_gc){: .btn .btn-purple }
+> [CMS GC](/docs/java/gc/cms_gc){: .btn }
+> [G1 GC](/docs/java/gc/g1_gc){: .btn }
 
 앞서 본 [Serial Garbage Collection](/docs/41.java/gc/2022-04-16-serial_gc.md)은 단점이 명확하다.  
 Serial은 thraed의 낭비가 크다.  
