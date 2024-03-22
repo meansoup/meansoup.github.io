@@ -35,6 +35,17 @@ plugins:
   - jekyll-redirect-from
   - jemoji
 
+callouts:
+  warning:
+    title: Warning
+    color: red
+  highlight:
+    title: highlight
+    color: yellow
+  note:
+    title: note
+    color: purple
+
 # Analytics
 analytics:
   provider: "google-gtag" 
