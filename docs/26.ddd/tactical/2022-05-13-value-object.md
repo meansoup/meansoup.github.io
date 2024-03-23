@@ -10,7 +10,7 @@ sitemap:
   lastmod: 2024-02-23
 ---
 
-{: .note-title }
+{: .note-title .mb-6 }
 > DDD tactical components
 >
 > [VO](/docs/ddd/tactical/vo){: .btn .btn-purple }
