@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "java와 비교한 kotlin 장단점"
-sidebar_label: "java와 비교한 kotlin 장단점"
+sidebar_label: "Java vs Kotlin"
 nav_order: 1
 parent: Kotlin
 permalink: /docs/kotlin/kotlin-vs-java
@@ -14,7 +14,7 @@ kotlin은 java의 많은 것들을 녹여내면서, 최대한 편리하고 간�
 
 ---
 
-장점
+## :heavy_check_mark: 장점
 1. [java와의 호환](#java와의-호환)
 2. [안전한 코드](#안전한-코드)
 3. [간결하고 명확한 코드](#간결하고-명확한-코드)
@@ -209,7 +209,8 @@ fun String?.isNullOrBlank(): Boolean = this == null || this.isBlank()
 
 ---
 
-단점
+## :x: 단점
+
 1. [빌드 시간 & 크기](#빌드-시간--크기)
 2. [자바가 아니다](#자바가-아니다)
 3. [학습 리소스의 제한](#학습-리소스의-제한)
