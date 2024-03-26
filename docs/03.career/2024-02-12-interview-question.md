@@ -1,12 +1,12 @@
 ---
 layout: post
-title: 8년차 개발자의 면접 질문하기
-sidebar_label: 8년차 개발자의 면접 질문하기
+title: 8년차 개발자의 개발 면접 질문 정리
+sidebar_label: 면접 질문하기
 parent: career
 nav_order: 1
 permalink: /docs/career/interview-question
 sitemap:
-  lastmod: 2024-02-12
+  lastmod: 2024-03-26
 ---
 
 어떤 면접이든 면접을 보게 되면 질문을 받은 후엔 질문을 할 시간을 갖게 된다.  
