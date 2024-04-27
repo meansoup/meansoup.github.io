@@ -34,6 +34,12 @@ theme: "just-the-docs"
 plugins:
   - jekyll-redirect-from
   - jemoji
+  - jekyll-polyglot
+
+languages: ["en", "ko"]
+default_lang: "ko"
+exclude_from_localization: ["javascript", "images", "css"]
+parallel_localizaion: false
 
 callouts:
   warning:
