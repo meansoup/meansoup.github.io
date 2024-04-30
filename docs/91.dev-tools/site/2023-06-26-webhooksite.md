@@ -4,7 +4,7 @@ title: client call 확인을 위한 webhook site
 sidebar_label: client call 확인을 위한 webhook site
 parent: 사이트
 permalink: /docs/dev-tools/site/webhook-site
-grand_parent: 개발도구
+grand_parent: Tools
 sitemap:
   lastmod: 2023-06-26
 ---

@@ -4,7 +4,7 @@ title: 슬랙
 sidebar_label: 슬랙
 nav_order: 12
 has_children: true
-parent: 개발도구
+parent: Tools
 permalink: /docs/dev-tools/slack
 ---
 

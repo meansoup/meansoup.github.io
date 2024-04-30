@@ -1,7 +1,7 @@
 ---
 layout: default
-title: 개발도구
-sidebar_label: 개발도구
+title: Tools
+sidebar_label: Tools
 nav_order: 91
 has_children: true
 permalink: /docs/dev-tools/

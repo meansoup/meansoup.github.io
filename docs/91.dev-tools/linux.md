@@ -4,7 +4,7 @@ title: linux
 sidebar_label: linux
 nav_order: 2
 has_children: true
-parent: 개발도구
+parent: Tools
 permalink: /docs/dev-tools/linux
 ---
 

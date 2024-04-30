@@ -3,7 +3,7 @@
 #title: intellij toggle case shortcut (upper -> lower, lower -> upper)
 #sidebar_label: intellij toggle case shortcut
 #parent: Intellij
-#grand_parent: 개발도구
+#grand_parent: Tools
 #lang: en
 #permalink: /docs/dev-tools/intellij/upper-case
 #sitemap:

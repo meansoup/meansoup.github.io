@@ -3,7 +3,7 @@ layout: post
 title: "too many open file 이슈 확인하고 해결하기"
 sidebar_label: "too many open file"
 parent: linux
-grand_parent: 개발도구
+grand_parent: Tools
 permalink: /docs/dev-tools/linux/too_many_open_file
 sitemap:
   lastmod: 2024-02-25

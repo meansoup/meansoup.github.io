@@ -4,7 +4,7 @@ title: linux commands
 sidebar_label: linux commands
 nav_order: 1
 has_children: true
-parent: 개발도구
+parent: Tools
 permalink: /docs/dev-tools/linux-commands
 ---
 

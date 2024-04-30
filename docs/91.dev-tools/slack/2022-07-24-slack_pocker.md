@@ -3,7 +3,7 @@ layout: post
 title: slack에서 스마트하게 추정하기
 sidebar_label: slack에서 스마트하게 추정하기
 parent: 슬랙
-grand_parent: 개발도구
+grand_parent: Tools
 permalink: /docs/dev-tools/slack/pocker-planner
 sitemap:
   lastmod: 2022-07-24

@@ -3,7 +3,7 @@ layout: post
 title: intellij 의미 없는 시간 줄이기 test file 편
 sidebar_label: intellij 의미 없는 시간 줄이기 test file 편
 parent: Intellij
-grand_parent: 개발도구
+grand_parent: Tools
 permalink: /docs/dev-tools/intellij/test-file-template
 sitemap:
   lastmod: 2022-06-12

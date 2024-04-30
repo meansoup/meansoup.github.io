@@ -4,7 +4,7 @@ title: Curl to Code (Python/Java ..)
 sidebar_label: Curl to Code (Python/Java ..)
 parent: 사이트
 permalink: /docs/dev-tools/site/curl-to-code
-grand_parent: 개발도구
+grand_parent: Tools
 sitemap:
   lastmod: 2022-02-06
 ---
