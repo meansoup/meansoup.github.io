@@ -2,7 +2,7 @@
 layout: post
 title: intellij 의미 없는 시간 줄이기 live template 편
 sidebar_label: intellij 의미 없는 시간 줄이기 live template 편
-parent: intellij 설정하기
+parent: Intellij
 grand_parent: 개발도구
 permalink: /docs/dev-tools/intellij/live-template
 sitemap:

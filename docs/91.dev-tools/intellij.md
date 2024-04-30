@@ -1,7 +1,7 @@
 ---
 layout: default
-title: intellij 설정하기
-sidebar_label: intellij 설정하기
+title: Intellij
+sidebar_label: Intellij
 nav_order: 11
 has_children: true
 parent: 개발도구
