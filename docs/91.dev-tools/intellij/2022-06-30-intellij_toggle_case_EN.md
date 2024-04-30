@@ -1,13 +1,13 @@
 ---
-layout: post
-title: intellij toggle case shortcut (upper -> lower, lower -> upper)
-sidebar_label: intellij toggle case shortcut
-parent: intellij 설정하기
-grand_parent: 개발도구
-lang: en
-permalink: /docs/dev-tools/intellij/upper-case
-sitemap:
-  lastmod: 2022-06-30
+#layout: post
+#title: intellij toggle case shortcut (upper -> lower, lower -> upper)
+#sidebar_label: intellij toggle case shortcut
+#parent: intellij 설정하기
+#grand_parent: 개발도구
+#lang: en
+#permalink: /docs/dev-tools/intellij/upper-case
+#sitemap:
+#  lastmod: 2022-06-30
 ---
 
 There is a shortcut in IntelliJ that changes uppercase to lowercase and vice versa.  
