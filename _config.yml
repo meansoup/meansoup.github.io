@@ -23,7 +23,7 @@ email: alsrnr1210@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   backend tech, log
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://backendbrew.com/"
+url: "https://backendbrew.com"
 twitter_username: 
 github_username: meansoup
 favicon_ico: "/images/favicon.ico"
