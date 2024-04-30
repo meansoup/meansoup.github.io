@@ -1,7 +1,7 @@
 ruby -v
-> ruby 3.1.4p223 (2023-03-30 revision 957bb7cb81) [x64-mingw-ucrt]
+> ruby 2.7.8p225 (2023-03-30 revision 1f4d455848) [x64-mingw32]
 
 
 ---
 
-로컬 빌드는 WSL에서 빌드해서 성공한다. 
+bundle exec jekyll serve 
