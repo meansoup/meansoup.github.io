@@ -37,7 +37,7 @@ plugins:
   - jekyll-polyglot
 
 languages: ["en", "ko"]
-#default_lang: "ko"
+default_lang: "en"
 exclude_from_localization: ["javascript", "images", "css"]
 parallel_localization: false
 
