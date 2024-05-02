@@ -7,7 +7,7 @@ grand_parent: Tools
 lang: ko
 permalink: /docs/dev-tools/intellij/upper-case
 sitemap:
-  lastmod: 2022-06-30
+  lastmod: 2024-05-02
 ---
 
 uppercase to lowercase.  
