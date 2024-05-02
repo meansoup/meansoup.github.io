@@ -6,7 +6,7 @@ layout: null
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   {% for page in site.pages %}
-    {% unless page.sitemap == false %}
+    {% if page.sitemap.lastmod %}
     <url>
       <loc>{{ site.url }}{{ page.url | remove: "index.html" }}</loc>
       {% if page.sitemap.lastmod %}
@@ -27,6 +27,6 @@ layout: null
         <priority>0.5</priority>
       {% endif %}
     </url>
-    {% endunless %}
+    {% endif %}
   {% endfor %}
 </urlset>
