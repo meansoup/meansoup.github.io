@@ -31,7 +31,6 @@ Disallow: /docs/language/$
 Disallow: /docs/language/cpp/$
 Disallow: /docs/language/python/$
 Disallow: /docs/aws/$
-Disallow: /docs/aws/dynamo/$
 Disallow: /docs/aws/s3/$
 Disallow: /docs/oci/$
 Disallow: /docs/dev-tools/$

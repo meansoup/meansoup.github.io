@@ -6,6 +6,8 @@ nav_order: 1
 parent: aws
 has_children: true
 permalink: /docs/aws/dynamo
+sitemap:
+  lastmod: 2024-05-03
 ---
 
 **DynamoDB**는 완전 관리형 NoSQL DB 서비스으로 NoSQL의 특징을 갖는다.  
