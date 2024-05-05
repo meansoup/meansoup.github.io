@@ -1,0 +1,8 @@
+@startuml
+
+User-> Bot: request
+Bot-> "User Server": userInfo := getUserInfo()
+Bot-> "Region Jumphost": result := getWhatIWant()
+"Region Jumphost"-> "Target Server": result := getWhatIWant()
+
+@enduml

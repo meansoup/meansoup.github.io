@@ -1,0 +1,43 @@
+<p><strong>Kivy - interactive applications and games in python second edition</strong> 을 통한 kivy framework 스터디 내용 정리.</p>
+
+<h3 id="kivy">kivy</h3>
+<p>Android, iOS, Linux, windows, Mac OS 전부 동작하는 multi-platform을 지원하는 python UI이다.<br />
+핵심 부분을 Cython으로 구현하고 대부분의 그래픽 동작을 directly GPU와 연결하여 속도가 빠르다. (확실히 이전에 사용해본 cordova 보다 빠르긴 하다)</p>
+
+<h3 id="기본-개념">기본 개념</h3>
+<p>안드로이드의 xml과 java처럼, kv와 py를 사용하고 있는데, FooApp class 는 자동으로 foo.kv와 연결된다. (FooApp class를 갖는 파일 명은 상관 없음)<br />
+<strong>widget</strong>: kivy GUI component. the minimal graphical units.<br />
+<strong>property</strong>: widget의 속성 중 하나이다.<br />
+<strong>self</strong>: 역시 속성 중 하나로 자기 자신을 가리킨다.<br />
+<strong>root</strong>: 계층 최상위를 말한다.<br />
+<strong>id</strong>: .kv에서 다른 위젯에서 접근할 수 있도록 하는 값<br />
+<strong>property</strong>:<br />
+  x, right, center_x<br />
+  y, top, center_y<br />
+  width, height를 각 self, root에 대해 쓸 수 있음<br />
+  size_hint - 0~1 의 비율 크기<br />
+  size_hint_x, size_hint_y<br />
+  pos_hint - 0~1 의 비율 위치</p>
+
+<h3 id="layout">layout</h3>
+<p>안드로이드의 layout과 유사한 모습이다.</p>
+<ol>
+  <li>FloatLayout<br />
+ size_hint, pos_hint로 창에 대한 비율로 구성한다.</li>
+  <li>RelativeLayout<br />
+ FloatLayout과 동일한데, layout에 대한 비율로 구성한다.</li>
+  <li>GridLayout<br />
+ 행과 열로 layout을 구성한다.</li>
+  <li>BoxLayout<br />
+ 세로나 가로로 쌓는 구성이다.<br />
+ BoxLayout은 child들이 채우는 형식으로 되어있어, ScrollView에 적합하지 않다.<br />
+ 즉, BoxLayout은 child들이 동일한 비율로 layout을 나눠서 채움. 따라서 height 등의 값이 먹히지 않았다.</li>
+  <li>StackLayout<br />
+ BoxLayout과 동일한데, 계속 정해진 방향으로 쌓는 구성이다.</li>
+  <li>ScatterLayout<br />
+ RelativeLayout과 유사한데, rotating, scaling, translating과 같은 멀티터치를 사용한다.</li>
+  <li>PageLayout<br />
+ 멀티페이지 이펙트를 주고, 흔히 다른 layout들을 내부에 widget으로 사용한다.<br />
+ <strong>swipe_threshold</strong> - 어느 비율만큼 당겨야 페이지가 넘어가는지에 대한 설정</li>
+</ol>
+

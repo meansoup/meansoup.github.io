@@ -1,0 +1,17 @@
+@startuml
+
+package org.springframework.data.repository {
+    interface Repository
+    interface CrudRepository
+    interface PagingAndSortingRepository
+}
+
+package org.springframework.data.jpa.repository {
+    interface JpaRepository
+}
+
+CrudRepository -up-|> Repository
+PagingAndSortingRepository -up-|> CrudRepository
+JpaRepository -up-|> PagingAndSortingRepository
+
+@enduml

@@ -1,0 +1,21 @@
+@startuml
+left to right direction
+
+usecase "Recursive Resolver" as recursive
+usecase "Authoritative nameserver" as auth
+usecase "TLD nameserver" as tld
+usecase "Root nameserver" as root
+
+(Client) --> recursive: 1. 유저가 domain name(example.com)을 치면 query가 recursive resolver에 전달된다
+recursive --> root: 2. resolver는 query를 root로 보낸다
+recursive <- root: 3. root는 TLD DNS server 주소(.com, net 같은)를 반환한다
+recursive --> tld: 4. root로부터 받은 TLD에 query를 보내고
+recursive <- tld: 5. TLD는 domain nameserver의 주소를 반환한다
+recursive --> auth: 6. domain nameserver에 query를 보내면
+recursive <- auth: 7. 'example.com'에 대한 ip 주소를 반환한다
+
+(Client) <-- recursive: 8. recursive는 web browser에 응답으로 ip를 준다
+
+(Target Server) <-right-> (Client): 9. http request를 만들고 통신한다
+
+@enduml
