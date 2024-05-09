@@ -5,7 +5,7 @@
     <description>backend tech, log</description>
     <link>https://backendbrew.com/</link>
     <atom:link href="https://backendbrew.com/ko/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2024-05-09T16:31:32+00:00</updated>
+    <updated>2024-05-09T16:34:57+00:00</updated>
     <id>https://backendbrew.com</id>
     <author>
       <name></name>
@@ -12628,7 +12628,7 @@ ubuntu에서는 계속 shortcut이 동작하지 않았다.&lt;/p&gt;
 region은 default 1MB인 memory 공간이고 heap이 커질수록 크기가 커진다. (세팅 가능)&lt;br /&gt;
 region을 이용해서 generation 별로 연속적인 메모리 공간을 갖지 않아도 되고 GC 수행마다 매번 전체 garbage를 collect 하지 않아도 된다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;g1Heap.PNG&quot; alt=&quot;g1 heap&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/post/java/gc/g1Heap.PNG&quot; alt=&quot;g1 heap&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;G1 에서는 1, 2, 4, 6, 8, 16, 32, 64MB 크기의 region을 사용할 수 있고, 기본적으로 heap에는 2048~4095 개의 region을 가질 수 있다.&lt;br /&gt;
 모든 region의 크기는 동일하고 JVM 실행 중에 크기가 변경되지 않는다.&lt;/p&gt;
@@ -12640,7 +12640,7 @@ region을 이용해서 generation 별로 연속적인 메모리 공간을 갖지
 
 &lt;h3 id=&quot;g1-알고리즘&quot;&gt;G1 알고리즘&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;g1Cycle.png&quot; alt=&quot;g1 cycle&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/post/java/gc/g1Cycle.png&quot; alt=&quot;g1 cycle&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;young-only&lt;/p&gt;
 &lt;ul&gt;
@@ -17615,7 +17615,7 @@ DDD의 개념은 실제 도메인 모델을 코드에 녹이는 것이기 때문
 메시지는 &lt;strong&gt;timestamp&lt;/strong&gt;, &lt;strong&gt;value&lt;/strong&gt; 그리고 선택적으로 &lt;strong&gt;key&lt;/strong&gt;를 갖는다.&lt;br /&gt;
 원한다면 &lt;strong&gt;custom header&lt;/strong&gt;를 사용할 수도 있다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;record.png&quot; alt=&quot;record&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/post/message-broker/kafka/record.png&quot; alt=&quot;record&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;key와 value는 각각의 serialize, deserialize를 위해 카프카 특유의 방식으로 상호작용할 수 있다.&lt;br /&gt;
 메시지가 있다면 브로커에게 메시지를 보내야 한다.&lt;/p&gt;
@@ -17655,7 +17655,7 @@ DDD의 개념은 실제 도메인 모델을 코드에 녹이는 것이기 때문
 
 &lt;h2 id=&quot;producer--consumer&quot;&gt;Producer &amp;amp; Consumer&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;producer_consumer.png&quot; alt=&quot;producer_consumer.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/post/message-broker/kafka/producer_consumer.png&quot; alt=&quot;producer_consumer.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Producer&lt;/strong&gt;는 메시지를 카프카 topic으로 보내는 도구이다.&lt;br /&gt;
 default producer는 없으나 API, Flume, Connect, Streams 등이 사용될 수 있다.&lt;/p&gt;
@@ -17669,7 +17669,7 @@ consumer는 topic을 구독하고 지속적으로 메시지를 polling 한다.&l
 즉 1개 이상의 partition이 단일 Topic을 구성한다.&lt;br /&gt;
 카프카의 실제 작업은 대부분 disk에 실제로 구현되는 partition이다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;topic_broker.png&quot; alt=&quot;topic &amp;amp; broker&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/post/message-broker/kafka/topic_broker.png&quot; alt=&quot;topic &amp;amp; broker&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;partition replica 중 하나는 leader가 된다.&lt;/p&gt;
 
@@ -17696,7 +17696,7 @@ ZooKeeper는 카프카 생태계를 복잡하게 만드는 원인 중 하나다.
 
 &lt;h2 id=&quot;page-cache&quot;&gt;Page Cache&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;page-cache.png&quot; alt=&quot;page-cache.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/post/message-broker/kafka/page-cache.png&quot; alt=&quot;page-cache.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;카프카는 수백만 개의 메시지를 빠르게 처리할 수 있는데, 이를 가능하게 만드는 핵심 중 하나는 &lt;u&gt;page cache&lt;/u&gt;&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;이다.&lt;br /&gt;
 broker가 JVM heap에 캐시되지 않도록 하여 &lt;u&gt;크기가 큰 heap으로 인해 발생하는 문제&lt;/u&gt;&lt;sup id=&quot;fnref:2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;를 방지한다.&lt;/p&gt;
@@ -17706,14 +17706,14 @@ broker가 JVM heap에 캐시되지 않도록 하여 &lt;u&gt;크기가 큰 heap�
 &lt;p&gt;Kafka에서 Commit Log는 Java의 logger의 로그나, DB의 WAL 처럼 숨겨진 세부정보가 아니다.&lt;br /&gt;
 오히려 kafka의 중심에 위치하며 사용자들은 offset을 사용해서 메시지가 로그의 어디에 위치하는지 찾을 수 있다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;commit-log.png&quot; alt=&quot;commit-log.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/post/message-broker/kafka/commit-log.png&quot; alt=&quot;commit-log.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Commit Log는 메시지가 항상 로그 마지막에 추가되는 추가 전용 로그이다.&lt;br /&gt;
 메시지를 읽을 때 그 메시지를 시스템에서 제거하거나 다른 consumer로부터 제외하지 않는다.&lt;/p&gt;
 
 &lt;h2 id=&quot;카프카-상위-수준-뷰&quot;&gt;카프카 상위 수준 뷰&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;kafka-overview.png&quot; alt=&quot;kafka-overview.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/post/message-broker/kafka/kafka-overview.png&quot; alt=&quot;kafka-overview.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;상위 수준에서 정리한 카프카 뷰.&lt;/p&gt;
 
@@ -17781,7 +17781,7 @@ broker가 JVM heap에 캐시되지 않도록 하여 &lt;u&gt;크기가 큰 heap�
 &lt;p&gt;producer는 할당된 파티션의 leader replica에만 쓸 수 있는데, topic과 &lt;strong&gt;bootstrap.servers&lt;/strong&gt; 밖에 모르기 때문에 알고있는 server에 연결한다.
 producer는 &lt;strong&gt;boootstrap.servers&lt;/strong&gt;를 시작점으로 사용해 모든 후속 쓰기에 사용하는 브로커와 파티션에 대한 메타데이터를 가져온다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;bootstrap-server.png&quot; alt=&quot;bootstrap-server.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/post/message-broker/kafka/bootstrap-server.png&quot; alt=&quot;bootstrap-server.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;각 브로커들은 클러스터 안의 다른 브로커들도 알고 있기 때문에 producer는 하나의 브로커를 통해 leader를 찾을 수 있다.&lt;/p&gt;
 
@@ -17792,20 +17792,20 @@ producer는 &lt;strong&gt;boootstrap.servers&lt;/strong&gt;를 시작점으로 �
 
 &lt;h3 id=&quot;acks-0&quot;&gt;acks 0&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;ack0.png&quot; alt=&quot;ack0.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/post/message-broker/kafka/ack0.png&quot; alt=&quot;ack0.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;acks가 0&lt;/strong&gt;인 경우 0개의 replica에 ack를 받기 때문에 &lt;strong&gt;가장 적은 대기 시간&lt;/strong&gt;을 얻을 수 있지만 &lt;strong&gt;안전한 배달을 보장하진 않는다&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;acks-all&quot;&gt;acks all&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;ackall.png&quot; alt=&quot;ackall.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/post/message-broker/kafka/ackall.png&quot; alt=&quot;ackall.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;acks가 all&lt;/strong&gt; 혹은 -1인 경우 leader replica가 모든 replica 들의 ack를 기다린다는 의미이다.&lt;br /&gt;
 따라서 &lt;strong&gt;가장 느린 대기 시간&lt;/strong&gt;을 갖게 되지만 &lt;strong&gt;안전한 배달을 보장&lt;/strong&gt;한다.&lt;/p&gt;
 
 &lt;h3 id=&quot;acks-1&quot;&gt;acks 1&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;ack1.png&quot; alt=&quot;ack1.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/post/message-broker/kafka/ack1.png&quot; alt=&quot;ack1.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;acks가 1&lt;/strong&gt;인 경우 1개의 replica에 ack를 받는다.&lt;br /&gt;
 즉 leader replica의 수신을 확인하기 때문에 &lt;strong&gt;비교적 적당한 안정성과 대기시간&lt;/strong&gt;을 가질 수 있다.&lt;/p&gt;
@@ -17882,7 +17882,7 @@ producer의 serializer와 맞는 consumer의 deserializer가 필요하다.&lt;br
 
 &lt;p&gt;메시지가 수진 확인될 때까지 재발송된다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;at-leat.png&quot; alt=&quot;at-leat&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/post/message-broker/kafka/at-leat.png&quot; alt=&quot;at-leat&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;같은 메시지를 한 번 이상 보내어 브로커에 틀림없이 기록되도록 한다.&lt;br /&gt;
 메시지가 브로커에 쓰였음을 보증받지 못한다면 프로듀서는 메시지를 다시 보낸다.&lt;br /&gt;
@@ -17892,7 +17892,7 @@ producer의 serializer와 맞는 consumer의 deserializer가 필요하다.&lt;br
 
 &lt;p&gt;메시지는 단 한 번 보내며 실패하더라도 재발송하지 않는다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;at-most.png&quot; alt=&quot;at-most&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/post/message-broker/kafka/at-most.png&quot; alt=&quot;at-most&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;메시지 전달이 실패하는 경우에도 프로듀서는 다음 메시지로 넘어가고 실패한 메시지를 다시 보내지 않는다.&lt;br /&gt;
 메시지를 잃어도 괜찮은 경우에 사용할 수 있다.&lt;br /&gt;
@@ -17905,7 +17905,7 @@ producer의 serializer와 맞는 consumer의 deserializer가 필요하다.&lt;br
   &lt;li&gt;한 번만 발송하는 것이 아니라 한 번만 보이는 것이다.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;exactly-once.png&quot; alt=&quot;exactly-once&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/post/message-broker/kafka/exactly-once.png&quot; alt=&quot;exactly-once&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;브로커가 하나의 메시지만을 허용하는 방식으로 프로듀서는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;at-least once semantics&lt;/code&gt; 처럼 수신확인을 하나 컨슈머에게 도달하는 메시지는 하나가 된다.&lt;/p&gt;
 
@@ -18012,12 +18012,12 @@ topic을 구독하는 방식을 통해 consumer는 자신의 메세지 소비 �
 &lt;p&gt;consumer가 브로커에게 보내는 로그의 인덱스 위치로 offset을 사용한다.&lt;br /&gt;
 offset을 통해 로그에서 필요한 메시지의 위치를 알 수 있다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;kafka_offset.png&quot; alt=&quot;kafka_offset.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/post/message-broker/kafka/kafka_offset.png&quot; alt=&quot;kafka_offset.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;auto.offset.reset&lt;/code&gt;을 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;earliest&lt;/code&gt;로 설정하면 처음부터 읽기 때문에 해당 토픽에 대한 모든 메시지를 볼 수 있다.&lt;br /&gt;
 기본값인 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;latest&lt;/code&gt;로 설정하면 consumer를 시작한 후 보낸 메시지들을 읽는다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;partition_leaders.png&quot; alt=&quot;partition_leaders.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/post/message-broker/kafka/partition_leaders.png&quot; alt=&quot;partition_leaders.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;topic에 작성된 메시지를 찾기 위해 우선 topic 내에서 파티션을 찾은 다음 인덱스 기반 offset을 찾는다.&lt;br /&gt;
 consumer는 일반적으로 leader replica에서 읽는다.&lt;br /&gt;
@@ -18037,7 +18037,7 @@ consumer가 어떤 파티션에 연결할지, 파티션의 리더는 어디에 �
 
 &lt;h3 id=&quot;파티션-수--consumer-수&quot;&gt;파티션 수 &amp;lt; consumer 수&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;kafka_extra_consumer.png&quot; alt=&quot;kafka_extra_consumer.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/post/message-broker/kafka/kafka_extra_consumer.png&quot; alt=&quot;kafka_extra_consumer.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;파티션보다 consumer가 많으면 일부 consumer는 작업을 수행하지 않는다.&lt;br /&gt;
 여유 consumer는 ready 상태이다.&lt;br /&gt;
@@ -18056,7 +18056,7 @@ consumer에 대해 파티션이 1:1 매핑이 아닌 경우 더 많은 파티션
 
 &lt;h3 id=&quot;파티션-수--consumer-수-1&quot;&gt;파티션 수 &amp;gt; consumer 수&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;kafka_extra_partition.png&quot; alt=&quot;kafka_extra_partition.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/post/message-broker/kafka/kafka_extra_partition.png&quot; alt=&quot;kafka_extra_partition.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;하나의 파티션을 두 개의 consumer가 읽을 수 없다.&lt;/strong&gt;&lt;br /&gt;
 consumer보다 파티션이 많은 경우 필요에 따라 하나의 consumer가 둘 이상의 파티션을 처리한다.&lt;/p&gt;
@@ -18069,7 +18069,7 @@ consumer보다 파티션이 많은 경우 필요에 따라 하나의 consumer가
 
 &lt;p&gt;그룹 코디네이터는 consumer와 협력해서 특정 consumer 그룹이 읽은 topic 내부의 기록을 유지한다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;coordinates.png&quot; alt=&quot;coordinates.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/post/message-broker/kafka/coordinates.png&quot; alt=&quot;coordinates.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;topic에서 다음 메시지를 읽을 위치를 결정하기 위해 offset을 커밋 좌표로 사용하고 있다.&lt;/p&gt;
 
@@ -18080,7 +18080,7 @@ consumer 그룹은 서로 consumer offset에 대한 동일한 코디네이션을
 &lt;p&gt;각 consumer들은 consumer group에 속한다.&lt;br /&gt;
 conumser group의 consumer들은 topic 파티션의 소유권을 공유하며 각 consumer가 해당 토픽의 다른 파티션을 분담하면서 메시지를 읽을 수 있다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;consume_separate_group.png&quot; alt=&quot;consume_separate_group.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/post/message-broker/kafka/consume_separate_group.png&quot; alt=&quot;consume_separate_group.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;위 그림은 동일한 파티션 집합이 3개의 다른 브로커에 존재하고, kinaction_teamoffka0과 kinaction_teamsetka1이라는 2개의 consumer 그룹이 파티션에서 consume하고 있는 상황이다.&lt;br /&gt;
 각 그룹의 consumer는 각 브로커의 파티션에서 고유한 데이터 복사본을 가져온다.&lt;br /&gt;
