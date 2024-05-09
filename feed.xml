@@ -5,7 +5,7 @@
     <description>backend tech, log</description>
     <link>https://backendbrew.com/</link>
     <atom:link href="https://backendbrew.com/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2024-05-09T16:40:42+00:00</updated>
+    <updated>2024-05-09T16:44:16+00:00</updated>
     <id>https://backendbrew.com</id>
     <author>
       <name></name>
@@ -11601,12 +11601,12 @@ CMS GC는 tenured가 default 75%가 차면 도는데 값을 지정할 수 있다
         <title>intellij 의미 없는 시간 줄이기 live template 편</title>
         
           <description>&lt;p&gt;intellij는 개발 시간을 단축할 수 있는 여러 기능들을 제공한다.&lt;br /&gt;
-그 중에 가장 많이 사용하는 것 중 하나가 &lt;strong&gt;live template&lt;/strong&gt;이다.&lt;/p&gt;
+그 중 내가 가장 많이 사용하는 것 중 하나가 &lt;strong&gt;live template&lt;/strong&gt;이다.&lt;/p&gt;
 
 &lt;p&gt;이게 뭔지는 중요하지 않다.&lt;br /&gt;
 써보면 안다.&lt;/p&gt;
 
-&lt;h3 id=&quot;설정-확인하기&quot;&gt;설정 확인하기&lt;/h3&gt;
+&lt;h3 id=&quot;live-template-확인하기&quot;&gt;live template 확인하기&lt;/h3&gt;
 
 &lt;ol&gt;
   &lt;li&gt;(ctrl + alt + s) 로 settings 진입&lt;/li&gt;
@@ -11615,21 +11615,19 @@ CMS GC는 tenured가 default 75%가 차면 도는데 값을 지정할 수 있다
 &lt;/ol&gt;
 
 &lt;p&gt;여기서 각 언어를 들어가면 intellij에서 기본적으로 제공하는 live template 들을 확인할 수 있다.&lt;br /&gt;
-몇 개를 써보면 금방 감이 온다.&lt;/p&gt;
+몇 개를 써보면 금방 감이 온다. 개발 시간을 단축시킬 수 있는 유용한 template 들이 많아서 template 리스트를 확인하는 것도 의미가 있다.&lt;/p&gt;
 
 &lt;div class=&quot;code-example&quot; style=&quot;font-size: 0.8em&quot;&gt;
   &lt;p class=&quot;label label-yellow&quot;&gt;예시&lt;/p&gt;
 
-  &lt;p&gt;예를 들면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sout&lt;/code&gt; 이라고 입력하고 enter 혹은 tab을 치면 (설정에 따라 다름)&lt;/p&gt;
+  &lt;p&gt;&lt;img src=&quot;/images/post/dev-tools/intellij/live-template/live-template-basic.gif&quot; alt=&quot;live template basic&quot; /&gt;&lt;/p&gt;
 
-  &lt;p&gt;kotlin에서는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;println()&lt;/code&gt;이,&lt;br /&gt;
-java에서는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;System.out.println();&lt;/code&gt;이 완성되는 것을 확인할 수 있다.&lt;/p&gt;
+  &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sout&lt;/code&gt;을 입력하고 enter 혹은 tab을 누르면 java에서는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;System.out.println();&lt;/code&gt;이 완성된다.&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;p&gt;이렇게 &lt;strong&gt;자주 쓰이는 template들을 약어로 등록하는 것을 live template이라고 한다&lt;/strong&gt;.&lt;br /&gt;
-기본적으로 제공하는 것 중 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;iter&lt;/code&gt; 등을 사용하기도 한다.&lt;/p&gt;
+&lt;p&gt;이렇게 &lt;strong&gt;자주 쓰이는 template들을 약어로 등록하는 것을 live template이라고 한다&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;h3 id=&quot;설정하기&quot;&gt;설정하기&lt;/h3&gt;
+&lt;h3 id=&quot;live-template-설정하기&quot;&gt;live template 설정하기&lt;/h3&gt;
 
 &lt;p&gt;나는 TDD 개발에서 자주 사용하는 given-when-then template을 사용한다.&lt;br /&gt;
 이게 단순한데 매번 테스트 생성이 번거로워 live template으로 등록하는데 이걸 예로 들어보자.&lt;/p&gt;
