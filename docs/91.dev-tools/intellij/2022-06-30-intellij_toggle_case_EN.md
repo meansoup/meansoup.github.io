@@ -20,7 +20,7 @@ I was trying to find and perform this shortcut on Ubuntu, but I couldn't solve t
 I usually use vertical editing very often.  
 It is very efficient for changing getters & setters, mapping between Entities and DTOs, and creating factories. If you add a shortcut for changing case to uppercase and lowercase, it's great.
 
-![usage](/images/post/dev-tools/intellij/toggle-case/usage.gif)
+![intellij toogle](intellij_toggle.gif)
 
 ### Toggle case Shortcut
 
