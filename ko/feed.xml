@@ -5,7 +5,7 @@
     <description>backend tech, log</description>
     <link>https://backendbrew.com/</link>
     <atom:link href="https://backendbrew.com/ko/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2024-05-09T16:25:31+00:00</updated>
+    <updated>2024-05-09T16:31:32+00:00</updated>
     <id>https://backendbrew.com</id>
     <author>
       <name></name>
@@ -12549,7 +12549,7 @@ https://github.com/mockito/mockito/issues/1481&lt;/p&gt;
 getter &amp;amp; setter의 변경, entity와 dto 간의 mapping과 factory 생성 등에서 세로 편집은 굉장한 효율을 낸다.&lt;br /&gt;
 여기에 대소문자 변경까지 단축키로 더해지면 굉장하다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;intellij_toggle.gif&quot; alt=&quot;intellij toogle&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/post/dev-tools/intellij/toggle-case/intellij_toggle.gif&quot; alt=&quot;intellij toogle&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;toggle-case-shortcut&quot;&gt;toggle case shortcut&lt;/h3&gt;
 

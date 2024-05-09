@@ -5,7 +5,7 @@
     <description>backend tech, log</description>
     <link>https://backendbrew.com/</link>
     <atom:link href="https://backendbrew.com/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2024-05-09T16:25:18+00:00</updated>
+    <updated>2024-05-09T16:31:19+00:00</updated>
     <id>https://backendbrew.com</id>
     <author>
       <name></name>
@@ -12546,7 +12546,7 @@ This seems like a small thing, but it maximizes efficiency when used with vertic
 &lt;p&gt;I usually use vertical editing very often.&lt;br /&gt;
 It is very efficient for changing getters &amp;amp; setters, mapping between Entities and DTOs, and creating factories. If you add a shortcut for changing case to uppercase and lowercase, it’s great.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;intellij_toggle.gif&quot; alt=&quot;intellij toogle&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/post/dev-tools/intellij/toggle-case/intellij_toggle.gif&quot; alt=&quot;intellij toogle&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;toggle-case-shortcut&quot;&gt;Toggle case Shortcut&lt;/h3&gt;
 
