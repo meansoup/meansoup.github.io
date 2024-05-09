@@ -5,7 +5,7 @@
     <description>backend tech, log</description>
     <link>https://backendbrew.com/</link>
     <atom:link href="https://backendbrew.com/ko/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2024-05-09T16:34:57+00:00</updated>
+    <updated>2024-05-09T16:40:54+00:00</updated>
     <id>https://backendbrew.com</id>
     <author>
       <name></name>
@@ -14964,7 +14964,7 @@ legacy 프로젝트를 hexagonal과 ddd에 맞춰 리팩토링을 진행하면�
 
 &lt;p&gt;만약 배송 트랜잭션에서 문제가 발생하면, 결제와 주문 트랜잭션을 롤백한다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;saga.JPG&quot; alt=&quot;saga pattern&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/post/architecture/saga.jpg&quot; alt=&quot;saga pattern&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;장점&quot;&gt;장점&lt;/h2&gt;
 
@@ -15298,7 +15298,7 @@ http 0.9는 내용이 너무 간단해서 1.0에서 함께 개념을 정리해�
   &lt;li&gt;port는 생략하면 기본 80&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;http0.9.png&quot; alt=&quot;http 0.9&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/post/internet/http0.9.png&quot; alt=&quot;http 0.9&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;검색을 위해 주소 끝에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;?&lt;/code&gt;를 사용하는 것도 0.9에서 사용되었다.&lt;/li&gt;
@@ -15324,7 +15324,7 @@ http 0.9는 내용이 너무 간단해서 1.0에서 함께 개념을 정리해�
   &lt;li&gt;header가 추가됐다. (Host, USer-Agent)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;http1.0.png&quot; alt=&quot;http 1.0&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/post/internet/http1.0.png&quot; alt=&quot;http 1.0&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;http-10의-구성요소&quot;&gt;http 1.0의 구성요소&lt;/h2&gt;
 
@@ -15861,7 +15861,7 @@ young generation GC event 데이터를 통해 할당된 데이터 양, 단위 �
   &lt;li&gt;상속 구조 정리&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;img src=&quot;tease_apart_inheritance.png&quot; alt=&quot;tease apart inheritance&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/post/refactoring/tease_apart_inheritance.png&quot; alt=&quot;tease apart inheritance&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;하나의 상속 계층이 두 작업을 동시에 수행할 땐 상속 계층을 하나 더 만들어서 위임을 통해 다른 계층을 호출하자&lt;/p&gt;
 
@@ -15869,7 +15869,7 @@ young generation GC event 데이터를 통해 할당된 데이터 양, 단위 �
   &lt;li&gt;절차 코드를 객체로 전환&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;img src=&quot;convert_procedural_design_to_objects.png&quot; alt=&quot;convert procedural design to objects&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/post/refactoring/convert_procedural_design_to_objects.png&quot; alt=&quot;convert procedural design to objects&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;코드가 절차식으로 작성되어 있을 땐 데이터 레코드를 객체로 바꾸고 기능을 쪼개서 각각의 객체로 옮기자&lt;/p&gt;
 
@@ -16983,19 +16983,19 @@ gRPC를 지원한다.&lt;br /&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td&gt;service mesh&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;topology1.svg&quot; alt=&quot;topology1&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/post/apis/envoy/topology1.svg&quot; alt=&quot;topology1&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;internal load balancer&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;topology2.svg&quot; alt=&quot;topology2&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/post/apis/envoy/topology2.svg&quot; alt=&quot;topology2&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;ingress/egress proxy on the network edge&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;topology3.svg&quot; alt=&quot;topology3&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/post/apis/envoy/topology3.svg&quot; alt=&quot;topology3&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;multi-tier topologies&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;topology4.svg&quot; alt=&quot;topology4&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/images/post/apis/envoy/topology4.svg&quot; alt=&quot;topology4&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -17004,7 +17004,7 @@ gRPC를 지원한다.&lt;br /&gt;
 
 &lt;h2 id=&quot;envoy-architecture&quot;&gt;envoy architecture&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;envoy_architecture.svg&quot; alt=&quot;architecture&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/post/apis/envoy/envoy_architecture.svg&quot; alt=&quot;architecture&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;envoy는 listner와 cluster라는 2개의 main part로 이루어져 있다.&lt;/p&gt;
 &lt;ul&gt;

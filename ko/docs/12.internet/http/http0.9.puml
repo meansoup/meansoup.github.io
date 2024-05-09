@@ -1,8 +1,0 @@
-@startuml
-
-curl -> 서버
-note left: /greeting
-curl<-- 서버
-note right: <html>...</html>
-
-@enduml
