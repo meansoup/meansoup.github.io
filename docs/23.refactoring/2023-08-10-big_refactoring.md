@@ -36,13 +36,13 @@ sitemap:
 
 1. 상속 구조 정리 
 
-![tease apart inheritance](tease_apart_inheritance.png)
+![tease apart inheritance](/images/post/refactoring/tease_apart_inheritance.png)
 
 하나의 상속 계층이 두 작업을 동시에 수행할 땐 상속 계층을 하나 더 만들어서 위임을 통해 다른 계층을 호출하자  
 
 2. 절차 코드를 객체로 전환
 
-![convert procedural design to objects](convert_procedural_design_to_objects.png)
+![convert procedural design to objects](/images/post/refactoring/convert_procedural_design_to_objects.png)
 
 코드가 절차식으로 작성되어 있을 땐 데이터 레코드를 객체로 바꾸고 기능을 쪼개서 각각의 객체로 옮기자
 
