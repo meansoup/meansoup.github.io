@@ -16,7 +16,7 @@ sitemap:
 메시지는 **timestamp**, **value** 그리고 선택적으로 **key**를 갖는다.  
 원한다면 **custom header**를 사용할 수도 있다.
 
-![record](record.png)
+![record](/images/post/message-broker/kafka/record.png)
 
 key와 value는 각각의 serialize, deserialize를 위해 카프카 특유의 방식으로 상호작용할 수 있다.  
 메시지가 있다면 브로커에게 메시지를 보내야 한다.
@@ -34,7 +34,7 @@ key와 value는 각각의 serialize, deserialize를 위해 카프카 특유의 �
 
 ## Producer & Consumer
 
-![producer_consumer.png](producer_consumer.png)
+![producer_consumer.png](/images/post/message-broker/kafka/producer_consumer.png)
 
 **Producer**는 메시지를 카프카 topic으로 보내는 도구이다.  
 default producer는 없으나 API, Flume, Connect, Streams 등이 사용될 수 있다.  
@@ -48,7 +48,7 @@ Topic은 **Partition**이라는 단위로 구성된다.
 즉 1개 이상의 partition이 단일 Topic을 구성한다.  
 카프카의 실제 작업은 대부분 disk에 실제로 구현되는 partition이다.  
 
-![topic & broker](topic_broker.png)
+![topic & broker](/images/post/message-broker/kafka/topic_broker.png)
 
 partition replica 중 하나는 leader가 된다.  
 
@@ -78,7 +78,7 @@ Zookeeper를 사용하는 사례 중 하나는 앞서 봤던 leader replica가 �
 
 ## Page Cache
 
-![page-cache.png](page-cache.png)
+![page-cache.png](/images/post/message-broker/kafka/page-cache.png)
 
 카프카는 수백만 개의 메시지를 빠르게 처리할 수 있는데, 이를 가능하게 만드는 핵심 중 하나는 <u>page cache</u>[^1]이다.  
 broker가 JVM heap에 캐시되지 않도록 하여 <u>크기가 큰 heap으로 인해 발생하는 문제</u>[^2]를 방지한다.  
@@ -89,7 +89,7 @@ broker가 JVM heap에 캐시되지 않도록 하여 <u>크기가 큰 heap으로 
 Kafka에서 Commit Log는 Java의 logger의 로그나, DB의 WAL 처럼 숨겨진 세부정보가 아니다.  
 오히려 kafka의 중심에 위치하며 사용자들은 offset을 사용해서 메시지가 로그의 어디에 위치하는지 찾을 수 있다.
 
-![commit-log.png](commit-log.png)
+![commit-log.png](/images/post/message-broker/kafka/commit-log.png)
 
 Commit Log는 메시지가 항상 로그 마지막에 추가되는 추가 전용 로그이다.  
 메시지를 읽을 때 그 메시지를 시스템에서 제거하거나 다른 consumer로부터 제외하지 않는다.  
@@ -97,7 +97,7 @@ Commit Log는 메시지가 항상 로그 마지막에 추가되는 추가 전용
                                               
 ## 카프카 상위 수준 뷰
 
-![kafka-overview.png](kafka-overview.png)
+![kafka-overview.png](/images/post/message-broker/kafka/kafka-overview.png)
 
 상위 수준에서 정리한 카프카 뷰.
 

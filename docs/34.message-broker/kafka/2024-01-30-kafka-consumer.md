@@ -37,12 +37,12 @@ consumer 클라이언트 시작 시 연결을 시도할 수 있는 브로커를 
 consumer가 브로커에게 보내는 로그의 인덱스 위치로 offset을 사용한다.  
 offset을 통해 로그에서 필요한 메시지의 위치를 알 수 있다.
 
-![kafka_offset.png](kafka_offset.png)
+![kafka_offset.png](/images/post/message-broker/kafka/kafka_offset.png)
 
 `auto.offset.reset`을 `earliest`로 설정하면 처음부터 읽기 때문에 해당 토픽에 대한 모든 메시지를 볼 수 있다.  
 기본값인 `latest`로 설정하면 consumer를 시작한 후 보낸 메시지들을 읽는다.
 
-![partition_leaders.png](partition_leaders.png)
+![partition_leaders.png](/images/post/message-broker/kafka/partition_leaders.png)
 
 topic에 작성된 메시지를 찾기 위해 우선 topic 내에서 파티션을 찾은 다음 인덱스 기반 offset을 찾는다.  
 consumer는 일반적으로 leader replica에서 읽는다.  
@@ -64,7 +64,7 @@ offset은 항상 각 파티션에 대해 증가한다.
 
 ### 파티션 수 < consumer 수
 
-![kafka_extra_consumer.png](kafka_extra_consumer.png)
+![kafka_extra_consumer.png](/images/post/message-broker/kafka/kafka_extra_consumer.png)
 
 파티션보다 consumer가 많으면 일부 consumer는 작업을 수행하지 않는다.  
 여유 consumer는 ready 상태이다.  
@@ -84,7 +84,7 @@ consumer에 대해 파티션이 1:1 매핑이 아닌 경우 더 많은 파티션
 
 ### 파티션 수 > consumer 수
 
-![kafka_extra_partition.png](kafka_extra_partition.png)
+![kafka_extra_partition.png](/images/post/message-broker/kafka/kafka_extra_partition.png)
 
 **하나의 파티션을 두 개의 consumer가 읽을 수 없다.**  
 consumer보다 파티션이 많은 경우 필요에 따라 하나의 consumer가 둘 이상의 파티션을 처리한다.
@@ -98,7 +98,7 @@ consumer보다 파티션이 많은 경우 필요에 따라 하나의 consumer가
 
 그룹 코디네이터는 consumer와 협력해서 특정 consumer 그룹이 읽은 topic 내부의 기록을 유지한다.
 
-![coordinates.png](coordinates.png)
+![coordinates.png](/images/post/message-broker/kafka/coordinates.png)
 
 topic에서 다음 메시지를 읽을 위치를 결정하기 위해 offset을 커밋 좌표로 사용하고 있다.
 
@@ -109,7 +109,7 @@ consumer 그룹은 서로 consumer offset에 대한 동일한 코디네이션을
 각 consumer들은 consumer group에 속한다.  
 conumser group의 consumer들은 topic 파티션의 소유권을 공유하며 각 consumer가 해당 토픽의 다른 파티션을 분담하면서 메시지를 읽을 수 있다.
 
-![consume_separate_group.png](consume_separate_group.png)
+![consume_separate_group.png](/images/post/message-broker/kafka/consume_separate_group.png)
 
 위 그림은 동일한 파티션 집합이 3개의 다른 브로커에 존재하고, kinaction_teamoffka0과 kinaction_teamsetka1이라는 2개의 consumer 그룹이 파티션에서 consume하고 있는 상황이다.  
 각 그룹의 consumer는 각 브로커의 파티션에서 고유한 데이터 복사본을 가져온다.  

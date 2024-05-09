@@ -26,7 +26,7 @@ Producer는 메시지를 카프카 topic으로 보내는 도구이다.
 producer는 할당된 파티션의 leader replica에만 쓸 수 있는데, topic과 **bootstrap.servers** 밖에 모르기 때문에 알고있는 server에 연결한다.
 producer는 **boootstrap.servers**를 시작점으로 사용해 모든 후속 쓰기에 사용하는 브로커와 파티션에 대한 메타데이터를 가져온다.
 
-![bootstrap-server.png](bootstrap-server.png)
+![bootstrap-server.png](/images/post/message-broker/kafka/bootstrap-server.png)
 
 각 브로커들은 클러스터 안의 다른 브로커들도 알고 있기 때문에 producer는 하나의 브로커를 통해 leader를 찾을 수 있다.  
 
@@ -37,20 +37,20 @@ acks는 producer가 완료를 받기 전에 partition leader가 follower(replica
 
 ### acks 0
 
-![ack0.png](ack0.png)
+![ack0.png](/images/post/message-broker/kafka/ack0.png)
 
 **acks가 0**인 경우 0개의 replica에 ack를 받기 때문에 **가장 적은 대기 시간**을 얻을 수 있지만 **안전한 배달을 보장하진 않는다**.
 
 ### acks all
 
-![ackall.png](ackall.png)
+![ackall.png](/images/post/message-broker/kafka/ackall.png)
 
 **acks가 all** 혹은 -1인 경우 leader replica가 모든 replica 들의 ack를 기다린다는 의미이다.  
 따라서 **가장 느린 대기 시간**을 갖게 되지만 **안전한 배달을 보장**한다.  
 
 ### acks 1
 
-![ack1.png](ack1.png)
+![ack1.png](/images/post/message-broker/kafka/ack1.png)
 
 **acks가 1**인 경우 1개의 replica에 ack를 받는다.  
 즉 leader replica의 수신을 확인하기 때문에 **비교적 적당한 안정성과 대기시간**을 가질 수 있다.  
