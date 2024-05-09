@@ -24,8 +24,7 @@ ubuntu에서 옵션을 찾아서 수행하다가 안됐던 것을 해결해서 �
 getter & setter의 변경, entity와 dto 간의 mapping과 factory 생성 등에서 세로 편집은 굉장한 효율을 낸다.  
 여기에 대소문자 변경까지 단축키로 더해지면 굉장하다.
 
-![intellij toogle](intellij_toggle.gif)
-
+![intellij toogle](/images/post/dev-tools/intellij/toggle-case/intellij_toggle.gif)
 
 ### toggle case shortcut
 
