@@ -18,7 +18,7 @@ With the **rootdir**, you can find the root directory intuitively, quickly, and 
 1. Install rootdir with `pip install rootdir`
 2. Add `__root__.py` to your root path.
 3. Import rootdir with `import rootdir`
-4. Check the root directory with `rootdit.root_dir(__file__)`
+4. Check the root directory with `rootdir.root_dir(__file__)`
 
 ### example
 

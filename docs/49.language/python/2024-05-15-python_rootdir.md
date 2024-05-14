@@ -18,7 +18,7 @@ sitemap:
 1. `pip install rootdir`로 rootdir를 설치한다.
 2. `__root__.py`를 root path에 추가한다.
 3. `import rootdir`로 rootdir를 import 한다.
-4. `rootdit.root_dir(__file__)`로 rootdir을 확인한다.
+4. `rootdir.root_dir(__file__)`로 rootdir을 확인한다.
 
 ### example
 
