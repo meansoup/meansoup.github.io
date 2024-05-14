@@ -5,7 +5,7 @@
     <description>backend tech, log</description>
     <link>https://backendbrew.com/</link>
     <atom:link href="https://backendbrew.com/ko/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2024-05-09T16:44:29+00:00</updated>
+    <updated>2024-05-14T17:27:59+00:00</updated>
     <id>https://backendbrew.com</id>
     <author>
       <name></name>
@@ -18600,6 +18600,77 @@ List가 더 고수준이기 때문에 저수준인 Iterator 인터페이스를 �
         <pubDate></pubDate>
         <link>https://backendbrew.com/docs/architecture/solid</link>
         <guid isPermaLink="true">https://backendbrew.com/docs/architecture/solid</guid>
+      </item>
+    
+      <item>
+        <title>Find root directory simply in Python</title>
+        
+          <description>&lt;p&gt;파이썬에서 root directory를 찾기란 쉽지 않다.&lt;br /&gt;
+&lt;strong&gt;rootdir&lt;/strong&gt; library를 통해 root directory를 직관적이고, 빠르고, 쉽게 찾을 수 있다.&lt;/p&gt;
+
+&lt;h3 id=&quot;usage&quot;&gt;Usage&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip install rootdir&lt;/code&gt;로 rootdir를 설치한다.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;__root__.py&lt;/code&gt;를 root path에 추가한다.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;import rootdir&lt;/code&gt;로 rootdir를 import 한다.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rootdit.root_dir(__file__)&lt;/code&gt;로 rootdir을 확인한다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;example&quot;&gt;example&lt;/h3&gt;
+
+&lt;p&gt;만약 root directory가 필요하다면 아래와 같은 코드로 쉽게 확인할 수 있다.&lt;br /&gt;
+아래 코드를 복사하여 동작을 확인할 수 있다.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;rootdir&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;__main__&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rootdir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;root_dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;__file__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;sample&quot;&gt;sample&lt;/h3&gt;
+
+&lt;p&gt;아래와 같은 &lt;u&gt;sample project&lt;/u&gt;&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;를 참고하면, rootdir를 더 잘 이해하고 효율적으로 활용할 수 있다.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.
+└── example/
+├── a/
+│   └── a_1.py
+├── b/
+│   ├── b_1/
+│   │   ├── b_1_1/
+│   │   │   └── b_1_1_1.py
+│   │   └── b_1_2.py
+│   └── b_2.py
+├── main.py
+└── __root__.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;__root__.py&lt;/strong&gt;를 추가했다면 어느곳에서든 &lt;strong&gt;rootdir&lt;/strong&gt;를 통해 root directory를 찾을 수 있다.&lt;br /&gt;
+예를 들면 &lt;strong&gt;b_1_1_1.py&lt;/strong&gt;에서는 아래와 같이 rootdir를 찾을 수 있다.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;rootdir&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;__main__&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rootdir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;root_dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;b_1_1_1.py 뿐만 아니라 b_1_2.py, b_2.py 등 어떤 프로젝트에서도 동일하게 rootdir를 찾을 수 있다.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;rootdir에 명시된 &lt;a href=&quot;https://github.com/meansoup/rootdir/tree/main/sample&quot;&gt;sample project&lt;/a&gt;에서 실제 sample project와 동작을 확인할 수 있다. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        
+        <pubDate></pubDate>
+        <link>https://backendbrew.com/docs/algorithm/language/python/python-rootdir</link>
+        <guid isPermaLink="true">https://backendbrew.com/docs/algorithm/language/python/python-rootdir</guid>
       </item>
     
       <item>
