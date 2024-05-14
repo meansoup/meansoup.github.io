@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Find root directory simply in Python
-sidebar_label: rootdir
+sidebar_label: find rootdir
 parent: python
 grand_parent: language
 lang: en
