@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Find root directory simply in Python
+title: 파이썬에서 root directory를 library로 쉽게 찾는 방법
 sidebar_label: find rootdir
 parent: python
 grand_parent: language
