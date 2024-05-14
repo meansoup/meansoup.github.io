@@ -5,7 +5,7 @@
     <description>backend tech, log</description>
     <link>https://backendbrew.com/</link>
     <atom:link href="https://backendbrew.com/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2024-05-14T17:32:42+00:00</updated>
+    <updated>2024-05-14T18:11:50+00:00</updated>
     <id>https://backendbrew.com</id>
     <author>
       <name></name>
@@ -18608,7 +18608,7 @@ With the &lt;strong&gt;rootdir&lt;/strong&gt;, you can find the root directory i
   &lt;li&gt;Install rootdir with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip install rootdir&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;Add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;__root__.py&lt;/code&gt; to your root path.&lt;/li&gt;
   &lt;li&gt;Import rootdir with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;import rootdir&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Check the root directory with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rootdit.root_dir(__file__)&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Check the root directory with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rootdir.root_dir(__file__)&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h3 id=&quot;example&quot;&gt;example&lt;/h3&gt;
