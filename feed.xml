@@ -5,7 +5,7 @@
     <description>backend tech, log</description>
     <link>https://backendbrew.com/</link>
     <atom:link href="https://backendbrew.com/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2024-05-14T18:11:50+00:00</updated>
+    <updated>2024-05-15T22:56:55+00:00</updated>
     <id>https://backendbrew.com</id>
     <author>
       <name></name>
@@ -18597,7 +18597,7 @@ List가 더 고수준이기 때문에 저수준인 Iterator 인터페이스를 �
       </item>
     
       <item>
-        <title>Find root directory simply in Python</title>
+        <title>The easiest way to find root directory in Python</title>
         
           <description>&lt;p&gt;Finding the root directory in Python can be challenging.&lt;br /&gt;
 With the &lt;strong&gt;rootdir&lt;/strong&gt;, you can find the root directory intuitively, quickly, and easily.&lt;/p&gt;
@@ -18646,10 +18646,10 @@ For example, in &lt;strong&gt;b_1_1_1.py&lt;/strong&gt;, you can find the rootdi
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;rootdir&lt;/span&gt;
 
 &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;__main__&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rootdir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;root_dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rootdir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;root_dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;__file__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;You can find the root directory using rootdir not only in b_1_1_1.py but also in b_1_2.py, b_2.py, or any other file in the project.&lt;/p&gt;
+&lt;p&gt;You can find the root directory using above code not only in b_1_1_1.py but also in b_1_2.py, b_2.py, or any other file in the project.&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -19677,6 +19677,12 @@ S3 응답에 대해 오류 코드가 나온 경우 처리를 해주어야 한다
   &lt;url&gt;
     &lt;loc&gt;https://backendbrew.com/ko/docs/dev-tools/intellij/upper-case&lt;/loc&gt;
     &lt;lastmod&gt;2024-05-02&lt;/lastmod&gt;
+    &lt;changefreq&gt;monthly&lt;/changefreq&gt;
+    &lt;priority&gt;0.5&lt;/priority&gt;
+  &lt;/url&gt;
+  &lt;url&gt;
+    &lt;loc&gt;https://backendbrew.com/ko/docs/algorithm/language/python/python-rootdir&lt;/loc&gt;
+    &lt;lastmod&gt;2024-05-16&lt;/lastmod&gt;
     &lt;changefreq&gt;monthly&lt;/changefreq&gt;
     &lt;priority&gt;0.5&lt;/priority&gt;
   &lt;/url&gt;

@@ -2124,7 +2124,7 @@
     <url>
       <loc>https://backendbrew.com/docs/algorithm/language/python/python-rootdir</loc>
       
-        <lastmod>2024-05-15</lastmod>
+        <lastmod>2024-05-16</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -2290,6 +2290,12 @@
   <url>
     <loc>https://backendbrew.com/ko/docs/dev-tools/intellij/upper-case</loc>
     <lastmod>2024-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://backendbrew.com/ko/docs/algorithm/language/python/python-rootdir</loc>
+    <lastmod>2024-05-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
