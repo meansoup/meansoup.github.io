@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Find root directory simply in Python
+title: The easiest way to find root directory in Python
 sidebar_label: find rootdir
 parent: python
 grand_parent: language
 lang: en
 permalink: /docs/algorithm/language/python/python-rootdir
 sitemap:
-  lastmod: 2024-05-15
+  lastmod: 2024-05-16
 ---
 
 Finding the root directory in Python can be challenging.  
@@ -58,10 +58,10 @@ For example, in **b_1_1_1.py**, you can find the rootdir as shown below.
 import rootdir
 
 if __name__ == "__main__":
-    print(rootdir.root_dir())
+    print(rootdir.root_dir(__file__))
 ```
 
-You can find the root directory using rootdir not only in b_1_1_1.py but also in b_1_2.py, b_2.py, or any other file in the project.
+You can find the root directory using above code not only in b_1_1_1.py but also in b_1_2.py, b_2.py, or any other file in the project.
 
 ---
 

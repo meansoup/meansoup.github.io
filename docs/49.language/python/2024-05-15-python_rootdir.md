@@ -7,7 +7,7 @@ grand_parent: language
 lang: ko
 permalink: /docs/algorithm/language/python/python-rootdir
 sitemap:
-  lastmod: 2024-05-15
+  lastmod: 2024-05-16
 ---
 
 파이썬에서 root directory를 찾기란 쉽지 않다.  
@@ -58,10 +58,10 @@ if __name__ == "__main__":
 import rootdir
 
 if __name__ == "__main__":
-    print(rootdir.root_dir())
+    print(rootdir.root_dir(__file__))
 ```
 
-b_1_1_1.py 뿐만 아니라 b_1_2.py, b_2.py 등 어떤 프로젝트에서도 동일하게 rootdir를 찾을 수 있다.
+b_1_1_1.py 뿐만 아니라 b_1_2.py, b_2.py 등 어떤 프로젝트에서도 위 코드를 통해 동일하게 rootdir를 찾을 수 있다.
 
 ---
 
