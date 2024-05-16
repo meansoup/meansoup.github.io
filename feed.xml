@@ -5,7 +5,7 @@
     <description>backend tech, log</description>
     <link>https://backendbrew.com/</link>
     <atom:link href="https://backendbrew.com/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2024-05-16T17:25:25+00:00</updated>
+    <updated>2024-05-16T23:10:19+00:00</updated>
     <id>https://backendbrew.com</id>
     <author>
       <name></name>
@@ -18688,10 +18688,6 @@ For example, in &lt;strong&gt;b_1_1_1.py&lt;/strong&gt;, you can find the rootdi
 In order to import in Python, you need to find the appropriate path and add it using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sys.path.append(...)&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;With the &lt;strong&gt;rootdir&lt;/strong&gt; library, you can add the root directory in an intuitive, fast, and easily.&lt;/p&gt;
-
-&lt;p&gt;Install rootdir with pip install rootdir.
-Add &lt;strong&gt;root&lt;/strong&gt;.py to the root path.
-Import rootdir with import rootdir.&lt;/p&gt;
 
 &lt;h3 id=&quot;usage&quot;&gt;Usage&lt;/h3&gt;
 
