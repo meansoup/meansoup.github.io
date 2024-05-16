@@ -2,6 +2,7 @@
 layout: post
 title: The easiest way to find root directory in Python
 sidebar_label: find rootdir
+nav_order: 1
 parent: python
 grand_parent: language
 lang: en

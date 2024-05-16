@@ -2,6 +2,7 @@
 layout: post
 title: 파이썬에서 root directory를 library로 쉽게 찾는 방법
 sidebar_label: find rootdir
+nav_order: 1
 parent: python
 grand_parent: language
 lang: ko

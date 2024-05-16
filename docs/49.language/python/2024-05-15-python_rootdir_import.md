@@ -2,6 +2,7 @@
 layout: post
 title: The easiest way to import other directory in Python
 sidebar_label: import rootdir
+nav_order: 2
 parent: python
 grand_parent: language
 lang: ko
