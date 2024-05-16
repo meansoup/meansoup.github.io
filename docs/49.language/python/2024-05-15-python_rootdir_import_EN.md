@@ -22,10 +22,6 @@ In order to import in Python, you need to find the appropriate path and add it u
 
 With the **rootdir** library, you can add the root directory in an intuitive, fast, and easily.
 
-Install rootdir with pip install rootdir.
-Add __root__.py to the root path.
-Import rootdir with import rootdir.
-
 
 ### Usage
 
