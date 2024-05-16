@@ -5,7 +5,7 @@
     <description>backend tech, log</description>
     <link>https://backendbrew.com/</link>
     <atom:link href="https://backendbrew.com/ko/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2024-05-16T16:38:26+00:00</updated>
+    <updated>2024-05-16T16:41:20+00:00</updated>
     <id>https://backendbrew.com</id>
     <author>
       <name></name>
@@ -19766,6 +19766,12 @@ S3 응답에 대해 오류 코드가 나온 경우 처리를 해주어야 한다
   &lt;url&gt;
     &lt;loc&gt;https://backendbrew.com/ko/docs/algorithm/language/python/python-rootdir&lt;/loc&gt;
     &lt;lastmod&gt;2024-05-16&lt;/lastmod&gt;
+    &lt;changefreq&gt;monthly&lt;/changefreq&gt;
+    &lt;priority&gt;0.5&lt;/priority&gt;
+  &lt;/url&gt;
+  &lt;url&gt;
+    &lt;loc&gt;https://backendbrew.com/ko/docs/algorithm/language/python/python-import-rootdir&lt;/loc&gt;
+    &lt;lastmod&gt;2024-05-17&lt;/lastmod&gt;
     &lt;changefreq&gt;monthly&lt;/changefreq&gt;
     &lt;priority&gt;0.5&lt;/priority&gt;
   &lt;/url&gt;

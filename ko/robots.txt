@@ -49,4 +49,4 @@ Disallow: /docs/vue/$
 User-agent: *
 Allow: /
 
-Sitemap: http://meansoup.github.io/sitemap.xml
+Sitemap: https://backendbrew.com/sitemap.xml
