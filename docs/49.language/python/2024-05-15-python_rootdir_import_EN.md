@@ -11,6 +11,12 @@ sitemap:
   lastmod: 2024-05-17
 ---
 
+{: .note-title .mb-6 }
+> rootdir
+>
+> [find rootdir](/docs/algorithm/language/python/python-rootdir){: .btn }
+> [add rootdir path for import](/docs/algorithm/language/python/python-import-rootdir){: .btn .btn-purple }
+
 Importing code from different folders in Python can be very cumbersome.  
 In order to import in Python, you need to find the appropriate path and add it using `sys.path.append(...)`.
 

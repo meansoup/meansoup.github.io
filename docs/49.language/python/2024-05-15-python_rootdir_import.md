@@ -11,6 +11,12 @@ sitemap:
   lastmod: 2024-05-17
 ---
 
+{: .note-title .mb-6 }
+> rootdir
+>
+> [find rootdir](/ko/docs/algorithm/language/python/python-rootdir){: .btn }
+> [add rootdir path for import](/ko/docs/algorithm/language/python/python-import-rootdir){: .btn .btn-purple }
+
 파이썬에서 다른 폴더에 있는 코드를 import 하는 것은 굉장히 불편한 일이다.
 python에서 import를 하기 위해선 적절한 path를 찾아서 `sys.path.append(...)`를 통해 추가 해줘야 한다.  
 

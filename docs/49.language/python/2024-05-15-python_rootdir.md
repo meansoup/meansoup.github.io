@@ -11,6 +11,12 @@ sitemap:
   lastmod: 2024-05-16
 ---
 
+{: .note-title .mb-6 }
+> rootdir
+>
+> [find rootdir](/ko/docs/algorithm/language/python/python-rootdir){: .btn .btn-purple }
+> [add rootdir path for import](/ko/docs/algorithm/language/python/python-import-rootdir){: .btn }
+
 파이썬에서 root directory를 찾기란 쉽지 않다.  
 **rootdir** library를 통해 root directory를 직관적이고, 빠르고, 쉽게 찾을 수 있다.
 

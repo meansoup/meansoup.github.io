@@ -11,6 +11,13 @@ sitemap:
   lastmod: 2024-05-16
 ---
 
+{: .note-title .mb-6 }
+> rootdir
+>
+> [find rootdir](/docs/algorithm/language/python/python-rootdir){: .btn .btn-purple }
+> [add rootdir path for import](/docs/algorithm/language/python/python-import-rootdir){: .btn }
+
+
 Finding the root directory in Python can be challenging.  
 With the **rootdir**, you can find the root directory intuitively, quickly, and easily.
 
