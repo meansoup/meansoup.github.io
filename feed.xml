@@ -5,7 +5,7 @@
     <description>backend tech, log</description>
     <link>https://backendbrew.com/</link>
     <atom:link href="https://backendbrew.com/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2024-05-15T22:56:55+00:00</updated>
+    <updated>2024-05-16T16:38:13+00:00</updated>
     <id>https://backendbrew.com</id>
     <author>
       <name></name>
@@ -18665,6 +18665,91 @@ For example, in &lt;strong&gt;b_1_1_1.py&lt;/strong&gt;, you can find the rootdi
         <pubDate></pubDate>
         <link>https://backendbrew.com/docs/algorithm/language/python/python-rootdir</link>
         <guid isPermaLink="true">https://backendbrew.com/docs/algorithm/language/python/python-rootdir</guid>
+      </item>
+    
+      <item>
+        <title>The easiest way to import other directory in Python</title>
+        
+          <description>&lt;p&gt;Importing code from different folders in Python can be very cumbersome.&lt;br /&gt;
+In order to import in Python, you need to find the appropriate path and add it using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sys.path.append(...)&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;With the &lt;strong&gt;rootdir&lt;/strong&gt; library, you can add the root directory in an intuitive, fast, and easily.&lt;/p&gt;
+
+&lt;p&gt;Install rootdir with pip install rootdir.
+Add &lt;strong&gt;root&lt;/strong&gt;.py to the root path.
+Import rootdir with import rootdir.&lt;/p&gt;
+
+&lt;h3 id=&quot;usage&quot;&gt;Usage&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Install rootdir with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip install rootdir&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;__root__.py&lt;/code&gt; to your root path&lt;/li&gt;
+  &lt;li&gt;Import rootdir with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;import rootdir&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Add the rootdir with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rootdir.root_dependency(__file__)&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;example&quot;&gt;example&lt;/h3&gt;
+
+&lt;p&gt;If you have a Python project with a directory structure and need to import code from different directories, you can copy the following code to add the path and perform imports based on the root directory.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;rootdir&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;rootdir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;root_dependency&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;__file__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You can use the same import code regardless of the directory structure, the path of the specific file.&lt;br /&gt;
+With &lt;strong&gt;rootdir&lt;/strong&gt;, you can add the directory by the above code.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample&quot;&gt;sample&lt;/h3&gt;
+
+&lt;p&gt;Refer to the following &lt;u&gt;sample project&lt;/u&gt;&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; to better understand and efficiently use rootdir.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.
+└── example/
+├── a/
+│   └── a_1.py
+├── b/
+│   ├── b_1/
+│   │   ├── b_1_1/
+│   │   │   └── b_1_1_1.py
+│   │   └── b_1_2.py
+│   └── b_2.py
+├── main.py
+└── __root__.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;After adding &lt;strong&gt;__root__.py&lt;/strong&gt;, you can easily add the root directory and perform imports from anywhere using &lt;strong&gt;rootdir&lt;/strong&gt;.&lt;br /&gt;
+For example, &lt;strong&gt;in b_1_1_1.py&lt;/strong&gt;, you can add the directory with rootdir as follows.&lt;/p&gt;
+
+&lt;p&gt;를 추가했다면 어느곳에서든를 통해 root directory를 추가하여 import를 쉽게할 수 있다.&lt;br /&gt;
+예를 들면 &lt;strong&gt;b_1_1_1.py&lt;/strong&gt;에서는 아래와 같이 rootdir의 directory를 추가할 수 있다.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;rootdir&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;rootdir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;root_dependency&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;__file__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;a.a_1&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;print_a_1&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;__main__&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rootdir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;root_dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;__file__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;print_a_1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Not only in b_1_1_1.py, but also in b_1_2.py, b_2.py, and any other file in project, you can add rootdir and perform imports in the same way using the above code.
+You don’t need to add sys.path or calculate path.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;You can check the actual &lt;a href=&quot;https://github.com/meansoup/rootdir/tree/main/sample&quot;&gt;sample project&lt;/a&gt; and its functionality in the sample project provided by rootdir. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        
+        <pubDate></pubDate>
+        <link>https://backendbrew.com/docs/algorithm/language/python/python-import-rootdir</link>
+        <guid isPermaLink="true">https://backendbrew.com/docs/algorithm/language/python/python-import-rootdir</guid>
       </item>
     
       <item>
