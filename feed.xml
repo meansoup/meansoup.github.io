@@ -5,7 +5,7 @@
     <description>backend tech, log</description>
     <link>https://backendbrew.com/</link>
     <atom:link href="https://backendbrew.com/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2024-05-16T16:41:08+00:00</updated>
+    <updated>2024-05-16T17:25:25+00:00</updated>
     <id>https://backendbrew.com</id>
     <author>
       <name></name>
@@ -18599,7 +18599,14 @@ List가 더 고수준이기 때문에 저수준인 Iterator 인터페이스를 �
       <item>
         <title>The easiest way to find root directory in Python</title>
         
-          <description>&lt;p&gt;Finding the root directory in Python can be challenging.&lt;br /&gt;
+          <description>&lt;blockquote class=&quot;note-title mb-6&quot;&gt;
+  &lt;p&gt;rootdir&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;/docs/algorithm/language/python/python-rootdir&quot; class=&quot;btn btn-purple&quot;&gt;find rootdir&lt;/a&gt;
+&lt;a href=&quot;/docs/algorithm/language/python/python-import-rootdir&quot; class=&quot;btn&quot;&gt;add rootdir path for import&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Finding the root directory in Python can be challenging.&lt;br /&gt;
 With the &lt;strong&gt;rootdir&lt;/strong&gt;, you can find the root directory intuitively, quickly, and easily.&lt;/p&gt;
 
 &lt;h3 id=&quot;usage&quot;&gt;Usage&lt;/h3&gt;
@@ -18670,7 +18677,14 @@ For example, in &lt;strong&gt;b_1_1_1.py&lt;/strong&gt;, you can find the rootdi
       <item>
         <title>The easiest way to import other directory in Python</title>
         
-          <description>&lt;p&gt;Importing code from different folders in Python can be very cumbersome.&lt;br /&gt;
+          <description>&lt;blockquote class=&quot;note-title mb-6&quot;&gt;
+  &lt;p&gt;rootdir&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;/docs/algorithm/language/python/python-rootdir&quot; class=&quot;btn&quot;&gt;find rootdir&lt;/a&gt;
+&lt;a href=&quot;/docs/algorithm/language/python/python-import-rootdir&quot; class=&quot;btn btn-purple&quot;&gt;add rootdir path for import&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Importing code from different folders in Python can be very cumbersome.&lt;br /&gt;
 In order to import in Python, you need to find the appropriate path and add it using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sys.path.append(...)&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;With the &lt;strong&gt;rootdir&lt;/strong&gt; library, you can add the root directory in an intuitive, fast, and easily.&lt;/p&gt;
@@ -18719,9 +18733,6 @@ With &lt;strong&gt;rootdir&lt;/strong&gt;, you can add the directory by the abov
 
 &lt;p&gt;After adding &lt;strong&gt;__root__.py&lt;/strong&gt;, you can easily add the root directory and perform imports from anywhere using &lt;strong&gt;rootdir&lt;/strong&gt;.&lt;br /&gt;
 For example, &lt;strong&gt;in b_1_1_1.py&lt;/strong&gt;, you can add the directory with rootdir as follows.&lt;/p&gt;
-
-&lt;p&gt;를 추가했다면 어느곳에서든를 통해 root directory를 추가하여 import를 쉽게할 수 있다.&lt;br /&gt;
-예를 들면 &lt;strong&gt;b_1_1_1.py&lt;/strong&gt;에서는 아래와 같이 rootdir의 directory를 추가할 수 있다.&lt;/p&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;rootdir&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;rootdir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;root_dependency&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;__file__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;

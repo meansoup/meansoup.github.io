@@ -5,7 +5,7 @@
     <description>backend tech, log</description>
     <link>https://backendbrew.com/</link>
     <atom:link href="https://backendbrew.com/ko/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2024-05-16T16:41:20+00:00</updated>
+    <updated>2024-05-16T17:25:38+00:00</updated>
     <id>https://backendbrew.com</id>
     <author>
       <name></name>
@@ -18605,7 +18605,14 @@ List가 더 고수준이기 때문에 저수준인 Iterator 인터페이스를 �
       <item>
         <title>파이썬에서 root directory를 library로 쉽게 찾는 방법</title>
         
-          <description>&lt;p&gt;파이썬에서 root directory를 찾기란 쉽지 않다.&lt;br /&gt;
+          <description>&lt;blockquote class=&quot;note-title mb-6&quot;&gt;
+  &lt;p&gt;rootdir&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;/ko/docs/algorithm/language/python/python-rootdir&quot; class=&quot;btn btn-purple&quot;&gt;find rootdir&lt;/a&gt;
+&lt;a href=&quot;/ko/docs/algorithm/language/python/python-import-rootdir&quot; class=&quot;btn&quot;&gt;add rootdir path for import&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;파이썬에서 root directory를 찾기란 쉽지 않다.&lt;br /&gt;
 &lt;strong&gt;rootdir&lt;/strong&gt; library를 통해 root directory를 직관적이고, 빠르고, 쉽게 찾을 수 있다.&lt;/p&gt;
 
 &lt;h3 id=&quot;usage&quot;&gt;Usage&lt;/h3&gt;
@@ -18676,7 +18683,14 @@ List가 더 고수준이기 때문에 저수준인 Iterator 인터페이스를 �
       <item>
         <title>The easiest way to import other directory in Python</title>
         
-          <description>&lt;p&gt;파이썬에서 다른 폴더에 있는 코드를 import 하는 것은 굉장히 불편한 일이다.
+          <description>&lt;blockquote class=&quot;note-title mb-6&quot;&gt;
+  &lt;p&gt;rootdir&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;/ko/docs/algorithm/language/python/python-rootdir&quot; class=&quot;btn&quot;&gt;find rootdir&lt;/a&gt;
+&lt;a href=&quot;/ko/docs/algorithm/language/python/python-import-rootdir&quot; class=&quot;btn btn-purple&quot;&gt;add rootdir path for import&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;파이썬에서 다른 폴더에 있는 코드를 import 하는 것은 굉장히 불편한 일이다.
 python에서 import를 하기 위해선 적절한 path를 찾아서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sys.path.append(...)&lt;/code&gt;를 통해 추가 해줘야 한다.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;rootdir&lt;/strong&gt; library를 통해 root directory를 직관적이고, 빠르고, 쉽게 추가할 수 있다.&lt;/p&gt;
