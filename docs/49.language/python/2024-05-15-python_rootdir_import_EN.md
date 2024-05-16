@@ -63,9 +63,6 @@ Refer to the following <u>sample project</u>[^1] to better understand and effici
 After adding **__root__.py**, you can easily add the root directory and perform imports from anywhere using **rootdir**.  
 For example, **in b_1_1_1.py**, you can add the directory with rootdir as follows.
 
-를 추가했다면 어느곳에서든를 통해 root directory를 추가하여 import를 쉽게할 수 있다.  
-예를 들면 **b_1_1_1.py**에서는 아래와 같이 rootdir의 directory를 추가할 수 있다.
-
 ```python
 import rootdir
 rootdir.root_dependency(__file__)
