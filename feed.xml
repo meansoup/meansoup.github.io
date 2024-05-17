@@ -5,7 +5,7 @@
     <description>backend tech, log</description>
     <link>https://backendbrew.com/</link>
     <atom:link href="https://backendbrew.com/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2024-05-16T23:10:19+00:00</updated>
+    <updated>2024-05-17T22:55:34+00:00</updated>
     <id>https://backendbrew.com</id>
     <author>
       <name></name>
@@ -11691,7 +11691,7 @@ convention을 명확하게 하기 위해 &lt;strong&gt;주요 회사들의 namin
 &lt;h3 id=&quot;package&quot;&gt;Package&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;package에는 소문자와 숫자만 사용한다. &lt;em&gt;(Google)&lt;/em&gt;
+  &lt;li&gt;package에는 소문자와 숫자만 사용한다. &lt;em&gt;(Oracle / Google)&lt;/em&gt;
     &lt;ul&gt;
       &lt;li&gt;com.example.deepspace 가능&lt;/li&gt;
       &lt;li&gt;com.example.deepSpace, com.example.deep_space 불가능&lt;/li&gt;
@@ -11704,21 +11704,22 @@ convention을 명확하게 하기 위해 &lt;strong&gt;주요 회사들의 namin
 &lt;ul&gt;
   &lt;li&gt;class name은 명사거나 명사구여야 한다. &lt;em&gt;(W3 / Oracle / Google)&lt;/em&gt;&lt;/li&gt;
   &lt;li&gt;class name의 첫 글자는 대문자여야 한다. UpperCamelCase &lt;em&gt;(W3 / Oracle / Google)&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;class name은 **Every member of this class is a(n) &lt;class name=&quot;&quot;&gt;**을 만족해야 한다. *(W3)*&lt;/class&gt;&lt;/li&gt;
+  &lt;li&gt;class name은 **Every member of this class is a(n) &lt;class name=&quot;&quot;&gt;** 을 만족해야 한다. *(W3)*&lt;/class&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;property&quot;&gt;property&lt;/h3&gt;
+&lt;h3 id=&quot;variable&quot;&gt;variable&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;property의 첫 글자는 소문자여야 한다. lowerCamelCase &lt;em&gt;(W3 / Google)&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;property는 명사거나 명사구여야 한다. &lt;em&gt;(W3 / Google)&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;variable은 &lt;u&gt;lowerCamelCase&lt;/u&gt;&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;이어야 한다.  &lt;em&gt;(W3 / Google, Oracle)&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;variable는 명사거나 명사구여야 한다. &lt;em&gt;(W3 / Google)&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;임시 변수를 제외하고는 한 문자 변수는 안된다. &lt;em&gt;(Oracle)&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;method&quot;&gt;Method&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;method는 동사거나 동사구여야 한다. &lt;em&gt;(Oracle / Google)&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;method의 첫 글자는 소문자여야 한다. lowerCamelCase &lt;em&gt;(Oracle / Google)&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;method은 &lt;u&gt;lowerCamelCase&lt;/u&gt;&lt;sup id=&quot;fnref:1:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;이어야 한다. &lt;em&gt;(Oracle / Google)&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;constant&quot;&gt;Constant&lt;/h3&gt;
@@ -11747,7 +11748,7 @@ convention을 명확하게 하기 위해 &lt;strong&gt;주요 회사들의 namin
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;약어-규칙&quot;&gt;약어 규칙&lt;/h4&gt;
+&lt;h3 id=&quot;약어-규칙&quot;&gt;약어 규칙&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;약어가 full name보다 대중적이고 더 잘 이해되는 단어가 아닌 이상 전체 단어를 사용해야 한다. &lt;em&gt;(W3 / MS)&lt;/em&gt;
@@ -11762,16 +11763,8 @@ convention을 명확하게 하기 위해 &lt;strong&gt;주요 회사들의 namin
       &lt;li&gt;이는 &lt;strong&gt;Id&lt;/strong&gt; 처럼 하나의 약어만 사용할 때도 마찬가지.&lt;/li&gt;
       &lt;li&gt;이유는 몇 가지가 있는데 대표적으론 이렇다.
         &lt;ul&gt;
-          &lt;li&gt;
-            &lt;ol&gt;
-              &lt;li&gt;가독성이 훨씬 좋다.&lt;/li&gt;
-            &lt;/ol&gt;
-          &lt;/li&gt;
-          &lt;li&gt;
-            &lt;ol&gt;
-              &lt;li&gt;AB, CDE, ABC, DE 와 같은 약어가 있을 때, ABCDE는 어떤 약어인지 구분할 수 없다.&lt;/li&gt;
-            &lt;/ol&gt;
-          &lt;/li&gt;
+          &lt;li&gt;가독성이 훨씬 좋다.&lt;/li&gt;
+          &lt;li&gt;AB, CDE, ABC, DE 와 같은 약어가 있을 때, ABCDE는 어떤 약어인지 구분할 수 없다.&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
@@ -11783,13 +11776,19 @@ convention을 명확하게 하기 위해 &lt;strong&gt;주요 회사들의 namin
 &lt;ul&gt;
   &lt;li&gt;https://www.w3.org/2005/rules/wg/wiki/Arch/Naming_Conventions&lt;/li&gt;
   &lt;li&gt;https://www.oracle.com/java/technologies/javase/codeconventions-namingconventions.html&lt;/li&gt;
-  &lt;li&gt;https://docs.microsoft.com/en-us/previous-versions/dotnet/netframework-1.1/141e06ef(v=vs.71)?redirectedfrom=MSDN
-    &lt;ul&gt;
-      &lt;li&gt;이건 Java는 아니지만 naming rule에는 참고할 만한 것.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
+  &lt;li&gt;https://docs.microsoft.com/en-us/previous-versions/dotnet/netframework-1.1/141e06ef(v=vs.71)?redirectedfrom=MSDN&lt;/li&gt;
   &lt;li&gt;https://google.github.io/styleguide/javaguide.html#s5-naming&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;CamelCase와 달리 lowerCamelCase는 첫 문자는 소문자로 시작한다. 그 이후의 단어의 첫 문자는 대문자가 된다. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:1:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
 </description>
         
         <pubDate></pubDate>
