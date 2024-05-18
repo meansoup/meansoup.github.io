@@ -3,2321 +3,1906 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
+  
+  <url>
+    <loc>https://backendbrew.com/docs/computer/floating-point</loc>
+    
+    <lastmod>2017-02-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/kivy/app-game-book-2</loc>
+    
+    <lastmod>2019-04-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/kivy/app-game-book-3</loc>
+    
+    <lastmod>2019-04-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/kivy/app-game-book-4</loc>
+    
+    <lastmod>2019-04-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/kivy/app-game-book-5</loc>
+    
+    <lastmod>2019-05-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/kivy/app-game-book-6</loc>
+    
+    <lastmod>2019-05-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/kivy/kivy-etc</loc>
+    
+    <lastmod>2019-06-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/extreme-programming/tdd/tdd-book-01</loc>
+    
+    <lastmod>2019-09-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/extreme-programming/tdd/tdd-book-02</loc>
+    
+    <lastmod>2019-09-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/algorithm/language/cpp/token-passing-operator</loc>
+    
+    <lastmod>2019-09-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/extreme-programming/tdd/tdd-book-03</loc>
+    
+    <lastmod>2019-09-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/extreme-programming/tdd/tdd-book-04</loc>
+    
+    <lastmod>2019-10-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/extreme-programming/tdd/tdd-book-05</loc>
+    
+    <lastmod>2019-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/extreme-programming/tdd/tdd-book-06</loc>
+    
+    <lastmod>2019-11-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/extreme-programming/tdd/tdd-book-07</loc>
+    
+    <lastmod>2019-11-20</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/extreme-programming/tdd/tdd-book-08</loc>
+    
+    <lastmod>2019-11-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/algorithm/language/cpp/cpp11</loc>
+    
+    <lastmod>2020-02-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/algorithm/language/python/python-copy</loc>
+    
+    <lastmod>2022-03-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/algorithm/language/python/time-complexity</loc>
+    
+    <lastmod>2020-03-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/aws/iam</loc>
+    
+    <lastmod>2020-03-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/aws/terms</loc>
+    
+    <lastmod>2020-03-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/aws/basic-service</loc>
+    
+    <lastmod>2020-03-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/aws/gw-sqs-sns</loc>
+    
+    <lastmod>2020-03-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/aws/container</loc>
+    
+    <lastmod>2020-03-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/aws/elasticache</loc>
+    
+    <lastmod>2020-03-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/aws/lambda</loc>
+    
+    <lastmod>2020-03-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/aws/security-deploy</loc>
+    
+    <lastmod>2020-03-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/11.Algorithm/2020-07-13-timsort.html</loc>
+    
+    <lastmod>2024-03-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/retrospect/2020</loc>
+    
+    <lastmod>2021-01-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/kotlin/kotlin-in-action/1</loc>
+    
+    <lastmod>2021-01-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/kotlin/kotlin-in-action/2</loc>
+    
+    <lastmod>2021-01-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/kotlin/kotlin-in-action/3</loc>
+    
+    <lastmod>2021-01-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/kotlin/kotlin-in-action/4</loc>
+    
+    <lastmod>2021-01-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/kotlin/kotlin-in-action/5</loc>
+    
+    <lastmod>2021-03-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/aws/DynamoSizeLimitException</loc>
+    
+    <lastmod>2021-03-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/kotlin/kotlin-in-action/6</loc>
+    
+    <lastmod>2021-03-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/kotlin/kotlin-in-action/6-2</loc>
+    
+    <lastmod>2021-03-20</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/vue/config</loc>
+    
+    <lastmod>2021-03-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/dev-tools/linux-commands/screen</loc>
+    
+    <lastmod>2021-03-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/dev-tools/linux-commands/split</loc>
+    
+    <lastmod>2021-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/dev-tools/linux-commands/cut</loc>
+    
+    <lastmod>2024-02-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/test/jacoco</loc>
+    
+    <lastmod>2021-04-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/kotlin/kotlin-in-action/7</loc>
+    
+    <lastmod>2021-04-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/kotlin/kotlin-in-action/7-2</loc>
+    
+    <lastmod>2021-04-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/java/issue/stacktrace</loc>
+    
+    <lastmod>2021-04-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/error-bug/kotlin/cannot-be-invoked-as-a-function</loc>
+    
+    <lastmod>2021-05-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/vue/component</loc>
+    
+    <lastmod>2021-05-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/vue/passing-props</loc>
+    
+    <lastmod>2021-05-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/vue/emit-click</loc>
+    
+    <lastmod>2021-05-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/error-bug/spring/graphql_execution_batched_Batched</loc>
+    
+    <lastmod>2021-05-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/kotlin/kotlin-vs-java</loc>
+    
+    <lastmod>2021-05-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/error-bug/spring/javax-websocket-server-ServerContainer-not-available</loc>
+    
+    <lastmod>2021-05-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/spring/static-method-vs-bean</loc>
+    
+    <lastmod>2021-06-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/vue/unexpected-token</loc>
+    
+    <lastmod>2021-06-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/dev-tools/linux-commands/jq</loc>
+    
+    <lastmod>2021-08-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/internet/dns</loc>
+    
+    <lastmod>2024-02-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/java/library/easyrandom</loc>
+    
+    <lastmod>2022-01-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/pattern/object-mother</loc>
+    
+    <lastmod>2024-03-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/retrospect/2021</loc>
+    
+    <lastmod>2021-01-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/error-bug/kotlin/jekyll-cannot-load-such-file</loc>
+    
+    <lastmod>2022-01-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/db/concept/orms</loc>
+    
+    <lastmod>2024-02-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/dev-tools/linux-commands/tmux</loc>
+    
+    <lastmod>2022-02-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/db/concept/acid</loc>
+    
+    <lastmod>2024-01-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/dev-tools/site/curl-to-code</loc>
+    
+    <lastmod>2022-02-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/apis/graphql/what_is_graphql</loc>
+    
+    <lastmod>2022-02-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/blog/font</loc>
+    
+    <lastmod>2022-02-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/design/plantuml</loc>
+    
+    <lastmod>2024-02-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/automation/python-bot</loc>
+    
+    <lastmod>2022-03-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/internet/cidr</loc>
+    
+    <lastmod>2024-02-17</lastmod>
     
-    <url>
-      <loc>https://backendbrew.com/docs/computer/floating-point</loc>
-      
-        <lastmod>2017-02-23</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/kivy/app-game-book-2</loc>
-      
-        <lastmod>2019-04-19</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/kivy/app-game-book-3</loc>
-      
-        <lastmod>2019-04-25</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/kivy/app-game-book-4</loc>
-      
-        <lastmod>2019-04-26</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/kivy/app-game-book-5</loc>
-      
-        <lastmod>2019-05-04</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/kivy/app-game-book-6</loc>
-      
-        <lastmod>2019-05-04</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/kivy/kivy-etc</loc>
-      
-        <lastmod>2019-06-27</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/extreme-programming/tdd/tdd-book-01</loc>
-      
-        <lastmod>2019-09-12</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/extreme-programming/tdd/tdd-book-02</loc>
-      
-        <lastmod>2019-09-16</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/algorithm/language/cpp/token-passing-operator</loc>
-      
-        <lastmod>2019-09-23</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/extreme-programming/tdd/tdd-book-03</loc>
-      
-        <lastmod>2019-09-25</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/extreme-programming/tdd/tdd-book-04</loc>
-      
-        <lastmod>2019-10-02</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/extreme-programming/tdd/tdd-book-05</loc>
-      
-        <lastmod>2019-10-28</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/extreme-programming/tdd/tdd-book-06</loc>
-      
-        <lastmod>2019-11-12</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/extreme-programming/tdd/tdd-book-07</loc>
-      
-        <lastmod>2019-11-20</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/extreme-programming/tdd/tdd-book-08</loc>
-      
-        <lastmod>2019-11-30</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/algorithm/language/cpp/cpp11</loc>
-      
-        <lastmod>2020-02-03</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/algorithm/language/python/python-copy</loc>
-      
-        <lastmod>2022-03-06</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/algorithm/language/python/time-complexity</loc>
-      
-        <lastmod>2020-03-07</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/aws/iam</loc>
-      
-        <lastmod>2020-03-25</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/aws/terms</loc>
-      
-        <lastmod>2020-03-25</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/aws/basic-service</loc>
-      
-        <lastmod>2020-03-26</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/aws/gw-sqs-sns</loc>
-      
-        <lastmod>2020-03-27</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/aws/container</loc>
-      
-        <lastmod>2020-03-27</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/aws/elasticache</loc>
-      
-        <lastmod>2020-03-27</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/aws/lambda</loc>
-      
-        <lastmod>2020-03-27</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/aws/security-deploy</loc>
-      
-        <lastmod>2020-03-27</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/11.Algorithm/2020-07-13-timsort.html</loc>
-      
-        <lastmod>2024-03-13</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/retrospect/2020</loc>
-      
-        <lastmod>2021-01-06</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/kotlin/kotlin-in-action/1</loc>
-      
-        <lastmod>2021-01-06</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/kotlin/kotlin-in-action/2</loc>
-      
-        <lastmod>2021-01-07</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/kotlin/kotlin-in-action/3</loc>
-      
-        <lastmod>2021-01-24</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/kotlin/kotlin-in-action/4</loc>
-      
-        <lastmod>2021-01-31</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/kotlin/kotlin-in-action/5</loc>
-      
-        <lastmod>2021-03-06</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/aws/DynamoSizeLimitException</loc>
-      
-        <lastmod>2021-03-08</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/kotlin/kotlin-in-action/6</loc>
-      
-        <lastmod>2021-03-19</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/kotlin/kotlin-in-action/6-2</loc>
-      
-        <lastmod>2021-03-20</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/vue/config</loc>
-      
-        <lastmod>2021-03-30</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/dev-tools/linux-commands/screen</loc>
-      
-        <lastmod>2021-03-31</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/dev-tools/linux-commands/split</loc>
-      
-        <lastmod>2021-04-07</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/dev-tools/linux-commands/cut</loc>
-      
-        <lastmod>2024-02-17</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/test/jacoco</loc>
-      
-        <lastmod>2021-04-15</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/kotlin/kotlin-in-action/7</loc>
-      
-        <lastmod>2021-04-15</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/kotlin/kotlin-in-action/7-2</loc>
-      
-        <lastmod>2021-04-18</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/java/issue/stacktrace</loc>
-      
-        <lastmod>2021-04-29</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/error-bug/kotlin/cannot-be-invoked-as-a-function</loc>
-      
-        <lastmod>2021-05-01</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/vue/component</loc>
-      
-        <lastmod>2021-05-04</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/vue/passing-props</loc>
-      
-        <lastmod>2021-05-05</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/vue/emit-click</loc>
-      
-        <lastmod>2021-05-14</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/error-bug/spring/graphql_execution_batched_Batched</loc>
-      
-        <lastmod>2021-05-19</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/kotlin/kotlin-vs-java</loc>
-      
-        <lastmod>2021-05-25</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/error-bug/spring/javax-websocket-server-ServerContainer-not-available</loc>
-      
-        <lastmod>2021-05-26</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/spring/static-method-vs-bean</loc>
-      
-        <lastmod>2021-06-07</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/vue/unexpected-token</loc>
-      
-        <lastmod>2021-06-14</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/dev-tools/linux-commands/jq</loc>
-      
-        <lastmod>2021-08-11</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/internet/dns</loc>
-      
-        <lastmod>2024-02-17</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/java/library/easyrandom</loc>
-      
-        <lastmod>2022-01-14</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/pattern/object-mother</loc>
-      
-        <lastmod>2024-03-13</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/retrospect/2021</loc>
-      
-        <lastmod>2021-01-26</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/error-bug/kotlin/jekyll-cannot-load-such-file</loc>
-      
-        <lastmod>2022-01-31</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/db/concept/orms</loc>
-      
-        <lastmod>2024-02-04</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/dev-tools/linux-commands/tmux</loc>
-      
-        <lastmod>2022-02-03</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/db/concept/acid</loc>
-      
-        <lastmod>2024-01-17</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/dev-tools/site/curl-to-code</loc>
-      
-        <lastmod>2022-02-06</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/apis/graphql/what_is_graphql</loc>
-      
-        <lastmod>2022-02-15</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/blog/font</loc>
-      
-        <lastmod>2022-02-17</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/design/plantuml</loc>
-      
-        <lastmod>2024-02-28</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/automation/python-bot</loc>
-      
-        <lastmod>2022-03-19</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/internet/cidr</loc>
-      
-        <lastmod>2024-02-17</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/java/gc/basic</loc>
-      
-        <lastmod>2022-04-14</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/java/gc/serial_gc</loc>
-      
-        <lastmod>2024-02-16</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/ddd/tactical/domain_events</loc>
-      
-        <lastmod>2024-02-23</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/java/gc/parallel_gc</loc>
-      
-        <lastmod>2024-02-16</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/spring/jpa/crud-vs-jpa</loc>
-      
-        <lastmod>2022-05-05</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/spring/jpa/find-connection-pool</loc>
-      
-        <lastmod>2022-05-11</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/spring/jpa/set-connection-pool</loc>
-      
-        <lastmod>2022-05-12</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/ddd/tactical/vo</loc>
-      
-        <lastmod>2024-02-23</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/ddd/tactical/domain-service</loc>
-      
-        <lastmod>2024-02-23</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/java/gc/cms_gc</loc>
-      
-        <lastmod>2022-05-23</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/dev-tools/intellij/live-template</loc>
-      
-        <lastmod>2022-05-30</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/java/naming-convention</loc>
-      
-        <lastmod>2022-06-02</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/dev-tools/intellij/test-file-template</loc>
-      
-        <lastmod>2022-06-12</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/db/why-use-nosql</loc>
-      
-        <lastmod>2022-06-15</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/service-management/user-limits</loc>
-      
-        <lastmod>2024-03-20</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/aws/dynamo/structure</loc>
-      
-        <lastmod>2022-06-21</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/error-bug/kotlin/ClassNotFoundException_kotlin_jvm_JvmInline</loc>
-      
-        <lastmod>2022-06-23</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/error-bug/spring/Unable_to_find_a_SpringBootConfiguration</loc>
-      
-        <lastmod>2022-06-24</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/error-bug/spring/NoSuchBeanDefinitionException_JpaRepository</loc>
-      
-        <lastmod>2022-06-25</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/error-bug/spring/kotlin_cannot_be_Returned_by_findById</loc>
-      
-        <lastmod>2022-06-27</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/dev-tools/intellij/upper-case</loc>
-      
-        <lastmod>2024-05-02</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/java/gc/g1_gc</loc>
-      
-        <lastmod>2022-07-11</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/dev-tools/slack/pocker-planner</loc>
-      
-        <lastmod>2022-07-24</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/error-bug/spring/ConflictingBeanDefinitionException</loc>
-      
-        <lastmod>2022-08-01</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/error-bug/intellij/maven-jdk-version</loc>
-      
-        <lastmod>2022-08-06</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/ddd/tactical/entity</loc>
-      
-        <lastmod>2024-02-23</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/error-bug/spring/repackage-failed-Unable-to-find-main-class</loc>
-      
-        <lastmod>2022-08-08</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/error-bug/spring/Class-path-contains-multiple-SLF4J-bindings</loc>
-      
-        <lastmod>2022-08-10</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/error-bug/spring/yaml-property-not-work</loc>
-      
-        <lastmod>2022-08-10</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/spring/multimodule-test-dependency</loc>
-      
-        <lastmod>2022-08-17</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/oci/docker-login</loc>
-      
-        <lastmod>2022-08-28</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/java/tip/java_map_key_remove_and_outer_this</loc>
-      
-        <lastmod>2022-08-29</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/oci/kubectl_shell</loc>
-      
-        <lastmod>2022-09-13</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/aws/dynamo/single-table</loc>
-      
-        <lastmod>2022-09-15</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/aws/dynamo/single-table-result</loc>
-      
-        <lastmod>2022-09-16</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/java/tip/list-type-casting</loc>
-      
-        <lastmod>2022-09-16</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/aws/cost-efficiency</loc>
-      
-        <lastmod>2022-09-27</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/retrospect/2022</loc>
-      
-        <lastmod>2022-12-21</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/dev-tools/linux-commands/telnet-by-curl</loc>
-      
-        <lastmod>2023-01-16</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/flutter/flutter-theme</loc>
-      
-        <lastmod>2023-01-27</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/ddd/tactical/aggregate</loc>
-      
-        <lastmod>2024-02-23</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/retrospect/theme/sync</loc>
-      
-        <lastmod>2023-03-09</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/java/tip/java-serialize</loc>
-      
-        <lastmod>2023-04-05</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/pattern/saga</loc>
-      
-        <lastmod>2024-03-14</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/aws/s3/throughput</loc>
-      
-        <lastmod>2023-06-17</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/internet/http/http1.0/semantics</loc>
-      
-        <lastmod>2023-06-18</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/internet/http/http1.0/syntax</loc>
-      
-        <lastmod>2024-01-17</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/dev-tools/site/webhook-site</loc>
-      
-        <lastmod>2023-06-26</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/java/gc/log_tuning</loc>
-      
-        <lastmod>2023-07-27</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/refactoring/basic</loc>
-      
-        <lastmod>2024-03-14</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/refactoring/big-refactoring</loc>
-      
-        <lastmod>2023-08-10</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/refactoring/putting-together-refactoring</loc>
-      
-        <lastmod>2023-08-31</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/refactoring/martin-fowler-refactoring</loc>
-      
-        <lastmod>2023-08-31</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/refactoring/my-refactoring</loc>
-      
-        <lastmod>2024-03-14</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/apis/oauth/google-login</loc>
-      
-        <lastmod>2023-10-05</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/dev-tools/linux/etc_profiled</loc>
-      
-        <lastmod>2023-10-21</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/java/library/archunit</loc>
-      
-        <lastmod>2023-11-02</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/retrospect/one-time-batch</loc>
-      
-        <lastmod>2023-11-11</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/dev-tools/linux-commands/terminal</loc>
-      
-        <lastmod>2023-11-15</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/apis/envoy/envoy</loc>
-      
-        <lastmod>2023-11-22</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/design/msa</loc>
-      
-        <lastmod>2024-02-17</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/design/eda</loc>
-      
-        <lastmod>2024-02-17</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/retrospect/2023</loc>
-      
-        <lastmod>2023-12-18</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/ddd/strategic/ubiquitous</loc>
-      
-        <lastmod>2023-12-28</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/message-broker/kafka/architecture</loc>
-      
-        <lastmod>2024-01-24</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/message-broker/kafka/producer</loc>
-      
-        <lastmod>2024-01-24</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/message-broker/kafka/kafka</loc>
-      
-        <lastmod>2024-01-24</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/message-broker/kafka/consumer</loc>
-      
-        <lastmod>2024-01-30</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/career/interview-question</loc>
-      
-        <lastmod>2024-03-26</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/internet/link-local</loc>
-      
-        <lastmod>2024-02-17</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/dev-tools/linux/too_many_open_file</loc>
-      
-        <lastmod>2024-02-25</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/architecture/solid</loc>
-      
-        <lastmod>2024-03-21</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/algorithm/language/python/python-rootdir</loc>
-      
-        <lastmod>2024-05-16</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/algorithm/language/python/python-import-rootdir</loc>
-      
-        <lastmod>2024-05-17</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-    <url>
-      <loc>https://backendbrew.com/docs/aws/dynamo</loc>
-      
-        <lastmod>2024-05-03</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/java/gc/basic</loc>
+    
+    <lastmod>2022-04-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/java/gc/serial_gc</loc>
+    
+    <lastmod>2024-02-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/ddd/tactical/domain_events</loc>
+    
+    <lastmod>2024-02-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/java/gc/parallel_gc</loc>
+    
+    <lastmod>2024-02-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/spring/jpa/crud-vs-jpa</loc>
+    
+    <lastmod>2022-05-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/spring/jpa/find-connection-pool</loc>
+    
+    <lastmod>2022-05-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/spring/jpa/set-connection-pool</loc>
+    
+    <lastmod>2022-05-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/ddd/tactical/vo</loc>
+    
+    <lastmod>2024-02-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/ddd/tactical/domain-service</loc>
+    
+    <lastmod>2024-02-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/java/gc/cms_gc</loc>
+    
+    <lastmod>2022-05-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/dev-tools/intellij/live-template</loc>
     
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-
+    <lastmod>2022-05-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/java/naming-conventions</loc>
+    
+    <lastmod>2024-05-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://backendbrew.com/ko/docs/java/naming-conventions</loc>
+    
+    <lastmod>2024-05-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/dev-tools/intellij/test-file-template</loc>
+    
+    <lastmod>2022-06-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/db/why-use-nosql</loc>
+    
+    <lastmod>2022-06-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/service-management/user-limits</loc>
+    
+    <lastmod>2024-03-20</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/aws/dynamo/structure</loc>
+    
+    <lastmod>2022-06-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/error-bug/kotlin/ClassNotFoundException_kotlin_jvm_JvmInline</loc>
+    
+    <lastmod>2022-06-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/error-bug/spring/Unable_to_find_a_SpringBootConfiguration</loc>
+    
+    <lastmod>2022-06-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/error-bug/spring/NoSuchBeanDefinitionException_JpaRepository</loc>
+    
+    <lastmod>2022-06-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/error-bug/spring/kotlin_cannot_be_Returned_by_findById</loc>
+    
+    <lastmod>2022-06-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/dev-tools/intellij/upper-case</loc>
+    
+    <lastmod>2024-05-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
   <url>
     <loc>https://backendbrew.com/ko/docs/dev-tools/intellij/upper-case</loc>
+    
     <lastmod>2024-05-02</lastmod>
+    
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/java/gc/g1_gc</loc>
+    
+    <lastmod>2022-07-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/dev-tools/slack/pocker-planner</loc>
+    
+    <lastmod>2022-07-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/error-bug/spring/ConflictingBeanDefinitionException</loc>
+    
+    <lastmod>2022-08-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/error-bug/intellij/maven-jdk-version</loc>
+    
+    <lastmod>2022-08-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/ddd/tactical/entity</loc>
+    
+    <lastmod>2024-02-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/error-bug/spring/repackage-failed-Unable-to-find-main-class</loc>
+    
+    <lastmod>2022-08-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/error-bug/spring/Class-path-contains-multiple-SLF4J-bindings</loc>
+    
+    <lastmod>2022-08-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/error-bug/spring/yaml-property-not-work</loc>
+    
+    <lastmod>2022-08-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/spring/multimodule-test-dependency</loc>
+    
+    <lastmod>2022-08-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/oci/docker-login</loc>
+    
+    <lastmod>2022-08-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/java/tip/java_map_key_remove_and_outer_this</loc>
+    
+    <lastmod>2022-08-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/oci/kubectl_shell</loc>
+    
+    <lastmod>2022-09-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/aws/dynamo/single-table</loc>
+    
+    <lastmod>2022-09-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/aws/dynamo/single-table-result</loc>
+    
+    <lastmod>2022-09-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/java/tip/list-type-casting</loc>
+    
+    <lastmod>2022-09-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/aws/cost-efficiency</loc>
+    
+    <lastmod>2022-09-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/retrospect/2022</loc>
+    
+    <lastmod>2022-12-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/dev-tools/linux-commands/telnet-by-curl</loc>
+    
+    <lastmod>2023-01-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/flutter/flutter-theme</loc>
+    
+    <lastmod>2023-01-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/ddd/tactical/aggregate</loc>
+    
+    <lastmod>2024-02-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/retrospect/theme/sync</loc>
+    
+    <lastmod>2023-03-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/java/tip/java-serialize</loc>
+    
+    <lastmod>2023-04-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/pattern/saga</loc>
+    
+    <lastmod>2024-03-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/aws/s3/throughput</loc>
+    
+    <lastmod>2023-06-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/internet/http/http1.0/semantics</loc>
+    
+    <lastmod>2023-06-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/internet/http/http1.0/syntax</loc>
+    
+    <lastmod>2024-01-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/dev-tools/site/webhook-site</loc>
+    
+    <lastmod>2023-06-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/java/gc/log_tuning</loc>
+    
+    <lastmod>2023-07-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/refactoring/basic</loc>
+    
+    <lastmod>2024-03-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/refactoring/big-refactoring</loc>
+    
+    <lastmod>2023-08-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/refactoring/putting-together-refactoring</loc>
+    
+    <lastmod>2023-08-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/refactoring/martin-fowler-refactoring</loc>
+    
+    <lastmod>2023-08-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/refactoring/my-refactoring</loc>
+    
+    <lastmod>2024-03-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/apis/oauth/google-login</loc>
+    
+    <lastmod>2023-10-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/dev-tools/linux/etc_profiled</loc>
+    
+    <lastmod>2023-10-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/java/library/archunit</loc>
+    
+    <lastmod>2023-11-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/retrospect/one-time-batch</loc>
+    
+    <lastmod>2023-11-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/dev-tools/linux-commands/terminal</loc>
+    
+    <lastmod>2023-11-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/apis/envoy/envoy</loc>
+    
+    <lastmod>2023-11-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/design/msa</loc>
+    
+    <lastmod>2024-02-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/design/eda</loc>
+    
+    <lastmod>2024-02-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/retrospect/2023</loc>
+    
+    <lastmod>2023-12-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/ddd/strategic/ubiquitous</loc>
+    
+    <lastmod>2023-12-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/message-broker/kafka/architecture</loc>
+    
+    <lastmod>2024-01-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/message-broker/kafka/producer</loc>
+    
+    <lastmod>2024-01-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/message-broker/kafka/kafka</loc>
+    
+    <lastmod>2024-01-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/message-broker/kafka/consumer</loc>
+    
+    <lastmod>2024-01-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/career/interview-question</loc>
+    
+    <lastmod>2024-03-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/internet/link-local</loc>
+    
+    <lastmod>2024-02-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/dev-tools/linux/too_many_open_file</loc>
+    
+    <lastmod>2024-02-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/architecture/solid</loc>
+    
+    <lastmod>2024-03-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/algorithm/language/python/python-rootdir</loc>
+    
+    <lastmod>2024-05-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
   <url>
     <loc>https://backendbrew.com/ko/docs/algorithm/language/python/python-rootdir</loc>
+    
     <lastmod>2024-05-16</lastmod>
+    
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/algorithm/language/python/python-import-rootdir</loc>
+    
+    <lastmod>2024-05-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
   <url>
     <loc>https://backendbrew.com/ko/docs/algorithm/language/python/python-import-rootdir</loc>
+    
     <lastmod>2024-05-17</lastmod>
+    
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <url>
+    <loc>https://backendbrew.com/docs/aws/dynamo</loc>
+    
+    <lastmod>2024-05-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 </urlset>

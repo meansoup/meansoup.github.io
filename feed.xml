@@ -5,7 +5,7 @@
     <description>backend tech, log</description>
     <link>https://backendbrew.com/</link>
     <atom:link href="https://backendbrew.com/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2024-05-17T22:55:34+00:00</updated>
+    <updated>2024-05-18T06:42:32+00:00</updated>
     <id>https://backendbrew.com</id>
     <author>
       <name></name>
@@ -11678,122 +11678,146 @@ CMS GC는 tenured가 default 75%가 차면 도는데 값을 지정할 수 있다
       </item>
     
       <item>
-        <title>Java naming convention (Google / MS / Oracle)</title>
+        <title>Java naming convention &amp; Abbreviations rules with Google, MS, Oracle</title>
         
-          <description>&lt;p&gt;naming은 당연히 class/property/method를 떠나서 명확하고 단순해야 한다.&lt;br /&gt;
-최근 naming으로 작은 논란? 이 있었던 적이 있었다.&lt;br /&gt;
-naming은 &lt;em&gt;꼭 이래야 한다.&lt;/em&gt; 라는게 없기 때문에 논란이 생기면 사람마다 생각이 달라 정리하기가 어렵다.&lt;br /&gt;
-convention을 명확하게 하기 위해 &lt;strong&gt;주요 회사들의 naming convention&lt;/strong&gt;을 정리해보았다.&lt;/p&gt;
+          <description>&lt;p&gt;Naming conventions should be clear and straightforward, regardless of class, variable, or method.&lt;br /&gt;
+If there are no rules for naming within the team, there is a high possibility of a dispute over naming, and other team members may have different opinions, making it difficult to find an agreement.&lt;/p&gt;
 
-&lt;p&gt;참고로 내가 우리 팀에서 걸렸던 부분은 &lt;a href=&quot;#약어-규칙&quot;&gt;약어 convention&lt;/a&gt;이고,&lt;br /&gt;
-이걸 정리해서 우리 팀 약어는 여기 정리된 규칙에 맞게 바뀌었다.&lt;/p&gt;
+&lt;p&gt;Recently, there has been a debate in our team about abbreviation conventions.&lt;br /&gt;
+In order to organize different thoughts, I organized naming conventions of companies such as Google, ms, oracle.&lt;br /&gt;
+Ultimately, our team defined naming rules based on the compiled abbreviation conventions.&lt;/p&gt;
 
 &lt;h3 id=&quot;package&quot;&gt;Package&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;package에는 소문자와 숫자만 사용한다. &lt;em&gt;(Oracle / Google)&lt;/em&gt;
-    &lt;ul&gt;
-      &lt;li&gt;com.example.deepspace 가능&lt;/li&gt;
-      &lt;li&gt;com.example.deepSpace, com.example.deep_space 불가능&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
+  &lt;li&gt;Only lowercase letters and numbers are allowed in packages. &lt;em&gt;(Oracle / Google)&lt;/em&gt; &lt;br /&gt;
+✔️ com.example.deepspace&lt;br /&gt;
+⚠️ com.example.deepSpace&lt;br /&gt;
+⚠️ com.example.deep_space&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;class&quot;&gt;Class&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;class name은 명사거나 명사구여야 한다. &lt;em&gt;(W3 / Oracle / Google)&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;class name의 첫 글자는 대문자여야 한다. UpperCamelCase &lt;em&gt;(W3 / Oracle / Google)&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;class name은 **Every member of this class is a(n) &lt;class name=&quot;&quot;&gt;** 을 만족해야 한다. *(W3)*&lt;/class&gt;&lt;/li&gt;
+  &lt;li&gt;Class names should be nouns or noun phrases. &lt;em&gt;(W3 / Oracle / Google)&lt;/em&gt;&lt;br /&gt;
+✔️ SpaceShip&lt;br /&gt;
+⚠️ launchSpaceship&lt;/li&gt;
+  &lt;li&gt;The first letter of the class name should be capitalized. UpperCamelCase &lt;em&gt;(W3 / Oracle / Google)&lt;/em&gt;&lt;br /&gt;
+✔️ SpaceShip&lt;br /&gt;
+⚠️ spaceship&lt;br /&gt;
+⚠️ spaceShip&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;variable&quot;&gt;variable&lt;/h3&gt;
+&lt;h3 id=&quot;variable&quot;&gt;Variable&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;variable은 &lt;u&gt;lowerCamelCase&lt;/u&gt;&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;이어야 한다.  &lt;em&gt;(W3 / Google, Oracle)&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;variable는 명사거나 명사구여야 한다. &lt;em&gt;(W3 / Google)&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;임시 변수를 제외하고는 한 문자 변수는 안된다. &lt;em&gt;(Oracle)&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Variables should be in &lt;u&gt;lowerCamelCase&lt;/u&gt;&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. &lt;em&gt;(W3 / Google / Oracle)&lt;/em&gt;&lt;br /&gt;
+✔️ speed&lt;br /&gt;
+⚠️ Speed&lt;br /&gt;
+⚠️ SPEED&lt;/li&gt;
+  &lt;li&gt;Variables should be nouns or noun phrases. &lt;em&gt;(W3 / Google)&lt;/em&gt;&lt;br /&gt;
+✔️ fuelLevel&lt;br /&gt;
+⚠️ calculateFuel&lt;/li&gt;
+  &lt;li&gt;Single-letter variables are not allowed except for temporary variables. &lt;em&gt;(Oracle)&lt;/em&gt;&lt;br /&gt;
+✔️ point&lt;br /&gt;
+⚠️ p&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;method&quot;&gt;Method&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;method는 동사거나 동사구여야 한다. &lt;em&gt;(Oracle / Google)&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;method은 &lt;u&gt;lowerCamelCase&lt;/u&gt;&lt;sup id=&quot;fnref:1:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;이어야 한다. &lt;em&gt;(Oracle / Google)&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Methods should be verbs or verb phrases. &lt;em&gt;(Oracle / Google)&lt;/em&gt;&lt;br /&gt;
+✔️ calculateDistance&lt;br /&gt;
+⚠️ distance&lt;/li&gt;
+  &lt;li&gt;Methods should be in &lt;u&gt;lowerCamelCase&lt;/u&gt;&lt;sup id=&quot;fnref:1:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. &lt;em&gt;(Oracle / Google)&lt;/em&gt;&lt;br /&gt;
+✔️ calculateDistance&lt;br /&gt;
+⚠️ CalculateDistance&lt;br /&gt;
+⚠️ calculate_distance&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;constant&quot;&gt;Constant&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;_&lt;/strong&gt; 로 구분된 단어로 모두 대문자여야 한다. &lt;em&gt;(Oracle / Google)&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Constants should be all uppercase with words separated by &lt;strong&gt;_&lt;/strong&gt;. &lt;em&gt;(Oracle / Google)&lt;/em&gt;&lt;br /&gt;
+✔️ MAX_SPEED&lt;br /&gt;
+⚠️ MaxSpeed&lt;br /&gt;
+⚠️ max_speed&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;test&quot;&gt;Test&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;test class는 Test라는 postfix로 끝난다 &lt;em&gt;(Google)&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Test class names should end with the postfix “Test”. &lt;em&gt;(Google)&lt;/em&gt;&lt;br /&gt;
+✔️ CalculatorTest&lt;br /&gt;
+⚠️ TestCalculator&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;공통-규칙&quot;&gt;공통 규칙&lt;/h3&gt;
+&lt;h3 id=&quot;common-rules&quot;&gt;Common Rules&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;내부에서 여러 단어가 사용될 때 각 단어의 첫 글자는 대문자여야 한다. &lt;em&gt;(Oracle / Google)&lt;/em&gt;&lt;/p&gt;
+    &lt;p&gt;The first letter of each word should be capitalized when multiple words are used internally. &lt;em&gt;(Oracle / Google)&lt;/em&gt;&lt;br /&gt;
+✔️ DeepSpaceMissionControlCenter&lt;br /&gt;
+⚠️ deepspacemissioncontrolcenter&lt;br /&gt;
+⚠️ deep_space_mission_control_center&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;의미없는 prefix, postfix를 사용하지 않는다. &lt;em&gt;(Google)&lt;/em&gt;&lt;/p&gt;
-    &lt;ul&gt;
-      &lt;li&gt;name_, mName, s_name, kName&lt;/li&gt;
-    &lt;/ul&gt;
+    &lt;p&gt;Meaningless prefixes and postfixes should not be used. &lt;em&gt;(Google)&lt;/em&gt;&lt;br /&gt;
+✔️ name  &lt;br /&gt;
+⚠️ name_&lt;br /&gt;
+⚠️ mName&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;약어-규칙&quot;&gt;약어 규칙&lt;/h3&gt;
+&lt;h3 id=&quot;abbreviation-conventions&quot;&gt;Abbreviation Conventions&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;약어가 full name보다 대중적이고 더 잘 이해되는 단어가 아닌 이상 전체 단어를 사용해야 한다. &lt;em&gt;(W3 / MS)&lt;/em&gt;
+  &lt;li&gt;Full words should be used instead of abbreviations unless the abbreviation is more common and easily understood. &lt;em&gt;(W3 / MS)&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Even when using abbreviations, &lt;u&gt;CamelCase&lt;/u&gt;&lt;sup id=&quot;fnref:2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; should be applied. &lt;em&gt;(MS)&lt;/em&gt;
     &lt;ul&gt;
-      &lt;li&gt;예를 들면 &lt;strong&gt;ID&lt;/strong&gt;, &lt;strong&gt;IP&lt;/strong&gt;, &lt;strong&gt;XML&lt;/strong&gt;, &lt;strong&gt;JSON&lt;/strong&gt;는 약어를 사용한다.&lt;/li&gt;
-      &lt;li&gt;예를 들면 Window 대신 Win을 사용해선 안된다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;약어를 사용할 때도 동일하게 camelCase를 적용한다. &lt;em&gt;(MS)&lt;/em&gt;
-    &lt;ul&gt;
-      &lt;li&gt;예를 들면 &lt;strong&gt;USUUIDIP&lt;/strong&gt;와 같은 naming을 해야할 때, &lt;strong&gt;usUuidIp&lt;/strong&gt;가 맞다는 말이다.&lt;/li&gt;
-      &lt;li&gt;이는 &lt;strong&gt;Id&lt;/strong&gt; 처럼 하나의 약어만 사용할 때도 마찬가지.&lt;/li&gt;
-      &lt;li&gt;이유는 몇 가지가 있는데 대표적으론 이렇다.
-        &lt;ul&gt;
-          &lt;li&gt;가독성이 훨씬 좋다.&lt;/li&gt;
-          &lt;li&gt;AB, CDE, ABC, DE 와 같은 약어가 있을 때, ABCDE는 어떤 약어인지 구분할 수 없다.&lt;/li&gt;
-        &lt;/ul&gt;
+      &lt;li&gt;For example, when creating a variable named &lt;strong&gt;UUIDIP&lt;/strong&gt;, &lt;strong&gt;uuidIp&lt;/strong&gt; is correct, and this applies even when using a single abbreviation like &lt;strong&gt;Id&lt;/strong&gt;.&lt;/li&gt;
+      &lt;li&gt;The reason for applying camelCase even to abbreviations is primarily because:
+        &lt;ol&gt;
+          &lt;li&gt;It greatly enhances &lt;strong&gt;readability&lt;/strong&gt;.&lt;/li&gt;
+          &lt;li&gt;Abbreviations are not confused. (For example, with abbreviations such as AB, CDE, ABC, DE, when there is ABCDE, it is unclear which abbreviation it is.)&lt;/li&gt;
+        &lt;/ol&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
+
+    &lt;p&gt;✔️ JSON&lt;br /&gt;
+⚠️ ID -&amp;gt; ️✔️ Id  &lt;br /&gt;
+⚠️ Win -&amp;gt; ️✔️ Window  &lt;br /&gt;
+⚠️ UUIDIPJSON -&amp;gt; ️✔️ UuidIpJson&lt;br /&gt;
+⚠️ ABCDE -&amp;gt; ️✔️ AbcDe&lt;br /&gt;
+⚠️ ABCDE -&amp;gt; ️✔️ AbCde&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;https://www.w3.org/2005/rules/wg/wiki/Arch/Naming_Conventions&lt;/li&gt;
-  &lt;li&gt;https://www.oracle.com/java/technologies/javase/codeconventions-namingconventions.html&lt;/li&gt;
-  &lt;li&gt;https://docs.microsoft.com/en-us/previous-versions/dotnet/netframework-1.1/141e06ef(v=vs.71)?redirectedfrom=MSDN&lt;/li&gt;
-  &lt;li&gt;https://google.github.io/styleguide/javaguide.html#s5-naming&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.w3.org/2005/rules/wg/wiki/Arch/Naming_Conventions&quot;&gt;W3 Naming Conventions&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.oracle.com/java/technologies/javase/codeconventions-namingconventions.html&quot;&gt;Oracle Naming Conventions&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/previous-versions/dotnet/netframework-1.1/141e06ef(v=vs.71)?redirectedfrom=MSDN&quot;&gt;Microsoft Naming Conventions&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://google.github.io/styleguide/javaguide.html#s5-naming&quot;&gt;Google Java Style Guide&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
-
 &lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
   &lt;ol&gt;
     &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;CamelCase와 달리 lowerCamelCase는 첫 문자는 소문자로 시작한다. 그 이후의 단어의 첫 문자는 대문자가 된다. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:1:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;Unlike CamelCase, lowerCamelCase starts with a lowercase letter. The first letter of each subsequent word is capitalized. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:1:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;CamelCase is a naming convention that mimics the humps of a camel, capitalizing the first letter of each word in a multi-word phrase. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/java/naming-convention</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/java/naming-convention</guid>
+        <link>https://backendbrew.com/docs/java/naming-conventions</link>
+        <guid isPermaLink="true">https://backendbrew.com/docs/java/naming-conventions</guid>
       </item>
     
       <item>
@@ -19741,49 +19765,29 @@ S3 응답에 대해 오류 코드가 나온 경우 처리를 해주어야 한다
         xsi:schemaLocation=&quot;http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd&quot;
         xmlns=&quot;http://www.sitemaps.org/schemas/sitemap/0.9&quot;&gt;
   {% for page in site.pages %}
+  {% if page.sitemap.lastmod %}
+  &lt;url&gt;
+    &lt;loc&gt;{{ site.url }}{{ page.url | remove: &quot;index.html&quot; }}&lt;/loc&gt;
     {% if page.sitemap.lastmod %}
-    &lt;url&gt;
-      &lt;loc&gt;{{ site.url }}{{ page.url | remove: &quot;index.html&quot; }}&lt;/loc&gt;
-      {% if page.sitemap.lastmod %}
-        &lt;lastmod&gt;{{ page.sitemap.lastmod | date: &quot;%Y-%m-%d&quot; }}&lt;/lastmod&gt;
-      {% elsif page.date %}
-        &lt;lastmod&gt;{{ page.date | date_to_xmlschema }}&lt;/lastmod&gt;
-      {% else %}
-        &lt;lastmod&gt;{{ site.time | date_to_xmlschema }}&lt;/lastmod&gt;
-      {% endif %}
-      {% if page.sitemap.changefreq %}
-        &lt;changefreq&gt;{{ page.sitemap.changefreq }}&lt;/changefreq&gt;
-      {% else %}
-        &lt;changefreq&gt;monthly&lt;/changefreq&gt;
-      {% endif %}
-      {% if page.sitemap.priority %}
-        &lt;priority&gt;{{ page.sitemap.priority }}&lt;/priority&gt;
-      {% else %}
-        &lt;priority&gt;0.5&lt;/priority&gt;
-      {% endif %}
-    &lt;/url&gt;
+    &lt;lastmod&gt;{{ page.sitemap.lastmod | date: &quot;%Y-%m-%d&quot; }}&lt;/lastmod&gt;
     {% endif %}
+    &lt;changefreq&gt;monthly&lt;/changefreq&gt;
+    &lt;priority&gt;0.5&lt;/priority&gt;
+  &lt;/url&gt;
+  {% if page.lang %}
+  &lt;url&gt;
+    &lt;loc&gt;{{ site.url }}/ko{{ page.url | remove: &quot;index.html&quot; }}&lt;/loc&gt;
+    {% if page.sitemap.lastmod %}
+    &lt;lastmod&gt;{{ page.sitemap.lastmod | date: &quot;%Y-%m-%d&quot; }}&lt;/lastmod&gt;
+    {% endif %}
+    &lt;changefreq&gt;monthly&lt;/changefreq&gt;
+    &lt;priority&gt;0.5&lt;/priority&gt;
+  &lt;/url&gt;
+  {% endif %}
+  {% endif %}
   {% endfor %}
-
-  &lt;url&gt;
-    &lt;loc&gt;https://backendbrew.com/ko/docs/dev-tools/intellij/upper-case&lt;/loc&gt;
-    &lt;lastmod&gt;2024-05-02&lt;/lastmod&gt;
-    &lt;changefreq&gt;monthly&lt;/changefreq&gt;
-    &lt;priority&gt;0.5&lt;/priority&gt;
-  &lt;/url&gt;
-  &lt;url&gt;
-    &lt;loc&gt;https://backendbrew.com/ko/docs/algorithm/language/python/python-rootdir&lt;/loc&gt;
-    &lt;lastmod&gt;2024-05-16&lt;/lastmod&gt;
-    &lt;changefreq&gt;monthly&lt;/changefreq&gt;
-    &lt;priority&gt;0.5&lt;/priority&gt;
-  &lt;/url&gt;
-  &lt;url&gt;
-    &lt;loc&gt;https://backendbrew.com/ko/docs/algorithm/language/python/python-import-rootdir&lt;/loc&gt;
-    &lt;lastmod&gt;2024-05-17&lt;/lastmod&gt;
-    &lt;changefreq&gt;monthly&lt;/changefreq&gt;
-    &lt;priority&gt;0.5&lt;/priority&gt;
-  &lt;/url&gt;
-&lt;/urlset&gt;</description>
+&lt;/urlset&gt;
+</description>
         
         <pubDate></pubDate>
         <link>https://backendbrew.com/sitemap.xml</link>
