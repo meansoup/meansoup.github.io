@@ -6,46 +6,25 @@ layout: null
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   {% for page in site.pages %}
+  {% if page.sitemap.lastmod %}
+  <url>
+    <loc>{{ site.url }}{{ page.url | remove: "index.html" }}</loc>
     {% if page.sitemap.lastmod %}
-    <url>
-      <loc>{{ site.url }}{{ page.url | remove: "index.html" }}</loc>
-      {% if page.sitemap.lastmod %}
-        <lastmod>{{ page.sitemap.lastmod | date: "%Y-%m-%d" }}</lastmod>
-      {% elsif page.date %}
-        <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
-      {% else %}
-        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-      {% endif %}
-      {% if page.sitemap.changefreq %}
-        <changefreq>{{ page.sitemap.changefreq }}</changefreq>
-      {% else %}
-        <changefreq>monthly</changefreq>
-      {% endif %}
-      {% if page.sitemap.priority %}
-        <priority>{{ page.sitemap.priority }}</priority>
-      {% else %}
-        <priority>0.5</priority>
-      {% endif %}
-    </url>
+    <lastmod>{{ page.sitemap.lastmod | date: "%Y-%m-%d" }}</lastmod>
     {% endif %}
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  {% if page.lang %}
+  <url>
+    <loc>{{ site.url }}/ko{{ page.url | remove: "index.html" }}</loc>
+    {% if page.sitemap.lastmod %}
+    <lastmod>{{ page.sitemap.lastmod | date: "%Y-%m-%d" }}</lastmod>
+    {% endif %}
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  {% endif %}
+  {% endif %}
   {% endfor %}
-
-  <url>
-    <loc>https://backendbrew.com/ko/docs/dev-tools/intellij/upper-case</loc>
-    <lastmod>2024-05-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://backendbrew.com/ko/docs/algorithm/language/python/python-rootdir</loc>
-    <lastmod>2024-05-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://backendbrew.com/ko/docs/algorithm/language/python/python-import-rootdir</loc>
-    <lastmod>2024-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
 </urlset>
