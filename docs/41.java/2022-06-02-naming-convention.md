@@ -1,8 +1,9 @@
 ---
 layout: post
-title: "Google, MS, Oracle 문서로 확인한 Java naming convention & 약어 convention"
+title: "Google, MS, Oracle의 Java naming convention & 약어 convention"
 sidebar_label: "Java naming convention"
 parent: Java
+lang: ko
 permalink: /docs/java/naming-conventions
 sitemap:
   lastmod: 2024-05-18
@@ -86,7 +87,7 @@ sitemap:
 ### 약어 규칙
 
 - 약어가 full name보다 대중적이고 더 잘 이해되는 단어가 아닌 이상 전체 단어를 사용해야 한다. *(W3 / MS)*  
-- 약어를 사용할 때도 동일하게 <u>camelCase</u>[^2]를 적용해야한다. *(MS)*
+- 약어를 사용할 때도 동일하게 <u>CamelCase</u>[^2]를 적용해야한다. *(MS)*
   - 예를 들면 **UUIDIP**라는 변수를 생성할 때, **uuidIp**가 맞고, 이는 **Id** 처럼 하나의 약어만 사용할 때도 마찬가지다.
   - 약어도 camelCase를 적용하는 이유는 대표적으로
     1. **가독성**이 훨씬 좋다.
