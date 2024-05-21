@@ -27,20 +27,6 @@ mysql에서는 sharding을 하지만 비슷한 목적으로 dynamodb는 partitio
 따라서 저장공간이 10GB가 넘거나 WCU/RCU가 넘치는 경우 partition을 다시 나누도록 한다.
 
 
-## partitioning 주의사항
-
-그렇기 때문에 partition을 어떻게 나누느냐의 기준이되는 partition key가 굉장히 중요하다.  
-
-10GB가 되지 않는 경우 하나의 partition은 여러 개의 partition key를 가질 수 있다.  
-여러 개의 partition key를 가진 data set(partition)이 커질 경우 partition key를 기반으로 두 개의 partition으로 분리되는 방식이다.
-
-그렇지만 **하나의 partition key의 데이터가 여러 partition에 저장될 수는 없다.**  
-따라서 하나의 partition key로 저장 가능한 data는 10GB가 maximum이라는 것이다.
-
-key 설계를 잘못하게되면 heavy user에 대한 data에서 data 에러가 날 수 있다.  
-한 사람의 데이터라도 잘 분산해서 저장될 필요가 있다는 것.
-
-
 ## dynamodb 내부구조
 
 dynamo의 내부 architecture에 대해서 배우면 partition에 대한 제약들을 더 잘 이해할 수 있다.  
@@ -74,6 +60,13 @@ eventually consistancy에서 read를 할 경우
 -  물론 대부분의 case는 그 전에 업데이트 되는 편이다.
 
 strong consistance는 read를 할 경우 항상 leader node로 간다.
+
+
+## partitioning 참고사항
+
+10GB가 되지 않는 경우 하나의 partition은 여러 개의 partition key를 가질 수 있다.  
+여러 개의 partition key를 가진 data set(partition)이 커질 경우 partition key를 기반으로 두 개의 partition으로 분리된다.  
+하나의 partition key에 대한 data set이 커지는 경우에도 역시 partition key를 기반으로 partition이 분리된다. dynamodb가 내부적으로 hash된 값을 key로 사용하기 때문에 동일한 partition key에 대해 데이터가 커지는 경우도 커버할 수 있다.  
 
 
 ### reference
