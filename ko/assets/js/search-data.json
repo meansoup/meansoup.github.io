@@ -2877,25 +2877,25 @@
     "relUrl": "/docs/aws/dynamo/structure#partitioning"
   },"411": {
     "doc": "dynamo 내부구조 이해하기",
-    "title": "partitioning 주의사항",
-    "content": "그렇기 때문에 partition을 어떻게 나누느냐의 기준이되는 partition key가 굉장히 중요하다. 10GB가 되지 않는 경우 하나의 partition은 여러 개의 partition key를 가질 수 있다. 여러 개의 partition key를 가진 data set(partition)이 커질 경우 partition key를 기반으로 두 개의 partition으로 분리되는 방식이다. 그렇지만 하나의 partition key의 데이터가 여러 partition에 저장될 수는 없다. 따라서 하나의 partition key로 저장 가능한 data는 10GB가 maximum이라는 것이다. key 설계를 잘못하게되면 heavy user에 대한 data에서 data 에러가 날 수 있다. 한 사람의 데이터라도 잘 분산해서 저장될 필요가 있다는 것. ",
-    "url": "/docs/aws/dynamo/structure#partitioning-%EC%A3%BC%EC%9D%98%EC%82%AC%ED%95%AD",
-    
-    "relUrl": "/docs/aws/dynamo/structure#partitioning-주의사항"
-  },"412": {
-    "doc": "dynamo 내부구조 이해하기",
     "title": "dynamodb 내부구조",
     "content": "dynamo의 내부 architecture에 대해서 배우면 partition에 대한 제약들을 더 잘 이해할 수 있다. 위 그림처럼 . | dynamodb로 request가 들어오면 requestRouter 중에 한 곳으로 할당된다. | requestRouter에서 storageNode로 routing을 한다. | . 여기서 중요한 점은 storage node는 3개의 node로 이루어져 있다는 것인데, leaderNode와 2개의 followerNode이다. | db write가 발생하면 leaderNode가 업데이트되고 leaderNode가 followerNode에 data를 복제한다. | 3개 중 2개의 node가 업데이트가 되면 node에서 ack를 보낸다. | . ",
     "url": "/docs/aws/dynamo/structure#dynamodb-%EB%82%B4%EB%B6%80%EA%B5%AC%EC%A1%B0",
     
     "relUrl": "/docs/aws/dynamo/structure#dynamodb-내부구조"
-  },"413": {
+  },"412": {
     "doc": "dynamo 내부구조 이해하기",
     "title": "내부구조 보고 제약사항 이해하기",
-    "content": "위 개념을 이해하면 제약들을 이해하기 쉽다. 하나의 node는 1KB의 CU만을 갖는다. | read는 3개의 node에서 이뤄질 수 있으므로 RCU는 \\(1KB * 3 = 3KB\\). | write는 leaderNode에서만 이뤄지므로 WCU는 1KB. | . 각 node는 10GB의 저장공간을 가지므로 하나의 partition의 max size는 10GB. eventually consistancy에서 read를 할 경우 . | read 요청이 \\(1/3\\) 확률로 각 node로 가게 된다. | 위에서 말했듯 3개 중 2개의 node가 업데이트 되면 ack를 보내기 때문에 나머지 하나는 업데이트 되지 않았을 수 있다. | \\(1/3\\) 확률 &amp; 1/3의 노드가 아직 업데이트 되기 이전에, read 요청이 들어온 경우 old data를 가져갈 수 있다. | 물론 대부분의 case는 그 전에 업데이트 되는 편이다. | . strong consistance는 read를 할 경우 항상 leader node로 간다. reference . | AWS immersion day session 강의 | . ",
+    "content": "위 개념을 이해하면 제약들을 이해하기 쉽다. 하나의 node는 1KB의 CU만을 갖는다. | read는 3개의 node에서 이뤄질 수 있으므로 RCU는 \\(1KB * 3 = 3KB\\). | write는 leaderNode에서만 이뤄지므로 WCU는 1KB. | . 각 node는 10GB의 저장공간을 가지므로 하나의 partition의 max size는 10GB. eventually consistancy에서 read를 할 경우 . | read 요청이 \\(1/3\\) 확률로 각 node로 가게 된다. | 위에서 말했듯 3개 중 2개의 node가 업데이트 되면 ack를 보내기 때문에 나머지 하나는 업데이트 되지 않았을 수 있다. | \\(1/3\\) 확률 &amp; 1/3의 노드가 아직 업데이트 되기 이전에, read 요청이 들어온 경우 old data를 가져갈 수 있다. | 물론 대부분의 case는 그 전에 업데이트 되는 편이다. | . strong consistance는 read를 할 경우 항상 leader node로 간다. ",
     "url": "/docs/aws/dynamo/structure#%EB%82%B4%EB%B6%80%EA%B5%AC%EC%A1%B0-%EB%B3%B4%EA%B3%A0-%EC%A0%9C%EC%95%BD%EC%82%AC%ED%95%AD-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0",
     
     "relUrl": "/docs/aws/dynamo/structure#내부구조-보고-제약사항-이해하기"
+  },"413": {
+    "doc": "dynamo 내부구조 이해하기",
+    "title": "partitioning 참고사항",
+    "content": "10GB가 되지 않는 경우 하나의 partition은 여러 개의 partition key를 가질 수 있다. 여러 개의 partition key를 가진 data set(partition)이 커질 경우 partition key를 기반으로 두 개의 partition으로 분리된다. 하나의 partition key에 대한 data set이 커지는 경우에도 역시 partition key를 기반으로 partition이 분리된다. dynamodb가 내부적으로 hash된 값을 key로 사용하기 때문에 동일한 partition key에 대해 데이터가 커지는 경우도 커버할 수 있다. reference . | AWS immersion day session 강의 | . ",
+    "url": "/docs/aws/dynamo/structure#partitioning-%EC%B0%B8%EA%B3%A0%EC%82%AC%ED%95%AD",
+    
+    "relUrl": "/docs/aws/dynamo/structure#partitioning-참고사항"
   },"414": {
     "doc": "dynamo 내부구조 이해하기",
     "title": "dynamo 내부구조 이해하기",
@@ -5046,180 +5046,180 @@
     
     "relUrl": "/docs/algorithm/language/python/python-import-rootdir"
   },"721": {
+    "doc": "DynamoDB Secondary Index: 주의 사항 및 비용 이슈",
+    "title": "GSI (Global Secondary Index)",
+    "content": "GSI는 이 인덱스에 대한 쿼리가 모든 파티션을 아우르며, 특정 파티션에 국한되지 않고 테이블 전체를 대상으로 쿼리를 수행할 수 있다는 점 때문에 Global 이라는 표현을 사용한다. | 파티션 키와 필요하다면 정렬 키를 가질 수 있으며 이는 원래 테이블의 파티션 키와 정렬 키와는 다른 값이다. | 키 값이 고유할 필요는 없다. | 테이블이 생성될 때 생성되거나 기존 테이블에 추가할 수 있다. | 테이블 생성 이후 삭제될 수 있다. | 최종 일관성만 지원한다. | 읽기 및 쓰기 작업에 대한 처리량(RCU, WCU)을 별도로 설정한다. | 쿼리는 인덱스에 프로젝션된 속성만 반환한다. | GSI는 최대 20개까지 생성할 수 있다. | . GSI의 파티션 . GSI에서는 키 값이 고유할 필요는 없다. 는 이유로, 동일한 key에 여러 데이터를 쌓을 수 있으며 이를 통해 GSI는 메인 테이블에서 할 수 없는 데이터 구조를 가져갈 수 있다. 예를 들면, main table에 name, age, country, passportNo이 있다고 하자. 고유한 값을 위해 primary key를 passportNo로 설정할 수 있을 것이다. 그런데 국가별로 query가 필요한 Usecase가 있다면, country를 GSI의 기본키로 선택할 수 있다. 이렇게 되면 country라는 동일한 key에 대해 고유하지 않은 여러 데이터를 쌓고 가져올 수 있는 구조를 만들 수 있다. 이런 구조가 안전할까? GSI는 내부에서 key를 가지고 샤딩하면서 partition을 나눠주기 때문에 안전하다. 동일한 key로 이론상으로는 제한 없이 데이터를 넣을 수 있는 것이다. 사실 이건 main table도 동일하나, main table에서는 동일한 primary key에 대해 여러 데이터를 가질 수 없다. GSI의 CU (Capacity Unit) . GSI는 main table과 CU가 분리되어 있다. GSI에서 읽을 때, 쓸 때 CU를 각각 소모한다는 것인데, main table 동작과도 연관이 있다. GSI의 RCU의 경우 throttling이 나더라도 main table에 영향을 주지 않는다. GSI의 WCU의 경우 throttling이 나는 경우 main table의 write도 실패하게 된다. DynamoDB는 내부적으로 main table과 변경되는 데이터와 관련된 GSI를 모두 write1 하기 때문에 GSI에 write가 실패하는 경우 main table도 실패하게 된다. 정리하자면 DynamoDB의 write는 GSI의 write로 이어진다. DynamoDB의 update는 경우에 따라 GSI의 delete &amp; write로 이어질 수 있다. 위의 예시를 다시 보면, country가 KR에서 US로 바뀌는 경우 GSI의 KR 키에 프로젝션된 데이터가 delete 되고, US 키에 프로젝션된 데이터가 write 된다. 이 케이스에선 DynamoDB write 하나에 2개의 CU가 소모된다. DynamoDB의 요금에서 상당수를 차지하는 것이 CU이기 때문에 write 한번에 3개의 CU(main table write 1번 + GSI write 2번)을 사용하는 데이터 구조는 비용 측면에서 좋은 방향은 아니다. DynamoDB table에 여러 개의 GSI가 적용될 수 있기 때문에, DynamoDB의 GSI를 설계할 때 비용 측면도 같이 고려될 필요가 있다. ",
+    "url": "/docs/aws/dynamo/si#gsi-global-secondary-index",
+    
+    "relUrl": "/docs/aws/dynamo/si#gsi-global-secondary-index"
+  },"722": {
+    "doc": "DynamoDB Secondary Index: 주의 사항 및 비용 이슈",
+    "title": "LSI (Local Secondary Index)",
+    "content": "LSI는 인덱스가 특정 파티션 키를 가진 항목과 같은 테이블 파티션에 위치해 있기 때문에 Local 이라고 표현한다. 즉, 같은 파티션 키 값을 가진 애들에 대한 쿼리로 지정된 파티션 키 값의 데이터만 쿼리할 수 있다. | Local Secondary Index의 파티션 키는 테이블의 파티션 키와 같다. | 테이블이 생성될 때만 생성될 수 있다. | 테이블 생성 이후 삭제될 수 없다. | 최종 일관성과 강력한 일관성을 지원한다. | 별도로 프로비저닝된 처리량이 없이 테이블의 읽기 및 쓰기 용량을 사용한다. | 쿼리는 인덱스에 프로젝션되지 않은 속성을 반환할 수 있다. | 테이블에서 특정 파티션 키를 갖는 모든 항목과 이에 상응하는 Local Secondary Index 항목이 같은 파티션에 저장된다. 이런 항목 모음의 총 크기는 10GB를 초과할 수 없다. | LSI는 최대 5개까지 생성할 수 있다. | . LSI는 명확한 단점들이 있고, GSI 대비 장점이 뚜렷하지 않아 현재는 권장되지 않는다. | LSI의 경우 추가/삭제할 수 없다. | main table의 자원을 같이 사용한다. | partition key 별 10GB의 크기 제한이 존재한다. | . 대신 GSI를 사용하는 것이 좋다. | main table과 GSI table의 상관관계와 GSI CU 부족 시 main table의 영향도를 참고할 수 있다. &#8617; . | . ",
+    "url": "/docs/aws/dynamo/si#lsi-local-secondary-index",
+    
+    "relUrl": "/docs/aws/dynamo/si#lsi-local-secondary-index"
+  },"723": {
+    "doc": "DynamoDB Secondary Index: 주의 사항 및 비용 이슈",
+    "title": "DynamoDB Secondary Index: 주의 사항 및 비용 이슈",
+    "content": "DynamoDB의 효율적인 query를 위해서 Secondary Index의 활용이 필요하다. DynamoDB에서는 Secondary Index를 사용하여 기본키 외에 대체키를 통해 테이블에서 데이터를 쿼리할 수 있다. Secondary Index는 아래 내용들을 포함한다. | 대체키 속성, 기본키 속성, 기본 테이블에 포함된 다른 속성의 선택적 하위 세트(프로젝션된 속성) | . DynamoDB는 자동으로 테이블의 기본키를 기반으로 인덱스를 생성하고 테이블이 변경될 때마다 자동으로 모든 인덱스를 업데이트한다. DynamoDB는 GSI, LSI 두 종류의 Secondary Index를 지원한다. LSI는 현재 AWS에서도 사용을 지양하고 있기 때문에 GSI 위주로 개념과 사용하면서 겪었던 주의사항들, LSI를 사용하지 않는 이유를 정리한다. ",
+    "url": "/docs/aws/dynamo/si",
+    
+    "relUrl": "/docs/aws/dynamo/si"
+  },"724": {
     "doc": "About",
     "title": "About",
     "content": "다양한 종류의 데이터 동기화, 백업과 서비스 서버를 개발하고 있습니다. 하루 수 억건에 달하는 트래픽과 이를 처리하는 서버를 설계하고 개발합니다. ",
     "url": "/about/",
     
     "relUrl": "/about/"
-  },"722": {
+  },"725": {
     "doc": "Algorithm",
     "title": "Algorithm",
     "content": " ",
     "url": "/docs/algorithm",
     
     "relUrl": "/docs/algorithm"
-  },"723": {
+  },"726": {
     "doc": "APIs",
     "title": "APIs",
     "content": " ",
     "url": "/docs/apis/",
     
     "relUrl": "/docs/apis/"
-  },"724": {
+  },"727": {
     "doc": "Architecture",
     "title": "Architecture",
     "content": " ",
     "url": "/docs/design/",
     
     "relUrl": "/docs/design/"
-  },"725": {
+  },"728": {
     "doc": "aws",
     "title": "aws",
     "content": "AWS에서 시행하는 training 과정을 수료하면서 정리한 내용. | Developing on AWS | Advanced Developing on AWS | . 그리고 내가 사용하면서 정리한 내용. ",
     "url": "/docs/aws",
     
     "relUrl": "/docs/aws"
-  },"726": {
+  },"729": {
     "doc": "blog",
     "title": "blog",
     "content": " ",
     "url": "/docs/blog",
     
     "relUrl": "/docs/blog"
-  },"727": {
+  },"730": {
     "doc": "career",
     "title": "career",
     "content": " ",
     "url": "/docs/career/",
     
     "relUrl": "/docs/career/"
-  },"728": {
+  },"731": {
     "doc": "-",
     "title": "-",
     "content": " ",
     "url": "/partition/10",
     
     "relUrl": "/partition/10"
-  },"729": {
+  },"732": {
     "doc": "-",
     "title": "-",
     "content": " ",
     "url": "/partition/20",
     
     "relUrl": "/partition/20"
-  },"730": {
+  },"733": {
     "doc": "-",
     "title": "-",
     "content": " ",
     "url": "/partition/30",
     
     "relUrl": "/partition/30"
-  },"731": {
+  },"734": {
     "doc": "-",
     "title": "-",
     "content": " ",
     "url": "/partition/40",
     
     "relUrl": "/partition/40"
-  },"732": {
+  },"735": {
     "doc": "-",
     "title": "-",
     "content": " ",
     "url": "/partition/50",
     
     "relUrl": "/partition/50"
-  },"733": {
+  },"736": {
     "doc": "-",
     "title": "-",
     "content": " ",
     "url": "/partition/90",
     
     "relUrl": "/partition/90"
-  },"734": {
+  },"737": {
     "doc": "db 개념",
     "title": "db 개념",
     "content": " ",
     "url": "/docs/db/concept",
     
     "relUrl": "/docs/db/concept"
-  },"735": {
+  },"738": {
     "doc": "c++",
     "title": "c++",
     "content": " ",
     "url": "/docs/language/cpp",
     
     "relUrl": "/docs/language/cpp"
-  },"736": {
+  },"739": {
     "doc": "Database",
     "title": "Database",
     "content": " ",
     "url": "/docs/db",
     
     "relUrl": "/docs/db"
-  },"737": {
+  },"740": {
     "doc": "Domain Driven Design",
     "title": "Domain Driven Design",
     "content": "Vaughn Vernon의 IDDD 예제 코드 . | https://github.com/VaughnVernon/IDDD_Samples | . ",
     "url": "/docs/ddd",
     
     "relUrl": "/docs/ddd"
-  },"738": {
+  },"741": {
     "doc": "Tools",
     "title": "Tools",
     "content": " ",
     "url": "/docs/dev-tools/",
     
     "relUrl": "/docs/dev-tools/"
-  },"739": {
+  },"742": {
     "doc": "DynamoDB",
     "title": "database option",
     "content": "AWS에는 DynamoDB 외에도 다양한 DB 서비스를 지원하고 있다. RDS: Aurora, PostgreSQL, MySQL, MariaDB, Oracle 등 다양한 관계형 데이터베이스 서비스를 제공한다. RDB를 간편하게 설정하고 크기 조정이 가능하다. DB 관리를 AWS에서 해줘서 서비스에 집중할 수 있다. | ex) 소프트웨어 패치, 데이터베이스 백업 | . Aurora: MySQL, PostgreSQL 호환 RDB로 MySQL보다 최대 5배 빠르며 1/10 수준 비용으로 서비스를 제공함. MySQL, PostgreSQL 보다 더 높은 처리량을 가지며 쉽게 확장/축소할 수 있음. Aurora Serverless 서비스도 있음. Redshift: 완전 관리형 데이터 웨어하우스. (나무위키 웨어하우스 참고. 의사 결정을 위한 데이터 사용) 기존 솔루션 비용의 1/10 미만으로 페타바이트 규모로 확장할 수 있음. 다양한 개방형 형식(csv, json, …) 지원. Neptune: 완전관리형 그래프 데이터베이스. ElastiCache: memCache나 Redis를 관리하는 관리형 상태로 지원하는 서비스. in memory data store, cache를 쉽게 배포/운영할 수 있음. 당연히 메모리를 사용하니까 DB보다 빠른 검색을 지원하고, 성능 향상을 볼 수 있다. Redis나 memcache를 활용하는 것으로 얘네의 장점을 보다 쉽게 적용할 수 있다. ",
     "url": "/docs/aws/dynamo#database-option",
     
     "relUrl": "/docs/aws/dynamo#database-option"
-  },"740": {
+  },"743": {
     "doc": "DynamoDB",
     "title": "DynamoDB 구성",
     "content": "DynamoDB는 테이블, 항목, 속성으로 구성되고 각 항목들은 키 값을 갖는다. | 각각 엑셀의 시트, 행, 열로 생각할 수 있다. | . 스키마가 고정되어 있지 않기 때문에 항목에 속성의 추가가 자유롭다. DynamoDB는 테이블의 항목을 파티션 키에 따라 여러 항목으로 나누고 파티션은 스토리지로 백업되고 리전 내의 복수의 AZ에 자동으로 복제된다. | 파티션 단위로 다른 위치에 저장될 수 있다는 것. | . 데이터에 접근할 때는 파티션 키를 통해 접근하기 때문에 파티션 키는 고유한 값이어야 한다. 정렬 키는 선택적으로 사용되며 동일한 파티션 키를 사용하고 싶다면 정렬 키를 사용하여 파티션 키 + 정렬 키의 값이 고유하도록 구성할 수 있다. | ex) 파티션 키는 sessionId, 정렬 키는 Time으로 동일한 세션에 대해 같은 파티션을 사용하도록 하고 시간에 따라 값을 저장할 수 있다. | . ",
     "url": "/docs/aws/dynamo#dynamodb-%EA%B5%AC%EC%84%B1",
     
     "relUrl": "/docs/aws/dynamo#dynamodb-구성"
-  },"741": {
+  },"744": {
     "doc": "DynamoDB",
     "title": "일관성",
     "content": "DynamoDB는 일관성 수준을 지원한다. 여기서 일관성은 찰나의 시간에 쓰여진 데이터를 받아오는지에 대한 여부이다. 최종적 일관성 - 읽기 작업이 쓰기 작업 이후에 수행되는 경우 약간 오래된 데이터를 반환할 수 있음. 강력한 일관성 - 가장 최신 데이터를 반환. 트랜잭션 - ACID를 요구. 읽고 쓰기가 끝나는 것이 하나의 트랜잭션임을 보장하는 것. (계좌이체) . ",
     "url": "/docs/aws/dynamo#%EC%9D%BC%EA%B4%80%EC%84%B1",
     
     "relUrl": "/docs/aws/dynamo#일관성"
-  },"742": {
+  },"745": {
     "doc": "DynamoDB",
     "title": "처리량",
     "content": "한 번에 들어온 요청에 대해 어느 정도까지 처리할 수 있는지 capacity를 설정할 수 있다. 처리량은 파티션 간에 균등하게 나뉜다. (파티션당 처리량 = capacity / 파티션 수) RCU - 최대 4KB 규모의 객체에 강력한 일관된 읽기를 수행할 수 있는 건수. WCU - 1KB 쓰기를 수행할 수 있는 초당 건수. ",
     "url": "/docs/aws/dynamo#%EC%B2%98%EB%A6%AC%EB%9F%89",
     
     "relUrl": "/docs/aws/dynamo#처리량"
-  },"743": {
-    "doc": "DynamoDB",
-    "title": "보조 인덱스",
-    "content": "보조 인덱스를 사용하여 기본 키 외에 대체키를 통해 테이블에서 데이터를 쿼리할 수 있다. 보조 인덱스는 아래 내용들을 포함한다. 대체키 속성, 기본키 속성, 기본 테이블에 포함된 다른 속성의 선택적 하위 세트(프로젝션된 속성) . GSI(글로벌 보조 인덱스), LSI(로컬 보조 인덱스) 중 하나의 유형을 갖으며 테이블당 최대 5개의 GSI와 LSI를 각각 정의할 수 있다. DynamoDB는 자동으로 테이블의 기본 키를 기반으로 인덱스를 생성하고 테이블이 변경될 때마다 자동으로 모든 인덱스를 업데이트한다. AWS 보조인덱스 참고. ",
-    "url": "/docs/aws/dynamo#%EB%B3%B4%EC%A1%B0-%EC%9D%B8%EB%8D%B1%EC%8A%A4",
-    
-    "relUrl": "/docs/aws/dynamo#보조-인덱스"
-  },"744": {
-    "doc": "DynamoDB",
-    "title": "GSI",
-    "content": "글로벌 보조 인덱스는 이 인덱스에 대한 쿼리가 모든 파티션에 있는 테이블의 모든 항목을 포괄할 수 있기 때문에 글로벌로 간주된다. | 파티션 키와 선택적으로 정렬 키를 가질 수 있으며 이는 원래 테이블의 파티션 키와 정렬 키와는 다른 값이다. | 키 값이 고유할 필요는 없다. | 테이블이 생성될 때 생성되거나 기존 테이블에 추가할 수 있다. | 삭제될 수 있다. | 최종 일관성만 지원한다. | 읽기 및 쓰기 작업에 대한 프로비저닝된 처리량을 별도로 설정한다. | 쿼리는 인덱스에 프로젝션된 속성만 반환한다. | . ",
-    "url": "/docs/aws/dynamo#gsi",
-    
-    "relUrl": "/docs/aws/dynamo#gsi"
-  },"745": {
-    "doc": "DynamoDB",
-    "title": "LSI",
-    "content": "로컬 보조 인덱스는 인덱스가 특정 파티션 키를 가진 항목과 같은 테이블 파티션에 위치해 있기 때문에 로컬이라고 간주된다. 즉, 같은 파티션 키 값을 가진 애들에 대한 쿼리로 지정된 파티션 키 값의 데이터만 쿼리할 수 있다. | 로컬 보조 인덱스의 파티션 키는 테이블의 파티션 키와 같다. | 테이블이 생성될 때만 생성될 수 있다. | 삭제될 수 없다. | 최종 일관성과 강력한 일관성을 지원한다. | 별도로 프로비저닝된 처리량이 없이 테이블의 읽기 및 쓰기 용량을 사용한다. | 쿼리는 인덱스에 프로젝션되지 않은 속성을 반환할 수 있다. | 테이블에서 특정 파티션 키를 갖는 모든 항목과 이에 상응하는 로컬 보조 인덱스 항목이 같은 파티션에 저장된다. 이런 항목 모음의 총 크기는 10GB를 초과할 수 없다. | . | 특성 | GSI | LSI | . | 쿼리 범위 | 모든 파티션의 전체 테이블 | 쿼리의 파티션 키 값으로 지정한 단일 파티션 | . | 키 속성 | 파티션 키 또는 파티션 및 정렬 키테이블의 모든 스칼라 속성이 될 수 있음 | 파티션 키 및 정렬 키파티션 키와 동일한 속성이어야 함 | . | 프로젝션된 속성 | 프로젝션된 속성만 쿼리할 수 있음 | 프로젝션되지 않은 속성을 쿼리할 수 있음.기본 테이블에서 검색됨 | . | 읽기 일관성 | 최종 일관성만 | 최종 일관성 또는 강력한 일관성 | . | 프로비저닝된 처리량 | 기본 테이블과 구분된 처리량을 별도로 설정별도의 용량 단위 사용 | 기본 테이블과 동일한 처리량 설정동일한 용량 단위 사용 | . | 수명 주기 고려 사항 | 언제든지 생성/삭제할 수 있음 | 테이블 생성시 생성해야함테이블을 삭제하지 않는 한 삭제할 수 없음 | . ",
-    "url": "/docs/aws/dynamo#lsi",
-    
-    "relUrl": "/docs/aws/dynamo#lsi"
   },"746": {
     "doc": "DynamoDB",
     "title": "스트림",

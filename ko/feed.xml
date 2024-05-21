@@ -5,7 +5,7 @@
     <description>backend tech, log</description>
     <link>https://backendbrew.com/</link>
     <atom:link href="https://backendbrew.com/ko/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2024-05-18T06:42:44+00:00</updated>
+    <updated>2024-05-21T16:43:37+00:00</updated>
     <id>https://backendbrew.com</id>
     <author>
       <name></name>
@@ -12189,19 +12189,6 @@ WCU, RCU, partition의 max size.&lt;br /&gt;
 &lt;p&gt;이 partition 하나는 10GB를 저장할 수 있고, WCU는 1KB, RCU는 3KB까지 수용할 수 있다.&lt;br /&gt;
 따라서 저장공간이 10GB가 넘거나 WCU/RCU가 넘치는 경우 partition을 다시 나누도록 한다.&lt;/p&gt;
 
-&lt;h2 id=&quot;partitioning-주의사항&quot;&gt;partitioning 주의사항&lt;/h2&gt;
-
-&lt;p&gt;그렇기 때문에 partition을 어떻게 나누느냐의 기준이되는 partition key가 굉장히 중요하다.&lt;/p&gt;
-
-&lt;p&gt;10GB가 되지 않는 경우 하나의 partition은 여러 개의 partition key를 가질 수 있다.&lt;br /&gt;
-여러 개의 partition key를 가진 data set(partition)이 커질 경우 partition key를 기반으로 두 개의 partition으로 분리되는 방식이다.&lt;/p&gt;
-
-&lt;p&gt;그렇지만 &lt;strong&gt;하나의 partition key의 데이터가 여러 partition에 저장될 수는 없다.&lt;/strong&gt;&lt;br /&gt;
-따라서 하나의 partition key로 저장 가능한 data는 10GB가 maximum이라는 것이다.&lt;/p&gt;
-
-&lt;p&gt;key 설계를 잘못하게되면 heavy user에 대한 data에서 data 에러가 날 수 있다.&lt;br /&gt;
-한 사람의 데이터라도 잘 분산해서 저장될 필요가 있다는 것.&lt;/p&gt;
-
 &lt;h2 id=&quot;dynamodb-내부구조&quot;&gt;dynamodb 내부구조&lt;/h2&gt;
 
 &lt;p&gt;dynamo의 내부 architecture에 대해서 배우면 partition에 대한 제약들을 더 잘 이해할 수 있다.&lt;/p&gt;
@@ -12242,6 +12229,12 @@ WCU, RCU, partition의 max size.&lt;br /&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;strong consistance는 read를 할 경우 항상 leader node로 간다.&lt;/p&gt;
+
+&lt;h2 id=&quot;partitioning-참고사항&quot;&gt;partitioning 참고사항&lt;/h2&gt;
+
+&lt;p&gt;10GB가 되지 않는 경우 하나의 partition은 여러 개의 partition key를 가질 수 있다.&lt;br /&gt;
+여러 개의 partition key를 가진 data set(partition)이 커질 경우 partition key를 기반으로 두 개의 partition으로 분리된다.&lt;br /&gt;
+하나의 partition key에 대한 data set이 커지는 경우에도 역시 partition key를 기반으로 partition이 분리된다. dynamodb가 내부적으로 hash된 값을 key로 사용하기 때문에 동일한 partition key에 대해 데이터가 커지는 경우도 커버할 수 있다.&lt;/p&gt;
 
 &lt;h3 id=&quot;reference&quot;&gt;reference&lt;/h3&gt;
 
@@ -18790,6 +18783,110 @@ python에서 import를 하기 위해선 적절한 path를 찾아서 &lt;code cla
       </item>
     
       <item>
+        <title>DynamoDB Secondary Index: 주의 사항 및 비용 이슈</title>
+        
+          <description>&lt;p&gt;DynamoDB의 효율적인 query를 위해서 Secondary Index의 활용이 필요하다.&lt;/p&gt;
+
+&lt;p&gt;DynamoDB에서는 Secondary Index를 사용하여 기본키 외에 대체키를 통해 테이블에서 데이터를 쿼리할 수 있다.&lt;br /&gt;
+Secondary Index는 아래 내용들을 포함한다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;대체키 속성, 기본키 속성, 기본 테이블에 포함된 다른 속성의 선택적 하위 세트(프로젝션된 속성)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;DynamoDB는 자동으로 테이블의 기본키를 기반으로 인덱스를 생성하고 테이블이 변경될 때마다 자동으로 모든 인덱스를 업데이트한다.&lt;/p&gt;
+
+&lt;p&gt;DynamoDB는 GSI, LSI 두 종류의 Secondary Index를 지원한다.&lt;br /&gt;
+LSI는 현재 AWS에서도 사용을 지양하고 있기 때문에 GSI 위주로 개념과 사용하면서 겪었던 주의사항들, LSI를 사용하지 않는 이유를 정리한다.&lt;/p&gt;
+
+&lt;h2 id=&quot;gsi-global-secondary-index&quot;&gt;GSI (Global Secondary Index)&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;GSI&lt;/strong&gt;는 이 인덱스에 대한 쿼리가 모든 파티션을 아우르며, 특정 파티션에 국한되지 않고 테이블 전체를 대상으로 쿼리를 수행할 수 있다는 점 때문에 Global 이라는 표현을 사용한다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;파티션 키와 필요하다면 정렬 키를 가질 수 있으며 이는 원래 테이블의 파티션 키와 정렬 키와는 다른 값이다.&lt;/li&gt;
+  &lt;li&gt;키 값이 고유할 필요는 없다.&lt;/li&gt;
+  &lt;li&gt;테이블이 생성될 때 생성되거나 기존 테이블에 추가할 수 있다.&lt;/li&gt;
+  &lt;li&gt;테이블 생성 이후 삭제될 수 있다.&lt;/li&gt;
+  &lt;li&gt;최종 일관성만 지원한다.&lt;/li&gt;
+  &lt;li&gt;읽기 및 쓰기 작업에 대한 처리량(RCU, WCU)을 별도로 설정한다.&lt;/li&gt;
+  &lt;li&gt;쿼리는 인덱스에 프로젝션된 속성만 반환한다.&lt;/li&gt;
+  &lt;li&gt;GSI는 최대 20개까지 생성할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;gsi의-파티션&quot;&gt;GSI의 파티션&lt;/h3&gt;
+
+&lt;p&gt;GSI에서는 &lt;strong&gt;키 값이 고유할 필요는 없다.&lt;/strong&gt; 는 이유로, 동일한 key에 여러 데이터를 쌓을 수 있으며 이를 통해 GSI는 메인 테이블에서 할 수 없는 데이터 구조를 가져갈 수 있다.&lt;/p&gt;
+
+&lt;p&gt;예를 들면, main table에 &lt;strong&gt;name, age, country, passportNo&lt;/strong&gt;이 있다고 하자.&lt;br /&gt;
+고유한 값을 위해 primary key를 passportNo로 설정할 수 있을 것이다.&lt;/p&gt;
+
+&lt;p&gt;그런데 국가별로 query가 필요한 Usecase가 있다면, country를 GSI의 기본키로 선택할 수 있다.&lt;br /&gt;
+이렇게 되면 country라는 동일한 key에 대해 고유하지 않은 여러 데이터를 쌓고 가져올 수 있는 구조를 만들 수 있다.&lt;/p&gt;
+
+&lt;p&gt;이런 구조가 안전할까?&lt;br /&gt;
+GSI는 내부에서 key를 가지고 샤딩하면서 partition을 나눠주기 때문에 안전하다.&lt;br /&gt;
+동일한 key로 이론상으로는 제한 없이 데이터를 넣을 수 있는 것이다.  &lt;br /&gt;
+사실 이건 main table도 동일하나, main table에서는 동일한 primary key에 대해 여러 데이터를 가질 수 없다.&lt;/p&gt;
+
+&lt;h3 id=&quot;gsi의-cu-capacity-unit&quot;&gt;GSI의 CU (Capacity Unit)&lt;/h3&gt;
+
+&lt;p&gt;GSI는 main table과 CU가 분리되어 있다.&lt;br /&gt;
+GSI에서 읽을 때, 쓸 때 CU를 각각 소모한다는 것인데, main table 동작과도 연관이 있다.&lt;/p&gt;
+
+&lt;p&gt;GSI의 RCU의 경우 throttling이 나더라도 main table에 영향을 주지 않는다.&lt;br /&gt;
+GSI의 WCU의 경우 throttling이 나는 경우 main table의 write도 실패하게 된다.&lt;br /&gt;
+DynamoDB는 내부적으로 &lt;u&gt;main table과 변경되는 데이터와 관련된 GSI를 모두 write&lt;/u&gt;&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; 하기 때문에 GSI에 write가 실패하는 경우 main table도 실패하게 된다.&lt;/p&gt;
+
+&lt;p&gt;정리하자면 DynamoDB의 write는 GSI의 write로 이어진다.&lt;br /&gt;
+DynamoDB의 update는 경우에 따라 GSI의 delete &amp;amp; write로 이어질 수 있다.&lt;/p&gt;
+
+&lt;p&gt;위의 예시를 다시 보면, country가 KR에서 US로 바뀌는 경우 GSI의 KR 키에 프로젝션된 데이터가 delete 되고, US 키에 프로젝션된 데이터가 write 된다.&lt;br /&gt;
+이 케이스에선 DynamoDB write 하나에 2개의 CU가 소모된다.&lt;/p&gt;
+
+&lt;p&gt;DynamoDB의 요금에서 상당수를 차지하는 것이 CU이기 때문에 write 한번에 3개의 CU(main table write 1번 + GSI write 2번)을 사용하는 데이터 구조는 비용 측면에서 좋은 방향은 아니다.&lt;br /&gt;
+DynamoDB table에 여러 개의 GSI가 적용될 수 있기 때문에, DynamoDB의 GSI를 설계할 때 비용 측면도 같이 고려될 필요가 있다.&lt;/p&gt;
+
+&lt;h2 id=&quot;lsi-local-secondary-index&quot;&gt;LSI (Local Secondary Index)&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;LSI&lt;/strong&gt;는 인덱스가 특정 파티션 키를 가진 항목과 같은 테이블 파티션에 위치해 있기 때문에 Local 이라고 표현한다.  &lt;br /&gt;
+즉, 같은 파티션 키 값을 가진 애들에 대한 쿼리로 지정된 파티션 키 값의 데이터만 쿼리할 수 있다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Local Secondary Index의 파티션 키는 테이블의 파티션 키와 같다.&lt;/li&gt;
+  &lt;li&gt;테이블이 생성될 때만 생성될 수 있다.&lt;/li&gt;
+  &lt;li&gt;테이블 생성 이후 삭제될 수 없다.&lt;/li&gt;
+  &lt;li&gt;최종 일관성과 강력한 일관성을 지원한다.&lt;/li&gt;
+  &lt;li&gt;별도로 프로비저닝된 처리량이 없이 테이블의 읽기 및 쓰기 용량을 사용한다.&lt;/li&gt;
+  &lt;li&gt;쿼리는 인덱스에 프로젝션되지 않은 속성을 반환할 수 있다.&lt;/li&gt;
+  &lt;li&gt;테이블에서 특정 파티션 키를 갖는 모든 항목과 이에 상응하는 Local Secondary Index 항목이 같은 파티션에 저장된다. 이런 항목 모음의 총 크기는 10GB를 초과할 수 없다.&lt;/li&gt;
+  &lt;li&gt;LSI는 최대 5개까지 생성할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;LSI는 명확한 단점들이 있고, GSI 대비 장점이 뚜렷하지 않아 현재는 권장되지 않는다.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;LSI의 경우 추가/삭제할 수 없다.&lt;/li&gt;
+  &lt;li&gt;main table의 자원을 같이 사용한다.&lt;/li&gt;
+  &lt;li&gt;partition key 별 10GB의 크기 제한이 존재한다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;대신 GSI를 사용하는 것이 좋다.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GSI.html#GSI.ThroughputConsiderations&quot;&gt;main table과 GSI table의 상관관계&lt;/a&gt;와 &lt;a href=&quot;https://repost.aws/knowledge-center/dynamodb-gsi-throttling-table&quot;&gt;GSI CU 부족 시 main table의 영향도&lt;/a&gt;를 참고할 수 있다. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        
+        <pubDate></pubDate>
+        <link>https://backendbrew.com/docs/aws/dynamo/si</link>
+        <guid isPermaLink="true">https://backendbrew.com/docs/aws/dynamo/si</guid>
+      </item>
+    
+      <item>
         <title></title>
         
           <description>&lt;style type=&quot;text/css&quot; media=&quot;screen&quot;&gt;
@@ -19099,87 +19196,6 @@ Redis나 memcache를 활용하는 것으로 얘네의 장점을 보다 쉽게 �
 처리량은 파티션 간에 균등하게 나뉜다. (파티션당 처리량 = capacity / 파티션 수)&lt;br /&gt;
 &lt;strong&gt;RCU&lt;/strong&gt; - 최대 4KB 규모의 객체에 강력한 일관된 읽기를 수행할 수 있는 건수.&lt;br /&gt;
 &lt;strong&gt;WCU&lt;/strong&gt; - 1KB 쓰기를 수행할 수 있는 초당 건수.&lt;/p&gt;
-
-&lt;h2 id=&quot;보조-인덱스&quot;&gt;보조 인덱스&lt;/h2&gt;
-&lt;p&gt;보조 인덱스를 사용하여 기본 키 외에 대체키를 통해 테이블에서 데이터를 쿼리할 수 있다.&lt;br /&gt;
-보조 인덱스는 아래 내용들을 포함한다.&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;대체키 속성, 기본키 속성, 기본 테이블에 포함된 다른 속성의 선택적 하위 세트(프로젝션된 속성)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;GSI(글로벌 보조 인덱스), LSI(로컬 보조 인덱스) 중 하나의 유형을 갖으며 테이블당 최대 5개의 GSI와 LSI를 각각 정의할 수 있다.&lt;br /&gt;
-DynamoDB는 자동으로 테이블의 기본 키를 기반으로 인덱스를 생성하고 테이블이 변경될 때마다 자동으로 모든 인덱스를 업데이트한다.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/SecondaryIndexes.html&quot;&gt;AWS 보조인덱스&lt;/a&gt; 참고.&lt;/p&gt;
-
-&lt;h2 id=&quot;gsi&quot;&gt;GSI&lt;/h2&gt;
-&lt;p&gt;글로벌 보조 인덱스는 이 인덱스에 대한 쿼리가 모든 파티션에 있는 테이블의 모든 항목을 포괄할 수 있기 때문에 글로벌로 간주된다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;파티션 키와 선택적으로 정렬 키를 가질 수 있으며 이는 원래 테이블의 파티션 키와 정렬 키와는 다른 값이다.&lt;/li&gt;
-  &lt;li&gt;키 값이 고유할 필요는 없다.&lt;/li&gt;
-  &lt;li&gt;테이블이 생성될 때 생성되거나 기존 테이블에 추가할 수 있다.&lt;/li&gt;
-  &lt;li&gt;삭제될 수 있다.&lt;/li&gt;
-  &lt;li&gt;최종 일관성만 지원한다.&lt;/li&gt;
-  &lt;li&gt;읽기 및 쓰기 작업에 대한 프로비저닝된 처리량을 별도로 설정한다.&lt;/li&gt;
-  &lt;li&gt;쿼리는 인덱스에 프로젝션된 속성만 반환한다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;lsi&quot;&gt;LSI&lt;/h2&gt;
-&lt;p&gt;로컬 보조 인덱스는 인덱스가 특정 파티션 키를 가진 항목과 같은 테이블 파티션에 위치해 있기 때문에 로컬이라고 간주된다.&lt;br /&gt;
-즉, 같은 파티션 키 값을 가진 애들에 대한 쿼리로 지정된 파티션 키 값의 데이터만 쿼리할 수 있다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;로컬 보조 인덱스의 파티션 키는 테이블의 파티션 키와 같다.&lt;/li&gt;
-  &lt;li&gt;테이블이 생성될 때만 생성될 수 있다.&lt;/li&gt;
-  &lt;li&gt;삭제될 수 없다.&lt;/li&gt;
-  &lt;li&gt;최종 일관성과 강력한 일관성을 지원한다.&lt;/li&gt;
-  &lt;li&gt;별도로 프로비저닝된 처리량이 없이 테이블의 읽기 및 쓰기 용량을 사용한다.&lt;/li&gt;
-  &lt;li&gt;쿼리는 인덱스에 프로젝션되지 않은 속성을 반환할 수 있다.&lt;/li&gt;
-  &lt;li&gt;테이블에서 특정 파티션 키를 갖는 모든 항목과 이에 상응하는 로컬 보조 인덱스 항목이 같은 파티션에 저장된다. 이런 항목 모음의 총 크기는 10GB를 초과할 수 없다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;특성&lt;/th&gt;
-      &lt;th&gt;GSI&lt;/th&gt;
-      &lt;th&gt;LSI&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;쿼리 범위&lt;/td&gt;
-      &lt;td&gt;모든 파티션의 전체 테이블&lt;/td&gt;
-      &lt;td&gt;쿼리의 파티션 키 값으로 지정한 단일 파티션&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;키 속성&lt;/td&gt;
-      &lt;td&gt;파티션 키 또는 파티션 및 정렬 키&lt;br /&gt;테이블의 모든 스칼라 속성이 될 수 있음&lt;/td&gt;
-      &lt;td&gt;파티션 키 및 정렬 키&lt;br /&gt;파티션 키와 동일한 속성이어야 함&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;프로젝션된 속성&lt;/td&gt;
-      &lt;td&gt;프로젝션된 속성만 쿼리할 수 있음&lt;/td&gt;
-      &lt;td&gt;프로젝션되지 않은 속성을 쿼리할 수 있음.&lt;br /&gt;기본 테이블에서 검색됨&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;읽기 일관성&lt;/td&gt;
-      &lt;td&gt;최종 일관성만&lt;/td&gt;
-      &lt;td&gt;최종 일관성 또는 강력한 일관성&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;프로비저닝된 처리량&lt;/td&gt;
-      &lt;td&gt;기본 테이블과 구분된 처리량을 별도로 설정&lt;br /&gt;별도의 용량 단위 사용&lt;/td&gt;
-      &lt;td&gt;기본 테이블과 동일한 처리량 설정&lt;br /&gt;동일한 용량 단위 사용&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;수명 주기 고려 사항&lt;/td&gt;
-      &lt;td&gt;언제든지 생성/삭제할 수 있음&lt;/td&gt;
-      &lt;td&gt;테이블 생성시 생성해야함&lt;br /&gt;테이블을 삭제하지 않는 한 삭제할 수 없음&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
 
 &lt;h2 id=&quot;스트림&quot;&gt;스트림&lt;/h2&gt;
 &lt;p&gt;샤드라고 하는 DynamoDB에 변경 사항 정보를 시간순으로 가지고 있는다.&lt;br /&gt;
