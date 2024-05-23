@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The easiest way to import other directory in Python
+title: 파이썬에서 다른 폴더 import 쉽게 하기
 sidebar_label: import rootdir
 nav_order: 2
 parent: python
