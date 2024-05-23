@@ -5,7 +5,7 @@
     <description>backend tech, log</description>
     <link>https://backendbrew.com/</link>
     <atom:link href="https://backendbrew.com/ko/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2024-05-21T16:43:37+00:00</updated>
+    <updated>2024-05-23T13:41:31+00:00</updated>
     <id>https://backendbrew.com</id>
     <author>
       <name></name>
@@ -18699,7 +18699,7 @@ List가 더 고수준이기 때문에 저수준인 Iterator 인터페이스를 �
       </item>
     
       <item>
-        <title>The easiest way to import other directory in Python</title>
+        <title>파이썬에서 다른 폴더 import 쉽게 하기</title>
         
           <description>&lt;blockquote class=&quot;note-title mb-6&quot;&gt;
   &lt;p&gt;rootdir&lt;/p&gt;
