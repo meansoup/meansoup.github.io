@@ -5,7 +5,7 @@
     <description>backend tech, log</description>
     <link>https://backendbrew.com/</link>
     <atom:link href="https://backendbrew.com/ko/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2024-06-24T15:07:49+00:00</updated>
+    <updated>2024-06-24T15:12:57+00:00</updated>
     <id>https://backendbrew.com</id>
     <author>
       <name></name>
@@ -18953,7 +18953,7 @@ DynamoDB table에 여러 개의 GSI가 적용될 수 있기 때문에, DynamoDB�
 &lt;ul&gt;
   &lt;li&gt;&lt;del&gt;매달 첫 DynamoDB Streams 읽기 요청 유닛 250만 건은 무료&lt;/del&gt;&lt;/li&gt;
   &lt;li&gt;&lt;del&gt;이후 DynamoDB Streams 읽기 요청 유닛 10만 건당 0.0217 USD&lt;/del&gt;&lt;/li&gt;
-  &lt;li&gt;DynamoDB Streams에서 데이터 읽기 작업에 대한 요금을 청구하나 &lt;u&gt;**lambda에서 호출하는 경우 무료**&lt;/u&gt;&lt;sup id=&quot;fnref:2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+  &lt;li&gt;DynamoDB Streams에서 데이터 읽기 작업에 대한 요금을 청구하나 &lt;strong&gt;&lt;u&gt;lambda에서 호출하는 경우 무료&lt;/u&gt;&lt;/strong&gt;&lt;sup id=&quot;fnref:2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Streams의 경우 Lambda와 함께 사용할 경우 읽기 요청에 대한 비용이 발생하지 않는다.&lt;/p&gt;

@@ -5,7 +5,7 @@
     <description>backend tech, log</description>
     <link>https://backendbrew.com/</link>
     <atom:link href="https://backendbrew.com/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2024-06-24T15:07:36+00:00</updated>
+    <updated>2024-06-24T15:12:44+00:00</updated>
     <id>https://backendbrew.com</id>
     <author>
       <name></name>
@@ -18946,7 +18946,7 @@ The costs are the same in the USA (Oregon), and Europe (Ireland) Korea (Seoul).&
 &lt;ul&gt;
   &lt;li&gt;&lt;del&gt;The first 2.5 million DynamoDB Streams read request units per month are free&lt;/del&gt;&lt;/li&gt;
   &lt;li&gt;&lt;del&gt;Thereafter, $0.0217 per 100,000 DynamoDB Streams read request units&lt;/del&gt;&lt;/li&gt;
-  &lt;li&gt;Charges for reading data from DynamoDB Streams, but &lt;u&gt;**free when invoked from Lambda**&lt;/u&gt;&lt;sup id=&quot;fnref:2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+  &lt;li&gt;Charges for reading data from DynamoDB Streams, but &lt;strong&gt;&lt;u&gt;free when invoked from Lambda&lt;/u&gt;&lt;/strong&gt;&lt;sup id=&quot;fnref:2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Streams incurs no read request costs when used with Lambda.&lt;/p&gt;
