@@ -5,7 +5,7 @@
     <description>backend tech, log</description>
     <link>https://backendbrew.com/</link>
     <atom:link href="https://backendbrew.com/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2024-06-24T15:12:44+00:00</updated>
+    <updated>2024-06-24T15:31:47+00:00</updated>
     <id>https://backendbrew.com</id>
     <author>
       <name></name>
@@ -19000,7 +19000,7 @@ There are separate charges for CPU per second, per request, and memory usage.&lt
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;In a real service, more Streams Records may be generated due to user changes.
+&lt;p&gt;In a real service, more Streams Records may be generated due to user changes.&lt;br /&gt;
 However, paying a total of $28,000 for Streams over several years of service is expected to be a very small cost compared to the service scale.&lt;/p&gt;
 
 &lt;p&gt;As a result, our team is currently adopting Streams for statistics work on the user DB.&lt;/p&gt;

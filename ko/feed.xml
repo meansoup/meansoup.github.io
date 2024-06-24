@@ -5,7 +5,7 @@
     <description>backend tech, log</description>
     <link>https://backendbrew.com/</link>
     <atom:link href="https://backendbrew.com/ko/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2024-06-24T15:12:57+00:00</updated>
+    <updated>2024-06-24T15:32:00+00:00</updated>
     <id>https://backendbrew.com</id>
     <author>
       <name></name>
@@ -19007,7 +19007,7 @@ CPU 초당 요금과, 건당 요금, 메모리 요금을 별도로 과금한다.
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;물론 실제 서비스에서는 유저 변경에 따른 Streams Record 발행이 더 발생할 수 있다. 
+&lt;p&gt;물론 실제 서비스에서는 유저 변경에 따른 Streams Record 발행이 더 발생할 수 있다.&lt;br /&gt;
 그러나 서비스를 수 년간 운영하며 Streams 도입 비용 총 $28,000를 지불한다면 서비스 규모 대비 매우 작은 비용이라고 예상된다.&lt;/p&gt;
 
 &lt;p&gt;결과적으로 우리 팀에서는 현재 user DB의 통계 작업을 위해 Streams 도입 중이다.&lt;/p&gt;
