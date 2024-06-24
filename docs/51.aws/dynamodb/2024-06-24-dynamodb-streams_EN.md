@@ -73,7 +73,7 @@ The costs are the same in the USA (Oregon), and Europe (Ireland) Korea (Seoul).
 
 - ~~The first 2.5 million DynamoDB Streams read request units per month are free~~
 - ~~Thereafter, $0.0217 per 100,000 DynamoDB Streams read request units~~
-- Charges for reading data from DynamoDB Streams, but <u>**free when invoked from Lambda**</u>[^2]
+- Charges for reading data from DynamoDB Streams, but **<u>free when invoked from Lambda</u>**[^2]
 
 Streams incurs no read request costs when used with Lambda.
 

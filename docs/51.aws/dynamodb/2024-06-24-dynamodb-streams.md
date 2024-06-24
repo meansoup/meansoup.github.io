@@ -73,7 +73,7 @@ user DB와 같은 경우 데이터는 무한정 증가할 수 없다. (전세계
 
 - ~~매달 첫 DynamoDB Streams 읽기 요청 유닛 250만 건은 무료~~
 - ~~이후 DynamoDB Streams 읽기 요청 유닛 10만 건당 0.0217 USD~~
-- DynamoDB Streams에서 데이터 읽기 작업에 대한 요금을 청구하나 <u>**lambda에서 호출하는 경우 무료**</u>[^2]
+- DynamoDB Streams에서 데이터 읽기 작업에 대한 요금을 청구하나 **<u>lambda에서 호출하는 경우 무료</u>**[^2]
 
 Streams의 경우 Lambda와 함께 사용할 경우 읽기 요청에 대한 비용이 발생하지 않는다.  
 
