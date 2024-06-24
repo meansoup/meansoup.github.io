@@ -113,7 +113,7 @@ Let's calculate the cost of linking Instagram's user DB to a statistics DB using
   - Per request cost: $300 (0.20 * 1,500)
   - Memory cost: $3,150 (0.0000000021 * 1,500,000,000 * 1,000)
 
-In a real service, more Streams Records may be generated due to user changes.
+In a real service, more Streams Records may be generated due to user changes.  
 However, paying a total of $28,000 for Streams over several years of service is expected to be a very small cost compared to the service scale.
 
 
