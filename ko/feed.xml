@@ -5,7 +5,7 @@
     <description>backend tech, log</description>
     <link>https://backendbrew.com/</link>
     <atom:link href="https://backendbrew.com/ko/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2024-06-24T15:32:00+00:00</updated>
+    <updated>2024-06-25T15:17:06+00:00</updated>
     <id>https://backendbrew.com</id>
     <author>
       <name></name>
@@ -19010,7 +19010,30 @@ CPU 초당 요금과, 건당 요금, 메모리 요금을 별도로 과금한다.
 &lt;p&gt;물론 실제 서비스에서는 유저 변경에 따른 Streams Record 발행이 더 발생할 수 있다.&lt;br /&gt;
 그러나 서비스를 수 년간 운영하며 Streams 도입 비용 총 $28,000를 지불한다면 서비스 규모 대비 매우 작은 비용이라고 예상된다.&lt;/p&gt;
 
-&lt;p&gt;결과적으로 우리 팀에서는 현재 user DB의 통계 작업을 위해 Streams 도입 중이다.&lt;/p&gt;
+&lt;h3 id=&quot;비용-효율화하기&quot;&gt;비용 효율화하기&lt;/h3&gt;
+
+&lt;p&gt;Streams에서는 Record를 batch로 받음으로써 lambda 비용을 절약할 수 있다.&lt;br /&gt;
+아래 property를 수정하여 batch로 record를 수신할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;u&gt;Batch size&lt;/u&gt;&lt;/strong&gt;&lt;sup id=&quot;fnref:3&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;각 Batch에서 Lambda에 보낼 Record count.&lt;/li&gt;
+  &lt;li&gt;max 10,000개이며 한 번의 호출로 복수 개의 Record가 전달된다.&lt;/li&gt;
+  &lt;li&gt;Payload 한도인 6MB를 넘을 수 없다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;u&gt;Batch window&lt;/u&gt;&lt;/strong&gt;&lt;sup id=&quot;fnref:3:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Lambda로 호출되기 전까지 Record를 수집할 시간. (단위 second)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Batch Size가 1000, Batch window가 10으로 설정했다고 하자.  &lt;br /&gt;
+Record를 수집해 1000개가 넘는다면 Lambda가 호출되고, 1000개가 넘지 않으면 10초 후에 Lambda가 호출된다.&lt;/p&gt;
+
+&lt;p&gt;참고할 점은 &lt;strong&gt;&lt;u&gt;Batch Size와 Window는 Streams 내부의 shard 단위로 동작&lt;/u&gt;&lt;/strong&gt;&lt;sup id=&quot;fnref:4&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt; 한다는 것이다.&lt;br /&gt;
+10개의 Shard가 있다면 각각의 shard에 Batch window와 Size가 적용되기 때문에, 10초의 Batch window 동안 10개의 shard가 각각 한 개씩 총 10개의 lambda가 호출될 수 있다.&lt;/p&gt;
+
+&lt;p&gt;그렇기 때문에 Batch Size만큼의 데이터를 보낸다고 Batch Size 크기의 Record에 대한 Lambda 호출이 발생하는 것은 아니다.&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -19021,6 +19044,12 @@ CPU 초당 요금과, 건당 요금, 메모리 요금을 별도로 과금한다.
     &lt;/li&gt;
     &lt;li id=&quot;fn:2&quot; role=&quot;doc-endnote&quot;&gt;
       &lt;p&gt;&lt;a href=&quot;https://docs.aws.amazon.com/ko_kr/amazondynamodb/latest/developerguide/CostOptimization_StreamsUsage.html&quot;&gt;Streams 사용량&lt;/a&gt; 문서에서 Lambda와 함께 용할 때의 비용을 확인할 수 있다. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://docs.aws.amazon.com/lambda/latest/dg/with-ddb.html#services-dynamodb-eventsourcemapping&quot;&gt;batch window와 size에 대한 spec&lt;/a&gt; 문서에서 property를 확인한다. &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:3:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:4&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/75448464/dynamodb-streams-small-number-of-items-per-batch&quot;&gt;Streams의 shard와 Stremas Batch의 관계&lt;/a&gt;를 설명하는 stackoverflow를 참고한다. &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;

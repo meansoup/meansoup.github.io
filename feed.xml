@@ -5,7 +5,7 @@
     <description>backend tech, log</description>
     <link>https://backendbrew.com/</link>
     <atom:link href="https://backendbrew.com/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2024-06-24T15:31:47+00:00</updated>
+    <updated>2024-06-25T15:16:53+00:00</updated>
     <id>https://backendbrew.com</id>
     <author>
       <name></name>
@@ -19003,7 +19003,30 @@ There are separate charges for CPU per second, per request, and memory usage.&lt
 &lt;p&gt;In a real service, more Streams Records may be generated due to user changes.&lt;br /&gt;
 However, paying a total of $28,000 for Streams over several years of service is expected to be a very small cost compared to the service scale.&lt;/p&gt;
 
-&lt;p&gt;As a result, our team is currently adopting Streams for statistics work on the user DB.&lt;/p&gt;
+&lt;h3 id=&quot;cost-optimization&quot;&gt;Cost Optimization&lt;/h3&gt;
+
+&lt;p&gt;In Streams, you can save on Lambda costs by receiving records in batches.&lt;br /&gt;
+You can modify the following properties to receive records in batches:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;u&gt;Batch size&lt;/u&gt;&lt;/strong&gt;&lt;sup id=&quot;fnref:3&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The number of records sent to Lambda in each batch.&lt;/li&gt;
+  &lt;li&gt;The maximum is 10,000 records, and multiple records are delivered in a single invocation.&lt;/li&gt;
+  &lt;li&gt;It must not exceed the payload limit of 6MB.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;u&gt;Batch window&lt;/u&gt;&lt;/strong&gt;&lt;sup id=&quot;fnref:3:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The time to collect records before invoking Lambda. (unit: seconds)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Let’s assume the batch size is set to 1000 and the batch window is set to 10.&lt;br /&gt;
+If more than 1000 records are collected, Lambda is invoked. If fewer than 1000 records are collected, Lambda is invoked after 10 seconds.&lt;/p&gt;
+
+&lt;p&gt;It is important to note that &lt;strong&gt;&lt;u&gt;batch size and window operate on a per-shard basis within Streams&lt;/u&gt;&lt;/strong&gt;&lt;sup id=&quot;fnref:4&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;.&lt;br /&gt;
+If there are 10 shards, the batch window and size apply to each shard individually, so during a 10-second batch window,  a total of 10 Lambdas could be invoked  becaouse each of the 10 shards collects records.&lt;/p&gt;
+
+&lt;p&gt;Therefore, sending data in batch sizes does not mean that a Lambda invocation will occur for each batch size of records.&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -19014,6 +19037,12 @@ However, paying a total of $28,000 for Streams over several years of service is 
     &lt;/li&gt;
     &lt;li id=&quot;fn:2&quot; role=&quot;doc-endnote&quot;&gt;
       &lt;p&gt;You can check the cost when using Streams with Lambda in the &lt;a href=&quot;https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/CostOptimization_StreamsUsage.html&quot;&gt;Streams usage&lt;/a&gt; document. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Check property at &lt;a href=&quot;https://docs.aws.amazon.com/lambda/latest/dg/with-ddb.html#services-dynamodb-eventsourcemapping&quot;&gt;spec for batch window &amp;amp; size&lt;/a&gt;. &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:3:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:4&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Refer to the stackoverflow about &lt;a href=&quot;https://stackoverflow.com/questions/75448464/dynamodb-streams-small-number-of-items-per-batch&quot;&gt;Streams shard &amp;amp; Stremas Batch&lt;/a&gt;. &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
