@@ -117,10 +117,32 @@ CPU (x86) 요금
 그러나 서비스를 수 년간 운영하며 Streams 도입 비용 총 $28,000를 지불한다면 서비스 규모 대비 매우 작은 비용이라고 예상된다.
 
 
-결과적으로 우리 팀에서는 현재 user DB의 통계 작업을 위해 Streams 도입 중이다.
+### 비용 효율화하기
+
+Streams에서는 Record를 batch로 받음으로써 lambda 비용을 절약할 수 있다.  
+아래 property를 수정하여 batch로 record를 수신할 수 있다.
+
+**<u>Batch size</u>**[^3]:  
+- 각 Batch에서 Lambda에 보낼 Record count.
+- max 10,000개이며 한 번의 호출로 복수 개의 Record가 전달된다.
+- Payload 한도인 6MB를 넘을 수 없다.
+
+**<u>Batch window</u>**[^3]:  
+- Lambda로 호출되기 전까지 Record를 수집할 시간. (단위 second)
+
+Batch Size가 1000, Batch window가 10으로 설정했다고 하자.    
+Record를 수집해 1000개가 넘는다면 Lambda가 호출되고, 1000개가 넘지 않으면 10초 후에 Lambda가 호출된다.
+
+
+참고할 점은 **<u>Batch Size와 Window는 Streams 내부의 shard 단위로 동작</u>**[^4] 한다는 것이다.  
+10개의 Shard가 있다면 각각의 shard에 Batch window와 Size가 적용되기 때문에, 10초의 Batch window 동안 10개의 shard가 각각 한 개씩 총 10개의 lambda가 호출될 수 있다.  
+
+그렇기 때문에 Batch Size만큼의 데이터를 보낸다고 Batch Size 크기의 Record에 대한 Lambda 호출이 발생하는 것은 아니다.
 
 
 ---
 
 [^1]: [Streams 비용문서](https://aws.amazon.com/ko/dynamodb/pricing/provisioned/)와 [Lambda 비용문서](https://aws.amazon.com/ko/lambda/pricing/)를 참고한다.
-[^2]: [Streams 사용량](https://docs.aws.amazon.com/ko_kr/amazondynamodb/latest/developerguide/CostOptimization_StreamsUsage.html) 문서에서 Lambda와 함께 용할 때의 비용을 확인할 수 있다.  
+[^2]: [Streams 사용량](https://docs.aws.amazon.com/ko_kr/amazondynamodb/latest/developerguide/CostOptimization_StreamsUsage.html) 문서에서 Lambda와 함께 용할 때의 비용을 확인할 수 있다.
+[^3]: [batch window와 size에 대한 spec](https://docs.aws.amazon.com/lambda/latest/dg/with-ddb.html#services-dynamodb-eventsourcemapping) 문서에서 property를 확인한다.
+[^4]: [Streams의 shard와 Stremas Batch의 관계](https://stackoverflow.com/questions/75448464/dynamodb-streams-small-number-of-items-per-batch)를 설명하는 stackoverflow를 참고한다.  

@@ -117,11 +117,31 @@ In a real service, more Streams Records may be generated due to user changes.
 However, paying a total of $28,000 for Streams over several years of service is expected to be a very small cost compared to the service scale.
 
 
-As a result, our team is currently adopting Streams for statistics work on the user DB.
+### Cost Optimization
 
+In Streams, you can save on Lambda costs by receiving records in batches.  
+You can modify the following properties to receive records in batches:
+
+**<u>Batch size</u>**[^3]:  
+- The number of records sent to Lambda in each batch.
+- The maximum is 10,000 records, and multiple records are delivered in a single invocation.
+- It must not exceed the payload limit of 6MB.
+
+**<u>Batch window</u>**[^3]:  
+- The time to collect records before invoking Lambda. (unit: seconds)
+
+Let's assume the batch size is set to 1000 and the batch window is set to 10.  
+If more than 1000 records are collected, Lambda is invoked. If fewer than 1000 records are collected, Lambda is invoked after 10 seconds.
+
+It is important to note that **<u>batch size and window operate on a per-shard basis within Streams</u>**[^4].  
+If there are 10 shards, the batch window and size apply to each shard individually, so during a 10-second batch window,  a total of 10 Lambdas could be invoked  becaouse each of the 10 shards collects records.
+
+Therefore, sending data in batch sizes does not mean that a Lambda invocation will occur for each batch size of records.
 
 
 ---
 
 [^1]: Refer to the [Streams pricing document](https://aws.amazon.com/dynamodb/pricing/provisioned/) and the [Lambda pricing document](https://aws.amazon.com/lambda/pricing/).
 [^2]: You can check the cost when using Streams with Lambda in the [Streams usage](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/CostOptimization_StreamsUsage.html) document.
+[^3]: Check property at [spec for batch window & size](https://docs.aws.amazon.com/lambda/latest/dg/with-ddb.html#services-dynamodb-eventsourcemapping).
+[^4]: Refer to the stackoverflow about [Streams shard & Stremas Batch](https://stackoverflow.com/questions/75448464/dynamodb-streams-small-number-of-items-per-batch).  
