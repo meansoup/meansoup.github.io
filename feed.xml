@@ -5,7 +5,7 @@
     <description>backend tech, log</description>
     <link>https://backendbrew.com/</link>
     <atom:link href="https://backendbrew.com/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2024-07-04T15:33:32+00:00</updated>
+    <updated>2024-08-09T00:25:44+00:00</updated>
     <id>https://backendbrew.com</id>
     <author>
       <name></name>
@@ -4173,12 +4173,12 @@ Redis: 다양한 데이터 구조 지원, 지속성, 원자조작, 구독 메시
       <item>
         <title>Lambda</title>
         
-          <description>&lt;p&gt;AWS에서 제공하는 &lt;a href=&quot;https://meansoup.github.io/blog/2020/03/25/aws_terms/#%EC%84%9C%EB%B2%84%EB%A6%AC%EC%8A%A4&quot;&gt;서버리스 컴퓨팅&lt;/a&gt; 서비스이다.&lt;br /&gt;
+          <description>&lt;p&gt;AWS에서 제공하는 서버리스 컴퓨팅 서비스이다.&lt;br /&gt;
 코드를 함수로 업로드만 하면 Lambda가 알아서 관리하여 사용될 수 있도록 한다.&lt;br /&gt;
 이벤트 소스에서 호출을 트리거하면 lambda에서 코드를 가져와서 실행하는 방식이다.&lt;/p&gt;
 
 &lt;h2 id=&quot;lambda-사용&quot;&gt;lambda 사용&lt;/h2&gt;
-&lt;p&gt;간단한 문제를 간단한 솔루션으로 해결하자는게 모토? 같다.&lt;br /&gt;
+&lt;p&gt;간단한 문제를 간단한 솔루션으로 해결하자는게 모토.&lt;br /&gt;
 간단하게 코드를 작성하고 리소스 모델을 선택하여 유연하게 다른 서비스들과 통합하여 사용한다.&lt;br /&gt;
 CloudWatch로 로그 분석과 X-Ray를 통한 분산 추척을 같이 활용한다.&lt;/p&gt;
 
@@ -8272,12 +8272,11 @@ TCP handshake 등의 오버헤드를 줄이기 위해서 UDP로 고안되었다.
       <item>
         <title>easyRandom - Java에서 테스트 객체 만들기</title>
         
-          <description>&lt;p&gt;Java에서 테스트 객체를 만드는걸 고민하다가 &lt;a href=&quot;/docs/pattern/object-mother&quot;&gt;ObjectMother 패턴&lt;/a&gt;에 대해서 공부하게 되었다.&lt;br /&gt;
-그러고 찾은게 바로 &lt;strong&gt;EasyRandom&lt;/strong&gt;. &lt;br /&gt;
-mother 패턴을 모른다면 위 페이지에서 개념을 보고가면 좋겠다.&lt;/p&gt;
+          <description>&lt;p&gt;테스트 객체를 관리하는 패턴 중 &lt;a href=&quot;/docs/pattern/object-mother&quot;&gt;ObjectMother 패턴&lt;/a&gt;이 있다.&lt;br /&gt;
+java에서는 이 패턴을 구현하기 위한 방식으로 &lt;strong&gt;EasyRandom&lt;/strong&gt;을 사용하면 효율적이다.&lt;/p&gt;
 
-&lt;p&gt;ObjectMother와 EasyRandom을 팀 내에 소개했는데 이를 적용하고 테스트 작성에 대한 효율이 눈에 띄기 좋아졌다.&lt;br /&gt;
-지금 우리 팀원들은 테스트 작성할 때 &lt;strong&gt;무조건&lt;/strong&gt; 이 방식을 사용하는 정도.&lt;/p&gt;
+&lt;p&gt;ObjectMother와 EasyRandom을 우리 팀 서비스 코드에 적용해 보았는데 적용 후 테스트 작성에 대한 효율이 눈에 띄기 좋아졌다.&lt;br /&gt;
+지금은 팀 내에서 ObjectMother 패턴이 자연스럽게 사용된다.&lt;/p&gt;
 
 &lt;h2 id=&quot;장점&quot;&gt;장점&lt;/h2&gt;
 
@@ -8286,8 +8285,8 @@ mother 패턴을 모른다면 위 페이지에서 개념을 보고가면 좋겠�
 &lt;ol&gt;
   &lt;li&gt;이곳저곳 산개되었던 객체 생성 로직을 하나로 묶을 수 있었다.
     &lt;ul&gt;
-      &lt;li&gt;test Class/Method마다 객체를 만들던 로직이 있었는데, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ItemMother&lt;/code&gt;와 같이 mother 패턴을 적용하면서 이런 로직이 사라졌다.&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Item&lt;/code&gt;의 테스트 객체를 만들기 전에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ItemMother&lt;/code&gt;가 있는지를 보고 없으면 만들고 있으면 사용하는 방식.&lt;/li&gt;
+      &lt;li&gt;test Class/Method마다 객체를 만들던 로직이 있었는데, &lt;strong&gt;ItemMother&lt;/strong&gt;와 같이 mother 패턴을 적용하면서 이런 로직이 사라졌다.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Item&lt;/strong&gt;의 테스트 객체를 만들기 전에 &lt;strong&gt;ItemMother&lt;/strong&gt;가 있는지를 보고 없으면 만들고 있으면 사용하는 방식.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;위와 같은 이유로 테스트 객체 생성에 드는 시간과 비용이 줄어들었고, 이는 테스트를 짜는 시간에 영향을 미쳤다.&lt;/li&gt;
@@ -8306,58 +8305,40 @@ mother 패턴을 모른다면 위 페이지에서 개념을 보고가면 좋겠�
 
 &lt;p&gt;우리가 테스트에서 만들었던 item 생성 코드들을 보자.&lt;/p&gt;
 
-&lt;h3 id=&quot;실제-코드-sample-1&quot;&gt;실제 코드 sample 1&lt;/h3&gt;
+&lt;h3 id=&quot;코드-sample-1&quot;&gt;코드 sample 1&lt;/h3&gt;
 
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;nc&quot;&gt;ItemDTO&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ItemDTO&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ItemDTO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;nc&quot;&gt;ItemDTO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setCtime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0L&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;nc&quot;&gt;ItemDTO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setCreatetime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0L&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
     &lt;span class=&quot;nc&quot;&gt;ItemDTO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setItemId&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;testItemId&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
     &lt;span class=&quot;nc&quot;&gt;ItemDTO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;testOwner&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;문제가 많다.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;테스트에서 이런 코드 반복이 많다. 언제까지 이런 코드를 &lt;strong&gt;반복&lt;/strong&gt;할 것인가?&lt;/li&gt;
-  &lt;li&gt;모르고 놓치는 경우보다 귀찮아서 안 하는 경우들이 참 많은데 &lt;strong&gt;random value&lt;/strong&gt;도 아니다.&lt;/li&gt;
+  &lt;li&gt;테스트의 value들이 random data가 아니다. 테스트가 특정 케이스만 커버할 수 있을지도 모른다. 모든 테스트가 random data로 이뤄져야 하는 건 아니지만 필요한 상황에 모르고 놓치는 경우보다 귀찮아서 안하는 경우일 때가 많다.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;실제-코드-sample-2&quot;&gt;실제 코드 sample 2&lt;/h3&gt;
+&lt;h3 id=&quot;코드-sample-2&quot;&gt;코드 sample 2&lt;/h3&gt;
 
 &lt;p&gt;오래된 프로젝트의 테스트 코드에서 심심찮게 보이는 반복 호출을 위한 테스트 함수.&lt;/p&gt;
 
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ItemDTO&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;createItemDTO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;crrntTime&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;currentTimeMillis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;nc&quot;&gt;Meta&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;meta&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MetaTest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-
     &lt;span class=&quot;nc&quot;&gt;ItemDTO&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dto&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ItemDTO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;dto&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setItemId&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;itemId&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;dto&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setCtime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;crrntTime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;dto&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setMtime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;crrntTime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;dto&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;owner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;dto&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setLastmodifier&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;owner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;dto&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setMeta&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;meta&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getMeta&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;dto&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setStatus&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Status&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;CREATED&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;dto&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setItemId&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;testItemId&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;dto&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setCreatetime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0L&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;dto&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;testOwner&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
 
     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dto&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;아직 문제가 많다.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;이런 코드가 프로젝트 &lt;strong&gt;곳곳&lt;/strong&gt;에 있다.
-    &lt;ul&gt;
-      &lt;li&gt;누가 만들었는지, 있는지 기억도 못하기 때문에&lt;/li&gt;
-      &lt;li&gt;심한 경우는 test class 마다 존재하기도 한다&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;여전히 &lt;strong&gt;random value&lt;/strong&gt;는 아니다.
-    &lt;ul&gt;
-      &lt;li&gt;값을 받아오기엔 random으로 해야할 게 많고, randomUtil로 모두 넣기 귀찮았나보다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
+  &lt;li&gt;이전 코드보다 조금 낫다고 할 수 있지만 이런 코드틑 프로젝트 테스트의 곳곳에 있다.&lt;/li&gt;
+  &lt;li&gt;누가 만들었는지, 있는지 없는지 조차 알지 못한다. 심한 경우는 test class 마다 존재한다.&lt;/li&gt;
+  &lt;li&gt;여전히 &lt;strong&gt;random value&lt;/strong&gt;는 아니다.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;실제-코드-sample-3&quot;&gt;실제 코드 sample 3&lt;/h3&gt;
+&lt;h3 id=&quot;코드-sample-3&quot;&gt;코드 sample 3&lt;/h3&gt;
 
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ItemDTO&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initTestValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;nc&quot;&gt;ItemDTO&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;itemDTO&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ItemDTO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
@@ -8369,30 +8350,29 @@ mother 패턴을 모른다면 위 페이지에서 개념을 보고가면 좋겠�
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;조금은 쓸만하다.
-이 정도면 일종의 objectMother라고 할 수 있을 것 같다.&lt;br /&gt;
-그렇지만&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;언제까지 random으로 &lt;strong&gt;한땀 한땀&lt;/strong&gt; 넣어줄건지.&lt;/li&gt;
-  &lt;li&gt;생성로직이 산개되어 있고 네이밍이 명확하지 않다는 문제는 여전하다.&lt;/li&gt;
+  &lt;li&gt;이 정도면 일종의 objectMother라고 할 수 있을 것 같다.&lt;/li&gt;
+  &lt;li&gt;그렇지만 언제까지 random data를 &lt;strong&gt;한땀 한땀&lt;/strong&gt; 넣어줄건지.&lt;/li&gt;
+  &lt;li&gt;생성로직이 산개되어 있고 네이밍이 명확하지 않다는 문제는 여전하다. 즉 다른 사람이 동일한 코드를 다시 만들 것이다.&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h3 id=&quot;object-mother&quot;&gt;Object Mother&lt;/h3&gt;
+
+&lt;p&gt;ObjectMother는 테스트 객체의 생성에 대한 패턴을 제공하며 이는 눈에 띄는 확연한 약속으로 테스트 데이터 생성 로직의 산개를 막는다.&lt;br /&gt;
+테스트 코드 중복과 관리에 대한 문제를 &lt;a href=&quot;/docs/pattern/object-mother&quot;&gt;ObjectMother 패턴&lt;/a&gt;으로 풀어낼 수 있다.&lt;/p&gt;
 
 &lt;h2 id=&quot;easyrandom&quot;&gt;EasyRandom&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;ObjectMother&lt;/strong&gt;의 역할을 하는 프로젝트들이 찾아보니 몇 개 있었다.&lt;br /&gt;
-굉장히 유명하고 보편적으로 사용되는 프로젝트들은 아니지만 흥미로웠다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ObjectMother&lt;/strong&gt;를 효율적으로 사용하기 위한 테스트 데이터를 생성하는 프로젝트들이 찾아보았다.&lt;/p&gt;
 
 &lt;p&gt;Naver에서 관리하고 있는 &lt;strong&gt;FixtureMonkey&lt;/strong&gt; 도 있었고,&lt;br /&gt;
 약간은 올드한 네이밍의 &lt;strong&gt;PODAM&lt;/strong&gt;,&lt;br /&gt;
 조금 궤가 다르지만 param test에 random하게 값을 채워주는 &lt;strong&gt;AutoParams&lt;/strong&gt; 들을 사용해봤다.&lt;/p&gt;
 
-&lt;p&gt;가장 쓰기 편하고 효율적인 프로젝트는 &lt;strong&gt;EasyRandom&lt;/strong&gt;이었다.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;이름 값 한다.&lt;/li&gt;
-  &lt;li&gt;star 수도 가장 많았다.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;가장 쓰기 편하고 효율적인 프로젝트는 &lt;strong&gt;EasyRandom&lt;/strong&gt;이었다.&lt;br /&gt;
+EasyRandom은 github star 수도 가장 많았고, 이름 값 하는 프로젝트다.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;EasyRandom&lt;/strong&gt;은 굉장히 강력한데, 내가 사용하며 확인된 사항은 다음과 같다.&lt;/p&gt;
+&lt;p&gt;EasyRandom은 굉장히 강력한데 다음과 같은 특징들이 있다.&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;&lt;strong&gt;setter가 없어도 된다.&lt;/strong&gt;&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;contructor가 없어도 된다&lt;/strong&gt;. (private contructor only인 경우)&lt;/li&gt;
@@ -8427,9 +8407,7 @@ mother 패턴을 모른다면 위 페이지에서 개념을 보고가면 좋겠�
     &lt;span class=&quot;nc&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;persons&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;generator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;objects&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;collect&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Collectors&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;굉장히 간단하다.&lt;br /&gt;
-List(필요하다면 다른 colletions)를 만들기도 쉽다.&lt;br /&gt;
-위에서 언급한 장점들까지 고려한다면 random value object 생성을 한 줄에!&lt;/p&gt;
+&lt;p&gt;간단하게 사용할 수 있고 List나 다른 Collection을 만들기도 쉽다.&lt;/p&gt;
 
 &lt;h3 id=&quot;parameter와-함께-사용&quot;&gt;parameter와 함께 사용&lt;/h3&gt;
 
@@ -8481,7 +8459,7 @@ List(필요하다면 다른 colletions)를 만들기도 쉽다.&lt;br /&gt;
 사실 패턴이란게 다 그렇지 않나 싶다.&lt;/p&gt;
 
 &lt;p&gt;간단히 표현하자면 test object를 만들어주는 class라고 할 수 있을 것이다.&lt;br /&gt;
-패턴을 잘 정의하는 &lt;strong&gt;Martin Fowler&lt;/strong&gt;의 글을 참고해서 정리해본다.&lt;/p&gt;
+패턴을 잘 정의하는 &lt;a href=&quot;https://martinfowler.com/bliki/ObjectMother.html&quot;&gt;Martin Fowler의 글&lt;/a&gt;을 참고해서 정리해본다.&lt;/p&gt;
 
 &lt;h2 id=&quot;object-mother-란&quot;&gt;Object Mother 란?&lt;/h2&gt;
 
@@ -8503,7 +8481,7 @@ List(필요하다면 다른 colletions)를 만들기도 쉽다.&lt;br /&gt;
 
 &lt;h2 id=&quot;object-mother-장-단점&quot;&gt;Object Mother 장 단점&lt;/h2&gt;
 
-&lt;p&gt;장 단점은 오역의 여지가 없도록 &lt;strong&gt;ThoughWorks&lt;/strong&gt; 논문의 내용을 그대로 발췌했다.&lt;/p&gt;
+&lt;p&gt;장 단점은 오역의 여지가 없도록 &lt;u&gt;ThoughWorks 논문&lt;/u&gt;&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;의 내용을 그대로 발췌했다.&lt;/p&gt;
 
 &lt;h3 id=&quot;장점&quot;&gt;장점&lt;/h3&gt;
 
@@ -8521,22 +8499,29 @@ List(필요하다면 다른 colletions)를 만들기도 쉽다.&lt;br /&gt;
   &lt;li&gt;added time spent building the pattern&lt;/li&gt;
 &lt;/ol&gt;
 
+&lt;h3 id=&quot;주의-사항&quot;&gt;주의 사항&lt;/h3&gt;
+
+&lt;p&gt;ObjectMother 패턴의 힘은 강력하다.&lt;br /&gt;
+프로젝트에 도입한 뒤 팀원들은 자발적으로 ObjectMother에 테스트 객체를 추가하기 시작했다.&lt;/p&gt;
+
+&lt;p&gt;그러나 ObjectMother를 온전히 이해하지 못하고 작성하는 Mother 패턴들은 ObjectMother의 본질을 흐리게 한다.&lt;br /&gt;
+ObjectMother는 &lt;strong&gt;standard fixtures&lt;/strong&gt;를 만드는 것이다.&lt;br /&gt;
+개념을 온전히 이해하지 못하고 사용하는 경우엔 standard fixture를 만드는 것이 아니라 모든 fixture를 Object Mother에 추가하는 경우가 많다.&lt;br /&gt;
+&lt;strong&gt;standard fixture가 아니라 아무 fixture나 추가된 ObjectMother는 사용되지 않는 것보다는 낫지만 Mother 패턴의 가독성과 신뢰성, 확장성을 많이 떨어뜨린다.&lt;/strong&gt;&lt;/p&gt;
+
 &lt;h3 id=&quot;java에서-objectmother-적용하기&quot;&gt;Java에서 objectMother 적용하기&lt;/h3&gt;
 
 &lt;p&gt;ObjectMother를 공부하면서 &lt;a href=&quot;/docs/java/library/easyrandom&quot;&gt;Java에서 ObjectMother 패턴 적용&lt;/a&gt;하기 위해 도움이 되는 라이브러리들을 찾아보았고, 실제 우리 팀 코드에 적용을 해 보았다.&lt;br /&gt;
 굉장히 간단한데 실제 패턴을 적용해서 얻는 이점이 많았다. java에서 적용하며 얻은 이점들은 위 페이지에 정리한다.&lt;/p&gt;
 
-&lt;h2 id=&quot;reference&quot;&gt;reference&lt;/h2&gt;
-
-&lt;p&gt;martinfowler의 &lt;strong&gt;ObjectMother&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://martinfowler.com/bliki/ObjectMother.html&quot;&gt;https://martinfowler.com/bliki/ObjectMother.html&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Thoughtworks 논문 ‘&lt;strong&gt;ObjectMother, Easing Test Object Creation in XP&lt;/strong&gt;’&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.18.4710&amp;amp;rep=rep1&amp;amp;type=pdf&quot;&gt;http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.18.4710&amp;amp;rep=rep1&amp;amp;type=pdf&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Thoughtworks 논문 &lt;a href=&quot;http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.18.4710&amp;amp;rep=rep1&amp;amp;type=pdf&quot;&gt;ObjectMother, Easing Test Object Creation in XP&lt;/a&gt; 참고 &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
 </description>
         
         <pubDate></pubDate>
