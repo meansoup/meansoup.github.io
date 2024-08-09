@@ -13,7 +13,7 @@ sitemap:
 사실 패턴이란게 다 그렇지 않나 싶다.
 
 간단히 표현하자면 test object를 만들어주는 class라고 할 수 있을 것이다.  
-패턴을 잘 정의하는 **Martin Fowler**의 글을 참고해서 정리해본다.
+패턴을 잘 정의하는 [Martin Fowler의 글](https://martinfowler.com/bliki/ObjectMother.html)을 참고해서 정리해본다.
 
 ## Object Mother 란?
 
@@ -34,7 +34,7 @@ sitemap:
 
 ## Object Mother 장 단점
 
-장 단점은 오역의 여지가 없도록 **ThoughWorks** 논문의 내용을 그대로 발췌했다.
+장 단점은 오역의 여지가 없도록 <u>ThoughWorks 논문</u>[^1]의 내용을 그대로 발췌했다.
 
 ### 장점
 
@@ -48,16 +48,21 @@ sitemap:
 
 1. added time spent building the pattern
 
+### 주의 사항
+
+ObjectMother 패턴의 힘은 강력하다.  
+프로젝트에 도입한 뒤 팀원들은 자발적으로 ObjectMother에 테스트 객체를 추가하기 시작했다.  
+
+그러나 ObjectMother를 온전히 이해하지 못하고 작성하는 Mother 패턴들은 ObjectMother의 본질을 흐리게 한다.  
+ObjectMother는 **standard fixtures**를 만드는 것이다.  
+개념을 온전히 이해하지 못하고 사용하는 경우엔 standard fixture를 만드는 것이 아니라 모든 fixture를 Object Mother에 추가하는 경우가 많다.  
+**standard fixture가 아니라 아무 fixture나 추가된 ObjectMother는 사용되지 않는 것보다는 낫지만 Mother 패턴의 가독성과 신뢰성, 확장성을 많이 떨어뜨린다.**
+
 
 ### Java에서 objectMother 적용하기
 
 ObjectMother를 공부하면서 [Java에서 ObjectMother 패턴 적용](/docs/java/library/easyrandom)하기 위해 도움이 되는 라이브러리들을 찾아보았고, 실제 우리 팀 코드에 적용을 해 보았다.  
 굉장히 간단한데 실제 패턴을 적용해서 얻는 이점이 많았다. java에서 적용하며 얻은 이점들은 위 페이지에 정리한다.  
 
-## reference
-
-martinfowler의 **ObjectMother**
-- [https://martinfowler.com/bliki/ObjectMother.html](https://martinfowler.com/bliki/ObjectMother.html)  
-
-Thoughtworks 논문 '**ObjectMother, Easing Test Object Creation in XP**'
-- [http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.18.4710&rep=rep1&type=pdf](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.18.4710&rep=rep1&type=pdf)
+-----
+[^1]: Thoughtworks 논문 [ObjectMother, Easing Test Object Creation in XP](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.18.4710&rep=rep1&type=pdf) 참고
