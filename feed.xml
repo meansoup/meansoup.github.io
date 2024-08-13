@@ -5,7 +5,7 @@
     <description>backend tech, log</description>
     <link>https://backendbrew.com/</link>
     <atom:link href="https://backendbrew.com/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2024-08-13T15:33:39+00:00</updated>
+    <updated>2024-08-13T15:39:25+00:00</updated>
     <id>https://backendbrew.com</id>
     <author>
       <name></name>
@@ -6244,25 +6244,27 @@ targetfile을 명시해주면, &lt;code class=&quot;language-plaintext highlight
 &lt;a href=&quot;/docs/dev-tools/linux-commands/split&quot; class=&quot;btn&quot;&gt;split&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;file data를 파싱할 때 사용하는 커맨드 중 하나이다.&lt;/p&gt;
+&lt;p&gt;file data를 파싱할 때 사용하는 커맨드 중 하나이다.&lt;br /&gt;
+데이터를 파싱하고, 전처리하는 과정에서 효율이 굉장히 좋은 커맨드.&lt;/p&gt;
 
 &lt;h2 id=&quot;사용성&quot;&gt;사용성&lt;/h2&gt;
 
 &lt;ol&gt;
   &lt;li&gt;간단한 파일을 일부만 보고 싶을 때 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sed&lt;/code&gt;나 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;awk&lt;/code&gt;를 사용해도 되지만, 가장 좋은 성능을 내는 것이 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cut&lt;/code&gt;이다.
     &lt;ul&gt;
-      &lt;li&gt;1GB 이상의 파일로 확인을 해보면 확연한 성능 차이를 볼 수 있다.&lt;/li&gt;
+      &lt;li&gt;1GB 이상의 큰 파일로 확인을 해보면 확연한 성능 차이를 볼 수 있다.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;큰 파일들을 확인하고 싶을 때 vi는 여는데 한참 걸리지만, cut은 금방 볼 수 있다.&lt;/li&gt;
   &lt;li&gt;하나의 라인이 무지막지하게 크다면(예를들면 10GB), vi 등으로 열 수 없는 경우가 있다. 당연히 하나의 라인이라 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;head&lt;/code&gt;로도 확인할 수 없고.. 이럴 때 어떤 데이터인지 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cut&lt;/code&gt;으로 확인할 수 있다.
     &lt;ul&gt;
-      &lt;li&gt;물론 이럴때 &lt;a href=&quot;https://meansoup.github.io/2021/04/07/split/&quot;&gt;split&lt;/a&gt;을 사용하는 것도 좋다.&lt;/li&gt;
+      &lt;li&gt;물론 이럴때 &lt;a href=&quot;/docs/dev-tools/linux-commands/split&quot;&gt;split&lt;/a&gt;을 사용하는 것도 좋다.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
+  &lt;li&gt;python 같은 스크립트를 사용할 때도 데이터를 전처리하면 성능이 크게 올라간다.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;파일 사이즈가 크나, 단순하고 동일한 포맷일 때 사용하기 굉장히 좋다.&lt;/p&gt;
+&lt;p&gt;이런 데이터 전처리는 파일 사이즈가 크나, 단순하고 동일한 포맷일 때 사용하기 굉장히 좋다.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;batch 작업을 위한 userdata를 추출해 놓았을 때&lt;/li&gt;
   &lt;li&gt;많은 양의 단순한 비규격 로그의 파싱이 필요할 때&lt;/li&gt;
@@ -6270,12 +6272,11 @@ targetfile을 명시해주면, &lt;code class=&quot;language-plaintext highlight
 
 &lt;h2 id=&quot;사용법&quot;&gt;사용법&lt;/h2&gt;
 
-&lt;p&gt;사용법은 간단하다.&lt;/p&gt;
-
 &lt;p&gt;몇가지 사용법을 적지만 사실 맨 처음의 &lt;strong&gt;cut -d -f&lt;/strong&gt;의 사용률이 가장 높다.&lt;br /&gt;
 일부 char를 잘라내야 하는 경우에서도 유용하게 사용된다.&lt;/p&gt;
 
-&lt;p&gt;cut의 단점은 char로만 자를 수 있다는 것이지만 생각보다 이렇게 사용할 데이터들이 굉장히 많고, 성능은 그만큼 훌륭하다.
+&lt;p&gt;cut의 단점은 char로만 자를 수 있다는 것이지만 생각보다 이렇게 사용할 데이터들이 굉장히 많고, 성능은 그만큼 훌륭하다.&lt;br /&gt;
+db dump, csv, json과 같이 포맷이 일정한 데이터를 파싱할 때 함께 사용할 수 있다.
 파일의 파싱이나 데이터 추출, command pipe에서 자주 사용한다.&lt;/p&gt;
 
 &lt;h3 id=&quot;delimiter-단위로-자르기&quot;&gt;delimiter 단위로 자르기&lt;/h3&gt;
@@ -6329,62 +6330,71 @@ targetfile을 명시해주면, &lt;code class=&quot;language-plaintext highlight
 &lt;div class=&quot;code-example&quot; style=&quot;font-size: 0.8em&quot;&gt;
   &lt;p class=&quot;label label-yellow&quot;&gt;예시&lt;/p&gt;
 
-  &lt;p&gt;아래와 같은 food 라는 파일이 있다고 치자.&lt;/p&gt;
+  &lt;p&gt;&lt;img src=&quot;/images/post/dev-tools/terminal-commands/cut.gif&quot; alt=&quot;cut&quot; /&gt;&lt;/p&gt;
 
-  &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; cat food
+  &lt;details&gt;
+&lt;summary&gt;예시 에서 사용한 코드 참고&lt;/summary&gt;
+
+```
+&amp;gt; cat food
 
 pizza,0001,20000  
 chicken,0002,20000  
 burger,0003,15000  
 sandwich,0004,8000  
 sushi,0005,20000  
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+```
 
-  &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; cut -d &apos;,&apos; -f 1 food
+```
+&amp;gt; cut -d &apos;,&apos; -f 1 food
 
 pizza
 chicken
 burger
 sandwich
 sushi
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+```
 
-  &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; cut -d &apos;,&apos; -f 1,3 food
+```
+&amp;gt; cut -d &apos;,&apos; -f 1,3 food
 
 pizza,20000  
 chicken,20000  
 burger,15000  
 sandwich,8000  
 sushi,20000  
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+```
 
-  &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; cut -d &apos;,&apos; -f 1-3 --output-delimiter=&quot;/&quot; food
+```
+&amp;gt; cut -d &apos;,&apos; -f 1-3 --output-delimiter=&quot;/&quot; food
 
 pizza/0001/20000  
 chicken/0002/20000  
 burger/0003/15000  
 sandwich/0004/8000  
 sushi/0005/20000  
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+```
 
-  &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; cut -c 1-5 food
+```
+&amp;gt; cut -c 1-5 food
 
 pizza  
 chick  
 burge  
 sandw  
 sushi  
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+```
 
-  &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; cut -c 1,3-5 food
+```
+&amp;gt; cut -c 1,3-5 food
 
 pzza
 cick
 brge
 sndw
 sshi 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
-
+```
+&lt;/details&gt;
 &lt;/div&gt;
 </description>
         
