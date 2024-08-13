@@ -5,7 +5,7 @@
     <description>backend tech, log</description>
     <link>https://backendbrew.com/</link>
     <atom:link href="https://backendbrew.com/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2024-08-09T00:25:44+00:00</updated>
+    <updated>2024-08-13T15:33:39+00:00</updated>
     <id>https://backendbrew.com</id>
     <author>
       <name></name>
@@ -14699,20 +14699,20 @@ aggregate은 다른 aggregate 루트로의 참조를 가질 수 있다.
       </item>
     
       <item>
-        <title>동기화 서버 개발자로서의 회고</title>
+        <title>서버 개발 도메인, 동기화에 대해 이해하기</title>
         
           <description>&lt;p&gt;동기화 서버 개발자로서 구른지 어언 3년.&lt;br /&gt;
 그 동안 우리 팀은 회사에서 서비스하는 대부분의 동기화 서비스를 담당했다.&lt;/p&gt;
 
 &lt;p&gt;수 억 명의 MAU의 요청을 받아내는 동기화 서비스 개발자로서.&lt;br /&gt;
-나중에 내가 까먹지 않기 위해 동기화 서비스에서 사용했던 노하우들을 적어본다.&lt;/p&gt;
+나중에 내가 까먹지 않기 위해 동기화 서비스의 도메인과 동기화 서비스를 개발하며 겪었던 노하우들을 적어본다.&lt;/p&gt;
 
 &lt;h2 id=&quot;interface-관점에서&quot;&gt;interface 관점에서&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;initial changepoint
     &lt;ul&gt;
-      &lt;li&gt;초기 동기화, 즉 처음부터 받아갈 수 있는 인터페이스를 정의한다.1&lt;/li&gt;
+      &lt;li&gt;초기 동기화, 즉 처음부터 받아갈 수 있는 인터페이스를 정의한다.&lt;/li&gt;
       &lt;li&gt;우리는 보통 initial changepoint 값을 제공했다.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
@@ -14811,8 +14811,8 @@ aggregate은 다른 aggregate 루트로의 참조를 가질 수 있다.
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/retrospect/theme/sync</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/retrospect/theme/sync</guid>
+        <link>https://backendbrew.com/docs/career/domain/sync</link>
+        <guid isPermaLink="true">https://backendbrew.com/docs/career/domain/sync</guid>
       </item>
     
       <item>
@@ -18116,7 +18116,7 @@ heartbeat는 consumer가 코디네이터와 통신하여 적절한 시간내에 
       </item>
     
       <item>
-        <title>8년차 개발자의 개발 면접 질문 정리</title>
+        <title>8년차 개발자의 개발 면접 질문 리스트</title>
         
           <description>&lt;p&gt;어떤 면접이든 면접을 보게 되면 질문을 받은 후엔 질문을 할 시간을 갖게 된다.&lt;br /&gt;
 면접을 준비할 땐 당연히 받을 질문을 준비하지만, 내 생각엔 &lt;strong&gt;받는 질문보다 할 질문이 더 중요하다.&lt;/strong&gt;&lt;/p&gt;
@@ -18178,8 +18178,7 @@ heartbeat는 consumer가 코디네이터와 통신하여 적절한 시간내에 
 최근 면접에선 내가 준비한 위 질문들을 면접관들께 모두 할 수 있었고, 잘 모르던 회사에 대해 나름대로 깊이 있게 알 수 있게 되었다.&lt;br /&gt;
 질문을 하다 보면 면접관들이 답변하신 내용에 재차 질문을 하게 되기도 한다.&lt;/p&gt;
 
-&lt;p&gt;면접을 자주 보는 편은 아니지만 앞으로도 이 질문들이 더 영양가 있게 업데이트할 수 있으면 좋겠다.&lt;br /&gt;
-이 글을 보는 분들이 더 좋은 질문들을 남겨줘도 좋을 것 같다.&lt;/p&gt;
+&lt;p&gt;면접을 자주 보는 편은 아니지만 앞으로도 이 질문들이 더 영양가 있게 업데이트할 수 있으면 좋겠다.&lt;/p&gt;
 </description>
         
         <pubDate></pubDate>
@@ -19271,6 +19270,16 @@ If there are 10 shards, the batch window and size apply to each shard individual
         <pubDate></pubDate>
         <link>https://backendbrew.com/docs/dev-tools/</link>
         <guid isPermaLink="true">https://backendbrew.com/docs/dev-tools/</guid>
+      </item>
+    
+      <item>
+        <title>domain</title>
+        
+          <description></description>
+        
+        <pubDate></pubDate>
+        <link>https://backendbrew.com/docs/03.career/domain.html</link>
+        <guid isPermaLink="true">https://backendbrew.com/docs/03.career/domain.html</guid>
       </item>
     
       <item>
@@ -20701,12 +20710,14 @@ function activateNav() {
 // Document ready
 
 jtd.onReady(function(){
-  initNav();
+  if (document.getElementById(&apos;site-nav&apos;)) {
+    initNav();
+    activateNav();
+    scrollNav();
+  }
   {%- if site.search_enabled != false %}
   initSearch();
   {%- endif %}
-  activateNav();
-  scrollNav();
 });
 
 // Copy button on code
