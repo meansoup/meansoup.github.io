@@ -5,7 +5,7 @@
     <description>backend tech, log</description>
     <link>https://backendbrew.com/</link>
     <atom:link href="https://backendbrew.com/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2024-08-13T15:39:25+00:00</updated>
+    <updated>2024-08-13T16:58:26+00:00</updated>
     <id>https://backendbrew.com</id>
     <author>
       <name></name>
@@ -6279,6 +6279,12 @@ targetfile을 명시해주면, &lt;code class=&quot;language-plaintext highlight
 db dump, csv, json과 같이 포맷이 일정한 데이터를 파싱할 때 함께 사용할 수 있다.
 파일의 파싱이나 데이터 추출, command pipe에서 자주 사용한다.&lt;/p&gt;
 
+&lt;div class=&quot;code-example&quot; style=&quot;font-size: 0.8em&quot;&gt;
+  &lt;p class=&quot;label label-yellow&quot;&gt;예시&lt;/p&gt;
+
+  &lt;p&gt;&lt;img src=&quot;/images/post/dev-tools/terminal-commands/cut.gif&quot; alt=&quot;cut&quot; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+
 &lt;h3 id=&quot;delimiter-단위로-자르기&quot;&gt;delimiter 단위로 자르기&lt;/h3&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cut&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;DELIMITER&apos;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; INDEX FILE
@@ -6326,76 +6332,6 @@ db dump, csv, json과 같이 포맷이 일정한 데이터를 파싱할 때 함�
   &lt;li&gt;character 단위로 잘라낼 수 있다.&lt;/li&gt;
   &lt;li&gt;동일하게 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;N&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;N-M&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;N,M-L&lt;/code&gt;과 같이 설정 가능.&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;div class=&quot;code-example&quot; style=&quot;font-size: 0.8em&quot;&gt;
-  &lt;p class=&quot;label label-yellow&quot;&gt;예시&lt;/p&gt;
-
-  &lt;p&gt;&lt;img src=&quot;/images/post/dev-tools/terminal-commands/cut.gif&quot; alt=&quot;cut&quot; /&gt;&lt;/p&gt;
-
-  &lt;details&gt;
-&lt;summary&gt;예시 에서 사용한 코드 참고&lt;/summary&gt;
-
-```
-&amp;gt; cat food
-
-pizza,0001,20000  
-chicken,0002,20000  
-burger,0003,15000  
-sandwich,0004,8000  
-sushi,0005,20000  
-```
-
-```
-&amp;gt; cut -d &apos;,&apos; -f 1 food
-
-pizza
-chicken
-burger
-sandwich
-sushi
-```
-
-```
-&amp;gt; cut -d &apos;,&apos; -f 1,3 food
-
-pizza,20000  
-chicken,20000  
-burger,15000  
-sandwich,8000  
-sushi,20000  
-```
-
-```
-&amp;gt; cut -d &apos;,&apos; -f 1-3 --output-delimiter=&quot;/&quot; food
-
-pizza/0001/20000  
-chicken/0002/20000  
-burger/0003/15000  
-sandwich/0004/8000  
-sushi/0005/20000  
-```
-
-```
-&amp;gt; cut -c 1-5 food
-
-pizza  
-chick  
-burge  
-sandw  
-sushi  
-```
-
-```
-&amp;gt; cut -c 1,3-5 food
-
-pzza
-cick
-brge
-sndw
-sshi 
-```
-&lt;/details&gt;
-&lt;/div&gt;
 </description>
         
         <pubDate></pubDate>
