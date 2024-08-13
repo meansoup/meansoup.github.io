@@ -1,12 +1,12 @@
 ---
 layout: post
-title: 8년차 개발자의 개발 면접 질문 정리
-sidebar_label: 면접 질문하기
+title: 8년차 개발자의 개발 면접 질문 리스트
+sidebar_label: 면접 질문 리스트
 parent: career
 nav_order: 1
 permalink: /docs/career/interview-question
 sitemap:
-  lastmod: 2024-03-26
+  lastmod: 2024-08-14
 ---
 
 어떤 면접이든 면접을 보게 되면 질문을 받은 후엔 질문을 할 시간을 갖게 된다.  
@@ -65,4 +65,3 @@ sitemap:
 질문을 하다 보면 면접관들이 답변하신 내용에 재차 질문을 하게 되기도 한다.  
 
 면접을 자주 보는 편은 아니지만 앞으로도 이 질문들이 더 영양가 있게 업데이트할 수 있으면 좋겠다.  
-이 글을 보는 분들이 더 좋은 질문들을 남겨줘도 좋을 것 같다.
