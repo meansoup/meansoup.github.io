@@ -5,7 +5,7 @@
     <description>backend tech, log</description>
     <link>https://backendbrew.com/</link>
     <atom:link href="https://backendbrew.com/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2024-08-13T16:58:26+00:00</updated>
+    <updated>2024-08-16T18:00:41+00:00</updated>
     <id>https://backendbrew.com</id>
     <author>
       <name></name>
@@ -18981,6 +18981,198 @@ If there are 10 shards, the batch window and size apply to each shard individual
         <pubDate></pubDate>
         <link>https://backendbrew.com/docs/aws/dynamo/streams</link>
         <guid isPermaLink="true">https://backendbrew.com/docs/aws/dynamo/streams</guid>
+      </item>
+    
+      <item>
+        <title>백업을 개발할 때 고려해야할 10 가지 사항들</title>
+        
+          <description>&lt;p&gt;백업 서비스를 잘 하기 위해서는 백업 도메인에서 고려해야 할 점들을 잘 인지해야 한다.&lt;br /&gt;
+데이터를 서버에 올리고, 내려받는 점에서 동기화와 다를 것 없어보이지만 백업 서비스만의 특성들이 명확하다.&lt;/p&gt;
+
+&lt;h2 id=&quot;백업-도메인에서-고려할-사항들&quot;&gt;백업 도메인에서 고려할 사항들&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;#1-백업과-복원의-시작과-마침을-구분하기&quot;&gt;백업과 복원의 시작과 마침을 구분하기&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#2-revision을-고려하기&quot;&gt;revision을 고려하기&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#3-백업의-lifecycle을-관리하기&quot;&gt;백업의 lifecycle을 관리하기&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#4-데이터를-잃지-않기&quot;&gt;데이터를 잃지 않기&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#5-복원에-신경-쓰기&quot;&gt;복원에 신경 쓰기&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#6-락은-없어도-될거야&quot;&gt;락은 없어도 될거야&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#7-어떤-종류의-백업일까&quot;&gt;어떤 종류의 백업일까&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#8-자동-백업의-시간-고려하기&quot;&gt;자동 백업의 시간 고려하기&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#9-복원-사용성-이해하기&quot;&gt;복원 사용성 이해하기&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#10-정책-관리하기&quot;&gt;정책 관리하기&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;용어-정리&quot;&gt;용어 정리&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;용어&lt;/th&gt;
+      &lt;th&gt;의미&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;백업&lt;/td&gt;
+      &lt;td&gt;사용자가 기기의 데이터를 서버에 올리는 프로세스&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;자동 백업&lt;/td&gt;
+      &lt;td&gt;조건에 따라 백업이 자동으로 진행되는 기능&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;복원&lt;/td&gt;
+      &lt;td&gt;사용자가 서버에 저장한 데이터를 기기로 가져가는 프로세스&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;revision&lt;/td&gt;
+      &lt;td&gt;백업이 여러 차례 반복될 때 각 백업된 데이터를 분리하는 기준&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Snapshot&lt;/td&gt;
+      &lt;td&gt;각 백업 요청으로 저장된 기기의 데이터&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Full Backup&lt;/td&gt;
+      &lt;td&gt;매 백업마다 전체 데이터를 올리는 백업 프로세스&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Incremental Backup&lt;/td&gt;
+      &lt;td&gt;백업 시에 기존 백업에서 추가된 데이터를 올리는 백업 프로세스&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;1-백업과-복원의-시작과-마침을-구분하기&quot;&gt;1. 백업과 복원의 시작과 마침을 구분하기&lt;/h3&gt;
+
+&lt;p&gt;백업은 각 데이터들을 백업하고 완료된다. 복원도 마찬가지.&lt;br /&gt;
+백업으로 각 데이터를 받아가는 interface를 만들면 기능은 만족할 수 있다.&lt;br /&gt;
+큰 데이터를 백업할 때 네트워크에 따라 수 시간이 걸리는 백업이 수 천건 이상의 api 호출로 이뤄질 수 있다.&lt;br /&gt;
+기준점이 없다면 백업의 기능은 만족하지만 사용자가 백업이 끝난건지, 멈춘건지를 알 수 없다.&lt;/p&gt;
+
+&lt;p&gt;그렇지만 백업과 복원의 기준점이 필요하다.&lt;br /&gt;
+기준점이라는 것은 백업/복원의 시작과 완료.&lt;br /&gt;
+이 &lt;strong&gt;기준점이 없다면 백업이 끝났는지, 문제가 생겼는지를 파악할 수 없다&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;성능/이슈/사용성 분석 등의 목적으로 백업과 복원이 시작한 시간과 끝나는 시간을 파악할 수 있어야 한다.&lt;/p&gt;
+
+&lt;p&gt;물론 백업 시작/완료의 api가 그저 &lt;strong&gt;기준점의 목적으로만 사용되진 않는다&lt;/strong&gt;.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Snapshot에 대한 처리 등으로 사용할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;2-revision을-고려하기&quot;&gt;2. revision을 고려하기&lt;/h3&gt;
+
+&lt;p&gt;사용자가 새로운 백업을 요청할 때, 기존 백업과 구분이 되어야 한다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;백업을 진행 중인 경우에 복원을 하는 경우에는 기존 백업이 복원되어야 한다.&lt;/li&gt;
+  &lt;li&gt;백업을 진행하다가 멈춘 경우 완료되지 않은 백업이 기존에 완료된 백업을 덮어써서는 안된다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;따라서 데이터 키를 설계할 때 revision이 들어가야 한다.&lt;br /&gt;
+revision은 백업 overwrite 등의 케이스에서 위와 같이 visibility를 관리하고 async GC(이전 백업 삭제)를 가능하게 한다.&lt;/p&gt;
+
+&lt;h3 id=&quot;3-백업의-lifecycle을-관리하기&quot;&gt;3. 백업의 lifecycle을 관리하기&lt;/h3&gt;
+
+&lt;p&gt;백업은 데이터가 크니까 삭제가 정확하게 되어야 한다.&lt;br /&gt;
+큰 데이터가 남아 있다면 비용으로 직결된다. 삭제가 정확하게 되지 않는다면 비용을 쌓아두게 된다.&lt;/p&gt;
+
+&lt;p&gt;백업은 lifecycle policy에 따라 수 일에서 수 년까지 데이터가 유지될 수 있다.&lt;br /&gt;
+따라서 삭제 배치를 통해 async로 지우게 되며 batch 설계는 안정적이고 정확해야 한다.&lt;/p&gt;
+
+&lt;p&gt;삭제가 비동기적으로 이뤄지는 만큼 삭제를 놓치기 쉽다.&lt;br /&gt;
+놓친 삭제는 그만큼의 비용과 추가 작업으로 이어진다.&lt;/p&gt;
+
+&lt;p&gt;백업의 특성상 데이터를 지우게 될 때는 특정 백업의 스냅샷이 지워지는 경우가 많다.&lt;br /&gt;
+따라서 &lt;a href=&quot;#2-revision을-고려하기&quot;&gt;revision을 고려하기&lt;/a&gt;에 신경써서 삭제까지 설계가 이어지는게 좋다.&lt;/p&gt;
+
+&lt;h3 id=&quot;4-데이터를-잃지-않기&quot;&gt;4. 데이터를 잃지 않기&lt;/h3&gt;
+
+&lt;p&gt;너무나도 당연한 얘기지만 백업 서버의 설계 원칙의 가장 첫 번째는 사용자 데이터를 유실하지 않는 것이다.&lt;br /&gt;
+의외로 서비스를 하다보면 데이터를 잃을 수 있는 상황으로 이어지는 경우가 많다.&lt;/p&gt;
+
+&lt;p&gt;새로운 기능을 설계할 때 비용이나 효율성, 운영상의 이슈를 들며 데이터를 잃을 수 있는 가능성이 있는 방향으로 설계를 선택하는 개발자들을 자주 보게 된다.&lt;br /&gt;
+사용자의 데이터를 백업한다는 것. 사용자의 데이터를 관리한다는 것은 어떤 상황에도 데이터를 잃지 않아야 한다는 것.
+유실하지 않는 구조 뿐만 아니라, 언젠가 사람의 실수로 유실할수도 있는 상황 조차 만들지 않는 것이 중요하다.&lt;/p&gt;
+
+&lt;p&gt;하나의 예로 운영이나 편의상의 이슈로 배치가 직접 사용자의 데이터의 저장소에 배치가 접근하는 것.&lt;br /&gt;
+이건 추후 was의 스키마 변경이나 저장소 접근 로직 등의 변화가 배치까지 적용되지 않는 경우 치명적인 사용자 데이터 유실을 초래할 수 있으며 (실제 있었던 이슈), 지양해야 하는 부분이다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;이것들을 챙기면 문제 없는 시스템&lt;/strong&gt; 이 아니라 &lt;strong&gt;아무것도 신경 쓰지 않아도 문제 없는 시스템&lt;/strong&gt; 으로 최대한 가는 것이 옳다.&lt;/p&gt;
+
+&lt;h3 id=&quot;5-복원에-신경-쓰기&quot;&gt;5. 복원에 신경 쓰기&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;#4-데이터를-잃지-않기&quot;&gt;데이터를 잃지 않기&lt;/a&gt; 것과 유사하게 중요한 것은 복원 데이터를 안전하게 내려주는 것이다.&lt;/p&gt;
+
+&lt;p&gt;백업과 동기화의 가장 큰 차이점은 백업은 데이터를 보관하는 것이고, 동기화는 데이터를 실시간으로 업데이트 하는 것이다.&lt;br /&gt;
+따라서 백업은 데이터를 업로드만 한다. 자동 백업 기능이 있다면 데이터는 주기적으로 업로드 되겠지만, &lt;strong&gt;다운로드 되는 경우는 사용자가 복원을 요청할 때 뿐&lt;/strong&gt;이다.&lt;/p&gt;
+
+&lt;p&gt;그렇다는 것은 데이터가 잘못 내려간다면 다음 복원 요청까지 데이터를 고쳐줄 방법이 없다는 것.&lt;br /&gt;
+이미 복원된 항목을 제외하도록 클라이언트가 구현되어 있다면 다음 복원 요청에서도 고쳐주지 못할지도 모른다. &lt;br /&gt;
+당연히 데이터는 안정적으로 내려줘야 하지만, 백업의 복원 만큼은 안정적으로 내려주지 못한다면 내려주지 않는게 나을 수 있다.&lt;/p&gt;
+
+&lt;p&gt;동기화는 수시로 데이터를 동기화 하기 때문에 잘못 준 데이터를 고쳐줄 수 있는 여지가 더 많다.&lt;/p&gt;
+
+&lt;h3 id=&quot;6-락은-없어도-될거야&quot;&gt;6. 락은 없어도 될거야&lt;/h3&gt;
+
+&lt;p&gt;일반 적인 경우에 백업은 대부분 &lt;strong&gt;특정 기기의 백업&lt;/strong&gt;이 되곤 한다.&lt;br /&gt;
+그렇다는건 여러 기기에서의 동시 요청에 대한 고려를 하지 않아도 된다는 것이다.&lt;br /&gt;
+동시 요청이 없다는 건 동시 쓰기가 없다는 것. 설계에 따라 락을 잡을 필요가 없을 수도 있다.&lt;br /&gt;
+그러나 백업(write)과 동시에 복원(read) 요청이 들어올 수는 있다.&lt;/p&gt;
+
+&lt;p&gt;반면 동기화의 경우 여러 디바이스, 혹은 여러 사용자의 요청에 의해 동일한 아이템이 수정되는 케이스가 있어 락이 필수이다.&lt;/p&gt;
+
+&lt;h3 id=&quot;7-어떤-종류의-백업일까&quot;&gt;7. 어떤 종류의 백업일까&lt;/h3&gt;
+
+&lt;p&gt;backup을 다루는 팀마다 용어는 다르겠지만 &lt;u&gt;백업의 종류는 크게 두 가지&lt;/u&gt;[^1]가 있다.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Full Backup&lt;/strong&gt; - backup 데이터와 관계 없이 전체 백업&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Incremental Backup&lt;/strong&gt; - backup된 데이터 이후 변경된 데이터만 백업&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;요구사항과 백업 데이터의 특성에 따라 적절한 백업 종류를 선택해야 한다.&lt;br /&gt;
+우리는 다른 특성을 갖는 여러 컨텐트를 백업하고 있어 특성에 맞게 두 가지 백업을 모두 사용했다.&lt;/p&gt;
+
+&lt;h3 id=&quot;8-자동-백업의-시간-고려하기&quot;&gt;8. 자동 백업의 시간 고려하기&lt;/h3&gt;
+
+&lt;p&gt;요즘은 백업을 한다면 &lt;strong&gt;자동 백업&lt;/strong&gt;이라는 옵션이 존재하는 경우가 많다.&lt;br /&gt;
+보통 자동 백업은 사용자에게 영향을 주지 않기 위해 백업 시간이 조정되는 경우가 많다. 주로 밤이다.&lt;/p&gt;
+
+&lt;p&gt;만약 클라이언트가 매일 0시에 자동 백업을 하도록 구현했다면, 모든 백업 트래픽은 0시에 몰리게 된다.&lt;br /&gt;
+자동 백업 시간은 클라이언트의 개발 사항이지만 서버에서도 체크가 필요하다.&lt;/p&gt;
+
+&lt;p&gt;이를 고려하더라도 시간 대에 따른 요청은 어쩔 수 없고, 백업 서비스는 peak와 non-peak의 api 호출량 차이가 크다.&lt;/p&gt;
+
+&lt;h3 id=&quot;9-복원-사용성-이해하기&quot;&gt;9. 복원 사용성 이해하기&lt;/h3&gt;
+
+&lt;p&gt;복원만의 특성도 있다. &lt;br /&gt;
+우선 &lt;a href=&quot;#8-자동-백업의-시간-고려하기&quot;&gt;자동 백업의 시간 고려하기&lt;/a&gt;와 반대로 복원은 주로 사용자가 깨어 있는 낮 시간에 요청된다.&lt;/p&gt;
+
+&lt;p&gt;사용자들은 백업은 여러번 수행하나, 복원은 한 번 혹은 한 번도 하지 않는 경우도 많다.&lt;br /&gt;
+따라서 백업 대비 복원 요청은 한참 적다.&lt;br /&gt;
+그러나 백업보다 복원이 사용자에게 더 중요한 경험이기 때문에 복원 기능이 더 잘 관리 되어야 한다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;백업 지표에 복원이 묻히지 않도록 지표를 분리 / 관리해야 한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;10-정책-관리하기&quot;&gt;10. 정책 관리하기&lt;/h3&gt;
+
+&lt;p&gt;정책은 사실 모든 도메인에서 중요하다.&lt;br /&gt;
+Enterprise 급 서비스에서는 어떤 서비스든 정책을 정하지 않으면 상식을 넘어서는 어뷰징 유저를 만나게 된다.&lt;/p&gt;
+
+&lt;p&gt;우리는 일반적으로 300개 정도의 데이터를 갖는 백업에서 150만 개의 불가능한 데이터를 갖고 있는 어뷰징 유저를 보았다.&lt;br /&gt;
+그러나 정책이 미리 정해지지 않았다면, 이미 추가된 어뷰징 유저를 처리하기는 어렵고, 어뷰징 유저를 위한 별도의 작업들이 필요할 수 있다.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;[^1] 백업의 종류에 대한 &lt;a href=&quot;https://aws.amazon.com/compare/the-difference-between-incremental-differential-and-other-backups/&quot;&gt;AWS의 글&lt;/a&gt; 참고&lt;/p&gt;
+</description>
+        
+        <pubDate></pubDate>
+        <link>https://backendbrew.com/docs/career/domain/backup</link>
+        <guid isPermaLink="true">https://backendbrew.com/docs/career/domain/backup</guid>
       </item>
     
       <item>
