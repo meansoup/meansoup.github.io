@@ -5,7 +5,7 @@
     <description>backend tech, log</description>
     <link>https://backendbrew.com/</link>
     <atom:link href="https://backendbrew.com/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2024-08-17T03:07:08+00:00</updated>
+    <updated>2024-08-17T14:16:45+00:00</updated>
     <id>https://backendbrew.com</id>
     <author>
       <name></name>
@@ -19050,11 +19050,11 @@ While it might seem similar to synchronization in terms of uploading and downloa
 &lt;p&gt;Backups are complete when all data is successfully backed up, and the same applies to restores.&lt;br /&gt;
 You can create an interface to fulfill these functions, but large backups might involve thousands of API calls, potentially taking hours depending on the network.&lt;/p&gt;
 
-&lt;p&gt;Without clear checkpoints, users won’t know if their backup has finished or if it stopped midway.&lt;br /&gt;
-This is why it’s important to have &lt;strong&gt;start and end checkpoints for backups and restores&lt;/strong&gt;. Without these, it’s difficult to tell if a process has completed or encountered an issue.&lt;/p&gt;
+&lt;p&gt;Without clear checkpoints, you won’t know if their backup has finished or if it stopped midway. &lt;br /&gt;
+This is why it’s important to have &lt;strong&gt;start and end checkpoints for backups and restores&lt;/strong&gt;. Without these, it’s difficult to check whether a process has completed or encountered an issue.&lt;/p&gt;
 
-&lt;p&gt;This information is also essential for analyzing performance, issues, and usability.&lt;br /&gt;
-These start/end APIs aren’t just for checkpoints—they can also be used for processing snapshots.&lt;/p&gt;
+&lt;p&gt;The checkpoint is also essential for analyzing performance, issues, and usability.
+These start/end APIs aren’t just for checkpoints. They can also be used for processing snapshots&lt;/p&gt;
 
 &lt;h3 id=&quot;2-considering-revisions&quot;&gt;2. Considering Revisions&lt;/h3&gt;
 
@@ -19069,11 +19069,14 @@ If the backup process is interrupted, the incomplete backup must not overwrite t
 &lt;p&gt;Backups involve large amounts of data, so it’s critical to ensure that data deletion happens correctly.&lt;br /&gt;
 If not, this will directly impact costs, as undetected undeleted data accumulates.&lt;/p&gt;
 
-&lt;p&gt;Backups can be retained for anywhere from days to years, depending on lifecycle policies. To manage this, async deletions should be executed via batch jobs that are stable and accurate.&lt;/p&gt;
+&lt;p&gt;Backups can be stored from days to years, depending on lifecycle policies.&lt;br /&gt;
+To manage this, async deletions should be executed via batch jobs that are stable and accurate.&lt;/p&gt;
 
-&lt;p&gt;Given that deletions occur asynchronously, it’s easy to miss them, resulting in additional costs and extra work.&lt;/p&gt;
+&lt;p&gt;Given that deletions occur asynchronously, it’s easy to miss them.&lt;br /&gt;
+Missing deletion leads to that much cost and additional work.&lt;/p&gt;
 
-&lt;p&gt;Since many backups involve snapshot deletion, it’s important to design the deletion process with revisions in mind.&lt;/p&gt;
+&lt;p&gt;Due to the nature of backups, snapshots of specific backups are often erased when data is erased.&lt;br /&gt;
+Therefore, it is better to continue the design until deletion by &lt;a href=&quot;#2-considering-revisions&quot;&gt;Considering Revisions&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;4-preventing-data-loss&quot;&gt;4. Preventing Data Loss&lt;/h3&gt;
 
@@ -19083,7 +19086,9 @@ Surprisingly, there are many scenarios where data loss can occur, even in produc
 &lt;p&gt;While developing new features, engineers sometimes prioritize cost, efficiency, or operational concerns, leading to decisions that increase the risk of data loss.&lt;br /&gt;
 However, &lt;strong&gt;managing user data means ensuring that data is never lost, no matter the circumstances&lt;/strong&gt;. It’s crucial to design the system not only to avoid losing data, but also to prevent any situation that could lead to human errors resulting in data loss.&lt;/p&gt;
 
-&lt;p&gt;For instance, allowing batch jobs to directly access the data storage can be dangerous. If the schema or access logic changes, the batch jobs may not reflect those updates, potentially resulting in catastrophic data loss, as has happened in past incidents.&lt;/p&gt;
+&lt;p&gt;For instance, allowing batch jobs to directly access the data storage can be dangerous.&lt;br /&gt;
+If the schema or access logic changes, the batch jobs may not reflect those updates.&lt;br /&gt;
+It will potentially result catastrophic data loss. (as has happened to our team in past incidents).&lt;/p&gt;
 
 &lt;p&gt;The goal is to design a system where &lt;strong&gt;there are no issues even without constant monitoring&lt;/strong&gt;, rather than one that requires attention to avoid problems.&lt;/p&gt;
 
@@ -19096,11 +19101,11 @@ Backups only upload data. Even with automatic backups, the only time data is dow
 If data is restored incorrectly, there’s no way to correct it until the user makes another restore request, which could be problematic if the client doesn’t handle exclusions for previously restored items.&lt;br /&gt;
 In some cases, it’s better not to restore data at all than to restore it incorrectly.&lt;/p&gt;
 
-&lt;p&gt;Synchronization, on the other hand, provides more opportunities to correct errors because data is updated frequently.&lt;/p&gt;
+&lt;p&gt;Synchronization, on the other hand, provides more opportunities to correct datas because data is updated frequently.&lt;/p&gt;
 
 &lt;h3 id=&quot;6-locks-might-not-be-necessary&quot;&gt;6. Locks Might Not Be Necessary&lt;/h3&gt;
 
-&lt;p&gt;Typically, backups are device-specific, meaning that there’s no need to account for simultaneous requests from multiple devices.&lt;br /&gt;
+&lt;p&gt;Typically, backups are device-specific, this means that there is no need to consider simultaneous requests from multiple devices. &lt;br /&gt;
 No simultaneous requests mean no simultaneous writes, so locks might not be needed, depending on the design.&lt;br /&gt;
 However, there might be cases where a restore (read) request is made simultaneously with a backup (write) request.&lt;/p&gt;
 
@@ -19108,7 +19113,7 @@ However, there might be cases where a restore (read) request is made simultaneou
 
 &lt;h3 id=&quot;7-types-of-backups&quot;&gt;7. Types of Backups&lt;/h3&gt;
 
-&lt;p&gt;Each team might use different terms, but generally, there are two main types of backups&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
+&lt;p&gt;Each team might use different terms, but generally, there are &lt;u&gt;two main types of backups&lt;/u&gt;&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;&lt;strong&gt;Full Backup&lt;/strong&gt; – A complete backup regardless of previous backups.&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Incremental Backup&lt;/strong&gt; – A backup that only includes data added or changed since the last backup.&lt;/li&gt;
@@ -19144,7 +19149,7 @@ However, restores are often more important to users than backups, so the restore
 &lt;p&gt;Policies are important across all domains.&lt;br /&gt;
 For enterprise-level services, not having policies in place can lead to encountering abusive users with behavior far beyond the norm.&lt;/p&gt;
 
-&lt;p&gt;For instance, while most users might have around 300 backup items, we’ve seen abusive users trying to store up to 1.5 million items.&lt;br /&gt;
+&lt;p&gt;For instance, while most users might have around 300 backup items, we’ve seen abusive user trying to store up to 1.5 million items. &lt;br /&gt;
 If policies aren’t established beforehand, it can be difficult to address such cases after the fact, and handling them may require additional work.&lt;/p&gt;
 
 &lt;hr /&gt;
