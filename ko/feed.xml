@@ -5,7 +5,7 @@
     <description>backend tech, log</description>
     <link>https://backendbrew.com/</link>
     <atom:link href="https://backendbrew.com/ko/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2024-08-16T18:00:54+00:00</updated>
+    <updated>2024-08-17T03:07:20+00:00</updated>
     <id>https://backendbrew.com</id>
     <author>
       <name></name>
@@ -19133,7 +19133,7 @@ revision은 백업 overwrite 등의 케이스에서 위와 같이 visibility를 
 
 &lt;h3 id=&quot;7-어떤-종류의-백업일까&quot;&gt;7. 어떤 종류의 백업일까&lt;/h3&gt;
 
-&lt;p&gt;backup을 다루는 팀마다 용어는 다르겠지만 &lt;u&gt;백업의 종류는 크게 두 가지&lt;/u&gt;[^1]가 있다.&lt;/p&gt;
+&lt;p&gt;backup을 다루는 팀마다 용어는 다르겠지만 &lt;u&gt;백업의 종류는 크게 두 가지&lt;/u&gt;&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;가 있다.&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;&lt;strong&gt;Full Backup&lt;/strong&gt; - backup 데이터와 관계 없이 전체 백업&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Incremental Backup&lt;/strong&gt; - backup된 데이터 이후 변경된 데이터만 백업&lt;/li&gt;
@@ -19174,7 +19174,13 @@ Enterprise 급 서비스에서는 어떤 서비스든 정책을 정하지 않으
 
 &lt;hr /&gt;
 
-&lt;p&gt;[^1] 백업의 종류에 대한 &lt;a href=&quot;https://aws.amazon.com/compare/the-difference-between-incremental-differential-and-other-backups/&quot;&gt;AWS의 글&lt;/a&gt; 참고&lt;/p&gt;
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;백업의 종류에 대한 &lt;a href=&quot;https://aws.amazon.com/compare/the-difference-between-incremental-differential-and-other-backups/&quot;&gt;AWS의 글&lt;/a&gt; 참고 &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
 </description>
         
         <pubDate></pubDate>
