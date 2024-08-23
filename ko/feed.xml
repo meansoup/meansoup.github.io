@@ -5,7 +5,7 @@
     <description>backend tech, log</description>
     <link>https://backendbrew.com/</link>
     <atom:link href="https://backendbrew.com/ko/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2024-08-22T23:45:14+00:00</updated>
+    <updated>2024-08-23T00:21:20+00:00</updated>
     <id>https://backendbrew.com</id>
     <author>
       <name></name>
@@ -6084,7 +6084,7 @@ Java의 API들이 Array를 사용하는 경우가 있어 써야할 수 있다.&l
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;그 외의 다양한 명령어들이 많으나, 창 분할은 [tmux](/docs/dev-tools/linux-commands/tmux를 사용하는 것이 더 편리하다.&lt;/p&gt;
+&lt;p&gt;그 외의 다양한 명령어들이 많으나, 창 분할은 &lt;a href=&quot;/docs/dev-tools/linux-commands/tmux&quot;&gt;tmux&lt;/a&gt;를 사용하는 것이 더 편리하다.&lt;/p&gt;
 </description>
         
         <pubDate></pubDate>

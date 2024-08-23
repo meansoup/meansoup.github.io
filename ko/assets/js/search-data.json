@@ -1261,7 +1261,7 @@
   },"180": {
     "doc": "linux screen 쓰는 이유, 자주 사용하는 screen 명령어 사용법",
     "title": "session 내부 명령어",
-    "content": "| 동작 | 명령어 | 설명 | . | detach screen | ctrl + a d | screen session에서 나오기. detach로 나오면 session은 살아있으면서 나오는 것.가장 빈번하게 사용되는 커맨드 | . | check sessionId | echo $STY | session 내부에서 현재 sessionId를 확인하기 위한 커맨드.현재 터미널이 screen 내부에 있는 것이 맞는지 확인하기 위해 빈번히 사용된다. | . 그 외의 다양한 명령어들이 많으나, 창 분할은 [tmux](/docs/dev-tools/linux-commands/tmux를 사용하는 것이 더 편리하다. ",
+    "content": "| 동작 | 명령어 | 설명 | . | detach screen | ctrl + a d | screen session에서 나오기. detach로 나오면 session은 살아있으면서 나오는 것.가장 빈번하게 사용되는 커맨드 | . | check sessionId | echo $STY | session 내부에서 현재 sessionId를 확인하기 위한 커맨드.현재 터미널이 screen 내부에 있는 것이 맞는지 확인하기 위해 빈번히 사용된다. | . 그 외의 다양한 명령어들이 많으나, 창 분할은 tmux를 사용하는 것이 더 편리하다. ",
     "url": "/docs/tools/linux-commands/screen#session-%EB%82%B4%EB%B6%80-%EB%AA%85%EB%A0%B9%EC%96%B4",
     
     "relUrl": "/docs/tools/linux-commands/screen#session-내부-명령어"
