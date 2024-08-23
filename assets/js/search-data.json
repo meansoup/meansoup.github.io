@@ -1261,7 +1261,7 @@
   },"180": {
     "doc": "Why use linux screen, How to use screen?",
     "title": "Internal Session Commands",
-    "content": "| Action | Command | Description | . | Detach from screen | ctrl + a d | Detaches from the screen session, leaving it running in the background.This is the most frequently used command. | . | Check session ID | echo $STY | Displays the session ID of the current screen session.This command is often used to verify whether the terminal is inside a screen session. | . There are many other commands available, but for window splitting, using [tmux](/docs/dev-tools/linux-commands/tmux is more convenient. ",
+    "content": "| Action | Command | Description | . | Detach from screen | ctrl + a d | Detaches from the screen session, leaving it running in the background.This is the most frequently used command. | . | Check session ID | echo $STY | Displays the session ID of the current screen session.This command is often used to verify whether the terminal is inside a screen session. | . There are many other commands available, but for window splitting, using tmux is more convenient. ",
     "url": "/docs/tools/linux-commands/screen#internal-session-commands",
     
     "relUrl": "/docs/tools/linux-commands/screen#internal-session-commands"
