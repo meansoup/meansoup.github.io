@@ -1830,6 +1830,27 @@
   
   
   
+  <url>
+    <loc>https://backendbrew.com/docs/apis/rest/hateoas</loc>
+    
+    <lastmod>2024-08-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://backendbrew.com/ko/docs/apis/rest/hateoas</loc>
+    
+    <lastmod>2024-08-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
   
   
   

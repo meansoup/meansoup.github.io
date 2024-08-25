@@ -5,7 +5,7 @@
     <description>backend tech, log</description>
     <link>https://backendbrew.com/</link>
     <atom:link href="https://backendbrew.com/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2024-08-23T00:31:53+00:00</updated>
+    <updated>2024-08-25T15:03:06+00:00</updated>
     <id>https://backendbrew.com</id>
     <author>
       <name></name>
@@ -19139,6 +19139,118 @@ If policies aren’t established beforehand, it can be difficult to address such
         <pubDate></pubDate>
         <link>https://backendbrew.com/docs/career/domain/backup</link>
         <guid isPermaLink="true">https://backendbrew.com/docs/career/domain/backup</guid>
+      </item>
+    
+      <item>
+        <title>What is HATEOAS? Why and when using HATEOAS, and issues when not in use</title>
+        
+          <description>&lt;p&gt;HATEOAS is one of the design principles of RESTful web services, which makes RESTful APIs self-descriptive, simplifying and enhancing the scalability of interactions between clients and servers.&lt;/p&gt;
+
+&lt;p&gt;HATEOAS stands for ‘&lt;strong&gt;H&lt;/strong&gt;ypermedia &lt;strong&gt;a&lt;/strong&gt;s &lt;strong&gt;t&lt;/strong&gt;he &lt;strong&gt;E&lt;/strong&gt;ngine &lt;strong&gt;o&lt;/strong&gt;f &lt;strong&gt;A&lt;/strong&gt;pplication &lt;strong&gt;S&lt;/strong&gt;tate,’ which is the principle of using hypermedia to dynamically interact between the server and the client.&lt;br /&gt;
+HATEOAS provides hypermedia links related to the resource in the API response, allowing the next actions to be determined dynamically based on the provided hypermedia.&lt;/p&gt;
+
+&lt;p&gt;To understand why HATEOAS is used, let’s look at the issues that arise when HATEOAS is not used.&lt;br /&gt;
+For comparison, we’ll use the example of implementing GitHub’s repository retrieval API.&lt;/p&gt;
+
+&lt;p&gt;The key is &lt;strong&gt;how the data is delivered when other data&lt;/strong&gt; is needed in one api.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#non-hateoas&quot;&gt;non-HATEOAS&lt;/a&gt;
+    &lt;ol&gt;
+      &lt;li&gt;&lt;a href=&quot;#1-when-the-server-fills-in-and-returns-the-data&quot;&gt;When the server fills in and returns the data&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#2-when-using-apis-with-predetermined-data-for-the-client&quot;&gt;When using APIs with predetermined data for the client&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#hateoas&quot;&gt;HATEOAS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;non-hateoas&quot;&gt;non-HATEOAS&lt;/h2&gt;
+
+&lt;h3 id=&quot;1-when-the-server-fills-in-and-returns-the-data&quot;&gt;1. When the server fills in and returns the data&lt;/h3&gt;
+
+&lt;p&gt;When retrieving a repository and additional information about a user is needed, the user’s detailed information is added to the repository retrieval API.&lt;br /&gt;
+The client starts by receiving small user information related to the repository. 
+However, over time, the requirements change and data that is not related to the repository query is returned.&lt;/p&gt;
+
+&lt;p&gt;As these requirements accumulate, the repository retrieval API might evolve into an API that returns multiple pieces of information beyond just repository retrieval.&lt;/p&gt;
+
+&lt;h4 id=&quot;issues&quot;&gt;Issues&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The API performs more than its intended function.&lt;/li&gt;
+  &lt;li&gt;The API becomes harder to understand.&lt;/li&gt;
+  &lt;li&gt;The server has to consider various exceptions for multiple domain concepts to support the API.&lt;/li&gt;
+  &lt;li&gt;The server cannot determine which values in the API are being used by the client.&lt;/li&gt;
+  &lt;li&gt;When supporting multiple clients, there may be several APIs that provide similar functions.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;2-when-using-apis-with-predetermined-data-for-the-client&quot;&gt;2. When using APIs with predetermined data for the client&lt;/h3&gt;
+
+&lt;p&gt;To retrieve a repository and then additional information about a user, the client calls the predetermined API. It might be called as &lt;strong&gt;get user api&lt;/strong&gt;.&lt;br /&gt;
+The process involves calling the predetermined user information retrieval API using the user ID obtained from the repository.&lt;/p&gt;
+
+&lt;p&gt;The client must hardcode the API endpoint.&lt;br /&gt;
+The client becomes the subject of managing endpoints and relies on endpoints.&lt;/p&gt;
+
+&lt;h4 id=&quot;issues-1&quot;&gt;Issues&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A strong coupling between the client and server emerges due to the endpoint.&lt;/li&gt;
+  &lt;li&gt;The coupling resulting from the client’s endpoint makes server API changes more difficult.&lt;/li&gt;
+  &lt;li&gt;If the server updates the API version, client modifications are required.&lt;/li&gt;
+  &lt;li&gt;There is a need to share and explain the API with the client.&lt;/li&gt;
+  &lt;li&gt;When supporting multiple clients, there is an overhead in explaining the API to each client.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;hateoas&quot;&gt;HATEOAS&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://docs.github.com/en/rest/repos/repos?apiVersion=2022-11-28#get-a-repository&quot;&gt;GitHub’s Get Repository Example&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1296269&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;node_id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;MDEwOlJlcG9zaXRvcnkxMjk2MjY5&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Hello-World&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;full_name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;octocat/Hello-World&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;owner&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;login&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;octocat&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;node_id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;MDQ6VXNlcjE=&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;avatar_url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://github.com/images/error/octocat_happy.gif&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;gravatar_id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://api.github.com/users/octocat&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;html_url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://github.com/octocat&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;followers_url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://api.github.com/users/octocat/followers&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;following_url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://api.github.com/users/octocat/following{/other_user}&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;gists_url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://api.github.com/users/octocat/gists{/gist_id}&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;starred_url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://api.github.com/users/octocat/starred{/owner}{/repo}&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;subscriptions_url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://api.github.com/users/octocat/subscriptions&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;organizations_url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://api.github.com/users/octocat/orgs&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;repos_url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://api.github.com/users/octocat/repos&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;events_url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://api.github.com/users/octocat/events{/privacy}&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;received_events_url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://api.github.com/users/octocat/received_events&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;User&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;site_admin&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Referring to GitHub’s API, when retrieving a repository, the response includes hypermedia URLs that allow access to the other resource.&lt;br /&gt;
+Even without checking the GitHub API specification, the concise response makes it clear what is included.&lt;br /&gt;
+If each of the owner’s resources is needed, further retrieval can be made via the hypermedia URLs provided in the response.&lt;/p&gt;
+
+&lt;p&gt;Each &lt;strong&gt;API’s provided resources and roles become clearer&lt;/strong&gt;, and in this way, &lt;strong&gt;HATEOAS can serve as self-descriptive API documentation&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Between the client and the server, there is only a minimal agreement on which field’s link the client must check to determine the desired state.&lt;br /&gt;
+The client interacts by following the links provided by the server to retrieve the necessary resources.&lt;br /&gt;
+As a result, &lt;strong&gt;the coupling between the client and server is minimized&lt;/strong&gt;, and &lt;strong&gt;the server can change the API independently of the client&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;The downside is that network overhead may occur as the client follows links to check the state.&lt;/p&gt;
+
+</description>
+        
+        <pubDate></pubDate>
+        <link>https://backendbrew.com/docs/apis/rest/hateoas</link>
+        <guid isPermaLink="true">https://backendbrew.com/docs/apis/rest/hateoas</guid>
       </item>
     
       <item>
