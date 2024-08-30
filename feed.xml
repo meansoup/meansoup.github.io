@@ -5,7 +5,7 @@
     <description>backend tech, log</description>
     <link>https://backendbrew.com/</link>
     <atom:link href="https://backendbrew.com/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2024-08-25T15:03:06+00:00</updated>
+    <updated>2024-08-30T15:04:48+00:00</updated>
     <id>https://backendbrew.com</id>
     <author>
       <name></name>
@@ -14618,115 +14618,144 @@ aggregate은 다른 aggregate 루트로의 참조를 가질 수 있다.
       </item>
     
       <item>
-        <title>서버 개발 도메인, 동기화에 대해 이해하기</title>
+        <title>10 Things to Consider When Developing a Synchronization Server</title>
         
-          <description>&lt;p&gt;동기화 서버 개발자로서 구른지 어언 3년.&lt;br /&gt;
-그 동안 우리 팀은 회사에서 서비스하는 대부분의 동기화 서비스를 담당했다.&lt;/p&gt;
+          <description>&lt;p&gt;As a developer worked on synchronization servers for several years, my team and I have been responsible for most of the synchronization services provided by our company.&lt;br /&gt;
+Here are some key points that I’ve learned from developing synchronization servers that handle requests from hundreds of millions of MAU.&lt;/p&gt;
 
-&lt;p&gt;수 억 명의 MAU의 요청을 받아내는 동기화 서비스 개발자로서.&lt;br /&gt;
-나중에 내가 까먹지 않기 위해 동기화 서비스의 도메인과 동기화 서비스를 개발하며 겪었던 노하우들을 적어본다.&lt;/p&gt;
+&lt;h2 id=&quot;key-considerations-in-the-synchronization-domain&quot;&gt;Key Considerations in the Synchronization Domain&lt;/h2&gt;
 
-&lt;h2 id=&quot;interface-관점에서&quot;&gt;interface 관점에서&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;#1-whose-synchronization-is-it&quot;&gt;Whose Synchronization Is It?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#2-syncing-deletions&quot;&gt;Syncing Deletions&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#3-safe-and-quick-actual-deletion&quot;&gt;Safe and Quick Actual Deletion&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#4-considering-faster-deletions&quot;&gt;Considering Faster Deletions&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#5-handling-synchronization&quot;&gt;Handling Synchronization&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#6-managing-initial-synchronization&quot;&gt;Managing Initial Synchronization&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#7-ensuring-no-misses-in-downsync&quot;&gt;Ensuring No Misses in Downsync&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#8-considering-partial-errors&quot;&gt;Considering Partial Errors&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#9-considering-legal-requirements&quot;&gt;Considering Legal Requirements&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#10-managing-policies&quot;&gt;Managing Policies&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;initial changepoint
-    &lt;ul&gt;
-      &lt;li&gt;초기 동기화, 즉 처음부터 받아갈 수 있는 인터페이스를 정의한다.&lt;/li&gt;
-      &lt;li&gt;우리는 보통 initial changepoint 값을 제공했다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;changepoint
-    &lt;ul&gt;
-      &lt;li&gt;클라이언트는 해석할 수 없는 changepoint를 내려준다.&lt;/li&gt;
-      &lt;li&gt;어디까지 받았는지 어떤걸 받아야하는지, 받아 갈 때의 schema와 바뀌진 않았는지 등을 확인할 수 있다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;multiple api에 대한 partial error vs full error
-    &lt;ul&gt;
-      &lt;li&gt;partial은 성능에 좋지만 이슈 파악에 너무 안좋다&lt;/li&gt;
-      &lt;li&gt;에러가 그렇게 잦을건가? 아닐거다. 라는게 최근 우리의 결론.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+&lt;h3 id=&quot;1-whose-synchronization-is-it&quot;&gt;1. Whose Synchronization Is It?&lt;/h3&gt;
 
-&lt;h2 id=&quot;code-관점에서&quot;&gt;code 관점에서&lt;/h2&gt;
+&lt;p&gt;The most important aspect of synchronization is &lt;strong&gt;whose data is being synchronized&lt;/strong&gt;.&lt;br /&gt;
+Understanding the target of synchronization leads to a clear domain design.&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;누락없는 get의 관리
-    &lt;ul&gt;
-      &lt;li&gt;get의 기준점을 확인하자.&lt;/li&gt;
-      &lt;li&gt;modifiedTime이 기준점이라면, 동일한 modifiedTime에 걸친 경우 누락이 생길 수 있는 구조인지 확인한다.&lt;/li&gt;
-      &lt;li&gt;누락이 없을 수 있도록 주의하기.&lt;/li&gt;
-      &lt;li&gt;웹과 다르게 한번 누락이 되면 초기 동기화를 하지 않는한 사용자 입장에선 영구 누락과 같게될 수 있다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;여러 모듈 간의 중복 코드는 하나의 코드를 사용하도록 하자
-    &lt;ul&gt;
-      &lt;li&gt;배치에서 was를 보든지 was의 코드와 같이 하나의 repository에서 관리하든지.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;gdpr
-    &lt;ul&gt;
-      &lt;li&gt;사용자의 데이터를 관리하는 eu의 법적인 요구사항. 동기화 서비스를 글로벌하게 한다면 필수적인 요소.&lt;/li&gt;
-      &lt;li&gt;서비스 로직의 domain을 그대로 사용하지 않으면 추후 서비스 변경에 따라 관리하기 복잡해진다.&lt;/li&gt;
-      &lt;li&gt;hexagonal을 잘 정리한 뒤 도메인 로직은 동일하게 사용한다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Is the synchronization for a single user?&lt;br /&gt;
+Is it for multiple devices?  &lt;br /&gt;
+Is it for shared use with others?&lt;br /&gt;
+Or is it a publicly open synchronization?&lt;/p&gt;
 
-&lt;h2 id=&quot;data-관점에서&quot;&gt;data 관점에서&lt;/h2&gt;
+&lt;p&gt;The type of synchronization determines the data marked on the server.&lt;br /&gt;
+Policies such as the relationship between the data creator and ownership, and the permissions to view and modify the data, will differ.&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;삭제한 데이터도 row가 남아서 삭제 동기화가 되어야 함 (단말엔 이미 받아져 있으므로, 웹과는 다르다)
-    &lt;ul&gt;
-      &lt;li&gt;단말이 여러개라거나 하는 이슈로 row를 확실히 지울 수 있는 시점을 장담하기 어렵다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;사용자 탈퇴 등으로 데이터가 보여지지 않아야 하는 경우를 위해 sequence(link)를 사용한다.
-    &lt;ul&gt;
-      &lt;li&gt;sequence를 올려서 데이터는 남아있지만 사용자가 볼 수 없게. 이 데이터는 배치로 삭제.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;실제 데이터의 row 삭제가 필요한 경우 마킹하고 배치로 삭제하자
-    &lt;ul&gt;
-      &lt;li&gt;실제 삭제로 인한 딜레이가 크다.&lt;/li&gt;
-      &lt;li&gt;특히 container에 대한 삭제라면 container 안의 item을 삭제하는 시간까지 굉장하다.&lt;/li&gt;
-      &lt;li&gt;마치 cassandra mv가 delete 요청시 바로 삭제해서 성능 이슈가 생기는 것처럼 서버도 바로 삭제하지 않고 사용자에게 응답하고 나중에 삭제한다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;삭제는 안전하게
-    &lt;ul&gt;
-      &lt;li&gt;모든 서비스가 그렇겠지만 동기화에서는 더더욱이 사용자 데이터를 삭제할 땐 조심해야 한다.&lt;/li&gt;
-      &lt;li&gt;삭제 api가 들어온다면 “제 사진이 지워졌어요!” 같은 이슈를 쉽게 대응할 수 있도록 로그를 남겨야 하고.&lt;/li&gt;
-      &lt;li&gt;배치를 수행한다면 안전하게 지우고 가능하면 딜레이를 주는 것도 좋다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+&lt;h3 id=&quot;2-syncing-deletions&quot;&gt;2. Syncing Deletions&lt;/h3&gt;
 
-&lt;h2 id=&quot;service-관점에서&quot;&gt;service 관점에서&lt;/h2&gt;
+&lt;p&gt;When a user deletes data, it typically gets removed from the server.&lt;br /&gt;
+However, in synchronization, &lt;strong&gt;deletions must also be synchronized&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;단말의 로직에 downsync가 주도되기 때문에 단말 구현이 올바른지 파악이 필요함
-    &lt;ul&gt;
-      &lt;li&gt;단말에서 dirty(수정사항) 체크가 잘 되고 있는지.&lt;/li&gt;
-      &lt;li&gt;단말에서 오구현을 할 경우를 찾기 위한 지표들을 셋업하자.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;정책을 결정하기
-    &lt;ul&gt;
-      &lt;li&gt;우리 PM들은 세부 정책들을 결정해주지 않았다.&lt;/li&gt;
-      &lt;li&gt;사용자가 가질 수 있는 달력 일정의 개수라거나, 하루에 생성할 수 있는 item의 개수/사이즈라거나.&lt;/li&gt;
-      &lt;li&gt;인스타그램이나 구글 포토 같은 서비스들은 정책이 결정되어 있다. (일하기 좋겠다..)&lt;/li&gt;
-      &lt;li&gt;정책이 없는 경우, 이로 인한 문제점들을 보게된다. migration 시 비정상적인 item을 갖는 사용자, 기획된 의도와 완전히 다르게 사용하는 어뷰징 유저들.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;누구의 동기화인가
-    &lt;ul&gt;
-      &lt;li&gt;누구의 동기화인지도 중요하다. 사용자 혼자 쓰는지. 아니면 누군가와 함께 사용하는지. 아니면 오픈된 동기화인지.&lt;/li&gt;
-      &lt;li&gt;동기화의 종류에 따라 서버에서 마킹하는 데이터가 달라진다. (생성자와 소유권의 관계, 사용량을 점유하는 사용자에 대한 정책들 등)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;If data is deleted on one device, it should also be deleted on other devices.&lt;br /&gt;
+If one user deletes data, other users should no longer be able to access that data.&lt;/p&gt;
+
+&lt;p&gt;Even if multiple devices are involved or if a user synchronizes months later, the deletion should still be reflected in the service.&lt;br /&gt;
+Syncing deletions often requires &lt;strong&gt;minimal metadata for aligning deletions&lt;/strong&gt;, so it might be okay to delete the actual file or data at this point.&lt;/p&gt;
+
+&lt;p&gt;Syncing deletions means &lt;strong&gt;distinguishing between synchronized deletions and actual data deletion&lt;/strong&gt; and not confusing the two.&lt;/p&gt;
+
+&lt;h3 id=&quot;3-safe-and-quick-actual-deletion&quot;&gt;3. Safe and Quick Actual Deletion&lt;/h3&gt;
+
+&lt;p&gt;Unlike the deletion to sync, there are actual deletion as well.
+This often happens when a user leaves.&lt;br /&gt;
+Even in the deletion synchronization, data excluding meta data may be deleted.&lt;/p&gt;
+
+&lt;p&gt;When actual data deletion occurs, &lt;strong&gt;mark it for deletion and handle it in batches via events&lt;/strong&gt;.&lt;br /&gt;
+Actual data deletion takes longer, but batching allows for quicker responses to users and safer failure handling and retries.&lt;/p&gt;
+
+&lt;p&gt;All services should handle deletions safely, but extra care is needed when deleting user data.&lt;br /&gt;
+It’s crucial to log sufficiently, though not excessively, to handle issues like “My photos were deleted!”&lt;/p&gt;
+
+&lt;h3 id=&quot;4-considering-faster-deletions&quot;&gt;4. Considering Faster Deletions&lt;/h3&gt;
+
+&lt;p&gt;There are times when all data of a specific user needs to be deleted, such as when a user leaves, due to GDPR’s right to erasure, or due to expiration or service policies.&lt;br /&gt;
+Deletion may not occur as expected, and if the user syncs during the deletion, there’s a risk they may receive partially deleted data.&lt;/p&gt;
+
+&lt;p&gt;Using a concept like revision allows you to make it appear as if the user’s data has been deleted by changing their revision.&lt;br /&gt;
+This is also useful for batch processing.&lt;/p&gt;
+
+&lt;p&gt;For example, raising a user’s revision from 2 to 3 can make it seem as if the data from revision 2 has been wiped.&lt;br /&gt;
+Even if revision 2 is processed later in a batch, there won’t be any issues.&lt;br /&gt;
+And the user will feel that the data has been wiped cleanly.&lt;/p&gt;
+
+&lt;h3 id=&quot;5-handling-synchronization&quot;&gt;5. Handling Synchronization&lt;/h3&gt;
+
+&lt;p&gt;The method to handle synchronization on the server side is to use a concept like pageToken.&lt;br /&gt;
+We handle synchronization proactively on the server using a value we specify as SyncPoint.&lt;/p&gt;
+
+&lt;p&gt;It’s best to use an encoded value for SyncPoint, which the client cannot interpret.&lt;br /&gt;
+This prevents unintended or unauthorized use by the client.&lt;/p&gt;
+
+&lt;p&gt;For instance, if you specify SyncPoint=100 for the 100th item, the client might interpret it and attempt to retrieve the 1000th item.&lt;/p&gt;
+
+&lt;p&gt;SyncPoint can be used to track up to where a specific user’s client has synchronized. 
+And It can also be used to check schema changes.&lt;br /&gt;
+By encoding and sending the necessary data for synchronization in SyncPoint, the server can monitor and manage the synchronization progress.&lt;/p&gt;
+
+&lt;p&gt;Since the synchronization trigger ultimately comes from the client, it’s essential to have indicators to identify client-side implementation issues.&lt;/p&gt;
+
+&lt;h3 id=&quot;6-managing-initial-synchronization&quot;&gt;6. Managing Initial Synchronization&lt;/h3&gt;
+
+&lt;p&gt;Managing synchronization with SyncPoint also means managing initial synchronization.&lt;br /&gt;
+Initial synchronization involves receiving all data from the beginning, which means heavy resource usage for both the server and client.&lt;/p&gt;
+
+&lt;p&gt;You need to be able to track how much of the initial synchronization the client has completed. If initial synchronization is required due to schema changes, the server should be able to prompt it.&lt;br /&gt;
+To this end, an initial SyncPoint is provided to the client under certain conditions.&lt;/p&gt;
+
+&lt;h3 id=&quot;7-ensuring-no-misses-in-downsync&quot;&gt;7. Ensuring No Misses in Downsync&lt;/h3&gt;
+
+&lt;p&gt;You need to confirm the baseline for downsync.&lt;br /&gt;
+This baseline could be a specific value of SyncPoint and is often related to the modifiedTime of the synchronized item.&lt;/p&gt;
+
+&lt;p&gt;Once an issue where items with the same modifiedTime spanned across pagination, causing an item to be missed.&lt;br /&gt;
+If this happens, the data may not be retrieved unless an initial sync is performed, and the bigger problem is that the development team may not be aware of the issue.&lt;/p&gt;
+
+&lt;p&gt;Although rare, since multiple items having the same modifiedTime and being split across pagination is uncommon, it’s necessary to develop downsync in a way that prevents any misses.&lt;/p&gt;
+
+&lt;h3 id=&quot;8-considering-partial-errors&quot;&gt;8. Considering Partial Errors&lt;/h3&gt;
+
+&lt;p&gt;During synchronization, it’s common for a user to synchronize multiple items at once.&lt;br /&gt;
+When multiple items are synchronized, should the entire request fail if some items fail?&lt;br /&gt;
+Or should the response include both the failed and successful items?&lt;/p&gt;
+
+&lt;p&gt;This issue, which is related to how retries are handled, depends on &lt;strong&gt;what data is being synchronized&lt;/strong&gt;.&lt;br /&gt;
+If the synchronized data is large and heavy, it’s better to design for partial errors.&lt;/p&gt;
+
+&lt;p&gt;However, if the data is small or if the range of retries can be reduced (e.g., using a hash before uploading a file), it’s much simpler for both client and server to handle errors without partial error handling.&lt;/p&gt;
+
+&lt;p&gt;While errors may not be frequent, the complexity introduced by partial errors is greater than you might expect.&lt;/p&gt;
+
+&lt;h3 id=&quot;9-considering-legal-requirements&quot;&gt;9. Considering Legal Requirements&lt;/h3&gt;
+
+&lt;p&gt;There are legal requirements for managing user data, most commonly adhering to the EU’s GDPR restrictions.&lt;br /&gt;
+If the domain of service logic is not introduced into the GDPR, management becomes complicated by service changes.&lt;/p&gt;
+
+&lt;p&gt;GDPR should be considered if the service is global, and it should be possible to use the same domain as the service logic.&lt;/p&gt;
+
+&lt;h3 id=&quot;10-managing-policies&quot;&gt;10. Managing Policies&lt;/h3&gt;
+
+&lt;p&gt;Policies are important in every domain.&lt;br /&gt;
+In enterprise-level services, if policies aren’t defined, you’ll encounter users who abuse the system beyond common sense.&lt;/p&gt;
+
+&lt;p&gt;Heavy users are valuable customers.&lt;br /&gt;
+&lt;strong&gt;Users who go far beyond common sense are not just heavy users&lt;/strong&gt;. They may generate data that’s typically not possible, often exploiting policy loopholes or bugs.&lt;/p&gt;
+
+&lt;p&gt;For example, I’ve seen users with 2 million items that would take at least few second to process for creating a item.&lt;br /&gt;
+Without policies, enterprise-level services often encounter such data from abusive users.&lt;/p&gt;
+
+&lt;p&gt;Unimaginable usage cases always exist, no matter how unlikely.&lt;br /&gt;
+Services like Instagram or Google Photos have clear policies in place.&lt;br /&gt;
+If policies aren’t established, it will eventually lead to quality and service issues.&lt;/p&gt;
 </description>
         
         <pubDate></pubDate>

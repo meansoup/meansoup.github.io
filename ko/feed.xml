@@ -5,7 +5,7 @@
     <description>backend tech, log</description>
     <link>https://backendbrew.com/</link>
     <atom:link href="https://backendbrew.com/ko/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2024-08-25T15:03:20+00:00</updated>
+    <updated>2024-08-30T15:05:01+00:00</updated>
     <id>https://backendbrew.com</id>
     <author>
       <name></name>
@@ -14626,115 +14626,143 @@ aggregate은 다른 aggregate 루트로의 참조를 가질 수 있다.
       </item>
     
       <item>
-        <title>서버 개발 도메인, 동기화에 대해 이해하기</title>
+        <title>동기화 서버를 개발할 때 고려해야할 10 가지 사항들</title>
         
-          <description>&lt;p&gt;동기화 서버 개발자로서 구른지 어언 3년.&lt;br /&gt;
-그 동안 우리 팀은 회사에서 서비스하는 대부분의 동기화 서비스를 담당했다.&lt;/p&gt;
+          <description>&lt;p&gt;동기화 서버 개발을 수 년 하면서, 그 동안 우리 팀과 나는 우리 회사에서 제공하는 대부분의 동기화 서비스를 담당했다.&lt;br /&gt;
+수 억 명의 MAU의 요청을 받아내는 동기화 서비스 개발자로서 동기화 서버를 개발하며 겪었던 중요한 점들을 정리해본다.&lt;/p&gt;
 
-&lt;p&gt;수 억 명의 MAU의 요청을 받아내는 동기화 서비스 개발자로서.&lt;br /&gt;
-나중에 내가 까먹지 않기 위해 동기화 서비스의 도메인과 동기화 서비스를 개발하며 겪었던 노하우들을 적어본다.&lt;/p&gt;
+&lt;h2 id=&quot;동기화-도메인에서-고려할-사항들&quot;&gt;동기화 도메인에서 고려할 사항들&lt;/h2&gt;
 
-&lt;h2 id=&quot;interface-관점에서&quot;&gt;interface 관점에서&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;#1-누구의-동기화인가&quot;&gt;누구의 동기화인가&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#2-삭제를-동기화-하자&quot;&gt;삭제를 동기화 하자&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#3-실제-삭제는-안전하고-빠르게&quot;&gt;실제 삭제는 안전하고 빠르게&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#4-더-빠른-삭제를-고려하기&quot;&gt;더 빠른 삭제를 고려하기&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#5-동기화를-핸들링하기&quot;&gt;동기화를 핸들링하기&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#6-초기-동기화를-관리하기&quot;&gt;초기 동기화를 관리하기&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#7-누락없는-downsync-보장하기&quot;&gt;누락없는 downsync 보장하기&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#8-partial-error를-고려하기&quot;&gt;partial error를 고려하기&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#9-법적-요구사항-고려하기&quot;&gt;법적 요구사항 고려하기&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#10-정책-관리하기&quot;&gt;정책 관리하기&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;initial changepoint
-    &lt;ul&gt;
-      &lt;li&gt;초기 동기화, 즉 처음부터 받아갈 수 있는 인터페이스를 정의한다.&lt;/li&gt;
-      &lt;li&gt;우리는 보통 initial changepoint 값을 제공했다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;changepoint
-    &lt;ul&gt;
-      &lt;li&gt;클라이언트는 해석할 수 없는 changepoint를 내려준다.&lt;/li&gt;
-      &lt;li&gt;어디까지 받았는지 어떤걸 받아야하는지, 받아 갈 때의 schema와 바뀌진 않았는지 등을 확인할 수 있다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;multiple api에 대한 partial error vs full error
-    &lt;ul&gt;
-      &lt;li&gt;partial은 성능에 좋지만 이슈 파악에 너무 안좋다&lt;/li&gt;
-      &lt;li&gt;에러가 그렇게 잦을건가? 아닐거다. 라는게 최근 우리의 결론.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+&lt;h3 id=&quot;1-누구의-동기화인가&quot;&gt;1. 누구의 동기화인가&lt;/h3&gt;
 
-&lt;h2 id=&quot;code-관점에서&quot;&gt;code 관점에서&lt;/h2&gt;
+&lt;p&gt;동기화는 &lt;strong&gt;누구의 어떤 데이터를 동기화 하는가&lt;/strong&gt;가 제일 중요하다.&lt;br /&gt;
+동기화 대상이 잡혀야 도메인을 명확하게 설계할 수 있다.&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;누락없는 get의 관리
-    &lt;ul&gt;
-      &lt;li&gt;get의 기준점을 확인하자.&lt;/li&gt;
-      &lt;li&gt;modifiedTime이 기준점이라면, 동일한 modifiedTime에 걸친 경우 누락이 생길 수 있는 구조인지 확인한다.&lt;/li&gt;
-      &lt;li&gt;누락이 없을 수 있도록 주의하기.&lt;/li&gt;
-      &lt;li&gt;웹과 다르게 한번 누락이 되면 초기 동기화를 하지 않는한 사용자 입장에선 영구 누락과 같게될 수 있다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;여러 모듈 간의 중복 코드는 하나의 코드를 사용하도록 하자
-    &lt;ul&gt;
-      &lt;li&gt;배치에서 was를 보든지 was의 코드와 같이 하나의 repository에서 관리하든지.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;gdpr
-    &lt;ul&gt;
-      &lt;li&gt;사용자의 데이터를 관리하는 eu의 법적인 요구사항. 동기화 서비스를 글로벌하게 한다면 필수적인 요소.&lt;/li&gt;
-      &lt;li&gt;서비스 로직의 domain을 그대로 사용하지 않으면 추후 서비스 변경에 따라 관리하기 복잡해진다.&lt;/li&gt;
-      &lt;li&gt;hexagonal을 잘 정리한 뒤 도메인 로직은 동일하게 사용한다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;사용자 혼자 쓰는 동기화인지. 여러 기기가 동기화 될 수 있는지.&lt;br /&gt;
+누군가와 함께 사용하는 동기화인지.&lt;br /&gt;
+아니면 공개적으로 오픈된 동기화인지.&lt;/p&gt;
 
-&lt;h2 id=&quot;data-관점에서&quot;&gt;data 관점에서&lt;/h2&gt;
+&lt;p&gt;동기화 종류에 따라 서버에서 마킹하는 데이터가 달라진다.&lt;br /&gt;
+데이터를 생성한 사람과 소유권의 관계, 조회와 수정할 수 있는 권한 등의 정책들이 달라진다.&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;삭제한 데이터도 row가 남아서 삭제 동기화가 되어야 함 (단말엔 이미 받아져 있으므로, 웹과는 다르다)
-    &lt;ul&gt;
-      &lt;li&gt;단말이 여러개라거나 하는 이슈로 row를 확실히 지울 수 있는 시점을 장담하기 어렵다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;사용자 탈퇴 등으로 데이터가 보여지지 않아야 하는 경우를 위해 sequence(link)를 사용한다.
-    &lt;ul&gt;
-      &lt;li&gt;sequence를 올려서 데이터는 남아있지만 사용자가 볼 수 없게. 이 데이터는 배치로 삭제.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;실제 데이터의 row 삭제가 필요한 경우 마킹하고 배치로 삭제하자
-    &lt;ul&gt;
-      &lt;li&gt;실제 삭제로 인한 딜레이가 크다.&lt;/li&gt;
-      &lt;li&gt;특히 container에 대한 삭제라면 container 안의 item을 삭제하는 시간까지 굉장하다.&lt;/li&gt;
-      &lt;li&gt;마치 cassandra mv가 delete 요청시 바로 삭제해서 성능 이슈가 생기는 것처럼 서버도 바로 삭제하지 않고 사용자에게 응답하고 나중에 삭제한다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;삭제는 안전하게
-    &lt;ul&gt;
-      &lt;li&gt;모든 서비스가 그렇겠지만 동기화에서는 더더욱이 사용자 데이터를 삭제할 땐 조심해야 한다.&lt;/li&gt;
-      &lt;li&gt;삭제 api가 들어온다면 “제 사진이 지워졌어요!” 같은 이슈를 쉽게 대응할 수 있도록 로그를 남겨야 하고.&lt;/li&gt;
-      &lt;li&gt;배치를 수행한다면 안전하게 지우고 가능하면 딜레이를 주는 것도 좋다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+&lt;h3 id=&quot;2-삭제를-동기화-하자&quot;&gt;2. 삭제를 동기화 하자&lt;/h3&gt;
 
-&lt;h2 id=&quot;service-관점에서&quot;&gt;service 관점에서&lt;/h2&gt;
+&lt;p&gt;사용자가 데이터를 삭제한다면 일반적으로는 서버에서도 데이터를 지우면 된다.&lt;br /&gt;
+그러나 동기화에선 &lt;strong&gt;삭제도 동기화가 되어야 한다&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;단말의 로직에 downsync가 주도되기 때문에 단말 구현이 올바른지 파악이 필요함
-    &lt;ul&gt;
-      &lt;li&gt;단말에서 dirty(수정사항) 체크가 잘 되고 있는지.&lt;/li&gt;
-      &lt;li&gt;단말에서 오구현을 할 경우를 찾기 위한 지표들을 셋업하자.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;정책을 결정하기
-    &lt;ul&gt;
-      &lt;li&gt;우리 PM들은 세부 정책들을 결정해주지 않았다.&lt;/li&gt;
-      &lt;li&gt;사용자가 가질 수 있는 달력 일정의 개수라거나, 하루에 생성할 수 있는 item의 개수/사이즈라거나.&lt;/li&gt;
-      &lt;li&gt;인스타그램이나 구글 포토 같은 서비스들은 정책이 결정되어 있다. (일하기 좋겠다..)&lt;/li&gt;
-      &lt;li&gt;정책이 없는 경우, 이로 인한 문제점들을 보게된다. migration 시 비정상적인 item을 갖는 사용자, 기획된 의도와 완전히 다르게 사용하는 어뷰징 유저들.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;누구의 동기화인가
-    &lt;ul&gt;
-      &lt;li&gt;누구의 동기화인지도 중요하다. 사용자 혼자 쓰는지. 아니면 누군가와 함께 사용하는지. 아니면 오픈된 동기화인지.&lt;/li&gt;
-      &lt;li&gt;동기화의 종류에 따라 서버에서 마킹하는 데이터가 달라진다. (생성자와 소유권의 관계, 사용량을 점유하는 사용자에 대한 정책들 등)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;하나의 기기에서 데이터를 삭제한다면 다른 기기에서도 동일한 데이터가 삭제될 수 있어야 하고,&lt;br /&gt;
+한 명의 사용자가 데이터를 삭제한다면 다른 사용자들도 그 데이터를 조회할 수 없어야 한다.&lt;/p&gt;
+
+&lt;p&gt;단말이 여러 개라거나 데이터를 받아놓은 사용자가 동기화를 몇 달 뒤에 하더라도 삭제가 동기화될 수 있도록 서비스를 설계해야 한다.&lt;br /&gt;
+삭제 동기화는 &lt;strong&gt;삭제를 맞추기 위한 최소한의 meta data만 필요&lt;/strong&gt;한 경우가 대부분이므로 파일과 같은 실제 데이터는 이 시점에 삭제되어도 문제가 없을 수 있다.&lt;/p&gt;
+
+&lt;p&gt;삭제를 동기화 한다는 말은 &lt;strong&gt;동기화 하는 삭제와 실제 데이터가 지워지는 삭제를 구분해야 한다&lt;/strong&gt;는 의미이고, 이걸 헷갈려서는 안된다.&lt;/p&gt;
+
+&lt;h3 id=&quot;3-실제-삭제는-안전하고-빠르게&quot;&gt;3. 실제 삭제는 안전하고 빠르게&lt;/h3&gt;
+
+&lt;p&gt;동기화할 삭제와 다르게 실제 삭제가 발생하는 경우가 있다.&lt;br /&gt;
+가장 일반적으로는 사용자의 서비스 탈퇴가 있을 수 있고, 삭제 동기화에서도 meta data를 제외한 데이터가 삭제될 수 있다.&lt;/p&gt;
+
+&lt;p&gt;실제 데이터를 삭제하는 경우 &lt;strong&gt;삭제를 마킹하고 이벤트를 통해 배치로 삭제한다&lt;/strong&gt;.&lt;br /&gt;
+실제 데이터 삭제는 시간이 비교적 오래 걸린다.&lt;br /&gt;
+배치로 삭제하게 되면 사용자에게 더 빠른 응답을 줄 뿐만 아니라 삭제 실패 처리와 재시도를 더 안전하게 진행할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;모든 서비스가 삭제에 대해서 안전해야 하지만 사용자 데이터를 삭제할 땐 더 조심해야 한다.&lt;br /&gt;
+‘제 사진이 지워졌어요!’ 같은 이슈에 대응할 수 있도록 과하지 않지만 충분한 로그를 남길 필요가 있다.&lt;/p&gt;
+
+&lt;h3 id=&quot;4-더-빠른-삭제를-고려하기&quot;&gt;4. 더 빠른 삭제를 고려하기&lt;/h3&gt;
+
+&lt;p&gt;사용자 탈퇴나 GDPR의 삭제권 혹은 만료나 서비스 정책 등의 이유로 특정 사용자의 모든 데이터가 삭제되어야 할 때가 있다.&lt;br /&gt;
+삭제가 원하는 시점에 명확하게 이뤄지지 않을 수 있고, 삭제되는 순간 사용자가 동기화를 한다면 일부 삭제된 데이터를 받게될 우려가 있다.&lt;/p&gt;
+
+&lt;p&gt;revision과 같은 개념을 두면 사용자의 revision 변경으로 사용자의 데이터가 순간적으로 삭제된 것으로 보이게 할 수 있다.&lt;br /&gt;
+이는 배치 처리 측면에서도 유용하다.&lt;/p&gt;
+
+&lt;p&gt;예를 들면 revision 2인 유저의 revision을 3으로 올림으로써 revision 2의 데이터가 초기화 된 것처럼 보이게 한다.&lt;br /&gt;
+revision 2는 event를 통해 batch에서 뒤늦게 처리되어도 문제가 없다.&lt;br /&gt;
+그리고 사용자는 데이터가 말끔하게 지워졌다고 느낄 것이다.&lt;/p&gt;
+
+&lt;h3 id=&quot;5-동기화를-핸들링하기&quot;&gt;5. 동기화를 핸들링하기&lt;/h3&gt;
+
+&lt;p&gt;server에서 동기화를 핸들링하는 방법은 pageToken과 같은 개념을 사용하는 것이다.&lt;br /&gt;
+우리는 SyncPoint라고 명시한 값을 통해 동기화를 server에서 주체적으로 핸들링한다.&lt;/p&gt;
+
+&lt;p&gt;SyncPoint는 client는 해석할 수 없게 encoding한 값으로 사용하는 것이 좋다.&lt;br /&gt;
+client에서 임의로 변조하거나 의도치 않게 사용할 수 있기 때문이다.&lt;/p&gt;
+
+&lt;p&gt;예를 들면 100번째 item을 받아온다고 SyncPoint=100 이라고 내려준다면 client는 이를 해석하고 임의로 1000번째 아이템을 조회할 수도 있다.&lt;/p&gt;
+
+&lt;p&gt;어떤 user의 어떤 client가 어디까지 동기화를 했는지 추적하기 위해 SyncPoint를 사용할 수 있으며 schema 변경 등을 체크할 수도 있다.&lt;br /&gt;
+SyncPoint는 이렇게 동기화에 필요한 몇 가지 데이터를 encoding 하여 내려주고, 전달 받음으로써 server에서 동기화의 진행사항을 체크하고 관리할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;어쨌든 동기화의 trigger는 client에서 하기 때문에 client에서 오구현이 있다면 파악할 수 있는 지표를 확보할 필요가 있다.&lt;/p&gt;
+
+&lt;h3 id=&quot;6-초기-동기화를-관리하기&quot;&gt;6. 초기 동기화를 관리하기&lt;/h3&gt;
+
+&lt;p&gt;동기화를 SyncPoint로 관리한다는 것은 초기 동기화도 관리할 수 있다는 의미이다.&lt;br /&gt;
+초기 동기화는 처음부터 동기화를 함으로써 모든 데이터를 받아가는 것을 말한다.&lt;br /&gt;
+이는 server / client의 resource를 많이 사용한다는 의미이다.&lt;/p&gt;
+
+&lt;p&gt;client에서 얼마나 초기 동기화를 진행했는지 파악할 수 있어야 하며, schema 변경 등의 이유로 초기 동기화가 필요한 경우 server에서 초기 동기화를 유도할 수 있어야 한다.&lt;br /&gt;
+이를 위해 조건에 따라 initial SyncPoint가 client에게 전달된다.&lt;/p&gt;
+
+&lt;h3 id=&quot;7-누락없는-downsync-보장하기&quot;&gt;7. 누락없는 downsync 보장하기&lt;/h3&gt;
+
+&lt;p&gt;downsync의 기준점을 확인해야 한다.&lt;br /&gt;
+이 기준점은 SyncPoint의 특정 값일 수 있으며 대부분 동기화된 item의 modifiedTime과 관련되어 있다.&lt;/p&gt;
+
+&lt;p&gt;한 번은 동일한 modifiedTime을 갖는 item이 pagination에 걸쳤을 때, 해당 item이 누락되는 이슈가 있었다.&lt;br /&gt;
+이렇게 누락이 되면 초기 동기화를 하지 않는한 데이터를 조회하지 못할 수 있으며 더 큰 문제는 이슈가 있다는걸 개발팀에서 인지하지 못한다는 점이다.&lt;/p&gt;
+
+&lt;p&gt;millisec, nanosec을 쓰는 서버에서 여러 item들이 동일한 modifiedTime을 갖고, 이 item들이 pagination이 걸쳐있어야 하기 때문에 흔히 발생하지 않지만 downsync에서 누락이 없을 수 있도록 개발할 필요가 있다.&lt;/p&gt;
+
+&lt;h3 id=&quot;8-partial-error를-고려하기&quot;&gt;8. partial error를 고려하기&lt;/h3&gt;
+
+&lt;p&gt;동기화를 하다보면 사용자가 한번에 여러 item을 동기화하는 경우가 일반적이다.&lt;br /&gt;
+여러 item을 동기화 하다가 실패 했을 때, 일부 실패한 item에 대한 처리로 전체 요청을 실패하도록 할 것인가?&lt;br /&gt;
+아니면 실패한 item과 성공한 item을 응답으로 내려줄 것인가?&lt;/p&gt;
+
+&lt;p&gt;재시도를 어떻게 하느냐와 관련이 있는 이 문제는 &lt;strong&gt;어떤 데이터를 동기화 하느냐&lt;/strong&gt;가 중요하다.&lt;br /&gt;
+동기화의 데이터가 크고 무겁다면 partial error를 사용하는 방향으로 설계를 하는 것이 좋다.
+그렇지만 동기화의 데이터가 작은 경우 혹은 크더라도 재시도의 범위를 줄일 수 있다면 (file을 올리기 전 hash를 사용하는 방식처럼) partial error 없이 전체 error 처리하는 방식이 client와 server 모두 복잡성을 많이 낮출 수 있다.&lt;/p&gt;
+
+&lt;p&gt;error는 그렇게 잦지 않으나, partial error를 도입함으로써 발생되는 복잡성은 생각보다 크다.&lt;/p&gt;
+
+&lt;h3 id=&quot;9-법적-요구사항-고려하기&quot;&gt;9. 법적 요구사항 고려하기&lt;/h3&gt;
+
+&lt;p&gt;사용자의 데이터를 관리하는 법적인 요구사항들이 있다. 대체로 EU의 제한인 GDPR을 따르게 된다.&lt;br /&gt;
+서비스 로직의 domain을 GDPR에 도입하지 않으면 서비스 변경에 따라 관리가 복잡해진다.&lt;/p&gt;
+
+&lt;p&gt;Global 서비스를 한다면 GDPR은 고려되어야 하며 서비스 로직과 동일한 domain을 사용할 수 있도록 해야 한다.&lt;/p&gt;
+
+&lt;h3 id=&quot;10-정책-관리하기&quot;&gt;10. 정책 관리하기&lt;/h3&gt;
+
+&lt;p&gt;정책은 사실 모든 도메인에서 중요하다.
+Enterprise 급 서비스에서는 어떤 서비스든 정책을 정하지 않으면 상식을 넘어서는 어뷰징 유저를 만나게 된다.&lt;/p&gt;
+
+&lt;p&gt;많이 쓰는 유저들은 감사한 고객들이다.  &lt;br /&gt;
+&lt;strong&gt;상식을 아득하게 넘는 유저들은 그저 많이 쓰는 유저가 아니다&lt;/strong&gt;. 일반적으로 사용할 수 없는 데이터를 생성하는 유저들.&lt;br /&gt;
+아마 정책의 허점을 파고들기 위해 봇을 만들었거나, 버그로 인해 발생하는 데이터를 가졌을 것으로 보이는 유저들을 막을 수 있어야 한다.&lt;/p&gt;
+
+&lt;p&gt;UI 상으로 아무리 빠르더라도 수 초는 걸릴 데이터를 200만 개나 가지고 있는 사용자를 보았다.&lt;br /&gt;
+정책이 없는 경우 enterprise 급 서비스에서는 이런 어뷰징 유저의 데이터들을 심심치 않게 보게된다.&lt;/p&gt;
+
+&lt;p&gt;상상하지 못하는 사용성이 ‘이번엔 없겠지?’ 하지만 분명히 있다.&lt;br /&gt;
+인스타그램이나 구글 포토 같은 서비스들은 정책이 명확하게 결정되어 있다.&lt;br /&gt;
+정책이 나오지 않는다면 결국 품질과 서비스 문제로 이어질 수 밖에 없다.&lt;/p&gt;
 </description>
         
         <pubDate></pubDate>
