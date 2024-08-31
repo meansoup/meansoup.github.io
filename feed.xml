@@ -5,7 +5,7 @@
     <description>backend tech, log</description>
     <link>https://backendbrew.com/</link>
     <atom:link href="https://backendbrew.com/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2024-08-30T15:04:48+00:00</updated>
+    <updated>2024-08-31T02:10:37+00:00</updated>
     <id>https://backendbrew.com</id>
     <author>
       <name></name>
@@ -6001,7 +6001,7 @@ Java의 API들이 Array를 사용하는 경우가 있어 써야할 수 있다.&l
         <title>Why use linux screen, How to use screen?</title>
         
           <description>&lt;blockquote class=&quot;note-title mb-6&quot;&gt;
-  &lt;p&gt;DDD tactical components&lt;/p&gt;
+  &lt;p&gt;Linux Commands&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;/docs/dev-tools/linux-commands/terminal&quot; class=&quot;btn&quot;&gt;Terminal Shortcut&lt;/a&gt;
 &lt;a href=&quot;/docs/dev-tools/linux-commands/tmux&quot; class=&quot;btn&quot;&gt;tmux&lt;/a&gt;
@@ -6096,7 +6096,7 @@ For this reason, screen is commonly used on Linux servers for batch tasks, long-
         <title>대용량 파일 터미널에서 split으로 자르기</title>
         
           <description>&lt;blockquote class=&quot;note-title mb-6&quot;&gt;
-  &lt;p&gt;DDD tactical components&lt;/p&gt;
+  &lt;p&gt;Linux Commands&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;/docs/dev-tools/linux-commands/terminal&quot; class=&quot;btn&quot;&gt;Terminal Shortcut&lt;/a&gt;
 &lt;a href=&quot;/docs/dev-tools/linux-commands/tmux&quot; class=&quot;btn&quot;&gt;tmux&lt;/a&gt;
@@ -6204,10 +6204,10 @@ targetfile을 명시해주면, &lt;code class=&quot;language-plaintext highlight
       </item>
     
       <item>
-        <title>cut 사용법 이해하기. 대용량 파일 터미널에서 cut으로 파싱하기</title>
+        <title>How to Use linux cut command, Parsing Large Files with cut in the terminal</title>
         
           <description>&lt;blockquote class=&quot;note-title mb-6&quot;&gt;
-  &lt;p&gt;DDD tactical components&lt;/p&gt;
+  &lt;p&gt;Linux Commands&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;/docs/dev-tools/linux-commands/terminal&quot; class=&quot;btn&quot;&gt;Terminal Shortcut&lt;/a&gt;
 &lt;a href=&quot;/docs/dev-tools/linux-commands/tmux&quot; class=&quot;btn&quot;&gt;tmux&lt;/a&gt;
@@ -6217,99 +6217,99 @@ targetfile을 명시해주면, &lt;code class=&quot;language-plaintext highlight
 &lt;a href=&quot;/docs/dev-tools/linux-commands/split&quot; class=&quot;btn&quot;&gt;split&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;file data를 파싱할 때 사용하는 커맨드 중 하나이다.&lt;br /&gt;
-데이터를 파싱하고, 전처리하는 과정에서 효율이 굉장히 좋은 커맨드.&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;cut&lt;/strong&gt; command is one of the commands used to parse file data.&lt;br /&gt;
+It is highly efficient in the process of parsing and preprocessing data.&lt;/p&gt;
 
-&lt;h2 id=&quot;사용성&quot;&gt;사용성&lt;/h2&gt;
+&lt;h2 id=&quot;usability&quot;&gt;Usability&lt;/h2&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;간단한 파일을 일부만 보고 싶을 때 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sed&lt;/code&gt;나 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;awk&lt;/code&gt;를 사용해도 되지만, 가장 좋은 성능을 내는 것이 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cut&lt;/code&gt;이다.
+  &lt;li&gt;When you want to view only part of a simple file, you can use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sed&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;awk&lt;/code&gt;, but &lt;strong&gt;cut&lt;/strong&gt; offers the best performance.
     &lt;ul&gt;
-      &lt;li&gt;1GB 이상의 큰 파일로 확인을 해보면 확연한 성능 차이를 볼 수 있다.&lt;/li&gt;
+      &lt;li&gt;You can see a noticeable performance difference when dealing with large files over 1GB.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;큰 파일들을 확인하고 싶을 때 vi는 여는데 한참 걸리지만, cut은 금방 볼 수 있다.&lt;/li&gt;
-  &lt;li&gt;하나의 라인이 무지막지하게 크다면(예를들면 10GB), vi 등으로 열 수 없는 경우가 있다. 당연히 하나의 라인이라 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;head&lt;/code&gt;로도 확인할 수 없고.. 이럴 때 어떤 데이터인지 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cut&lt;/code&gt;으로 확인할 수 있다.
+  &lt;li&gt;When you want to inspect large files, opening them with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;vi&lt;/code&gt; may take a long time, but with &lt;strong&gt;cut&lt;/strong&gt;, you can view the content quickly.&lt;/li&gt;
+  &lt;li&gt;If a single line is extremely large (for example, 10GB), you might not be able to open it with tools like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;vi&lt;/code&gt;. Since it’s a single line, even &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;head&lt;/code&gt; won’t help you view it. In such cases, you can use &lt;strong&gt;cut&lt;/strong&gt; to inspect the data.
     &lt;ul&gt;
-      &lt;li&gt;물론 이럴때 &lt;a href=&quot;/docs/dev-tools/linux-commands/split&quot;&gt;split&lt;/a&gt;을 사용하는 것도 좋다.&lt;/li&gt;
+      &lt;li&gt;Of course, using &lt;a href=&quot;/docs/dev-tools/linux-commands/split&quot;&gt;split&lt;/a&gt; in such scenarios is also a good option.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;python 같은 스크립트를 사용할 때도 데이터를 전처리하면 성능이 크게 올라간다.&lt;/li&gt;
+  &lt;li&gt;When using scripts like Python, preprocessing the data can significantly boost performance.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;이런 데이터 전처리는 파일 사이즈가 크나, 단순하고 동일한 포맷일 때 사용하기 굉장히 좋다.&lt;/p&gt;
+&lt;p&gt;This kind of data preprocessing is very effective when dealing with large files that are simple and have a consistent format.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;batch 작업을 위한 userdata를 추출해 놓았을 때&lt;/li&gt;
-  &lt;li&gt;많은 양의 단순한 비규격 로그의 파싱이 필요할 때&lt;/li&gt;
+  &lt;li&gt;When extracting userdata for batch processing.&lt;/li&gt;
+  &lt;li&gt;When parsing large amounts of simple, non-standard logs.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;사용법&quot;&gt;사용법&lt;/h2&gt;
+&lt;h2 id=&quot;how-to-use&quot;&gt;How to Use&lt;/h2&gt;
 
-&lt;p&gt;몇가지 사용법을 적지만 사실 맨 처음의 &lt;strong&gt;cut -d -f&lt;/strong&gt;의 사용률이 가장 높다.&lt;br /&gt;
-일부 char를 잘라내야 하는 경우에서도 유용하게 사용된다.&lt;/p&gt;
+&lt;p&gt;While there are several ways to use &lt;strong&gt;cut&lt;/strong&gt;, the most common usage is with &lt;strong&gt;cut -d -f&lt;/strong&gt;.&lt;br /&gt;
+It’s also useful when you need to extract specific characters.&lt;/p&gt;
 
-&lt;p&gt;cut의 단점은 char로만 자를 수 있다는 것이지만 생각보다 이렇게 사용할 데이터들이 굉장히 많고, 성능은 그만큼 훌륭하다.&lt;br /&gt;
-db dump, csv, json과 같이 포맷이 일정한 데이터를 파싱할 때 함께 사용할 수 있다.
-파일의 파싱이나 데이터 추출, command pipe에서 자주 사용한다.&lt;/p&gt;
+&lt;p&gt;A limitation of &lt;strong&gt;cut&lt;/strong&gt; is that it only allows you to cut by a single character, but there are many datasets where this is useful, and the performance is excellent.  &lt;br /&gt;
+You can use it alongside other commands to parse data with consistent formats like db dumps, CSVs, and JSON files. &lt;br /&gt;
+It is frequently used for file parsing, data extraction, and in command pipes.&lt;/p&gt;
 
 &lt;div class=&quot;code-example&quot; style=&quot;font-size: 0.8em&quot;&gt;
-  &lt;p class=&quot;label label-yellow&quot;&gt;예시&lt;/p&gt;
+  &lt;p class=&quot;label label-yellow&quot;&gt;Example&lt;/p&gt;
 
   &lt;p&gt;&lt;img src=&quot;/images/post/dev-tools/terminal-commands/cut.gif&quot; alt=&quot;cut&quot; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;h3 id=&quot;delimiter-단위로-자르기&quot;&gt;delimiter 단위로 자르기&lt;/h3&gt;
+&lt;h3 id=&quot;cutting-by-delimiter&quot;&gt;Cutting by Delimiter&lt;/h3&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cut&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;DELIMITER&apos;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; INDEX FILE
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;strong&gt;-d&lt;/strong&gt;:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;어떤 char로 자를지에 대한 옵션.&lt;/li&gt;
-  &lt;li&gt;char만 올 수 있기 때문에, string을 넣을 수 없음.&lt;/li&gt;
+  &lt;li&gt;Option to specify the character to cut by.&lt;/li&gt;
+  &lt;li&gt;Since only a single character is allowed, you cannot use strings.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;strong&gt;-f&lt;/strong&gt;:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;자르고 나서 몇 번째의 값을 가지고 올 것인지 설정.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;N&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;N-M&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;N,M-L&lt;/code&gt;과 같이 설정 가능.&lt;/li&gt;
+  &lt;li&gt;Option to select which field(s) to extract after cutting.&lt;/li&gt;
+  &lt;li&gt;You can specify using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;N&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;N-M&lt;/code&gt;, or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;N,M-L&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;delimiter가-없는-라인-무시하기&quot;&gt;delimiter가 없는 라인 무시하기&lt;/h3&gt;
+&lt;h3 id=&quot;ignoring-lines-without-delimiters&quot;&gt;Ignoring Lines Without Delimiters&lt;/h3&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cut&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;DELIMITER&apos;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; INDEX &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; FILE
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;strong&gt;-s&lt;/strong&gt;:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;delimiter가 없는 라인은 아예 출력도 하지 않도록 하는 옵션.&lt;/li&gt;
+  &lt;li&gt;Option to skip lines that do not contain the delimiter.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;delimiter를-변경하기&quot;&gt;delimiter를 변경하기&lt;/h3&gt;
+&lt;h3 id=&quot;changing-the-delimiter&quot;&gt;Changing the Delimiter&lt;/h3&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cut&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;DELIMITER&apos;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; INDEX &lt;span class=&quot;nt&quot;&gt;--output-delimiter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;OUTPUT DELEMETER&quot;&lt;/span&gt; FILE
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cut&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;DELIMITER&apos;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; INDEX &lt;span class=&quot;nt&quot;&gt;--output-delimiter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;OUTPUT DELIMITER&quot;&lt;/span&gt; FILE
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;strong&gt;–output-delimiter&lt;/strong&gt;:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;delimiter로 자른 라인의 구분자를 바꿔줄 문자열.&lt;/li&gt;
+  &lt;li&gt;Specifies a string to replace the delimiter used in the output.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;character-단위로-잘라내기&quot;&gt;character 단위로 잘라내기&lt;/h3&gt;
+&lt;h3 id=&quot;cutting-by-character&quot;&gt;Cutting by Character&lt;/h3&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cut&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; INDEX
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;strong&gt;-c&lt;/strong&gt;:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;character 단위로 잘라낼 수 있다.&lt;/li&gt;
-  &lt;li&gt;동일하게 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;N&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;N-M&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;N,M-L&lt;/code&gt;과 같이 설정 가능.&lt;/li&gt;
+  &lt;li&gt;Allows you to cut by character.&lt;/li&gt;
+  &lt;li&gt;You can specify ranges using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;N&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;N-M&lt;/code&gt;, or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;N,M-L&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/dev-tools/linux-commands/cut</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/dev-tools/linux-commands/cut</guid>
+        <link>https://backendbrew.com/docs/tools/linux-commands/cut</link>
+        <guid isPermaLink="true">https://backendbrew.com/docs/tools/linux-commands/cut</guid>
       </item>
     
       <item>
@@ -8017,7 +8017,7 @@ srcipt의 src를 잘못 명시한 경우이다.&lt;/p&gt;
         <title>jq로 가장 빠르게 터미널에서 json 파싱하기</title>
         
           <description>&lt;blockquote class=&quot;note-title mb-6&quot;&gt;
-  &lt;p&gt;DDD tactical components&lt;/p&gt;
+  &lt;p&gt;Linux Commands&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;/docs/dev-tools/linux-commands/terminal&quot; class=&quot;btn&quot;&gt;Terminal Shortcut&lt;/a&gt;
 &lt;a href=&quot;/docs/dev-tools/linux-commands/tmux&quot; class=&quot;btn&quot;&gt;tmux&lt;/a&gt;
@@ -8765,7 +8765,7 @@ ORMs를 생각할 때 JPA를 떠올리면 ORMs가 더 명확하게 그려진다.
         <title>multi terminal tmux 효율적으로 사용하기</title>
         
           <description>&lt;blockquote class=&quot;note-title mb-6&quot;&gt;
-  &lt;p&gt;DDD tactical components&lt;/p&gt;
+  &lt;p&gt;Linux Commands&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;/docs/dev-tools/linux-commands/terminal&quot; class=&quot;btn&quot;&gt;Terminal Shortcut&lt;/a&gt;
 &lt;a href=&quot;/docs/dev-tools/linux-commands/tmux&quot; class=&quot;btn btn-purple&quot;&gt;tmux&lt;/a&gt;
@@ -16634,7 +16634,7 @@ backend가 충분히 받쳐준다면 runner의 문제로 부하를 조절하지 
         <title>업무 효율 극강화 linux terminal 단축키</title>
         
           <description>&lt;blockquote class=&quot;note-title mb-6&quot;&gt;
-  &lt;p&gt;DDD tactical components&lt;/p&gt;
+  &lt;p&gt;Linux Commands&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;/docs/dev-tools/linux-commands/terminal&quot; class=&quot;btn btn-purple&quot;&gt;Terminal Shortcut&lt;/a&gt;
 &lt;a href=&quot;/docs/dev-tools/linux-commands/tmux&quot; class=&quot;btn&quot;&gt;tmux&lt;/a&gt;

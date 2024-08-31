@@ -1268,7 +1268,7 @@
   },"181": {
     "doc": "Why use linux screen, How to use screen?",
     "title": "Why use linux screen, How to use screen?",
-    "content": "DDD tactical components . Terminal Shortcut tmux cut jq screen split . When performing tasks in a screen session, the session persists even if the terminal session disconnects, ensuring that your work is not interrupted. For this reason, screen is commonly used on Linux servers for batch tasks, long-running processes, and background jobs. While screen can also be used for window splitting, I generally prefer to use tmux for that purpose. ",
+    "content": "Linux Commands . Terminal Shortcut tmux cut jq screen split . When performing tasks in a screen session, the session persists even if the terminal session disconnects, ensuring that your work is not interrupted. For this reason, screen is commonly used on Linux servers for batch tasks, long-running processes, and background jobs. While screen can also be used for window splitting, I generally prefer to use tmux for that purpose. ",
     "url": "/docs/tools/linux-commands/screen",
     
     "relUrl": "/docs/tools/linux-commands/screen"
@@ -1310,31 +1310,31 @@
   },"187": {
     "doc": "대용량 파일 터미널에서 split으로 자르기",
     "title": "대용량 파일 터미널에서 split으로 자르기",
-    "content": "DDD tactical components . Terminal Shortcut tmux cut jq screen split . linux에서 big file을 handling 할 때 사용하는 방법. 최근 split을 사용할 일들이 더 많아져서, 정리하고자 올린다. linux에서 서버를 관리하다보면, 생각보다 큰 파일들을 관리해야할 일들이 많다. 내가 편리하게? 어쩌면 split 없이는 해결할 수 없는 문제들을 해결하기 위해 사용하는 커맨드를 정리한다. ",
+    "content": "Linux Commands . Terminal Shortcut tmux cut jq screen split . linux에서 big file을 handling 할 때 사용하는 방법. 최근 split을 사용할 일들이 더 많아져서, 정리하고자 올린다. linux에서 서버를 관리하다보면, 생각보다 큰 파일들을 관리해야할 일들이 많다. 내가 편리하게? 어쩌면 split 없이는 해결할 수 없는 문제들을 해결하기 위해 사용하는 커맨드를 정리한다. ",
     "url": "/docs/dev-tools/linux-commands/split",
     
     "relUrl": "/docs/dev-tools/linux-commands/split"
   },"188": {
-    "doc": "cut 사용법 이해하기. 대용량 파일 터미널에서 cut으로 파싱하기",
-    "title": "사용성",
-    "content": ". | 간단한 파일을 일부만 보고 싶을 때 sed나 awk를 사용해도 되지만, 가장 좋은 성능을 내는 것이 cut이다. | 1GB 이상의 큰 파일로 확인을 해보면 확연한 성능 차이를 볼 수 있다. | . | 큰 파일들을 확인하고 싶을 때 vi는 여는데 한참 걸리지만, cut은 금방 볼 수 있다. | 하나의 라인이 무지막지하게 크다면(예를들면 10GB), vi 등으로 열 수 없는 경우가 있다. 당연히 하나의 라인이라 head로도 확인할 수 없고.. 이럴 때 어떤 데이터인지 cut으로 확인할 수 있다. | 물론 이럴때 split을 사용하는 것도 좋다. | . | python 같은 스크립트를 사용할 때도 데이터를 전처리하면 성능이 크게 올라간다. | . 이런 데이터 전처리는 파일 사이즈가 크나, 단순하고 동일한 포맷일 때 사용하기 굉장히 좋다. | batch 작업을 위한 userdata를 추출해 놓았을 때 | 많은 양의 단순한 비규격 로그의 파싱이 필요할 때 | . ",
-    "url": "/docs/dev-tools/linux-commands/cut#%EC%82%AC%EC%9A%A9%EC%84%B1",
+    "doc": "How to Use linux cut command, Parsing Large Files with cut in the terminal",
+    "title": "Usability",
+    "content": ". | When you want to view only part of a simple file, you can use sed or awk, but cut offers the best performance. | You can see a noticeable performance difference when dealing with large files over 1GB. | . | When you want to inspect large files, opening them with vi may take a long time, but with cut, you can view the content quickly. | If a single line is extremely large (for example, 10GB), you might not be able to open it with tools like vi. Since it’s a single line, even head won’t help you view it. In such cases, you can use cut to inspect the data. | Of course, using split in such scenarios is also a good option. | . | When using scripts like Python, preprocessing the data can significantly boost performance. | . This kind of data preprocessing is very effective when dealing with large files that are simple and have a consistent format. | When extracting userdata for batch processing. | When parsing large amounts of simple, non-standard logs. | . ",
+    "url": "/docs/tools/linux-commands/cut#usability",
     
-    "relUrl": "/docs/dev-tools/linux-commands/cut#사용성"
+    "relUrl": "/docs/tools/linux-commands/cut#usability"
   },"189": {
-    "doc": "cut 사용법 이해하기. 대용량 파일 터미널에서 cut으로 파싱하기",
-    "title": "사용법",
-    "content": "몇가지 사용법을 적지만 사실 맨 처음의 cut -d -f의 사용률이 가장 높다. 일부 char를 잘라내야 하는 경우에서도 유용하게 사용된다. cut의 단점은 char로만 자를 수 있다는 것이지만 생각보다 이렇게 사용할 데이터들이 굉장히 많고, 성능은 그만큼 훌륭하다. db dump, csv, json과 같이 포맷이 일정한 데이터를 파싱할 때 함께 사용할 수 있다. 파일의 파싱이나 데이터 추출, command pipe에서 자주 사용한다. 예시 . delimiter 단위로 자르기 . cut -d 'DELIMITER' -f INDEX FILE . -d: . | 어떤 char로 자를지에 대한 옵션. | char만 올 수 있기 때문에, string을 넣을 수 없음. | . -f: . | 자르고 나서 몇 번째의 값을 가지고 올 것인지 설정. | N, N-M, N,M-L과 같이 설정 가능. | . delimiter가 없는 라인 무시하기 . cut -d 'DELIMITER' -f INDEX -s FILE . -s: . | delimiter가 없는 라인은 아예 출력도 하지 않도록 하는 옵션. | . delimiter를 변경하기 . cut -d 'DELIMITER' -f INDEX --output-delimiter=\"OUTPUT DELEMETER\" FILE . –output-delimiter: . | delimiter로 자른 라인의 구분자를 바꿔줄 문자열. | . character 단위로 잘라내기 . cut -c INDEX . -c: . | character 단위로 잘라낼 수 있다. | 동일하게 N, N-M, N,M-L과 같이 설정 가능. | . ",
-    "url": "/docs/dev-tools/linux-commands/cut#%EC%82%AC%EC%9A%A9%EB%B2%95",
+    "doc": "How to Use linux cut command, Parsing Large Files with cut in the terminal",
+    "title": "How to Use",
+    "content": "While there are several ways to use cut, the most common usage is with cut -d -f. It’s also useful when you need to extract specific characters. A limitation of cut is that it only allows you to cut by a single character, but there are many datasets where this is useful, and the performance is excellent. You can use it alongside other commands to parse data with consistent formats like db dumps, CSVs, and JSON files. It is frequently used for file parsing, data extraction, and in command pipes. Example . Cutting by Delimiter . cut -d 'DELIMITER' -f INDEX FILE . -d: . | Option to specify the character to cut by. | Since only a single character is allowed, you cannot use strings. | . -f: . | Option to select which field(s) to extract after cutting. | You can specify using N, N-M, or N,M-L. | . Ignoring Lines Without Delimiters . cut -d 'DELIMITER' -f INDEX -s FILE . -s: . | Option to skip lines that do not contain the delimiter. | . Changing the Delimiter . cut -d 'DELIMITER' -f INDEX --output-delimiter=\"OUTPUT DELIMITER\" FILE . –output-delimiter: . | Specifies a string to replace the delimiter used in the output. | . Cutting by Character . cut -c INDEX . -c: . | Allows you to cut by character. | You can specify ranges using N, N-M, or N,M-L. | . ",
+    "url": "/docs/tools/linux-commands/cut#how-to-use",
     
-    "relUrl": "/docs/dev-tools/linux-commands/cut#사용법"
+    "relUrl": "/docs/tools/linux-commands/cut#how-to-use"
   },"190": {
-    "doc": "cut 사용법 이해하기. 대용량 파일 터미널에서 cut으로 파싱하기",
-    "title": "cut 사용법 이해하기. 대용량 파일 터미널에서 cut으로 파싱하기",
-    "content": "DDD tactical components . Terminal Shortcut tmux cut jq screen split . file data를 파싱할 때 사용하는 커맨드 중 하나이다. 데이터를 파싱하고, 전처리하는 과정에서 효율이 굉장히 좋은 커맨드. ",
-    "url": "/docs/dev-tools/linux-commands/cut",
+    "doc": "How to Use linux cut command, Parsing Large Files with cut in the terminal",
+    "title": "How to Use linux cut command, Parsing Large Files with cut in the terminal",
+    "content": "Linux Commands . Terminal Shortcut tmux cut jq screen split . The cut command is one of the commands used to parse file data. It is highly efficient in the process of parsing and preprocessing data. ",
+    "url": "/docs/tools/linux-commands/cut",
     
-    "relUrl": "/docs/dev-tools/linux-commands/cut"
+    "relUrl": "/docs/tools/linux-commands/cut"
   },"191": {
     "doc": "java coverage test 개념 및 jacoco 사용법",
     "title": "jacoco란?",
@@ -1765,7 +1765,7 @@
   },"252": {
     "doc": "jq로 가장 빠르게 터미널에서 json 파싱하기",
     "title": "jq로 가장 빠르게 터미널에서 json 파싱하기",
-    "content": "DDD tactical components . Terminal Shortcut tmux cut jq screen split . jq는 linux 기본 command가 아니지만 내가 정말 편하게 사용하는 command 중 하나다. 여러 서비스를 하면서 인스턴스마다 jq가 깔려있지 않은 서비스가 간혹있는데, 그럼 정말 굉장한 불편함을 느낀다. jq는 그렇게 편하다. ",
+    "content": "Linux Commands . Terminal Shortcut tmux cut jq screen split . jq는 linux 기본 command가 아니지만 내가 정말 편하게 사용하는 command 중 하나다. 여러 서비스를 하면서 인스턴스마다 jq가 깔려있지 않은 서비스가 간혹있는데, 그럼 정말 굉장한 불편함을 느낀다. jq는 그렇게 편하다. ",
     "url": "/docs/dev-tools/linux-commands/jq",
     
     "relUrl": "/docs/dev-tools/linux-commands/jq"
@@ -2038,7 +2038,7 @@
   },"291": {
     "doc": "multi terminal tmux 효율적으로 사용하기",
     "title": "multi terminal tmux 효율적으로 사용하기",
-    "content": "DDD tactical components . Terminal Shortcut tmux cut jq screen split . tmux는 원격에서 background에서 작업을 수행할 때 사용하는 command 이다. 이전에 정리했던 linux screen와 유사하다. 나는 요새 screen 보다는 tmux를 사용하려고 한다. 지금 나는 5개 region에서 운영하는 서비스들을 개발하고 있는데, tmux는 여러 batch instance로 들어가서 작업하기가 screen 보다 편리했다. ",
+    "content": "Linux Commands . Terminal Shortcut tmux cut jq screen split . tmux는 원격에서 background에서 작업을 수행할 때 사용하는 command 이다. 이전에 정리했던 linux screen와 유사하다. 나는 요새 screen 보다는 tmux를 사용하려고 한다. 지금 나는 5개 region에서 운영하는 서비스들을 개발하고 있는데, tmux는 여러 batch instance로 들어가서 작업하기가 screen 보다 편리했다. ",
     "url": "/docs/dev-tools/linux-commands/tmux",
     
     "relUrl": "/docs/dev-tools/linux-commands/tmux"
@@ -4327,7 +4327,7 @@
   },"618": {
     "doc": "업무 효율 극강화 linux terminal 단축키",
     "title": "업무 효율 극강화 linux terminal 단축키",
-    "content": "DDD tactical components . Terminal Shortcut tmux cut jq screen split . 모든 단축키가 업무 효율을 굉장히 올려준다만 리눅스 터미널 단축키만큼 많이 쓰이고 당연하게 쓰이는건 없는 것 같다. 그만큼 리눅스 단축키를 알면 효율이 급격히 올라간다. ",
+    "content": "Linux Commands . Terminal Shortcut tmux cut jq screen split . 모든 단축키가 업무 효율을 굉장히 올려준다만 리눅스 터미널 단축키만큼 많이 쓰이고 당연하게 쓰이는건 없는 것 같다. 그만큼 리눅스 단축키를 알면 효율이 급격히 올라간다. ",
     "url": "/docs/dev-tools/linux-commands/terminal",
     
     "relUrl": "/docs/dev-tools/linux-commands/terminal"

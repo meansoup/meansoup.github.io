@@ -1268,7 +1268,7 @@
   },"181": {
     "doc": "linux screen 쓰는 이유, 자주 사용하는 screen 명령어 사용법",
     "title": "linux screen 쓰는 이유, 자주 사용하는 screen 명령어 사용법",
-    "content": "DDD tactical components . Terminal Shortcut tmux cut jq screen split . screen session에서 작업을 수행하면 terminal session이 끊기더라도 session이 유지되어 작업이 끊기지 않는다. 그래서 screen은 linux server에서 batch 작업이나 장 시간 작업을 수행할 때, background 작업을 수행할 때 많이 사용한다. screen은 창 분할을 위해서도 사용할 수 있지만 이런 경우 나는 주로 tmux를 사용한다. ",
+    "content": "Linux Commands . Terminal Shortcut tmux cut jq screen split . screen session에서 작업을 수행하면 terminal session이 끊기더라도 session이 유지되어 작업이 끊기지 않는다. 그래서 screen은 linux server에서 batch 작업이나 장 시간 작업을 수행할 때, background 작업을 수행할 때 많이 사용한다. screen은 창 분할을 위해서도 사용할 수 있지만 이런 경우 나는 주로 tmux를 사용한다. ",
     "url": "/docs/tools/linux-commands/screen",
     
     "relUrl": "/docs/tools/linux-commands/screen"
@@ -1310,31 +1310,31 @@
   },"187": {
     "doc": "대용량 파일 터미널에서 split으로 자르기",
     "title": "대용량 파일 터미널에서 split으로 자르기",
-    "content": "DDD tactical components . Terminal Shortcut tmux cut jq screen split . linux에서 big file을 handling 할 때 사용하는 방법. 최근 split을 사용할 일들이 더 많아져서, 정리하고자 올린다. linux에서 서버를 관리하다보면, 생각보다 큰 파일들을 관리해야할 일들이 많다. 내가 편리하게? 어쩌면 split 없이는 해결할 수 없는 문제들을 해결하기 위해 사용하는 커맨드를 정리한다. ",
+    "content": "Linux Commands . Terminal Shortcut tmux cut jq screen split . linux에서 big file을 handling 할 때 사용하는 방법. 최근 split을 사용할 일들이 더 많아져서, 정리하고자 올린다. linux에서 서버를 관리하다보면, 생각보다 큰 파일들을 관리해야할 일들이 많다. 내가 편리하게? 어쩌면 split 없이는 해결할 수 없는 문제들을 해결하기 위해 사용하는 커맨드를 정리한다. ",
     "url": "/docs/dev-tools/linux-commands/split",
     
     "relUrl": "/docs/dev-tools/linux-commands/split"
   },"188": {
-    "doc": "cut 사용법 이해하기. 대용량 파일 터미널에서 cut으로 파싱하기",
+    "doc": "linux cut 사용법, 대용량 파일 터미널에서 cut으로 파싱하기",
     "title": "사용성",
     "content": ". | 간단한 파일을 일부만 보고 싶을 때 sed나 awk를 사용해도 되지만, 가장 좋은 성능을 내는 것이 cut이다. | 1GB 이상의 큰 파일로 확인을 해보면 확연한 성능 차이를 볼 수 있다. | . | 큰 파일들을 확인하고 싶을 때 vi는 여는데 한참 걸리지만, cut은 금방 볼 수 있다. | 하나의 라인이 무지막지하게 크다면(예를들면 10GB), vi 등으로 열 수 없는 경우가 있다. 당연히 하나의 라인이라 head로도 확인할 수 없고.. 이럴 때 어떤 데이터인지 cut으로 확인할 수 있다. | 물론 이럴때 split을 사용하는 것도 좋다. | . | python 같은 스크립트를 사용할 때도 데이터를 전처리하면 성능이 크게 올라간다. | . 이런 데이터 전처리는 파일 사이즈가 크나, 단순하고 동일한 포맷일 때 사용하기 굉장히 좋다. | batch 작업을 위한 userdata를 추출해 놓았을 때 | 많은 양의 단순한 비규격 로그의 파싱이 필요할 때 | . ",
-    "url": "/docs/dev-tools/linux-commands/cut#%EC%82%AC%EC%9A%A9%EC%84%B1",
+    "url": "/docs/tools/linux-commands/cut#%EC%82%AC%EC%9A%A9%EC%84%B1",
     
-    "relUrl": "/docs/dev-tools/linux-commands/cut#사용성"
+    "relUrl": "/docs/tools/linux-commands/cut#사용성"
   },"189": {
-    "doc": "cut 사용법 이해하기. 대용량 파일 터미널에서 cut으로 파싱하기",
+    "doc": "linux cut 사용법, 대용량 파일 터미널에서 cut으로 파싱하기",
     "title": "사용법",
     "content": "몇가지 사용법을 적지만 사실 맨 처음의 cut -d -f의 사용률이 가장 높다. 일부 char를 잘라내야 하는 경우에서도 유용하게 사용된다. cut의 단점은 char로만 자를 수 있다는 것이지만 생각보다 이렇게 사용할 데이터들이 굉장히 많고, 성능은 그만큼 훌륭하다. db dump, csv, json과 같이 포맷이 일정한 데이터를 파싱할 때 함께 사용할 수 있다. 파일의 파싱이나 데이터 추출, command pipe에서 자주 사용한다. 예시 . delimiter 단위로 자르기 . cut -d 'DELIMITER' -f INDEX FILE . -d: . | 어떤 char로 자를지에 대한 옵션. | char만 올 수 있기 때문에, string을 넣을 수 없음. | . -f: . | 자르고 나서 몇 번째의 값을 가지고 올 것인지 설정. | N, N-M, N,M-L과 같이 설정 가능. | . delimiter가 없는 라인 무시하기 . cut -d 'DELIMITER' -f INDEX -s FILE . -s: . | delimiter가 없는 라인은 아예 출력도 하지 않도록 하는 옵션. | . delimiter를 변경하기 . cut -d 'DELIMITER' -f INDEX --output-delimiter=\"OUTPUT DELEMETER\" FILE . –output-delimiter: . | delimiter로 자른 라인의 구분자를 바꿔줄 문자열. | . character 단위로 잘라내기 . cut -c INDEX . -c: . | character 단위로 잘라낼 수 있다. | 동일하게 N, N-M, N,M-L과 같이 설정 가능. | . ",
-    "url": "/docs/dev-tools/linux-commands/cut#%EC%82%AC%EC%9A%A9%EB%B2%95",
+    "url": "/docs/tools/linux-commands/cut#%EC%82%AC%EC%9A%A9%EB%B2%95",
     
-    "relUrl": "/docs/dev-tools/linux-commands/cut#사용법"
+    "relUrl": "/docs/tools/linux-commands/cut#사용법"
   },"190": {
-    "doc": "cut 사용법 이해하기. 대용량 파일 터미널에서 cut으로 파싱하기",
-    "title": "cut 사용법 이해하기. 대용량 파일 터미널에서 cut으로 파싱하기",
-    "content": "DDD tactical components . Terminal Shortcut tmux cut jq screen split . file data를 파싱할 때 사용하는 커맨드 중 하나이다. 데이터를 파싱하고, 전처리하는 과정에서 효율이 굉장히 좋은 커맨드. ",
-    "url": "/docs/dev-tools/linux-commands/cut",
+    "doc": "linux cut 사용법, 대용량 파일 터미널에서 cut으로 파싱하기",
+    "title": "linux cut 사용법, 대용량 파일 터미널에서 cut으로 파싱하기",
+    "content": "Linux Commands . Terminal Shortcut tmux cut jq screen split . file data를 파싱할 때 사용하는 커맨드 중 하나이다. 데이터를 파싱하고, 전처리하는 과정에서 효율이 굉장히 좋은 커맨드. ",
+    "url": "/docs/tools/linux-commands/cut",
     
-    "relUrl": "/docs/dev-tools/linux-commands/cut"
+    "relUrl": "/docs/tools/linux-commands/cut"
   },"191": {
     "doc": "java coverage test 개념 및 jacoco 사용법",
     "title": "jacoco란?",
@@ -1765,7 +1765,7 @@
   },"252": {
     "doc": "jq로 가장 빠르게 터미널에서 json 파싱하기",
     "title": "jq로 가장 빠르게 터미널에서 json 파싱하기",
-    "content": "DDD tactical components . Terminal Shortcut tmux cut jq screen split . jq는 linux 기본 command가 아니지만 내가 정말 편하게 사용하는 command 중 하나다. 여러 서비스를 하면서 인스턴스마다 jq가 깔려있지 않은 서비스가 간혹있는데, 그럼 정말 굉장한 불편함을 느낀다. jq는 그렇게 편하다. ",
+    "content": "Linux Commands . Terminal Shortcut tmux cut jq screen split . jq는 linux 기본 command가 아니지만 내가 정말 편하게 사용하는 command 중 하나다. 여러 서비스를 하면서 인스턴스마다 jq가 깔려있지 않은 서비스가 간혹있는데, 그럼 정말 굉장한 불편함을 느낀다. jq는 그렇게 편하다. ",
     "url": "/docs/dev-tools/linux-commands/jq",
     
     "relUrl": "/docs/dev-tools/linux-commands/jq"
@@ -2038,7 +2038,7 @@
   },"291": {
     "doc": "multi terminal tmux 효율적으로 사용하기",
     "title": "multi terminal tmux 효율적으로 사용하기",
-    "content": "DDD tactical components . Terminal Shortcut tmux cut jq screen split . tmux는 원격에서 background에서 작업을 수행할 때 사용하는 command 이다. 이전에 정리했던 linux screen와 유사하다. 나는 요새 screen 보다는 tmux를 사용하려고 한다. 지금 나는 5개 region에서 운영하는 서비스들을 개발하고 있는데, tmux는 여러 batch instance로 들어가서 작업하기가 screen 보다 편리했다. ",
+    "content": "Linux Commands . Terminal Shortcut tmux cut jq screen split . tmux는 원격에서 background에서 작업을 수행할 때 사용하는 command 이다. 이전에 정리했던 linux screen와 유사하다. 나는 요새 screen 보다는 tmux를 사용하려고 한다. 지금 나는 5개 region에서 운영하는 서비스들을 개발하고 있는데, tmux는 여러 batch instance로 들어가서 작업하기가 screen 보다 편리했다. ",
     "url": "/docs/dev-tools/linux-commands/tmux",
     
     "relUrl": "/docs/dev-tools/linux-commands/tmux"
@@ -4327,7 +4327,7 @@
   },"618": {
     "doc": "업무 효율 극강화 linux terminal 단축키",
     "title": "업무 효율 극강화 linux terminal 단축키",
-    "content": "DDD tactical components . Terminal Shortcut tmux cut jq screen split . 모든 단축키가 업무 효율을 굉장히 올려준다만 리눅스 터미널 단축키만큼 많이 쓰이고 당연하게 쓰이는건 없는 것 같다. 그만큼 리눅스 단축키를 알면 효율이 급격히 올라간다. ",
+    "content": "Linux Commands . Terminal Shortcut tmux cut jq screen split . 모든 단축키가 업무 효율을 굉장히 올려준다만 리눅스 터미널 단축키만큼 많이 쓰이고 당연하게 쓰이는건 없는 것 같다. 그만큼 리눅스 단축키를 알면 효율이 급격히 올라간다. ",
     "url": "/docs/dev-tools/linux-commands/terminal",
     
     "relUrl": "/docs/dev-tools/linux-commands/terminal"

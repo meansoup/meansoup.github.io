@@ -5,7 +5,7 @@
     <description>backend tech, log</description>
     <link>https://backendbrew.com/</link>
     <atom:link href="https://backendbrew.com/ko/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2024-08-30T15:05:01+00:00</updated>
+    <updated>2024-08-31T02:10:50+00:00</updated>
     <id>https://backendbrew.com</id>
     <author>
       <name></name>
@@ -6001,7 +6001,7 @@ Java의 API들이 Array를 사용하는 경우가 있어 써야할 수 있다.&l
         <title>linux screen 쓰는 이유, 자주 사용하는 screen 명령어 사용법</title>
         
           <description>&lt;blockquote class=&quot;note-title mb-6&quot;&gt;
-  &lt;p&gt;DDD tactical components&lt;/p&gt;
+  &lt;p&gt;Linux Commands&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;/docs/dev-tools/linux-commands/terminal&quot; class=&quot;btn&quot;&gt;Terminal Shortcut&lt;/a&gt;
 &lt;a href=&quot;/docs/dev-tools/linux-commands/tmux&quot; class=&quot;btn&quot;&gt;tmux&lt;/a&gt;
@@ -6096,7 +6096,7 @@ Java의 API들이 Array를 사용하는 경우가 있어 써야할 수 있다.&l
         <title>대용량 파일 터미널에서 split으로 자르기</title>
         
           <description>&lt;blockquote class=&quot;note-title mb-6&quot;&gt;
-  &lt;p&gt;DDD tactical components&lt;/p&gt;
+  &lt;p&gt;Linux Commands&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;/docs/dev-tools/linux-commands/terminal&quot; class=&quot;btn&quot;&gt;Terminal Shortcut&lt;/a&gt;
 &lt;a href=&quot;/docs/dev-tools/linux-commands/tmux&quot; class=&quot;btn&quot;&gt;tmux&lt;/a&gt;
@@ -6204,10 +6204,10 @@ targetfile을 명시해주면, &lt;code class=&quot;language-plaintext highlight
       </item>
     
       <item>
-        <title>cut 사용법 이해하기. 대용량 파일 터미널에서 cut으로 파싱하기</title>
+        <title>linux cut 사용법, 대용량 파일 터미널에서 cut으로 파싱하기</title>
         
           <description>&lt;blockquote class=&quot;note-title mb-6&quot;&gt;
-  &lt;p&gt;DDD tactical components&lt;/p&gt;
+  &lt;p&gt;Linux Commands&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;/docs/dev-tools/linux-commands/terminal&quot; class=&quot;btn&quot;&gt;Terminal Shortcut&lt;/a&gt;
 &lt;a href=&quot;/docs/dev-tools/linux-commands/tmux&quot; class=&quot;btn&quot;&gt;tmux&lt;/a&gt;
@@ -6308,8 +6308,8 @@ db dump, csv, json과 같이 포맷이 일정한 데이터를 파싱할 때 함�
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/dev-tools/linux-commands/cut</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/dev-tools/linux-commands/cut</guid>
+        <link>https://backendbrew.com/docs/tools/linux-commands/cut</link>
+        <guid isPermaLink="true">https://backendbrew.com/docs/tools/linux-commands/cut</guid>
       </item>
     
       <item>
@@ -8017,7 +8017,7 @@ srcipt의 src를 잘못 명시한 경우이다.&lt;/p&gt;
         <title>jq로 가장 빠르게 터미널에서 json 파싱하기</title>
         
           <description>&lt;blockquote class=&quot;note-title mb-6&quot;&gt;
-  &lt;p&gt;DDD tactical components&lt;/p&gt;
+  &lt;p&gt;Linux Commands&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;/docs/dev-tools/linux-commands/terminal&quot; class=&quot;btn&quot;&gt;Terminal Shortcut&lt;/a&gt;
 &lt;a href=&quot;/docs/dev-tools/linux-commands/tmux&quot; class=&quot;btn&quot;&gt;tmux&lt;/a&gt;
@@ -8765,7 +8765,7 @@ ORMs를 생각할 때 JPA를 떠올리면 ORMs가 더 명확하게 그려진다.
         <title>multi terminal tmux 효율적으로 사용하기</title>
         
           <description>&lt;blockquote class=&quot;note-title mb-6&quot;&gt;
-  &lt;p&gt;DDD tactical components&lt;/p&gt;
+  &lt;p&gt;Linux Commands&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;/docs/dev-tools/linux-commands/terminal&quot; class=&quot;btn&quot;&gt;Terminal Shortcut&lt;/a&gt;
 &lt;a href=&quot;/docs/dev-tools/linux-commands/tmux&quot; class=&quot;btn btn-purple&quot;&gt;tmux&lt;/a&gt;
@@ -16641,7 +16641,7 @@ backend가 충분히 받쳐준다면 runner의 문제로 부하를 조절하지 
         <title>업무 효율 극강화 linux terminal 단축키</title>
         
           <description>&lt;blockquote class=&quot;note-title mb-6&quot;&gt;
-  &lt;p&gt;DDD tactical components&lt;/p&gt;
+  &lt;p&gt;Linux Commands&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;/docs/dev-tools/linux-commands/terminal&quot; class=&quot;btn btn-purple&quot;&gt;Terminal Shortcut&lt;/a&gt;
 &lt;a href=&quot;/docs/dev-tools/linux-commands/tmux&quot; class=&quot;btn&quot;&gt;tmux&lt;/a&gt;
