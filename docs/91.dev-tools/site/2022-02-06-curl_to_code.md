@@ -2,7 +2,7 @@
 layout: post
 title: Curl to Code (Python/Java ..)
 sidebar_label: Curl to Code (Python/Java ..)
-parent: 사이트
+parent: website
 permalink: /docs/dev-tools/site/curl-to-code
 grand_parent: Tools
 sitemap:

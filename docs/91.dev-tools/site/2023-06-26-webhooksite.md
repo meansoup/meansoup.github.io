@@ -2,7 +2,7 @@
 layout: post
 title: client call 확인을 위한 webhook site
 sidebar_label: client call 확인을 위한 webhook site
-parent: 사이트
+parent: website
 permalink: /docs/dev-tools/site/webhook-site
 grand_parent: Tools
 sitemap:

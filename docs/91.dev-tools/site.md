@@ -1,7 +1,7 @@
 ---
 layout: default
-title: 사이트
-sidebar_label: 사이트
+title: website
+sidebar_label: website
 nav_order: 22
 has_children: true
 parent: Tools
