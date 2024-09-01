@@ -1444,9 +1444,18 @@
   
   
   <url>
-    <loc>https://backendbrew.com/docs/dev-tools/site/webhook-site</loc>
+    <loc>https://backendbrew.com/docs/tools/website/webhook-site</loc>
     
-    <lastmod>2023-06-26</lastmod>
+    <lastmod>2024-09-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://backendbrew.com/ko/docs/tools/website/webhook-site</loc>
+    
+    <lastmod>2024-09-01</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

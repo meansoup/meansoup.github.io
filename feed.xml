@@ -5,7 +5,7 @@
     <description>backend tech, log</description>
     <link>https://backendbrew.com/</link>
     <atom:link href="https://backendbrew.com/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2024-08-31T02:10:37+00:00</updated>
+    <updated>2024-09-01T01:34:52+00:00</updated>
     <id>https://backendbrew.com</id>
     <author>
       <name></name>
@@ -15414,38 +15414,44 @@ body start!
       </item>
     
       <item>
-        <title>client call 확인을 위한 webhook site</title>
+        <title>A website that arbitrarily receives Requests for verification</title>
         
-          <description>&lt;p&gt;굉장히 좋은 사이트를 알아왔다.&lt;br /&gt;
-처음 개발을 할 때, 클라이언트에 문제가 있는지 서버에 문제가 있는지.&lt;br /&gt;
-서버가 잘 떠 있는지 GW 나 권한 문제가 있지는 않은지 애매하게 확인할 부분들이 있다.&lt;/p&gt;
+          <description>&lt;p&gt;There is a website that issues a server URL that arbitrarily receives the requested requests.&lt;br /&gt;
+When you send a request to this URL, it analyzes whether the request was received correctly and how it was received.&lt;/p&gt;
 
-&lt;p&gt;서버 개발자 입장에선 acceptance test나 scenario test를 위해 작성하는 test client 들이 server(local 혹은 dev)에 잘 들어오지 않는 경우도 있다.&lt;br /&gt;
-특히 multi-part의 경우 call을 잘 만들었나 싶은데 이걸 확인하기 아주 좋은 사이트.&lt;/p&gt;
-
-&lt;h2 id=&quot;사용법&quot;&gt;사용법&lt;/h2&gt;
+&lt;p&gt;When starting development without proper infrastructure, identifying issues becomes much more challenging.&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;https://webhook.site/&lt;/code&gt;에 접속한다.&lt;/li&gt;
-  &lt;li&gt;해당 페이지에서 임의로 발급되는 webhook site url을 확인한다.
-    &lt;ul&gt;
-      &lt;li&gt;예를 들면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;https://webhook.site/554e2d76-a7ee-46c3-8f9f-ce6819fbcedf&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;해당 host로 작성한 test를 날린다.&lt;/li&gt;
-  &lt;li&gt;분석되는 call을 페이지에서 확인한다.&lt;/li&gt;
+  &lt;li&gt;Is there a problem on the client side?&lt;/li&gt;
+  &lt;li&gt;Is there an issue on the server side?&lt;/li&gt;
+  &lt;li&gt;Is the server running properly?&lt;/li&gt;
+  &lt;li&gt;Is there a problem with gateway registration?&lt;/li&gt;
+  &lt;li&gt;Are there any infra-related permission issues?&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;reference&quot;&gt;reference&lt;/h2&gt;
+&lt;p&gt;When you have to start by checking if &lt;strong&gt;the server is not working&lt;/strong&gt;, there are too many things to verify at the beginning.&lt;/p&gt;
+
+&lt;p&gt;For a server developere, there are cases where test clients written for acceptance or scenario tests do not properly reach the server (either local or dev).&lt;/p&gt;
+
+&lt;p&gt;This time, I wanted to verify if the multi-part request call I made was correct, and while searching for a way to confirm this, I discovered this website.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-to-use&quot;&gt;How to Use&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://webhook.site/&quot;&gt;https://webhook.site/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Visit &lt;a href=&quot;https://webhook.site/&quot;&gt;https://webhook.site/&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;On the site, you will be provided with a randomly generated webhook URL.
+    &lt;ul&gt;
+      &lt;li&gt;For example: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;https://webhook.site/554e2d76-a7ee-46c3-8f9f-ce6819fbcedf&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Send your test request to this host.&lt;/li&gt;
+  &lt;li&gt;Review the analyzed call on the webpage.&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/dev-tools/site/webhook-site</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/dev-tools/site/webhook-site</guid>
+        <link>https://backendbrew.com/docs/tools/website/webhook-site</link>
+        <guid isPermaLink="true">https://backendbrew.com/docs/tools/website/webhook-site</guid>
       </item>
     
       <item>
@@ -20169,7 +20175,7 @@ S3 응답에 대해 오류 코드가 나온 경우 처리를 해주어야 한다
       </item>
     
       <item>
-        <title>사이트</title>
+        <title>website</title>
         
           <description>{: .fs-6 .fw-300 }
 </description>
