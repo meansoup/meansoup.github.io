@@ -5054,586 +5054,593 @@
     "relUrl": "/docs/apis/rest/hateoas"
   },"722": {
     "doc": "AI Epoch Time Converter, Epoch Time 가장 편하게 변환하기",
-    "title": "json 값에서 epoch 조회",
-    "content": ". { \"id\": \"abc\", \"createdAt\": 1690330000000, \"modifiedAt\": 1700330000000, \"lastAccessedAt\": 1710330000000, \"metadata\" : {} } . {\"id\": \"abc2\", \"createdAt\": 1690330001000, \"modifiedAt\": 1700330001000, \"lastAccessedAt\": 1710330001000, \"metadata\" : {}} {\"id\": \"abc3\", \"createdAt\": 1690330002000, \"modifiedAt\": 1700330002000, \"lastAccessedAt\": 1710330002000, \"metadata\" : {}} . ",
-    "url": "/docs/tools/site/epoch#json-%EA%B0%92%EC%97%90%EC%84%9C-epoch-%EC%A1%B0%ED%9A%8C",
+    "title": "1. beautified json에서 epoch 조회",
+    "content": ". { \"id\": \"abc\", \"createdAt\": 1690330000000, \"modifiedAt\": 1700330000000, \"lastAccessedAt\": 1710330000000, \"metadata\" : {} } . ",
+    "url": "/docs/tools/site/epoch#1-beautified-json%EC%97%90%EC%84%9C-epoch-%EC%A1%B0%ED%9A%8C",
     
-    "relUrl": "/docs/tools/site/epoch#json-값에서-epoch-조회"
+    "relUrl": "/docs/tools/site/epoch#1-beautified-json에서-epoch-조회"
   },"723": {
     "doc": "AI Epoch Time Converter, Epoch Time 가장 편하게 변환하기",
-    "title": "csv 데이터에서 epoch 조회",
-    "content": ". a,123,1690330000000,... abced,123456,1710330000000,... b,123456,1720330000000,abcde b,123456,1670330000000,abcde,1680330012000,1690330000000 . ",
-    "url": "/docs/tools/site/epoch#csv-%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%97%90%EC%84%9C-epoch-%EC%A1%B0%ED%9A%8C",
+    "title": "2. multi-line json에서 epoch 조회",
+    "content": ". {\"id\": \"abc2\", \"createdAt\": 1690330001000, \"modifiedAt\": 1700330001000, \"lastAccessedAt\": 1710330001000, \"metadata\" : {}} {\"id\": \"abc3\", \"createdAt\": 1690330002000, \"modifiedAt\": 1700330002000, \"lastAccessedAt\": 1710330002000, \"metadata\" : {}} . ",
+    "url": "/docs/tools/site/epoch#2-multi-line-json%EC%97%90%EC%84%9C-epoch-%EC%A1%B0%ED%9A%8C",
     
-    "relUrl": "/docs/tools/site/epoch#csv-데이터에서-epoch-조회"
+    "relUrl": "/docs/tools/site/epoch#2-multi-line-json에서-epoch-조회"
   },"724": {
+    "doc": "AI Epoch Time Converter, Epoch Time 가장 편하게 변환하기",
+    "title": "3. csv 데이터에서 epoch 조회",
+    "content": ". a,123,1690330000000,... abced,123456,1710330000000,... b,123456,1720330000000,abcde b,123456,1670330000000,abcde,1680330012000,1690330000000 . ",
+    "url": "/docs/tools/site/epoch#3-csv-%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%97%90%EC%84%9C-epoch-%EC%A1%B0%ED%9A%8C",
+    
+    "relUrl": "/docs/tools/site/epoch#3-csv-데이터에서-epoch-조회"
+  },"725": {
     "doc": "AI Epoch Time Converter, Epoch Time 가장 편하게 변환하기",
     "title": "AI Epoch Time Converter, Epoch Time 가장 편하게 변환하기",
     "content": "epoch time을 포함한 문자열에서 epoch time만 추출하여 date time으로 변환하는 epoch time converter. 조금 포장하자면 AI epoch time converter라고 하고 싶다. 개발을 하다보면 epoch time을 DateTime으로 바꿀일이 자주 있다. 일반적으로 여러 사이트에서 epoch time을 받아 DateTime을 출력해준다. 그렇지만 로그나 데이터에서 epoch time을 콕 집어서 변환해야 한다는 불편함이 있으며, 여러 데이터를 보고 값을 확인하고 싶을 때 이건 더 불편하다. https://backendbrew.com/epoch/ 를 통해서 이런 문제를 해결할 수 있다. 이 사이트는 문자에 포함된 모든 epoch time을 변환하고 보여준다. ",
     "url": "/docs/tools/site/epoch",
     
     "relUrl": "/docs/tools/site/epoch"
-  },"725": {
+  },"726": {
     "doc": "About",
     "title": "About",
     "content": "다양한 종류의 데이터 동기화, 백업과 서비스 서버를 개발하고 있습니다. 하루 수 억건에 달하는 트래픽과 이를 처리하는 서버를 설계하고 개발합니다. ",
     "url": "/about/",
     
     "relUrl": "/about/"
-  },"726": {
+  },"727": {
     "doc": "Algorithm",
     "title": "Algorithm",
     "content": " ",
     "url": "/docs/algorithm",
     
     "relUrl": "/docs/algorithm"
-  },"727": {
+  },"728": {
     "doc": "APIs",
     "title": "APIs",
     "content": " ",
     "url": "/docs/apis/",
     
     "relUrl": "/docs/apis/"
-  },"728": {
+  },"729": {
     "doc": "Architecture",
     "title": "Architecture",
     "content": " ",
     "url": "/docs/design/",
     
     "relUrl": "/docs/design/"
-  },"729": {
+  },"730": {
     "doc": "aws",
     "title": "aws",
     "content": "AWS에서 시행하는 training 과정을 수료하면서 정리한 내용. | Developing on AWS | Advanced Developing on AWS | . 그리고 내가 사용하면서 정리한 내용. ",
     "url": "/docs/aws",
     
     "relUrl": "/docs/aws"
-  },"730": {
+  },"731": {
     "doc": "blog",
     "title": "blog",
     "content": " ",
     "url": "/docs/blog",
     
     "relUrl": "/docs/blog"
-  },"731": {
+  },"732": {
     "doc": "career",
     "title": "career",
     "content": " ",
     "url": "/docs/career/",
     
     "relUrl": "/docs/career/"
-  },"732": {
+  },"733": {
     "doc": "-",
     "title": "-",
     "content": " ",
     "url": "/partition/10",
     
     "relUrl": "/partition/10"
-  },"733": {
+  },"734": {
     "doc": "-",
     "title": "-",
     "content": " ",
     "url": "/partition/20",
     
     "relUrl": "/partition/20"
-  },"734": {
+  },"735": {
     "doc": "-",
     "title": "-",
     "content": " ",
     "url": "/partition/30",
     
     "relUrl": "/partition/30"
-  },"735": {
+  },"736": {
     "doc": "-",
     "title": "-",
     "content": " ",
     "url": "/partition/40",
     
     "relUrl": "/partition/40"
-  },"736": {
+  },"737": {
     "doc": "-",
     "title": "-",
     "content": " ",
     "url": "/partition/50",
     
     "relUrl": "/partition/50"
-  },"737": {
+  },"738": {
     "doc": "-",
     "title": "-",
     "content": " ",
     "url": "/partition/90",
     
     "relUrl": "/partition/90"
-  },"738": {
+  },"739": {
     "doc": "db 개념",
     "title": "db 개념",
     "content": " ",
     "url": "/docs/db/concept",
     
     "relUrl": "/docs/db/concept"
-  },"739": {
+  },"740": {
     "doc": "c++",
     "title": "c++",
     "content": " ",
     "url": "/docs/language/cpp",
     
     "relUrl": "/docs/language/cpp"
-  },"740": {
+  },"741": {
     "doc": "Database",
     "title": "Database",
     "content": " ",
     "url": "/docs/db",
     
     "relUrl": "/docs/db"
-  },"741": {
+  },"742": {
     "doc": "Domain Driven Design",
     "title": "Domain Driven Design",
     "content": "Vaughn Vernon의 IDDD 예제 코드 . | https://github.com/VaughnVernon/IDDD_Samples | . ",
     "url": "/docs/ddd",
     
     "relUrl": "/docs/ddd"
-  },"742": {
+  },"743": {
     "doc": "Tools",
     "title": "Tools",
     "content": " ",
     "url": "/docs/dev-tools/",
     
     "relUrl": "/docs/dev-tools/"
-  },"743": {
+  },"744": {
     "doc": "domain",
     "title": "domain",
     "content": " ",
     "url": "/docs/03.career/domain.html",
     
     "relUrl": "/docs/03.career/domain.html"
-  },"744": {
+  },"745": {
     "doc": "DynamoDB",
     "title": "database option",
     "content": "AWS에는 DynamoDB 외에도 다양한 DB 서비스를 지원하고 있다. RDS: Aurora, PostgreSQL, MySQL, MariaDB, Oracle 등 다양한 관계형 데이터베이스 서비스를 제공한다. RDB를 간편하게 설정하고 크기 조정이 가능하다. DB 관리를 AWS에서 해줘서 서비스에 집중할 수 있다. | ex) 소프트웨어 패치, 데이터베이스 백업 | . Aurora: MySQL, PostgreSQL 호환 RDB로 MySQL보다 최대 5배 빠르며 1/10 수준 비용으로 서비스를 제공함. MySQL, PostgreSQL 보다 더 높은 처리량을 가지며 쉽게 확장/축소할 수 있음. Aurora Serverless 서비스도 있음. Redshift: 완전 관리형 데이터 웨어하우스. (나무위키 웨어하우스 참고. 의사 결정을 위한 데이터 사용) 기존 솔루션 비용의 1/10 미만으로 페타바이트 규모로 확장할 수 있음. 다양한 개방형 형식(csv, json, …) 지원. Neptune: 완전관리형 그래프 데이터베이스. ElastiCache: memCache나 Redis를 관리하는 관리형 상태로 지원하는 서비스. in memory data store, cache를 쉽게 배포/운영할 수 있음. 당연히 메모리를 사용하니까 DB보다 빠른 검색을 지원하고, 성능 향상을 볼 수 있다. Redis나 memcache를 활용하는 것으로 얘네의 장점을 보다 쉽게 적용할 수 있다. ",
     "url": "/docs/aws/dynamo#database-option",
     
     "relUrl": "/docs/aws/dynamo#database-option"
-  },"745": {
+  },"746": {
     "doc": "DynamoDB",
     "title": "DynamoDB 구성",
     "content": "DynamoDB는 테이블, 항목, 속성으로 구성되고 각 항목들은 키 값을 갖는다. | 각각 엑셀의 시트, 행, 열로 생각할 수 있다. | . 스키마가 고정되어 있지 않기 때문에 항목에 속성의 추가가 자유롭다. DynamoDB는 테이블의 항목을 파티션 키에 따라 여러 항목으로 나누고 파티션은 스토리지로 백업되고 리전 내의 복수의 AZ에 자동으로 복제된다. | 파티션 단위로 다른 위치에 저장될 수 있다는 것. | . 데이터에 접근할 때는 파티션 키를 통해 접근하기 때문에 파티션 키는 고유한 값이어야 한다. 정렬 키는 선택적으로 사용되며 동일한 파티션 키를 사용하고 싶다면 정렬 키를 사용하여 파티션 키 + 정렬 키의 값이 고유하도록 구성할 수 있다. | ex) 파티션 키는 sessionId, 정렬 키는 Time으로 동일한 세션에 대해 같은 파티션을 사용하도록 하고 시간에 따라 값을 저장할 수 있다. | . ",
     "url": "/docs/aws/dynamo#dynamodb-%EA%B5%AC%EC%84%B1",
     
     "relUrl": "/docs/aws/dynamo#dynamodb-구성"
-  },"746": {
+  },"747": {
     "doc": "DynamoDB",
     "title": "일관성",
     "content": "DynamoDB는 일관성 수준을 지원한다. 여기서 일관성은 찰나의 시간에 쓰여진 데이터를 받아오는지에 대한 여부이다. 최종적 일관성 - 읽기 작업이 쓰기 작업 이후에 수행되는 경우 약간 오래된 데이터를 반환할 수 있음. 강력한 일관성 - 가장 최신 데이터를 반환. 트랜잭션 - ACID를 요구. 읽고 쓰기가 끝나는 것이 하나의 트랜잭션임을 보장하는 것. (계좌이체) . ",
     "url": "/docs/aws/dynamo#%EC%9D%BC%EA%B4%80%EC%84%B1",
     
     "relUrl": "/docs/aws/dynamo#일관성"
-  },"747": {
+  },"748": {
     "doc": "DynamoDB",
     "title": "처리량",
     "content": "한 번에 들어온 요청에 대해 어느 정도까지 처리할 수 있는지 capacity를 설정할 수 있다. 처리량은 파티션 간에 균등하게 나뉜다. (파티션당 처리량 = capacity / 파티션 수) RCU - 최대 4KB 규모의 객체에 강력한 일관된 읽기를 수행할 수 있는 건수. WCU - 1KB 쓰기를 수행할 수 있는 초당 건수. ",
     "url": "/docs/aws/dynamo#%EC%B2%98%EB%A6%AC%EB%9F%89",
     
     "relUrl": "/docs/aws/dynamo#처리량"
-  },"748": {
+  },"749": {
     "doc": "DynamoDB",
     "title": "글로벌 테이블",
     "content": "하나 이상의 DynamoDB 테이블의 모음으로 단일 AWS 계정이 소유한 복제 테이블이다. 글로벌 테이블에서는 리전당 하나의 복제 테이블만 사용되고 동일한 테이블 이름과 기본 키 스키마를 갖는다. 글로벌 테이블을 사용하면 복제 솔루션을 구축할 필요 없이 완전 관리형 솔루션을 제공한다. DynamoDB에서 해당 리전에 동일한 테이블을 생성하기 위해 모든 작업을 수행하고 진행 중인 데이터 변경을 모두에게 전파한다. 이런 복제에 스트림이 사용된다. 쓰기 일관성에서 동시 업데이트가 발생하는 경우에는 가장 마지막에 설정된 값으로 기록한다. 읽기 일관성에서 최종적 일관성을 지원한다. ",
     "url": "/docs/aws/dynamo#%EA%B8%80%EB%A1%9C%EB%B2%8C-%ED%85%8C%EC%9D%B4%EB%B8%94",
     
     "relUrl": "/docs/aws/dynamo#글로벌-테이블"
-  },"749": {
+  },"750": {
     "doc": "DynamoDB",
     "title": "백업 및 복원",
     "content": "백업, 복원, 특정 시점으로의 복구를 쉽게 할 수 있도록 지원한다. ",
     "url": "/docs/aws/dynamo#%EB%B0%B1%EC%97%85-%EB%B0%8F-%EB%B3%B5%EC%9B%90",
     
     "relUrl": "/docs/aws/dynamo#백업-및-복원"
-  },"750": {
+  },"751": {
     "doc": "DynamoDB",
     "title": "API",
     "content": "제어 작업: DynamoDB 테이블을 생성하고 관리. 데이터 작업: 테이블 데이터에 CRUD 작업을 수행. ",
     "url": "/docs/aws/dynamo#api",
     
     "relUrl": "/docs/aws/dynamo#api"
-  },"751": {
+  },"752": {
     "doc": "DynamoDB",
     "title": "객체 지속성 모델",
     "content": "DynamoDB에 클라이언트 측 객체를 유지할 수 있다. | 테이블에 대한 객체 매핑(클래스 인스턴스)를 지원한다. 객체 지속성 프로그래밍 인터페이스로 이를 지원하는데 이를 통해 CRUD 작업과 쿼리를 실행할 수 있다. | . ",
     "url": "/docs/aws/dynamo#%EA%B0%9D%EC%B2%B4-%EC%A7%80%EC%86%8D%EC%84%B1-%EB%AA%A8%EB%8D%B8",
     
     "relUrl": "/docs/aws/dynamo#객체-지속성-모델"
-  },"752": {
+  },"753": {
     "doc": "DynamoDB",
     "title": "Function",
     "content": "테이블에서 PutItem, GetItem, UpdateItem, DeleteItem으로 항목과 관련한 작업을 수행할 수 있고, Query, Scan 으로 값을 가져올 수 있다. | Query, Scan 작업의 경우 1MB의 데이터라는 기본 페이지 매김 제한으로 반환되는 데이터 양이 제한된다. | Query, Scan 작업의 경우 Limit 파라미터를 통해 반환되는 최대 항목 수를 지정할 수 있다. | . Batch로 데이터를 검색하거나 쓸 때 단일 요청으로 더 높은 처리와 효율적인 시간을 얻어낼 수 있다. 실패시 실패한 테이블과 항목을 재시도한다. BatchGetItem - 여러 테이블에서 최대 100개의 항목으로 이루어진 데이터를 최대 16MB까지 읽음. BatchWriteItem - 여러 테이블에서 최대 25번의 put 또는 delete 요청을 통해 최대 16MB까지 씀. DynamoDB javaSDK method Docs, DynamoDB API reference 참고. ",
     "url": "/docs/aws/dynamo#function",
     
     "relUrl": "/docs/aws/dynamo#function"
-  },"753": {
+  },"754": {
     "doc": "DynamoDB",
     "title": "그외 참고 사항",
     "content": "예약어 자리 표시자 - 표현식에서 속성 이름을 위한 자리 표시자. (AWS Docs 참고) . 리터럴 값 자리 표시자 - 표현식에서 속성 값을 위한 자리 표시자. (AWS Docs 참고) 조건부 쓰기 수행 - ConditionExpression을 만족하면 쓰기를 수행. (AWS Docs 참고) 처리량 예외 처리 - 처리량이 초과하면 provisionedThroughputExceededException으로 알림을 전송하도록 CloudWatch 경보 설정. (AWS Docs 참고) . ",
     "url": "/docs/aws/dynamo#%EA%B7%B8%EC%99%B8-%EC%B0%B8%EA%B3%A0-%EC%82%AC%ED%95%AD",
     
     "relUrl": "/docs/aws/dynamo#그외-참고-사항"
-  },"754": {
+  },"755": {
     "doc": "DynamoDB",
     "title": "효율성 확보",
     "content": "데이터를 고려하여 파티션 키가 분산될 수 있도록 구현한다. | 파티션 키에 따라 파티션이 나뉘며 경우에 따라 어떤 파티션엔 데이터가 적고 어떤 파티션엔 극도로 많아 작업 처리가 느려질 수 있다. 균일하게 파티션을 분배하여 처리를 분산시키는 것이 처리량을 극대화. | . 핫 데이터(자주 사용)와 콜드 데이터(자주 사용하지 않음)을 분리한다. | 자주 사용되는 데이터는 처리량이 더 높은 테이블에 별도로 저장한다거나 오래된 데이터를 다른 스토리지로 이동하는 등의 방식. | . 다수의 속성을 갖는 테이블 대신 일대다 테이블을 사용한다. | 최소한의 정보가 필요한 경우에도 쓸데없이 대량의 데이터를 가져오게 되는 문제를 해결. | 항목 크기가 DynamoDB의 최대 항목 크기를 초과하는 문제를 막을 수 있음. | . 자주 액세스하는 속성을 별도 테이블에 저장한다. | 큰 항목에 자주 액세스 하지만 큰 속성을 다 사용하지 않는다면 자주 사용되는 별도의 테이블을 분리하여 처리량을 개선. | . 로컬 보조 인덱스를 가능한 작게 유지한다. | 로컬 보조 인덱스는 스토리지와 테이블의 처리량을 사용하기 때문에 자주 쿼리하는 속성에 대해서만 생성하도록 함. | 전체 테이블을 포함하지 않는 스파스 인덱스를 사용하여 효율성을 높임. | . 메모리 가속인 DAX(DynamoDB Accelerator)를 추가한다. (app - (DAX) - DynamoDB 구조) . | 캐싱서비스로 밀리초 단위의 응답속도를 마이크로초 단위까지 줄일 수 있음. | DynamoDB와 호환되어 변경사항이 크지 않음. | read가 많은 경우 처리량을 줄여 비용을 절감시킴. | . ",
     "url": "/docs/aws/dynamo#%ED%9A%A8%EC%9C%A8%EC%84%B1-%ED%99%95%EB%B3%B4",
     
     "relUrl": "/docs/aws/dynamo#효율성-확보"
-  },"755": {
+  },"756": {
     "doc": "DynamoDB",
     "title": "DynamoDB",
     "content": "DynamoDB는 완전 관리형 NoSQL DB 서비스으로 NoSQL의 특징을 갖는다. 리전 기반 서비스로 AZ에 문제가 생기더라도 다른쪽에서 정상적으로 동작한다. 완전 관리형 서비스로 사용자가 관리할 것이 거의 없다. | EC2에 os/db 설치 이후 db 서버로 쓸 수도 있지만 이런 서비스를 이용하면 초기세팅/소프트웨어 패치/운영 등을 신경쓰지 않아도 되서 더 편리함. | . 데이터 볼륨이 증가하고 애플리케이션 성능 요구가 증가하면 DynamoDB는 자동 분할로 처리량을 충족하고 규모에 관계없이 낮은 지연 시간(보통 10밀리초 미만)을 유지한다. IAM의 계정 권한 관리로 세분화된 접근 제어가 가능하다. 문서의 저장, 쿼리 및 업데이트를 지원하여 Json 문서를 테이블에 바로 저장할 수 있고 관련한 작업을 효율적으로 진행할 수 있다. ",
     "url": "/docs/aws/dynamo",
     
     "relUrl": "/docs/aws/dynamo"
-  },"756": {
+  },"757": {
     "doc": "envoy proxy",
     "title": "envoy proxy",
     "content": " ",
     "url": "/docs/apis/envoy",
     
     "relUrl": "/docs/apis/envoy"
-  },"757": {
+  },"758": {
     "doc": "error & bug",
     "title": "error & bug",
     "content": " ",
     "url": "/docs/error-bug",
     
     "relUrl": "/docs/error-bug"
-  },"758": {
+  },"759": {
     "doc": "Etc",
     "title": "Etc",
     "content": " ",
     "url": "/docs/etc",
     
     "relUrl": "/docs/etc"
-  },"759": {
+  },"760": {
     "doc": "flutter",
     "title": "flutter",
     "content": " ",
     "url": "/docs/flutter",
     
     "relUrl": "/docs/flutter"
-  },"760": {
+  },"761": {
     "doc": "Garbage Collection",
     "title": "Garbage Collection",
     "content": " ",
     "url": "/docs/java/gc",
     
     "relUrl": "/docs/java/gc"
-  },"761": {
+  },"762": {
     "doc": "GraphQL",
     "title": "GraphQL",
     "content": " ",
     "url": "/docs/apis/graphql",
     
     "relUrl": "/docs/apis/graphql"
-  },"762": {
+  },"763": {
     "doc": "http",
     "title": "http",
     "content": " ",
     "url": "/docs/internet/http",
     
     "relUrl": "/docs/internet/http"
-  },"763": {
+  },"764": {
     "doc": "Intellij",
     "title": "Intellij",
     "content": " ",
     "url": "/docs/dev-tools/intellij",
     
     "relUrl": "/docs/dev-tools/intellij"
-  },"764": {
+  },"765": {
     "doc": "internet",
     "title": "internet",
     "content": " ",
     "url": "/docs/internet",
     
     "relUrl": "/docs/internet"
-  },"765": {
+  },"766": {
     "doc": "이슈",
     "title": "이슈",
     "content": " ",
     "url": "/docs/java/issue",
     
     "relUrl": "/docs/java/issue"
-  },"766": {
+  },"767": {
     "doc": "Java",
     "title": "Java",
     "content": " ",
     "url": "/docs/java",
     
     "relUrl": "/docs/java"
-  },"767": {
+  },"768": {
     "doc": "Spring JPA",
     "title": "Spring JPA",
     "content": " ",
     "url": "/docs/spring/jpa",
     
     "relUrl": "/docs/spring/jpa"
-  },"768": {
+  },"769": {
     "doc": "kafka",
     "title": "kafka",
     "content": " ",
     "url": "/docs/message-broker/kafka",
     
     "relUrl": "/docs/message-broker/kafka"
-  },"769": {
+  },"770": {
     "doc": "kivy",
     "title": "kivy",
     "content": "kivy - interactive applications and games in python second edition . kivy로 간단한 게임을 만들어가는 과정과 이에 대한 설명을 하는 책이다. practice code에서 예제코드를 받을 수 있다. 책과 별개로 공부한 내용과, 책의 내용들을 챕터별로 정리한 것. ",
     "url": "/docs/kivy",
     
     "relUrl": "/docs/kivy"
-  },"770": {
+  },"771": {
     "doc": "kotlin in action 정리하기",
     "title": "kotlin in action 정리하기",
     "content": " ",
     "url": "/docs/kotlin/kotlin-in-action",
     
     "relUrl": "/docs/kotlin/kotlin-in-action"
-  },"771": {
+  },"772": {
     "doc": "Kotlin",
     "title": "Kotlin",
     "content": " ",
     "url": "/docs/kotlin",
     
     "relUrl": "/docs/kotlin"
-  },"772": {
+  },"773": {
     "doc": "language",
     "title": "language",
     "content": " ",
     "url": "/docs/language",
     
     "relUrl": "/docs/language"
-  },"773": {
+  },"774": {
     "doc": "Java 라이브러리",
     "title": "Java 라이브러리",
     "content": " ",
     "url": "/docs/java/library",
     
     "relUrl": "/docs/java/library"
-  },"774": {
+  },"775": {
     "doc": "linux",
     "title": "linux",
     "content": " ",
     "url": "/docs/dev-tools/linux",
     
     "relUrl": "/docs/dev-tools/linux"
-  },"775": {
+  },"776": {
     "doc": "Message Broker",
     "title": "Message Broker",
     "content": " ",
     "url": "/docs/message-broker",
     
     "relUrl": "/docs/message-broker"
-  },"776": {
+  },"777": {
     "doc": "OAuth",
     "title": "OAuth",
     "content": " ",
     "url": "/docs/apis/oauth",
     
     "relUrl": "/docs/apis/oauth"
-  },"777": {
+  },"778": {
     "doc": "oci",
     "title": "oci",
     "content": " ",
     "url": "/docs/oci",
     
     "relUrl": "/docs/oci"
-  },"778": {
+  },"779": {
     "doc": "PM",
     "title": "PM",
     "content": " ",
     "url": "/docs/service-management",
     
     "relUrl": "/docs/service-management"
-  },"779": {
+  },"780": {
     "doc": "python",
     "title": "python",
     "content": " ",
     "url": "/docs/49.language/python.html",
     
     "relUrl": "/docs/49.language/python.html"
-  },"780": {
+  },"781": {
     "doc": "Refactoring",
     "title": "Refactoring",
     "content": " ",
     "url": "/docs/refactoring/",
     
     "relUrl": "/docs/refactoring/"
-  },"781": {
+  },"782": {
     "doc": "retrospect",
     "title": "retrospect",
     "content": " ",
     "url": "/docs/retrospect/",
     
     "relUrl": "/docs/retrospect/"
-  },"782": {
+  },"783": {
     "doc": "S3",
     "title": "storage option",
     "content": "AWS에서는 용도에 따라 S3 외에도 다양한 storage 서비스를 제공한다. (storage class 참고) . Glacier: 데이터를 저장하는데 저렴하며 내구성이 우수한 아카이브 스토리지. 저장하는 비용이 저렴하다는 장점이 있고, 데이터를 가져오는데 비용이 많이 들고 데이터를 받아오는데 시간이 오래걸린다는 단점이 있다. 주로 중요하지만 잘 사용하지 않는 데이터를 저장한다. EFS: 전통적인 파일 스토리지. 공유 개념을 지원한다. EBS: 블록 기반의 스토리지. EC2 인스턴스에 외장하드를 네트워크로 붙이는 식으로 사용. Storage Gateway: S3, Glacier, EBS 등의 스토리지 인프라 사이에 원활하고 안전한 통합이 이루어지도록 지원한다. | ex) S3 주 데이터를 저장하고 Glacier에 보관하도록 사용. | . ",
     "url": "/docs/aws/s3#storage-option",
     
     "relUrl": "/docs/aws/s3#storage-option"
-  },"783": {
+  },"784": {
     "doc": "S3",
     "title": "구성요소",
     "content": "S3는 버킷과 객체로 이루어져 있다. 버킷: 버킷은 말 그대로 객체를 담는 바구니다. 전세계적으로 고유한 이름을 가져야 한다. | 3~63자의 사이즈와 a-z, 0-9, ‘-‘만을 사용한다. | . 객체: 버킷에 저장되는 파일로 어떤 종류의 파일도 객체가 될 수 있다. 객체는 고유한 키와 메타데이터를 갖는다. 키를 통해 객체를 업로드/검색한다. 개층구조(폴더의 개념)가 존재하지 않는데, 키에 prefix(/)를 통해 폴더 개념을 지원할 수 있다. | prog/java/collections.jtml을 통해 prog/java의 폴더 개념을 갖도록 객체를 구분. | 실제로는 계층구조가 없지만 사용자가 있는 것처럼 활용. 메타데이터는 시스템 메타데이터와 유저 메타데이터가 있으며 시스템 메타데이터는 생성 날짜, 크기 등의 정보를 포함한다. 객체의 key, metadata 참고. | . ",
     "url": "/docs/aws/s3#%EA%B5%AC%EC%84%B1%EC%9A%94%EC%86%8C",
     
     "relUrl": "/docs/aws/s3#구성요소"
-  },"784": {
+  },"785": {
     "doc": "S3",
     "title": "versioning",
     "content": "S3는 동일한 이름의 파일을 넣으면 덮어쓰게 된다. 이런 문제를 해결하기 위해 versioning을 지원한다. | 각 버킷 &gt; property &gt; versioning 을 하면 version에 따른 동일한 이름의 파일을 저장하도록할 수 있음. | . version id는 객체의 metadata에 존재한다. 기본적으로 S3는 versioning을 비활성화되어 있는데 versioning을 한 번 켜면 끌 수 없으므로 데이터 관리 측면에서 코드상에서 충분히 고려가 되야한다. | 버전 별 데이터가 계속해서 쌓일 수 있음. | . ",
     "url": "/docs/aws/s3#versioning",
     
     "relUrl": "/docs/aws/s3#versioning"
-  },"785": {
+  },"786": {
     "doc": "S3",
     "title": "URL",
     "content": "기본 경로 . | http://s3.[리전 엔드포인트].amazonaws.com/[버킷 이름]/[객체 파일 명] | . 가상 호스팅 . | http://[버킷 이름]s3.amazonaws.com/[객체 파일 명] | . aws의 주소가 들어가서 실 사용자에게 aws 서비스로 오해받을 수도 있을 것이고 이를 해결하기 위한 가상 호스팅도 존재한다. (AWS Virtual Hosting 참고) . ",
     "url": "/docs/aws/s3#url",
     
     "relUrl": "/docs/aws/s3#url"
-  },"786": {
+  },"787": {
     "doc": "S3",
     "title": "객체 작업",
     "content": "Put: 단일 업로드 &lt;= 5GB, 멀티 파트 업로드 &lt;= 5TB 지원. 인터넷은 비교적 신뢰성이 떨어지기 때문에 100 MB를 넘는 경우 멀티 파트 업로드를 권장한다. 멀티 파트 업로드는 각 파트가 개별적으로 업로드 되고 업로드에 실패하면 실패한 파트만 재전송할 수 있다. Get: 완전한 객체 가져오는 것과 필요하다면 바이트 범위를 지정하여 객체의 일부를 가져올 수 있다. Select: S3에서 파일에 대한 format(csv, json)을 지정하여 원하는 값만을 가져올 수 있다. 큰 파일의 일부만 필요한 경우 파일 전체를 받는 낭비를 줄일 수 있다. 성능과 비용에서 효과를 볼 수 있다. (AWS select 참고) . delete: 단일 객체나 여러 객체를 삭제하는데 사용한다. versioning이 활성화 된 경우는 versionId도 같이 명시하여 삭제한다. versioning이 활성화 된 경우에 key만 지정하면 현재 버전의 객체에 delete marker가 추가되고, 삭제 마커가 있는 객체를 검색하려고 하면 404 error가 발생한다. ",
     "url": "/docs/aws/s3#%EA%B0%9D%EC%B2%B4-%EC%9E%91%EC%97%85",
     
     "relUrl": "/docs/aws/s3#객체-작업"
-  },"787": {
+  },"788": {
     "doc": "S3",
     "title": "미리 서명된 URL",
     "content": "기본적으로 객체와 버킷은 모두 private. AWS 보안 자격 증명이나 권한 없이 객체를 업로드 하기를 원하는 경우 미리 서명된 URL을 사용할 수 있다. 다른 작업 수행을 위한 권한을 열지 않고 PUT/GET 에 대한 액세스를 제공. 생성할 때 자격 증명 등의 데이터를 받고, URL을 생성하는 사용자의 권한을 사용하여 액세스함. 지정된 기간 동안만 유효함. (최대 1주) . ",
     "url": "/docs/aws/s3#%EB%AF%B8%EB%A6%AC-%EC%84%9C%EB%AA%85%EB%90%9C-url",
     
     "relUrl": "/docs/aws/s3#미리-서명된-url"
-  },"788": {
+  },"789": {
     "doc": "S3",
     "title": "암호화",
     "content": "전송 데이터 암호화를 할 수 있다. 서버에 저장하는 데이터를 암호화 할 수 있다. | S3가 관리하는 키. | KMS(key 관리 서비스)가 관리하는 키. | 사용자가 설정한 키. | . ",
     "url": "/docs/aws/s3#%EC%95%94%ED%98%B8%ED%99%94",
     
     "relUrl": "/docs/aws/s3#암호화"
-  },"789": {
+  },"790": {
     "doc": "S3",
     "title": "ACL(Access Control List)",
     "content": "S3 ACL에서 객체나 버킷 수준에서 접근 가능한 권한 부여할 수 있다. 버킷의 ACL을 바꾸거나 설정하더라도 그 내부의 객체는 이와 별개이다. ",
     "url": "/docs/aws/s3#aclaccess-control-list",
     
     "relUrl": "/docs/aws/s3#aclaccess-control-list"
-  },"790": {
+  },"791": {
     "doc": "S3",
     "title": "CORS (Cross Origin Resource Sharing)",
     "content": "제한된 리소스를 최초 자원이 서비스된 도메인 밖의 다른 도메인으로부터 요청할 수 있게 허용하는 구조이다. S3에서는 CORS를 지원하며 활성화하여 사용할 수 있다. (AWS CORS 시나리오 및 구성 방법 참고) . ",
     "url": "/docs/aws/s3#cors-cross-origin-resource-sharing",
     
     "relUrl": "/docs/aws/s3#cors-cross-origin-resource-sharing"
-  },"791": {
+  },"792": {
     "doc": "S3",
     "title": "성능 개선 방향",
     "content": "애플리케이션 설계에서 가능한 경우 버킷과 키 이름을 캐시. 가장 가까운 버킷 리전을 선택. S3에 저자된 데이터를 압축하여 전송되는 데이터와 사용되는 스토리지 크기를 줄이는 방향. AWS CloudFront와 같은 CDN(콘텐츠 전송 네트워크)를 통해 효율적으로 콘텐츠 배포. ",
     "url": "/docs/aws/s3#%EC%84%B1%EB%8A%A5-%EA%B0%9C%EC%84%A0-%EB%B0%A9%ED%96%A5",
     
     "relUrl": "/docs/aws/s3#성능-개선-방향"
-  },"792": {
+  },"793": {
     "doc": "S3",
     "title": "무결성 체크",
     "content": "GET/PUT으로 검색한 객체의 MD5 체크섬을 확인하여 전송 중 데이터 손상을 확인한다. | AWS SDK는 PUT 작업시 MD5 체크섬을 자동으로 지정. S3는 MD5 체크섬을 다시 계산하고 이를 지정된 값과 비교. | . ",
     "url": "/docs/aws/s3#%EB%AC%B4%EA%B2%B0%EC%84%B1-%EC%B2%B4%ED%81%AC",
     
     "relUrl": "/docs/aws/s3#무결성-체크"
-  },"793": {
+  },"794": {
     "doc": "S3",
     "title": "오류 코드",
     "content": "S3 응답에 대해 오류 코드가 나온 경우 처리를 해주어야 한다. 400 error - 해당 작업을 수행할 수 없음. 500 error - 해당 작업을 재시도할 수 있음. ",
     "url": "/docs/aws/s3#%EC%98%A4%EB%A5%98-%EC%BD%94%EB%93%9C",
     
     "relUrl": "/docs/aws/s3#오류-코드"
-  },"794": {
+  },"795": {
     "doc": "S3",
     "title": "S3",
     "content": "AWS에서 대표적으로 사용되는 스토리지 서비스로 완전 관리형 서비스이다. 원하는 양의 데이터를 저장할 수 있고 웹기반으로 어디서든 접근할 수 있는 스토리지. 매우 안전하고 안정적이며 확장 가능한 객체 스토리지. (eleven-nine) . 콘텐츠 저장 및 배포, 백업 및 아카이빙, 빅 데이터 분석, 재해 복구, 정적 웹 사이트 호스팅에서 사용될 수 있다. | 리전 기반이어서 정적 호스팅에선 EC2보다 더 안정적으로 지원 가능하다. | . EC2는 AZ 기반이지만 S3는 리전 기반이어서 AZ가 문제가 생겨도 더 안전하게 지원할 수 있다. 또한 CRR(교차 리전 복제)으로 모든 S3 객체를 다른 AWS 리전에 위치한 대산 버킷으로 자동 복제하여 안전성을 보장한다. S3는 객체 스토리지 구조를 갖는다. 전통적인 파일시스템: dir &gt; dir &gt; dir &gt; files 방식의 search. 파일이 많아지고 길어질수록 검색 속도가 늦어짐. 객체 스토리지: dir 구조를 갖지 않고 파일을 찾아감. 파일이 많아져도 균일한 속도를 유지함. ",
     "url": "/docs/aws/s3",
     
     "relUrl": "/docs/aws/s3"
-  },"795": {
+  },"796": {
     "doc": "website",
     "title": "website",
     "content": " ",
     "url": "/docs/dev-tools/site",
     
     "relUrl": "/docs/dev-tools/site"
-  },"796": {
+  },"797": {
     "doc": "슬랙",
     "title": "슬랙",
     "content": " ",
     "url": "/docs/dev-tools/slack",
     
     "relUrl": "/docs/dev-tools/slack"
-  },"797": {
+  },"798": {
     "doc": "Spring",
     "title": "Spring",
     "content": " ",
     "url": "/docs/spring",
     
     "relUrl": "/docs/spring"
-  },"798": {
+  },"799": {
     "doc": "전략적 설계",
     "title": "전략적 설계",
     "content": " ",
     "url": "/docs/ddd/strategic",
     
     "relUrl": "/docs/ddd/strategic"
-  },"799": {
+  },"800": {
     "doc": "전술적 설계",
     "title": "전술적 설계",
     "content": " ",
     "url": "/docs/ddd/tactical",
     
     "relUrl": "/docs/ddd/tactical"
-  },"800": {
+  },"801": {
     "doc": "TDD",
     "title": "TDD",
     "content": " ",
     "url": "/docs/extreme-programming/tdd",
     
     "relUrl": "/docs/extreme-programming/tdd"
-  },"801": {
+  },"802": {
     "doc": "linux commands",
     "title": "linux commands",
     "content": "linux 개발에 유용한 terminal 리스트 . ",
     "url": "/docs/dev-tools/linux-commands",
     
     "relUrl": "/docs/dev-tools/linux-commands"
-  },"802": {
+  },"803": {
     "doc": "Test",
     "title": "Test",
     "content": " ",
     "url": "/docs/test",
     
     "relUrl": "/docs/test"
-  },"803": {
+  },"804": {
     "doc": "주제회고",
     "title": "주제회고",
     "content": " ",
     "url": "/docs/02.retrospect/theme.html",
     
     "relUrl": "/docs/02.retrospect/theme.html"
-  },"804": {
+  },"805": {
     "doc": "Java Tips",
     "title": "Java Tips",
     "content": " ",
     "url": "/docs/java/tip",
     
     "relUrl": "/docs/java/tip"
-  },"805": {
+  },"806": {
     "doc": "vue",
     "title": "vue",
     "content": " ",
