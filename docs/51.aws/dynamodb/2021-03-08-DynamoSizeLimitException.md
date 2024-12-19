@@ -1,50 +1,49 @@
 ---
 layout: post
-title: "DynamoSizeLimitException 이슈 정리"
+title: "예상치 못한 DynamoSizeLimitException 이슈 정리"
 sidebar_label: "DynamoSizeLimitException"
 parent: DynamoDB
 nav_order: 1000
 grand_parent: aws
-permalink: /docs/aws/DynamoSizeLimitException
+permalink: /docs/aws/dynamo/DynamoSizeLimitException
 sitemap:
   lastmod: 2021-03-08
 ---
 
-오늘은 생각지도 못한 DynamoSizeLimitException에 대해 기록한다.  
-DynamoDB는 AWS에서 제공하는 NoSql DB이다.
+최근 DynamoSizeLimitException 에러를 겪을 일이 있었다.  
+생각지도 못하게 DynamoSizeLimitException를 겪게 되어 원인을 파악하였고, AWS 공식 document에 나오지 않는 내용을 기록한다.
 
-먼저 `DynamoSizeLimitException`가 뭔지에 대해 알아볼 필요가 있다.
+## What is DynamoSizeLimitException
 
-## DynamoSizeLimitException
+DynamoDB에서는 item에 대한 size 제한을 둔다.  
+정해진 size를 넘는 item을 save 요청을 했을 때 Dynamo에서는 **DynamoSizeLimitException**를 반환한다.
 
-Dynamo에서는 item에 대한 size 제한을 둔다.  
-이 size를 넘는 item을 save 요청을 했을 때 Dynamo에서는 **DynamoSizeLimitException**를 반환한다.  
+[AWS dynamoDB Limits](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ServiceQuotas.html#limits-items)를 확인하면 아래와 같은 문구를 확인할 수 있다.
 
-여기에 대해서는 [AWS 공식문서](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html#limits-items)를 참고하면 좋다.  
-> The maximum item size in DynamoDB is 400 KB, which includes both attribute name binary length (UTF-8 length) and attribute value lengths (again binary length)  
-> 그니까 총합 400KB를 넘으면 안된다 이거다
+```
+The maximum item size in DynamoDB is 400 KB, which includes both attribute name binary length (UTF-8 length) and attribute value lengths (again binary length)
+```
 
-## 예상치 못한 문제 발생
-
-이유를 설명하자면 복잡하지만 있으면 GC에 좋고, 없으면 번거로운 작업이 필요한 일이 있었다.  
-자주 사용하는 dynamo table에 저장을 하기로 했고,  
-size limit을 피하기 위해 400KB를 넘으면 저장하지 않도록 하는 로직을 구현했다.
-
-그런데 exception이 발생해 alert가 왔다.
-item을 확인해보니 고작 210KB 정도??
-
-Document를 읽어도 원인을 알 수 없었고, 한참을 구글링 했다.
-
-## LSI에서의 size limit
-
-DynamoDB에서는 **Local Secondary Indexes(LSI)**를 제공하는데, LSI가 있으면 size limit 계산이 달라진다.
-
-LSI는 item을 replica로 사용해서 size를 배로 먹는다는 것.  
-따라서 LSI가 n개면 n + 1배의 size를 먹는다고 볼 수 있고, item size limit은 그만큼 줄어드는 것이다.  
-우리는 LSI를 하나 사용하고 있었고, 210KB 짜리가 들어와서 LSI 덕에 400KB가 넘어 이슈가 발생한 것.
-
-이런 내용들이 공식 document에 없다는건 좀 아쉽고,  
-쉽게 발생하지 않는 이슈여서 자료도 잘 없는 것 같다.
+결국 하나의 item이 400KB를 넘을 수 없다는 것.
 
 
-[aws tech 팀에 contact한 사람의 답변](https://stackoverflow.com/questions/33768971/how-to-calculate-dynamodb-item-size-getting-validationerror-400kb-boto)을 통해 알 수 있었다.
+## DynamoSizeLimitException occur under 400KB
+
+그렇지만 400KB를 넘지 않는 케이스에서 DynamoSizeLimitException가 발생했다.  
+Dynamo의 size limit에 대해 우리는 이미 알고 있었고, 400KB가 넘는 케이스는 별도로 처리하는 로직을 구현했다.
+
+그럼에도 DynamoSizeLimitException가 발생했다.
+
+item을 확인해보니 item의 크기는 고작 210KB 정도.  
+Document 에서도 원인을 찾을 수 없었다.
+
+## Why DynamoSizeLimitException occur?
+
+원인은 Local Secondary Indexes(LSI)에서 찾을 수 있었다.  
+DynamoDB에 **LSI가 있으면 size limit 계산이 달라진다.**
+
+LSI는 item을 replica로 사용해서 size를 배로 사용한다.  
+따라서 **LSI가 n개라면 최대 n + 1 배의 size를 사용할 수 있다**는 것이고, item size limit은 그만큼 줄어들게되는 것이다.  
+우리는 LSI가 하나 있었고, 210KB의 item이 LSI로 인해 400KB 이상의 size를 가지며 이슈가 발생한 것이다.
+
+LSI를 사용해서는 안되는 이유가 하나 더 늘었다.
