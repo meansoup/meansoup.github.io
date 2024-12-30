@@ -5,7 +5,7 @@
     <description>backend tech, log</description>
     <link>https://backendbrew.com/</link>
     <atom:link href="https://backendbrew.com/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2024-09-14T21:46:55+00:00</updated>
+    <updated>2024-12-30T14:36:51+00:00</updated>
     <id>https://backendbrew.com</id>
     <author>
       <name></name>
@@ -4510,14 +4510,28 @@ galloping mode는 \(2^k\) 번씩 점프하며 merge sort의 속도를 증가시�
           <description>&lt;p&gt;팀을 옮기고 올해는 새로운 것들을 배워 재미있는 시간들이었다.&lt;br /&gt;
 팀 내에서 연간 회고를 진행했는데 회사에서의 나의 회고와 회고를 준비하며 느낀 올해에 대해 정리해본다.&lt;/p&gt;
 
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#설계&quot;&gt;설계&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#동기화-작업&quot;&gt;동기화 작업&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#배치&quot;&gt;배치&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#언어&quot;&gt;언어&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#자동화&quot;&gt;자동화&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#테스트&quot;&gt;테스트&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
 &lt;h2 id=&quot;설계&quot;&gt;설계&lt;/h2&gt;
 
 &lt;p&gt;올해 팀을 옮겨서 배웠던 것 중 가장 크게 배우고 느낀 것은 설계에 대한 부분이다.&lt;br /&gt;
-이전 팀에서는 유지/보수가 대부분인 업무에 새로 무언가를 개발하는 일은 잘 없기 때문에, 제대로 된 설계 회의를 진행해본 적이 없었다.
+이전 팀에서는 유지/보수가 대부분인 업무에 새로 무언가를 개발하는 일은 잘 없기 때문에, 대규모 설계 회의를 진행해본 적이 없었다.&lt;br /&gt;
 팀을 옮기고 새로운 모듈 개발과 이어지는 배치 개발을 위한 반복된 설계가 개인적으로는 배울 점이 많았다.&lt;/p&gt;
 
 &lt;p&gt;설계 회의에 참여해서 구조를 생각하고 그려나가고 토론하는 것이 도움이 많이 되었는데, 어떻게 토론을 해나가고 어떤 부분을 짚어나가야 하는지 알 수 있었다.&lt;br /&gt;
-처음에는 경험이 적다보니 아 그렇구나 하고 넘어가던 설계들이 나중에는 나는 이렇게 생각했는데 팀원들 아이디어가 좋구나 하고 넘어가는 경우도 많았다.&lt;/p&gt;
+처음에는 경험이 적다보니 ‘아 그렇구나’ 하고 넘어가던 설계들이 나중에는 ‘나는 이렇게 생각했는데 팀원들 아이디어가 좋구나’ 하고 넘어가는 경우도 많았다.&lt;/p&gt;
 
 &lt;p&gt;아직은 배워가는게 크지만 내년에는 내가 더 많이 설계에 영향을 미치면 좋겠다는 생각이 든다.
 설계는 남기고 싶은 내용들이 있어 따로 정리해본다.&lt;/p&gt;
@@ -4566,24 +4580,17 @@ golang 스터디를 하고 잠깐 잊고 지냈는데 기존 batch의 성능을 
   &lt;li&gt;기존의 python batch가 성능이 굉장이 안좋았다.&lt;/li&gt;
   &lt;li&gt;한 눈에 봐도 개선의 여지가 명확했고 일부 로직을 개선한 python batch로 업그레이드?했다.&lt;/li&gt;
   &lt;li&gt;golang의 go routine(경량 thread)와 빠른 성능이 좋은 효율을 발휘할만한 상황으로 보였다.&lt;/li&gt;
-  &lt;li&gt;language 변경하고 설계하여 다시 개발했다.&lt;/li&gt;
+  &lt;li&gt;golang으로 language를 변경하고 설계하여 다시 개발했다.&lt;/li&gt;
   &lt;li&gt;단일 ec2 기준 100배에 가까운 성능 개선이 이뤄졌다.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;이번 작업을 하면서 느낀 것은&lt;/p&gt;
+&lt;p&gt;이번 작업을 하면서 느낀 것은 이렇다.&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;개발 없이 스터디 하는건 오래 남지 않는다.&lt;/li&gt;
   &lt;li&gt;코드는 부패하기 마련이고 잊혀진다.&lt;/li&gt;
-  &lt;li&gt;언어가 중요하다.
-    &lt;ul&gt;
-      &lt;li&gt;golang이 굉장한 효율을 발휘하는 부분들이 있다.&lt;/li&gt;
-      &lt;li&gt;특히 경량 쓰레드는 굉장하다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
+  &lt;li&gt;언어가 갖는 특성을 고려하는 것이 중요하다. (ex, golang의 경량 쓰레드 goroutine 효율성 등)&lt;/li&gt;
 &lt;/ol&gt;
-
-&lt;hr /&gt;
 
 &lt;h2 id=&quot;자동화&quot;&gt;자동화&lt;/h2&gt;
 
@@ -4597,24 +4604,21 @@ golang 스터디를 하고 잠깐 잊고 지냈는데 기존 batch의 성능을 
 
 &lt;p&gt;우리 팀은 올해 이런 작업들을 자동화 했다.&lt;/p&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;WAS나 batch에서 error나 issue에 대해 slack noti 적용
-    &lt;ul&gt;
-      &lt;li&gt;우리가 새로 만든 모듈에서 500 error에 대해 slack noti를 적용하고 이 모듈에서는 우리가 알지 못하는 500 error는 없도록 유지보수를 하고 있다. 모르는 500 error가 나온다면 바로 노티를 받고 수정에 들어간다. (부끄럽지만 다른 모듈은 아마 500 error가 좀 있을 것 같다)&lt;/li&gt;
-      &lt;li&gt;Grafana나 지표는 만들어놔도 손이 잘 안가기 때문에 초기 서버에서 이런 작업을 해놓는게 굉장히 서버 관리에 도움이 되었다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;versioning &amp;amp; release note &amp;amp; 문서 작성
-    &lt;ul&gt;
-      &lt;li&gt;우리는 배포 프로세스가 굉장히 귀찮은 편이다.&lt;br /&gt;
-우선 검증 팀에 변경사항을 문서로 작성해서 보내주어야 하고, 검증이 끝나면 변경사항을 결재를 올려야 한다. 그리고 나서 release note를 작성하는데 이게 참 귀찮아서 날 잡고 자동화를 진행했다.&lt;/li&gt;
-      &lt;li&gt;문서 작성 프로그램을 python으로 작성했다. git commit과 PR rule을 자동화하기 좋게 convention을 잘 지키면서 convention에 맞는 commit/PR message들을 가지고 major/minor/patch version을 자동으로 계산해서 version을 올리고 수정된 내용들을 정리하는 방식이다.
-정리된 내용들과 버전은 검증 문서와 변경사항을 slack으로 보내고, github release에도 자동으로 업데이트 하도록 구현했다. (github / slack api 사용)&lt;/li&gt;
-      &lt;li&gt;python dockerize를 하여 각 모듈에 circleci에 문서 작성 step 추가해서 docker를 수행하도록 했다.&lt;/li&gt;
-      &lt;li&gt;이 작업으로 정말 귀찮고 어떨땐 빼먹기도 했던 문서 작업들이 정리되었다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
+&lt;h3 id=&quot;was나-batch에서-error나-issue에-대해-slack-noti-적용&quot;&gt;WAS나 batch에서 error나 issue에 대해 slack noti 적용&lt;/h3&gt;
+
+&lt;p&gt;우리가 새로 만든 모듈에서 500 error에 대해 slack noti를 적용하고 이 모듈에서는 우리가 알지 못하는 500 error는 없도록 유지보수를 하고 있다. 모르는 500 error가 나온다면 바로 노티를 받고 수정에 들어간다. (부끄럽지만 다른 모듈은 아마 500 error가 좀 있을 것 같다)
+Grafana나 지표는 만들어놔도 손이 잘 안가기 때문에 초기 서버에서 이런 작업을 해놓는게 굉장히 서버 관리에 도움이 되었다.&lt;/p&gt;
+
+&lt;h3 id=&quot;versioning--release-note--문서-작성&quot;&gt;versioning &amp;amp; release note &amp;amp; 문서 작성&lt;/h3&gt;
+
+&lt;p&gt;우리는 배포 프로세스가 굉장히 귀찮은 편이다.  &lt;br /&gt;
+우선 검증 팀에 변경사항을 문서로 작성해서 보내주어야 하고, 검증이 끝나면 변경사항을 결재를 올려야 한다. 그리고 나서 release note를 작성하는데 이게 참 귀찮아서 날 잡고 자동화를 진행했다.&lt;/p&gt;
+
+&lt;p&gt;문서 작성 프로그램을 python으로 작성했다. git commit과 PR rule을 자동화하기 좋게 convention을 잘 지키면서 convention에 맞는 commit/PR message들을 가지고 major/minor/patch version을 자동으로 계산해서 version을 올리고 수정된 내용들을 정리하는 방식이다. &lt;br /&gt;
+정리된 내용들과 버전은 검증 문서와 변경사항을 slack으로 보내고, github release에도 자동으로 업데이트 하도록 구현했다. (github / slack api 사용)&lt;/p&gt;
+
+&lt;p&gt;python dockerize를 하여 각 모듈에 circleci에 문서 작성 step 추가해서 docker를 수행하도록 했다.&lt;br /&gt;
+이 작업으로 정말 귀찮고 어떨땐 빼먹기도 했던 문서 작업들이 정리되었다.&lt;/p&gt;
 
 &lt;p&gt;자동화를 통해 업무에 대한 효율과 서비스 안정성을 확보할 수 있었다는 생각이 든다.&lt;br /&gt;
 그리고 작업을 진행하면 평소에 관심을 두지 않았던, 진행하지 않았던 일들을 진행하게 되니 공부도 되고 지루하지도 않아 재밌게 개발을 할 수 있게 되었다.&lt;/p&gt;
@@ -4622,66 +4626,59 @@ golang 스터디를 하고 잠깐 잊고 지냈는데 기존 batch의 성능을 
 &lt;p&gt;그리고 &lt;strong&gt;생각보다 자동화가 어렵지 않다&lt;/strong&gt;는 것을 느꼈다.&lt;br /&gt;
 문서 자동화는 항상 불편했다. 자동화가 쉽지 않을 것이라 생각했는데 생각보다 쉽고 빠르게 일을 정리할 수 있었다.&lt;/p&gt;
 
-&lt;hr /&gt;
-
 &lt;h2 id=&quot;테스트&quot;&gt;테스트&lt;/h2&gt;
 
 &lt;p&gt;새로운 모듈을 처음부터 개발하면서 우리는 성능 개선이나 요구사항 만족 등을 위해 테스트를 다양하게 진행해왔다.&lt;br /&gt;
 우리가 진행한 테스트는 아래와 같다.&lt;/p&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;unit test
-    &lt;ul&gt;
-      &lt;li&gt;unit 단위의 TDD에 필요한 단위 테스트&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;api test
-    &lt;ul&gt;
-      &lt;li&gt;실제 api를 통해 server 밖에서 호출되는 테스트&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;scenario test
-    &lt;ul&gt;
-      &lt;li&gt;api, 기능 단위로 실제 사용자의 호출 flow(시나리오)에 맞게 정상 호출되는지 확인하는 테스트&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;performance test
-    &lt;ul&gt;
-      &lt;li&gt;pin point, locust를 통한 성능 테스트&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;unit test&lt;/td&gt;
+      &lt;td&gt;unit 단위의 TDD에 필요한 단위 테스트&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;api test&lt;/td&gt;
+      &lt;td&gt;실제 api를 통해 server 밖에서 호출되는 테스트&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;scenario test&lt;/td&gt;
+      &lt;td&gt;기능 단위로 실제 사용자의 usecase flow(scenario)에 맞게 정상 호출되는지 확인하는 테스트&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;performance test&lt;/td&gt;
+      &lt;td&gt;pin point, locust 등을 통한 부하 및 성능 테스트&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
 &lt;p&gt;켄트 백이 말하는 &lt;strong&gt;테스트는 항상 마음을 편안하게 해주고 믿음을 준다&lt;/strong&gt;라는 말이 참 공감이 된다.&lt;br /&gt;
 여러 테스트를 통해 출시 전, 후로 우리 서비스에 대한 믿음을 가질 수 있었던 것 같다.&lt;/p&gt;
 
-&lt;p&gt;이전 모듈들에서 진행하지 않던 scenario 테스트도 추가했는데 테스트가 중요하고 unit/api 테스트에만 의존하지 않고 여러 종류의 테스트가 필요하다는 것을 배웠다.&lt;/p&gt;
+&lt;p&gt;이전 모듈들에서 진행하지 않던 scenario 테스트도 추가했는데 테스트가 중요하고 unit/api 테스트에만 의존하지 않고 여러 종류의 테스트가 필요하다는 것을 배웠다.
+돌아볼만한 점은 이렇다.&lt;/p&gt;
 
-&lt;p&gt;돌아볼만한 점은 이렇다.&lt;/p&gt;
+&lt;h3 id=&quot;중복되는-테스트&quot;&gt;중복되는 테스트&lt;/h3&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;중복되는 테스트
-    &lt;ul&gt;
-      &lt;li&gt;위와 같이 여러 테스트가 있다보니 중복되는 테스트들이 있다. 테스트가 많으면 느려지기 쉬우니 test의 layer를 명확하게 하면 좋겠다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;성능 테스트
-    &lt;ul&gt;
-      &lt;li&gt;성능 테스트를 진행할 때 다른 개발을 하느라 성능 테스트 셋업이나 진행에 참여하지 못했는데 아쉽다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;테스트 가독성
-    &lt;ul&gt;
-      &lt;li&gt;“테스트니까” 라는 말을 하기도 하고 듣기도 한다. 테스트는 좀 대충 짜도 된다라는 생각인데, 이게 리뷰할 때 굉장히 불편하고 코드 변경이 생길 때 테스트를 이해하는데 시간도 많이쓰게 되었다.&lt;/li&gt;
-      &lt;li&gt;테스트 안에 분기가 있는건 나는 정말 별로다. 그럴거면 테스트를 나눠야된다고 생각한다. 이게 취향인지, 이걸 하려고하는 팀원도 있긴하다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;위와 같이 여러 테스트가 있다보니 중복되는 테스트들이 있다. 테스트가 많으면 느려지기 쉬우니 test의 layer를 명확하게 하면 좋겠다.&lt;/p&gt;
+
+&lt;h3 id=&quot;성능-테스트&quot;&gt;성능 테스트&lt;/h3&gt;
+
+&lt;p&gt;성능 테스트를 진행할 때 다른 개발을 하느라 성능 테스트 셋업이나 진행에 참여하지 못했는데 아쉽다.&lt;/p&gt;
+
+&lt;h3 id=&quot;테스트-가독성&quot;&gt;테스트 가독성&lt;/h3&gt;
+&lt;p&gt;‘테스트니까’라는 말을 하기도 하고 듣기도 한다. 테스트는 좀 대충 짜도 된다라는 생각인데, 이게 리뷰할 때 굉장히 불편하고 코드 변경이 생길 때 테스트를 이해하는데 시간도 많이쓰게 되었다.&lt;br /&gt;
+테스트 안에 분기가 있는건 나는 정말 별로다. 그럴거면 테스트를 나눠야된다고 생각한다. 이게 취향인지, 이걸 하려고하는 팀원도 있긴하다.&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;재미있는 한 해였다.&lt;br /&gt;
-팀 분위기가 중요하다는 것을 많이 느꼈다.&lt;br /&gt;
+&lt;p&gt;재미있는 한 해였다. 팀 분위기가 중요하다는 것을 많이 느꼈다.&lt;br /&gt;
 pair work이나 code review, 회고 등의 개발 문화에 대해서도 많이 느꼈는데, 우리 팀은 이전 팀보다 자신의 생각과 불편할 수 있는 얘기들을 편하게 할 수 있어 참 좋은 것 같다.&lt;/p&gt;
 </description>
         
@@ -5608,52 +5605,48 @@ If you’re targeting Java 8, streams give you one big feature that isn’t curr
       </item>
     
       <item>
-        <title>DynamoSizeLimitException 이슈 정리</title>
+        <title>예상치 못한 DynamoSizeLimitException 이슈 정리</title>
         
-          <description>&lt;p&gt;오늘은 생각지도 못한 DynamoSizeLimitException에 대해 기록한다.&lt;br /&gt;
-DynamoDB는 AWS에서 제공하는 NoSql DB이다.&lt;/p&gt;
+          <description>&lt;p&gt;최근 DynamoSizeLimitException 에러를 겪을 일이 있었다.&lt;br /&gt;
+생각지도 못하게 DynamoSizeLimitException를 겪게 되어 원인을 파악하였고, AWS 공식 document에 나오지 않는 내용을 기록한다.&lt;/p&gt;
 
-&lt;p&gt;먼저 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DynamoSizeLimitException&lt;/code&gt;가 뭔지에 대해 알아볼 필요가 있다.&lt;/p&gt;
+&lt;h2 id=&quot;what-is-dynamosizelimitexception&quot;&gt;What is DynamoSizeLimitException&lt;/h2&gt;
 
-&lt;h2 id=&quot;dynamosizelimitexception&quot;&gt;DynamoSizeLimitException&lt;/h2&gt;
+&lt;p&gt;DynamoDB에서는 item에 대한 size 제한을 둔다.&lt;br /&gt;
+정해진 size를 넘는 item을 save 요청을 했을 때 Dynamo에서는 &lt;strong&gt;DynamoSizeLimitException&lt;/strong&gt;를 반환한다.&lt;/p&gt;
 
-&lt;p&gt;Dynamo에서는 item에 대한 size 제한을 둔다.&lt;br /&gt;
-이 size를 넘는 item을 save 요청을 했을 때 Dynamo에서는 &lt;strong&gt;DynamoSizeLimitException&lt;/strong&gt;를 반환한다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ServiceQuotas.html#limits-items&quot;&gt;AWS dynamoDB Limits&lt;/a&gt;를 확인하면 아래와 같은 문구를 확인할 수 있다.&lt;/p&gt;
 
-&lt;p&gt;여기에 대해서는 &lt;a href=&quot;https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html#limits-items&quot;&gt;AWS 공식문서&lt;/a&gt;를 참고하면 좋다.&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;The maximum item size in DynamoDB is 400 KB, which includes both attribute name binary length (UTF-8 length) and attribute value lengths (again binary length)&lt;br /&gt;
-그니까 총합 400KB를 넘으면 안된다 이거다&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;The maximum item size in DynamoDB is 400 KB, which includes both attribute name binary length (UTF-8 length) and attribute value lengths (again binary length)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;예상치-못한-문제-발생&quot;&gt;예상치 못한 문제 발생&lt;/h2&gt;
+&lt;p&gt;결국 하나의 item이 400KB를 넘을 수 없다는 것.&lt;/p&gt;
 
-&lt;p&gt;이유를 설명하자면 복잡하지만 있으면 GC에 좋고, 없으면 번거로운 작업이 필요한 일이 있었다.&lt;br /&gt;
-자주 사용하는 dynamo table에 저장을 하기로 했고,&lt;br /&gt;
-size limit을 피하기 위해 400KB를 넘으면 저장하지 않도록 하는 로직을 구현했다.&lt;/p&gt;
+&lt;h2 id=&quot;dynamosizelimitexception-occur-under-400kb&quot;&gt;DynamoSizeLimitException occur under 400KB&lt;/h2&gt;
 
-&lt;p&gt;그런데 exception이 발생해 alert가 왔다.
-item을 확인해보니 고작 210KB 정도??&lt;/p&gt;
+&lt;p&gt;그렇지만 400KB를 넘지 않는 케이스에서 DynamoSizeLimitException가 발생했다.&lt;br /&gt;
+Dynamo의 size limit에 대해 우리는 이미 알고 있었고, 400KB가 넘는 케이스는 별도로 처리하는 로직을 구현했다.&lt;/p&gt;
 
-&lt;p&gt;Document를 읽어도 원인을 알 수 없었고, 한참을 구글링 했다.&lt;/p&gt;
+&lt;p&gt;그럼에도 DynamoSizeLimitException가 발생했다.&lt;/p&gt;
 
-&lt;h2 id=&quot;lsi에서의-size-limit&quot;&gt;LSI에서의 size limit&lt;/h2&gt;
+&lt;p&gt;item을 확인해보니 item의 크기는 고작 210KB 정도.&lt;br /&gt;
+Document 에서도 원인을 찾을 수 없었다.&lt;/p&gt;
 
-&lt;p&gt;DynamoDB에서는 &lt;strong&gt;Local Secondary Indexes(LSI)&lt;/strong&gt;를 제공하는데, LSI가 있으면 size limit 계산이 달라진다.&lt;/p&gt;
+&lt;h2 id=&quot;why-dynamosizelimitexception-occur&quot;&gt;Why DynamoSizeLimitException occur?&lt;/h2&gt;
 
-&lt;p&gt;LSI는 item을 replica로 사용해서 size를 배로 먹는다는 것.&lt;br /&gt;
-따라서 LSI가 n개면 n + 1배의 size를 먹는다고 볼 수 있고, item size limit은 그만큼 줄어드는 것이다.&lt;br /&gt;
-우리는 LSI를 하나 사용하고 있었고, 210KB 짜리가 들어와서 LSI 덕에 400KB가 넘어 이슈가 발생한 것.&lt;/p&gt;
+&lt;p&gt;원인은 Local Secondary Indexes(LSI)에서 찾을 수 있었다.&lt;br /&gt;
+DynamoDB에 &lt;strong&gt;LSI가 있으면 size limit 계산이 달라진다.&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;이런 내용들이 공식 document에 없다는건 좀 아쉽고,&lt;br /&gt;
-쉽게 발생하지 않는 이슈여서 자료도 잘 없는 것 같다.&lt;/p&gt;
+&lt;p&gt;LSI는 item을 replica로 사용해서 size를 배로 사용한다.&lt;br /&gt;
+따라서 &lt;strong&gt;LSI가 n개라면 최대 n + 1 배의 size를 사용할 수 있다&lt;/strong&gt;는 것이고, item size limit은 그만큼 줄어들게되는 것이다.&lt;br /&gt;
+우리는 LSI가 하나 있었고, 210KB의 item이 LSI로 인해 400KB 이상의 size를 가지며 이슈가 발생한 것이다.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/33768971/how-to-calculate-dynamodb-item-size-getting-validationerror-400kb-boto&quot;&gt;aws tech 팀에 contact한 사람의 답변&lt;/a&gt;을 통해 알 수 있었다.&lt;/p&gt;
+&lt;p&gt;LSI를 사용해서는 안되는 이유가 하나 더 늘었다.&lt;/p&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/aws/DynamoSizeLimitException</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/aws/DynamoSizeLimitException</guid>
+        <link>https://backendbrew.com/docs/aws/dynamo/DynamoSizeLimitException</link>
+        <guid isPermaLink="true">https://backendbrew.com/docs/aws/dynamo/DynamoSizeLimitException</guid>
       </item>
     
       <item>
@@ -8462,18 +8455,18 @@ ObjectMother는 &lt;strong&gt;standard fixtures&lt;/strong&gt;를 만드는 것�
 
 &lt;p&gt;batch를 계속하면서 내가 배운점들은 이렇다.&lt;/p&gt;
 
-&lt;h4 id=&quot;1-배포는-가능하면-쪼개서-나가자&quot;&gt;1. &lt;strong&gt;배포는 가능하면 쪼개서&lt;/strong&gt; 나가자&lt;/h4&gt;
+&lt;h3 id=&quot;1-배포는-가능하면-쪼개서-나가자&quot;&gt;1. &lt;strong&gt;배포는 가능하면 쪼개서&lt;/strong&gt; 나가자&lt;/h3&gt;
 
 &lt;p&gt;우리 회사는 배포가 살짝 불편한 편이다. 모듈마다 다르지만 검증/결재를 기다리는 일들로 배포에는 항상 피로감이 쌓이고 재미가 없다.&lt;br /&gt;
 이런 이유로 여러 작업의 배포가 필요할 때 한 번에 나갔다가 어디서 이슈가 생겼는지 확인하기가 어려웠다. (근데 이건 배포 방식을 바꿔야 해결이 될 것 같다.)&lt;/p&gt;
 
-&lt;h4 id=&quot;2-migration-batch는-rollback이-가능한-구조인지-파악하자&quot;&gt;2. migration batch는 &lt;strong&gt;rollback이 가능한 구조인지 파악&lt;/strong&gt;하자&lt;/h4&gt;
+&lt;h3 id=&quot;2-migration-batch는-rollback이-가능한-구조인지-파악하자&quot;&gt;2. migration batch는 &lt;strong&gt;rollback이 가능한 구조인지 파악&lt;/strong&gt;하자&lt;/h3&gt;
 
 &lt;p&gt;많은 batch와 migration을 수행하면서 간단한 migration에는 자신감이 충만해질 때가 있다.&lt;br /&gt;
 그래서 rollback에 대한 생각을 접어둘 때가 있는데, 배포 이후에 rollback이 불가능한 경우를 생각하면 아찔하다.&lt;br /&gt;
 migration은 사용자의 data를 손대는 batch니까 작업 수행 전후로 확인해야할 내용들을 명확히 정리하고 수행해야 한다.&lt;/p&gt;
 
-&lt;h4 id=&quot;3-확장성을-보장하자&quot;&gt;3. &lt;strong&gt;확장성을 보장&lt;/strong&gt;하자&lt;/h4&gt;
+&lt;h3 id=&quot;3-확장성을-보장하자&quot;&gt;3. &lt;strong&gt;확장성을 보장&lt;/strong&gt;하자&lt;/h3&gt;
 
 &lt;p&gt;우리가 관리하는 배치들은 대부분 정해진 기간이 있다.&lt;br /&gt;
 기간을 맞추기 위해, 혹은 낭비되는 cpu를 채우거나 인스턴스 숫자를 조절하기 위해서 보통 batch의 worker(instance 혹은 thread)가 확장 가능한 구조가 굉장히 중요하다.&lt;br /&gt;
@@ -8482,61 +8475,54 @@ instance를 더 붙이고 싶은데 불가능하거나 그 때마다 재시작�
   &lt;li&gt;기간을 맞추기 위해 TPS(Transaction Per Second)나 batch 예상 시간을 조회할 수 있는 지표를 남기면 유용하다.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;4-위와-유사하게-중단재시작과-멱등성을-고려하자&quot;&gt;4. 위와 유사하게 &lt;strong&gt;중단/재시작과 멱등성을 고려&lt;/strong&gt;하자&lt;/h4&gt;
+&lt;h3 id=&quot;4-위와-유사하게-중단재시작과-멱등성을-고려하자&quot;&gt;4. 위와 유사하게 &lt;strong&gt;중단/재시작과 멱등성을 고려&lt;/strong&gt;하자&lt;/h3&gt;
 
 &lt;p&gt;배치는 여러 이유로 중단/재시작이 필요한 경우가 많다.&lt;br /&gt;
 인스턴스가 내려갔다거나, memory 부족 등의 이슈로 instance type을 변경한다거나, db throttling 이슈로 input data를 shuffling 해서 재수행하기도 하고 등등..&lt;br /&gt;
 이럴 때마다 수행된 user(혹은 특정 item 등의 batch 단위)가 &lt;strong&gt;batch에 다시 들어가더라도 문제가 없도록 멱등성이 고려&lt;/strong&gt;되어야 한다. 이걸 고려하지 않으면 배치 돌릴 때마다 피곤하다.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;여기서 말하는 멱등성은 다시 돌아도 문제가 없는 것도 있지만, 돌아간 user에 대해서 다시 돌리지 않을 수 있는 일종의 flag가 있어야 batch에도 문제가 없고 재수행했을 때 수행 시간에도 문제가 없다.&lt;/li&gt;
-&lt;/ul&gt;
 
-&lt;h4 id=&quot;5-data-flow를-확인하자&quot;&gt;5. &lt;strong&gt;data flow를 확인&lt;/strong&gt;하자&lt;/h4&gt;
+&lt;p&gt;여기서 말하는 멱등성은 다시 돌아도 문제가 없는 것도 있지만, 돌아간 user에 대해서 다시 돌리지 않을 수 있는 일종의 flag가 있어야 batch에도 문제가 없고 재수행했을 때 수행 시간에도 문제가 없다.&lt;/p&gt;
+
+&lt;h3 id=&quot;5-data-flow를-확인하자&quot;&gt;5. &lt;strong&gt;data flow를 확인&lt;/strong&gt;하자&lt;/h3&gt;
 
 &lt;p&gt;우리는 지금 global 5개 region에서 서비스를 하고 있다.&lt;br /&gt;
 file이 오가는 batch의 경우 binary data가 region을 넘어가는 경우가 발생하기도 하는데, 최대한 효율적으로 binary flow를 잡아갈 수 있도록 설계가 필요하다.&lt;br /&gt;
 한 번은 설계를 잘 해놓고, binary flow를 놓쳐서 성능이 현저하게 떨어져서 다시 개발한 적이 있었다.&lt;/p&gt;
 
-&lt;h4 id=&quot;6-life-cycle을-같이-도는-batch에서-소스-코드를-분리하지-말자&quot;&gt;6. &lt;strong&gt;life cycle을 같이 도는 batch에서 소스 코드를 분리하지 말자&lt;/strong&gt;&lt;/h4&gt;
+&lt;h3 id=&quot;6-life-cycle을-같이-도는-batch에서-소스-코드를-분리하지-말자&quot;&gt;6. &lt;strong&gt;life cycle을 같이 도는 batch에서 소스 코드를 분리하지 말자&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;중복을 최소화&lt;/strong&gt;하는 것은 개발자의 숙명이기도 하다.&lt;br /&gt;
 one time job으로 설계된 batch가 아니라 life cycle을 같이하는 batch들에서 소스 코드를 따로 쓰는 경우 문제가 생기기 정말 쉽다.&lt;br /&gt;
 올 해 우리는 WAS에서 새로운 기능을 내보내고, batch에서는 해당 코드가 추가되지 않아 사용자 데이터를 날려먹을 뻔한 적이 있었다.&lt;/p&gt;
-
-&lt;hr /&gt;
 
 &lt;h2 id=&quot;설계&quot;&gt;설계&lt;/h2&gt;
 
 &lt;p&gt;위에서도 말했듯 올해는 설계를 하며 배운점이 많다.&lt;br /&gt;
 설계에서는 어떤 어떤 점들을 배웠다보다는 DDD 스터디와 적용을 함께 하면서 설계하는 능력이 성장하는 것을 느꼈다.&lt;/p&gt;
 
-&lt;h4 id=&quot;1-ddd는-배우면-배울수록-쉽지-않다&quot;&gt;1. DDD는 배우면 배울수록 쉽지 않다.&lt;/h4&gt;
+&lt;h3 id=&quot;1-ddd는-배우면-배울수록-쉽지-않다&quot;&gt;1. DDD는 배우면 배울수록 쉽지 않다.&lt;/h3&gt;
 
 &lt;p&gt;이전에 DDD에 따라 설계했다고 생각한 모듈들이 조금 더 공부하고 보니 불편한 것들이 많았다.&lt;br /&gt;
 하면서 느는 것 같긴한데, 아직도 명확하지 않는게 느껴진다.&lt;/p&gt;
 
-&lt;h4 id=&quot;2-통계도-설계에-함께-포함되어야-한다&quot;&gt;2. 통계도 설계에 함께 포함되어야 한다.&lt;/h4&gt;
+&lt;h3 id=&quot;2-통계도-설계에-함께-포함되어야-한다&quot;&gt;2. 통계도 설계에 함께 포함되어야 한다.&lt;/h3&gt;
 
 &lt;p&gt;요구사항을 뽑아서 설계를 진행할 때, 통계가 요구사항에 들어가지 않았다.&lt;br /&gt;
-서비스가 진행되고 통계를 뽑으려면 이미 늦고, 불편한 작업들(우리는 로그를 까보거나 batch를 통해) 필요할 때마다 통계를 요청하게되어 굉장히 불편했다.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;서비스하는 입장이라면 통계를 빠르고 쉽게 전달해줄 수 있는 구조가 되야하는 것 같다.&lt;/li&gt;
-&lt;/ul&gt;
+서비스가 진행되고 통계를 뽑으려면 이미 늦고, 불편한 작업들(우리는 로그를 까보거나 batch를 통해) 필요할 때마다 통계를 요청하게되어 굉장히 불편했다.&lt;br /&gt;
+서비스하는 입장이라면 통계를 빠르고 쉽게 전달해줄 수 있는 구조가 되야하는 것 같다.&lt;/p&gt;
 
-&lt;h4 id=&quot;3-first-class-object를-쓰자&quot;&gt;3. first class object를 쓰자.&lt;/h4&gt;
+&lt;h3 id=&quot;3-first-class-object를-쓰자&quot;&gt;3. first class object를 쓰자.&lt;/h3&gt;
 
 &lt;p&gt;우리가 가진 모듈 중에 개발된지 오래되고 우리팀 멤버들이 개발에 참여하지 않은 모듈이 있다.&lt;br /&gt;
 이게 굉장히 가독성이 떨어지는데 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hashmap&amp;lt;stirng, object&amp;gt;&lt;/code&gt; 이렇게 hashmap을 굉장히 많이 사용한다.&lt;br /&gt;
 끔찍한건 저기 object에 hashmap이 다시 들어가기도 한다는 것. 정말 최악이다.&lt;br /&gt;
 그리고 id를 string이 아닌 ID라는 wrapper class를 만들어서 써봤는데 명확하고 실수가 줄어들어 좋았다.&lt;/p&gt;
 
-&lt;hr /&gt;
-
 &lt;h2 id=&quot;db&quot;&gt;db&lt;/h2&gt;
 
 &lt;p&gt;올해는 유독 database 관련 작업들이 많았다.&lt;/p&gt;
 
-&lt;h4 id=&quot;1-db-통합&quot;&gt;1. db 통합&lt;/h4&gt;
+&lt;h3 id=&quot;1-db-통합&quot;&gt;1. db 통합&lt;/h3&gt;
 
 &lt;p&gt;한 모듈은 특정 entity를 두 db에 저장하고 있었다.&lt;br /&gt;
 여러 database를 사용할 수 있고 db를 옮기거나 추가하기 좋은 확장성을 갖는 interface 구조를 설계하는게 굉장히 중요하다는 것에는 동의하나, &lt;strong&gt;의미 없이 db를 두 벌 사용하는 경우는 피하는게 좋다&lt;/strong&gt;.&lt;br /&gt;
@@ -8544,23 +8530,17 @@ one time job으로 설계된 batch가 아니라 life cycle을 같이하는 batch
 두 db를 쓰는건 interface가 잘 나뉘어 있어도 개발(특히 db와 연관된 batch)에 굉장한 부담이 되었다.&lt;br /&gt;
 db 통합은 간단하진 않지만 이걸로 오는 &lt;strong&gt;개발/코드리뷰/테스트작성의 효율&lt;/strong&gt;은 굉장히 컸다.&lt;/p&gt;
 
-&lt;h4 id=&quot;2-dynamo-db-table-통합&quot;&gt;2. dynamo db table 통합&lt;/h4&gt;
+&lt;h3 id=&quot;2-dynamo-db-table-통합&quot;&gt;2. dynamo db table 통합&lt;/h3&gt;
 
 &lt;p&gt;nosql인 dynamodb를 mysql처럼 테이블을 종류별로 나눠 사용하던 것을 통합했다.&lt;br /&gt;
 예를들면 page main table과 page meta table이 있던걸 합치는 작업인데, 이 또한 &lt;strong&gt;개발/코드리뷰/테스트작성에 굉장한 효율&lt;/strong&gt;을 가져왔다.&lt;br /&gt;
 특히 table 통합 이후에 &lt;strong&gt;elpased time이 절반으로 줄었다&lt;/strong&gt;. 서비스 응답 시간에서 가장 중요한건 DB라는 말이 생각난다.&lt;/p&gt;
 
-&lt;h4 id=&quot;3-dynamodb의-blob-limit-문제&quot;&gt;3. dynamodb의 blob limit 문제&lt;/h4&gt;
+&lt;h3 id=&quot;3-dynamodb의-blob-limit-문제&quot;&gt;3. dynamodb의 blob limit 문제&lt;/h3&gt;
 
 &lt;p&gt;dynamodb에 대해 좀 더 이해하는 시간이 되었다.&lt;br /&gt;
 LSI를 만들 때는 조심해야 한다.&lt;br /&gt;
-이 내용은 지난번에 정리한 &lt;a href=&quot;/docs/aws/DynamoSizeLimitException&quot;&gt;DynamoSizeLimitException&lt;/a&gt;를 참고하면 좋겠다.&lt;/p&gt;
-
-&lt;h4 id=&quot;4-dynamo-db-query&quot;&gt;4. dynamo db query&lt;/h4&gt;
-
-&lt;p&gt;우리 팀에 db query에 탁월한 능력을 가진 분이 있다.&lt;br /&gt;
-nosql을 major로 써서 query에 약했는데, 통계 작업을 하면서 query의 힘을 다시 깨닫는다.&lt;br /&gt;
-공부가 필요할 것 같다.&lt;/p&gt;
+이 내용은 지난번에 정리한 &lt;a href=&quot;/docs/aws/dynamo/DynamoSizeLimitException&quot;&gt;DynamoSizeLimitException&lt;/a&gt;를 참고하면 좋겠다.&lt;/p&gt;
 
 &lt;hr /&gt;
 

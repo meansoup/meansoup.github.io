@@ -415,7 +415,7 @@
   
   
   <url>
-    <loc>https://backendbrew.com/docs/aws/DynamoSizeLimitException</loc>
+    <loc>https://backendbrew.com/docs/aws/dynamo/DynamoSizeLimitException</loc>
     
     <lastmod>2021-03-08</lastmod>
     
@@ -723,7 +723,7 @@
   <url>
     <loc>https://backendbrew.com/docs/retrospect/2021</loc>
     
-    <lastmod>2021-01-26</lastmod>
+    <lastmod>2022-01-26</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
