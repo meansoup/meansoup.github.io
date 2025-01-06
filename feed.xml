@@ -5,7 +5,7 @@
     <description>backend tech, log</description>
     <link>https://backendbrew.com/</link>
     <atom:link href="https://backendbrew.com/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2024-12-30T14:36:51+00:00</updated>
+    <updated>2025-01-06T14:22:13+00:00</updated>
     <id>https://backendbrew.com</id>
     <author>
       <name></name>
@@ -19318,6 +19318,208 @@ It becomes even more cumbersome when you want to review multiple data points and
         <pubDate></pubDate>
         <link>https://backendbrew.com/docs/tools/site/epoch</link>
         <guid isPermaLink="true">https://backendbrew.com/docs/tools/site/epoch</guid>
+      </item>
+    
+      <item>
+        <title>ZGC란? ZGC 이해하기</title>
+        
+          <description>&lt;blockquote class=&quot;note-title&quot;&gt;
+  &lt;p&gt;Java GC Type&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;/docs/java/gc/serial_gc&quot; class=&quot;btn&quot;&gt;Serial GC&lt;/a&gt;
+&lt;a href=&quot;/docs/java/gc/parallel_gc&quot; class=&quot;btn&quot;&gt;Parallel GC&lt;/a&gt;
+&lt;a href=&quot;/docs/java/gc/cms_gc&quot; class=&quot;btn&quot;&gt;CMS GC&lt;/a&gt;
+&lt;a href=&quot;/docs/java/gc/g1_gc&quot; class=&quot;btn&quot;&gt;G1 GC&lt;/a&gt;
+&lt;a href=&quot;/docs/java/gc/zgc&quot; class=&quot;btn btn-purple&quot;&gt;ZGC&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Z Garbage Collector(ZGC)는 빠르고 효율적인 GC다. &lt;br /&gt;
+ZGC는 메모리가 커지더라도 STW의 시간을 상수 값으로 가져가는 것을 목표로 설계되었다. 설계 철학에 맞게 GC 과정 중 1ms 이상의 STW는 없다고 한다. (문서마다 수 ms 라고 표현하기도 함)&lt;br /&gt;
+그래서 빠른 반응이 중요한 프로그램에 적합하다. ZGC는 작은 메모리(몇백 MB)부터 아주 큰 메모리(16TB)까지 잘 작동하지만, 큰 메모리에서 사용이 권장된다.&lt;br /&gt;
+ZGC는 JDK 11에서 experimental로 도입되었고, JDK 15에서 정식 기능으로 채택되고 JDK 21에서 개선됐다.&lt;/p&gt;
+
+&lt;h2 id=&quot;zgc-사용법&quot;&gt;ZGC 사용법&lt;/h2&gt;
+
+&lt;p&gt;ZGC는 application이 실행되는 동안 동시에 GC를 처리한다. 때문에 반응 속도에 미치는 영향을 최소화할 수 있다.&lt;br /&gt;
+web application 같은 경우, 동시에 많은 요청을 처리해야 하기 때문에 ZGC의 빠른 반응과 확장성이 유리하다.&lt;br /&gt;
+하지만 너무 작은 메모리(8MB 이하)에서는 사용하지 않는 것이 좋다.&lt;/p&gt;
+
+&lt;h3 id=&quot;사용해-보기&quot;&gt;사용해 보기&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;기본적으로 G1 GC를 사용한다.
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Throughput&lt;/strong&gt;가 부족하다면 → Parallel GC로 전환.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;STW&lt;/strong&gt;가 너무 길다면 → ZGC로 전환.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;zgc-cycle&quot;&gt;ZGC cycle&lt;/h2&gt;
+
+&lt;p&gt;ZGC는 몇 가지 STW을 가진다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Pause Mark Start&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Pause Mark End&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Pause Relocate Start&lt;/code&gt; 같은 작업이 있다.&lt;br /&gt;
+이 STW는 1밀리초 이하로 매우 짧으며, 가비지 컬렉션 과정에서 데이터의 정확성과 일관성을 유지하기 위해 필요하다.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;STW&lt;/th&gt;
+      &lt;th&gt;목적&lt;/th&gt;
+      &lt;th&gt;이유&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Pause Mark Start&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;시작 지점(root references) 기록&lt;/td&gt;
+      &lt;td&gt;마킹 시작 전에 일관성을 보장하기 위해&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Pause Mark End&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;마킹 완료 및 참조 처리&lt;/td&gt;
+      &lt;td&gt;모든 살아 있는 객체를 확인하기 위해&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Pause Relocate Start&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;객체 이동 준비&lt;/td&gt;
+      &lt;td&gt;이동 전 일관성을 유지하기 위해&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/post/java/gc/zgc_cycle.png&quot; alt=&quot;zgc_cycle&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;colored-pointers&quot;&gt;Colored Pointers&lt;/h2&gt;
+
+&lt;p&gt;ZGC는 포인터에 추가 정보를 넣어 객체를 추적한다. 이 정보를 사용하면 application을 멈추지 않고 객체를 관리할 수 있다.&lt;br /&gt;
+객체가 &lt;strong&gt;살아있는지&lt;/strong&gt;, &lt;strong&gt;이동했는지&lt;/strong&gt;를 이 포인터를 통해 확인할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/post/java/gc/zgc_colored_pointer.png&quot; alt=&quot;zgc_colored_pointer&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;첫 16비트&lt;/strong&gt;: 예약 공간&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;마지막 44비트&lt;/strong&gt;: 객체 주소&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;4비트 정보&lt;/strong&gt;
+    &lt;ol&gt;
+      &lt;li&gt;&lt;strong&gt;마크 비트(Mark Bits)&lt;/strong&gt;: 객체가 살아 있는지 표시&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;리맵 비트(Remapped Bit)&lt;/strong&gt;: 객체가 이동했는지 표시&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;최종화 비트(Finalizable Bit)&lt;/strong&gt;: 최종 처리만 필요한 객체인지 표시&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;heap-multi-mapping&quot;&gt;Heap Multi-Mapping&lt;/h3&gt;
+
+&lt;p&gt;ZGC는 STW를 줄이기 위해 application이 실행 중일 때 객체를 heap 내에서 다른 물리적 위치로 이동시킨다.&lt;br /&gt;
+객체가 이동한 위치로 접근하기 위한 방법으로 Heap Multi-Mapping을 사용한다.&lt;/p&gt;
+
+&lt;p&gt;multi mapping을 통해 객체의 물리적 위치를 가상 메모리에서 포인터의 각 color에 해당하는 view로 매핑한다.&lt;br /&gt;
+이 매핑 방식 덕분에 load barrier가 마지막 동기화 이후 이동된 객체를 찾을 수 있다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/post/java/gc/zgc_heap_multi_mapping.png&quot; alt=&quot;zgc_heap_multi_mapping&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;load-barriers&quot;&gt;Load Barriers&lt;/h2&gt;
+
+&lt;h3 id=&quot;zgc에서-load-barrier가-필요한-이유&quot;&gt;ZGC에서 Load Barrier가 필요한 이유&lt;/h3&gt;
+
+&lt;p&gt;ZGC는 GC 중에(압축 단계에서) 객체를 메모리 내에서 &lt;strong&gt;이동&lt;/strong&gt;할 수 있다. 객체가 이동되면, 해당 객체를 참조하는 모든 참조를 새로운 위치로 업데이트해야 한다.&lt;br /&gt;
+ZGC는 대부분의 작업을 application과 &lt;strong&gt;동시에&lt;/strong&gt; 수행하기 때문에, &lt;strong&gt;Load Barrier&lt;/strong&gt;는 application이 오래된 참조(잘못된 메모리 위치)를 사용하는 것을 방지한다.&lt;/p&gt;
+
+&lt;h3 id=&quot;load-barrier는-어떻게-작동하는지&quot;&gt;Load Barrier는 어떻게 작동하는지?&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;프로그램이 객체에 대한 참조를 불러올 때&lt;/strong&gt;(예: 필드 접근, 배열 접근 등), Load Barrier가 이 접근을 가로챈다.&lt;/li&gt;
+  &lt;li&gt;해당 객체가 &lt;strong&gt;이동되었는지&lt;/strong&gt; 확인한다. (즉, &lt;strong&gt;relocation set&lt;/strong&gt; 에 속하는지 확인).&lt;/li&gt;
+  &lt;li&gt;객체가 이동된 경우, Load Barriers는 참조를 새 위치로 업데이트한다.&lt;/li&gt;
+  &lt;li&gt;이 과정은 application이 실행 중일 때 &lt;strong&gt;백그라운드에서 진행&lt;/strong&gt;되며, ZGC가 객체를 이동하더라도 프로그램은 항상 올바른 위치의 객체에 접근할 수 있다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;zgc-load-barrier의-장점&quot;&gt;ZGC Load Barrier의 장점&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;application STW 없음&lt;/strong&gt;: Load Barrier 덕분에 ZGC는 객체를 이동하거나 메모리를 관리하면서도 application을 멈추지 않는다.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;일관성&lt;/strong&gt;: Load Barrier는 프로그램이 항상 올바른 메모리 위치에서 객체를 읽도록 보장한다.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;동시성&lt;/strong&gt;: ZGC는 객체를 이동하는 작업을 프로그램 실행과 동시에 안전하게 처리할 수 있어 GC로 인한 방해를 최소화한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;regions&quot;&gt;Regions&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;zgc_region.png&quot; alt=&quot;zgc_region&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ZGC는 G1 GC처럼 메모리를 영역으로 나눠서 관리한다. 하지만 ZGC의 영역은 &lt;strong&gt;ZPages&lt;/strong&gt;로 정의되며, 더 유연한 구조를 갖는다.  &lt;br /&gt;
+작은 영역, 중간 영역, 큰 영역으로 나뉘며, 프로그램에서 필요한 메모리 크기에 따라 활성화된 영역의 개수가 동적으로 조절된다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;작은 영역&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;크기: 2MB&lt;/li&gt;
+  &lt;li&gt;크기가 256KB 이하(작은 영역의 1/8 크기)인 객체는 작은 영역에 저장된다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;중간 영역&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;크기: 32MB(힙 크기가 1GB 이상일 때)&lt;/li&gt;
+  &lt;li&gt;크기가 중간 영역 크기의 1/8 이하인 객체가 여기에 저장된다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;큰 영역&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;크기: 객체 크기에 맞춰 2MB 단위로 조정&lt;/li&gt;
+  &lt;li&gt;크기가 13MB인 객체는 14MB 영역에 저장된다.&lt;/li&gt;
+  &lt;li&gt;중간 영역에 들어갈 수 없을 만큼 큰 객체는 큰 영역에 저장된다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;g1-gc와-비교&quot;&gt;G1 GC와 비교&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;특징&lt;/th&gt;
+      &lt;th&gt;G1 GC&lt;/th&gt;
+      &lt;th&gt;ZGC&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;목표&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;짧은 멈춤 + 높은 처리 속도&lt;/td&gt;
+      &lt;td&gt;초저지연&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;힙 크기&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;중간 ~ 큰 메모리 (최대 32GB 이상)&lt;/td&gt;
+      &lt;td&gt;아주 큰 메모리 (최대 16TB)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;멈춤 시간&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;예측 가능하지만 힙 크기에 비례해 증가&lt;/td&gt;
+      &lt;td&gt;항상 짧음 (10ms 미만)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;압축(compaction)&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;멈춤 시간 중 처리하거나 단계적으로 진행&lt;/td&gt;
+      &lt;td&gt;완전히 동시 처리&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;처리 속도&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;높음&lt;/td&gt;
+      &lt;td&gt;약간 낮음&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;reference&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;https://wiki.openjdk.org/display/zgc/Main&lt;/li&gt;
+  &lt;li&gt;https://dev.java/learn/jvm/tool/garbage-collection/zgc-overview/&lt;/li&gt;
+  &lt;li&gt;https://dev.java/learn/jvm/tool/garbage-collection/zgc-deepdive/&lt;/li&gt;
+  &lt;li&gt;https://cr.openjdk.org/~pliden/slides/ZGC-PLMeetup-2019.pdf&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        
+        <pubDate></pubDate>
+        <link>https://backendbrew.com/docs/java/gc/zgc</link>
+        <guid isPermaLink="true">https://backendbrew.com/docs/java/gc/zgc</guid>
       </item>
     
       <item>
