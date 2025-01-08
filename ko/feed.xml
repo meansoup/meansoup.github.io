@@ -5,7 +5,7 @@
     <description>backend tech, log</description>
     <link>https://backendbrew.com/</link>
     <atom:link href="https://backendbrew.com/ko/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2025-01-06T14:22:26+00:00</updated>
+    <updated>2025-01-08T13:21:39+00:00</updated>
     <id>https://backendbrew.com</id>
     <author>
       <name></name>
@@ -19458,7 +19458,7 @@ ZGC는 대부분의 작업을 application과 &lt;strong&gt;동시에&lt;/strong&
 
 &lt;h2 id=&quot;regions&quot;&gt;Regions&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;zgc_region.png&quot; alt=&quot;zgc_region&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/post/java/gc/zgc_region.png&quot; alt=&quot;zgc_region&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;ZGC는 G1 GC처럼 메모리를 영역으로 나눠서 관리한다. 하지만 ZGC의 영역은 &lt;strong&gt;ZPages&lt;/strong&gt;로 정의되며, 더 유연한 구조를 갖는다.  &lt;br /&gt;
 작은 영역, 중간 영역, 큰 영역으로 나뉘며, 프로그램에서 필요한 메모리 크기에 따라 활성화된 영역의 개수가 동적으로 조절된다.&lt;/p&gt;
