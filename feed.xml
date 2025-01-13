@@ -3,10 +3,10 @@
   <channel>
     <title>Backend Brew</title>
     <description>backend tech, log</description>
-    <link>https://backendbrew.com/</link>
-    <atom:link href="https://backendbrew.com/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2025-01-13T16:00:00+00:00</updated>
-    <id>https://backendbrew.com</id>
+    <link>https://meansoup.github.io/</link>
+    <atom:link href="https://meansoup.github.io/rfeed.xml" rel="self" type="application/rss+xml" />
+    <updated>2025-01-13T16:06:33+00:00</updated>
+    <id>https://meansoup.github.io</id>
     <author>
       <name></name>
     </author>
@@ -423,8 +423,8 @@ exponent는 bias를 빼줌으로써 계산한다.&lt;/p&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/computer/floating-point</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/computer/floating-point</guid>
+        <link>https://meansoup.github.io/docs/computer/floating-point</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/computer/floating-point</guid>
       </item>
     
       <item>
@@ -476,8 +476,8 @@ exponent는 bias를 빼줌으로써 계산한다.&lt;/p&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/99.etc/kivy/2019-04-16-kivy_book_01.html</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/99.etc/kivy/2019-04-16-kivy_book_01.html</guid>
+        <link>https://meansoup.github.io/docs/99.etc/kivy/2019-04-16-kivy_book_01.html</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/99.etc/kivy/2019-04-16-kivy_book_01.html</guid>
       </item>
     
       <item>
@@ -608,8 +608,8 @@ canvas.before에는 별도의 Push/PopMatrix가 있어 여기서 구현하면 ca
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/kivy/app-game-book-2</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/kivy/app-game-book-2</guid>
+        <link>https://meansoup.github.io/docs/kivy/app-game-book-2</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/kivy/app-game-book-2</guid>
       </item>
     
       <item>
@@ -801,8 +801,8 @@ StringProperty&lt;/p&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/kivy/app-game-book-3</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/kivy/app-game-book-3</guid>
+        <link>https://meansoup.github.io/docs/kivy/app-game-book-3</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/kivy/app-game-book-3</guid>
       </item>
     
       <item>
@@ -951,8 +951,8 @@ ScreenManager는 항상 &lt;code class=&quot;language-plaintext highlighter-roug
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/kivy/app-game-book-4</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/kivy/app-game-book-4</guid>
+        <link>https://meansoup.github.io/docs/kivy/app-game-book-4</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/kivy/app-game-book-4</guid>
       </item>
     
       <item>
@@ -1025,8 +1025,8 @@ mobile device에서는 keyboard를 사용하지 않아야 할 수도 있다.&lt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/kivy/app-game-book-5</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/kivy/app-game-book-5</guid>
+        <link>https://meansoup.github.io/docs/kivy/app-game-book-5</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/kivy/app-game-book-5</guid>
       </item>
     
       <item>
@@ -1062,8 +1062,8 @@ mobile device에서는 keyboard를 사용하지 않아야 할 수도 있다.&lt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/kivy/app-game-book-6</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/kivy/app-game-book-6</guid>
+        <link>https://meansoup.github.io/docs/kivy/app-game-book-6</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/kivy/app-game-book-6</guid>
       </item>
     
       <item>
@@ -1120,8 +1120,8 @@ action bar를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/kivy/kivy-etc</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/kivy/kivy-etc</guid>
+        <link>https://meansoup.github.io/docs/kivy/kivy-etc</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/kivy/kivy-etc</guid>
       </item>
     
       <item>
@@ -1192,8 +1192,8 @@ TDD란 프로그래밍 중 내린 결정과 그 결정에 대한 비드백 사�
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/extreme-programming/tdd/tdd-book-01</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/extreme-programming/tdd/tdd-book-01</guid>
+        <link>https://meansoup.github.io/docs/extreme-programming/tdd/tdd-book-01</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/extreme-programming/tdd/tdd-book-01</guid>
       </item>
     
       <item>
@@ -1369,8 +1369,8 @@ TDD에서 중요한 것은 코드의 중복을 제거함으로써 의존성을 �
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/extreme-programming/tdd/tdd-book-02</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/extreme-programming/tdd/tdd-book-02</guid>
+        <link>https://meansoup.github.io/docs/extreme-programming/tdd/tdd-book-02</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/extreme-programming/tdd/tdd-book-02</guid>
       </item>
     
       <item>
@@ -1443,8 +1443,8 @@ TDD에서 중요한 것은 코드의 중복을 제거함으로써 의존성을 �
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/algorithm/language/cpp/token-passing-operator</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/algorithm/language/cpp/token-passing-operator</guid>
+        <link>https://meansoup.github.io/docs/algorithm/language/cpp/token-passing-operator</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/algorithm/language/cpp/token-passing-operator</guid>
       </item>
     
       <item>
@@ -1776,8 +1776,8 @@ currency의 판단에 대한 test를 작성하고 싶지만, &lt;code class=&quo
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/extreme-programming/tdd/tdd-book-03</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/extreme-programming/tdd/tdd-book-03</guid>
+        <link>https://meansoup.github.io/docs/extreme-programming/tdd/tdd-book-03</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/extreme-programming/tdd/tdd-book-03</guid>
       </item>
     
       <item>
@@ -2119,8 +2119,8 @@ currency의 판단에 대한 test를 작성하고 싶지만, &lt;code class=&quo
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/extreme-programming/tdd/tdd-book-04</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/extreme-programming/tdd/tdd-book-04</guid>
+        <link>https://meansoup.github.io/docs/extreme-programming/tdd/tdd-book-04</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/extreme-programming/tdd/tdd-book-04</guid>
       </item>
     
       <item>
@@ -2227,8 +2227,8 @@ currency의 판단에 대한 test를 작성하고 싶지만, &lt;code class=&quo
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/extreme-programming/tdd/tdd-book-05</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/extreme-programming/tdd/tdd-book-05</guid>
+        <link>https://meansoup.github.io/docs/extreme-programming/tdd/tdd-book-05</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/extreme-programming/tdd/tdd-book-05</guid>
       </item>
     
       <item>
@@ -2379,8 +2379,8 @@ def run(self, result):
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/extreme-programming/tdd/tdd-book-06</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/extreme-programming/tdd/tdd-book-06</guid>
+        <link>https://meansoup.github.io/docs/extreme-programming/tdd/tdd-book-06</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/extreme-programming/tdd/tdd-book-06</guid>
       </item>
     
       <item>
@@ -2692,8 +2692,8 @@ TDD에서는 예가 두 개 이상일때에만 추상화를 하는 방식으로 
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/extreme-programming/tdd/tdd-book-07</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/extreme-programming/tdd/tdd-book-07</guid>
+        <link>https://meansoup.github.io/docs/extreme-programming/tdd/tdd-book-07</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/extreme-programming/tdd/tdd-book-07</guid>
       </item>
     
       <item>
@@ -2843,8 +2843,8 @@ android phone의 dump 로그와 유사.&lt;/p&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/extreme-programming/tdd/tdd-book-08</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/extreme-programming/tdd/tdd-book-08</guid>
+        <link>https://meansoup.github.io/docs/extreme-programming/tdd/tdd-book-08</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/extreme-programming/tdd/tdd-book-08</guid>
       </item>
     
       <item>
@@ -3323,8 +3323,8 @@ shared에서 서로 가리켜서 삭제되지 않는 경우에 대한 문제를 
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/algorithm/language/cpp/cpp11</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/algorithm/language/cpp/cpp11</guid>
+        <link>https://meansoup.github.io/docs/algorithm/language/cpp/cpp11</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/algorithm/language/cpp/cpp11</guid>
       </item>
     
       <item>
@@ -3429,8 +3429,8 @@ reference list의 주소를 그대로 두면서 copy를 진행하는 방법이 �
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/algorithm/language/python/python-copy</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/algorithm/language/python/python-copy</guid>
+        <link>https://meansoup.github.io/docs/algorithm/language/python/python-copy</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/algorithm/language/python/python-copy</guid>
       </item>
     
       <item>
@@ -3487,8 +3487,8 @@ reference list의 주소를 그대로 두면서 copy를 진행하는 방법이 �
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/algorithm/language/python/time-complexity</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/algorithm/language/python/time-complexity</guid>
+        <link>https://meansoup.github.io/docs/algorithm/language/python/time-complexity</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/algorithm/language/python/time-complexity</guid>
       </item>
     
       <item>
@@ -3732,8 +3732,8 @@ boundary에서 명시한 permission 중 plicy가 추가된 permission만 효력�
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/aws/iam</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/aws/iam</guid>
+        <link>https://meansoup.github.io/docs/aws/iam</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/aws/iam</guid>
       </item>
     
       <item>
@@ -3870,8 +3870,8 @@ AZ는 하나 이상의 DC로 이루어진다.&lt;br /&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/aws/terms</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/aws/terms</guid>
+        <link>https://meansoup.github.io/docs/aws/terms</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/aws/terms</guid>
       </item>
     
       <item>
@@ -3921,8 +3921,8 @@ AZ는 하나 이상의 DC로 이루어진다.&lt;br /&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/aws/basic-service</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/aws/basic-service</guid>
+        <link>https://meansoup.github.io/docs/aws/basic-service</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/aws/basic-service</guid>
       </item>
     
       <item>
@@ -4023,8 +4023,8 @@ SNS로 메세지를 받으면 SNS는 썸네일 생성/모바일용 이미지 생
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/aws/gw-sqs-sns</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/aws/gw-sqs-sns</guid>
+        <link>https://meansoup.github.io/docs/aws/gw-sqs-sns</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/aws/gw-sqs-sns</guid>
       </item>
     
       <item>
@@ -4081,8 +4081,8 @@ AWS에서 컨테이너 관련하여 서비스를 제공한다.&lt;/p&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/aws/container</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/aws/container</guid>
+        <link>https://meansoup.github.io/docs/aws/container</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/aws/container</guid>
       </item>
     
       <item>
@@ -4166,8 +4166,8 @@ Redis: 다양한 데이터 구조 지원, 지속성, 원자조작, 구독 메시
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/aws/elasticache</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/aws/elasticache</guid>
+        <link>https://meansoup.github.io/docs/aws/elasticache</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/aws/elasticache</guid>
       </item>
     
       <item>
@@ -4272,8 +4272,8 @@ try/catch/finally를 실행하려는 경우&lt;br /&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/aws/lambda</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/aws/lambda</guid>
+        <link>https://meansoup.github.io/docs/aws/lambda</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/aws/lambda</guid>
       </item>
     
       <item>
@@ -4332,8 +4332,8 @@ IAM을 인증할때는 액세스키/보안키를 사용하지 않고 Security To
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/aws/security-deploy</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/aws/security-deploy</guid>
+        <link>https://meansoup.github.io/docs/aws/security-deploy</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/aws/security-deploy</guid>
       </item>
     
       <item>
@@ -4500,8 +4500,8 @@ galloping mode는 \(2^k\) 번씩 점프하며 merge sort의 속도를 증가시�
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/11.Algorithm/2020-07-13-timsort.html</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/11.Algorithm/2020-07-13-timsort.html</guid>
+        <link>https://meansoup.github.io/docs/11.Algorithm/2020-07-13-timsort.html</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/11.Algorithm/2020-07-13-timsort.html</guid>
       </item>
     
       <item>
@@ -4683,8 +4683,8 @@ pair work이나 code review, 회고 등의 개발 문화에 대해서도 많이 
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/retrospect/2020</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/retrospect/2020</guid>
+        <link>https://meansoup.github.io/docs/retrospect/2020</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/retrospect/2020</guid>
       </item>
     
       <item>
@@ -4763,8 +4763,8 @@ functional의 장점은 아래와 같다.&lt;/li&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/kotlin/kotlin-in-action/1</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/kotlin/kotlin-in-action/1</guid>
+        <link>https://meansoup.github.io/docs/kotlin/kotlin-in-action/1</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/kotlin/kotlin-in-action/1</guid>
       </item>
     
       <item>
@@ -4935,8 +4935,8 @@ try, catch, finally도 java와 유사하다.&lt;/p&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/kotlin/kotlin-in-action/2</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/kotlin/kotlin-in-action/2</guid>
+        <link>https://meansoup.github.io/docs/kotlin/kotlin-in-action/2</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/kotlin/kotlin-in-action/2</guid>
       </item>
     
       <item>
@@ -5097,8 +5097,8 @@ calls, you can use a more specific type as a receiver type, not just a class&lt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/kotlin/kotlin-in-action/3</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/kotlin/kotlin-in-action/3</guid>
+        <link>https://meansoup.github.io/docs/kotlin/kotlin-in-action/3</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/kotlin/kotlin-in-action/3</guid>
       </item>
     
       <item>
@@ -5410,8 +5410,8 @@ companion에 정의된 property나 method는 companion이 정의된 class 이름
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/kotlin/kotlin-in-action/4</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/kotlin/kotlin-in-action/4</guid>
+        <link>https://meansoup.github.io/docs/kotlin/kotlin-in-action/4</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/kotlin/kotlin-in-action/4</guid>
       </item>
     
       <item>
@@ -5600,8 +5600,8 @@ If you’re targeting Java 8, streams give you one big feature that isn’t curr
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/kotlin/kotlin-in-action/5</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/kotlin/kotlin-in-action/5</guid>
+        <link>https://meansoup.github.io/docs/kotlin/kotlin-in-action/5</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/kotlin/kotlin-in-action/5</guid>
       </item>
     
       <item>
@@ -5645,8 +5645,8 @@ DynamoDB에 &lt;strong&gt;LSI가 있으면 size limit 계산이 달라진다.&lt
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/aws/dynamo/DynamoSizeLimitException</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/aws/dynamo/DynamoSizeLimitException</guid>
+        <link>https://meansoup.github.io/docs/aws/dynamo/DynamoSizeLimitException</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/aws/dynamo/DynamoSizeLimitException</guid>
       </item>
     
       <item>
@@ -5808,8 +5808,8 @@ Java와 코드가 혼용될 때, Java의 type들이 kotlin에서 platform type�
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/kotlin/kotlin-in-action/6</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/kotlin/kotlin-in-action/6</guid>
+        <link>https://meansoup.github.io/docs/kotlin/kotlin-in-action/6</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/kotlin/kotlin-in-action/6</guid>
       </item>
     
       <item>
@@ -5953,8 +5953,8 @@ Java의 API들이 Array를 사용하는 경우가 있어 써야할 수 있다.&l
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/kotlin/kotlin-in-action/6-2</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/kotlin/kotlin-in-action/6-2</guid>
+        <link>https://meansoup.github.io/docs/kotlin/kotlin-in-action/6-2</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/kotlin/kotlin-in-action/6-2</guid>
       </item>
     
       <item>
@@ -5986,8 +5986,8 @@ Java의 API들이 Array를 사용하는 경우가 있어 써야할 수 있다.&l
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/vue/config</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/vue/config</guid>
+        <link>https://meansoup.github.io/docs/vue/config</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/vue/config</guid>
       </item>
     
       <item>
@@ -6081,8 +6081,8 @@ For this reason, screen is commonly used on Linux servers for batch tasks, long-
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/tools/linux-commands/screen</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/tools/linux-commands/screen</guid>
+        <link>https://meansoup.github.io/docs/tools/linux-commands/screen</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/tools/linux-commands/screen</guid>
       </item>
     
       <item>
@@ -6192,8 +6192,8 @@ targetfile을 명시해주면, &lt;code class=&quot;language-plaintext highlight
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/dev-tools/linux-commands/split</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/dev-tools/linux-commands/split</guid>
+        <link>https://meansoup.github.io/docs/dev-tools/linux-commands/split</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/dev-tools/linux-commands/split</guid>
       </item>
     
       <item>
@@ -6301,8 +6301,8 @@ It is frequently used for file parsing, data extraction, and in command pipes.&l
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/tools/linux-commands/cut</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/tools/linux-commands/cut</guid>
+        <link>https://meansoup.github.io/docs/tools/linux-commands/cut</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/tools/linux-commands/cut</guid>
       </item>
     
       <item>
@@ -6452,8 +6452,8 @@ surefire에서 exclude하면 작성된 &lt;strong&gt;test를 제외&lt;/strong&g
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/test/jacoco</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/test/jacoco</guid>
+        <link>https://meansoup.github.io/docs/test/jacoco</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/test/jacoco</guid>
       </item>
     
       <item>
@@ -6884,8 +6884,8 @@ for (dayOff in daysOff) { println(dayOff) }&lt;/p&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/kotlin/kotlin-in-action/7</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/kotlin/kotlin-in-action/7</guid>
+        <link>https://meansoup.github.io/docs/kotlin/kotlin-in-action/7</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/kotlin/kotlin-in-action/7</guid>
       </item>
     
       <item>
@@ -7082,8 +7082,8 @@ compiler는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;K
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/kotlin/kotlin-in-action/7-2</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/kotlin/kotlin-in-action/7-2</guid>
+        <link>https://meansoup.github.io/docs/kotlin/kotlin-in-action/7-2</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/kotlin/kotlin-in-action/7-2</guid>
       </item>
     
       <item>
@@ -7150,8 +7150,8 @@ exception이 발생하면 full stack trace를 출력하고 이걸 저장했다�
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/java/issue/stacktrace</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/java/issue/stacktrace</guid>
+        <link>https://meansoup.github.io/docs/java/issue/stacktrace</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/java/issue/stacktrace</guid>
       </item>
     
       <item>
@@ -7186,8 +7186,8 @@ exception이 발생하면 full stack trace를 출력하고 이걸 저장했다�
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/error-bug/kotlin/cannot-be-invoked-as-a-function</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/error-bug/kotlin/cannot-be-invoked-as-a-function</guid>
+        <link>https://meansoup.github.io/docs/error-bug/kotlin/cannot-be-invoked-as-a-function</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/error-bug/kotlin/cannot-be-invoked-as-a-function</guid>
       </item>
     
       <item>
@@ -7287,8 +7287,8 @@ exception이 발생하면 full stack trace를 출력하고 이걸 저장했다�
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/vue/component</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/vue/component</guid>
+        <link>https://meansoup.github.io/docs/vue/component</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/vue/component</guid>
       </item>
     
       <item>
@@ -7358,8 +7358,8 @@ component 구성이 완료되었다고 생각하고 코드를 일부만 작성�
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/vue/passing-props</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/vue/passing-props</guid>
+        <link>https://meansoup.github.io/docs/vue/passing-props</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/vue/passing-props</guid>
       </item>
     
       <item>
@@ -7421,8 +7421,8 @@ component 구성이 완료되었다고 생각하고 코드를 일부만 작성�
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/vue/emit-click</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/vue/emit-click</guid>
+        <link>https://meansoup.github.io/docs/vue/emit-click</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/vue/emit-click</guid>
       </item>
     
       <item>
@@ -7508,8 +7508,8 @@ springboot version을 2.6.7로 낮추면서 문제는 해결됐다.&lt;/p&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/error-bug/spring/graphql_execution_batched_Batched</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/error-bug/spring/graphql_execution_batched_Batched</guid>
+        <link>https://meansoup.github.io/docs/error-bug/spring/graphql_execution_batched_Batched</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/error-bug/spring/graphql_execution_batched_Batched</guid>
       </item>
     
       <item>
@@ -7749,8 +7749,8 @@ kotlin은 &lt;a href=&quot;https://blog.jetbrains.com/ko/kotlin/2020/10/the-dark
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/kotlin/kotlin-vs-java</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/kotlin/kotlin-vs-java</guid>
+        <link>https://meansoup.github.io/docs/kotlin/kotlin-vs-java</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/kotlin/kotlin-vs-java</guid>
       </item>
     
       <item>
@@ -7897,8 +7897,8 @@ RANDOM_PORT를 사용해서 embedded tomcat을 random port로 사용하도록 �
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/error-bug/spring/javax-websocket-server-ServerContainer-not-available</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/error-bug/spring/javax-websocket-server-ServerContainer-not-available</guid>
+        <link>https://meansoup.github.io/docs/error-bug/spring/javax-websocket-server-ServerContainer-not-available</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/error-bug/spring/javax-websocket-server-ServerContainer-not-available</guid>
       </item>
     
       <item>
@@ -7984,8 +7984,8 @@ base64Utils 를 사용하는 함수에 대한 테스트를 작성할 때, 인코
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/spring/static-method-vs-bean</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/spring/static-method-vs-bean</guid>
+        <link>https://meansoup.github.io/docs/spring/static-method-vs-bean</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/spring/static-method-vs-bean</guid>
       </item>
     
       <item>
@@ -8002,8 +8002,8 @@ srcipt의 src를 잘못 명시한 경우이다.&lt;/p&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/vue/unexpected-token</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/vue/unexpected-token</guid>
+        <link>https://meansoup.github.io/docs/vue/unexpected-token</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/vue/unexpected-token</guid>
       </item>
     
       <item>
@@ -8106,8 +8106,8 @@ json format의 data processing을 해주는 녀석이다.&lt;/p&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/dev-tools/linux-commands/jq</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/dev-tools/linux-commands/jq</guid>
+        <link>https://meansoup.github.io/docs/dev-tools/linux-commands/jq</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/dev-tools/linux-commands/jq</guid>
       </item>
     
       <item>
@@ -8177,8 +8177,8 @@ TCP handshake 등의 오버헤드를 줄이기 위해서 UDP로 고안되었다.
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/internet/dns</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/internet/dns</guid>
+        <link>https://meansoup.github.io/docs/internet/dns</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/internet/dns</guid>
       </item>
     
       <item>
@@ -8359,8 +8359,8 @@ EasyRandom은 github star 수도 가장 많았고, 이름 값 하는 프로젝�
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/java/library/easyrandom</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/java/library/easyrandom</guid>
+        <link>https://meansoup.github.io/docs/java/library/easyrandom</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/java/library/easyrandom</guid>
       </item>
     
       <item>
@@ -8437,8 +8437,8 @@ ObjectMother는 &lt;strong&gt;standard fixtures&lt;/strong&gt;를 만드는 것�
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/pattern/object-mother</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/pattern/object-mother</guid>
+        <link>https://meansoup.github.io/docs/pattern/object-mother</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/pattern/object-mother</guid>
       </item>
     
       <item>
@@ -8551,8 +8551,8 @@ LSI를 만들 때는 조심해야 한다.&lt;br /&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/retrospect/2021</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/retrospect/2021</guid>
+        <link>https://meansoup.github.io/docs/retrospect/2021</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/retrospect/2021</guid>
       </item>
     
       <item>
@@ -8642,8 +8642,8 @@ sitemap은 이미 gh-pages에서 정상동작 하고 있었고..&lt;/p&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/error-bug/kotlin/jekyll-cannot-load-such-file</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/error-bug/kotlin/jekyll-cannot-load-such-file</guid>
+        <link>https://meansoup.github.io/docs/error-bug/kotlin/jekyll-cannot-load-such-file</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/error-bug/kotlin/jekyll-cannot-load-such-file</guid>
       </item>
     
       <item>
@@ -8737,8 +8737,8 @@ ORMs를 생각할 때 JPA를 떠올리면 ORMs가 더 명확하게 그려진다.
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/db/concept/orms</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/db/concept/orms</guid>
+        <link>https://meansoup.github.io/docs/db/concept/orms</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/db/concept/orms</guid>
       </item>
     
       <item>
@@ -9008,8 +9008,8 @@ tmux has-session &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; &lt;span class
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/dev-tools/linux-commands/tmux</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/dev-tools/linux-commands/tmux</guid>
+        <link>https://meansoup.github.io/docs/dev-tools/linux-commands/tmux</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/dev-tools/linux-commands/tmux</guid>
       </item>
     
       <item>
@@ -9123,8 +9123,8 @@ tranaction이 종료되지 않은 상황에서 서로 변경사항을 확인할 
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/db/concept/acid</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/db/concept/acid</guid>
+        <link>https://meansoup.github.io/docs/db/concept/acid</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/db/concept/acid</guid>
       </item>
     
       <item>
@@ -9157,8 +9157,8 @@ curl을 입력하면 code를 작성해주는 프로젝트.&lt;br /&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/dev-tools/site/curl-to-code</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/dev-tools/site/curl-to-code</guid>
+        <link>https://meansoup.github.io/docs/dev-tools/site/curl-to-code</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/dev-tools/site/curl-to-code</guid>
       </item>
     
       <item>
@@ -9365,8 +9365,8 @@ client에서 변경사항이 생기면 endpoint를 새로 만들어야 하고, �
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/apis/graphql/what_is_graphql</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/apis/graphql/what_is_graphql</guid>
+        <link>https://meansoup.github.io/docs/apis/graphql/what_is_graphql</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/apis/graphql/what_is_graphql</guid>
       </item>
     
       <item>
@@ -9436,8 +9436,8 @@ tistory나 국내 서비스 블로그들은 알아서 이쁜 폰트들을 제공
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/blog/font</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/blog/font</guid>
+        <link>https://meansoup.github.io/docs/blog/font</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/blog/font</guid>
       </item>
     
       <item>
@@ -9703,8 +9703,8 @@ end
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/design/plantuml</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/design/plantuml</guid>
+        <link>https://meansoup.github.io/docs/design/plantuml</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/design/plantuml</guid>
       </item>
     
       <item>
@@ -9833,8 +9833,8 @@ bolt가 지원하지 않는 것들을 client에서 사용하려면 api spec을 �
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/automation/python-bot</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/automation/python-bot</guid>
+        <link>https://meansoup.github.io/docs/automation/python-bot</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/automation/python-bot</guid>
       </item>
     
       <item>
@@ -10007,8 +10007,8 @@ https://docs.microsoft.com/en-us/troubleshoot/windows-client/networking/tcpip-ad
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/internet/cidr</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/internet/cidr</guid>
+        <link>https://meansoup.github.io/docs/internet/cidr</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/internet/cidr</guid>
       </item>
     
       <item>
@@ -10270,8 +10270,8 @@ thread마다 사용하는 buffer가 정해져 있기 때문에 thread-safe를 �
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/java/gc/basic</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/java/gc/basic</guid>
+        <link>https://meansoup.github.io/docs/java/gc/basic</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/java/gc/basic</guid>
       </item>
     
       <item>
@@ -10369,8 +10369,8 @@ thread마다 사용하는 buffer가 정해져 있기 때문에 thread-safe를 �
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/java/gc/serial_gc</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/java/gc/serial_gc</guid>
+        <link>https://meansoup.github.io/docs/java/gc/serial_gc</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/java/gc/serial_gc</guid>
       </item>
     
       <item>
@@ -10533,8 +10533,8 @@ event를 어떻게 처리하는지는 subscriber(application service)의 몫이�
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/ddd/tactical/domain_events</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/ddd/tactical/domain_events</guid>
+        <link>https://meansoup.github.io/docs/ddd/tactical/domain_events</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/ddd/tactical/domain_events</guid>
       </item>
     
       <item>
@@ -10658,8 +10658,8 @@ default로 N개의 CPU일 때 collection에서 N개의 GC thread를 사용한다
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/java/gc/parallel_gc</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/java/gc/parallel_gc</guid>
+        <link>https://meansoup.github.io/docs/java/gc/parallel_gc</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/java/gc/parallel_gc</guid>
       </item>
     
       <item>
@@ -10788,8 +10788,8 @@ flush가 없다면 &lt;code class=&quot;language-plaintext highlighter-rouge&quo
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/spring/jpa/crud-vs-jpa</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/spring/jpa/crud-vs-jpa</guid>
+        <link>https://meansoup.github.io/docs/spring/jpa/crud-vs-jpa</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/spring/jpa/crud-vs-jpa</guid>
       </item>
     
       <item>
@@ -10873,8 +10873,8 @@ Spring에서 어떤 connection pool을 쓰는지 확인하는 방법을 알고 �
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/spring/jpa/find-connection-pool</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/spring/jpa/find-connection-pool</guid>
+        <link>https://meansoup.github.io/docs/spring/jpa/find-connection-pool</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/spring/jpa/find-connection-pool</guid>
       </item>
     
       <item>
@@ -10925,8 +10925,8 @@ spring.datasource.hikari.minimum-idle=10 # 최소 pool size
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/spring/jpa/set-connection-pool</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/spring/jpa/set-connection-pool</guid>
+        <link>https://meansoup.github.io/docs/spring/jpa/set-connection-pool</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/spring/jpa/set-connection-pool</guid>
       </item>
     
       <item>
@@ -11158,8 +11158,8 @@ VO의 함수는 모든 경우에서 불변성이 보장되어야 한다.&lt;br /
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/ddd/tactical/vo</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/ddd/tactical/vo</guid>
+        <link>https://meansoup.github.io/docs/ddd/tactical/vo</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/ddd/tactical/vo</guid>
       </item>
     
       <item>
@@ -11362,8 +11362,8 @@ domain service에서 service라는 단어가 들어있다고해서 대단위이�
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/ddd/tactical/domain-service</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/ddd/tactical/domain-service</guid>
+        <link>https://meansoup.github.io/docs/ddd/tactical/domain-service</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/ddd/tactical/domain-service</guid>
       </item>
     
       <item>
@@ -11477,8 +11477,8 @@ CMS GC는 tenured가 default 75%가 차면 도는데 값을 지정할 수 있다
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/java/gc/cms_gc</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/java/gc/cms_gc</guid>
+        <link>https://meansoup.github.io/docs/java/gc/cms_gc</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/java/gc/cms_gc</guid>
       </item>
     
       <item>
@@ -11557,8 +11557,8 @@ CMS GC는 tenured가 default 75%가 차면 도는데 값을 지정할 수 있다
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/dev-tools/intellij/live-template</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/dev-tools/intellij/live-template</guid>
+        <link>https://meansoup.github.io/docs/dev-tools/intellij/live-template</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/dev-tools/intellij/live-template</guid>
       </item>
     
       <item>
@@ -11700,8 +11700,8 @@ Ultimately, our team defined naming rules based on the compiled abbreviation con
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/java/naming-conventions</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/java/naming-conventions</guid>
+        <link>https://meansoup.github.io/docs/java/naming-conventions</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/java/naming-conventions</guid>
       </item>
     
       <item>
@@ -11777,8 +11777,8 @@ JUnit5를 기준으로 설명한다.&lt;/p&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/dev-tools/intellij/test-file-template</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/dev-tools/intellij/test-file-template</guid>
+        <link>https://meansoup.github.io/docs/dev-tools/intellij/test-file-template</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/dev-tools/intellij/test-file-template</guid>
       </item>
     
       <item>
@@ -11880,8 +11880,8 @@ JUnit5를 기준으로 설명한다.&lt;/p&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/db/why-use-nosql</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/db/why-use-nosql</guid>
+        <link>https://meansoup.github.io/docs/db/why-use-nosql</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/db/why-use-nosql</guid>
       </item>
     
       <item>
@@ -12050,8 +12050,8 @@ limit의 숫자들을 어떻게 잡았는지는 모르지만 이걸 정책으로
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/service-management/user-limits</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/service-management/user-limits</guid>
+        <link>https://meansoup.github.io/docs/service-management/user-limits</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/service-management/user-limits</guid>
       </item>
     
       <item>
@@ -12126,8 +12126,8 @@ WCU, RCU, partition의 max size.&lt;br /&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/aws/dynamo/structure</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/aws/dynamo/structure</guid>
+        <link>https://meansoup.github.io/docs/aws/dynamo/structure</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/aws/dynamo/structure</guid>
       </item>
     
       <item>
@@ -12179,8 +12179,8 @@ WCU, RCU, partition의 max size.&lt;br /&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/error-bug/kotlin/ClassNotFoundException_kotlin_jvm_JvmInline</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/error-bug/kotlin/ClassNotFoundException_kotlin_jvm_JvmInline</guid>
+        <link>https://meansoup.github.io/docs/error-bug/kotlin/ClassNotFoundException_kotlin_jvm_JvmInline</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/error-bug/kotlin/ClassNotFoundException_kotlin_jvm_JvmInline</guid>
       </item>
     
       <item>
@@ -12310,8 +12310,8 @@ class JpaRepositoryTest {
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/error-bug/spring/Unable_to_find_a_SpringBootConfiguration</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/error-bug/spring/Unable_to_find_a_SpringBootConfiguration</guid>
+        <link>https://meansoup.github.io/docs/error-bug/spring/Unable_to_find_a_SpringBootConfiguration</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/error-bug/spring/Unable_to_find_a_SpringBootConfiguration</guid>
       </item>
     
       <item>
@@ -12348,8 +12348,8 @@ class JpaConfiguration {}
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/error-bug/spring/NoSuchBeanDefinitionException_JpaRepository</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/error-bug/spring/NoSuchBeanDefinitionException_JpaRepository</guid>
+        <link>https://meansoup.github.io/docs/error-bug/spring/NoSuchBeanDefinitionException_JpaRepository</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/error-bug/spring/NoSuchBeanDefinitionException_JpaRepository</guid>
       </item>
     
       <item>
@@ -12427,8 +12427,8 @@ https://github.com/mockito/mockito/issues/1481&lt;/p&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/error-bug/spring/kotlin_cannot_be_Returned_by_findById</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/error-bug/spring/kotlin_cannot_be_Returned_by_findById</guid>
+        <link>https://meansoup.github.io/docs/error-bug/spring/kotlin_cannot_be_Returned_by_findById</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/error-bug/spring/kotlin_cannot_be_Returned_by_findById</guid>
       </item>
     
       <item>
@@ -12474,8 +12474,8 @@ This shortcut(emoji) is rarely used, so you can change or delete it.&lt;/p&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/dev-tools/intellij/upper-case</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/dev-tools/intellij/upper-case</guid>
+        <link>https://meansoup.github.io/docs/dev-tools/intellij/upper-case</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/dev-tools/intellij/upper-case</guid>
       </item>
     
       <item>
@@ -12642,8 +12642,8 @@ full GC 중에도 움직이지 않는다.&lt;/p&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/java/gc/g1_gc</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/java/gc/g1_gc</guid>
+        <link>https://meansoup.github.io/docs/java/gc/g1_gc</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/java/gc/g1_gc</guid>
       </item>
     
       <item>
@@ -12694,8 +12694,8 @@ full GC 중에도 움직이지 않는다.&lt;/p&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/dev-tools/slack/pocker-planner</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/dev-tools/slack/pocker-planner</guid>
+        <link>https://meansoup.github.io/docs/dev-tools/slack/pocker-planner</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/dev-tools/slack/pocker-planner</guid>
       </item>
     
       <item>
@@ -12820,8 +12820,8 @@ Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionExcep
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/error-bug/spring/ConflictingBeanDefinitionException</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/error-bug/spring/ConflictingBeanDefinitionException</guid>
+        <link>https://meansoup.github.io/docs/error-bug/spring/ConflictingBeanDefinitionException</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/error-bug/spring/ConflictingBeanDefinitionException</guid>
       </item>
     
       <item>
@@ -12866,8 +12866,8 @@ multi-module project&lt;/p&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/error-bug/intellij/maven-jdk-version</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/error-bug/intellij/maven-jdk-version</guid>
+        <link>https://meansoup.github.io/docs/error-bug/intellij/maven-jdk-version</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/error-bug/intellij/maven-jdk-version</guid>
       </item>
     
       <item>
@@ -13140,8 +13140,8 @@ setActive() 내부에서 updatedTime을 수행하는 것도 안좋다.&lt;/li&gt
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/ddd/tactical/entity</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/ddd/tactical/entity</guid>
+        <link>https://meansoup.github.io/docs/ddd/tactical/entity</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/ddd/tactical/entity</guid>
       </item>
     
       <item>
@@ -13190,8 +13190,8 @@ core/library module에서 아래 plugin 제거.&lt;/p&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/error-bug/spring/repackage-failed-Unable-to-find-main-class</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/error-bug/spring/repackage-failed-Unable-to-find-main-class</guid>
+        <link>https://meansoup.github.io/docs/error-bug/spring/repackage-failed-Unable-to-find-main-class</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/error-bug/spring/repackage-failed-Unable-to-find-main-class</guid>
       </item>
     
       <item>
@@ -13300,8 +13300,8 @@ SLF4J: Actual binding is of type [ch.qos.logback.classic.util.ContextSelectorSta
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/error-bug/spring/Class-path-contains-multiple-SLF4J-bindings</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/error-bug/spring/Class-path-contains-multiple-SLF4J-bindings</guid>
+        <link>https://meansoup.github.io/docs/error-bug/spring/Class-path-contains-multiple-SLF4J-bindings</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/error-bug/spring/Class-path-contains-multiple-SLF4J-bindings</guid>
       </item>
     
       <item>
@@ -13348,8 +13348,8 @@ yaml를 읽어주는 dependency가 빠졌던 것.&lt;/p&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/error-bug/spring/yaml-property-not-work</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/error-bug/spring/yaml-property-not-work</guid>
+        <link>https://meansoup.github.io/docs/error-bug/spring/yaml-property-not-work</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/error-bug/spring/yaml-property-not-work</guid>
       </item>
     
       <item>
@@ -13441,8 +13441,8 @@ jar, pom, war, test-jar 등이 있고, test-jar를 통해 test package를 명시
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/spring/multimodule-test-dependency</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/spring/multimodule-test-dependency</guid>
+        <link>https://meansoup.github.io/docs/spring/multimodule-test-dependency</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/spring/multimodule-test-dependency</guid>
       </item>
     
       <item>
@@ -13520,8 +13520,8 @@ region name은 reference에 명시한 url에서 확인할 수 있다.&lt;br /&gt
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/oci/docker-login</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/oci/docker-login</guid>
+        <link>https://meansoup.github.io/docs/oci/docker-login</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/oci/docker-login</guid>
       </item>
     
       <item>
@@ -13641,8 +13641,8 @@ keySet이 HashMap의 값을 사용할 수 있는 것을 아우르는 중요한 �
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/java/tip/java_map_key_remove_and_outer_this</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/java/tip/java_map_key_remove_and_outer_this</guid>
+        <link>https://meansoup.github.io/docs/java/tip/java_map_key_remove_and_outer_this</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/java/tip/java_map_key_remove_and_outer_this</guid>
       </item>
     
       <item>
@@ -13676,8 +13676,8 @@ New config written to the Kubeconfig file /home/userId/.kube/config
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/oci/kubectl_shell</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/oci/kubectl_shell</guid>
+        <link>https://meansoup.github.io/docs/oci/kubectl_shell</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/oci/kubectl_shell</guid>
       </item>
     
       <item>
@@ -13823,8 +13823,8 @@ GSI와 LSI.&lt;br /&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/aws/dynamo/single-table</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/aws/dynamo/single-table</guid>
+        <link>https://meansoup.github.io/docs/aws/dynamo/single-table</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/aws/dynamo/single-table</guid>
       </item>
     
       <item>
@@ -13878,8 +13878,8 @@ db query가 줄어드니 성능은 크게 개선되었다.&lt;br /&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/aws/dynamo/single-table-result</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/aws/dynamo/single-table-result</guid>
+        <link>https://meansoup.github.io/docs/aws/dynamo/single-table-result</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/aws/dynamo/single-table-result</guid>
       </item>
     
       <item>
@@ -13927,8 +13927,8 @@ db query가 줄어드니 성능은 크게 개선되었다.&lt;br /&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/java/tip/list-type-casting</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/java/tip/list-type-casting</guid>
+        <link>https://meansoup.github.io/docs/java/tip/list-type-casting</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/java/tip/list-type-casting</guid>
       </item>
     
       <item>
@@ -14038,8 +14038,8 @@ client와 통신에 compression(Gzip 등)이 적용되었는지 확인한다.&lt
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/aws/cost-efficiency</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/aws/cost-efficiency</guid>
+        <link>https://meansoup.github.io/docs/aws/cost-efficiency</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/aws/cost-efficiency</guid>
       </item>
     
       <item>
@@ -14196,8 +14196,8 @@ domain model의 commit 시점에 event를 전달하고 이걸 처리하는 프�
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/retrospect/2022</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/retrospect/2022</guid>
+        <link>https://meansoup.github.io/docs/retrospect/2022</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/retrospect/2022</guid>
       </item>
     
       <item>
@@ -14223,8 +14223,8 @@ domain model의 commit 시점에 event를 전달하고 이걸 처리하는 프�
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/dev-tools/linux-commands/telnet-by-curl</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/dev-tools/linux-commands/telnet-by-curl</guid>
+        <link>https://meansoup.github.io/docs/dev-tools/linux-commands/telnet-by-curl</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/dev-tools/linux-commands/telnet-by-curl</guid>
       </item>
     
       <item>
@@ -14247,8 +14247,8 @@ domain model의 commit 시점에 event를 전달하고 이걸 처리하는 프�
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/flutter/flutter-theme</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/flutter/flutter-theme</guid>
+        <link>https://meansoup.github.io/docs/flutter/flutter-theme</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/flutter/flutter-theme</guid>
       </item>
     
       <item>
@@ -14593,8 +14593,8 @@ aggregate은 다른 aggregate 루트로의 참조를 가질 수 있다.
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/ddd/tactical/aggregate</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/ddd/tactical/aggregate</guid>
+        <link>https://meansoup.github.io/docs/ddd/tactical/aggregate</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/ddd/tactical/aggregate</guid>
       </item>
     
       <item>
@@ -14739,8 +14739,8 @@ If policies aren’t established, it will eventually lead to quality and service
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/career/domain/sync</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/career/domain/sync</guid>
+        <link>https://meansoup.github.io/docs/career/domain/sync</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/career/domain/sync</guid>
       </item>
     
       <item>
@@ -14849,8 +14849,8 @@ legacy 프로젝트를 hexagonal과 ddd에 맞춰 리팩토링을 진행하면�
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/java/tip/java-serialize</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/java/tip/java-serialize</guid>
+        <link>https://meansoup.github.io/docs/java/tip/java-serialize</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/java/tip/java-serialize</guid>
       </item>
     
       <item>
@@ -14920,8 +14920,8 @@ legacy 프로젝트를 hexagonal과 ddd에 맞춰 리팩토링을 진행하면�
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/pattern/saga</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/pattern/saga</guid>
+        <link>https://meansoup.github.io/docs/pattern/saga</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/pattern/saga</guid>
       </item>
     
       <item>
@@ -14974,8 +14974,8 @@ prefix만 적절하게 사용한다면 문제가 있기는 어렵다.&lt;br /&gt
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/aws/s3/throughput</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/aws/s3/throughput</guid>
+        <link>https://meansoup.github.io/docs/aws/s3/throughput</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/aws/s3/throughput</guid>
       </item>
     
       <item>
@@ -15183,8 +15183,8 @@ GET / HEAD method 이외는 기본적으로 캐시되지 않는다.&lt;/p&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/internet/http/http1.0/semantics</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/internet/http/http1.0/semantics</guid>
+        <link>https://meansoup.github.io/docs/internet/http/http1.0/semantics</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/internet/http/http1.0/semantics</guid>
       </item>
     
       <item>
@@ -15389,8 +15389,8 @@ body start!
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/internet/http/http1.0/syntax</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/internet/http/http1.0/syntax</guid>
+        <link>https://meansoup.github.io/docs/internet/http/http1.0/syntax</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/internet/http/http1.0/syntax</guid>
       </item>
     
       <item>
@@ -15430,8 +15430,8 @@ When you send a request to this URL, it analyzes whether the request was receive
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/tools/website/webhook-site</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/tools/website/webhook-site</guid>
+        <link>https://meansoup.github.io/docs/tools/website/webhook-site</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/tools/website/webhook-site</guid>
       </item>
     
       <item>
@@ -15631,8 +15631,8 @@ young generation GC event 데이터를 통해 할당된 데이터 양, 단위 �
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/java/gc/log_tuning</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/java/gc/log_tuning</guid>
+        <link>https://meansoup.github.io/docs/java/gc/log_tuning</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/java/gc/log_tuning</guid>
       </item>
     
       <item>
@@ -15752,8 +15752,8 @@ young generation GC event 데이터를 통해 할당된 데이터 양, 단위 �
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/refactoring/basic</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/refactoring/basic</guid>
+        <link>https://meansoup.github.io/docs/refactoring/basic</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/refactoring/basic</guid>
       </item>
     
       <item>
@@ -15819,8 +15819,8 @@ young generation GC event 데이터를 통해 할당된 데이터 양, 단위 �
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/refactoring/big-refactoring</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/refactoring/big-refactoring</guid>
+        <link>https://meansoup.github.io/docs/refactoring/big-refactoring</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/refactoring/big-refactoring</guid>
       </item>
     
       <item>
@@ -15899,8 +15899,8 @@ young generation GC event 데이터를 통해 할당된 데이터 양, 단위 �
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/refactoring/putting-together-refactoring</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/refactoring/putting-together-refactoring</guid>
+        <link>https://meansoup.github.io/docs/refactoring/putting-together-refactoring</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/refactoring/putting-together-refactoring</guid>
       </item>
     
       <item>
@@ -15990,8 +15990,8 @@ young generation GC event 데이터를 통해 할당된 데이터 양, 단위 �
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/refactoring/martin-fowler-refactoring</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/refactoring/martin-fowler-refactoring</guid>
+        <link>https://meansoup.github.io/docs/refactoring/martin-fowler-refactoring</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/refactoring/martin-fowler-refactoring</guid>
       </item>
     
       <item>
@@ -16171,8 +16171,8 @@ legacy 코드들을 보다보면 아키텍쳐 변경 외에도 손대고 싶은 
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/refactoring/my-refactoring</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/refactoring/my-refactoring</guid>
+        <link>https://meansoup.github.io/docs/refactoring/my-refactoring</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/refactoring/my-refactoring</guid>
       </item>
     
       <item>
@@ -16268,8 +16268,8 @@ googleIdToken은 우리가 필요한 여러 데이터들을 갖고 있다.&lt;/p
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/apis/oauth/google-login</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/apis/oauth/google-login</guid>
+        <link>https://meansoup.github.io/docs/apis/oauth/google-login</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/apis/oauth/google-login</guid>
       </item>
     
       <item>
@@ -16315,8 +16315,8 @@ googleIdToken은 우리가 필요한 여러 데이터들을 갖고 있다.&lt;/p
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/dev-tools/linux/etc_profiled</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/dev-tools/linux/etc_profiled</guid>
+        <link>https://meansoup.github.io/docs/dev-tools/linux/etc_profiled</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/dev-tools/linux/etc_profiled</guid>
       </item>
     
       <item>
@@ -16414,8 +16414,8 @@ package, class, layer 간의 dependency 확인과 circular dependency 확인 등
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/java/library/archunit</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/java/library/archunit</guid>
+        <link>https://meansoup.github.io/docs/java/library/archunit</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/java/library/archunit</guid>
       </item>
     
       <item>
@@ -16612,8 +16612,8 @@ backend가 충분히 받쳐준다면 runner의 문제로 부하를 조절하지 
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/retrospect/one-time-batch</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/retrospect/one-time-batch</guid>
+        <link>https://meansoup.github.io/docs/retrospect/one-time-batch</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/retrospect/one-time-batch</guid>
       </item>
     
       <item>
@@ -16819,8 +16819,8 @@ backend가 충분히 받쳐준다면 runner의 문제로 부하를 조절하지 
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/dev-tools/linux-commands/terminal</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/dev-tools/linux-commands/terminal</guid>
+        <link>https://meansoup.github.io/docs/dev-tools/linux-commands/terminal</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/dev-tools/linux-commands/terminal</guid>
       </item>
     
       <item>
@@ -16950,8 +16950,8 @@ gRPC를 지원한다.&lt;br /&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/apis/envoy/envoy</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/apis/envoy/envoy</guid>
+        <link>https://meansoup.github.io/docs/apis/envoy/envoy</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/apis/envoy/envoy</guid>
       </item>
     
       <item>
@@ -17120,8 +17120,8 @@ DB를 공유하면 스키마 구조, 쿼리, 행의 내용까지 모두 결합�
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/design/msa</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/design/msa</guid>
+        <link>https://meansoup.github.io/docs/design/msa</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/design/msa</guid>
       </item>
     
       <item>
@@ -17284,8 +17284,8 @@ receiver가 consumption 비율을 조절할 수 있다.&lt;/p&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/design/eda</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/design/eda</guid>
+        <link>https://meansoup.github.io/docs/design/eda</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/design/eda</guid>
       </item>
     
       <item>
@@ -17400,8 +17400,8 @@ receiver가 consumption 비율을 조절할 수 있다.&lt;/p&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/retrospect/2023</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/retrospect/2023</guid>
+        <link>https://meansoup.github.io/docs/retrospect/2023</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/retrospect/2023</guid>
       </item>
     
       <item>
@@ -17529,8 +17529,8 @@ DDD의 개념은 실제 도메인 모델을 코드에 녹이는 것이기 때문
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/ddd/strategic/ubiquitous</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/ddd/strategic/ubiquitous</guid>
+        <link>https://meansoup.github.io/docs/ddd/strategic/ubiquitous</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/ddd/strategic/ubiquitous</guid>
       </item>
     
       <item>
@@ -17665,8 +17665,8 @@ broker가 JVM heap에 캐시되지 않도록 하여 &lt;u&gt;크기가 큰 heap�
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/message-broker/kafka/architecture</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/message-broker/kafka/architecture</guid>
+        <link>https://meansoup.github.io/docs/message-broker/kafka/architecture</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/message-broker/kafka/architecture</guid>
       </item>
     
       <item>
@@ -17767,8 +17767,8 @@ producer의 serializer와 맞는 consumer의 deserializer가 필요하다.&lt;br
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/message-broker/kafka/producer</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/message-broker/kafka/producer</guid>
+        <link>https://meansoup.github.io/docs/message-broker/kafka/producer</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/message-broker/kafka/producer</guid>
       </item>
     
       <item>
@@ -17879,8 +17879,8 @@ producer의 serializer와 맞는 consumer의 deserializer가 필요하다.&lt;br
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/message-broker/kafka/kafka</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/message-broker/kafka/kafka</guid>
+        <link>https://meansoup.github.io/docs/message-broker/kafka/kafka</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/message-broker/kafka/kafka</guid>
       </item>
     
       <item>
@@ -18045,8 +18045,8 @@ heartbeat는 consumer가 코디네이터와 통신하여 적절한 시간내에 
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/message-broker/kafka/consumer</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/message-broker/kafka/consumer</guid>
+        <link>https://meansoup.github.io/docs/message-broker/kafka/consumer</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/message-broker/kafka/consumer</guid>
       </item>
     
       <item>
@@ -18116,8 +18116,8 @@ heartbeat는 consumer가 코디네이터와 통신하여 적절한 시간내에 
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/career/interview-question</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/career/interview-question</guid>
+        <link>https://meansoup.github.io/docs/career/interview-question</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/career/interview-question</guid>
       </item>
     
       <item>
@@ -18175,8 +18175,8 @@ link local ip address는 특별한 목적으로 설계된 ip block이다.&lt;/p&
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/internet/link-local</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/internet/link-local</guid>
+        <link>https://meansoup.github.io/docs/internet/link-local</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/internet/link-local</guid>
       </item>
     
       <item>
@@ -18306,8 +18306,8 @@ date와 함께 남기면 시간 별로 file-nr을 추적하기 용이하다.&lt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/dev-tools/linux/too_many_open_file</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/dev-tools/linux/too_many_open_file</guid>
+        <link>https://meansoup.github.io/docs/dev-tools/linux/too_many_open_file</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/dev-tools/linux/too_many_open_file</guid>
       </item>
     
       <item>
@@ -18526,8 +18526,8 @@ List가 더 고수준이기 때문에 저수준인 Iterator 인터페이스를 �
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/architecture/solid</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/architecture/solid</guid>
+        <link>https://meansoup.github.io/docs/architecture/solid</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/architecture/solid</guid>
       </item>
     
       <item>
@@ -18604,8 +18604,8 @@ For example, in &lt;strong&gt;b_1_1_1.py&lt;/strong&gt;, you can find the rootdi
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/algorithm/language/python/python-rootdir</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/algorithm/language/python/python-rootdir</guid>
+        <link>https://meansoup.github.io/docs/algorithm/language/python/python-rootdir</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/algorithm/language/python/python-rootdir</guid>
       </item>
     
       <item>
@@ -18689,8 +18689,8 @@ You don’t need to add sys.path or calculate path.&lt;/p&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/algorithm/language/python/python-import-rootdir</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/algorithm/language/python/python-import-rootdir</guid>
+        <link>https://meansoup.github.io/docs/algorithm/language/python/python-import-rootdir</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/algorithm/language/python/python-import-rootdir</guid>
       </item>
     
       <item>
@@ -18793,8 +18793,8 @@ This means queries are restricted to data with the specified partition key value
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/aws/dynamo/si</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/aws/dynamo/si</guid>
+        <link>https://meansoup.github.io/docs/aws/dynamo/si</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/aws/dynamo/si</guid>
       </item>
     
       <item>
@@ -18967,8 +18967,8 @@ If there are 10 shards, the batch window and size apply to each shard individual
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/aws/dynamo/streams</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/aws/dynamo/streams</guid>
+        <link>https://meansoup.github.io/docs/aws/dynamo/streams</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/aws/dynamo/streams</guid>
       </item>
     
       <item>
@@ -19152,8 +19152,8 @@ If policies aren’t established beforehand, it can be difficult to address such
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/career/domain/backup</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/career/domain/backup</guid>
+        <link>https://meansoup.github.io/docs/career/domain/backup</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/career/domain/backup</guid>
       </item>
     
       <item>
@@ -19264,8 +19264,8 @@ As a result, &lt;strong&gt;the coupling between the client and server is minimiz
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/apis/rest/hateoas</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/apis/rest/hateoas</guid>
+        <link>https://meansoup.github.io/docs/apis/rest/hateoas</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/apis/rest/hateoas</guid>
       </item>
     
       <item>
@@ -19279,7 +19279,7 @@ Typically, various websites allow you to input epoch time and output the corresp
 However, it can be inconvenient to pinpoint and convert just the epoch time from logs or data.&lt;br /&gt;
 It becomes even more cumbersome when you want to review multiple data points and check their values.&lt;/p&gt;
 
-&lt;p&gt;You can solve this issue through &lt;a href=&quot;https://backendbrew.com/epoch/&quot;&gt;https://backendbrew.com/epoch/&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You can solve this issue through &lt;a href=&quot;https://meansoup.github.io/epoch/&quot;&gt;https://meansoup.github.io/epoch/&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;This site converts and displays all the epoch times contained within a string.&lt;/p&gt;
 
@@ -19316,8 +19316,8 @@ It becomes even more cumbersome when you want to review multiple data points and
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/tools/site/epoch</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/tools/site/epoch</guid>
+        <link>https://meansoup.github.io/docs/tools/site/epoch</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/tools/site/epoch</guid>
       </item>
     
       <item>
@@ -19518,8 +19518,8 @@ ZGC는 대부분의 작업을 application과 &lt;strong&gt;동시에&lt;/strong&
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/java/gc/zgc</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/java/gc/zgc</guid>
+        <link>https://meansoup.github.io/docs/java/gc/zgc</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/java/gc/zgc</guid>
       </item>
     
       <item>
@@ -19660,8 +19660,8 @@ grep을 다른 명령어들과 함께 얼마나 효율적으로 사용하느냐�
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/dev-tools/linux-commands/grep</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/dev-tools/linux-commands/grep</guid>
+        <link>https://meansoup.github.io/docs/dev-tools/linux-commands/grep</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/dev-tools/linux-commands/grep</guid>
       </item>
     
       <item>
@@ -19690,8 +19690,8 @@ grep을 다른 명령어들과 함께 얼마나 효율적으로 사용하느냐�
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/404.html</link>
-        <guid isPermaLink="true">https://backendbrew.com/404.html</guid>
+        <link>https://meansoup.github.io/404.html</link>
+        <guid isPermaLink="true">https://meansoup.github.io/404.html</guid>
       </item>
     
       <item>
@@ -19703,8 +19703,8 @@ grep을 다른 명령어들과 함께 얼마나 효율적으로 사용하느냐�
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/about/</link>
-        <guid isPermaLink="true">https://backendbrew.com/about/</guid>
+        <link>https://meansoup.github.io/about/</link>
+        <guid isPermaLink="true">https://meansoup.github.io/about/</guid>
       </item>
     
       <item>
@@ -19713,8 +19713,8 @@ grep을 다른 명령어들과 함께 얼마나 효율적으로 사용하느냐�
           <description></description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/algorithm</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/algorithm</guid>
+        <link>https://meansoup.github.io/docs/algorithm</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/algorithm</guid>
       </item>
     
       <item>
@@ -19723,8 +19723,8 @@ grep을 다른 명령어들과 함께 얼마나 효율적으로 사용하느냐�
           <description></description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/apis/</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/apis/</guid>
+        <link>https://meansoup.github.io/docs/apis/</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/apis/</guid>
       </item>
     
       <item>
@@ -19733,8 +19733,8 @@ grep을 다른 명령어들과 함께 얼마나 효율적으로 사용하느냐�
           <description></description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/design/</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/design/</guid>
+        <link>https://meansoup.github.io/docs/design/</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/design/</guid>
       </item>
     
       <item>
@@ -19754,8 +19754,8 @@ grep을 다른 명령어들과 함께 얼마나 효율적으로 사용하느냐�
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/aws</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/aws</guid>
+        <link>https://meansoup.github.io/docs/aws</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/aws</guid>
       </item>
     
       <item>
@@ -19764,8 +19764,8 @@ grep을 다른 명령어들과 함께 얼마나 효율적으로 사용하느냐�
           <description></description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/blog</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/blog</guid>
+        <link>https://meansoup.github.io/docs/blog</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/blog</guid>
       </item>
     
       <item>
@@ -19774,8 +19774,8 @@ grep을 다른 명령어들과 함께 얼마나 효율적으로 사용하느냐�
           <description></description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/career/</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/career/</guid>
+        <link>https://meansoup.github.io/docs/career/</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/career/</guid>
       </item>
     
       <item>
@@ -19785,8 +19785,8 @@ grep을 다른 명령어들과 함께 얼마나 효율적으로 사용하느냐�
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/partition/10</link>
-        <guid isPermaLink="true">https://backendbrew.com/partition/10</guid>
+        <link>https://meansoup.github.io/partition/10</link>
+        <guid isPermaLink="true">https://meansoup.github.io/partition/10</guid>
       </item>
     
       <item>
@@ -19796,8 +19796,8 @@ grep을 다른 명령어들과 함께 얼마나 효율적으로 사용하느냐�
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/partition/20</link>
-        <guid isPermaLink="true">https://backendbrew.com/partition/20</guid>
+        <link>https://meansoup.github.io/partition/20</link>
+        <guid isPermaLink="true">https://meansoup.github.io/partition/20</guid>
       </item>
     
       <item>
@@ -19807,8 +19807,8 @@ grep을 다른 명령어들과 함께 얼마나 효율적으로 사용하느냐�
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/partition/30</link>
-        <guid isPermaLink="true">https://backendbrew.com/partition/30</guid>
+        <link>https://meansoup.github.io/partition/30</link>
+        <guid isPermaLink="true">https://meansoup.github.io/partition/30</guid>
       </item>
     
       <item>
@@ -19818,8 +19818,8 @@ grep을 다른 명령어들과 함께 얼마나 효율적으로 사용하느냐�
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/partition/40</link>
-        <guid isPermaLink="true">https://backendbrew.com/partition/40</guid>
+        <link>https://meansoup.github.io/partition/40</link>
+        <guid isPermaLink="true">https://meansoup.github.io/partition/40</guid>
       </item>
     
       <item>
@@ -19829,8 +19829,8 @@ grep을 다른 명령어들과 함께 얼마나 효율적으로 사용하느냐�
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/partition/50</link>
-        <guid isPermaLink="true">https://backendbrew.com/partition/50</guid>
+        <link>https://meansoup.github.io/partition/50</link>
+        <guid isPermaLink="true">https://meansoup.github.io/partition/50</guid>
       </item>
     
       <item>
@@ -19840,8 +19840,8 @@ grep을 다른 명령어들과 함께 얼마나 효율적으로 사용하느냐�
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/partition/90</link>
-        <guid isPermaLink="true">https://backendbrew.com/partition/90</guid>
+        <link>https://meansoup.github.io/partition/90</link>
+        <guid isPermaLink="true">https://meansoup.github.io/partition/90</guid>
       </item>
     
       <item>
@@ -19850,8 +19850,8 @@ grep을 다른 명령어들과 함께 얼마나 효율적으로 사용하느냐�
           <description></description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/db/concept</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/db/concept</guid>
+        <link>https://meansoup.github.io/docs/db/concept</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/db/concept</guid>
       </item>
     
       <item>
@@ -19860,8 +19860,8 @@ grep을 다른 명령어들과 함께 얼마나 효율적으로 사용하느냐�
           <description></description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/language/cpp</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/language/cpp</guid>
+        <link>https://meansoup.github.io/docs/language/cpp</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/language/cpp</guid>
       </item>
     
       <item>
@@ -19870,8 +19870,8 @@ grep을 다른 명령어들과 함께 얼마나 효율적으로 사용하느냐�
           <description></description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/db</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/db</guid>
+        <link>https://meansoup.github.io/docs/db</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/db</guid>
       </item>
     
       <item>
@@ -19885,8 +19885,8 @@ grep을 다른 명령어들과 함께 얼마나 효율적으로 사용하느냐�
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/ddd</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/ddd</guid>
+        <link>https://meansoup.github.io/docs/ddd</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/ddd</guid>
       </item>
     
       <item>
@@ -19895,8 +19895,8 @@ grep을 다른 명령어들과 함께 얼마나 효율적으로 사용하느냐�
           <description></description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/dev-tools/</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/dev-tools/</guid>
+        <link>https://meansoup.github.io/docs/dev-tools/</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/dev-tools/</guid>
       </item>
     
       <item>
@@ -19905,8 +19905,8 @@ grep을 다른 명령어들과 함께 얼마나 효율적으로 사용하느냐�
           <description></description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/03.career/domain.html</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/03.career/domain.html</guid>
+        <link>https://meansoup.github.io/docs/03.career/domain.html</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/03.career/domain.html</guid>
       </item>
     
       <item>
@@ -20068,8 +20068,8 @@ Query, Scan 으로 값을 가져올 수 있다.&lt;/p&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/aws/dynamo</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/aws/dynamo</guid>
+        <link>https://meansoup.github.io/docs/aws/dynamo</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/aws/dynamo</guid>
       </item>
     
       <item>
@@ -20078,8 +20078,8 @@ Query, Scan 으로 값을 가져올 수 있다.&lt;/p&gt;
           <description></description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/apis/envoy</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/apis/envoy</guid>
+        <link>https://meansoup.github.io/docs/apis/envoy</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/apis/envoy</guid>
       </item>
     
       <item>
@@ -20088,8 +20088,8 @@ Query, Scan 으로 값을 가져올 수 있다.&lt;/p&gt;
           <description></description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/error-bug</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/error-bug</guid>
+        <link>https://meansoup.github.io/docs/error-bug</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/error-bug</guid>
       </item>
     
       <item>
@@ -20098,8 +20098,8 @@ Query, Scan 으로 값을 가져올 수 있다.&lt;/p&gt;
           <description></description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/etc</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/etc</guid>
+        <link>https://meansoup.github.io/docs/etc</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/etc</guid>
       </item>
     
       <item>
@@ -20134,8 +20134,8 @@ Query, Scan 으로 값을 가져올 수 있다.&lt;/p&gt;
 &lt;/rss&gt;</description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/feed.xml</link>
-        <guid isPermaLink="true">https://backendbrew.com/feed.xml</guid>
+        <link>https://meansoup.github.io/feed.xml</link>
+        <guid isPermaLink="true">https://meansoup.github.io/feed.xml</guid>
       </item>
     
       <item>
@@ -20145,8 +20145,8 @@ Query, Scan 으로 값을 가져올 수 있다.&lt;/p&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/flutter</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/flutter</guid>
+        <link>https://meansoup.github.io/docs/flutter</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/flutter</guid>
       </item>
     
       <item>
@@ -20156,8 +20156,8 @@ Query, Scan 으로 값을 가져올 수 있다.&lt;/p&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/java/gc</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/java/gc</guid>
+        <link>https://meansoup.github.io/docs/java/gc</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/java/gc</guid>
       </item>
     
       <item>
@@ -20167,8 +20167,8 @@ Query, Scan 으로 값을 가져올 수 있다.&lt;/p&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/apis/graphql</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/apis/graphql</guid>
+        <link>https://meansoup.github.io/docs/apis/graphql</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/apis/graphql</guid>
       </item>
     
       <item>
@@ -20178,8 +20178,8 @@ Query, Scan 으로 값을 가져올 수 있다.&lt;/p&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/internet/http</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/internet/http</guid>
+        <link>https://meansoup.github.io/docs/internet/http</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/internet/http</guid>
       </item>
     
       <item>
@@ -20188,8 +20188,8 @@ Query, Scan 으로 값을 가져올 수 있다.&lt;/p&gt;
           <description></description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/</link>
-        <guid isPermaLink="true">https://backendbrew.com/</guid>
+        <link>https://meansoup.github.io/</link>
+        <guid isPermaLink="true">https://meansoup.github.io/</guid>
       </item>
     
       <item>
@@ -20199,8 +20199,8 @@ Query, Scan 으로 값을 가져올 수 있다.&lt;/p&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/dev-tools/intellij</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/dev-tools/intellij</guid>
+        <link>https://meansoup.github.io/docs/dev-tools/intellij</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/dev-tools/intellij</guid>
       </item>
     
       <item>
@@ -20210,8 +20210,8 @@ Query, Scan 으로 값을 가져올 수 있다.&lt;/p&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/internet</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/internet</guid>
+        <link>https://meansoup.github.io/docs/internet</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/internet</guid>
       </item>
     
       <item>
@@ -20221,8 +20221,8 @@ Query, Scan 으로 값을 가져올 수 있다.&lt;/p&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/java/issue</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/java/issue</guid>
+        <link>https://meansoup.github.io/docs/java/issue</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/java/issue</guid>
       </item>
     
       <item>
@@ -20232,8 +20232,8 @@ Query, Scan 으로 값을 가져올 수 있다.&lt;/p&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/java</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/java</guid>
+        <link>https://meansoup.github.io/docs/java</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/java</guid>
       </item>
     
       <item>
@@ -20243,8 +20243,8 @@ Query, Scan 으로 값을 가져올 수 있다.&lt;/p&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/spring/jpa</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/spring/jpa</guid>
+        <link>https://meansoup.github.io/docs/spring/jpa</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/spring/jpa</guid>
       </item>
     
       <item>
@@ -20254,8 +20254,8 @@ Query, Scan 으로 값을 가져올 수 있다.&lt;/p&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/message-broker/kafka</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/message-broker/kafka</guid>
+        <link>https://meansoup.github.io/docs/message-broker/kafka</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/message-broker/kafka</guid>
       </item>
     
       <item>
@@ -20273,8 +20273,8 @@ kivy로 간단한 게임을 만들어가는 과정과 이에 대한 설명을 �
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/kivy</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/kivy</guid>
+        <link>https://meansoup.github.io/docs/kivy</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/kivy</guid>
       </item>
     
       <item>
@@ -20283,8 +20283,8 @@ kivy로 간단한 게임을 만들어가는 과정과 이에 대한 설명을 �
           <description>{: .fs-6 .fw-300 }</description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/kotlin/kotlin-in-action</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/kotlin/kotlin-in-action</guid>
+        <link>https://meansoup.github.io/docs/kotlin/kotlin-in-action</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/kotlin/kotlin-in-action</guid>
       </item>
     
       <item>
@@ -20294,8 +20294,8 @@ kivy로 간단한 게임을 만들어가는 과정과 이에 대한 설명을 �
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/kotlin</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/kotlin</guid>
+        <link>https://meansoup.github.io/docs/kotlin</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/kotlin</guid>
       </item>
     
       <item>
@@ -20305,8 +20305,8 @@ kivy로 간단한 게임을 만들어가는 과정과 이에 대한 설명을 �
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/language</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/language</guid>
+        <link>https://meansoup.github.io/docs/language</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/language</guid>
       </item>
     
       <item>
@@ -20316,8 +20316,8 @@ kivy로 간단한 게임을 만들어가는 과정과 이에 대한 설명을 �
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/java/library</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/java/library</guid>
+        <link>https://meansoup.github.io/docs/java/library</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/java/library</guid>
       </item>
     
       <item>
@@ -20327,8 +20327,8 @@ kivy로 간단한 게임을 만들어가는 과정과 이에 대한 설명을 �
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/dev-tools/linux</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/dev-tools/linux</guid>
+        <link>https://meansoup.github.io/docs/dev-tools/linux</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/dev-tools/linux</guid>
       </item>
     
       <item>
@@ -20338,8 +20338,8 @@ kivy로 간단한 게임을 만들어가는 과정과 이에 대한 설명을 �
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/message-broker</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/message-broker</guid>
+        <link>https://meansoup.github.io/docs/message-broker</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/message-broker</guid>
       </item>
     
       <item>
@@ -20349,8 +20349,8 @@ kivy로 간단한 게임을 만들어가는 과정과 이에 대한 설명을 �
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/apis/oauth</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/apis/oauth</guid>
+        <link>https://meansoup.github.io/docs/apis/oauth</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/apis/oauth</guid>
       </item>
     
       <item>
@@ -20360,8 +20360,8 @@ kivy로 간단한 게임을 만들어가는 과정과 이에 대한 설명을 �
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/oci</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/oci</guid>
+        <link>https://meansoup.github.io/docs/oci</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/oci</guid>
       </item>
     
       <item>
@@ -20371,8 +20371,8 @@ kivy로 간단한 게임을 만들어가는 과정과 이에 대한 설명을 �
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/service-management</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/service-management</guid>
+        <link>https://meansoup.github.io/docs/service-management</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/service-management</guid>
       </item>
     
       <item>
@@ -20382,8 +20382,8 @@ kivy로 간단한 게임을 만들어가는 과정과 이에 대한 설명을 �
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/49.language/python.html</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/49.language/python.html</guid>
+        <link>https://meansoup.github.io/docs/49.language/python.html</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/49.language/python.html</guid>
       </item>
     
       <item>
@@ -20393,8 +20393,8 @@ kivy로 간단한 게임을 만들어가는 과정과 이에 대한 설명을 �
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/refactoring/</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/refactoring/</guid>
+        <link>https://meansoup.github.io/docs/refactoring/</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/refactoring/</guid>
       </item>
     
       <item>
@@ -20404,8 +20404,8 @@ kivy로 간단한 게임을 만들어가는 과정과 이에 대한 설명을 �
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/retrospect/</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/retrospect/</guid>
+        <link>https://meansoup.github.io/docs/retrospect/</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/retrospect/</guid>
       </item>
     
       <item>
@@ -20546,8 +20546,8 @@ S3 응답에 대해 오류 코드가 나온 경우 처리를 해주어야 한다
 500 error - 해당 작업을 재시도할 수 있음.  </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/aws/s3</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/aws/s3</guid>
+        <link>https://meansoup.github.io/docs/aws/s3</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/aws/s3</guid>
       </item>
     
       <item>
@@ -20557,8 +20557,8 @@ S3 응답에 대해 오류 코드가 나온 경우 처리를 해주어야 한다
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/dev-tools/site</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/dev-tools/site</guid>
+        <link>https://meansoup.github.io/docs/dev-tools/site</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/dev-tools/site</guid>
       </item>
     
       <item>
@@ -20594,8 +20594,8 @@ S3 응답에 대해 오류 코드가 나온 경우 처리를 해주어야 한다
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/sitemap.xml</link>
-        <guid isPermaLink="true">https://backendbrew.com/sitemap.xml</guid>
+        <link>https://meansoup.github.io/sitemap.xml</link>
+        <guid isPermaLink="true">https://meansoup.github.io/sitemap.xml</guid>
       </item>
     
       <item>
@@ -20605,8 +20605,8 @@ S3 응답에 대해 오류 코드가 나온 경우 처리를 해주어야 한다
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/dev-tools/slack</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/dev-tools/slack</guid>
+        <link>https://meansoup.github.io/docs/dev-tools/slack</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/dev-tools/slack</guid>
       </item>
     
       <item>
@@ -20616,8 +20616,8 @@ S3 응답에 대해 오류 코드가 나온 경우 처리를 해주어야 한다
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/spring</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/spring</guid>
+        <link>https://meansoup.github.io/docs/spring</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/spring</guid>
       </item>
     
       <item>
@@ -20627,8 +20627,8 @@ S3 응답에 대해 오류 코드가 나온 경우 처리를 해주어야 한다
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/ddd/strategic</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/ddd/strategic</guid>
+        <link>https://meansoup.github.io/docs/ddd/strategic</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/ddd/strategic</guid>
       </item>
     
       <item>
@@ -20638,8 +20638,8 @@ S3 응답에 대해 오류 코드가 나온 경우 처리를 해주어야 한다
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/ddd/tactical</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/ddd/tactical</guid>
+        <link>https://meansoup.github.io/docs/ddd/tactical</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/ddd/tactical</guid>
       </item>
     
       <item>
@@ -20648,8 +20648,8 @@ S3 응답에 대해 오류 코드가 나온 경우 처리를 해주어야 한다
           <description>{: .fs-6 .fw-300 }</description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/extreme-programming/tdd</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/extreme-programming/tdd</guid>
+        <link>https://meansoup.github.io/docs/extreme-programming/tdd</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/extreme-programming/tdd</guid>
       </item>
     
       <item>
@@ -20661,8 +20661,8 @@ S3 응답에 대해 오류 코드가 나온 경우 처리를 해주어야 한다
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/dev-tools/linux-commands</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/dev-tools/linux-commands</guid>
+        <link>https://meansoup.github.io/docs/dev-tools/linux-commands</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/dev-tools/linux-commands</guid>
       </item>
     
       <item>
@@ -20672,8 +20672,8 @@ S3 응답에 대해 오류 코드가 나온 경우 처리를 해주어야 한다
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/test</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/test</guid>
+        <link>https://meansoup.github.io/docs/test</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/test</guid>
       </item>
     
       <item>
@@ -20683,8 +20683,8 @@ S3 응답에 대해 오류 코드가 나온 경우 처리를 해주어야 한다
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/02.retrospect/theme.html</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/02.retrospect/theme.html</guid>
+        <link>https://meansoup.github.io/docs/02.retrospect/theme.html</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/02.retrospect/theme.html</guid>
       </item>
     
       <item>
@@ -20694,8 +20694,8 @@ S3 응답에 대해 오류 코드가 나온 경우 처리를 해주어야 한다
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/java/tip</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/java/tip</guid>
+        <link>https://meansoup.github.io/docs/java/tip</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/java/tip</guid>
       </item>
     
       <item>
@@ -20705,8 +20705,8 @@ S3 응답에 대해 오류 코드가 나온 경우 처리를 해주어야 한다
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/vue</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/vue</guid>
+        <link>https://meansoup.github.io/docs/vue</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/vue</guid>
       </item>
     
       <item>
@@ -20716,8 +20716,8 @@ S3 응답에 대해 오류 코드가 나온 경우 처리를 해주어야 한다
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/assets/css/just-the-docs-dark.css</link>
-        <guid isPermaLink="true">https://backendbrew.com/assets/css/just-the-docs-dark.css</guid>
+        <link>https://meansoup.github.io/assets/css/just-the-docs-dark.css</link>
+        <guid isPermaLink="true">https://meansoup.github.io/assets/css/just-the-docs-dark.css</guid>
       </item>
     
       <item>
@@ -20732,8 +20732,8 @@ S3 응답에 대해 오류 코드가 나온 경우 처리를 해주어야 한다
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/assets/css/just-the-docs-default.css</link>
-        <guid isPermaLink="true">https://backendbrew.com/assets/css/just-the-docs-default.css</guid>
+        <link>https://meansoup.github.io/assets/css/just-the-docs-default.css</link>
+        <guid isPermaLink="true">https://meansoup.github.io/assets/css/just-the-docs-default.css</guid>
       </item>
     
       <item>
@@ -20764,8 +20764,8 @@ S3 응답에 대해 오류 코드가 나온 경우 처리를 해주어야 한다
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/assets/css/just-the-docs-head-nav.css</link>
-        <guid isPermaLink="true">https://backendbrew.com/assets/css/just-the-docs-head-nav.css</guid>
+        <link>https://meansoup.github.io/assets/css/just-the-docs-head-nav.css</link>
+        <guid isPermaLink="true">https://meansoup.github.io/assets/css/just-the-docs-head-nav.css</guid>
       </item>
     
       <item>
@@ -20775,8 +20775,8 @@ S3 응답에 대해 오류 코드가 나온 경우 처리를 해주어야 한다
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/assets/css/just-the-docs-light.css</link>
-        <guid isPermaLink="true">https://backendbrew.com/assets/css/just-the-docs-light.css</guid>
+        <link>https://meansoup.github.io/assets/css/just-the-docs-light.css</link>
+        <guid isPermaLink="true">https://meansoup.github.io/assets/css/just-the-docs-light.css</guid>
       </item>
     
       <item>
@@ -21400,8 +21400,8 @@ jtd.onReady(function(){
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/assets/js/just-the-docs.js</link>
-        <guid isPermaLink="true">https://backendbrew.com/assets/js/just-the-docs.js</guid>
+        <link>https://meansoup.github.io/assets/js/just-the-docs.js</link>
+        <guid isPermaLink="true">https://meansoup.github.io/assets/js/just-the-docs.js</guid>
       </item>
     
       <item>
@@ -21481,8 +21481,8 @@ jtd.onReady(function(){
 </description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/assets/js/search-data.json</link>
-        <guid isPermaLink="true">https://backendbrew.com/assets/js/search-data.json</guid>
+        <link>https://meansoup.github.io/assets/js/search-data.json</link>
+        <guid isPermaLink="true">https://meansoup.github.io/assets/js/search-data.json</guid>
       </item>
     
       <item>
@@ -21491,18 +21491,18 @@ jtd.onReady(function(){
           <description></description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/docs/algorithm/language/java/stacktrace</link>
-        <guid isPermaLink="true">https://backendbrew.com/docs/algorithm/language/java/stacktrace</guid>
+        <link>https://meansoup.github.io/docs/algorithm/language/java/stacktrace</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/algorithm/language/java/stacktrace</guid>
       </item>
     
       <item>
         <title></title>
         
-          <description>{&quot;/docs/algorithm/language/java/stacktrace&quot;:&quot;https://backendbrew.com/docs/java/issue/stacktrace&quot;}</description>
+          <description>{&quot;/docs/algorithm/language/java/stacktrace&quot;:&quot;https://meansoup.github.io/docs/java/issue/stacktrace&quot;}</description>
         
         <pubDate></pubDate>
-        <link>https://backendbrew.com/redirects.json</link>
-        <guid isPermaLink="true">https://backendbrew.com/redirects.json</guid>
+        <link>https://meansoup.github.io/redirects.json</link>
+        <guid isPermaLink="true">https://meansoup.github.io/redirects.json</guid>
       </item>
     
   </channel>

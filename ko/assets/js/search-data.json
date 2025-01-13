@@ -5076,7 +5076,7 @@
   },"725": {
     "doc": "AI Epoch Time Converter, Epoch Time 가장 편하게 변환하기",
     "title": "AI Epoch Time Converter, Epoch Time 가장 편하게 변환하기",
-    "content": "epoch time을 포함한 문자열에서 epoch time만 추출하여 date time으로 변환하는 epoch time converter. 조금 포장하자면 AI epoch time converter라고 하고 싶다. 개발을 하다보면 epoch time을 DateTime으로 바꿀일이 자주 있다. 일반적으로 여러 사이트에서 epoch time을 받아 DateTime을 출력해준다. 그렇지만 로그나 데이터에서 epoch time을 콕 집어서 변환해야 한다는 불편함이 있으며, 여러 데이터를 보고 값을 확인하고 싶을 때 이건 더 불편하다. https://backendbrew.com/epoch/ 를 통해서 이런 문제를 해결할 수 있다. 이 사이트는 문자에 포함된 모든 epoch time을 변환하고 보여준다. ",
+    "content": "epoch time을 포함한 문자열에서 epoch time만 추출하여 date time으로 변환하는 epoch time converter. 조금 포장하자면 AI epoch time converter라고 하고 싶다. 개발을 하다보면 epoch time을 DateTime으로 바꿀일이 자주 있다. 일반적으로 여러 사이트에서 epoch time을 받아 DateTime을 출력해준다. 그렇지만 로그나 데이터에서 epoch time을 콕 집어서 변환해야 한다는 불편함이 있으며, 여러 데이터를 보고 값을 확인하고 싶을 때 이건 더 불편하다. https://meansoup.github.io/epoch/ 를 통해서 이런 문제를 해결할 수 있다. 이 사이트는 문자에 포함된 모든 epoch time을 변환하고 보여준다. ",
     "url": "/docs/tools/site/epoch",
     
     "relUrl": "/docs/tools/site/epoch"
