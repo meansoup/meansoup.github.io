@@ -3,8 +3,9 @@ layout: post
 title: "예상치 못한 DynamoSizeLimitException 이슈 정리"
 sidebar_label: "DynamoSizeLimitException"
 parent: DynamoDB
-nav_order: 1000
 grand_parent: aws
+lang: ko
+nav_order: 1000
 permalink: /docs/aws/dynamo/DynamoSizeLimitException
 sitemap:
   lastmod: 2021-03-08
