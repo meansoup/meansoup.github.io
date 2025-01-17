@@ -351,6 +351,15 @@
     <priority>0.5</priority>
   </url>
   
+  <url>
+    <loc>https://meansoup.github.io/ko/docs/retrospect/2020</loc>
+    
+    <lastmod>2021-01-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
   
   
   
@@ -416,6 +425,15 @@
   
   <url>
     <loc>https://meansoup.github.io/docs/aws/dynamo/DynamoSizeLimitException</loc>
+    
+    <lastmod>2021-03-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://meansoup.github.io/ko/docs/aws/dynamo/DynamoSizeLimitException</loc>
     
     <lastmod>2021-03-08</lastmod>
     
@@ -722,6 +740,15 @@
   
   <url>
     <loc>https://meansoup.github.io/docs/retrospect/2021</loc>
+    
+    <lastmod>2022-01-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://meansoup.github.io/ko/docs/retrospect/2021</loc>
     
     <lastmod>2022-01-26</lastmod>
     
@@ -1323,6 +1350,15 @@
     <priority>0.5</priority>
   </url>
   
+  <url>
+    <loc>https://meansoup.github.io/ko/docs/retrospect/2022</loc>
+    
+    <lastmod>2022-12-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
   
   
   
@@ -1908,11 +1944,29 @@
     <priority>0.5</priority>
   </url>
   
+  <url>
+    <loc>https://meansoup.github.io/ko/docs/java/gc/zgc</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
   
   
   
   <url>
     <loc>https://meansoup.github.io/docs/dev-tools/linux-commands/grep</loc>
+    
+    <lastmod>2025-01-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://meansoup.github.io/ko/docs/dev-tools/linux-commands/grep</loc>
     
     <lastmod>2025-01-13</lastmod>
     

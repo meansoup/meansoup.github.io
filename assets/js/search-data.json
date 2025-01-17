@@ -1035,30 +1035,30 @@
     
     "relUrl": "/docs/11.Algorithm/2020-07-13-timsort.html"
   },"148": {
-    "doc": "서버 개발자, 2020 회고",
-    "title": "설계",
-    "content": "올해 팀을 옮겨서 배웠던 것 중 가장 크게 배우고 느낀 것은 설계에 대한 부분이다. 이전 팀에서는 유지/보수가 대부분인 업무에 새로 무언가를 개발하는 일은 잘 없기 때문에, 대규모 설계 회의를 진행해본 적이 없었다. 팀을 옮기고 새로운 모듈 개발과 이어지는 배치 개발을 위한 반복된 설계가 개인적으로는 배울 점이 많았다. 설계 회의에 참여해서 구조를 생각하고 그려나가고 토론하는 것이 도움이 많이 되었는데, 어떻게 토론을 해나가고 어떤 부분을 짚어나가야 하는지 알 수 있었다. 처음에는 경험이 적다보니 ‘아 그렇구나’ 하고 넘어가던 설계들이 나중에는 ‘나는 이렇게 생각했는데 팀원들 아이디어가 좋구나’ 하고 넘어가는 경우도 많았다. 아직은 배워가는게 크지만 내년에는 내가 더 많이 설계에 영향을 미치면 좋겠다는 생각이 든다. 설계는 남기고 싶은 내용들이 있어 따로 정리해본다. 동기화 작업 . 우리는 단말 앱과 연관이 많은 동기화 서버를 개발했다. 처음부터 시작하는 동기화와 현재 어디까지 동기화 되었는지를 구분하기 위한 값을 단말에 제공한다. 이 값은 이렇게 설계된다. | 단말이 이해할 수 없는 값이어야 한다. 따라서 우리만 아는 데이터를 암호화하여 내려준다. | 단말이 이해할 수 있다면, 특정 유저라거나 특정 값의 데이터를 단말이 직접 수정할 수 있으면 우리가 통제할 수 없는 동기화 시나리오가 발생하거나 다른 이슈가 생길 수 있다. | . | 단말이 임의로 수정하면 동기화 에러가 나야한다. | 위와 동일한 이유이다. 동기화 에러가나면 초기 동기화(처음부터 시작하는 동기화)를 할 수 있도록 값을 내려주고 유도한다. | . | . 동기화 서버를 개발하면서 우리한테 쌓인 노하우가 아닌가 싶다. 배치 . 우리가 관리하는 서비스 하나는 배치 서버가 네 대가 있다. 필요해 의해 하나씩 추가되다가 이렇게 되었는데 참 번거롭고 헷갈리기도 하다. 새로 모듈을 만들면서 배치를 설계할 때는 기존의 구조를 따르지 않도록 batch job이 추가가능한 배치 모듈을 설계하려고 노력했다. kafka를 통해 연결된 배치 서버를 개발하고 여러 job task를 수행할 수 있도록 설계하고 필요하다면 task를 추가 설계하는 방식으로 구현했다. 서비스 말고도 배치 서버도 초기 설계가 중요하다는 것을 많이 느꼈다. 그리고 delete는 최대한 안전하고 정확하게 진행되어야 한다는 것도. 언어 . golang을 공부하고 배치에 적용한 것도 기억에 남는다. golang 스터디를 하고 잠깐 잊고 지냈는데 기존 batch의 성능을 개선하는 작업을 하면서 batch를 golang으로 설계했다. language의 중요성을 이번에 느끼게 되었는데 이렇다. | 기존의 python batch가 성능이 굉장이 안좋았다. | 한 눈에 봐도 개선의 여지가 명확했고 일부 로직을 개선한 python batch로 업그레이드?했다. | golang의 go routine(경량 thread)와 빠른 성능이 좋은 효율을 발휘할만한 상황으로 보였다. | golang으로 language를 변경하고 설계하여 다시 개발했다. | 단일 ec2 기준 100배에 가까운 성능 개선이 이뤄졌다. | . 이번 작업을 하면서 느낀 것은 이렇다. | 개발 없이 스터디 하는건 오래 남지 않는다. | 코드는 부패하기 마련이고 잊혀진다. | 언어가 갖는 특성을 고려하는 것이 중요하다. (ex, golang의 경량 쓰레드 goroutine 효율성 등) | . ",
-    "url": "/docs/retrospect/2020#%EC%84%A4%EA%B3%84",
+    "doc": "Server Developer, 2020 yearly Retrospection",
+    "title": "Design",
+    "content": "One of the biggest lessons I learned this year after joining a new team was about design. In my previous team, most tasks involved maintenance, with little opportunity for new development. As a result, I rarely participated in large-scale design meetings. Joining the new team gave me the chance to repeatedly participate in designing new modules and subsequent batch development, which proved to be a valuable learning experience. It was very helpful to participate in the design meeting to think, draw, and discuss the structure. I could see how to discuss it and what parts to point out. At first, I had little experience in design, so there were many designs that I thought “Oh, I see.” Later, there were many cases where I thought, “I thought this way, but the team members’ ideas are better.” . !!! Initially, with limited experience, I often just acknowledged the designs without much input. Later, I found myself thinking, “I would approach this differently, but my teammates have great ideas,” which made the process more engaging. While I am still learning, I hope to have a greater influence on design next year. There are some design-related insights I want to document here. Synchronization . We developed a synchronization server closely tied to the client app. It provides values to the client to differentiate between an initial synchronization and the current synchronization state. The design follows these principles: . | The value must be unintelligible to the client. Therefore, we encrypt data that only we can understand. | If the client could interpret the value, it might modify the data directly, potentially leading to uncontrollable synchronization scenarios or other issues. | . | If the client modifies the value arbitrarily, a synchronization error should occur. | This is for the same reason as above. In case of an error, the client is guided to perform an initial synchronization to restart the process. | . | . This approach reflects the know-how we’ve gained through our synchronization server development. Batch . One of the services we manage involves four batch servers. These servers were added one by one as needed, which has made the setup cumbersome and confusing. When designing batches for new modules, we aimed not to follow the existing structure. Instead, we created a batch module that allows for the addition of batch jobs. We developed batch servers connected via Kafka, designed to perform multiple job tasks, and implemented additional tasks when necessary. This experience taught me the importance of initial design, not just for services but also for batch servers. Additionally, I learned that delete operations must be performed safely and precisely. Language . Studying and applying Golang to batch development also stands out in my memory. I had previously studied Golang but had set it aside. Revisiting it to optimize batch performance led to designing and developing a batch in Golang. The importance of language became clear through the following steps. | The performance of the existing Python batch was poor. | There was obvious room for improvement, so we upgraded the batch by optimizing parts of the Python code. | Golang’s goroutines (lightweight threads) and high performance seemed well-suited for our needs. | We redesigned and developed the batch using Golang. | This resulted in nearly 100x performance improvement on a single EC2 instance. | . Through this process, I realized. | Studying without actual development does not last long. | Code decays and becomes forgotten. | Considering the characteristics of the language is essential (ex, Golang’s efficient goroutines). | . ",
+    "url": "/docs/retrospect/2020#design",
     
-    "relUrl": "/docs/retrospect/2020#설계"
+    "relUrl": "/docs/retrospect/2020#design"
   },"149": {
-    "doc": "서버 개발자, 2020 회고",
-    "title": "자동화",
-    "content": "작년에 여러 작업들에 걸쳐서 (거창하게 표현하면) 자동화가 많이 진행되었다. 이런 자동화 작업들은 내가 생각하기에 이런 장점들이 있다. | 귀찮은 작업들을 이젠 하지 않아도 된다. | 반복된 업무는 귀찮지만 자동화 툴을 만드는건 재밌는 작업이다. | . 우리 팀은 올해 이런 작업들을 자동화 했다. WAS나 batch에서 error나 issue에 대해 slack noti 적용 . 우리가 새로 만든 모듈에서 500 error에 대해 slack noti를 적용하고 이 모듈에서는 우리가 알지 못하는 500 error는 없도록 유지보수를 하고 있다. 모르는 500 error가 나온다면 바로 노티를 받고 수정에 들어간다. (부끄럽지만 다른 모듈은 아마 500 error가 좀 있을 것 같다) Grafana나 지표는 만들어놔도 손이 잘 안가기 때문에 초기 서버에서 이런 작업을 해놓는게 굉장히 서버 관리에 도움이 되었다. versioning &amp; release note &amp; 문서 작성 . 우리는 배포 프로세스가 굉장히 귀찮은 편이다. 우선 검증 팀에 변경사항을 문서로 작성해서 보내주어야 하고, 검증이 끝나면 변경사항을 결재를 올려야 한다. 그리고 나서 release note를 작성하는데 이게 참 귀찮아서 날 잡고 자동화를 진행했다. 문서 작성 프로그램을 python으로 작성했다. git commit과 PR rule을 자동화하기 좋게 convention을 잘 지키면서 convention에 맞는 commit/PR message들을 가지고 major/minor/patch version을 자동으로 계산해서 version을 올리고 수정된 내용들을 정리하는 방식이다. 정리된 내용들과 버전은 검증 문서와 변경사항을 slack으로 보내고, github release에도 자동으로 업데이트 하도록 구현했다. (github / slack api 사용) . python dockerize를 하여 각 모듈에 circleci에 문서 작성 step 추가해서 docker를 수행하도록 했다. 이 작업으로 정말 귀찮고 어떨땐 빼먹기도 했던 문서 작업들이 정리되었다. 자동화를 통해 업무에 대한 효율과 서비스 안정성을 확보할 수 있었다는 생각이 든다. 그리고 작업을 진행하면 평소에 관심을 두지 않았던, 진행하지 않았던 일들을 진행하게 되니 공부도 되고 지루하지도 않아 재밌게 개발을 할 수 있게 되었다. 그리고 생각보다 자동화가 어렵지 않다는 것을 느꼈다. 문서 자동화는 항상 불편했다. 자동화가 쉽지 않을 것이라 생각했는데 생각보다 쉽고 빠르게 일을 정리할 수 있었다. ",
-    "url": "/docs/retrospect/2020#%EC%9E%90%EB%8F%99%ED%99%94",
+    "doc": "Server Developer, 2020 yearly Retrospection",
+    "title": "Automation",
+    "content": "We achieved significant automation across various tasks last year. I believe automation has these advantages. | Tedious tasks no longer need to be done manually. | Developing automation tools for repetitive tasks is a fun challenge. | . Our team automated several tasks this year. Slack Notifications for Errors or Issues in WAS and Batch . We implemented Slack notifications for 500 errors in a new module we developed. This module is maintained so that no unknown 500 errors occur. If any arise, we are notified immediately and address them. (Though I suspect there are some 500 errors in other modules) Even though we set up Grafana and metrics, they often go unused. Implementing such initial server-side features greatly aids server management. Versioning, Release Notes, and Documentation . Our deployment process is quite tedious. We need to document changes for the QA team, submit the changes for approval, and then write release notes, which can be a hassle. To address this, we automated the process. We created a documentation program using Python. By adhering to a well-defined Git commit and PR convention, the program calculates major/minor/patch versions automatically and compiles the changes. The compiled information and version updates are sent to Slack as QA documentation and change logs, and are also updated on GitHub releases. We dockerized this Python program and added it as a step in CircleCI for each module to automate the process. This organized the tedious and laborious task. Automation improved work efficiency and service stability. Additionally, tackling automation projects exposed me to new areas of interest and kept the work engaging. I also realized that automation is easier than expected. Documentation automation, in particular, always seemed inconvenient. However, it turned out to be simpler and faster to implement than I anticipated. ",
+    "url": "/docs/retrospect/2020#automation",
     
-    "relUrl": "/docs/retrospect/2020#자동화"
+    "relUrl": "/docs/retrospect/2020#automation"
   },"150": {
-    "doc": "서버 개발자, 2020 회고",
-    "title": "테스트",
-    "content": "새로운 모듈을 처음부터 개발하면서 우리는 성능 개선이나 요구사항 만족 등을 위해 테스트를 다양하게 진행해왔다. 우리가 진행한 테스트는 아래와 같다. |   |   | . | unit test | unit 단위의 TDD에 필요한 단위 테스트 | . | api test | 실제 api를 통해 server 밖에서 호출되는 테스트 | . | scenario test | 기능 단위로 실제 사용자의 usecase flow(scenario)에 맞게 정상 호출되는지 확인하는 테스트 | . | performance test | pin point, locust 등을 통한 부하 및 성능 테스트 | . 켄트 백이 말하는 테스트는 항상 마음을 편안하게 해주고 믿음을 준다라는 말이 참 공감이 된다. 여러 테스트를 통해 출시 전, 후로 우리 서비스에 대한 믿음을 가질 수 있었던 것 같다. 이전 모듈들에서 진행하지 않던 scenario 테스트도 추가했는데 테스트가 중요하고 unit/api 테스트에만 의존하지 않고 여러 종류의 테스트가 필요하다는 것을 배웠다. 돌아볼만한 점은 이렇다. 중복되는 테스트 . 위와 같이 여러 테스트가 있다보니 중복되는 테스트들이 있다. 테스트가 많으면 느려지기 쉬우니 test의 layer를 명확하게 하면 좋겠다. 성능 테스트 . 성능 테스트를 진행할 때 다른 개발을 하느라 성능 테스트 셋업이나 진행에 참여하지 못했는데 아쉽다. 테스트 가독성 . ‘테스트니까’라는 말을 하기도 하고 듣기도 한다. 테스트는 좀 대충 짜도 된다라는 생각인데, 이게 리뷰할 때 굉장히 불편하고 코드 변경이 생길 때 테스트를 이해하는데 시간도 많이쓰게 되었다. 테스트 안에 분기가 있는건 나는 정말 별로다. 그럴거면 테스트를 나눠야된다고 생각한다. 이게 취향인지, 이걸 하려고하는 팀원도 있긴하다. 재미있는 한 해였다. 팀 분위기가 중요하다는 것을 많이 느꼈다. pair work이나 code review, 회고 등의 개발 문화에 대해서도 많이 느꼈는데, 우리 팀은 이전 팀보다 자신의 생각과 불편할 수 있는 얘기들을 편하게 할 수 있어 참 좋은 것 같다. ",
-    "url": "/docs/retrospect/2020#%ED%85%8C%EC%8A%A4%ED%8A%B8",
+    "doc": "Server Developer, 2020 yearly Retrospection",
+    "title": "Testing",
+    "content": "While developing new modules from scratch, we conducted various tests to improve performance and meet requirements. The types of tests we performed are as follows: . |   |   | . | Unit Test | Unit-level tests necessary for TDD | . | API Test | Tests conducted outside the server through actual API calls | . | Scenario Test | Tests verifying user use-case flows (scenarios) | . | Performance Test | Load and performance tests using tools like Pinpoint or Locust | . Kent Beck’s statement that “tests provide peace of mind and trust” resonated deeply with me. Through extensive testing, we gained confidence in our service both before and after its launch. We also added scenario tests, which were not used in previous modules, and learned the importance of having diverse types of tests beyond just unit and API tests. Here’s what it’s worth looking back on. Duplicated Tests . With multiple test types, overlaps occur. Having too many tests can slow down the process, so defining clear test layers is crucial. Performance Testing . I couldn’t participate in setting up or running performance tests due to other development priorities, which I regret. Test Readability . There’s a tendency to justify sloppy test code with “it’s just a test.” However, this made reviews cumbersome and understanding the tests during code changes time-consuming. I strongly dislike tests with conditional branches. If needed, I believe the tests should be split. Some team members disagree, so it may just be a matter of preference. This year has been enjoyable. It highlighted the importance of team dynamics. I learned a lot about development culture, such as pair programming, code reviews, and retrospectives. Our team fosters an open environment where people can share their thoughts and even uncomfortable topics freely, which I find wonderful. ",
+    "url": "/docs/retrospect/2020#testing",
     
-    "relUrl": "/docs/retrospect/2020#테스트"
+    "relUrl": "/docs/retrospect/2020#testing"
   },"151": {
-    "doc": "서버 개발자, 2020 회고",
-    "title": "서버 개발자, 2020 회고",
-    "content": "팀을 옮기고 올해는 새로운 것들을 배워 재미있는 시간들이었다. 팀 내에서 연간 회고를 진행했는데 회사에서의 나의 회고와 회고를 준비하며 느낀 올해에 대해 정리해본다. | 설계 . | 동기화 작업 | 배치 | 언어 | . | 자동화 | 테스트 | . ",
+    "doc": "Server Developer, 2020 yearly Retrospection",
+    "title": "Server Developer, 2020 yearly Retrospection",
+    "content": "This year has been an exciting time as I 1transitioned to a new team and learned many new things. We held an annual retrospective within the team, and while preparing for it, I reflected on my experiences and thoughts about this year at work. | Design . | Synchronization Work | Batch | Language | . | Automation | Testing | . ",
     "url": "/docs/retrospect/2020",
     
     "relUrl": "/docs/retrospect/2020"
@@ -1140,30 +1140,30 @@
     
     "relUrl": "/docs/kotlin/kotlin-in-action/5"
   },"163": {
-    "doc": "예상치 못한 DynamoSizeLimitException 이슈 정리",
+    "doc": "Why unexpected DynamoSizeLimitException occur?",
     "title": "What is DynamoSizeLimitException",
-    "content": "DynamoDB에서는 item에 대한 size 제한을 둔다. 정해진 size를 넘는 item을 save 요청을 했을 때 Dynamo에서는 DynamoSizeLimitException를 반환한다. AWS dynamoDB Limits를 확인하면 아래와 같은 문구를 확인할 수 있다. The maximum item size in DynamoDB is 400 KB, which includes both attribute name binary length (UTF-8 length) and attribute value lengths (again binary length) . 결국 하나의 item이 400KB를 넘을 수 없다는 것. ",
+    "content": "In DynamoDB, there is a size limit for items. When a save request is made for an item that exceeds this predefined size, DynamoDB returns a DynamoSizeLimitException. Check the AWS DynamoDB Limits, you can find the following statement: . The maximum item size in DynamoDB is 400 KB, which includes both attribute name binary length (UTF-8 length) and attribute value lengths (again binary length) . In short, a single item cannot exceed 400KB. ",
     "url": "/docs/aws/dynamo/DynamoSizeLimitException#what-is-dynamosizelimitexception",
     
     "relUrl": "/docs/aws/dynamo/DynamoSizeLimitException#what-is-dynamosizelimitexception"
   },"164": {
-    "doc": "예상치 못한 DynamoSizeLimitException 이슈 정리",
-    "title": "DynamoSizeLimitException occur under 400KB",
-    "content": "그렇지만 400KB를 넘지 않는 케이스에서 DynamoSizeLimitException가 발생했다. Dynamo의 size limit에 대해 우리는 이미 알고 있었고, 400KB가 넘는 케이스는 별도로 처리하는 로직을 구현했다. 그럼에도 DynamoSizeLimitException가 발생했다. item을 확인해보니 item의 크기는 고작 210KB 정도. Document 에서도 원인을 찾을 수 없었다. ",
-    "url": "/docs/aws/dynamo/DynamoSizeLimitException#dynamosizelimitexception-occur-under-400kb",
+    "doc": "Why unexpected DynamoSizeLimitException occur?",
+    "title": "DynamoSizeLimitException Occurs Under 400KB",
+    "content": "However, a DynamoSizeLimitException occurred even in cases where the item size was below 400KB. We were already aware of DynamoDB’s size limit and had implemented logic to handle cases where the size exceeds 400KB. Even so, the DynamoSizeLimitException still occurred. Upon inspecting the item, it was only about 210KB in size. The cause of this issue could not be found in the official documentation. ",
+    "url": "/docs/aws/dynamo/DynamoSizeLimitException#dynamosizelimitexception-occurs-under-400kb",
     
-    "relUrl": "/docs/aws/dynamo/DynamoSizeLimitException#dynamosizelimitexception-occur-under-400kb"
+    "relUrl": "/docs/aws/dynamo/DynamoSizeLimitException#dynamosizelimitexception-occurs-under-400kb"
   },"165": {
-    "doc": "예상치 못한 DynamoSizeLimitException 이슈 정리",
-    "title": "Why DynamoSizeLimitException occur?",
-    "content": "원인은 Local Secondary Indexes(LSI)에서 찾을 수 있었다. DynamoDB에 LSI가 있으면 size limit 계산이 달라진다. LSI는 item을 replica로 사용해서 size를 배로 사용한다. 따라서 LSI가 n개라면 최대 n + 1 배의 size를 사용할 수 있다는 것이고, item size limit은 그만큼 줄어들게되는 것이다. 우리는 LSI가 하나 있었고, 210KB의 item이 LSI로 인해 400KB 이상의 size를 가지며 이슈가 발생한 것이다. LSI를 사용해서는 안되는 이유가 하나 더 늘었다. ",
-    "url": "/docs/aws/dynamo/DynamoSizeLimitException#why-dynamosizelimitexception-occur",
+    "doc": "Why unexpected DynamoSizeLimitException occur?",
+    "title": "Why Does DynamoSizeLimitException Occur?",
+    "content": "The root cause was found in Local Secondary Indexes (LSI). When there is an LSI in DynamoDB, the size limit calculation changes. LSI uses the item as a replica and doubles the size. Thus, if there are n LSIs, the maximum size used can be n + 1 times the item size, which in turn reduces the item size limit. In our case, we had one LSI, and the 210KB item exceeded the 400KB limit due to the LSI, leading to the issue. There is one more reason why LSI should not be used. ",
+    "url": "/docs/aws/dynamo/DynamoSizeLimitException#why-does-dynamosizelimitexception-occur",
     
-    "relUrl": "/docs/aws/dynamo/DynamoSizeLimitException#why-dynamosizelimitexception-occur"
+    "relUrl": "/docs/aws/dynamo/DynamoSizeLimitException#why-does-dynamosizelimitexception-occur"
   },"166": {
-    "doc": "예상치 못한 DynamoSizeLimitException 이슈 정리",
-    "title": "예상치 못한 DynamoSizeLimitException 이슈 정리",
-    "content": "최근 DynamoSizeLimitException 에러를 겪을 일이 있었다. 생각지도 못하게 DynamoSizeLimitException를 겪게 되어 원인을 파악하였고, AWS 공식 document에 나오지 않는 내용을 기록한다. ",
+    "doc": "Why unexpected DynamoSizeLimitException occur?",
+    "title": "Why unexpected DynamoSizeLimitException occur?",
+    "content": "I recently encountered a DynamoSizeLimitException error unexpectedly. After investigating the issue, I discovered some details that are not covered in the official AWS documentation, which I will document here. ",
     "url": "/docs/aws/dynamo/DynamoSizeLimitException",
     
     "relUrl": "/docs/aws/dynamo/DynamoSizeLimitException"
@@ -1882,30 +1882,30 @@
     
     "relUrl": "/docs/pattern/object-mother"
   },"269": {
-    "doc": "서버 개발자, 2021 회고",
-    "title": "배치 작업",
-    "content": "서버 개발자에게 batch 작업이란 필수적인 것 같다. 올해는 우리 서비스 운영의 변경 사항들도 많았고, 효율적인 관리를 위해 정말 많은 batch를 설계하고 개발했다. 어떤 특별한 기술을 사용한 것보다 설계를 개선해 나가는 점이 올해 많이 배운게 아닌가 싶다. batch를 계속하면서 내가 배운점들은 이렇다. 1. 배포는 가능하면 쪼개서 나가자 . 우리 회사는 배포가 살짝 불편한 편이다. 모듈마다 다르지만 검증/결재를 기다리는 일들로 배포에는 항상 피로감이 쌓이고 재미가 없다. 이런 이유로 여러 작업의 배포가 필요할 때 한 번에 나갔다가 어디서 이슈가 생겼는지 확인하기가 어려웠다. (근데 이건 배포 방식을 바꿔야 해결이 될 것 같다.) . 2. migration batch는 rollback이 가능한 구조인지 파악하자 . 많은 batch와 migration을 수행하면서 간단한 migration에는 자신감이 충만해질 때가 있다. 그래서 rollback에 대한 생각을 접어둘 때가 있는데, 배포 이후에 rollback이 불가능한 경우를 생각하면 아찔하다. migration은 사용자의 data를 손대는 batch니까 작업 수행 전후로 확인해야할 내용들을 명확히 정리하고 수행해야 한다. 3. 확장성을 보장하자 . 우리가 관리하는 배치들은 대부분 정해진 기간이 있다. 기간을 맞추기 위해, 혹은 낭비되는 cpu를 채우거나 인스턴스 숫자를 조절하기 위해서 보통 batch의 worker(instance 혹은 thread)가 확장 가능한 구조가 굉장히 중요하다. instance를 더 붙이고 싶은데 불가능하거나 그 때마다 재시작해야해서는 안되니까. | 기간을 맞추기 위해 TPS(Transaction Per Second)나 batch 예상 시간을 조회할 수 있는 지표를 남기면 유용하다. | . 4. 위와 유사하게 중단/재시작과 멱등성을 고려하자 . 배치는 여러 이유로 중단/재시작이 필요한 경우가 많다. 인스턴스가 내려갔다거나, memory 부족 등의 이슈로 instance type을 변경한다거나, db throttling 이슈로 input data를 shuffling 해서 재수행하기도 하고 등등.. 이럴 때마다 수행된 user(혹은 특정 item 등의 batch 단위)가 batch에 다시 들어가더라도 문제가 없도록 멱등성이 고려되어야 한다. 이걸 고려하지 않으면 배치 돌릴 때마다 피곤하다. 여기서 말하는 멱등성은 다시 돌아도 문제가 없는 것도 있지만, 돌아간 user에 대해서 다시 돌리지 않을 수 있는 일종의 flag가 있어야 batch에도 문제가 없고 재수행했을 때 수행 시간에도 문제가 없다. 5. data flow를 확인하자 . 우리는 지금 global 5개 region에서 서비스를 하고 있다. file이 오가는 batch의 경우 binary data가 region을 넘어가는 경우가 발생하기도 하는데, 최대한 효율적으로 binary flow를 잡아갈 수 있도록 설계가 필요하다. 한 번은 설계를 잘 해놓고, binary flow를 놓쳐서 성능이 현저하게 떨어져서 다시 개발한 적이 있었다. 6. life cycle을 같이 도는 batch에서 소스 코드를 분리하지 말자 . 중복을 최소화하는 것은 개발자의 숙명이기도 하다. one time job으로 설계된 batch가 아니라 life cycle을 같이하는 batch들에서 소스 코드를 따로 쓰는 경우 문제가 생기기 정말 쉽다. 올 해 우리는 WAS에서 새로운 기능을 내보내고, batch에서는 해당 코드가 추가되지 않아 사용자 데이터를 날려먹을 뻔한 적이 있었다. ",
-    "url": "/docs/retrospect/2021#%EB%B0%B0%EC%B9%98-%EC%9E%91%EC%97%85",
+    "doc": "Server Developer, 2021 yearly Retrospection",
+    "title": "Batch Jobs",
+    "content": "Batch jobs are essential for server developers. This year, there were many changes in our service operations, and I ended up designing and developing a lot of batch jobs for more efficient management. Rather than using any specific advanced technology, I feel that the most valuable thing I learned this year was improving design. Here are the lessons I learned from working on batch jobs: . 1. Split Deployments Whenever Possible . Deployments in our company is a bit cumbersome. While it varies by module, the processes of verification and approval make deployments tiring and uninteresting. Because of this, when multiple changes were deployed at once, it became challenging to pinpoint where issues originated. (Though this is something that might need a change in our deployment system itself.) . 2. Ensure Migration Batches Are Rollback-Friendly . While working on many migration batches, I occasionally became overconfident with simple migrations and neglected the rollback process. However, the thought of not being able to roll back after deployment is terrifying. Since migrations handle user data, it’s crucial to clearly define the pre-check and post-check steps before execution. 3. Design for Scalability . Most of the batches we manage have fixed deadlines. To meet deadlines or adjust resource usage (e.g., CPU or the number of instances), scalability of batch workers (instances or threads) is critical. For example, if you need to add instances but can’t or must restart everything, it’s inefficient. | It’s helpful to track metrics like TPS (Transactions Per Second) and estimated batch completion time to ensure deadlines are met. | . 4. Consider Resumability and Idempotency . Batch jobs often need to be paused or restarted for various reasons. For instance, an instance might go down, memory issues may require changing instance types, or DB throttling might force you to shuffle input data and retry. In such cases, batch jobs must be designed with idempotency in mind to handle repeated processing gracefully. Idempotency here means not only that repeated tasks won’t cause issues but also that tasks already processed can be flagged to avoid unnecessary reprocessing. 5. Confirm the Data Flow . We currently operate across five global regions. For batch jobs involving file transfers, binary data may cross regions. Efficiently managing this binary flow is critical. Once, despite having a well-designed system, we overlooked binary flow optimization, which significantly hurt performance and required redevelopment. 6. Don’t Separate Code for Batches Sharing the Same Life Cycle . Minimizing code duplication is a developer’s mission. For batch jobs with shared life cycles, separating code can lead to significant problems. For example, this year, a new feature was deployed on our WAS, but the batch didn’t include the corresponding code update, which almost resulted in user data loss. ",
+    "url": "/docs/retrospect/2021#batch-jobs",
     
-    "relUrl": "/docs/retrospect/2021#배치-작업"
+    "relUrl": "/docs/retrospect/2021#batch-jobs"
   },"270": {
-    "doc": "서버 개발자, 2021 회고",
-    "title": "설계",
-    "content": "위에서도 말했듯 올해는 설계를 하며 배운점이 많다. 설계에서는 어떤 어떤 점들을 배웠다보다는 DDD 스터디와 적용을 함께 하면서 설계하는 능력이 성장하는 것을 느꼈다. 1. DDD는 배우면 배울수록 쉽지 않다. 이전에 DDD에 따라 설계했다고 생각한 모듈들이 조금 더 공부하고 보니 불편한 것들이 많았다. 하면서 느는 것 같긴한데, 아직도 명확하지 않는게 느껴진다. 2. 통계도 설계에 함께 포함되어야 한다. 요구사항을 뽑아서 설계를 진행할 때, 통계가 요구사항에 들어가지 않았다. 서비스가 진행되고 통계를 뽑으려면 이미 늦고, 불편한 작업들(우리는 로그를 까보거나 batch를 통해) 필요할 때마다 통계를 요청하게되어 굉장히 불편했다. 서비스하는 입장이라면 통계를 빠르고 쉽게 전달해줄 수 있는 구조가 되야하는 것 같다. 3. first class object를 쓰자. 우리가 가진 모듈 중에 개발된지 오래되고 우리팀 멤버들이 개발에 참여하지 않은 모듈이 있다. 이게 굉장히 가독성이 떨어지는데 hashmap&lt;stirng, object&gt; 이렇게 hashmap을 굉장히 많이 사용한다. 끔찍한건 저기 object에 hashmap이 다시 들어가기도 한다는 것. 정말 최악이다. 그리고 id를 string이 아닌 ID라는 wrapper class를 만들어서 써봤는데 명확하고 실수가 줄어들어 좋았다. ",
-    "url": "/docs/retrospect/2021#%EC%84%A4%EA%B3%84",
+    "doc": "Server Developer, 2021 yearly Retrospection",
+    "title": "Design",
+    "content": "As mentioned earlier, I learned a lot about design in 2021. Rather than listing specific lessons, I focused on studying and applying DDD (Domain-Driven Design), which noticeably improved my design skills. 1. The More You Learn DDD, the Harder It Feels . Previously, I thought I had designed modules following DDD principles. However, after studying more, I realized there were many areas for improvement. While I feel I’m getting better, I still find parts of DDD unclear. 2. Include Statistics in the Design . When extracting requirements for design, I didn’t include statistics as part of the requirements. This resulted in inconvenient workarounds, like analyzing logs or creating additional batch jobs, every time statistics were needed. Services should be designed to quickly and easily provide relevant statistics. 3. Use First-Class Objects . We have older modules developed before our team took over, and they’re often hard to read due to excessive use of structures like HashMap&lt;String, Object&gt;. Worse, these objects sometimes contain nested HashMaps, making them extremely confusing. By introducing wrapper classes (e.g., using an ID class instead of plain strings), we reduced errors and improved clarity. ",
+    "url": "/docs/retrospect/2021#design",
     
-    "relUrl": "/docs/retrospect/2021#설계"
+    "relUrl": "/docs/retrospect/2021#design"
   },"271": {
-    "doc": "서버 개발자, 2021 회고",
-    "title": "db",
-    "content": "올해는 유독 database 관련 작업들이 많았다. 1. db 통합 . 한 모듈은 특정 entity를 두 db에 저장하고 있었다. 여러 database를 사용할 수 있고 db를 옮기거나 추가하기 좋은 확장성을 갖는 interface 구조를 설계하는게 굉장히 중요하다는 것에는 동의하나, 의미 없이 db를 두 벌 사용하는 경우는 피하는게 좋다. 예를 들면, blog에 page db는 cassandra를 쓰고 comment는 dynamodb를 쓴다면 뭐 그러려니 하겠지만, 우리는 page의 db를 cassandra와 dynamodb를 같이 쓰고 있었다. (히스토리가 있는 윗분들의 예전 결정) 두 db를 쓰는건 interface가 잘 나뉘어 있어도 개발(특히 db와 연관된 batch)에 굉장한 부담이 되었다. db 통합은 간단하진 않지만 이걸로 오는 개발/코드리뷰/테스트작성의 효율은 굉장히 컸다. 2. dynamo db table 통합 . nosql인 dynamodb를 mysql처럼 테이블을 종류별로 나눠 사용하던 것을 통합했다. 예를들면 page main table과 page meta table이 있던걸 합치는 작업인데, 이 또한 개발/코드리뷰/테스트작성에 굉장한 효율을 가져왔다. 특히 table 통합 이후에 elpased time이 절반으로 줄었다. 서비스 응답 시간에서 가장 중요한건 DB라는 말이 생각난다. 3. dynamodb의 blob limit 문제 . dynamodb에 대해 좀 더 이해하는 시간이 되었다. LSI를 만들 때는 조심해야 한다. 이 내용은 지난번에 정리한 DynamoSizeLimitException를 참고하면 좋겠다. 2021년에는 2020년보다는 재미있는 작업들을 많이 해보지 못한 것 같아서 아쉽다. 일을 많이 한 것 같은데, 아직도 짐처럼 남아있는 작업들이 있기도 하다. 22년에도 설계를 더 잘하고, 기술적으로는 새로운 기술들도 더 배우고 익숙해지는 한 해가 되었으면 좋겠다. ",
-    "url": "/docs/retrospect/2021#db",
+    "doc": "Server Developer, 2021 yearly Retrospection",
+    "title": "Database",
+    "content": "This year involved a lot of database-related work. 1. Database Consolidation . One module stored a single entity across two databases. While having interfaces that support multiple databases is good for flexibility, using multiple databases without a clear purpose should be avoided. For example, using Cassandra for pages and DynamoDB for comments might make sense. However, we were storing the same page data in both Cassandra and DynamoDB (due to historical decisions). Consolidating databases was challenging but greatly improved efficiency in development, code reviews, and testing. 2. DynamoDB Table Consolidation . We merged multiple DynamoDB tables that were previously split unnecessarily (e.g., separate tables for page main data and page metadata). This brought significant efficiency in development, code reviews, and testing, and even reduced elapsed time by half. This reminded me of the saying, “The database is the most critical factor for service response time.” . 3. DynamoDB Blob Limit Issues . I gained a deeper understanding of DynamoDB this year. For example, creating LSI (Local Secondary Indexes) can lead to issues if not handled carefully. For more details, refer to DynamoSizeLimitException. Looking back, 2021 felt less exciting than 2020 in terms of the work I got to do. While I feel like I accomplished a lot, there are still tasks that weigh on me. For 2022, I hope to further improve my design skills and explore and master new technologies. ",
+    "url": "/docs/retrospect/2021#database",
     
-    "relUrl": "/docs/retrospect/2021#db"
+    "relUrl": "/docs/retrospect/2021#database"
   },"272": {
-    "doc": "서버 개발자, 2021 회고",
-    "title": "서버 개발자, 2021 회고",
-    "content": "21년도 정신 없이 시간이 지났다. 올 해 기억에 남는 것들을 세 가지로 추려서 정리해보았다. ",
+    "doc": "Server Developer, 2021 yearly Retrospection",
+    "title": "Server Developer, 2021 yearly Retrospection",
+    "content": "The year 2021 went by fast. I sorted out three things that I remember this year and organized them. ",
     "url": "/docs/retrospect/2021",
     
     "relUrl": "/docs/retrospect/2021"
@@ -3520,30 +3520,30 @@
     
     "relUrl": "/docs/aws/cost-efficiency"
   },"503": {
-    "doc": "서버 개발자, 2022 회고",
-    "title": "업무 자동화, 혹은 프로젝트 완성",
-    "content": "이슈 대응을 위한 bot을 만들면서 업무 자동화라는 생각을 했다. 우리 파트 리더께서 이건 ‘업무 자동화가 아니라 프로젝트를 제대로 완성하는 것’이라는 말씀을 하셨다. 이슈 대응을 위한 프로세스까지도 프로젝트의 일부인데 우리가 놓쳤다는 것. 맞는 것 같다. 그런데 통계며 이슈 대응까지 생각하며 프로젝트를 설계하고 완성하는게 사실 쉽지 않다. 올해처럼 바쁜 일정에는 더더욱이. 그래도 올해 했던 일들을 정리해본다. 1. 이슈 대응 프로세스 만들기 . 우리가 맡은 한 모듈의 클라이언트는 이슈 대응을 위해 한 달에 약 80건 정도의 요청을 한다. 우리는 여태까지 이걸 받으면 빠르면 한 시간에서, 늦으면 일 주일 내로 스크립트를 돌려서 결과가 나오면 응답해주는 프로세스를 갖고 있었다. 생각보다 오래 걸리지 않지만 컨택스트 스위칭 비용이 컸던 일이다. 하루는 이 작업을 하다가 재미가 없어서 재미있는 일로 바꾸기 위해 slack bot을 만들었다. 일주일 정도 일이 끝나고 시간을 조금씩 써서 작업한 봇으로 클라이언트 이슈 대응을 대처했다. | 슬랙 봇 만들기 링크 - /docs/automation/python-bot | . 봇 제작으로 얻은 효과 . | 이슈 대응에 드는 시간 월 40시간 감소 (30분 * 80건) . | 봇 도입 이후 클라이언트는 대응이 늦어 요청하지 못한 요청을 더 많이 했다. | . | 이슈 대응을 기다리는 클라이언트 대기 시간 월 80일 감소 (평균 1일 * 80건) . | 말 그대로 대기시간이기 때문에 일을 못하는건 아니지만, 필요한 경우 주말에도 바로 응답받을 수 있는 프로세스가 구축되었다. | . | 봇 제작을 한번 해보니 기능 추가는 쉬워서 다른 모듈에서 사용할 기능들도 봇에 추가되었다. | . 2. 서비스 장애를 보고받기 . 우리는 grafana를 통해 서비스를 모니터링하는데, grafana는 자주 보게되지 않는다. 모듈마다 다른 임계 성공률(예를들면 99.0%) 이하로 떨어질 경우 알람을 받게 되는데 신규 모듈에는 ‘우리가 모르는 500에러는 없게하자’는 생각으로 개발을 시작했다. 예측되는 장애 상황에 slack noti를 날리는 aws lambda를 구축해서 500 에러 장애 상황을 바로 확인할 수 있도록 구현했다. 3. 통계 설계하기 . 이미 완성된 모듈에서 통계를 뽑는건 곤혹이다. 일 년에 한 두번 요청하는 통계를 뽑는데 db를 dump하는 작업을 하거나 1년치 로그를 조회하는 경우가 있었다. 신규 모듈에서는 설계 시점부터 통계를 같이 설계하려고 노력하고 통계를 정리하는 배치 모듈을 같이 개발했다. ",
-    "url": "/docs/retrospect/2022#%EC%97%85%EB%AC%B4-%EC%9E%90%EB%8F%99%ED%99%94-%ED%98%B9%EC%9D%80-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%99%84%EC%84%B1",
+    "doc": "Server Developer, 2022 yearly Retrospection",
+    "title": "Automation or Project Completion",
+    "content": "While creating a bot to handle issues, I thought about automating work. However, our team leader said, “This is not about automation; it’s about properly completing the project.” The issue-handling process is also part of the project, and we had overlooked it. He was right. But designing and completing a project while considering statistics and issue handling isn’t easy—especially during a busy year like this one. Still, I want to reflect on the things I accomplished this year. 1. Building an Issue Response Process . One module I manage receives around 80 client issue requests per month. So far, we’ve had a process where we manually ran scripts to respond to these requests, taking from an hour to a week. While it didn’t take very long, the frequent context-switching made it costly. One day, I was working on these tasks and got bored, so I built a Slack bot to make it more fun. After wrapping up the tasks that week, I used some spare time to create the bot, which now handles client issues. | refer Building a Slack Bot | . Benefits of the bot . | Saved 40 hours per month on issue handling (30 minutes * 80 requests). | I found out that the client didn’t request it more because of the slow response. | With the bot, clients requested more. | . | Reduced client wait time by 80 days per month (1 day * 80 requests). | While this was idle time, having a process to respond quickly—even on weekends—was beneficial. | It’s not that client can’t work because it is just waiting time, but I established process that allows client to get a response right away even on weekends. | . | Adding features to the bot became easy, so other modules’ function were also integrated. | . 2. Reporting Service Failures . We use Grafana to monitor services, but we don’t see it very often. We receive alerts if module success rates drop below a threshold (e.g., 99.9%). For new modules, we started with the idea that there should be “no unknown 500 errors.” To address this, We set up an AWS Lambda that sends Slack notifications when unexpected 500 errors occur, allowing us to identify issues immediately. 3. Designing Statistics . Extracting statistics from completed modules can be painful. Sometimes, we had to dump databases or query a year’s worth of logs to answer once-a-year requests. For new modules, We focused on designing statistics from the outset and developed a batch module for organizing them. ",
+    "url": "/docs/retrospect/2022#automation-or-project-completion",
     
-    "relUrl": "/docs/retrospect/2022#업무-자동화-혹은-프로젝트-완성"
+    "relUrl": "/docs/retrospect/2022#automation-or-project-completion"
   },"504": {
-    "doc": "서버 개발자, 2022 회고",
-    "title": "tactical DDD",
-    "content": "작년부터 이어지는 DDD를 통한 개발. 우리팀은 작년 말부터 하나의 모듈을 개발했고, 연중에 하나의 모듈을 리팩토링하고, 연말에 하나의 모듈을 새로 개발했다. 총 세 건의 모듈을 DDD로 개발하면서 DDD에 대한 개념을 제대로 익힐 수 있었던 것 같다. 올해 나는 Vaughn Vernon의 Implement Domain Driven Design의 tactical 부분을 읽고 정리했다. | domain events | Value Object | Domain Service | Entity | aggregate | . 사실 개념들을 요약해서만 읽어도 ‘아하 이거구나’ 싶지만 개발할 때 팀원들 간의 DDD에 대한 이해도와 생각은 다 달랐다. 정리한 내용들을 팀 내에 짧게 공유하기도 하고 내용을 기반으로 배운 것들이 많았다. 덕분에 설계 능력도 성장한 것 같다. 1. aggregate . aggregate은 반버논 아저씨도 DDD에서 가장 애매하다고 말한 부분이다. 우리 팀 내에서도 의견이 가장 분분했던 부분이기도 하다. 우리는 한 모듈을 엄청나게 큰 aggregate으로 작성했는데, 사실 이게 코드스멜이 느껴져서 aggregate에 대해 공부를 더 해보게 되었다. 책에서 말하는 큰 aggregate의 단점을 직접 설계한 모듈에서 느낄 수 있어서 더 배울점이 많았던 것 같다. aggregate은 크기도 중요하지만 어떤 기준으로 나누느냐가 굉장히 중요하다는 것을 배웠다. 2. domain events . 사실 우리팀은 domain event를 사용하는 팀이 아닌데, 이 개념을 공부하고 팀 내에 공유하고 나선 domain event를 적용해야 하는 부분들이 꽤 많았다라는 피드백을 받았다. domain model의 commit 시점에 event를 전달하고 이걸 처리하는 프로세스가 우리 프로젝트에 바로 적용하기 애매해서 거의 적용하진 못했다. 그치만 ‘이건 domain event면 좋았겠다’라는 생각을 할 수 있게 되었다. ",
+    "doc": "Server Developer, 2022 yearly Retrospection",
+    "title": "Tactical DDD",
+    "content": "Continuing from last year, we’ve been developing with DDD (Domain-Driven Design). This year, We . | Developed one module early in the year. | Refactored one module mid-year. | Built a new module at the end of the year. | . Through these three projects, I deepened my understanding of DDD. This year, I studied and summarized the tactical parts of Vaughn Vernon’s Implementing Domain-Driven Design . | Domain Events | Value Object | Domain Service | Entity | Aggregate | . Even though reading summaries can give an “aha!” moment, team members had different interpretations of DDD concepts during development. I shared my summaries within the team, which led to valuable discussions and personal growth in design skills. 1. Aggregate . Vaughn Vernon mentions that aggregates are the most ambiguous part of DDD. This was also the most debated topic within our team. We initially designed one module with an overly large aggregate, which felt like a code smell. Studying aggregates further taught me the importance of size and criteria for dividing them. Experiencing the downsides of large aggregates firsthand was a great learning opportunity. 2. Domain Events . Our team doesn’t usually use domain events. However, after studying the concept and sharing it internally, I received feedback suggesting many areas where domain events could be applied. While it wasn’t feasible to adopt domain events immediately due to project constraints, I learned to recognize situations where they would have been beneficial. ",
     "url": "/docs/retrospect/2022#tactical-ddd",
     
     "relUrl": "/docs/retrospect/2022#tactical-ddd"
   },"505": {
-    "doc": "서버 개발자, 2022 회고",
-    "title": "팀",
-    "content": "우리 팀은 팀 단위의 협업이 잘되고 효율도 좋다고 생각한다. 올해는 우리 팀의 프로세스 몇 가지가 좋은 방향으로 변경되었다. 1. 스토리 표준화와 명확하게 나누기 . 우리 팀은 작업의 단위를 스토리로 나눈다. 올 해는 개발 스토리를 정리하면서 표준화 하는 작업을 했는데 이 작업을 통해 스토리를 만드는 시간도 줄고, 스토리에서 놓치는 작업없이 마무리할 수 있었다. 표준화된 개발 스토리는 이렇다. | 구현 설계 | acceptance test 작성 | interface 구현 | scenario test 작성 | domain 구현 | usecase 구현 | scenario test pass | acceptance test pass | 회고하기 | . 이런 알찬 구성에서 필요하지 않은 카드는 설계를 하면서 제거한다. 예를 들면 domain의 일부만 수정되어 외부 변경사항이 없다면 test나 interface 카드는 삭제하는 식이다. 스토리를 명확하게 분리하면 팀원들간에 작업 분배가 원활하다. 2. 스토리 포인트 추정 . 우리는 원래 시간 단위의 추정을 해왔다. 스토리 포인트라는 개념이 처음엔 낯설었는데 스토리 포인트로 작업량을 기준으로 추정을 하는 방식으로 추정 방식을 변경하였다. 스토리 포인트 추정과 팀의 MH를 통해 우리가 어느정도의 스토리를 처리할 수 있는지를 정리하고 있다. 재밌는건 리더는 스토리 포인트를 최대한 많이 가져가려고 한다는 것. (우리는 스크럼 리더를 돌아가면서 한다) . 3. 우선순위 기반 일정 관리 . 원래도 스토리들을 backlog에 쌓아두고 일정관리를 했었지만. 올해는 스토리들에 우선순위(high, mid, low)를 두고 우선순위를 조정하면서 스크럼을 진행했다. 가장 급한 우선순위들을 먼저 보고 스프린트 계획을 세우는 방식이다. 한 눈에 우선순위가 들어오고, 우선순위와 우리가 추정했던 스토리 포인트를 기반으로 스프린트의 스토리들을 결정했다. 결국 할 수 없는 수준의 스토리를 스프린트에 가져온다거나 사실 급하지 않은 일을 먼저 처리하는 일들이 줄었다. 중요한 일들을 할 수 있을지를 어느정도 판단해서 스프린트를 세울 수 있었다. 4. 번외. 팀 리더 . 연 말에는 회사에서 교육을 가게 되었는데 교육 마지막엔 일주일짜리 팀 프로젝트가 있었다. 서로 다른 팀에서 온 사람들과 진행하게 되었는데. 이 교육 마지막 날 밤을 세워 프로젝트를 마무리하는 팀들도 많다고 했다. 팀이 첫 회의를 할 때 프로젝트 설계를 제대로 진행하는 분위기가 아닌 것 같아서 내가 리더아닌 리더 역할을 하게 되었다. 설계 회의, 설계 내용 공유, 테스트 작성, 인터페이스 작성과 작업 분배. 우리 팀이 팀 단위의 일과 리더로서의 역할을 잘 해내고 있다는 것을 느낄 수 있었고. 처음으로 다른 팀에서 리더를 해본 경험이라 재미있었다. 올해의 교훈은 같은 일을 같은 방식으로 하면 재미없다. 새로운 일을 하려고 하는데 쉽지 않았다. 내년에는 새로운 일을 아니면 새로운 방식으로 좀 더 재미있게 일할 수 있었으면 좋겠다. ",
-    "url": "/docs/retrospect/2022#%ED%8C%80",
+    "doc": "Server Developer, 2022 yearly Retrospection",
+    "title": "Team",
+    "content": "I think our team collaborates well and operates efficiently. This year, some of our team processes improved significantly. 1. Standardizing and Splitting Stories . We break tasks into stories. This year, we standardized how we document development stories, reducing the time spent creating stories and ensuring no tasks were missed. A standardized development story looks like this. | Design the implementation. | Write acceptance tests. | Implement interfaces. | Write scenario tests. | Implement the domain. | Implement use cases. | Pass scenario tests. | Pass acceptance tests. | Retrospect. | . Unnecessary cards are removed during the design phase. For example, if only part of the domain changes without external impact, tests or interface cards can be discarded. Clearly splitting stories made task distribution smoother. 2. Story Point Estimation . We previously estimated tasks in amount of time. we switched out estimation to story points, which estimate based on amount of work. With story points and team MH (man-hours), we now understand how many stories we can handle. Interestingly, our rotating Scrum leaders tend to aim for maximum story points. 3. Priority-Based Schedulingbgh . We manage schedules by stacking stories in a backlog. This year, we assigned priorities (high, mid, low) to stories and adjusted them during Scrum planning. By focusing on urgent priorities first and aligning story points with sprint goals, we reduced the risk of over-planning or addressing less critical tasks first. 4. Bonus. Team Leadership . At year-end, I attended company training that included a week-long team project. The project involved working with members from different teams. In this training, many teams said they set up nights to complete their final projects. In the first meeting, I noticed the meeting didn’t go well, so I took the lead. I led the team through design discussions, sharing plans, writing tests, creating interfaces, distributing assignments, etc. This experience reinforced my confidence in both team-based work and leadership. It was fun being a leader for the first time outside my usual team. Lesson of the Year is Doing the same work in the same way is boring. I wanted to try new things but it was not easy. Next year, I hope to work in a new way or on something entirely new for more fun. ",
+    "url": "/docs/retrospect/2022#team",
     
-    "relUrl": "/docs/retrospect/2022#팀"
+    "relUrl": "/docs/retrospect/2022#team"
   },"506": {
-    "doc": "서버 개발자, 2022 회고",
-    "title": "서버 개발자, 2022 회고",
-    "content": "22년은 무슨 일을 했는지 모르겠다. 쏟아지는 일정을 우선순위에 맞게 쳐내다가 한 해가 지나간 것 같다. ASAP으로 위에서 내려오는 요구사항들을 만족시키다보니 여유를 갖고 보수하거나 개발할만한 시간이 부족했던 것 같아 아쉽다. ",
+    "doc": "Server Developer, 2022 yearly Retrospection",
+    "title": "Server Developer, 2022 yearly Retrospection",
+    "content": "The year seemed to pass while I handled tasks in order of priority. It’s a bit disappointing that I couldn’t spare enough time to polish or develop things at a relaxed pace because I was busy fulfilling top-down ASAP requests. | Automation or Project Completion | Tactical DDD | Team | . ",
     "url": "/docs/retrospect/2022",
     
     "relUrl": "/docs/retrospect/2022"
@@ -5081,79 +5081,79 @@
     
     "relUrl": "/docs/tools/site/epoch"
   },"726": {
-    "doc": "ZGC란? ZGC 이해하기",
-    "title": "ZGC 사용법",
-    "content": "ZGC는 application이 실행되는 동안 동시에 GC를 처리한다. 때문에 반응 속도에 미치는 영향을 최소화할 수 있다. web application 같은 경우, 동시에 많은 요청을 처리해야 하기 때문에 ZGC의 빠른 반응과 확장성이 유리하다. 하지만 너무 작은 메모리(8MB 이하)에서는 사용하지 않는 것이 좋다. 사용해 보기 . | 기본적으로 G1 GC를 사용한다. | Throughput가 부족하다면 → Parallel GC로 전환. | STW가 너무 길다면 → ZGC로 전환. | . | . ",
-    "url": "/docs/java/gc/zgc#zgc-%EC%82%AC%EC%9A%A9%EB%B2%95",
+    "doc": "what is ZGC?",
+    "title": "ZGC usage",
+    "content": "At its core, ZGC is a concurrent garbage collector, meaning all heavy lifting work is done while Java threads continue to execute. This greatly limits the impact garbage collection will have on your application’s response time. ZGC is a scalable low-latency garbage collector capable of handling heaps ranging from 8MB to 16TB in size, with sub-millisecond max pause times. ZGC’s low latency and ability to scale to handle large live sets would make it a good candidate for web applications. Web applications frequently service many requests simultaneously, often resulting in maintaining larger live sets. Consistent responsiveness also helps with system stability. This pairs well with ZGC’s strengths. On the other hand, while ZGC can operate with heaps as small as 8 MB, it is strongly discouraged to use ZGC in such a scenario. Try them out . Start With the default GC, G1 . | If the Throughput is insufficient . | try enabling Parallel GC | . | If pause times are too long . | try ZGC | . | . ",
+    "url": "/docs/java/gc/zgc#zgc-usage",
     
-    "relUrl": "/docs/java/gc/zgc#zgc-사용법"
+    "relUrl": "/docs/java/gc/zgc#zgc-usage"
   },"727": {
-    "doc": "ZGC란? ZGC 이해하기",
+    "doc": "what is ZGC?",
     "title": "ZGC cycle",
-    "content": "ZGC는 몇 가지 STW을 가진다. Pause Mark Start, Pause Mark End, Pause Relocate Start 같은 작업이 있다. 이 STW는 1밀리초 이하로 매우 짧으며, 가비지 컬렉션 과정에서 데이터의 정확성과 일관성을 유지하기 위해 필요하다. | STW | 목적 | 이유 | . | Pause Mark Start | 시작 지점(root references) 기록 | 마킹 시작 전에 일관성을 보장하기 위해 | . | Pause Mark End | 마킹 완료 및 참조 처리 | 모든 살아 있는 객체를 확인하기 위해 | . | Pause Relocate Start | 객체 이동 준비 | 이동 전 일관성을 유지하기 위해 | . ",
+    "content": "The ZGC (Z Garbage Collector) performs a few Stop-the-World (STW) pauses, such as Pause Mark Start, Pause Mark End, and Pause Relocate Start. These pauses are brief, typically under a millisecond, and are necessary to ensure consistency and correctness in the garbage collection process. Here’s why these pauses occur. | Pause Name | Purpose | Reason for STW | . | Pause Mark Start | Capture root references | Ensure consistency of the root set before marking starts. | . | Pause Mark End | Finalize marking and process references | Ensure all live objects are identified and prepare for relocation. | . | Pause Relocate Start | Finalize the relocation set and prepare for object movement | Ensure consistency before relocating objects. | . ",
     "url": "/docs/java/gc/zgc#zgc-cycle",
     
     "relUrl": "/docs/java/gc/zgc#zgc-cycle"
   },"728": {
-    "doc": "ZGC란? ZGC 이해하기",
+    "doc": "what is ZGC?",
     "title": "Colored Pointers",
-    "content": "ZGC는 포인터에 추가 정보를 넣어 객체를 추적한다. 이 정보를 사용하면 application을 멈추지 않고 객체를 관리할 수 있다. 객체가 살아있는지, 이동했는지를 이 포인터를 통해 확인할 수 있다. | 첫 16비트: 예약 공간 | 마지막 44비트: 객체 주소 | 4비트 정보 . | 마크 비트(Mark Bits): 객체가 살아 있는지 표시 | 리맵 비트(Remapped Bit): 객체가 이동했는지 표시 | 최종화 비트(Finalizable Bit): 최종 처리만 필요한 객체인지 표시 | . | . Heap Multi-Mapping . ZGC는 STW를 줄이기 위해 application이 실행 중일 때 객체를 heap 내에서 다른 물리적 위치로 이동시킨다. 객체가 이동한 위치로 접근하기 위한 방법으로 Heap Multi-Mapping을 사용한다. multi mapping을 통해 객체의 물리적 위치를 가상 메모리에서 포인터의 각 color에 해당하는 view로 매핑한다. 이 매핑 방식 덕분에 load barrier가 마지막 동기화 이후 이동된 객체를 찾을 수 있다. ",
+    "content": "Colored pointers in ZGC are just normal pointers with extra information embedded in them. This extra information helps ZGC track and manage objects during concurrent garbage collection without stopping the application. It improves the efficiency of garbage collection by allowing ZGC to track live objects, move them, and perform other tasks in the background with minimal impact on performance. | first 16 bits: remain in reserve for future use | last 44 bits: object address (16TB address space) . | 4 bits . | Mark Bits: These bits indicate if an object is marked as live or reachable. ZGC uses two alternating bits (Marked0 and Marked1) to track this. | If the pointer is colored with a “mark bit” ZGC knows this object is in use. | . | Remapped Bit: This bit tells ZGC if the pointer is pointing to an object that has been moved (remapped) during compaction. | If the pointer is colored with a “remapped bit” ZGC knows the object has been moved and will automatically follow the new memory location. | . | Finalizable Bit: This bit indicates if the object is only reachable through a finalizer. Note that finalization was designated as deprecated for removal in JDK 18. | . | . Heap Multi-Mapping . Because ZGC can move the physical location of an object in heap memory while the application is running, multiple paths need to be provided to the current physical location where the object resides. In ZGC, this is accomplished through heap multi-mapping. With multi-mapping, the physical location of an object is mapped to three views in virtual memory, corresponding to each of the pointer’s potential “colors”. This allows a load barrier to locate an object if it has been moved since the last synchronization point. ",
     "url": "/docs/java/gc/zgc#colored-pointers",
     
     "relUrl": "/docs/java/gc/zgc#colored-pointers"
   },"729": {
-    "doc": "ZGC란? ZGC 이해하기",
+    "doc": "what is ZGC?",
     "title": "Load Barriers",
-    "content": "ZGC에서 Load Barrier가 필요한 이유 . ZGC는 GC 중에(압축 단계에서) 객체를 메모리 내에서 이동할 수 있다. 객체가 이동되면, 해당 객체를 참조하는 모든 참조를 새로운 위치로 업데이트해야 한다. ZGC는 대부분의 작업을 application과 동시에 수행하기 때문에, Load Barrier는 application이 오래된 참조(잘못된 메모리 위치)를 사용하는 것을 방지한다. Load Barrier는 어떻게 작동하는지? . | 프로그램이 객체에 대한 참조를 불러올 때(예: 필드 접근, 배열 접근 등), Load Barrier가 이 접근을 가로챈다. | 해당 객체가 이동되었는지 확인한다. (즉, relocation set 에 속하는지 확인). | 객체가 이동된 경우, Load Barriers는 참조를 새 위치로 업데이트한다. | 이 과정은 application이 실행 중일 때 백그라운드에서 진행되며, ZGC가 객체를 이동하더라도 프로그램은 항상 올바른 위치의 객체에 접근할 수 있다. | . ZGC Load Barrier의 장점 . | application STW 없음: Load Barrier 덕분에 ZGC는 객체를 이동하거나 메모리를 관리하면서도 application을 멈추지 않는다. | 일관성: Load Barrier는 프로그램이 항상 올바른 메모리 위치에서 객체를 읽도록 보장한다. | 동시성: ZGC는 객체를 이동하는 작업을 프로그램 실행과 동시에 안전하게 처리할 수 있어 GC로 인한 방해를 최소화한다. | . ",
+    "content": "Why Do We Need a Load Barrier in ZGC? . In ZGC, objects can be moved around in memory during garbage collection (in the compaction phase). If an object is relocated, any reference to it must be updated to point to the new location of the object. Since ZGC performs most of its work concurrently with the application, the load barrier ensures that the program doesn’t accidentally use stale references (outdated memory locations) during this process. How Does It Work? . | When a program loads a reference to an object (say, via a field access or array access), the load barrier intercepts this access. | If the object has been moved during garbage collection (i.e., it’s part of the relocation set), the load barrier ensures that the reference is updated to point to the new location of the object. | This process happens in the background while the application is running, and it ensures that the application always accesses the correct location of the object, even if ZGC has moved it. | . Benefits of Load Barriers in ZGC . | No Application Pause: ZGC can move objects and manage memory without needing to stop the application, thanks to the load barrier. The barrier allows the application to continue running while still being safe and consistent. | Consistency: The load barrier ensures that the program always reads the correct memory location, even when objects are relocated or modified during garbage collection. | Concurrency: ZGC can do concurrent work, like relocating objects, while the application continues to access them as if nothing changed, making garbage collection less intrusive. | . ",
     "url": "/docs/java/gc/zgc#load-barriers",
     
     "relUrl": "/docs/java/gc/zgc#load-barriers"
   },"730": {
-    "doc": "ZGC란? ZGC 이해하기",
+    "doc": "what is ZGC?",
     "title": "Regions",
-    "content": ". ZGC는 G1 GC처럼 메모리를 영역으로 나눠서 관리한다. 하지만 ZGC의 영역은 ZPages로 정의되며, 더 유연한 구조를 갖는다. 작은 영역, 중간 영역, 큰 영역으로 나뉘며, 프로그램에서 필요한 메모리 크기에 따라 활성화된 영역의 개수가 동적으로 조절된다. 작은 영역 . | 크기: 2MB | 크기가 256KB 이하(작은 영역의 1/8 크기)인 객체는 작은 영역에 저장된다. | . 중간 영역 . | 크기: 32MB(힙 크기가 1GB 이상일 때) | 크기가 중간 영역 크기의 1/8 이하인 객체가 여기에 저장된다. | . 큰 영역 . | 크기: 객체 크기에 맞춰 2MB 단위로 조정 | 크기가 13MB인 객체는 14MB 영역에 저장된다. | 중간 영역에 들어갈 수 없을 만큼 큰 객체는 큰 영역에 저장된다. | . ",
+    "content": ". This follows a similar pattern to G1 GC, which also uses memory regions. However, ZGC regions, internally defined as ZPages, are more dynamic, with small, medium, and large sizes; the number of active regions can increase and decrease depending on the needs of the live set. Small Regions . | size: 2MB | Objects less than 1/8th (12.5%) the size of a small region, so less than or equal to 256 KB, are stored in a small region. | . Medium Regions . | size: 32MB (if heap bigger than 1GB) | Objects 1/8th (12.5%) or less in size than the set size of a medium region will be stored there. | . Large Regions . | size: tightly fitted in 2 MB increments to the object’s size. | 13 MB object would be stored in a 14 MB large region. | Any object too large to fit in a medium region will be placed in its own large region. | . ",
     "url": "/docs/java/gc/zgc#regions",
     
     "relUrl": "/docs/java/gc/zgc#regions"
   },"731": {
-    "doc": "ZGC란? ZGC 이해하기",
-    "title": "G1 GC와 비교",
-    "content": "| 특징 | G1 GC | ZGC | . | 목표 | 짧은 멈춤 + 높은 처리 속도 | 초저지연 | . | 힙 크기 | 중간 ~ 큰 메모리 (최대 32GB 이상) | 아주 큰 메모리 (최대 16TB) | . | 멈춤 시간 | 예측 가능하지만 힙 크기에 비례해 증가 | 항상 짧음 (10ms 미만) | . | 압축(compaction) | 멈춤 시간 중 처리하거나 단계적으로 진행 | 완전히 동시 처리 | . | 처리 속도 | 높음 | 약간 낮음 | . ",
-    "url": "/docs/java/gc/zgc#g1-gc%EC%99%80-%EB%B9%84%EA%B5%90",
+    "doc": "what is ZGC?",
+    "title": "vs G1GC",
+    "content": "| Feature | G1GC | ZGC | . | Primary Goal | Low pauses + good throughput | Ultra-low pauses | . | Heap Size | Medium to large (up to ~32 GB+) | Very large (up to 16 TB) | . | Pause Times | Predictable but grow with heap size | Always very low (&lt;10 ms) | . | Compaction | Stop-the-world or incremental | Fully concurrent | . | Throughput | Higher | Slightly lower | . | Concurrent Phases | Partial | Mostly concurrent | . ",
+    "url": "/docs/java/gc/zgc#vs-g1gc",
     
-    "relUrl": "/docs/java/gc/zgc#g1-gc와-비교"
+    "relUrl": "/docs/java/gc/zgc#vs-g1gc"
   },"732": {
-    "doc": "ZGC란? ZGC 이해하기",
+    "doc": "what is ZGC?",
     "title": "reference",
     "content": ". | https://wiki.openjdk.org/display/zgc/Main | https://dev.java/learn/jvm/tool/garbage-collection/zgc-overview/ | https://dev.java/learn/jvm/tool/garbage-collection/zgc-deepdive/ | https://cr.openjdk.org/~pliden/slides/ZGC-PLMeetup-2019.pdf | . ",
     "url": "/docs/java/gc/zgc#reference",
     
     "relUrl": "/docs/java/gc/zgc#reference"
   },"733": {
-    "doc": "ZGC란? ZGC 이해하기",
-    "title": "ZGC란? ZGC 이해하기",
-    "content": "Java GC Type . Serial GC Parallel GC CMS GC G1 GC ZGC . Z Garbage Collector(ZGC)는 빠르고 효율적인 GC다. ZGC는 메모리가 커지더라도 STW의 시간을 상수 값으로 가져가는 것을 목표로 설계되었다. 설계 철학에 맞게 GC 과정 중 1ms 이상의 STW는 없다고 한다. (문서마다 수 ms 라고 표현하기도 함) 그래서 빠른 반응이 중요한 프로그램에 적합하다. ZGC는 작은 메모리(몇백 MB)부터 아주 큰 메모리(16TB)까지 잘 작동하지만, 큰 메모리에서 사용이 권장된다. ZGC는 JDK 11에서 experimental로 도입되었고, JDK 15에서 정식 기능으로 채택되고 JDK 21에서 개선됐다. ",
+    "doc": "what is ZGC?",
+    "title": "what is ZGC?",
+    "content": "Java GC Type . Serial GC Parallel GC CMS GC G1 GC ZGC . The Z Garbage Collector (ZGC) is a scalable low latency garbage collector. ZGC performs all expensive work concurrently, without stopping the execution of application threads for more than a millisecond. It is suitable for applications which require low latency. Pause times are independent of the heap size that is being used. ZGC works well with heap sizes from a few hundred megabytes to 16TB. ZGC was initially introduced as an experimental feature in JDK 11, and was declared Production Ready in JDK 15. In JDK 21 was reimplemented to support generations. ",
     "url": "/docs/java/gc/zgc",
     
     "relUrl": "/docs/java/gc/zgc"
   },"734": {
-    "doc": "linux grep 사용법, 터미널 시니어처럼 사용하기",
-    "title": "grep options",
-    "content": "grep을 그냥 써도 좋지만 사용하면 유용한 옵션들이 있다. grep을 아는 것과 grep을 효율적으로 쓸 수 있는 것은 다른 것이다. grep option 테스트에 활용할 file 만들기 . if __name__ == \"__main__\": with open(\"numbers.txt\", 'w') as fw: for i in range(10000): fw.write(\"numbers: \" + str(i) + \" ...\\n\") . grep의 옵션을 확인하기 앞서 grep을 테스트할 문서를 만들어본다. 0부터 9999까지 갖는 file을 만들어 grep을 테스트한다. 이해가지 않는 부분이 있다면 테스트 file을 활용하면 더 이해하기 쉽다. 대소문자 무시하기 . grep Num numbers.txt grep -i Num numbers.txt . grep -i 검색하는 문자에서 대소문자를 무시(ignore)한다. 개수 지정하기 . grep -m 5 1234 numbers.txt . grep -m 1 처음 매칭되는 1개의 라인(max count)만 출력한다. line number 출력하기 . grep -n 1234 numbers.txt . grep -n file의 몇 번째 라인(number)에 있는지도 함께 출력한다. 매칭되지 않는 것 확인하기 . grep -v 1 numbers.txt . grep -v 매칭되지 않는(invert match) 라인만 출력한다. 필요한 범위까지만 확인하기 . grep -o 1234 numbers.txt grep -o \".\\{0,3\\}1234.\\{0,3\\}\" numbers.txt . grep -o 매칭되는 결과만(only match) 출력한다. -o 에서는 정규식을 활용하여 검색하고자 하는 문자의 앞 뒤만 출력하도록 할 수 있다. -o를 사용하면 하나의 라인이 굉장히 긴 경우에서 필요한 범위의 값들만 grep 할 수 있어 용이하다. OR 하기 . grep -e 1234 -e 5678 numbers.txt . grep -e 정규식을 활용하여 검색할 수 있다. -e는 여러 개의 정규식을 동시에 검색할 수 있어서 OR 조건처럼 사용할 수 있다. 앞 뒤의 라인까지 출력하기 . grep -A 2 1234 numbers.txt grep -B 2 1234 numbers.txt grep -C 2 1234 numbers.txt . grep -A 2 찾은 line에서 뒤의(After) 2라인 표시 grep -B 2 찾은 line에서 앞의(Before) 2라인 표시 grep -C 2 찾은 line에서 앞뒤로 2라인까지 표시 . file name 출력 하기 / 안하기 . grep -H 1234 numbers.txt grep -h 1234 numbers* . grep -H fileName을 같이 출력한다. grep -h fileName을 출력하지 않는다. default 값은 여러 file을 검색할 때는 fileName이 출력된다. 단일 file을 검색할 때는 fileName이 출력되지 않는다. recursive 검색하기 . grep -r 1234 . grep -r 1234 . 현재 directory recursive 하게 grep한다. 매칭되는 count 보기 . grep -c 1234 numbers.txt . grep -c 검색어 결과의 count를 출력한다. ",
+    "doc": "How to Use Linux grep Like a Terminal Pro",
+    "title": "grep Options",
+    "content": "Using grep as-is is fine, but there are some options that can make it more useful. Knowing grep and being able to use it efficiently are very different. Creating a File to Test grep options . if __name__ == \"__main__\": with open(\"numbers.txt\", 'w') as fw: for i in range(10000): fw.write(\"numbers: \" + str(i) + \" ...\\n\") . Before learning the options, let’s create a test file for grep. The file will contain numbers from 0 to 9999 for testing. If something is unclear, working with a test file can make it easier to understand. Ignoring Case Sensitivity . grep Num numbers.txt grep -i Num numbers.txt . grep -i ignores case when searching. Limiting the Number of Matches . grep -m 5 1234 numbers.txt . grep -m 1 prints only the first 1 line (max count) that matches. Displaying Line Numbers . grep -n 1234 numbers.txt . grep -n includes the line number where the match is found. Displaying Non-Matching Lines . grep -v 1 numbers.txt . grep -v outputs only the lines that don’t match (vinvert match). Restricting Output to a Specific Range . grep -o 1234 numbers.txt grep -o \".\\{0,3\\}1234.\\{0,3\\}\" numbers.txt . grep -o prints only the matching part of the line (only match). You can use regular expressions with -o to show only the surrounding context of the match. This is especially useful for long lines where you need to extract specific parts. OR Condition . grep -e 1234 -e 5678 numbers.txt . grep -e allows searching using multiple regular expressions, working like an OR condition. Displaying Lines Before and After Matches . grep -A 2 1234 numbers.txt grep -B 2 1234 numbers.txt grep -C 2 1234 numbers.txt . | grep -A 2: Displays 2 lines After the match. | grep -B 2: Displays 2 lines Before the match. | grep -C 2: Displays 2 lines before and after the match. | . Displaying File Names . grep -H 1234 numbers.txt grep -h 1234 numbers* . | grep -H: Includes the file name in the output. | grep -h: Omits the file name from the output. | . By default, the file name is shown when searching multiple files but omitted when searching a single file. Recursive Search . grep -r 1234 . grep -r 1234 . searches recursively in the current directory. Counting Matches . grep -c 1234 numbers.txt . grep -c displays the count of matching lines. ",
     "url": "/docs/dev-tools/linux-commands/grep#grep-options",
     
     "relUrl": "/docs/dev-tools/linux-commands/grep#grep-options"
   },"735": {
-    "doc": "linux grep 사용법, 터미널 시니어처럼 사용하기",
-    "title": "grep 응용법",
-    "content": "grep만 쓴다면 command 활용에 있어서는 주니어에 가깝다. grep을 다른 명령어들과 함께 얼마나 효율적으로 사용하느냐가 퍼포먼스를 좌우한다. 기본 사용법 . grep 1234 numbers.txt grep 1234 numbers.txt* . 가장 간단한 grep의 사용법으로 간단하지만 가장 많이 쓰인다. pipeline과 사용하기 . cat numbers.txt|grep 1234 cat numbers.txt|grep 1234|cut -d ':' -f 2 . 커맨드 pipeline을 조합해 더 효율적으로 grep을 사용할 수 있다. tail과 사용하기 . tail -f numbers.txt|grep 1234 tail -F numbers.txt|grep 1234 . tail -f, tail -F 는 file에 추가되는 line을 follow 할 때 사용한다. 나는 주로 실시간으로 작성되는 서버 로그를 분석할 때 많이 사용한다. 그렇지만 1초에 수 천 라인의 로그가 찍히는 서버를 이렇게 보기란 불가능에 가깝다. 실시간으로 서버 로그를 분석할 때 tail과 함께 grep으로 원하는 로그를 실시간으로 분석할 수 있다. tail -f 현재 file name과 일치하는 file을 follow 한다. tail -F file이 변경되더라도 file의 name을 기준으로 follow 한다. 일반적으로 로그 file은 시간에 따라 rolling 되면서 file name이 바뀌고, 새로운 file이 생긴다. -f는 현재 file을 follow 하면서 rolling으로 인해 file name이 바뀌는 경우 로그가 더 출력되지 않는다. -F는 file name을 기준으로 file이 변경되면 다시 follow를 하기 때문에 rolling이 되더라도 로그가 계속 출력된다. ",
-    "url": "/docs/dev-tools/linux-commands/grep#grep-%EC%9D%91%EC%9A%A9%EB%B2%95",
+    "doc": "How to Use Linux grep Like a Terminal Pro",
+    "title": "Advanced grep Usage",
+    "content": "Using just grep might make you a beginner in command-line usage. Performance depends on how efficiently you combine grep with other commands. Basic Usage . grep 1234 numbers.txt grep 1234 numbers.txt* . This is the simplest and most commonly used way to use grep. Using with Pipeline . cat numbers.txt | grep 1234 cat numbers.txt | grep 1234 | cut -d ':' -f 2 . You can use grep more efficiently by combining it with other commands via pipelines. Using with tail . tail -f numbers.txt | grep 1234 tail -F numbers.txt | grep 1234 . tail -f and tail -F are used to follow the lines added to a file in real-time. These are commonly used to analyze server logs as they are written. However, it’s nearly impossible to monitor thousands of lines per second. By combining tail and grep, you can analyze only the desired logs in real-time. tail -f Follows the current file. tail -F Follows based on the file name, even if the file is replaced. Logs often roll over to a new file based on time. With -f, if the file name changes due to rolling, no further logs will be shown. -F, on the other hand, continues following logs even after the file name changes. ",
+    "url": "/docs/dev-tools/linux-commands/grep#advanced-grep-usage",
     
-    "relUrl": "/docs/dev-tools/linux-commands/grep#grep-응용법"
+    "relUrl": "/docs/dev-tools/linux-commands/grep#advanced-grep-usage"
   },"736": {
-    "doc": "linux grep 사용법, 터미널 시니어처럼 사용하기",
-    "title": "linux grep 사용법, 터미널 시니어처럼 사용하기",
-    "content": "grep은 linux 커맨드 중 가장 많이 쓰이는 커맨드 중 하나이다. 서버 개발자 기준으로 로그나 데이터를 조회하고 분석할 때 grep은 필수이다. ",
+    "doc": "How to Use Linux grep Like a Terminal Pro",
+    "title": "How to Use Linux grep Like a Terminal Pro",
+    "content": "grep is one of the most frequently used commands in Linux. For server developers, grep is essential when searching and analyzing logs or data. ",
     "url": "/docs/dev-tools/linux-commands/grep",
     
     "relUrl": "/docs/dev-tools/linux-commands/grep"

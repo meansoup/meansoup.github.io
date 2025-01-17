@@ -5,7 +5,7 @@
     <description>backend tech, log</description>
     <link>https://meansoup.github.io/</link>
     <atom:link href="https://meansoup.github.io/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2025-01-16T15:25:17+00:00</updated>
+    <updated>2025-01-17T16:48:21+00:00</updated>
     <id>https://meansoup.github.io</id>
     <author>
       <name></name>
@@ -4505,131 +4505,136 @@ galloping mode는 \(2^k\) 번씩 점프하며 merge sort의 속도를 증가시�
       </item>
     
       <item>
-        <title>서버 개발자, 2020 회고</title>
+        <title>Server Developer, 2020 yearly Retrospection</title>
         
-          <description>&lt;p&gt;팀을 옮기고 올해는 새로운 것들을 배워 재미있는 시간들이었다.&lt;br /&gt;
-팀 내에서 연간 회고를 진행했는데 회사에서의 나의 회고와 회고를 준비하며 느낀 올해에 대해 정리해본다.&lt;/p&gt;
+          <description>&lt;p&gt;This year has been an exciting time as I 1transitioned to a new team and learned many new things.&lt;br /&gt;
+We held an annual retrospective within the team, and while preparing for it, I reflected on my experiences and thoughts about this year at work.&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;#설계&quot;&gt;설계&lt;/a&gt;
+  &lt;li&gt;&lt;a href=&quot;#design&quot;&gt;Design&lt;/a&gt;
     &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#동기화-작업&quot;&gt;동기화 작업&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#배치&quot;&gt;배치&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#언어&quot;&gt;언어&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#synchronization-work&quot;&gt;Synchronization Work&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#batch&quot;&gt;Batch&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#language&quot;&gt;Language&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#자동화&quot;&gt;자동화&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#테스트&quot;&gt;테스트&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#automation&quot;&gt;Automation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#testing&quot;&gt;Testing&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
 
-&lt;h2 id=&quot;설계&quot;&gt;설계&lt;/h2&gt;
+&lt;h2 id=&quot;design&quot;&gt;Design&lt;/h2&gt;
 
-&lt;p&gt;올해 팀을 옮겨서 배웠던 것 중 가장 크게 배우고 느낀 것은 설계에 대한 부분이다.&lt;br /&gt;
-이전 팀에서는 유지/보수가 대부분인 업무에 새로 무언가를 개발하는 일은 잘 없기 때문에, 대규모 설계 회의를 진행해본 적이 없었다.&lt;br /&gt;
-팀을 옮기고 새로운 모듈 개발과 이어지는 배치 개발을 위한 반복된 설계가 개인적으로는 배울 점이 많았다.&lt;/p&gt;
+&lt;p&gt;One of the biggest lessons I learned this year after joining a new team was about design.&lt;br /&gt;
+In my previous team, most tasks involved maintenance, with little opportunity for new development. As a result, I rarely participated in large-scale design meetings.&lt;br /&gt;
+Joining the new team gave me the chance to repeatedly participate in designing new modules and subsequent batch development, which proved to be a valuable learning experience.&lt;/p&gt;
 
-&lt;p&gt;설계 회의에 참여해서 구조를 생각하고 그려나가고 토론하는 것이 도움이 많이 되었는데, 어떻게 토론을 해나가고 어떤 부분을 짚어나가야 하는지 알 수 있었다.&lt;br /&gt;
-처음에는 경험이 적다보니 ‘아 그렇구나’ 하고 넘어가던 설계들이 나중에는 ‘나는 이렇게 생각했는데 팀원들 아이디어가 좋구나’ 하고 넘어가는 경우도 많았다.&lt;/p&gt;
+&lt;p&gt;It was very helpful to participate in the design meeting to think, draw, and discuss the structure.&lt;br /&gt;
+I could see how to discuss it and what parts to point out.&lt;br /&gt;
+At first, I had little experience in design, so there were many designs that I thought “Oh, I see.”&lt;br /&gt;
+Later, there were many cases where I thought, “I thought this way, but the team members’ ideas are better.”&lt;/p&gt;
 
-&lt;p&gt;아직은 배워가는게 크지만 내년에는 내가 더 많이 설계에 영향을 미치면 좋겠다는 생각이 든다.
-설계는 남기고 싶은 내용들이 있어 따로 정리해본다.&lt;/p&gt;
+&lt;p&gt;!!! Initially, with limited experience, I often just acknowledged the designs without much input. Later, I found myself thinking, “I would approach this differently, but my teammates have great ideas,” which made the process more engaging.&lt;/p&gt;
 
-&lt;h3 id=&quot;동기화-작업&quot;&gt;동기화 작업&lt;/h3&gt;
+&lt;p&gt;While I am still learning, I hope to have a greater influence on design next year.&lt;br /&gt;
+There are some design-related insights I want to document here.&lt;/p&gt;
 
-&lt;p&gt;우리는 단말 앱과 연관이 많은 동기화 서버를 개발했다.&lt;br /&gt;
-처음부터 시작하는 동기화와 현재 어디까지 동기화 되었는지를 구분하기 위한 값을 단말에 제공한다.&lt;/p&gt;
+&lt;h3 id=&quot;synchronization&quot;&gt;Synchronization&lt;/h3&gt;
 
-&lt;p&gt;이 값은 이렇게 설계된다.&lt;/p&gt;
+&lt;p&gt;We developed a synchronization server closely tied to the client app.&lt;br /&gt;
+It provides values to the client to differentiate between an initial synchronization and the current synchronization state.&lt;/p&gt;
+
+&lt;p&gt;The design follows these principles:&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;단말이 이해할 수 없는 값이어야 한다. 따라서 우리만 아는 데이터를 암호화하여 내려준다.
+  &lt;li&gt;The value must be unintelligible to the client. Therefore, we encrypt data that only we can understand.
     &lt;ul&gt;
-      &lt;li&gt;단말이 이해할 수 있다면, 특정 유저라거나 특정 값의 데이터를 단말이 직접 수정할 수 있으면 우리가 통제할 수 없는 동기화 시나리오가 발생하거나 다른 이슈가 생길 수 있다.&lt;/li&gt;
+      &lt;li&gt;If the client could interpret the value, it might modify the data directly, potentially leading to uncontrollable synchronization scenarios or other issues.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;단말이 임의로 수정하면 동기화 에러가 나야한다.
+  &lt;li&gt;If the client modifies the value arbitrarily, a synchronization error should occur.
     &lt;ul&gt;
-      &lt;li&gt;위와 동일한 이유이다. 동기화 에러가나면 초기 동기화(처음부터 시작하는 동기화)를 할 수 있도록 값을 내려주고 유도한다.&lt;/li&gt;
+      &lt;li&gt;This is for the same reason as above. In case of an error, the client is guided to perform an initial synchronization to restart the process.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;동기화 서버를 개발하면서 우리한테 쌓인 노하우가 아닌가 싶다.&lt;/p&gt;
+&lt;p&gt;This approach reflects the know-how we’ve gained through our synchronization server development.&lt;/p&gt;
 
-&lt;h3 id=&quot;배치&quot;&gt;배치&lt;/h3&gt;
+&lt;h3 id=&quot;batch&quot;&gt;Batch&lt;/h3&gt;
 
-&lt;p&gt;우리가 관리하는 서비스 하나는 배치 서버가 네 대가 있다.&lt;br /&gt;
-필요해 의해 하나씩 추가되다가 이렇게 되었는데 참 번거롭고 헷갈리기도 하다.&lt;/p&gt;
+&lt;p&gt;One of the services we manage involves four batch servers.&lt;br /&gt;
+These servers were added one by one as needed, which has made the setup cumbersome and confusing.&lt;/p&gt;
 
-&lt;p&gt;새로 모듈을 만들면서 배치를 설계할 때는 기존의 구조를 따르지 않도록 batch job이 추가가능한 배치 모듈을 설계하려고 노력했다.&lt;br /&gt;
-kafka를 통해 연결된 배치 서버를 개발하고 여러 job task를 수행할 수 있도록 설계하고 필요하다면 task를 추가 설계하는 방식으로 구현했다.&lt;/p&gt;
+&lt;p&gt;When designing batches for new modules, we aimed not to follow the existing structure. Instead, we created a batch module that allows for the addition of batch jobs.&lt;br /&gt;
+We developed batch servers connected via Kafka, designed to perform multiple job tasks, and implemented additional tasks when necessary.&lt;/p&gt;
 
-&lt;p&gt;서비스 말고도 배치 서버도 초기 설계가 중요하다는 것을 많이 느꼈다.&lt;br /&gt;
-그리고 delete는 최대한 안전하고 정확하게 진행되어야 한다는 것도.&lt;/p&gt;
+&lt;p&gt;This experience taught me the importance of initial design, not just for services but also for batch servers.&lt;br /&gt;
+Additionally, I learned that delete operations must be performed safely and precisely.&lt;/p&gt;
 
-&lt;h3 id=&quot;언어&quot;&gt;언어&lt;/h3&gt;
+&lt;h3 id=&quot;language&quot;&gt;Language&lt;/h3&gt;
 
-&lt;p&gt;golang을 공부하고 배치에 적용한 것도 기억에 남는다.&lt;br /&gt;
-golang 스터디를 하고 잠깐 잊고 지냈는데 기존 batch의 성능을 개선하는 작업을 하면서 batch를 golang으로 설계했다.&lt;/p&gt;
+&lt;p&gt;Studying and applying Golang to batch development also stands out in my memory.&lt;br /&gt;
+I had previously studied Golang but had set it aside. Revisiting it to optimize batch performance led to designing and developing a batch in Golang.&lt;/p&gt;
 
-&lt;p&gt;language의 중요성을 이번에 느끼게 되었는데 이렇다.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;기존의 python batch가 성능이 굉장이 안좋았다.&lt;/li&gt;
-  &lt;li&gt;한 눈에 봐도 개선의 여지가 명확했고 일부 로직을 개선한 python batch로 업그레이드?했다.&lt;/li&gt;
-  &lt;li&gt;golang의 go routine(경량 thread)와 빠른 성능이 좋은 효율을 발휘할만한 상황으로 보였다.&lt;/li&gt;
-  &lt;li&gt;golang으로 language를 변경하고 설계하여 다시 개발했다.&lt;/li&gt;
-  &lt;li&gt;단일 ec2 기준 100배에 가까운 성능 개선이 이뤄졌다.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;이번 작업을 하면서 느낀 것은 이렇다.&lt;/p&gt;
+&lt;p&gt;The importance of language became clear through the following steps.&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;개발 없이 스터디 하는건 오래 남지 않는다.&lt;/li&gt;
-  &lt;li&gt;코드는 부패하기 마련이고 잊혀진다.&lt;/li&gt;
-  &lt;li&gt;언어가 갖는 특성을 고려하는 것이 중요하다. (ex, golang의 경량 쓰레드 goroutine 효율성 등)&lt;/li&gt;
+  &lt;li&gt;The performance of the existing Python batch was poor.&lt;/li&gt;
+  &lt;li&gt;There was obvious room for improvement, so we upgraded the batch by optimizing parts of the Python code.&lt;/li&gt;
+  &lt;li&gt;Golang’s goroutines (lightweight threads) and high performance seemed well-suited for our needs.&lt;/li&gt;
+  &lt;li&gt;We redesigned and developed the batch using Golang.&lt;/li&gt;
+  &lt;li&gt;This resulted in nearly 100x performance improvement on a single EC2 instance.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&quot;자동화&quot;&gt;자동화&lt;/h2&gt;
-
-&lt;p&gt;작년에 여러 작업들에 걸쳐서 (거창하게 표현하면) 자동화가 많이 진행되었다.&lt;br /&gt;
-이런 자동화 작업들은 내가 생각하기에 이런 장점들이 있다.&lt;/p&gt;
+&lt;p&gt;Through this process, I realized.&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;&lt;strong&gt;귀찮은 작업들&lt;/strong&gt;을 이젠 하지 않아도 된다.&lt;/li&gt;
-  &lt;li&gt;반복된 업무는 귀찮지만 자동화 툴을 만드는건 &lt;strong&gt;재밌는 작업&lt;/strong&gt;이다.&lt;/li&gt;
+  &lt;li&gt;Studying without actual development does not last long.&lt;/li&gt;
+  &lt;li&gt;Code decays and becomes forgotten.&lt;/li&gt;
+  &lt;li&gt;Considering the characteristics of the language is essential (ex, Golang’s efficient goroutines).&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;우리 팀은 올해 이런 작업들을 자동화 했다.&lt;/p&gt;
+&lt;h2 id=&quot;automation&quot;&gt;Automation&lt;/h2&gt;
 
-&lt;h3 id=&quot;was나-batch에서-error나-issue에-대해-slack-noti-적용&quot;&gt;WAS나 batch에서 error나 issue에 대해 slack noti 적용&lt;/h3&gt;
+&lt;p&gt;We achieved significant automation across various tasks last year.&lt;br /&gt;
+I believe automation has these advantages.&lt;/p&gt;
 
-&lt;p&gt;우리가 새로 만든 모듈에서 500 error에 대해 slack noti를 적용하고 이 모듈에서는 우리가 알지 못하는 500 error는 없도록 유지보수를 하고 있다. 모르는 500 error가 나온다면 바로 노티를 받고 수정에 들어간다. (부끄럽지만 다른 모듈은 아마 500 error가 좀 있을 것 같다)
-Grafana나 지표는 만들어놔도 손이 잘 안가기 때문에 초기 서버에서 이런 작업을 해놓는게 굉장히 서버 관리에 도움이 되었다.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Tedious tasks&lt;/strong&gt; no longer need to be done manually.&lt;/li&gt;
+  &lt;li&gt;Developing automation tools for repetitive tasks is a &lt;strong&gt;fun challenge&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;h3 id=&quot;versioning--release-note--문서-작성&quot;&gt;versioning &amp;amp; release note &amp;amp; 문서 작성&lt;/h3&gt;
+&lt;p&gt;Our team automated several tasks this year.&lt;/p&gt;
 
-&lt;p&gt;우리는 배포 프로세스가 굉장히 귀찮은 편이다.  &lt;br /&gt;
-우선 검증 팀에 변경사항을 문서로 작성해서 보내주어야 하고, 검증이 끝나면 변경사항을 결재를 올려야 한다. 그리고 나서 release note를 작성하는데 이게 참 귀찮아서 날 잡고 자동화를 진행했다.&lt;/p&gt;
+&lt;h3 id=&quot;slack-notifications-for-errors-or-issues-in-was-and-batch&quot;&gt;Slack Notifications for Errors or Issues in WAS and Batch&lt;/h3&gt;
 
-&lt;p&gt;문서 작성 프로그램을 python으로 작성했다. git commit과 PR rule을 자동화하기 좋게 convention을 잘 지키면서 convention에 맞는 commit/PR message들을 가지고 major/minor/patch version을 자동으로 계산해서 version을 올리고 수정된 내용들을 정리하는 방식이다. &lt;br /&gt;
-정리된 내용들과 버전은 검증 문서와 변경사항을 slack으로 보내고, github release에도 자동으로 업데이트 하도록 구현했다. (github / slack api 사용)&lt;/p&gt;
+&lt;p&gt;We implemented Slack notifications for 500 errors in a new module we developed. This module is maintained so that no unknown 500 errors occur. If any arise, we are notified immediately and address them. (Though I suspect there are some 500 errors in other modules)&lt;br /&gt;
+Even though we set up Grafana and metrics, they often go unused. Implementing such initial server-side features greatly aids server management.&lt;/p&gt;
 
-&lt;p&gt;python dockerize를 하여 각 모듈에 circleci에 문서 작성 step 추가해서 docker를 수행하도록 했다.&lt;br /&gt;
-이 작업으로 정말 귀찮고 어떨땐 빼먹기도 했던 문서 작업들이 정리되었다.&lt;/p&gt;
+&lt;h3 id=&quot;versioning-release-notes-and-documentation&quot;&gt;Versioning, Release Notes, and Documentation&lt;/h3&gt;
 
-&lt;p&gt;자동화를 통해 업무에 대한 효율과 서비스 안정성을 확보할 수 있었다는 생각이 든다.&lt;br /&gt;
-그리고 작업을 진행하면 평소에 관심을 두지 않았던, 진행하지 않았던 일들을 진행하게 되니 공부도 되고 지루하지도 않아 재밌게 개발을 할 수 있게 되었다.&lt;/p&gt;
+&lt;p&gt;Our deployment process is quite tedious.&lt;br /&gt;
+We need to document changes for the QA team, submit the changes for approval, and then write release notes, which can be a hassle. To address this, we automated the process.&lt;/p&gt;
 
-&lt;p&gt;그리고 &lt;strong&gt;생각보다 자동화가 어렵지 않다&lt;/strong&gt;는 것을 느꼈다.&lt;br /&gt;
-문서 자동화는 항상 불편했다. 자동화가 쉽지 않을 것이라 생각했는데 생각보다 쉽고 빠르게 일을 정리할 수 있었다.&lt;/p&gt;
+&lt;p&gt;We created a documentation program using Python. By adhering to a well-defined Git commit and PR convention, the program calculates major/minor/patch versions automatically and compiles the changes.&lt;br /&gt;
+The compiled information and version updates are sent to Slack as QA documentation and change logs, and are also updated on GitHub releases.&lt;/p&gt;
 
-&lt;h2 id=&quot;테스트&quot;&gt;테스트&lt;/h2&gt;
+&lt;p&gt;We dockerized this Python program and added it as a step in CircleCI for each module to automate the process.
+This organized the tedious and laborious task.&lt;/p&gt;
 
-&lt;p&gt;새로운 모듈을 처음부터 개발하면서 우리는 성능 개선이나 요구사항 만족 등을 위해 테스트를 다양하게 진행해왔다.&lt;br /&gt;
-우리가 진행한 테스트는 아래와 같다.&lt;/p&gt;
+&lt;p&gt;Automation improved work efficiency and service stability. Additionally, tackling automation projects exposed me to new areas of interest and kept the work engaging.&lt;/p&gt;
+
+&lt;p&gt;I also realized that &lt;strong&gt;automation is easier than expected.&lt;/strong&gt;&lt;br /&gt;
+Documentation automation, in particular, always seemed inconvenient. However, it turned out to be simpler and faster to implement than I anticipated.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;testing&quot;&gt;Testing&lt;/h2&gt;
+
+&lt;p&gt;While developing new modules from scratch, we conducted various tests to improve performance and meet requirements.&lt;br /&gt;
+The types of tests we performed are as follows:&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -4640,46 +4645,47 @@ Grafana나 지표는 만들어놔도 손이 잘 안가기 때문에 초기 서�
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;unit test&lt;/td&gt;
-      &lt;td&gt;unit 단위의 TDD에 필요한 단위 테스트&lt;/td&gt;
+      &lt;td&gt;Unit Test&lt;/td&gt;
+      &lt;td&gt;Unit-level tests necessary for TDD&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;api test&lt;/td&gt;
-      &lt;td&gt;실제 api를 통해 server 밖에서 호출되는 테스트&lt;/td&gt;
+      &lt;td&gt;API Test&lt;/td&gt;
+      &lt;td&gt;Tests conducted outside the server through actual API calls&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;scenario test&lt;/td&gt;
-      &lt;td&gt;기능 단위로 실제 사용자의 usecase flow(scenario)에 맞게 정상 호출되는지 확인하는 테스트&lt;/td&gt;
+      &lt;td&gt;Scenario Test&lt;/td&gt;
+      &lt;td&gt;Tests verifying user use-case flows (scenarios)&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;performance test&lt;/td&gt;
-      &lt;td&gt;pin point, locust 등을 통한 부하 및 성능 테스트&lt;/td&gt;
+      &lt;td&gt;Performance Test&lt;/td&gt;
+      &lt;td&gt;Load and performance tests using tools like Pinpoint or Locust&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;켄트 백이 말하는 &lt;strong&gt;테스트는 항상 마음을 편안하게 해주고 믿음을 준다&lt;/strong&gt;라는 말이 참 공감이 된다.&lt;br /&gt;
-여러 테스트를 통해 출시 전, 후로 우리 서비스에 대한 믿음을 가질 수 있었던 것 같다.&lt;/p&gt;
+&lt;p&gt;Kent Beck’s statement that &lt;strong&gt;“tests provide peace of mind and trust”&lt;/strong&gt; resonated deeply with me.&lt;br /&gt;
+Through extensive testing, we gained confidence in our service both before and after its launch.&lt;/p&gt;
 
-&lt;p&gt;이전 모듈들에서 진행하지 않던 scenario 테스트도 추가했는데 테스트가 중요하고 unit/api 테스트에만 의존하지 않고 여러 종류의 테스트가 필요하다는 것을 배웠다.
-돌아볼만한 점은 이렇다.&lt;/p&gt;
+&lt;p&gt;We also added scenario tests, which were not used in previous modules, and learned the importance of having diverse types of tests beyond just unit and API tests.&lt;br /&gt;
+Here’s what it’s worth looking back on.&lt;/p&gt;
 
-&lt;h3 id=&quot;중복되는-테스트&quot;&gt;중복되는 테스트&lt;/h3&gt;
+&lt;h3 id=&quot;duplicated-tests&quot;&gt;Duplicated Tests&lt;/h3&gt;
 
-&lt;p&gt;위와 같이 여러 테스트가 있다보니 중복되는 테스트들이 있다. 테스트가 많으면 느려지기 쉬우니 test의 layer를 명확하게 하면 좋겠다.&lt;/p&gt;
+&lt;p&gt;With multiple test types, overlaps occur. Having too many tests can slow down the process, so defining clear test layers is crucial.&lt;/p&gt;
 
-&lt;h3 id=&quot;성능-테스트&quot;&gt;성능 테스트&lt;/h3&gt;
+&lt;h3 id=&quot;performance-testing&quot;&gt;Performance Testing&lt;/h3&gt;
 
-&lt;p&gt;성능 테스트를 진행할 때 다른 개발을 하느라 성능 테스트 셋업이나 진행에 참여하지 못했는데 아쉽다.&lt;/p&gt;
+&lt;p&gt;I couldn’t participate in setting up or running performance tests due to other development priorities, which I regret.&lt;/p&gt;
 
-&lt;h3 id=&quot;테스트-가독성&quot;&gt;테스트 가독성&lt;/h3&gt;
-&lt;p&gt;‘테스트니까’라는 말을 하기도 하고 듣기도 한다. 테스트는 좀 대충 짜도 된다라는 생각인데, 이게 리뷰할 때 굉장히 불편하고 코드 변경이 생길 때 테스트를 이해하는데 시간도 많이쓰게 되었다.&lt;br /&gt;
-테스트 안에 분기가 있는건 나는 정말 별로다. 그럴거면 테스트를 나눠야된다고 생각한다. 이게 취향인지, 이걸 하려고하는 팀원도 있긴하다.&lt;/p&gt;
+&lt;h3 id=&quot;test-readability&quot;&gt;Test Readability&lt;/h3&gt;
+
+&lt;p&gt;There’s a tendency to justify sloppy test code with “it’s just a test.” However, this made reviews cumbersome and understanding the tests during code changes time-consuming.&lt;br /&gt;
+I strongly dislike tests with conditional branches. If needed, I believe the tests should be split. Some team members disagree, so it may just be a matter of preference.&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;재미있는 한 해였다. 팀 분위기가 중요하다는 것을 많이 느꼈다.&lt;br /&gt;
-pair work이나 code review, 회고 등의 개발 문화에 대해서도 많이 느꼈는데, 우리 팀은 이전 팀보다 자신의 생각과 불편할 수 있는 얘기들을 편하게 할 수 있어 참 좋은 것 같다.&lt;/p&gt;
+&lt;p&gt;This year has been enjoyable. It highlighted the importance of team dynamics.&lt;br /&gt;
+I learned a lot about development culture, such as pair programming, code reviews, and retrospectives. Our team fosters an open environment where people can share their thoughts and even uncomfortable topics freely, which I find wonderful.&lt;/p&gt;
 </description>
         
         <pubDate></pubDate>
@@ -5605,43 +5611,43 @@ If you’re targeting Java 8, streams give you one big feature that isn’t curr
       </item>
     
       <item>
-        <title>예상치 못한 DynamoSizeLimitException 이슈 정리</title>
+        <title>Why unexpected DynamoSizeLimitException occur?</title>
         
-          <description>&lt;p&gt;최근 DynamoSizeLimitException 에러를 겪을 일이 있었다.&lt;br /&gt;
-생각지도 못하게 DynamoSizeLimitException를 겪게 되어 원인을 파악하였고, AWS 공식 document에 나오지 않는 내용을 기록한다.&lt;/p&gt;
+          <description>&lt;p&gt;I recently encountered a &lt;strong&gt;DynamoSizeLimitException&lt;/strong&gt; error unexpectedly.&lt;br /&gt;
+After investigating the issue, I discovered some details that are not covered in the official AWS documentation, which I will document here.&lt;/p&gt;
 
 &lt;h2 id=&quot;what-is-dynamosizelimitexception&quot;&gt;What is DynamoSizeLimitException&lt;/h2&gt;
 
-&lt;p&gt;DynamoDB에서는 item에 대한 size 제한을 둔다.&lt;br /&gt;
-정해진 size를 넘는 item을 save 요청을 했을 때 Dynamo에서는 &lt;strong&gt;DynamoSizeLimitException&lt;/strong&gt;를 반환한다.&lt;/p&gt;
+&lt;p&gt;In DynamoDB, there is a size limit for items.&lt;br /&gt;
+When a save request is made for an item that exceeds this predefined size, DynamoDB returns a &lt;strong&gt;DynamoSizeLimitException&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ServiceQuotas.html#limits-items&quot;&gt;AWS dynamoDB Limits&lt;/a&gt;를 확인하면 아래와 같은 문구를 확인할 수 있다.&lt;/p&gt;
+&lt;p&gt;Check the &lt;a href=&quot;https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ServiceQuotas.html#limits-items&quot;&gt;AWS DynamoDB Limits&lt;/a&gt;, you can find the following statement:&lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;The maximum item size in DynamoDB is 400 KB, which includes both attribute name binary length (UTF-8 length) and attribute value lengths (again binary length)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;결국 하나의 item이 400KB를 넘을 수 없다는 것.&lt;/p&gt;
+&lt;p&gt;In short, a single item cannot exceed 400KB.&lt;/p&gt;
 
-&lt;h2 id=&quot;dynamosizelimitexception-occur-under-400kb&quot;&gt;DynamoSizeLimitException occur under 400KB&lt;/h2&gt;
+&lt;h2 id=&quot;dynamosizelimitexception-occurs-under-400kb&quot;&gt;DynamoSizeLimitException Occurs Under 400KB&lt;/h2&gt;
 
-&lt;p&gt;그렇지만 400KB를 넘지 않는 케이스에서 DynamoSizeLimitException가 발생했다.&lt;br /&gt;
-Dynamo의 size limit에 대해 우리는 이미 알고 있었고, 400KB가 넘는 케이스는 별도로 처리하는 로직을 구현했다.&lt;/p&gt;
+&lt;p&gt;However, a &lt;strong&gt;DynamoSizeLimitException&lt;/strong&gt; occurred even in cases where the item size was below 400KB.&lt;br /&gt;
+We were already aware of DynamoDB’s size limit and had implemented logic to handle cases where the size exceeds 400KB.&lt;/p&gt;
 
-&lt;p&gt;그럼에도 DynamoSizeLimitException가 발생했다.&lt;/p&gt;
+&lt;p&gt;Even so, the &lt;strong&gt;DynamoSizeLimitException&lt;/strong&gt; still occurred.&lt;/p&gt;
 
-&lt;p&gt;item을 확인해보니 item의 크기는 고작 210KB 정도.&lt;br /&gt;
-Document 에서도 원인을 찾을 수 없었다.&lt;/p&gt;
+&lt;p&gt;Upon inspecting the item, it was only about 210KB in size.&lt;br /&gt;
+The cause of this issue could not be found in the official documentation.&lt;/p&gt;
 
-&lt;h2 id=&quot;why-dynamosizelimitexception-occur&quot;&gt;Why DynamoSizeLimitException occur?&lt;/h2&gt;
+&lt;h2 id=&quot;why-does-dynamosizelimitexception-occur&quot;&gt;Why Does DynamoSizeLimitException Occur?&lt;/h2&gt;
 
-&lt;p&gt;원인은 Local Secondary Indexes(LSI)에서 찾을 수 있었다.&lt;br /&gt;
-DynamoDB에 &lt;strong&gt;LSI가 있으면 size limit 계산이 달라진다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The root cause was found in &lt;strong&gt;Local Secondary Indexes (LSI)&lt;/strong&gt;.&lt;br /&gt;
+When there is an LSI in DynamoDB, the size limit calculation changes.&lt;/p&gt;
 
-&lt;p&gt;LSI는 item을 replica로 사용해서 size를 배로 사용한다.&lt;br /&gt;
-따라서 &lt;strong&gt;LSI가 n개라면 최대 n + 1 배의 size를 사용할 수 있다&lt;/strong&gt;는 것이고, item size limit은 그만큼 줄어들게되는 것이다.&lt;br /&gt;
-우리는 LSI가 하나 있었고, 210KB의 item이 LSI로 인해 400KB 이상의 size를 가지며 이슈가 발생한 것이다.&lt;/p&gt;
+&lt;p&gt;LSI uses the item as a replica and doubles the size.
+Thus, &lt;strong&gt;if there are &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt; LSIs, the maximum size used can be &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n + 1&lt;/code&gt; times the item size&lt;/strong&gt;, which in turn reduces the item size limit.&lt;br /&gt;
+In our case, we had one LSI, and the 210KB item exceeded the 400KB limit due to the LSI, leading to the issue.&lt;/p&gt;
 
-&lt;p&gt;LSI를 사용해서는 안되는 이유가 하나 더 늘었다.&lt;/p&gt;
+&lt;p&gt;There is one more reason why LSI should not be used.&lt;/p&gt;
 </description>
         
         <pubDate></pubDate>
@@ -8442,112 +8448,107 @@ ObjectMother는 &lt;strong&gt;standard fixtures&lt;/strong&gt;를 만드는 것�
       </item>
     
       <item>
-        <title>서버 개발자, 2021 회고</title>
+        <title>Server Developer, 2021 yearly Retrospection</title>
         
-          <description>&lt;p&gt;21년도 정신 없이 시간이 지났다.&lt;br /&gt;
-올 해 기억에 남는 것들을 세 가지로 추려서 정리해보았다.&lt;/p&gt;
+          <description>&lt;p&gt;The year 2021 went by fast.&lt;br /&gt;
+I sorted out three things that I remember this year and organized them.&lt;/p&gt;
 
-&lt;h2 id=&quot;배치-작업&quot;&gt;배치 작업&lt;/h2&gt;
+&lt;h2 id=&quot;batch-jobs&quot;&gt;Batch Jobs&lt;/h2&gt;
 
-&lt;p&gt;서버 개발자에게 batch 작업이란 필수적인 것 같다.&lt;br /&gt;
-올해는 우리 서비스 운영의 변경 사항들도 많았고, 효율적인 관리를 위해 정말 많은 batch를 설계하고 개발했다.&lt;br /&gt;
-어떤 특별한 기술을 사용한 것보다 &lt;strong&gt;설계를 개선해 나가는 점&lt;/strong&gt;이 올해 많이 배운게 아닌가 싶다.&lt;/p&gt;
+&lt;p&gt;Batch jobs are essential for server developers. This year, there were many changes in our service operations, and I ended up designing and developing a lot of batch jobs for more efficient management.&lt;br /&gt;
+Rather than using any specific advanced technology, I feel that the most valuable thing I learned this year was &lt;strong&gt;improving design&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;batch를 계속하면서 내가 배운점들은 이렇다.&lt;/p&gt;
+&lt;p&gt;Here are the lessons I learned from working on batch jobs:&lt;/p&gt;
 
-&lt;h3 id=&quot;1-배포는-가능하면-쪼개서-나가자&quot;&gt;1. &lt;strong&gt;배포는 가능하면 쪼개서&lt;/strong&gt; 나가자&lt;/h3&gt;
+&lt;h3 id=&quot;1-split-deployments-whenever-possible&quot;&gt;1. &lt;strong&gt;Split Deployments Whenever Possible&lt;/strong&gt;&lt;/h3&gt;
 
-&lt;p&gt;우리 회사는 배포가 살짝 불편한 편이다. 모듈마다 다르지만 검증/결재를 기다리는 일들로 배포에는 항상 피로감이 쌓이고 재미가 없다.&lt;br /&gt;
-이런 이유로 여러 작업의 배포가 필요할 때 한 번에 나갔다가 어디서 이슈가 생겼는지 확인하기가 어려웠다. (근데 이건 배포 방식을 바꿔야 해결이 될 것 같다.)&lt;/p&gt;
+&lt;p&gt;Deployments in our company is a bit cumbersome. While it varies by module, the processes of verification and approval make deployments tiring and uninteresting.&lt;br /&gt;
+Because of this, when multiple changes were deployed at once, it became challenging to pinpoint where issues originated. (Though this is something that might need a change in our deployment system itself.)&lt;/p&gt;
 
-&lt;h3 id=&quot;2-migration-batch는-rollback이-가능한-구조인지-파악하자&quot;&gt;2. migration batch는 &lt;strong&gt;rollback이 가능한 구조인지 파악&lt;/strong&gt;하자&lt;/h3&gt;
+&lt;h3 id=&quot;2-ensure-migration-batches-are-rollback-friendly&quot;&gt;2. Ensure Migration Batches Are &lt;strong&gt;Rollback-Friendly&lt;/strong&gt;&lt;/h3&gt;
 
-&lt;p&gt;많은 batch와 migration을 수행하면서 간단한 migration에는 자신감이 충만해질 때가 있다.&lt;br /&gt;
-그래서 rollback에 대한 생각을 접어둘 때가 있는데, 배포 이후에 rollback이 불가능한 경우를 생각하면 아찔하다.&lt;br /&gt;
-migration은 사용자의 data를 손대는 batch니까 작업 수행 전후로 확인해야할 내용들을 명확히 정리하고 수행해야 한다.&lt;/p&gt;
+&lt;p&gt;While working on many migration batches, I occasionally became overconfident with simple migrations and neglected the rollback process. However, the thought of not being able to roll back after deployment is terrifying.&lt;br /&gt;
+Since migrations handle user data, it’s crucial to clearly define the pre-check and post-check steps before execution.&lt;/p&gt;
 
-&lt;h3 id=&quot;3-확장성을-보장하자&quot;&gt;3. &lt;strong&gt;확장성을 보장&lt;/strong&gt;하자&lt;/h3&gt;
+&lt;h3 id=&quot;3-design-for-scalability&quot;&gt;3. &lt;strong&gt;Design for Scalability&lt;/strong&gt;&lt;/h3&gt;
 
-&lt;p&gt;우리가 관리하는 배치들은 대부분 정해진 기간이 있다.&lt;br /&gt;
-기간을 맞추기 위해, 혹은 낭비되는 cpu를 채우거나 인스턴스 숫자를 조절하기 위해서 보통 batch의 worker(instance 혹은 thread)가 확장 가능한 구조가 굉장히 중요하다.&lt;br /&gt;
-instance를 더 붙이고 싶은데 불가능하거나 그 때마다 재시작해야해서는 안되니까.&lt;/p&gt;
+&lt;p&gt;Most of the batches we manage have fixed deadlines.&lt;br /&gt;
+To meet deadlines or adjust resource usage (e.g., CPU or the number of instances), scalability of batch workers (instances or threads) is critical.&lt;br /&gt;
+For example, if you need to add instances but can’t or must restart everything, it’s inefficient.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;기간을 맞추기 위해 TPS(Transaction Per Second)나 batch 예상 시간을 조회할 수 있는 지표를 남기면 유용하다.&lt;/li&gt;
+  &lt;li&gt;It’s helpful to track metrics like TPS (Transactions Per Second) and estimated batch completion time to ensure deadlines are met.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;4-위와-유사하게-중단재시작과-멱등성을-고려하자&quot;&gt;4. 위와 유사하게 &lt;strong&gt;중단/재시작과 멱등성을 고려&lt;/strong&gt;하자&lt;/h3&gt;
+&lt;h3 id=&quot;4-consider-resumability-and-idempotency&quot;&gt;4. Consider &lt;strong&gt;Resumability and Idempotency&lt;/strong&gt;&lt;/h3&gt;
 
-&lt;p&gt;배치는 여러 이유로 중단/재시작이 필요한 경우가 많다.&lt;br /&gt;
-인스턴스가 내려갔다거나, memory 부족 등의 이슈로 instance type을 변경한다거나, db throttling 이슈로 input data를 shuffling 해서 재수행하기도 하고 등등..&lt;br /&gt;
-이럴 때마다 수행된 user(혹은 특정 item 등의 batch 단위)가 &lt;strong&gt;batch에 다시 들어가더라도 문제가 없도록 멱등성이 고려&lt;/strong&gt;되어야 한다. 이걸 고려하지 않으면 배치 돌릴 때마다 피곤하다.&lt;/p&gt;
+&lt;p&gt;Batch jobs often need to be paused or restarted for various reasons.&lt;br /&gt;
+For instance, an instance might go down, memory issues may require changing instance types, or DB throttling might force you to shuffle input data and retry.&lt;br /&gt;
+In such cases, batch jobs must be designed with &lt;strong&gt;idempotency&lt;/strong&gt; in mind to handle repeated processing gracefully.&lt;br /&gt;
+Idempotency here means not only that repeated tasks won’t cause issues but also that tasks already processed can be flagged to avoid unnecessary reprocessing.&lt;/p&gt;
 
-&lt;p&gt;여기서 말하는 멱등성은 다시 돌아도 문제가 없는 것도 있지만, 돌아간 user에 대해서 다시 돌리지 않을 수 있는 일종의 flag가 있어야 batch에도 문제가 없고 재수행했을 때 수행 시간에도 문제가 없다.&lt;/p&gt;
+&lt;h3 id=&quot;5-confirm-the-data-flow&quot;&gt;5. Confirm the &lt;strong&gt;Data Flow&lt;/strong&gt;&lt;/h3&gt;
 
-&lt;h3 id=&quot;5-data-flow를-확인하자&quot;&gt;5. &lt;strong&gt;data flow를 확인&lt;/strong&gt;하자&lt;/h3&gt;
+&lt;p&gt;We currently operate across five global regions.&lt;br /&gt;
+For batch jobs involving file transfers, binary data may cross regions. Efficiently managing this binary flow is critical.&lt;br /&gt;
+Once, despite having a well-designed system, we overlooked binary flow optimization, which significantly hurt performance and required redevelopment.&lt;/p&gt;
 
-&lt;p&gt;우리는 지금 global 5개 region에서 서비스를 하고 있다.&lt;br /&gt;
-file이 오가는 batch의 경우 binary data가 region을 넘어가는 경우가 발생하기도 하는데, 최대한 효율적으로 binary flow를 잡아갈 수 있도록 설계가 필요하다.&lt;br /&gt;
-한 번은 설계를 잘 해놓고, binary flow를 놓쳐서 성능이 현저하게 떨어져서 다시 개발한 적이 있었다.&lt;/p&gt;
+&lt;h3 id=&quot;6-dont-separate-code-for-batches-sharing-the-same-life-cycle&quot;&gt;6. Don’t Separate Code for Batches Sharing the Same &lt;strong&gt;Life Cycle&lt;/strong&gt;&lt;/h3&gt;
 
-&lt;h3 id=&quot;6-life-cycle을-같이-도는-batch에서-소스-코드를-분리하지-말자&quot;&gt;6. &lt;strong&gt;life cycle을 같이 도는 batch에서 소스 코드를 분리하지 말자&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Minimizing code duplication is a developer’s mission.&lt;br /&gt;
+For batch jobs with shared life cycles, separating code can lead to significant problems.&lt;br /&gt;
+For example, this year, a new feature was deployed on our WAS, but the batch didn’t include the corresponding code update, which almost resulted in user data loss.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;중복을 최소화&lt;/strong&gt;하는 것은 개발자의 숙명이기도 하다.&lt;br /&gt;
-one time job으로 설계된 batch가 아니라 life cycle을 같이하는 batch들에서 소스 코드를 따로 쓰는 경우 문제가 생기기 정말 쉽다.&lt;br /&gt;
-올 해 우리는 WAS에서 새로운 기능을 내보내고, batch에서는 해당 코드가 추가되지 않아 사용자 데이터를 날려먹을 뻔한 적이 있었다.&lt;/p&gt;
+&lt;h2 id=&quot;design&quot;&gt;Design&lt;/h2&gt;
 
-&lt;h2 id=&quot;설계&quot;&gt;설계&lt;/h2&gt;
+&lt;p&gt;As mentioned earlier, I learned a lot about design in 2021.&lt;br /&gt;
+Rather than listing specific lessons, I focused on studying and applying DDD (Domain-Driven Design), which noticeably improved my design skills.&lt;/p&gt;
 
-&lt;p&gt;위에서도 말했듯 올해는 설계를 하며 배운점이 많다.&lt;br /&gt;
-설계에서는 어떤 어떤 점들을 배웠다보다는 DDD 스터디와 적용을 함께 하면서 설계하는 능력이 성장하는 것을 느꼈다.&lt;/p&gt;
+&lt;h3 id=&quot;1-the-more-you-learn-ddd-the-harder-it-feels&quot;&gt;1. The More You Learn DDD, the Harder It Feels&lt;/h3&gt;
 
-&lt;h3 id=&quot;1-ddd는-배우면-배울수록-쉽지-않다&quot;&gt;1. DDD는 배우면 배울수록 쉽지 않다.&lt;/h3&gt;
+&lt;p&gt;Previously, I thought I had designed modules following DDD principles. However, after studying more, I realized there were many areas for improvement.&lt;br /&gt;
+While I feel I’m getting better, I still find parts of DDD unclear.&lt;/p&gt;
 
-&lt;p&gt;이전에 DDD에 따라 설계했다고 생각한 모듈들이 조금 더 공부하고 보니 불편한 것들이 많았다.&lt;br /&gt;
-하면서 느는 것 같긴한데, 아직도 명확하지 않는게 느껴진다.&lt;/p&gt;
+&lt;h3 id=&quot;2-include-statistics-in-the-design&quot;&gt;2. Include &lt;strong&gt;Statistics&lt;/strong&gt; in the Design&lt;/h3&gt;
 
-&lt;h3 id=&quot;2-통계도-설계에-함께-포함되어야-한다&quot;&gt;2. 통계도 설계에 함께 포함되어야 한다.&lt;/h3&gt;
+&lt;p&gt;When extracting requirements for design, I didn’t include statistics as part of the requirements.&lt;br /&gt;
+This resulted in inconvenient workarounds, like analyzing logs or creating additional batch jobs, every time statistics were needed.&lt;br /&gt;
+Services should be designed to quickly and easily provide relevant statistics.&lt;/p&gt;
 
-&lt;p&gt;요구사항을 뽑아서 설계를 진행할 때, 통계가 요구사항에 들어가지 않았다.&lt;br /&gt;
-서비스가 진행되고 통계를 뽑으려면 이미 늦고, 불편한 작업들(우리는 로그를 까보거나 batch를 통해) 필요할 때마다 통계를 요청하게되어 굉장히 불편했다.&lt;br /&gt;
-서비스하는 입장이라면 통계를 빠르고 쉽게 전달해줄 수 있는 구조가 되야하는 것 같다.&lt;/p&gt;
+&lt;h3 id=&quot;3-use-first-class-objects&quot;&gt;3. Use &lt;strong&gt;First-Class Objects&lt;/strong&gt;&lt;/h3&gt;
 
-&lt;h3 id=&quot;3-first-class-object를-쓰자&quot;&gt;3. first class object를 쓰자.&lt;/h3&gt;
+&lt;p&gt;We have older modules developed before our team took over, and they’re often hard to read due to excessive use of structures like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HashMap&amp;lt;String, Object&amp;gt;&lt;/code&gt;.&lt;br /&gt;
+Worse, these objects sometimes contain nested HashMaps, making them extremely confusing.&lt;br /&gt;
+By introducing wrapper classes (e.g., using an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ID&lt;/code&gt; class instead of plain strings), we reduced errors and improved clarity.&lt;/p&gt;
 
-&lt;p&gt;우리가 가진 모듈 중에 개발된지 오래되고 우리팀 멤버들이 개발에 참여하지 않은 모듈이 있다.&lt;br /&gt;
-이게 굉장히 가독성이 떨어지는데 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hashmap&amp;lt;stirng, object&amp;gt;&lt;/code&gt; 이렇게 hashmap을 굉장히 많이 사용한다.&lt;br /&gt;
-끔찍한건 저기 object에 hashmap이 다시 들어가기도 한다는 것. 정말 최악이다.&lt;br /&gt;
-그리고 id를 string이 아닌 ID라는 wrapper class를 만들어서 써봤는데 명확하고 실수가 줄어들어 좋았다.&lt;/p&gt;
+&lt;h2 id=&quot;database&quot;&gt;Database&lt;/h2&gt;
 
-&lt;h2 id=&quot;db&quot;&gt;db&lt;/h2&gt;
+&lt;p&gt;This year involved a lot of database-related work.&lt;/p&gt;
 
-&lt;p&gt;올해는 유독 database 관련 작업들이 많았다.&lt;/p&gt;
+&lt;h3 id=&quot;1-database-consolidation&quot;&gt;1. Database Consolidation&lt;/h3&gt;
 
-&lt;h3 id=&quot;1-db-통합&quot;&gt;1. db 통합&lt;/h3&gt;
+&lt;p&gt;One module stored a single entity across two databases.&lt;br /&gt;
+While having interfaces that support multiple databases is good for flexibility, &lt;strong&gt;using multiple databases without a clear purpose should be avoided&lt;/strong&gt;.&lt;br /&gt;
+For example, using Cassandra for pages and DynamoDB for comments might make sense. However, we were storing the same page data in both Cassandra and DynamoDB (due to historical decisions).&lt;br /&gt;
+Consolidating databases was challenging but greatly improved &lt;strong&gt;efficiency in development, code reviews, and testing&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;한 모듈은 특정 entity를 두 db에 저장하고 있었다.&lt;br /&gt;
-여러 database를 사용할 수 있고 db를 옮기거나 추가하기 좋은 확장성을 갖는 interface 구조를 설계하는게 굉장히 중요하다는 것에는 동의하나, &lt;strong&gt;의미 없이 db를 두 벌 사용하는 경우는 피하는게 좋다&lt;/strong&gt;.&lt;br /&gt;
-예를 들면, blog에 page db는 cassandra를 쓰고 comment는 dynamodb를 쓴다면 뭐 그러려니 하겠지만, 우리는 page의 db를 cassandra와 dynamodb를 같이 쓰고 있었다. (히스토리가 있는 윗분들의 예전 결정)&lt;br /&gt;
-두 db를 쓰는건 interface가 잘 나뉘어 있어도 개발(특히 db와 연관된 batch)에 굉장한 부담이 되었다.&lt;br /&gt;
-db 통합은 간단하진 않지만 이걸로 오는 &lt;strong&gt;개발/코드리뷰/테스트작성의 효율&lt;/strong&gt;은 굉장히 컸다.&lt;/p&gt;
+&lt;h3 id=&quot;2-dynamodb-table-consolidation&quot;&gt;2. DynamoDB Table Consolidation&lt;/h3&gt;
 
-&lt;h3 id=&quot;2-dynamo-db-table-통합&quot;&gt;2. dynamo db table 통합&lt;/h3&gt;
+&lt;p&gt;We merged multiple DynamoDB tables that were previously split unnecessarily (e.g., separate tables for page main data and page metadata).&lt;br /&gt;
+This brought significant &lt;strong&gt;efficiency in development, code reviews, and testing&lt;/strong&gt;, and even reduced &lt;strong&gt;elapsed time by half&lt;/strong&gt;.&lt;br /&gt;
+This reminded me of the saying, “The database is the most critical factor for service response time.”&lt;/p&gt;
 
-&lt;p&gt;nosql인 dynamodb를 mysql처럼 테이블을 종류별로 나눠 사용하던 것을 통합했다.&lt;br /&gt;
-예를들면 page main table과 page meta table이 있던걸 합치는 작업인데, 이 또한 &lt;strong&gt;개발/코드리뷰/테스트작성에 굉장한 효율&lt;/strong&gt;을 가져왔다.&lt;br /&gt;
-특히 table 통합 이후에 &lt;strong&gt;elpased time이 절반으로 줄었다&lt;/strong&gt;. 서비스 응답 시간에서 가장 중요한건 DB라는 말이 생각난다.&lt;/p&gt;
+&lt;h3 id=&quot;3-dynamodb-blob-limit-issues&quot;&gt;3. DynamoDB Blob Limit Issues&lt;/h3&gt;
 
-&lt;h3 id=&quot;3-dynamodb의-blob-limit-문제&quot;&gt;3. dynamodb의 blob limit 문제&lt;/h3&gt;
-
-&lt;p&gt;dynamodb에 대해 좀 더 이해하는 시간이 되었다.&lt;br /&gt;
-LSI를 만들 때는 조심해야 한다.&lt;br /&gt;
-이 내용은 지난번에 정리한 &lt;a href=&quot;/docs/aws/dynamo/DynamoSizeLimitException&quot;&gt;DynamoSizeLimitException&lt;/a&gt;를 참고하면 좋겠다.&lt;/p&gt;
+&lt;p&gt;I gained a deeper understanding of DynamoDB this year.&lt;br /&gt;
+For example, creating LSI (Local Secondary Indexes) can lead to issues if not handled carefully.&lt;br /&gt;
+For more details, refer to &lt;a href=&quot;/docs/aws/dynamo/DynamoSizeLimitException&quot;&gt;DynamoSizeLimitException&lt;/a&gt;.&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;2021년에는 2020년보다는 재미있는 작업들을 많이 해보지 못한 것 같아서 아쉽다.&lt;br /&gt;
-일을 많이 한 것 같은데, 아직도 짐처럼 남아있는 작업들이 있기도 하다.&lt;/p&gt;
+&lt;p&gt;Looking back, 2021 felt less exciting than 2020 in terms of the work I got to do.&lt;br /&gt;
+While I feel like I accomplished a lot, there are still tasks that weigh on me.&lt;/p&gt;
 
-&lt;p&gt;22년에도 설계를 더 잘하고, 기술적으로는 새로운 기술들도 더 배우고 익숙해지는 한 해가 되었으면 좋겠다.&lt;/p&gt;
+&lt;p&gt;For 2022, I hope to further improve my design skills and explore and master new technologies.&lt;/p&gt;
 </description>
         
         <pubDate></pubDate>
@@ -14043,156 +14044,166 @@ client와 통신에 compression(Gzip 등)이 적용되었는지 확인한다.&lt
       </item>
     
       <item>
-        <title>서버 개발자, 2022 회고</title>
+        <title>Server Developer, 2022 yearly Retrospection</title>
         
-          <description>&lt;p&gt;22년은 무슨 일을 했는지 모르겠다.&lt;br /&gt;
-쏟아지는 일정을 우선순위에 맞게 쳐내다가 한 해가 지나간 것 같다.
-ASAP으로 위에서 내려오는 요구사항들을 만족시키다보니 여유를 갖고 보수하거나 개발할만한 시간이 부족했던 것 같아 아쉽다.&lt;/p&gt;
+          <description>&lt;p&gt;The year seemed to pass while I handled tasks in order of priority.&lt;br /&gt;
+It’s a bit disappointing that I couldn’t spare enough time to polish or develop things at a relaxed pace because I was busy fulfilling top-down ASAP requests.&lt;/p&gt;
 
-&lt;h2 id=&quot;업무-자동화-혹은-프로젝트-완성&quot;&gt;업무 자동화, 혹은 프로젝트 완성&lt;/h2&gt;
-
-&lt;p&gt;이슈 대응을 위한 bot을 만들면서 업무 자동화라는 생각을 했다.
-우리 파트 리더께서 이건 ‘업무 자동화가 아니라 프로젝트를 제대로 완성하는 것’이라는 말씀을 하셨다.&lt;br /&gt;
-이슈 대응을 위한 프로세스까지도 프로젝트의 일부인데 우리가 놓쳤다는 것.&lt;/p&gt;
-
-&lt;p&gt;맞는 것 같다.&lt;br /&gt;
-그런데 통계며 이슈 대응까지 생각하며 프로젝트를 설계하고 완성하는게 사실 쉽지 않다.&lt;br /&gt;
-올해처럼 바쁜 일정에는 더더욱이.
-그래도 올해 했던 일들을 정리해본다.&lt;/p&gt;
-
-&lt;h3 id=&quot;1-이슈-대응-프로세스-만들기&quot;&gt;1. 이슈 대응 프로세스 만들기&lt;/h3&gt;
-
-&lt;p&gt;우리가 맡은 한 모듈의 클라이언트는 이슈 대응을 위해 한 달에 약 80건 정도의 요청을 한다.&lt;br /&gt;
-우리는 여태까지 이걸 받으면 빠르면 한 시간에서, 늦으면 일 주일 내로 스크립트를 돌려서 결과가 나오면 응답해주는 프로세스를 갖고 있었다.&lt;br /&gt;
-생각보다 오래 걸리지 않지만 컨택스트 스위칭 비용이 컸던 일이다.&lt;/p&gt;
-
-&lt;p&gt;하루는 이 작업을 하다가 재미가 없어서 재미있는 일로 바꾸기 위해 slack bot을 만들었다.&lt;br /&gt;
-일주일 정도 일이 끝나고 시간을 조금씩 써서 작업한 봇으로 클라이언트 이슈 대응을 대처했다.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://meansoup.github.io/docs/automation/python-bot&quot;&gt;슬랙 봇 만들기 링크 - /docs/automation/python-bot&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#automation-or-project-completion&quot;&gt;Automation or Project Completion&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#tactical-ddd&quot;&gt;Tactical DDD&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#team&quot;&gt;Team&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;봇 제작으로 얻은 효과&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;이슈 대응에 드는 시간 월 40시간 감소 (30분 * 80건)
-    &lt;ul&gt;
-      &lt;li&gt;봇 도입 이후 클라이언트는 대응이 늦어 요청하지 못한 요청을 더 많이 했다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;이슈 대응을 기다리는 클라이언트 대기 시간 월 80일 감소 (평균 1일 * 80건)
-    &lt;ul&gt;
-      &lt;li&gt;말 그대로 대기시간이기 때문에 일을 못하는건 아니지만, 필요한 경우 주말에도 바로 응답받을 수 있는 프로세스가 구축되었다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;봇 제작을 한번 해보니 기능 추가는 쉬워서 다른 모듈에서 사용할 기능들도 봇에 추가되었다.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;2-서비스-장애를-보고받기&quot;&gt;2. 서비스 장애를 보고받기&lt;/h3&gt;
-
-&lt;p&gt;우리는 grafana를 통해 서비스를 모니터링하는데, grafana는 자주 보게되지 않는다.&lt;br /&gt;
-모듈마다 다른 임계 성공률(예를들면 99.0%) 이하로 떨어질 경우 알람을 받게 되는데 신규 모듈에는 ‘우리가 모르는 500에러는 없게하자’는 생각으로 개발을 시작했다.&lt;br /&gt;
-예측되는 장애 상황에 slack noti를 날리는 aws lambda를 구축해서 500 에러 장애 상황을 바로 확인할 수 있도록 구현했다.&lt;/p&gt;
-
-&lt;h3 id=&quot;3-통계-설계하기&quot;&gt;3. 통계 설계하기&lt;/h3&gt;
-
-&lt;p&gt;이미 완성된 모듈에서 통계를 뽑는건 곤혹이다.
-일 년에 한 두번 요청하는 통계를 뽑는데 db를 dump하는 작업을 하거나 1년치 로그를 조회하는 경우가 있었다.
-신규 모듈에서는 설계 시점부터 통계를 같이 설계하려고 노력하고 통계를 정리하는 배치 모듈을 같이 개발했다.&lt;/p&gt;
-
-&lt;h2 id=&quot;tactical-ddd&quot;&gt;tactical DDD&lt;/h2&gt;
-
-&lt;p&gt;작년부터 이어지는 DDD를 통한 개발.
-우리팀은 작년 말부터 하나의 모듈을 개발했고, 연중에 하나의 모듈을 리팩토링하고, 연말에 하나의 모듈을 새로 개발했다.&lt;br /&gt;
-총 세 건의 모듈을 DDD로 개발하면서 DDD에 대한 개념을 제대로 익힐 수 있었던 것 같다.&lt;/p&gt;
-
-&lt;p&gt;올해 나는 &lt;strong&gt;Vaughn Vernon의 Implement Domain Driven Design&lt;/strong&gt;의 tactical 부분을 읽고 정리했다.&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://meansoup.github.io/docs/ddd/tactical/domain_events&quot;&gt;domain events&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://meansoup.github.io/docs/ddd/tactical/vo&quot;&gt;Value Object&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://meansoup.github.io/docs/ddd/tactical/domain-service&quot;&gt;Domain Service&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://meansoup.github.io/docs/ddd/tactical/entity&quot;&gt;Entity&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;aggregate&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;사실 개념들을 요약해서만 읽어도 ‘아하 이거구나’ 싶지만 개발할 때 팀원들 간의 DDD에 대한 이해도와 생각은 다 달랐다.
-정리한 내용들을 팀 내에 짧게 공유하기도 하고 내용을 기반으로 배운 것들이 많았다.&lt;br /&gt;
-덕분에 설계 능력도 성장한 것 같다.&lt;/p&gt;
-
-&lt;h3 id=&quot;1-aggregate&quot;&gt;1. aggregate&lt;/h3&gt;
-
-&lt;p&gt;aggregate은 반버논 아저씨도 DDD에서 가장 애매하다고 말한 부분이다.&lt;br /&gt;
-우리 팀 내에서도 의견이 가장 분분했던 부분이기도 하다.&lt;/p&gt;
-
-&lt;p&gt;우리는 한 모듈을 엄청나게 큰 aggregate으로 작성했는데, 사실 이게 &lt;strong&gt;코드스멜&lt;/strong&gt;이 느껴져서 aggregate에 대해 공부를 더 해보게 되었다.&lt;br /&gt;
-책에서 말하는 큰 aggregate의 단점을 직접 설계한 모듈에서 느낄 수 있어서 더 배울점이 많았던 것 같다.
-aggregate은 크기도 중요하지만 어떤 기준으로 나누느냐가 굉장히 중요하다는 것을 배웠다.&lt;/p&gt;
-
-&lt;h3 id=&quot;2-domain-events&quot;&gt;2. domain events&lt;/h3&gt;
-
-&lt;p&gt;사실 우리팀은 domain event를 사용하는 팀이 아닌데, 이 개념을 공부하고 팀 내에 공유하고 나선 domain event를 적용해야 하는 부분들이 꽤 많았다라는 피드백을 받았다.&lt;br /&gt;
-domain model의 commit 시점에 event를 전달하고 이걸 처리하는 프로세스가 우리 프로젝트에 바로 적용하기 애매해서 거의 적용하진 못했다.
-그치만 ‘이건 domain event면 좋았겠다’라는 생각을 할 수 있게 되었다.&lt;/p&gt;
-
-&lt;h2 id=&quot;팀&quot;&gt;팀&lt;/h2&gt;
-
-&lt;p&gt;우리 팀은 팀 단위의 협업이 잘되고 효율도 좋다고 생각한다.
-올해는 우리 팀의 프로세스 몇 가지가 좋은 방향으로 변경되었다.&lt;/p&gt;
-
-&lt;h3 id=&quot;1-스토리-표준화와-명확하게-나누기&quot;&gt;1. 스토리 표준화와 명확하게 나누기&lt;/h3&gt;
-
-&lt;p&gt;우리 팀은 작업의 단위를 스토리로 나눈다.
-올 해는 개발 스토리를 정리하면서 표준화 하는 작업을 했는데 이 작업을 통해 스토리를 만드는 시간도 줄고, 스토리에서 놓치는 작업없이 마무리할 수 있었다.
-표준화된 개발 스토리는 이렇다.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;구현 설계&lt;/li&gt;
-  &lt;li&gt;acceptance test 작성&lt;/li&gt;
-  &lt;li&gt;interface 구현&lt;/li&gt;
-  &lt;li&gt;scenario test 작성&lt;/li&gt;
-  &lt;li&gt;domain 구현&lt;/li&gt;
-  &lt;li&gt;usecase 구현&lt;/li&gt;
-  &lt;li&gt;scenario test pass&lt;/li&gt;
-  &lt;li&gt;acceptance test pass&lt;/li&gt;
-  &lt;li&gt;회고하기&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;이런 알찬 구성에서 필요하지 않은 카드는 설계를 하면서 제거한다.&lt;br /&gt;
-예를 들면 domain의 일부만 수정되어 외부 변경사항이 없다면 test나 interface 카드는 삭제하는 식이다.
-스토리를 명확하게 분리하면 팀원들간에 작업 분배가 원활하다.&lt;/p&gt;
-
-&lt;h3 id=&quot;2-스토리-포인트-추정&quot;&gt;2. 스토리 포인트 추정&lt;/h3&gt;
-
-&lt;p&gt;우리는 원래 시간 단위의 추정을 해왔다.
-스토리 포인트라는 개념이 처음엔 낯설었는데 스토리 포인트로 작업량을 기준으로 추정을 하는 방식으로 추정 방식을 변경하였다.
-스토리 포인트 추정과 팀의 MH를 통해 우리가 어느정도의 스토리를 처리할 수 있는지를 정리하고 있다.&lt;/p&gt;
-
-&lt;p&gt;재밌는건 리더는 스토리 포인트를 최대한 많이 가져가려고 한다는 것. (우리는 스크럼 리더를 돌아가면서 한다)&lt;/p&gt;
-
-&lt;h3 id=&quot;3-우선순위-기반-일정-관리&quot;&gt;3. 우선순위 기반 일정 관리&lt;/h3&gt;
-
-&lt;p&gt;원래도 스토리들을 backlog에 쌓아두고 일정관리를 했었지만.
-올해는 스토리들에 우선순위(high, mid, low)를 두고 우선순위를 조정하면서 스크럼을 진행했다.
-가장 급한 우선순위들을 먼저 보고 스프린트 계획을 세우는 방식이다.
-한 눈에 우선순위가 들어오고, 우선순위와 우리가 추정했던 스토리 포인트를 기반으로 스프린트의 스토리들을 결정했다.&lt;/p&gt;
-
-&lt;p&gt;결국 할 수 없는 수준의 스토리를 스프린트에 가져온다거나 사실 급하지 않은 일을 먼저 처리하는 일들이 줄었다.
-중요한 일들을 할 수 있을지를 어느정도 판단해서 스프린트를 세울 수 있었다.&lt;/p&gt;
-
-&lt;h3 id=&quot;4-번외-팀-리더&quot;&gt;4. 번외. 팀 리더&lt;/h3&gt;
-
-&lt;p&gt;연 말에는 회사에서 교육을 가게 되었는데 교육 마지막엔 일주일짜리 팀 프로젝트가 있었다.
-서로 다른 팀에서 온 사람들과 진행하게 되었는데. 이 교육 마지막 날 밤을 세워 프로젝트를 마무리하는 팀들도 많다고 했다.
-팀이 첫 회의를 할 때 프로젝트 설계를 제대로 진행하는 분위기가 아닌 것 같아서 내가 리더아닌 리더 역할을 하게 되었다.&lt;/p&gt;
-
-&lt;p&gt;설계 회의, 설계 내용 공유, 테스트 작성, 인터페이스 작성과 작업 분배.&lt;br /&gt;
-우리 팀이 팀 단위의 일과 리더로서의 역할을 잘 해내고 있다는 것을 느낄 수 있었고.
-처음으로 다른 팀에서 리더를 해본 경험이라 재미있었다.&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;올해의 교훈은 &lt;strong&gt;같은 일을 같은 방식으로 하면 재미없다.&lt;/strong&gt;&lt;br /&gt;
-새로운 일을 하려고 하는데 쉽지 않았다.
-내년에는 새로운 일을 아니면 새로운 방식으로 좀 더 재미있게 일할 수 있었으면 좋겠다.&lt;/p&gt;
+&lt;h2 id=&quot;automation-or-project-completion&quot;&gt;Automation or Project Completion&lt;/h2&gt;
+
+&lt;p&gt;While creating a bot to handle issues, I thought about automating work.&lt;br /&gt;
+However, our team leader said, “This is not about automation; it’s about properly completing the project.”&lt;br /&gt;
+The issue-handling process is also part of the project, and we had overlooked it.&lt;/p&gt;
+
+&lt;p&gt;He was right.  &lt;br /&gt;
+But designing and completing a project while considering statistics and issue handling isn’t easy—especially during a busy year like this one.&lt;br /&gt;
+Still, I want to reflect on the things I accomplished this year.&lt;/p&gt;
+
+&lt;h3 id=&quot;1-building-an-issue-response-process&quot;&gt;1. Building an Issue Response Process&lt;/h3&gt;
+
+&lt;p&gt;One module I manage receives around 80 client issue requests per month.&lt;br /&gt;
+So far, we’ve had a process where we manually ran scripts to respond to these requests, taking from an hour to a week.&lt;br /&gt;
+While it didn’t take very long, the frequent context-switching made it costly.&lt;/p&gt;
+
+&lt;p&gt;One day, I was working on these tasks and got bored, so I built a Slack bot to make it more fun.&lt;br /&gt;
+After wrapping up the tasks that week, I used some spare time to create the bot, which now handles client issues.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;refer &lt;a href=&quot;/docs/automation/python-bot&quot;&gt;Building a Slack Bot&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Benefits of the bot&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Saved 40 hours per month on issue handling (30 minutes * 80 requests).
+    &lt;ul&gt;
+      &lt;li&gt;I found out that the client didn’t request it more because of the slow response.&lt;/li&gt;
+      &lt;li&gt;With the bot, clients requested more.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Reduced client wait time by 80 days per month (1 day * 80 requests).
+    &lt;ul&gt;
+      &lt;li&gt;While this was idle time, having a process to respond quickly—even on weekends—was beneficial.&lt;/li&gt;
+      &lt;li&gt;It’s not that client can’t work because it is just waiting time, but I established process that allows client to get a response right away even on weekends.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Adding features to the bot became easy, so other modules’ function were also integrated.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;2-reporting-service-failures&quot;&gt;2. Reporting Service Failures&lt;/h3&gt;
+
+&lt;p&gt;We use Grafana to monitor services, but we don’t see it very often.&lt;br /&gt;
+We receive alerts if module success rates drop below a threshold (e.g., 99.9%). For new modules, we started with the idea that there should be “no unknown 500 errors.”&lt;br /&gt;
+To address this, We set up an AWS Lambda that sends Slack notifications when unexpected 500 errors occur, allowing us to identify issues immediately.&lt;/p&gt;
+
+&lt;h3 id=&quot;3-designing-statistics&quot;&gt;3. Designing Statistics&lt;/h3&gt;
+
+&lt;p&gt;Extracting statistics from completed modules can be painful.&lt;br /&gt;
+Sometimes, we had to dump databases or query a year’s worth of logs to answer once-a-year requests.&lt;br /&gt;
+For new modules, We focused on designing statistics from the outset and developed a batch module for organizing them.&lt;/p&gt;
+
+&lt;h2 id=&quot;tactical-ddd&quot;&gt;Tactical DDD&lt;/h2&gt;
+
+&lt;p&gt;Continuing from last year, we’ve been developing with DDD (Domain-Driven Design).&lt;/p&gt;
+
+&lt;p&gt;This year, We&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Developed one module early in the year.&lt;/li&gt;
+  &lt;li&gt;Refactored one module mid-year.&lt;/li&gt;
+  &lt;li&gt;Built a new module at the end of the year.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Through these three projects, I deepened my understanding of DDD.&lt;/p&gt;
+
+&lt;p&gt;This year, I studied and summarized the tactical parts of &lt;strong&gt;Vaughn Vernon’s Implementing Domain-Driven Design&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;/docs/ddd/tactical/domain_events&quot;&gt;Domain Events&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/docs/ddd/tactical/vo&quot;&gt;Value Object&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/docs/ddd/tactical/domain-service&quot;&gt;Domain Service&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/docs/ddd/tactical/entity&quot;&gt;Entity&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Aggregate&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Even though reading summaries can give an “aha!” moment, team members had different interpretations of DDD concepts during development.&lt;br /&gt;
+I shared my summaries within the team, which led to valuable discussions and personal growth in design skills.&lt;/p&gt;
+
+&lt;h3 id=&quot;1-aggregate&quot;&gt;1. Aggregate&lt;/h3&gt;
+
+&lt;p&gt;Vaughn Vernon mentions that aggregates are the most ambiguous part of DDD.&lt;br /&gt;
+This was also the most debated topic within our team.&lt;/p&gt;
+
+&lt;p&gt;We initially designed one module with an overly large aggregate, which felt like a &lt;strong&gt;code smell&lt;/strong&gt;.&lt;br /&gt;
+Studying aggregates further taught me the importance of size and criteria for dividing them.&lt;br /&gt;
+Experiencing the downsides of large aggregates firsthand was a great learning opportunity.&lt;/p&gt;
+
+&lt;h3 id=&quot;2-domain-events&quot;&gt;2. Domain Events&lt;/h3&gt;
+
+&lt;p&gt;Our team doesn’t usually use domain events.&lt;br /&gt;
+However, after studying the concept and sharing it internally, I received feedback suggesting many areas where domain events could be applied.&lt;br /&gt;
+While it wasn’t feasible to adopt domain events immediately due to project constraints, I learned to recognize situations where they would have been beneficial.&lt;/p&gt;
+
+&lt;h2 id=&quot;team&quot;&gt;Team&lt;/h2&gt;
+
+&lt;p&gt;I think our team collaborates well and operates efficiently.&lt;br /&gt;
+This year, some of our team processes improved significantly.&lt;/p&gt;
+
+&lt;h3 id=&quot;1-standardizing-and-splitting-stories&quot;&gt;1. Standardizing and Splitting Stories&lt;/h3&gt;
+
+&lt;p&gt;We break tasks into stories.&lt;br /&gt;
+This year, we standardized how we document development stories, reducing the time spent creating stories and ensuring no tasks were missed.&lt;br /&gt;
+A standardized development story looks like this.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Design the implementation.&lt;/li&gt;
+  &lt;li&gt;Write acceptance tests.&lt;/li&gt;
+  &lt;li&gt;Implement interfaces.&lt;/li&gt;
+  &lt;li&gt;Write scenario tests.&lt;/li&gt;
+  &lt;li&gt;Implement the domain.&lt;/li&gt;
+  &lt;li&gt;Implement use cases.&lt;/li&gt;
+  &lt;li&gt;Pass scenario tests.&lt;/li&gt;
+  &lt;li&gt;Pass acceptance tests.&lt;/li&gt;
+  &lt;li&gt;Retrospect.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Unnecessary cards are removed during the design phase.&lt;br /&gt;
+For example, if only part of the domain changes without external impact, tests or interface cards can be discarded.&lt;br /&gt;
+Clearly splitting stories made task distribution smoother.&lt;/p&gt;
+
+&lt;h3 id=&quot;2-story-point-estimation&quot;&gt;2. Story Point Estimation&lt;/h3&gt;
+
+&lt;p&gt;We previously estimated tasks in amount of time.&lt;br /&gt;
+we switched out estimation to story points, which estimate based on amount of work.&lt;br /&gt;
+With story points and team MH (man-hours), we now understand how many stories we can handle.&lt;/p&gt;
+
+&lt;p&gt;Interestingly, our rotating Scrum leaders tend to aim for maximum story points.&lt;/p&gt;
+
+&lt;h3 id=&quot;3-priority-based-schedulingbgh&quot;&gt;3. Priority-Based Schedulingbgh&lt;/h3&gt;
+
+&lt;p&gt;We manage schedules by stacking stories in a backlog.&lt;br /&gt;
+This year, we assigned priorities (high, mid, low) to stories and adjusted them during Scrum planning.&lt;br /&gt;
+By focusing on urgent priorities first and aligning story points with sprint goals, we reduced the risk of over-planning or addressing less critical tasks first.&lt;/p&gt;
+
+&lt;h3 id=&quot;4-bonus-team-leadership&quot;&gt;4. Bonus. Team Leadership&lt;/h3&gt;
+
+&lt;p&gt;At year-end, I attended company training that included a week-long team project.&lt;br /&gt;
+The project involved working with members from different teams.&lt;br /&gt;
+In this training, many teams said they set up nights to complete their final projects.
+In the first meeting, I noticed the meeting didn’t go well, so I took the lead.&lt;/p&gt;
+
+&lt;p&gt;I led the team through design discussions, sharing plans, writing tests, creating interfaces, distributing assignments, etc.&lt;br /&gt;
+This experience reinforced my confidence in both team-based work and leadership. It was fun being a leader for the first time outside my usual team.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Lesson of the Year is &lt;strong&gt;Doing the same work in the same way is boring.&lt;/strong&gt;&lt;br /&gt;
+I wanted to try new things but it was not easy.&lt;br /&gt;
+Next year, I hope to work in a new way or on something entirely new for more fun.&lt;/p&gt;
 </description>
         
         <pubDate></pubDate>
@@ -19321,7 +19332,7 @@ It becomes even more cumbersome when you want to review multiple data points and
       </item>
     
       <item>
-        <title>ZGC란? ZGC 이해하기</title>
+        <title>what is ZGC?</title>
         
           <description>&lt;blockquote class=&quot;note-title&quot;&gt;
   &lt;p&gt;Java GC Type&lt;/p&gt;
@@ -19333,56 +19344,61 @@ It becomes even more cumbersome when you want to review multiple data points and
 &lt;a href=&quot;/docs/java/gc/zgc&quot; class=&quot;btn btn-purple&quot;&gt;ZGC&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Z Garbage Collector(ZGC)는 빠르고 효율적인 GC다. &lt;br /&gt;
-ZGC는 메모리가 커지더라도 STW의 시간을 상수 값으로 가져가는 것을 목표로 설계되었다. 설계 철학에 맞게 GC 과정 중 1ms 이상의 STW는 없다고 한다. (문서마다 수 ms 라고 표현하기도 함)&lt;br /&gt;
-그래서 빠른 반응이 중요한 프로그램에 적합하다. ZGC는 작은 메모리(몇백 MB)부터 아주 큰 메모리(16TB)까지 잘 작동하지만, 큰 메모리에서 사용이 권장된다.&lt;br /&gt;
-ZGC는 JDK 11에서 experimental로 도입되었고, JDK 15에서 정식 기능으로 채택되고 JDK 21에서 개선됐다.&lt;/p&gt;
+&lt;p&gt;The Z Garbage Collector (ZGC) is a scalable low latency garbage collector. ZGC performs all expensive work concurrently, without stopping the execution of application threads for more than a millisecond. It is suitable for applications which require low latency. Pause times are independent of the heap size that is being used. ZGC works well with heap sizes from a few hundred megabytes to 16TB.&lt;br /&gt;
+ZGC was initially introduced as an experimental feature in JDK 11, and was declared Production Ready in JDK 15. In JDK 21 was reimplemented to support generations.&lt;/p&gt;
 
-&lt;h2 id=&quot;zgc-사용법&quot;&gt;ZGC 사용법&lt;/h2&gt;
+&lt;h2 id=&quot;zgc-usage&quot;&gt;ZGC usage&lt;/h2&gt;
 
-&lt;p&gt;ZGC는 application이 실행되는 동안 동시에 GC를 처리한다. 때문에 반응 속도에 미치는 영향을 최소화할 수 있다.&lt;br /&gt;
-web application 같은 경우, 동시에 많은 요청을 처리해야 하기 때문에 ZGC의 빠른 반응과 확장성이 유리하다.&lt;br /&gt;
-하지만 너무 작은 메모리(8MB 이하)에서는 사용하지 않는 것이 좋다.&lt;/p&gt;
+&lt;p&gt;At its core, ZGC is a concurrent garbage collector, meaning all heavy lifting work is done while Java threads continue to execute. This greatly limits the impact garbage collection will have on your application’s response time.
+ZGC is a scalable low-latency garbage collector capable of handling heaps ranging from 8MB to 16TB in size, with sub-millisecond max pause times.&lt;/p&gt;
 
-&lt;h3 id=&quot;사용해-보기&quot;&gt;사용해 보기&lt;/h3&gt;
+&lt;p&gt;ZGC’s low latency and ability to scale to handle large live sets would make it a good candidate for web applications. Web applications frequently service many requests simultaneously, often resulting in maintaining larger live sets. Consistent responsiveness also helps with system stability. This pairs well with ZGC’s strengths.&lt;br /&gt;
+On the other hand, while ZGC can operate with heaps as small as 8 MB, it is strongly discouraged to use ZGC in such a scenario.&lt;/p&gt;
 
+&lt;h3 id=&quot;try-them-out&quot;&gt;Try them out&lt;/h3&gt;
+
+&lt;p&gt;Start With the default GC, G1&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;기본적으로 G1 GC를 사용한다.
+  &lt;li&gt;If the Throughput is insufficient
     &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;Throughput&lt;/strong&gt;가 부족하다면 → Parallel GC로 전환.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;STW&lt;/strong&gt;가 너무 길다면 → ZGC로 전환.&lt;/li&gt;
+      &lt;li&gt;try enabling Parallel GC&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;If pause times are too long
+    &lt;ul&gt;
+      &lt;li&gt;try ZGC&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;zgc-cycle&quot;&gt;ZGC cycle&lt;/h2&gt;
 
-&lt;p&gt;ZGC는 몇 가지 STW을 가진다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Pause Mark Start&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Pause Mark End&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Pause Relocate Start&lt;/code&gt; 같은 작업이 있다.&lt;br /&gt;
-이 STW는 1밀리초 이하로 매우 짧으며, 가비지 컬렉션 과정에서 데이터의 정확성과 일관성을 유지하기 위해 필요하다.&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;ZGC (Z Garbage Collector)&lt;/strong&gt; performs a few &lt;strong&gt;Stop-the-World (STW)&lt;/strong&gt; pauses, such as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Pause Mark Start&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Pause Mark End&lt;/code&gt;, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Pause Relocate Start&lt;/code&gt;.&lt;br /&gt;
+These pauses are brief, typically under a millisecond, and are necessary to ensure &lt;strong&gt;consistency and correctness&lt;/strong&gt; in the garbage collection process. Here’s why these pauses occur.&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
-      &lt;th&gt;STW&lt;/th&gt;
-      &lt;th&gt;목적&lt;/th&gt;
-      &lt;th&gt;이유&lt;/th&gt;
+      &lt;th&gt;Pause Name&lt;/th&gt;
+      &lt;th&gt;Purpose&lt;/th&gt;
+      &lt;th&gt;Reason for STW&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;strong&gt;Pause Mark Start&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;시작 지점(root references) 기록&lt;/td&gt;
-      &lt;td&gt;마킹 시작 전에 일관성을 보장하기 위해&lt;/td&gt;
+      &lt;td&gt;Capture root references&lt;/td&gt;
+      &lt;td&gt;Ensure consistency of the root set before marking starts.&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;strong&gt;Pause Mark End&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;마킹 완료 및 참조 처리&lt;/td&gt;
-      &lt;td&gt;모든 살아 있는 객체를 확인하기 위해&lt;/td&gt;
+      &lt;td&gt;Finalize marking and process references&lt;/td&gt;
+      &lt;td&gt;Ensure all live objects are identified and prepare for relocation.&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;strong&gt;Pause Relocate Start&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;객체 이동 준비&lt;/td&gt;
-      &lt;td&gt;이동 전 일관성을 유지하기 위해&lt;/td&gt;
+      &lt;td&gt;Finalize the relocation set and prepare for object movement&lt;/td&gt;
+      &lt;td&gt;Ensure consistency before relocating objects.&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -19391,118 +19407,124 @@ web application 같은 경우, 동시에 많은 요청을 처리해야 하기 �
 
 &lt;h2 id=&quot;colored-pointers&quot;&gt;Colored Pointers&lt;/h2&gt;
 
-&lt;p&gt;ZGC는 포인터에 추가 정보를 넣어 객체를 추적한다. 이 정보를 사용하면 application을 멈추지 않고 객체를 관리할 수 있다.&lt;br /&gt;
-객체가 &lt;strong&gt;살아있는지&lt;/strong&gt;, &lt;strong&gt;이동했는지&lt;/strong&gt;를 이 포인터를 통해 확인할 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Colored pointers&lt;/strong&gt; in ZGC are just normal pointers with extra information embedded in them.&lt;br /&gt;
+This extra information helps ZGC track and manage objects during &lt;strong&gt;concurrent garbage collection&lt;/strong&gt; without stopping the application.&lt;br /&gt;
+It improves the efficiency of garbage collection by allowing ZGC to track live objects, move them, and perform other tasks in the background with minimal impact on performance.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/post/java/gc/zgc_colored_pointer.png&quot; alt=&quot;zgc_colored_pointer&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;첫 16비트&lt;/strong&gt;: 예약 공간&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;마지막 44비트&lt;/strong&gt;: 객체 주소&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;4비트 정보&lt;/strong&gt;
+  &lt;li&gt;first 16 bits: remain in reserve for future use&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;last 44 bits: object address (16TB address space)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;4 bits
     &lt;ol&gt;
-      &lt;li&gt;&lt;strong&gt;마크 비트(Mark Bits)&lt;/strong&gt;: 객체가 살아 있는지 표시&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;리맵 비트(Remapped Bit)&lt;/strong&gt;: 객체가 이동했는지 표시&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;최종화 비트(Finalizable Bit)&lt;/strong&gt;: 최종 처리만 필요한 객체인지 표시&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Mark Bits&lt;/strong&gt;: These bits indicate if an object is marked as live or reachable. ZGC uses two alternating bits (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Marked0&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Marked1&lt;/code&gt;) to track this.
+        &lt;ul&gt;
+          &lt;li&gt;If the pointer is &lt;strong&gt;colored&lt;/strong&gt; with a “mark bit” ZGC knows this object is in use.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Remapped Bit&lt;/strong&gt;: This bit tells ZGC if the pointer is pointing to an object that has been &lt;strong&gt;moved&lt;/strong&gt; (remapped) during compaction.
+        &lt;ul&gt;
+          &lt;li&gt;If the pointer is &lt;strong&gt;colored&lt;/strong&gt; with a “remapped bit” ZGC knows the object has been moved and will automatically follow the new memory location.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Finalizable Bit&lt;/strong&gt;: This bit indicates if the object is only reachable through a finalizer. Note that finalization was designated as deprecated for removal in JDK 18.&lt;/li&gt;
     &lt;/ol&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;heap-multi-mapping&quot;&gt;Heap Multi-Mapping&lt;/h3&gt;
 
-&lt;p&gt;ZGC는 STW를 줄이기 위해 application이 실행 중일 때 객체를 heap 내에서 다른 물리적 위치로 이동시킨다.&lt;br /&gt;
-객체가 이동한 위치로 접근하기 위한 방법으로 Heap Multi-Mapping을 사용한다.&lt;/p&gt;
-
-&lt;p&gt;multi mapping을 통해 객체의 물리적 위치를 가상 메모리에서 포인터의 각 color에 해당하는 view로 매핑한다.&lt;br /&gt;
-이 매핑 방식 덕분에 load barrier가 마지막 동기화 이후 이동된 객체를 찾을 수 있다.&lt;/p&gt;
+&lt;p&gt;Because ZGC can move the physical location of an object in heap memory while the application is running, multiple paths need to be provided to the current physical location where the object resides. In ZGC, this is accomplished through heap multi-mapping. With multi-mapping, the physical location of an object is mapped to three views in virtual memory, corresponding to each of the pointer’s potential “colors”. This allows a load barrier to locate an object if it has been moved since the last synchronization point.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/post/java/gc/zgc_heap_multi_mapping.png&quot; alt=&quot;zgc_heap_multi_mapping&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;load-barriers&quot;&gt;Load Barriers&lt;/h2&gt;
 
-&lt;h3 id=&quot;zgc에서-load-barrier가-필요한-이유&quot;&gt;ZGC에서 Load Barrier가 필요한 이유&lt;/h3&gt;
+&lt;h3 id=&quot;why-do-we-need-a-load-barrier-in-zgc&quot;&gt;Why Do We Need a Load Barrier in ZGC?&lt;/h3&gt;
+&lt;p&gt;In ZGC, objects can be &lt;strong&gt;moved around in memory&lt;/strong&gt; during garbage collection (in the &lt;strong&gt;compaction phase&lt;/strong&gt;). If an object is relocated, any reference to it must be updated to point to the new location of the object. Since ZGC performs most of its work &lt;strong&gt;concurrently&lt;/strong&gt; with the application, the &lt;strong&gt;load barrier&lt;/strong&gt; ensures that the program doesn’t accidentally use &lt;strong&gt;stale references&lt;/strong&gt; (outdated memory locations) during this process.&lt;/p&gt;
 
-&lt;p&gt;ZGC는 GC 중에(압축 단계에서) 객체를 메모리 내에서 &lt;strong&gt;이동&lt;/strong&gt;할 수 있다. 객체가 이동되면, 해당 객체를 참조하는 모든 참조를 새로운 위치로 업데이트해야 한다.&lt;br /&gt;
-ZGC는 대부분의 작업을 application과 &lt;strong&gt;동시에&lt;/strong&gt; 수행하기 때문에, &lt;strong&gt;Load Barrier&lt;/strong&gt;는 application이 오래된 참조(잘못된 메모리 위치)를 사용하는 것을 방지한다.&lt;/p&gt;
-
-&lt;h3 id=&quot;load-barrier는-어떻게-작동하는지&quot;&gt;Load Barrier는 어떻게 작동하는지?&lt;/h3&gt;
-
+&lt;h3 id=&quot;how-does-it-work&quot;&gt;How Does It Work?&lt;/h3&gt;
 &lt;ol&gt;
-  &lt;li&gt;&lt;strong&gt;프로그램이 객체에 대한 참조를 불러올 때&lt;/strong&gt;(예: 필드 접근, 배열 접근 등), Load Barrier가 이 접근을 가로챈다.&lt;/li&gt;
-  &lt;li&gt;해당 객체가 &lt;strong&gt;이동되었는지&lt;/strong&gt; 확인한다. (즉, &lt;strong&gt;relocation set&lt;/strong&gt; 에 속하는지 확인).&lt;/li&gt;
-  &lt;li&gt;객체가 이동된 경우, Load Barriers는 참조를 새 위치로 업데이트한다.&lt;/li&gt;
-  &lt;li&gt;이 과정은 application이 실행 중일 때 &lt;strong&gt;백그라운드에서 진행&lt;/strong&gt;되며, ZGC가 객체를 이동하더라도 프로그램은 항상 올바른 위치의 객체에 접근할 수 있다.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;When a program loads a reference to an object&lt;/strong&gt; (say, via a field access or array access), the load barrier intercepts this access.&lt;/li&gt;
+  &lt;li&gt;If the object has been &lt;strong&gt;moved&lt;/strong&gt; during garbage collection (i.e., it’s part of the &lt;strong&gt;relocation set&lt;/strong&gt;), the load barrier ensures that the reference is updated to point to the &lt;strong&gt;new location&lt;/strong&gt; of the object.&lt;/li&gt;
+  &lt;li&gt;This process happens &lt;strong&gt;in the background&lt;/strong&gt; while the application is running, and it ensures that the application always accesses the &lt;strong&gt;correct&lt;/strong&gt; location of the object, even if ZGC has moved it.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&quot;zgc-load-barrier의-장점&quot;&gt;ZGC Load Barrier의 장점&lt;/h3&gt;
-
+&lt;h3 id=&quot;benefits-of-load-barriers-in-zgc&quot;&gt;Benefits of Load Barriers in ZGC&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;application STW 없음&lt;/strong&gt;: Load Barrier 덕분에 ZGC는 객체를 이동하거나 메모리를 관리하면서도 application을 멈추지 않는다.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;일관성&lt;/strong&gt;: Load Barrier는 프로그램이 항상 올바른 메모리 위치에서 객체를 읽도록 보장한다.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;동시성&lt;/strong&gt;: ZGC는 객체를 이동하는 작업을 프로그램 실행과 동시에 안전하게 처리할 수 있어 GC로 인한 방해를 최소화한다.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;No Application Pause&lt;/strong&gt;: ZGC can move objects and manage memory without needing to stop the application, thanks to the load barrier. The barrier allows the application to continue running while still being safe and consistent.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Consistency&lt;/strong&gt;: The load barrier ensures that the program always reads the correct memory location, even when objects are relocated or modified during garbage collection.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Concurrency&lt;/strong&gt;: ZGC can do concurrent work, like relocating objects, while the application continues to access them as if nothing changed, making garbage collection less intrusive.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;regions&quot;&gt;Regions&lt;/h2&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/post/java/gc/zgc_region.png&quot; alt=&quot;zgc_region&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;ZGC는 G1 GC처럼 메모리를 영역으로 나눠서 관리한다. 하지만 ZGC의 영역은 &lt;strong&gt;ZPages&lt;/strong&gt;로 정의되며, 더 유연한 구조를 갖는다.  &lt;br /&gt;
-작은 영역, 중간 영역, 큰 영역으로 나뉘며, 프로그램에서 필요한 메모리 크기에 따라 활성화된 영역의 개수가 동적으로 조절된다.&lt;/p&gt;
+&lt;p&gt;This follows a similar pattern to G1 GC, which also uses memory regions. However, ZGC regions, internally defined as ZPages, are more dynamic, with small, medium, and large sizes; the number of active regions can increase and decrease depending on the needs of the live set.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;작은 영역&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Small Regions&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;크기: 2MB&lt;/li&gt;
-  &lt;li&gt;크기가 256KB 이하(작은 영역의 1/8 크기)인 객체는 작은 영역에 저장된다.&lt;/li&gt;
+  &lt;li&gt;size: 2MB&lt;/li&gt;
+  &lt;li&gt;Objects less than 1/8th (12.5%) the size of a small region, so less than or equal to 256 KB, are stored in a small region.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;중간 영역&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Medium Regions&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;크기: 32MB(힙 크기가 1GB 이상일 때)&lt;/li&gt;
-  &lt;li&gt;크기가 중간 영역 크기의 1/8 이하인 객체가 여기에 저장된다.&lt;/li&gt;
+  &lt;li&gt;size: 32MB (if heap bigger than 1GB)&lt;/li&gt;
+  &lt;li&gt;Objects 1/8th (12.5%) or less in size than the set size of a medium region will be stored there.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;큰 영역&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Large Regions&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;크기: 객체 크기에 맞춰 2MB 단위로 조정&lt;/li&gt;
-  &lt;li&gt;크기가 13MB인 객체는 14MB 영역에 저장된다.&lt;/li&gt;
-  &lt;li&gt;중간 영역에 들어갈 수 없을 만큼 큰 객체는 큰 영역에 저장된다.&lt;/li&gt;
+  &lt;li&gt;size: tightly fitted in 2 MB increments to the object’s size.&lt;/li&gt;
+  &lt;li&gt;13 MB object would be stored in a 14 MB large region.&lt;/li&gt;
+  &lt;li&gt;Any object too large to fit in a medium region will be placed in its own large region.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;g1-gc와-비교&quot;&gt;G1 GC와 비교&lt;/h2&gt;
+&lt;h2 id=&quot;vs-g1gc&quot;&gt;vs G1GC&lt;/h2&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
-      &lt;th&gt;특징&lt;/th&gt;
-      &lt;th&gt;G1 GC&lt;/th&gt;
+      &lt;th&gt;Feature&lt;/th&gt;
+      &lt;th&gt;G1GC&lt;/th&gt;
       &lt;th&gt;ZGC&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;목표&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;짧은 멈춤 + 높은 처리 속도&lt;/td&gt;
-      &lt;td&gt;초저지연&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;Primary Goal&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Low pauses + good throughput&lt;/td&gt;
+      &lt;td&gt;Ultra-low pauses&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;힙 크기&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;중간 ~ 큰 메모리 (최대 32GB 이상)&lt;/td&gt;
-      &lt;td&gt;아주 큰 메모리 (최대 16TB)&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;Heap Size&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Medium to large (up to ~32 GB+)&lt;/td&gt;
+      &lt;td&gt;Very large (up to 16 TB)&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;멈춤 시간&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;예측 가능하지만 힙 크기에 비례해 증가&lt;/td&gt;
-      &lt;td&gt;항상 짧음 (10ms 미만)&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;Pause Times&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Predictable but grow with heap size&lt;/td&gt;
+      &lt;td&gt;Always very low (&amp;lt;10 ms)&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;압축(compaction)&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;멈춤 시간 중 처리하거나 단계적으로 진행&lt;/td&gt;
-      &lt;td&gt;완전히 동시 처리&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;Compaction&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Stop-the-world or incremental&lt;/td&gt;
+      &lt;td&gt;Fully concurrent&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;처리 속도&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;높음&lt;/td&gt;
-      &lt;td&gt;약간 낮음&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;Throughput&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Higher&lt;/td&gt;
+      &lt;td&gt;Slightly lower&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Concurrent Phases&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Partial&lt;/td&gt;
+      &lt;td&gt;Mostly concurrent&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -19523,17 +19545,17 @@ ZGC는 대부분의 작업을 application과 &lt;strong&gt;동시에&lt;/strong&
       </item>
     
       <item>
-        <title>linux grep 사용법, 터미널 시니어처럼 사용하기</title>
+        <title>How to Use Linux grep Like a Terminal Pro</title>
         
-          <description>&lt;p&gt;grep은 linux 커맨드 중 가장 많이 쓰이는 커맨드 중 하나이다.&lt;br /&gt;
-서버 개발자 기준으로 로그나 데이터를 조회하고 분석할 때 grep은 필수이다.&lt;/p&gt;
+          <description>&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grep&lt;/code&gt; is one of the most frequently used commands in Linux.&lt;br /&gt;
+For server developers, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grep&lt;/code&gt; is essential when searching and analyzing logs or data.&lt;/p&gt;
 
-&lt;h2 id=&quot;grep-options&quot;&gt;grep options&lt;/h2&gt;
+&lt;h2 id=&quot;grep-options&quot;&gt;grep Options&lt;/h2&gt;
 
-&lt;p&gt;grep을 그냥 써도 좋지만 사용하면 유용한 옵션들이 있다.&lt;br /&gt;
-grep을 아는 것과 grep을 효율적으로 쓸 수 있는 것은 다른 것이다.&lt;/p&gt;
+&lt;p&gt;Using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grep&lt;/code&gt; as-is is fine, but there are some options that can make it more useful.&lt;br /&gt;
+Knowing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grep&lt;/code&gt; and being able to use it efficiently are very different.&lt;/p&gt;
 
-&lt;h3 id=&quot;grep-option-테스트에-활용할-file-만들기&quot;&gt;grep option 테스트에 활용할 file 만들기&lt;/h3&gt;
+&lt;h3 id=&quot;creating-a-file-to-test-grep-options&quot;&gt;Creating a File to Test grep options&lt;/h3&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;__main__&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;numbers.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;w&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fw&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
@@ -19541,122 +19563,134 @@ grep을 아는 것과 grep을 효율적으로 쓸 수 있는 것은 다른 것�
    &lt;span class=&quot;n&quot;&gt;fw&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;numbers: &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot; ...&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;grep의 옵션을 확인하기 앞서 grep을 테스트할 문서를 만들어본다.&lt;br /&gt;
-0부터 9999까지 갖는 file을 만들어 grep을 테스트한다.&lt;br /&gt;
-이해가지 않는 부분이 있다면 테스트 file을 활용하면 더 이해하기 쉽다.&lt;/p&gt;
+&lt;p&gt;Before learning the options, let’s create a test file for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grep&lt;/code&gt;.&lt;br /&gt;
+The file will contain numbers from 0 to 9999 for testing.&lt;br /&gt;
+If something is unclear, working with a test file can make it easier to understand.&lt;/p&gt;
 
-&lt;h3 id=&quot;대소문자-무시하기&quot;&gt;대소문자 무시하기&lt;/h3&gt;
+&lt;h3 id=&quot;ignoring-case-sensitivity&quot;&gt;Ignoring Case Sensitivity&lt;/h3&gt;
 
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;grep &lt;/span&gt;Num numbers.txt
 &lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; Num numbers.txt
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grep -i&lt;/code&gt;&lt;/strong&gt; 검색하는 문자에서 대소문자를 무시(&lt;strong&gt;i&lt;/strong&gt;gnore)한다.&lt;/p&gt;
 
-&lt;h3 id=&quot;개수-지정하기&quot;&gt;개수 지정하기&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grep -i&lt;/code&gt;&lt;/strong&gt; &lt;strong&gt;i&lt;/strong&gt;gnores case when searching.&lt;/p&gt;
+
+&lt;h3 id=&quot;limiting-the-number-of-matches&quot;&gt;Limiting the Number of Matches&lt;/h3&gt;
 
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; 5 1234 numbers.txt
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grep -m 1&lt;/code&gt;&lt;/strong&gt; 처음 매칭되는 1개의 라인(&lt;strong&gt;m&lt;/strong&gt;ax count)만 출력한다.&lt;/p&gt;
 
-&lt;h3 id=&quot;line-number-출력하기&quot;&gt;line number 출력하기&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grep -m 1&lt;/code&gt;&lt;/strong&gt; prints only the first 1 line (&lt;strong&gt;m&lt;/strong&gt;ax count) that matches.&lt;/p&gt;
+
+&lt;h3 id=&quot;displaying-line-numbers&quot;&gt;Displaying Line Numbers&lt;/h3&gt;
 
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; 1234 numbers.txt
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grep -n&lt;/code&gt;&lt;/strong&gt; file의 몇 번째 라인(&lt;strong&gt;n&lt;/strong&gt;umber)에 있는지도 함께 출력한다.&lt;/p&gt;
 
-&lt;h3 id=&quot;매칭되지-않는-것-확인하기&quot;&gt;매칭되지 않는 것 확인하기&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grep -n&lt;/code&gt;&lt;/strong&gt; includes the line &lt;strong&gt;n&lt;/strong&gt;umber where the match is found.&lt;/p&gt;
+
+&lt;h3 id=&quot;displaying-non-matching-lines&quot;&gt;Displaying Non-Matching Lines&lt;/h3&gt;
 
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; 1 numbers.txt
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grep -v&lt;/code&gt;&lt;/strong&gt; 매칭되지 않는(in&lt;strong&gt;v&lt;/strong&gt;ert match) 라인만 출력한다.&lt;/p&gt;
 
-&lt;h3 id=&quot;필요한-범위까지만-확인하기&quot;&gt;필요한 범위까지만 확인하기&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grep -v&lt;/code&gt;&lt;/strong&gt; outputs only the lines that don’t match (&lt;strong&gt;v&lt;/strong&gt;invert match).&lt;/p&gt;
+
+&lt;h3 id=&quot;restricting-output-to-a-specific-range&quot;&gt;Restricting Output to a Specific Range&lt;/h3&gt;
 
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; 1234 numbers.txt
 &lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;.&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;0,3&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;1234.&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;0,3&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; numbers.txt
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grep -o&lt;/code&gt;&lt;/strong&gt; 매칭되는 결과만(&lt;strong&gt;o&lt;/strong&gt;nly match) 출력한다.&lt;br /&gt;
--o 에서는 정규식을 활용하여 검색하고자 하는 문자의 앞 뒤만 출력하도록 할 수 있다.&lt;br /&gt;
--o를 사용하면 하나의 라인이 굉장히 긴 경우에서 필요한 범위의 값들만 grep 할 수 있어 용이하다.&lt;/p&gt;
 
-&lt;h3 id=&quot;or-하기&quot;&gt;OR 하기&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grep -o&lt;/code&gt;&lt;/strong&gt; prints only the matching part of the line (&lt;strong&gt;o&lt;/strong&gt;nly match).&lt;br /&gt;
+You can use regular expressions with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-o&lt;/code&gt; to show only the surrounding context of the match.&lt;br /&gt;
+This is especially useful for long lines where you need to extract specific parts.&lt;/p&gt;
+
+&lt;h3 id=&quot;or-condition&quot;&gt;OR Condition&lt;/h3&gt;
 
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; 1234 &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; 5678 numbers.txt
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grep -e&lt;/code&gt;&lt;/strong&gt; 정규식을 활용하여 검색할 수 있다.&lt;br /&gt;
--e는 여러 개의 정규식을 동시에 검색할 수 있어서 OR 조건처럼 사용할 수 있다.&lt;/p&gt;
 
-&lt;h3 id=&quot;앞-뒤의-라인까지-출력하기&quot;&gt;앞 뒤의 라인까지 출력하기&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grep -e&lt;/code&gt;&lt;/strong&gt; allows searching using multiple regular expressions, working like an OR condition.&lt;/p&gt;
+
+&lt;h3 id=&quot;displaying-lines-before-and-after-matches&quot;&gt;Displaying Lines Before and After Matches&lt;/h3&gt;
 
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-A&lt;/span&gt; 2 1234 numbers.txt
 &lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-B&lt;/span&gt; 2 1234 numbers.txt
 &lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-C&lt;/span&gt; 2 1234 numbers.txt
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grep -A 2&lt;/code&gt;&lt;/strong&gt; 찾은 line에서 뒤의(&lt;strong&gt;A&lt;/strong&gt;fter) 2라인 표시&lt;br /&gt;
-&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grep -B 2&lt;/code&gt;&lt;/strong&gt; 찾은 line에서 앞의(&lt;strong&gt;B&lt;/strong&gt;efore) 2라인 표시&lt;br /&gt;
-&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grep -C 2&lt;/code&gt;&lt;/strong&gt; 찾은 line에서 앞뒤로 2라인까지 표시&lt;/p&gt;
 
-&lt;h3 id=&quot;file-name-출력-하기--안하기&quot;&gt;file name 출력 하기 / 안하기&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grep -A 2&lt;/code&gt;&lt;/strong&gt;: Displays 2 lines &lt;strong&gt;A&lt;/strong&gt;fter the match.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grep -B 2&lt;/code&gt;&lt;/strong&gt;: Displays 2 lines &lt;strong&gt;B&lt;/strong&gt;efore the match.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grep -C 2&lt;/code&gt;&lt;/strong&gt;: Displays 2 lines before and after the match.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;displaying-file-names&quot;&gt;Displaying File Names&lt;/h3&gt;
 
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-H&lt;/span&gt; 1234 numbers.txt
 &lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-h&lt;/span&gt; 1234 numbers&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grep -H&lt;/code&gt;&lt;/strong&gt; fileName을 같이 출력한다.&lt;br /&gt;
-&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grep -h&lt;/code&gt;&lt;/strong&gt; fileName을 출력하지 않는다.&lt;/p&gt;
 
-&lt;p&gt;default 값은 여러 file을 검색할 때는 fileName이 출력된다.&lt;br /&gt;
-단일 file을 검색할 때는 fileName이 출력되지 않는다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grep -H&lt;/code&gt;&lt;/strong&gt;: Includes the file name in the output.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grep -h&lt;/code&gt;&lt;/strong&gt;: Omits the file name from the output.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h3 id=&quot;recursive-검색하기&quot;&gt;recursive 검색하기&lt;/h3&gt;
+&lt;p&gt;By default, the file name is shown when searching multiple files but omitted when searching a single file.&lt;/p&gt;
+
+&lt;h3 id=&quot;recursive-search&quot;&gt;Recursive Search&lt;/h3&gt;
 
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; 1234 &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grep -r 1234 .&lt;/code&gt;&lt;/strong&gt; 현재 directory &lt;strong&gt;r&lt;/strong&gt;ecursive 하게 grep한다.&lt;/p&gt;
 
-&lt;h3 id=&quot;매칭되는-count-보기&quot;&gt;매칭되는 count 보기&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grep -r 1234 .&lt;/code&gt;&lt;/strong&gt; searches recursively in the current directory.&lt;/p&gt;
+
+&lt;h3 id=&quot;counting-matches&quot;&gt;Counting Matches&lt;/h3&gt;
 
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; 1234 numbers.txt
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grep -c&lt;/code&gt;&lt;/strong&gt; 검색어 결과의 count를 출력한다.&lt;/p&gt;
 
-&lt;h2 id=&quot;grep-응용법&quot;&gt;grep 응용법&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grep -c&lt;/code&gt;&lt;/strong&gt; displays the count of matching lines.&lt;/p&gt;
 
-&lt;p&gt;grep만 쓴다면 command 활용에 있어서는 주니어에 가깝다.  &lt;br /&gt;
-grep을 다른 명령어들과 함께 얼마나 효율적으로 사용하느냐가 퍼포먼스를 좌우한다.&lt;/p&gt;
+&lt;h2 id=&quot;advanced-grep-usage&quot;&gt;Advanced grep Usage&lt;/h2&gt;
 
-&lt;h3 id=&quot;기본-사용법&quot;&gt;기본 사용법&lt;/h3&gt;
+&lt;p&gt;Using just &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grep&lt;/code&gt; might make you a beginner in command-line usage.&lt;br /&gt;
+Performance depends on how efficiently you combine &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grep&lt;/code&gt; with other commands.&lt;/p&gt;
+
+&lt;h3 id=&quot;basic-usage&quot;&gt;Basic Usage&lt;/h3&gt;
 
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;grep &lt;/span&gt;1234 numbers.txt
 &lt;span class=&quot;nb&quot;&gt;grep &lt;/span&gt;1234 numbers.txt&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;가장 간단한 grep의 사용법으로 간단하지만 가장 많이 쓰인다.&lt;/p&gt;
+&lt;p&gt;This is the simplest and most commonly used way to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grep&lt;/code&gt;.&lt;/p&gt;
 
-&lt;h3 id=&quot;pipeline과-사용하기&quot;&gt;pipeline과 사용하기&lt;/h3&gt;
+&lt;h3 id=&quot;using-with-pipeline&quot;&gt;Using with Pipeline&lt;/h3&gt;
 
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;numbers.txt|grep 1234
-&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;numbers.txt|grep 1234|cut &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;:&apos;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; 2
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;numbers.txt | &lt;span class=&quot;nb&quot;&gt;grep &lt;/span&gt;1234
+ &lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;numbers.txt | &lt;span class=&quot;nb&quot;&gt;grep &lt;/span&gt;1234 | &lt;span class=&quot;nb&quot;&gt;cut&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;:&apos;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; 2
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;커맨드 pipeline을 조합해 더 효율적으로 grep을 사용할 수 있다.&lt;/p&gt;
+&lt;p&gt;You can use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grep&lt;/code&gt; more efficiently by combining it with other commands via pipelines.&lt;/p&gt;
 
-&lt;h3 id=&quot;tail과-사용하기&quot;&gt;tail과 사용하기&lt;/h3&gt;
+&lt;h3 id=&quot;using-with-tail&quot;&gt;Using with tail&lt;/h3&gt;
 
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;tail&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; numbers.txt|grep 1234
-&lt;span class=&quot;nb&quot;&gt;tail&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-F&lt;/span&gt; numbers.txt|grep 1234
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nb&quot;&gt;tail&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; numbers.txt | &lt;span class=&quot;nb&quot;&gt;grep &lt;/span&gt;1234
+ &lt;span class=&quot;nb&quot;&gt;tail&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-F&lt;/span&gt; numbers.txt | &lt;span class=&quot;nb&quot;&gt;grep &lt;/span&gt;1234
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tail -f&lt;/code&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tail -F&lt;/code&gt;&lt;/strong&gt; 는 file에 추가되는 line을 follow 할 때 사용한다.&lt;br /&gt;
-나는 주로 실시간으로 작성되는 서버 로그를 분석할 때 많이 사용한다.&lt;br /&gt;
-그렇지만 1초에 수 천 라인의 로그가 찍히는 서버를 이렇게 보기란 불가능에 가깝다.&lt;br /&gt;
-실시간으로 서버 로그를 분석할 때 tail과 함께 grep으로 원하는 로그를 실시간으로 분석할 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tail -f&lt;/code&gt;&lt;/strong&gt; and &lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tail -F&lt;/code&gt;&lt;/strong&gt; are used to follow the lines added to a file in real-time.&lt;br /&gt;
+These are commonly used to analyze server logs as they are written.&lt;br /&gt;
+However, it’s nearly impossible to monitor thousands of lines per second.&lt;br /&gt;
+By combining &lt;strong&gt;tail&lt;/strong&gt; and &lt;strong&gt;grep&lt;/strong&gt;, you can analyze only the desired logs in real-time.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tail -f&lt;/code&gt;&lt;/strong&gt; 현재 file name과 일치하는 file을 follow 한다. &lt;br /&gt;
-&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tail -F&lt;/code&gt;&lt;/strong&gt; file이 변경되더라도 file의 name을 기준으로 follow 한다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tail -f&lt;/code&gt;&lt;/strong&gt; Follows the current file.&lt;br /&gt;
+&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tail -F&lt;/code&gt;&lt;/strong&gt; Follows based on the file name, even if the file is replaced.&lt;/p&gt;
 
-&lt;p&gt;일반적으로 로그 file은 시간에 따라 rolling 되면서 file name이 바뀌고, 새로운 file이 생긴다.&lt;br /&gt;
-&lt;strong&gt;-f&lt;/strong&gt;는 현재 file을 follow 하면서 rolling으로 인해 file name이 바뀌는 경우 로그가 더 출력되지 않는다.&lt;br /&gt;
-&lt;strong&gt;-F&lt;/strong&gt;는 file name을 기준으로 file이 변경되면 다시 follow를 하기 때문에 rolling이 되더라도 로그가 계속 출력된다.&lt;/p&gt;
+&lt;p&gt;Logs often roll over to a new file based on time. &lt;br /&gt;
+With &lt;strong&gt;-f&lt;/strong&gt;, if the file name changes due to rolling, no further logs will be shown. &lt;br /&gt;
+&lt;strong&gt;-F&lt;/strong&gt;, on the other hand, continues following logs even after the file name changes.&lt;/p&gt;
 </description>
         
         <pubDate></pubDate>
