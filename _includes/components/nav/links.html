@@ -35,7 +35,7 @@ node, nav_children, nav_ancestors.
             <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
         </button>
         {%- endif -%}
-        <a href="{{ node.url | relative_url }}" class="nav-list-link">{{ node.title }}</a>
+        <a href="{{ node.url | relative_url }}" class="nav-list-link">{{ node.sidebar_label }}</a>
         {%- if nav_children.size >= 1 -%}
         {%- if node.child_nav_order == 'desc' or node.child_nav_order == 'reversed' -%}
         {%- assign nav_children = nav_children | reverse -%}
