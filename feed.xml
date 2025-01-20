@@ -5,7 +5,7 @@
     <description>backend tech, log</description>
     <link>https://meansoup.github.io/</link>
     <atom:link href="https://meansoup.github.io/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2025-01-19T12:41:57+00:00</updated>
+    <updated>2025-01-20T15:58:57+00:00</updated>
     <id>https://meansoup.github.io</id>
     <author>
       <name></name>
@@ -11888,171 +11888,172 @@ JUnit5를 기준으로 설명한다.&lt;/p&gt;
       <item>
         <title>Instagram, Facebook에서 배우는 유저 제한 정책, 서비스 정책의 중요성</title>
         
-          <description>&lt;p&gt;규모 있는 서비스를 관리하다보면 unnormal case에 대한 처리가 batch 작업마다 꼭 생기곤 한다.&lt;br /&gt;
-이런 이슈 중 상당 수는 &lt;strong&gt;user limit에 대한 제한&lt;/strong&gt;이 없기 때문이 아닌가 싶다.&lt;/p&gt;
+          <description>&lt;p&gt;When managing large-scale services, there are always unexpected cases to handle during batch operations.&lt;br /&gt;
+Many of these issues happen because there are &lt;strong&gt;no proper limits for users&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;최근 회사에서 abusing user 이슈를 겪었다.&lt;br /&gt;
-내가 관리하는 서비스 중 일정을 동기화 하는 서비스가 있는데,&lt;br /&gt;
-batch 작업 중 사용자 한 명이 100만 개 이상의 일정을 가지고 있는 케이스를 발견했다.&lt;/p&gt;
+&lt;p&gt;Recently, I faced a problem with an abusing user.&lt;br /&gt;
+I manage a service which syncs schedules.&lt;br /&gt;
+During a batch operation, we found a user with over a million schedules.&lt;/p&gt;
 
-&lt;p&gt;반복 일정(매주 화요일 10시 회의) 같은건 하나의 일정으로 치는 것을 감안했을 때 일반 사용자가 만들어낸 일정이라고 볼 수 없었다.&lt;/p&gt;
+&lt;p&gt;Considering that recurring schedules (like ‘weekly meeting at 10 AM every Tuesday’) count as just one schedule, this wasn’t a normal usecase.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;심지어 10분 만에 1000개의 일정을 만들기도 했다.&lt;/li&gt;
+  &lt;li&gt;They even created 1,000 schedules in just 10 minutes.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;덕분에 batch 로직의 변경과 instance type 변경 등의 별도 작업과 시간을 써야했다.&lt;/p&gt;
+&lt;p&gt;This forced us to spend time and effort modifying the batch logic and changing the instance type.&lt;/p&gt;
 
-&lt;p&gt;전부터 우리 회사 서비스에서 아쉬웠던 것은 이런 정책적인 제한이 (거의) 없다는 것이다.&lt;br /&gt;
-최근 인스타그램과 페이스북의 api를 보면서 우리 문제를 돌아보게 되었다.&lt;/p&gt;
+&lt;p&gt;One thing I’ve always found lacking in our company’s services is the lack of policies for such limits.&lt;br /&gt;
+Looking at APIs from Instagram and Facebook made me reflect on this issue.&lt;/p&gt;
 
-&lt;h2 id=&quot;인스타그램-사례&quot;&gt;인스타그램 사례&lt;/h2&gt;
+&lt;h2 id=&quot;instagram&quot;&gt;Instagram&lt;/h2&gt;
 
-&lt;p&gt;limits (제약 사항)에 대해 잘 적용된 서비스는 인스타그램만한 예시가 없을 것 같다. 이해하기도 쉽고.&lt;/p&gt;
+&lt;p&gt;When it comes to applying limits effectively, Instagram is a great example. it’s easy to understand too.&lt;/p&gt;
 
-&lt;p&gt;&lt;u&gt;instagram의 Inauthentic Activity과 spam 정책&lt;/u&gt;&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;에서 instagram은 Inauthentic Activity이 결국 사용자와 서비스를 위한 것이라고 말한다.&lt;br /&gt;
-이런 허위 활동이 결국 서비스의 질을 떨어트리고 커뮤니티를  망가뜨린다는 것이다.&lt;/p&gt;
+&lt;p&gt;&lt;u&gt;Instagram&apos;s policy on inauthentic activity and spam&lt;/u&gt;&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; explains that these activities harm both users and the service.&lt;br /&gt;
+Fake activities degrade the quality of the service and damage the community.&lt;/p&gt;
 
-&lt;p&gt;실제로 초기 페이스북에서 spam이 굉장히 많아 사용자가 이탈한 사건들이 있으니 이런 것들을 만들게 된 것이라고 예상해본다.&lt;br /&gt;
-&lt;strong&gt;허위 활동이라는 것은 서비스 관리도 어렵지만 서비스 질도 떨어뜨린다는 것&lt;/strong&gt;이 페이스북도 주목한 문제인 것 같다.&lt;/p&gt;
+&lt;p&gt;I guess this policy was developed because spam was a big issue. In my thought, in Facebook’s early days spam could makes users left the platform.&lt;br /&gt;
+&lt;strong&gt;Fake activities not only make managing the service harder but also lower its quality&lt;/strong&gt;, which Facebook seems to recognize as a serious problem.&lt;/p&gt;
 
-&lt;p&gt;인스타그램은 사용자와 api에 대해 적절하게 제한을 두고 있다.&lt;/p&gt;
+&lt;p&gt;Instagram sets clear limits for both users and APIs.&lt;/p&gt;
 
-&lt;h3 id=&quot;사용자에-대한-제한&quot;&gt;사용자에 대한 제한&lt;/h3&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;limits-for-users&quot;&gt;Limits for Users&lt;/h3&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
-      &lt;th&gt;제한 대상&lt;/th&gt;
-      &lt;th&gt;제한&lt;/th&gt;
+      &lt;th&gt;&lt;strong&gt;Action&lt;/strong&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;strong&gt;Limit&lt;/strong&gt;&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;follow 숫자 제한&lt;/td&gt;
-      &lt;td&gt;7500명&lt;/td&gt;
+      &lt;td&gt;Following people&lt;/td&gt;
+      &lt;td&gt;7,500 accounts&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;likes 제한&lt;/td&gt;
-      &lt;td&gt;시간 당 120개 &lt;br /&gt;하루에 300-500개&lt;/td&gt;
+      &lt;td&gt;Likes&lt;/td&gt;
+      &lt;td&gt;120 per hour, 300-500 per day&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;comments 제한&lt;/td&gt;
-      &lt;td&gt;하루에 200개&lt;/td&gt;
+      &lt;td&gt;Comments&lt;/td&gt;
+      &lt;td&gt;200 per day&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;people tag 제한&lt;/td&gt;
-      &lt;td&gt;post 하나에 20명&lt;/td&gt;
+      &lt;td&gt;Tagging people&lt;/td&gt;
+      &lt;td&gt;20 per post&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;DM 제한&lt;/td&gt;
-      &lt;td&gt;하루에 50-70명&lt;/td&gt;
+      &lt;td&gt;Direct Messages&lt;/td&gt;
+      &lt;td&gt;50-70 per day&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;신뢰성이 높은 유저(가입한지 6개월이 지난 유저 등)인지에 따라 제한이 다르지만, 전체 제한 및 시간/일 별 제한 정책을 가지고 있다.&lt;/p&gt;
+&lt;p&gt;The limits vary based on trustworthiness (e.g., accounts older than six months),&lt;br /&gt;
+but they have overall limits and per-hour or per-day restrictions.&lt;/p&gt;
 
-&lt;p&gt;여기서 follow 숫자를 제외한 다른 정책들은 instagram에서 공식적으로 open한 내용은 아니다.&lt;br /&gt;
-다만 관련된 많은 글들을 통해 정책을 확인할 수 있다.&lt;/p&gt;
+&lt;p&gt;Except for the &lt;u&gt;following limit&lt;/u&gt;&lt;sup id=&quot;fnref:2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;, other policies are mostly &lt;u&gt;unofficial&lt;/u&gt;&lt;sup id=&quot;fnref:3&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;. You can find them mentioned in many sources, though not directly announced by Instagram.&lt;br /&gt;
+This may be because the limitations of these policies do not affect the real user.&lt;/p&gt;
 
-&lt;p&gt;예상하건데 시간당 제한은 abusing 유저나 사용할 수 있을만한 숫자이기 때문에 공식적으로 발표하지 않은 것으로 생각한다.&lt;/p&gt;
+&lt;h3 id=&quot;limits-for-apis&quot;&gt;Limits for APIs&lt;/h3&gt;
 
-&lt;h3 id=&quot;api에-대한-제한&quot;&gt;Api에 대한 제한&lt;/h3&gt;
+&lt;p&gt;For developers, Instagram’s &lt;u&gt;API limits creating posts to 50 per day&lt;/u&gt;&lt;sup id=&quot;fnref:4&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
 
-&lt;p&gt;developer에게 open한 api에서는 24시간에 25개의 post만 생성할 수 있도록 제한한다.&lt;/p&gt;
+&lt;h2 id=&quot;facebook&quot;&gt;Facebook&lt;/h2&gt;
 
-&lt;h2 id=&quot;facebook-사례&quot;&gt;facebook 사례&lt;/h2&gt;
+&lt;p&gt;Interestingly, &lt;u&gt;Facebook tracks and shares metrics&lt;/u&gt;&lt;sup id=&quot;fnref:5&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt; on abuse, spam, and inappropriate posts.&lt;br /&gt;
+This seems to be a way of showing they are improving their services.&lt;/p&gt;
 
-&lt;p&gt;흥미로운 점은 &lt;u&gt;facebook은 abusing, spam, sexual post 등에 대해 지표&lt;/u&gt;&lt;sup id=&quot;fnref:2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;를 관리하고 공개하고 있다.&lt;br /&gt;
-우리 서비스는 더 완성도 높아지고 있다는걸 보여주기 위함인 것 같다.&lt;/p&gt;
+&lt;p&gt;They even share data on mistaken abuse reports.&lt;br /&gt;
+Even if we can’t publish such data, there’s definitely something to learn from this approach.&lt;/p&gt;
 
-&lt;p&gt;잘못 abusing으로 체크한 경우까지 open하고 있는데 공개하지 못하더라도 배워야할 부분인 것은 분명하다.&lt;/p&gt;
+&lt;h2 id=&quot;thoughts-on-limits&quot;&gt;Thoughts on Limits&lt;/h2&gt;
 
-&lt;h2 id=&quot;limits에-대해-생각-정리하기&quot;&gt;limits에 대해 생각 정리하기&lt;/h2&gt;
+&lt;p&gt;Instagram uses limits to prevent fake activities.&lt;br /&gt;
+While we don’t know how they decide the exact numbers, what’s important is that these policies exist.&lt;/p&gt;
 
-&lt;p&gt;허위 활동을 막기 위해 인스타그램에서는 여러가지 limit을 두고 있다.&lt;br /&gt;
-limit의 숫자들을 어떻게 잡았는지는 모르지만 이걸 정책으로 잡았다는 점이 중요하다.&lt;br /&gt;
-계산이야 서비스마다 다르겠지만, abusing이 아닌 경우 사용할 수 없는 양을 계산하고 제한하는 것.&lt;/p&gt;
+&lt;p&gt;Each service will have different numbers, but the key is to set limits at levels that prevent abuse while allowing normal usage.&lt;/p&gt;
 
-&lt;p&gt;서비스를 하기 이전에는 &lt;em&gt;“설마 이런 유저가 있겠어?”&lt;/em&gt; 라는 생각을 하지만&lt;br /&gt;
-그치만 대규모 서비스를 한다면 진짜 무조건 있다.&lt;br /&gt;
-그런 사람들. 꼭 여럿이 있다.&lt;br /&gt;
-혹은 봇일 수도 있다.&lt;/p&gt;
+&lt;p&gt;Before running a service, you might think, &lt;em&gt;“Who would do that?”&lt;/em&gt;&lt;br /&gt;
+But with large-scale services, there will always be users or bots who push the limits.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;“없겠지”가 아니라 “있을 수 없어”라고 만드는 것&lt;/strong&gt;이 정책이다.&lt;br /&gt;
-그리고 이러한 정책은 반드시 서비스에 반영되어야 한다.&lt;/p&gt;
+&lt;p&gt;Instead of thinking, &lt;strong&gt;“No one would do this,”&lt;/strong&gt; you must set policies that ensure, &lt;strong&gt;“No one can do this.”&lt;/strong&gt;&lt;br /&gt;
+And these policies must be implemented in the service.&lt;/p&gt;
 
-&lt;p&gt;이로 인한 장점들은 잠깐만 생각해도 명확하다.&lt;/p&gt;
+&lt;h2 id=&quot;benefits-of-limits&quot;&gt;Benefits of Limits&lt;/h2&gt;
 
-&lt;h2 id=&quot;limit으로-인한-장점들&quot;&gt;limit으로 인한 장점들&lt;/h2&gt;
+&lt;p&gt;The benefits of limits are clear from both operational and service perspectives.&lt;/p&gt;
 
-&lt;p&gt;간단하게 운영 관점과 서비스 관점에서 이슈들을 볼 수 있다.&lt;/p&gt;
+&lt;hr /&gt;
 
-&lt;h3 id=&quot;운영-이슈&quot;&gt;운영 이슈&lt;/h3&gt;
+&lt;h3 id=&quot;operational-issues&quot;&gt;Operational Issues&lt;/h3&gt;
 
-&lt;p&gt;인스타그램 기준으로 정책이 없다면 follow 하는 수가 100만, 10억 명이 되었을 때 구조를 다시 잡아야 할 것이다. (여기서 follow는 내가 follow하는 수)&lt;br /&gt;
-내가 팔로우 하는 사람이 100만 명인 것은 말이 안된다.&lt;br /&gt;
-100만 명을 팔로우 하는건 애초에 정상적이지 않으며, 이게 가능하다면 매일 업로드 되는 피드와 스토리를 감당할 수도 없다.&lt;/p&gt;
+&lt;p&gt;Using Instagram as an example, imagine if there were no limits.&lt;br /&gt;
+If a user could follow 1 million or 1 billion accounts,&lt;br /&gt;
+you’d eventually have to redesign the structure to handle this.&lt;br /&gt;
+(Follow here means accounts a user follows.)&lt;/p&gt;
 
-&lt;p&gt;여기서도 &lt;em&gt;“당연히 100만 명을 팔로우하지 않을거야”&lt;/em&gt; 가 아니라, 당연한 것을 불가능하게 만드는 정책의 반영이 중요하다.&lt;br /&gt;
-&lt;strong&gt;정책으로 제한하는 것은 쉽지만, 100만 명을 만든 계정이 생겼을 때 후처리하는 것은 법적인 문제와 더불어 굉장한 골칫덩어리다.&lt;/strong&gt;&lt;br /&gt;
-어뷰징을 위한 별도의 아키텍처 설계가 필요할 수도 있다.&lt;/p&gt;
+&lt;p&gt;It doesn’t make sense for someone to follow 1 million accounts.&lt;br /&gt;
+This isn’t normal behavior, and if it’s allowed,&lt;br /&gt;
+managing the constant feed updates and stories becomes impossible.&lt;/p&gt;
 
-&lt;h3 id=&quot;서비스-이슈&quot;&gt;서비스 이슈&lt;/h3&gt;
+&lt;p&gt;Again, instead of assuming &lt;em&gt;“No one would follow 1 million accounts,”&lt;/em&gt;&lt;br /&gt;
+you need to implement policies that make it impossible.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;서비스 이슈가 생긴다는 것은 결국 품질 하락을 의미한다.&lt;/strong&gt;&lt;br /&gt;
-품질 하락은 서비스 경쟁력을 떨어트리며 소비자 이탈과 결국 서비스의 성패와도 이어진다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Setting policies is easy, but fixing issues caused by abuse—such as legal problems or architectural changes—is incredibly difficult.&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;인스타그램의 사례를 다시 가져오면 follow를 마구 할 수 있어  follow count를 어지럽히는 abusing 사용자가 늘어난다면.&lt;br /&gt;
-현재도 있는 follow를 늘려주는 abusing service들이 더 날뛰게 될 것이며 그로 인해 bot들이 만드는 post와 의미없는 광고의 비율이 늘어날 것이다.&lt;br /&gt;
-이는 결국 떨어진 품질로 인한 서비스 품질 하락으로 이어진다.&lt;/p&gt;
+&lt;hr /&gt;
 
-&lt;h2 id=&quot;limit-정하기&quot;&gt;limit 정하기&lt;/h2&gt;
+&lt;h3 id=&quot;service-issues&quot;&gt;Service Issues&lt;/h3&gt;
 
-&lt;p&gt;limit은 빨리 정해야 한다.&lt;br /&gt;
-나중가면 limit을 넣기 힘들기 때문에 개발자라고 할지라도 서비스를 오픈하는 단계라면 먼저 제안할 수 있어야 한다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Service issues mean a drop in quality.&lt;/strong&gt;&lt;br /&gt;
+Lower quality reduces a service’s competitiveness, leading to user loss and affecting success.&lt;/p&gt;
 
-&lt;p&gt;현재 내가 맡은 서비스는 abusing 때문에 서비스 이슈가 나는 경우는 잘 없지만 운영 이슈가 너무 명확하고 비용을 크게 잡아 먹고 있다.&lt;br /&gt;
-아쉬운 점은 이런 정책들을 서버 개발자가 정하기는 어렵다는 것.&lt;br /&gt;
-특히 서비스 중간에 정책을 반영하기란 쉽지 않다. PM님 설득좀 되세요! :scream:&lt;/p&gt;
+&lt;p&gt;For example, if Instagram didn’t limit following, abusing users could easily inflate follow counts.&lt;br /&gt;
+Abusing services that sell fake followers would thrive, and bots would increase spammy posts and ads.&lt;br /&gt;
+This would lead to lower quality and, eventually, service failure.&lt;/p&gt;
 
-&lt;h3 id=&quot;reference&quot;&gt;reference&lt;/h3&gt;
+&lt;h2 id=&quot;setting-limits&quot;&gt;Setting Limits&lt;/h2&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;전체 follow 수 제한
-    &lt;ul&gt;
-      &lt;li&gt;https://help.instagram.com/408167069251249?locale=ko_KR&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;공식적으로 open하지 않은 제한
-    &lt;ul&gt;
-      &lt;li&gt;https://goinstagram.com/instagram-follow-unfollow-limit/&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;api 제한
-    &lt;ul&gt;
-      &lt;li&gt;https://developers.facebook.com/docs/instagram-api/guides/content-publishing&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Limits need to be set early.&lt;br /&gt;
+The longer you wait, the harder it gets to implement them.&lt;/p&gt;
+
+&lt;p&gt;Even as developers, we should suggest policies during the service planning stage.&lt;/p&gt;
+
+&lt;p&gt;In my current service, abuse doesn’t cause service issues, but operational issues are obvious and increase costs significantly.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, it’s hard for server developers to define such policies,&lt;br /&gt;
+and adding them later is even harder.&lt;/p&gt;
 
 &lt;hr /&gt;
 
 &lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
   &lt;ol&gt;
     &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;https://business.instagram.com/blog/reducing-inauthentic-activity-on-instagram&quot;&gt;허위 활동에 대한 instagram의 글&lt;/a&gt;을 통해 &lt;em&gt;Inauthentic Activity&lt;/em&gt;를 대하는 instagram의 태도를 알 수 있다. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;a href=&quot;https://business.instagram.com/blog/reducing-inauthentic-activity-on-instagram&quot;&gt;Instagram’s post about inauthentic activity&lt;/a&gt; explains their stance. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:2&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;https://transparency.fb.com/data/community-standards-enforcement/spam/facebook/&quot;&gt;facebook 지표&lt;/a&gt;를 통해 페이스북은 스팸 block을 고지한다. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;a href=&quot;https://help.instagram.com/408167069251249?locale=ko_KR&quot;&gt;Instagram’s follow limit&lt;/a&gt; shows accounts that exceeded 7,500 before the limit was set. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://goinstagram.com/instagram-follow-unfollow-limit&quot;&gt;Unofficial Instagram policy sources&lt;/a&gt;. &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:4&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://developers.facebook.com/docs/instagram-api/guides/content-publishing&quot;&gt;Instagram API limits&lt;/a&gt;. &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:5&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://transparency.fb.com/data/community-standards-enforcement/spam/facebook/&quot;&gt;Facebook’s spam-related metrics&lt;/a&gt;. &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://meansoup.github.io/docs/service-management/user-limits</link>
-        <guid isPermaLink="true">https://meansoup.github.io/docs/service-management/user-limits</guid>
+        <link>https://meansoup.github.io/docs/service/user-limits</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/service/user-limits</guid>
       </item>
     
       <item>
@@ -20399,17 +20400,6 @@ kivy로 간단한 게임을 만들어가는 과정과 이에 대한 설명을 �
       </item>
     
       <item>
-        <title>PM</title>
-        
-          <description>{: .fs-6 .fw-300 }
-</description>
-        
-        <pubDate></pubDate>
-        <link>https://meansoup.github.io/docs/service-management</link>
-        <guid isPermaLink="true">https://meansoup.github.io/docs/service-management</guid>
-      </item>
-    
-      <item>
         <title>python</title>
         
           <description>{: .fs-6 .fw-300 }
@@ -20582,6 +20572,17 @@ S3 응답에 대해 오류 코드가 나온 경우 처리를 해주어야 한다
         <pubDate></pubDate>
         <link>https://meansoup.github.io/docs/aws/s3</link>
         <guid isPermaLink="true">https://meansoup.github.io/docs/aws/s3</guid>
+      </item>
+    
+      <item>
+        <title>Service</title>
+        
+          <description>{: .fs-6 .fw-300 }
+</description>
+        
+        <pubDate></pubDate>
+        <link>https://meansoup.github.io/docs/service</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/service</guid>
       </item>
     
       <item>

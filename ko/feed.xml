@@ -5,7 +5,7 @@
     <description>backend tech, log</description>
     <link>https://meansoup.github.io/</link>
     <atom:link href="https://meansoup.github.io/ko/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2025-01-19T12:42:11+00:00</updated>
+    <updated>2025-01-20T15:59:11+00:00</updated>
     <id>https://meansoup.github.io</id>
     <author>
       <name></name>
@@ -11893,8 +11893,7 @@ JUnit5를 기준으로 설명한다.&lt;/p&gt;
 이런 이슈 중 상당 수는 &lt;strong&gt;user limit에 대한 제한&lt;/strong&gt;이 없기 때문이 아닌가 싶다.&lt;/p&gt;
 
 &lt;p&gt;최근 회사에서 abusing user 이슈를 겪었다.&lt;br /&gt;
-내가 관리하는 서비스 중 일정을 동기화 하는 서비스가 있는데,&lt;br /&gt;
-batch 작업 중 사용자 한 명이 100만 개 이상의 일정을 가지고 있는 케이스를 발견했다.&lt;/p&gt;
+내가 관리하는 서비스 중 일정을 동기화 하는 서비스가 있는데, batch 작업 중 사용자 한 명이 100만 개 이상의 일정을 가지고 있는 케이스를 발견했다.&lt;/p&gt;
 
 &lt;p&gt;반복 일정(매주 화요일 10시 회의) 같은건 하나의 일정으로 치는 것을 감안했을 때 일반 사용자가 만들어낸 일정이라고 볼 수 없었다.&lt;/p&gt;
 &lt;ul&gt;
@@ -11906,7 +11905,7 @@ batch 작업 중 사용자 한 명이 100만 개 이상의 일정을 가지고 �
 &lt;p&gt;전부터 우리 회사 서비스에서 아쉬웠던 것은 이런 정책적인 제한이 (거의) 없다는 것이다.&lt;br /&gt;
 최근 인스타그램과 페이스북의 api를 보면서 우리 문제를 돌아보게 되었다.&lt;/p&gt;
 
-&lt;h2 id=&quot;인스타그램-사례&quot;&gt;인스타그램 사례&lt;/h2&gt;
+&lt;h2 id=&quot;인스타그램&quot;&gt;인스타그램&lt;/h2&gt;
 
 &lt;p&gt;limits (제약 사항)에 대해 잘 적용된 서비스는 인스타그램만한 예시가 없을 것 같다. 이해하기도 쉽고.&lt;/p&gt;
 
@@ -11918,7 +11917,7 @@ batch 작업 중 사용자 한 명이 100만 개 이상의 일정을 가지고 �
 
 &lt;p&gt;인스타그램은 사용자와 api에 대해 적절하게 제한을 두고 있다.&lt;/p&gt;
 
-&lt;h3 id=&quot;사용자에-대한-제한&quot;&gt;사용자에 대한 제한&lt;/h3&gt;
+&lt;h3 id=&quot;인스타그램-사용자에-대한-제한&quot;&gt;인스타그램 사용자에 대한 제한&lt;/h3&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -11953,18 +11952,18 @@ batch 작업 중 사용자 한 명이 100만 개 이상의 일정을 가지고 �
 
 &lt;p&gt;신뢰성이 높은 유저(가입한지 6개월이 지난 유저 등)인지에 따라 제한이 다르지만, 전체 제한 및 시간/일 별 제한 정책을 가지고 있다.&lt;/p&gt;
 
-&lt;p&gt;여기서 follow 숫자를 제외한 다른 정책들은 instagram에서 공식적으로 open한 내용은 아니다.&lt;br /&gt;
+&lt;p&gt;여기서 &lt;u&gt;follow 숫자 정책&lt;/u&gt;&lt;sup id=&quot;fnref:2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; 을 제외한 다른 정책들은 &lt;u&gt;비공식적으로 알려지는 정책&lt;/u&gt;&lt;sup id=&quot;fnref:3&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; 들이고, instagram에서 공식적으로 open한 내용은 아니다.&lt;br /&gt;
 다만 관련된 많은 글들을 통해 정책을 확인할 수 있다.&lt;/p&gt;
 
 &lt;p&gt;예상하건데 시간당 제한은 abusing 유저나 사용할 수 있을만한 숫자이기 때문에 공식적으로 발표하지 않은 것으로 생각한다.&lt;/p&gt;
 
 &lt;h3 id=&quot;api에-대한-제한&quot;&gt;Api에 대한 제한&lt;/h3&gt;
 
-&lt;p&gt;developer에게 open한 api에서는 24시간에 25개의 post만 생성할 수 있도록 제한한다.&lt;/p&gt;
+&lt;p&gt;developer에게 open한 &lt;u&gt;api에서는 24시간에 50개의 post만 생성할 수 있도록 제한&lt;/u&gt;&lt;sup id=&quot;fnref:4&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt; 한다.&lt;/p&gt;
 
-&lt;h2 id=&quot;facebook-사례&quot;&gt;facebook 사례&lt;/h2&gt;
+&lt;h2 id=&quot;facebook&quot;&gt;Facebook&lt;/h2&gt;
 
-&lt;p&gt;흥미로운 점은 &lt;u&gt;facebook은 abusing, spam, sexual post 등에 대해 지표&lt;/u&gt;&lt;sup id=&quot;fnref:2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;를 관리하고 공개하고 있다.&lt;br /&gt;
+&lt;p&gt;흥미로운 점은 &lt;u&gt;facebook은 abusing, spam, sexual post 등에 대해 지표&lt;/u&gt;&lt;sup id=&quot;fnref:5&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;를 관리하고 공개하고 있다.&lt;br /&gt;
 우리 서비스는 더 완성도 높아지고 있다는걸 보여주기 위함인 것 같다.&lt;/p&gt;
 
 &lt;p&gt;잘못 abusing으로 체크한 경우까지 open하고 있는데 공개하지 못하더라도 배워야할 부분인 것은 분명하다.&lt;/p&gt;
@@ -11983,11 +11982,10 @@ limit의 숫자들을 어떻게 잡았는지는 모르지만 이걸 정책으로
 &lt;p&gt;&lt;strong&gt;“없겠지”가 아니라 “있을 수 없어”라고 만드는 것&lt;/strong&gt;이 정책이다.&lt;br /&gt;
 그리고 이러한 정책은 반드시 서비스에 반영되어야 한다.&lt;/p&gt;
 
-&lt;p&gt;이로 인한 장점들은 잠깐만 생각해도 명확하다.&lt;/p&gt;
-
 &lt;h2 id=&quot;limit으로-인한-장점들&quot;&gt;limit으로 인한 장점들&lt;/h2&gt;
 
-&lt;p&gt;간단하게 운영 관점과 서비스 관점에서 이슈들을 볼 수 있다.&lt;/p&gt;
+&lt;p&gt;limit 설정으로 인한 장점들은 잠깐만 생각해도 명확하다.&lt;br /&gt;
+간단하게 운영 관점과 서비스 관점에서 이슈들을 볼 수 있다.&lt;/p&gt;
 
 &lt;h3 id=&quot;운영-이슈&quot;&gt;운영 이슈&lt;/h3&gt;
 
@@ -12015,45 +12013,34 @@ limit의 숫자들을 어떻게 잡았는지는 모르지만 이걸 정책으로
 
 &lt;p&gt;현재 내가 맡은 서비스는 abusing 때문에 서비스 이슈가 나는 경우는 잘 없지만 운영 이슈가 너무 명확하고 비용을 크게 잡아 먹고 있다.&lt;br /&gt;
 아쉬운 점은 이런 정책들을 서버 개발자가 정하기는 어렵다는 것.&lt;br /&gt;
-특히 서비스 중간에 정책을 반영하기란 쉽지 않다. PM님 설득좀 되세요! :scream:&lt;/p&gt;
-
-&lt;h3 id=&quot;reference&quot;&gt;reference&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;전체 follow 수 제한
-    &lt;ul&gt;
-      &lt;li&gt;https://help.instagram.com/408167069251249?locale=ko_KR&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;공식적으로 open하지 않은 제한
-    &lt;ul&gt;
-      &lt;li&gt;https://goinstagram.com/instagram-follow-unfollow-limit/&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;api 제한
-    &lt;ul&gt;
-      &lt;li&gt;https://developers.facebook.com/docs/instagram-api/guides/content-publishing&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+특히 서비스 중간에 정책을 반영하기란 쉽지 않다.&lt;/p&gt;
 
 &lt;hr /&gt;
 
 &lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
   &lt;ol&gt;
     &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;https://business.instagram.com/blog/reducing-inauthentic-activity-on-instagram&quot;&gt;허위 활동에 대한 instagram의 글&lt;/a&gt;을 통해 &lt;em&gt;Inauthentic Activity&lt;/em&gt;를 대하는 instagram의 태도를 알 수 있다. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;a href=&quot;https://business.instagram.com/blog/reducing-inauthentic-activity-on-instagram&quot;&gt;허위 활동에 대한 instagram의 post&lt;/a&gt;를 통해 &lt;em&gt;Inauthentic Activity&lt;/em&gt;를 대하는 instagram의 태도를 알 수 있다. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:2&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;https://transparency.fb.com/data/community-standards-enforcement/spam/facebook/&quot;&gt;facebook 지표&lt;/a&gt;를 통해 페이스북은 스팸 block을 고지한다. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;a href=&quot;https://help.instagram.com/408167069251249?locale=ko_KR&quot;&gt;instagram follow 제한&lt;/a&gt;에서 follow 제한 확인 가능. 재밌는건 제한이 생기기 전에 7500명 이상 팔로우한 계정이 있다는 것. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://goinstagram.com/instagram-follow-unfollow-limit&quot;&gt;Instagram Follow and Unfollow Limit per Hour &amp;amp; Day in 2022&lt;/a&gt;에서 비공식적으로 알려진 정책들을 확인할 수 있다. 이곳 말고도 확인할 수 있는 곳은 더 있고, 이런 정책들은 당연히 조금씩 바뀌었을 수 있다. &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:4&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://developers.facebook.com/docs/instagram-api/guides/content-publishing&quot;&gt;Instagram API에 대한 설명&lt;/a&gt;에서 api 호출 제한을 확인할 수 있다. &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:5&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://transparency.fb.com/data/community-standards-enforcement/spam/facebook/&quot;&gt;facebook 지표&lt;/a&gt;를 통해 페이스북은 스팸 block을 고지한다. &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
 </description>
         
         <pubDate></pubDate>
-        <link>https://meansoup.github.io/docs/service-management/user-limits</link>
-        <guid isPermaLink="true">https://meansoup.github.io/docs/service-management/user-limits</guid>
+        <link>https://meansoup.github.io/docs/service/user-limits</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/service/user-limits</guid>
       </item>
     
       <item>
@@ -20396,17 +20383,6 @@ kivy로 간단한 게임을 만들어가는 과정과 이에 대한 설명을 �
       </item>
     
       <item>
-        <title>PM</title>
-        
-          <description>{: .fs-6 .fw-300 }
-</description>
-        
-        <pubDate></pubDate>
-        <link>https://meansoup.github.io/docs/service-management</link>
-        <guid isPermaLink="true">https://meansoup.github.io/docs/service-management</guid>
-      </item>
-    
-      <item>
         <title>python</title>
         
           <description>{: .fs-6 .fw-300 }
@@ -20579,6 +20555,17 @@ S3 응답에 대해 오류 코드가 나온 경우 처리를 해주어야 한다
         <pubDate></pubDate>
         <link>https://meansoup.github.io/docs/aws/s3</link>
         <guid isPermaLink="true">https://meansoup.github.io/docs/aws/s3</guid>
+      </item>
+    
+      <item>
+        <title>Service</title>
+        
+          <description>{: .fs-6 .fw-300 }
+</description>
+        
+        <pubDate></pubDate>
+        <link>https://meansoup.github.io/docs/service</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/service</guid>
       </item>
     
       <item>
