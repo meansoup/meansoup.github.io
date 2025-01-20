@@ -1,10 +1,10 @@
 ---
 layout: default
-title: PM
-sidebar_label: PM
+title: Service
+sidebar_label: Service
 nav_order: 14
 has_children: true
-permalink: /docs/service-management
+permalink: /docs/service
 ---
 
 {: .fs-6 .fw-300 }
