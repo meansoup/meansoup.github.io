@@ -5,7 +5,7 @@
     <description>backend tech, log</description>
     <link>https://meansoup.github.io/</link>
     <atom:link href="https://meansoup.github.io/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2025-01-21T16:46:29+00:00</updated>
+    <updated>2025-02-07T15:35:33+00:00</updated>
     <id>https://meansoup.github.io</id>
     <author>
       <name></name>
@@ -19594,6 +19594,156 @@ With &lt;strong&gt;-f&lt;/strong&gt;, if the file name changes due to rolling, n
       </item>
     
       <item>
+        <title>Understanding Different Cassandra Compaction Strategies</title>
+        
+          <description>&lt;p&gt;&lt;strong&gt;&lt;u&gt;Compaction Strategy (CS)&lt;/u&gt;&lt;/strong&gt;&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;br /&gt;
+A compaction strategy in Cassandra manages the garbage collection (GC) process. There are several strategies to choose from, and selecting the right one for your workload can improve both query and compaction performance.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#size-tiered-stcs&quot;&gt;Size Tiered (STCS)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#leveled-lcs&quot;&gt;Leveled (LCS)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#time-window-twcs&quot;&gt;Time Window (TWCS)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#unified-ucs&quot;&gt;Unified (UCS)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;size-tiered-stcs&quot;&gt;Size Tiered (STCS)&lt;/h2&gt;
+
+&lt;p&gt;The default compaction strategy in Cassandra, best for write-intensive workloads.&lt;/p&gt;
+
+&lt;h3 id=&quot;how-it-works&quot;&gt;How It Works&lt;/h3&gt;
+
+&lt;p&gt;STCS compacts SSTables based on their size and count:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;When a certain number (default: 4) of similar-sized SSTables exist, compaction is triggered.&lt;/li&gt;
+  &lt;li&gt;These SSTables are merged into a single larger SSTable.&lt;/li&gt;
+  &lt;li&gt;If needed, the new larger SSTable is merged into an even bigger SSTable.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Because of this process, SSTables of various sizes can exist at the same time.&lt;/p&gt;
+
+&lt;h3 id=&quot;features&quot;&gt;Features&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Good for write-heavy workloads.&lt;/li&gt;
+  &lt;li&gt;Default if no better strategy is available.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Merges by size, so data is not grouped, leading to reduced read performance.&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Since compaction works based on size, deleted data might not be removed as expected.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Requires extra disk space because both old and new SSTables exist during compaction.&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Lower I/O and CPU usage compared to LCS in normal operation.&lt;/li&gt;
+  &lt;li&gt;Works better than LCS on HDD storage.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Can cause CPU spikes during compaction due to large SSTable merges&lt;/strong&gt;, which led to issues at our company.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;leveled-lcs&quot;&gt;Leveled (LCS)&lt;/h2&gt;
+
+&lt;p&gt;Designed to improve the read performance issues of STCS.&lt;/p&gt;
+
+&lt;h3 id=&quot;how-it-works-1&quot;&gt;How It Works&lt;/h3&gt;
+
+&lt;p&gt;LCS organizes SSTables into levels:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;When Memtable is flushed, data is written to SSTables in Level 0 (L0).&lt;/li&gt;
+  &lt;li&gt;During compaction, L0 SSTables are merged with L1 SSTables.&lt;/li&gt;
+  &lt;li&gt;If necessary, compaction continues into higher levels.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Unlike L0, SSTables in L1 and higher do not overlap.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;This means that read operations only need to check one SSTable per level.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;features-1&quot;&gt;Features&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Optimized for read-heavy or update/delete-heavy workloads.&lt;/li&gt;
+  &lt;li&gt;Not suitable for pure time-series data.&lt;/li&gt;
+  &lt;li&gt;Not ideal for write-heavy workloads.&lt;/li&gt;
+  &lt;li&gt;Uses about 10% less disk space than STCS.&lt;/li&gt;
+  &lt;li&gt;Requires frequent compaction to remove duplicate and unordered data, leading to higher CPU and I/O usage.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Not recommended for slow storage like HDDs.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;time-window-twcs&quot;&gt;Time Window (TWCS)&lt;/h2&gt;
+
+&lt;p&gt;Designed for time-series data that uses TTL and remains mostly unchanged.&lt;/p&gt;
+
+&lt;h3 id=&quot;how-it-works-2&quot;&gt;How It Works&lt;/h3&gt;
+
+&lt;p&gt;TWCS organizes SSTables by time windows:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Uses predefined time windows.&lt;/li&gt;
+  &lt;li&gt;When Memtable is flushed, data is written to an SSTable.&lt;/li&gt;
+  &lt;li&gt;Multiple SSTables are created during a time window.&lt;/li&gt;
+  &lt;li&gt;Once the time window closes, all SSTables from that window are merged into a single large SSTable using STCS.&lt;/li&gt;
+  &lt;li&gt;The merged SSTable keeps the maximum timestamp.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;features-2&quot;&gt;Features&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Organizes SSTables by time, allowing for efficient data expiration and deletion.&lt;/li&gt;
+  &lt;li&gt;More efficient disk space reclamation compared to STCS and LCS.&lt;/li&gt;
+  &lt;li&gt;Only one major compaction occurs per time window, making it efficient.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Can suffer performance issues if too much data is written in a single time period.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;unified-ucs&quot;&gt;Unified (UCS)&lt;/h2&gt;
+
+&lt;p&gt;Recommended for most workloads, including read-heavy, write-heavy, mixed, and time-series data.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;No need for old compaction strategies since UCS can be configured to act like any of them.&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;It was added in Cassandra 5.0&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;how-it-works-3&quot;&gt;How It Works&lt;/h3&gt;
+
+&lt;p&gt;UCS performs compaction at the shard level:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Compaction if there is more than a certain number of SSTables within the shard.&lt;/li&gt;
+  &lt;li&gt;Uses different methods depending on the level:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Leveled:&lt;/strong&gt; Works like LCS, moving data from L0 to L1.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Tiered:&lt;/strong&gt; Works like STCS, stacking SSTables up to a limit before merging.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;features-3&quot;&gt;Features&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Combines the best features of all other CS types.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Optimized for virtually all workloads.&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Automatically switches between Tiered (for writes) and Leveled (for reads) depending on workload.&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Splits SSTables into shards for &lt;strong&gt;independent and parallel compaction.&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;LCS organizes tokens by levels, while UCS uses shard for efficient parallel compaction. (it looks like grid)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Can dynamically switch to another compaction strategy while running.&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Requires fine-tuning for optimal performance.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;See &lt;a href=&quot;https://cassandra.apache.org/doc/latest/cassandra/managing/operating/compaction/index.html&quot;&gt;Compaction Strategy&lt;/a&gt; for official documentation on different strategies. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        
+        <pubDate></pubDate>
+        <link>https://meansoup.github.io/docs/db/cassandra/strategy</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/db/cassandra/strategy</guid>
+      </item>
+    
+      <item>
         <title></title>
         
           <description>&lt;style type=&quot;text/css&quot; media=&quot;screen&quot;&gt;
@@ -19705,6 +19855,16 @@ With &lt;strong&gt;-f&lt;/strong&gt;, if the file name changes due to rolling, n
         <pubDate></pubDate>
         <link>https://meansoup.github.io/docs/career/</link>
         <guid isPermaLink="true">https://meansoup.github.io/docs/career/</guid>
+      </item>
+    
+      <item>
+        <title>Cassandra</title>
+        
+          <description></description>
+        
+        <pubDate></pubDate>
+        <link>https://meansoup.github.io/docs/db/cassandra</link>
+        <guid isPermaLink="true">https://meansoup.github.io/docs/db/cassandra</guid>
       </item>
     
       <item>
