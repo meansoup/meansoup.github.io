@@ -4,7 +4,7 @@ title: Cassandra Compaction Strategy 종류 및 이해하기
 sidebar_label: Compaction Strategy
 parent: Cassandra
 grand_parent: Database
-lang: kr
+lang: ko
 permalink: /docs/db/cassandra/strategy
 sitemap:
   lastmod: 2025-02-07
