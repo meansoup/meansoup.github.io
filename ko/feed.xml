@@ -5,7 +5,7 @@
     <description>backend tech, log</description>
     <link>https://meansoup.github.io/</link>
     <atom:link href="https://meansoup.github.io/ko/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2025-02-07T15:35:46+00:00</updated>
+    <updated>2025-02-07T15:39:09+00:00</updated>
     <id>https://meansoup.github.io</id>
     <author>
       <name></name>
@@ -19577,10 +19577,11 @@ grep을 다른 명령어들과 함께 얼마나 효율적으로 사용하느냐�
       </item>
     
       <item>
-        <title>Understanding Different Cassandra Compaction Strategies</title>
+        <title>Cassandra Compaction Strategy 종류 및 이해하기</title>
         
           <description>&lt;p&gt;&lt;strong&gt;&lt;u&gt;Compaction Strategy (CS)&lt;/u&gt;&lt;/strong&gt;&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;br /&gt;
-A compaction strategy in Cassandra manages the garbage collection (GC) process. There are several strategies to choose from, and selecting the right one for your workload can improve both query and compaction performance.&lt;/p&gt;
+Cassandra 내부의 GC 작업을 위한 Strategy를 의미하며 Cassandra의 몇 가지 Strategy 중 선택할 수 있다.&lt;br /&gt;
+workload에 맞는 compaction strategy를 선택하는 것만으로도 query와 compaction 성능 모두 챙길 수 있다.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;#size-tiered-stcs&quot;&gt;Size Tiered (STCS)&lt;/a&gt;&lt;/li&gt;
@@ -19591,123 +19592,125 @@ A compaction strategy in Cassandra manages the garbage collection (GC) process. 
 
 &lt;h2 id=&quot;size-tiered-stcs&quot;&gt;Size Tiered (STCS)&lt;/h2&gt;
 
-&lt;p&gt;The default compaction strategy in Cassandra, best for write-intensive workloads.&lt;/p&gt;
+&lt;p&gt;write-intensive workloads에 적절한 cassandra의 default Compaction Strategy.&lt;/p&gt;
 
-&lt;h3 id=&quot;how-it-works&quot;&gt;How It Works&lt;/h3&gt;
+&lt;h3 id=&quot;동작-방식&quot;&gt;동작 방식&lt;/h3&gt;
 
-&lt;p&gt;STCS compacts SSTables based on their size and count:&lt;/p&gt;
+&lt;p&gt;STCS는 SSTable의 size와 count를 기준으로 compaction을 진행한다.&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;When a certain number (default: 4) of similar-sized SSTables exist, compaction is triggered.&lt;/li&gt;
-  &lt;li&gt;These SSTables are merged into a single larger SSTable.&lt;/li&gt;
-  &lt;li&gt;If needed, the new larger SSTable is merged into an even bigger SSTable.&lt;/li&gt;
+  &lt;li&gt;유사한 size의 SSTable을 set number(default: 4)까지 갖게 되는 경우 compaction trigger 된다.&lt;/li&gt;
+  &lt;li&gt;SSTable을 하나의 큰 SSTable로 merge 된다.&lt;/li&gt;
+  &lt;li&gt;필요한 경우 SSTable이 커지면서 더 큰 SSTable로 merge 된다.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Because of this process, SSTables of various sizes can exist at the same time.&lt;/p&gt;
+&lt;p&gt;위와 같은 동작 방식으로 한 순간에는 다양한 사이즈의 SSTable이 존재할 수 있다.&lt;/p&gt;
 
-&lt;h3 id=&quot;features&quot;&gt;Features&lt;/h3&gt;
+&lt;h3 id=&quot;특징&quot;&gt;특징&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Good for write-heavy workloads.&lt;/li&gt;
-  &lt;li&gt;Default if no better strategy is available.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Merges by size, so data is not grouped, leading to reduced read performance.&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Since compaction works based on size, deleted data might not be removed as expected.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Requires extra disk space because both old and new SSTables exist during compaction.&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Lower I/O and CPU usage compared to LCS in normal operation.&lt;/li&gt;
-  &lt;li&gt;Works better than LCS on HDD storage.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Can cause CPU spikes during compaction due to large SSTable merges&lt;/strong&gt;, which led to issues at our company.&lt;/li&gt;
+  &lt;li&gt;write intensive workload에 적절하다.&lt;/li&gt;
+  &lt;li&gt;혹은 다른 적절한 CS가 없는 경우 무난한 선택지이다.&lt;/li&gt;
+  &lt;li&gt;merge-by-size 프로세스가 &lt;strong&gt;data를 grouping 하지 않으므로 여러 SSTable로 특정 row가 퍼져있을 수 있어 read 성능이 떨어질 수밖에 없다&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;size를 기준으로 compacdtion이 동작하여 data 삭제가 발생해도 실제 data compaction이 예상대로 되지 않을 수 있다.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;compaction 과정 중 old와 new를 위한 space가 동시에 필요하며 가장 큰 SSTable의 size가 커짐에 따라 disk space가 더 많이 필요하다&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;평상 시의 I/O, CPU는 LCS 보다 좋다.&lt;/li&gt;
+  &lt;li&gt;위와 같은 이유로 HDD 사용에 LCS 보다 적합하다.&lt;/li&gt;
+  &lt;li&gt;하나의 SSTable의 크기가 커서 &lt;strong&gt;compaction 순간의 I/O, CPU는 LCS 보다 더 많이 필요하다&lt;/strong&gt;. 우리 회사는 이 이유로 CPU spike로 인해 장애를 겪었다.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;leveled-lcs&quot;&gt;Leveled (LCS)&lt;/h2&gt;
 
-&lt;p&gt;Designed to improve the read performance issues of STCS.&lt;/p&gt;
+&lt;p&gt;Size Tiered의 읽기 성능 이슈를 보완하기 위한 Compaction Strategy.&lt;/p&gt;
 
-&lt;h3 id=&quot;how-it-works-1&quot;&gt;How It Works&lt;/h3&gt;
+&lt;h3 id=&quot;동작-방식-1&quot;&gt;동작 방식&lt;/h3&gt;
 
-&lt;p&gt;LCS organizes SSTables into levels:&lt;/p&gt;
+&lt;p&gt;LCS는 SSTable을 Level로 구분한다.&lt;br /&gt;
+각 Level은 고정된 size limit을 가지며 limit이 초과되면 compaction이 trigger 된다.&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;When Memtable is flushed, data is written to SSTables in Level 0 (L0).&lt;/li&gt;
-  &lt;li&gt;During compaction, L0 SSTables are merged with L1 SSTables.&lt;/li&gt;
-  &lt;li&gt;If necessary, compaction continues into higher levels.&lt;/li&gt;
+  &lt;li&gt;Memtable이 Flush 되면 L0 (first level)의 SSTable에 쓰인다.&lt;/li&gt;
+  &lt;li&gt;compaction이 발생하면 L0의 SSTable들은 L1의 SSTable들과 merge 된다.&lt;/li&gt;
+  &lt;li&gt;필요한 경우 상위 level로 compaction이 전파된다.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Unlike L0, SSTables in L1 and higher do not overlap.&lt;/p&gt;
+&lt;p&gt;참고할 점은 L1 이후의 level에서는 같은 level 사이의 다른  SSTables과의 non-overlapping을 보장한다. (L0에선 보장되지 않음)&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;This means that read operations only need to check one SSTable per level.&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;따라서 &lt;strong&gt;read operation이 발생할 때 level 당 하나의 SSTable만 보면 된다&lt;/strong&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;features-1&quot;&gt;Features&lt;/h3&gt;
+&lt;h3 id=&quot;특징-1&quot;&gt;특징&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Optimized for read-heavy or update/delete-heavy workloads.&lt;/li&gt;
-  &lt;li&gt;Not suitable for pure time-series data.&lt;/li&gt;
-  &lt;li&gt;Not ideal for write-heavy workloads.&lt;/li&gt;
-  &lt;li&gt;Uses about 10% less disk space than STCS.&lt;/li&gt;
-  &lt;li&gt;Requires frequent compaction to remove duplicate and unordered data, leading to higher CPU and I/O usage.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Not recommended for slow storage like HDDs.&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;읽기 성능을 최적화 하기 때문에 read heavy workload 혹은 lots of updates(or delete) workload에 적절하다.&lt;/li&gt;
+  &lt;li&gt;순수한 시계열 데이터에는 적절하지 않다.&lt;/li&gt;
+  &lt;li&gt;write 위주의 workload에 적절하지 않다.&lt;/li&gt;
+  &lt;li&gt;STCS 보다 disk를 조금 사용한다. (대략 10% 사용)&lt;/li&gt;
+  &lt;li&gt;작은 크기의 SSTable을 많이 생성하고, 데이터의 중복 제거와 정렬을 위한 compaction이 필수적이어서 I/O와 CPU를 많이 사용한다.&lt;/li&gt;
+  &lt;li&gt;HDD 같은 성능이 떨어지는 storage에 적합하지 않다.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;time-window-twcs&quot;&gt;Time Window (TWCS)&lt;/h2&gt;
 
-&lt;p&gt;Designed for time-series data that uses TTL and remains mostly unchanged.&lt;/p&gt;
+&lt;p&gt;TTL되고 대부분 변경되지 않는 time series data를 위해 디자인된 Compaction Strategy.&lt;/p&gt;
 
-&lt;h3 id=&quot;how-it-works-2&quot;&gt;How It Works&lt;/h3&gt;
+&lt;h3 id=&quot;동작-방식-2&quot;&gt;동작 방식&lt;/h3&gt;
 
-&lt;p&gt;TWCS organizes SSTables by time windows:&lt;/p&gt;
+&lt;p&gt;TWCS는 time window로 구분된다.&lt;br /&gt;
+각 SSTable은 time window로 구분되어 효율적으로 compaction.&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;Uses predefined time windows.&lt;/li&gt;
-  &lt;li&gt;When Memtable is flushed, data is written to an SSTable.&lt;/li&gt;
-  &lt;li&gt;Multiple SSTables are created during a time window.&lt;/li&gt;
-  &lt;li&gt;Once the time window closes, all SSTables from that window are merged into a single large SSTable using STCS.&lt;/li&gt;
-  &lt;li&gt;The merged SSTable keeps the maximum timestamp.&lt;/li&gt;
+  &lt;li&gt;일련의 period와 관련된 time window를 갖는다.&lt;/li&gt;
+  &lt;li&gt;Memtable이 Flush 되면 SSTable에 쓰인다.&lt;/li&gt;
+  &lt;li&gt;time window 기간 동안 flush된 SSTable 들이 생긴다.&lt;/li&gt;
+  &lt;li&gt;active time window가 지난 경우 time window 기간 내의 SSTable을 STCS를 통해 압축해서 하나의 Large SSTable로 compaction 한다.&lt;/li&gt;
+  &lt;li&gt;compaction된 SSTable은 maximum timestamp를 갖는다.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&quot;features-2&quot;&gt;Features&lt;/h3&gt;
+&lt;h3 id=&quot;특징-2&quot;&gt;특징&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Organizes SSTables by time, allowing for efficient data expiration and deletion.&lt;/li&gt;
-  &lt;li&gt;More efficient disk space reclamation compared to STCS and LCS.&lt;/li&gt;
-  &lt;li&gt;Only one major compaction occurs per time window, making it efficient.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Can suffer performance issues if too much data is written in a single time period.&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;SSTable이 time window에 따라 나뉘어지며 expire 또한 시간에 따라 drop 할 수 있다.&lt;/li&gt;
+  &lt;li&gt;시간만 보고 SSTable을 통채로 drop 하므로 STCS나 LCS보다 disk space 회수가 안정적이고 효율적이다.&lt;/li&gt;
+  &lt;li&gt;timw window period 내에 한 번의 major compaction만 발생하여 compaction이 효율적이다.&lt;/li&gt;
+  &lt;li&gt;특정 period에 데이터가 몰릴 경우 성능 저하가 발생할 수 있다.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;unified-ucs&quot;&gt;Unified (UCS)&lt;/h2&gt;
 
-&lt;p&gt;Recommended for most workloads, including read-heavy, write-heavy, mixed, and time-series data.&lt;/p&gt;
+&lt;p&gt;read-heavy, write-heavy, read-write, time-series 등 대부분의 workload에서 추천된다.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;No need for old compaction strategies since UCS can be configured to act like any of them.&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;It was added in Cassandra 5.0&lt;/li&gt;
+  &lt;li&gt;There is no need to use legacy compaction strategies, because UCS can be configured to behave like any of them.&lt;/li&gt;
+  &lt;li&gt;cassandra 5.0에서 추가 되었다.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;how-it-works-3&quot;&gt;How It Works&lt;/h3&gt;
+&lt;h3 id=&quot;동작-방식-3&quot;&gt;동작 방식&lt;/h3&gt;
 
-&lt;p&gt;UCS performs compaction at the shard level:&lt;/p&gt;
+&lt;p&gt;UCS는 shard 단위로 compaction이 진행된다.&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;Compaction if there is more than a certain number of SSTables within the shard.&lt;/li&gt;
-  &lt;li&gt;Uses different methods depending on the level:
+  &lt;li&gt;shard 내의 일정 개수 이상의 SSTable이 생기면 compaction&lt;/li&gt;
+  &lt;li&gt;각 level 별 전략에 따라 다르게 수행
     &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;Leveled:&lt;/strong&gt; Works like LCS, moving data from L0 to L1.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Tiered:&lt;/strong&gt; Works like STCS, stacking SSTables up to a limit before merging.&lt;/li&gt;
+      &lt;li&gt;Leveled: LCS 처럼 L0의 데이터가 L1으로 compaction&lt;/li&gt;
+      &lt;li&gt;Tiered:  STCS 처럼 일정 개수까지 SSTable을 쌓음&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&quot;features-3&quot;&gt;Features&lt;/h3&gt;
+&lt;h3 id=&quot;특징-3&quot;&gt;특징&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Combines the best features of all other CS types.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Optimized for virtually all workloads.&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Automatically switches between Tiered (for writes) and Leveled (for reads) depending on workload.&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Splits SSTables into shards for &lt;strong&gt;independent and parallel compaction.&lt;/strong&gt;
+  &lt;li&gt;다른 모든 CS들의 장점을 결합하여 최적화했다.&lt;/li&gt;
+  &lt;li&gt;따라서 다양한 워크로드(사실상 모든 워크로드)에서 효율적이다.&lt;/li&gt;
+  &lt;li&gt;workload에 따라 내부에서 write가 많아지면 Tiered, read가 많아지면 Tiered로 전환한다.&lt;/li&gt;
+  &lt;li&gt;SSTable을 shard로 나눠서 관리하여 각 shard가 독립적(병렬적)으로 compaction 가능하고 효율적으로 compaction 가능하다.
     &lt;ul&gt;
-      &lt;li&gt;LCS organizes tokens by levels, while UCS uses shard for efficient parallel compaction. (it looks like grid)&lt;/li&gt;
+      &lt;li&gt;LCS는 level과 level별로 token이 정렬된 구조라면, UCS는 shard 별로 level이 나뉜 grid 구조에 가깝기 때문에 shard 별 compaction이 가능한 구조.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Can dynamically switch to another compaction strategy while running.&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Requires fine-tuning for optimal performance.&lt;/li&gt;
+  &lt;li&gt;UCS는 실행 중 다른 CS로 동적으로 전환이 가능하다.&lt;/li&gt;
+  &lt;li&gt;다양한 전략으로 최적화를 위한 튜닝이 필요하다.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
@@ -19715,7 +19718,7 @@ A compaction strategy in Cassandra manages the garbage collection (GC) process. 
 &lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
   &lt;ol&gt;
     &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;See &lt;a href=&quot;https://cassandra.apache.org/doc/latest/cassandra/managing/operating/compaction/index.html&quot;&gt;Compaction Strategy&lt;/a&gt; for official documentation on different strategies. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;a href=&quot;https://cassandra.apache.org/doc/latest/cassandra/managing/operating/compaction/index.html&quot;&gt;Compaction Strategy&lt;/a&gt;에서 각 Compaction Strategy에 대한 공식 문서 참고 &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
