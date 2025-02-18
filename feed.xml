@@ -5,7 +5,7 @@
     <description>backend tech, log</description>
     <link>https://meansoup.github.io/</link>
     <atom:link href="https://meansoup.github.io/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2025-02-07T15:38:56+00:00</updated>
+    <updated>2025-02-18T15:27:10+00:00</updated>
     <id>https://meansoup.github.io</id>
     <author>
       <name></name>
@@ -17197,112 +17197,119 @@ receiver가 consumption 비율을 조절할 수 있다.&lt;/p&gt;
       <item>
         <title>서버 개발자, 2023 회고</title>
         
-          <description>&lt;p&gt;23년은 새로운 팀으로 옮기며 내 능력들을 테스트해볼 수 있는 시간이었다.&lt;br /&gt;
-한 해를 돌아보니 생각보다 새롭게 경험한 일들이 많다.&lt;br /&gt;
-그럼에도 돌아보면 아쉬운 것들도 많고.&lt;/p&gt;
+          <description>&lt;p&gt;2023 was a year of testing my abilities as I transitioned to a new team.&lt;br /&gt;
+Looking back, I had many new experiences, but there were also moments I wish had gone differently.&lt;/p&gt;
 
-&lt;h2 id=&quot;팀-문화-리딩하기&quot;&gt;팀 문화 리딩하기&lt;/h2&gt;
+&lt;h2 id=&quot;leading-team-culture&quot;&gt;Leading Team Culture&lt;/h2&gt;
 
-&lt;p&gt;올해는 팀을 옮긴 후 팀의 문화를 만드는데 시간을 많이 쏟은 해였다.&lt;/p&gt;
+&lt;p&gt;This year, I spent a lot of time building and leading team culture after joining a new team.&lt;br /&gt;
+My manager assigned me to this team, saying, &lt;em&gt;“It’s one thing to join a team with a great culture and another to build one from scratch. Leading in a place without culture is a valuable experience.”&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;팀 문화가 무너지고 정체된 팀에 문화를 만들자며 파트 리더가 나를 현재 팀으로 보냈다.&lt;br /&gt;
-연간 회고를 하며 &lt;a href=&quot;/docs/retrospect/2022&quot;&gt;작년 회고&lt;/a&gt;를 봤을 때, 이전 팀은 팀 문화를 참 잘 만들어가던 팀이었구나 느낀다.&lt;br /&gt;
-파트 리더는 ‘문화를 같이 잘 만들어 가는 것과 없는 곳에서 문화를 만드는 것은 다르다’고 ‘문화에 적응하는 사람이 있고 이끄는 사람이 있다. 이끌길 바란다’며 문화가 없는 곳에서 만들 수 있는 경험은 값진 경험이라고 하시며 나를 보냈다.&lt;/p&gt;
+&lt;p&gt;When I first joined, the state of team culture felt discouraging. However, as the year progressed, I realized this was a chance for me to learn how to lead and shape a team culture.&lt;/p&gt;
 
-&lt;p&gt;처음 팀에 와서 팀 문화를 보곤 조금은 착잡했는데 한 해를 돌아보면 나한테는 팀 문화를 리딩해보는 경험을 해보는 해가 됐던 것 같다.&lt;/p&gt;
+&lt;h3 id=&quot;building-a-review-culture&quot;&gt;Building a Review Culture&lt;/h3&gt;
 
-&lt;h3 id=&quot;리뷰-문화-만들기&quot;&gt;리뷰 문화 만들기&lt;/h3&gt;
-
-&lt;p&gt;처음 팀에 왔을땐 개발팀의 기본이라고 생각하는 리뷰 문화조차 제대로 되지 않아 착잡했다.&lt;br /&gt;
-때문에 내 첫 목표는 리뷰 문화를 만드는 것이었는데 이런건 글로 정리하기 어렵지만 대강 이렇다.&lt;/p&gt;
+&lt;p&gt;When I first joined, even basic code review practices weren’t in place.&lt;br /&gt;
+My initial goal was to establish a proper review culture. Here’s how I approached it.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;리뷰 속도와 리뷰의 질에 대한 (수 차례의) 논의 및 회고&lt;/li&gt;
-  &lt;li&gt;리뷰 그라운드 룰 세우기&lt;/li&gt;
-  &lt;li&gt;운영, 개발, 문서까지 리뷰하기&lt;/li&gt;
+  &lt;li&gt;Conducted discussions and retrospectives on review speed and quality.&lt;/li&gt;
+  &lt;li&gt;Created review ground rules.&lt;/li&gt;
+  &lt;li&gt;Introduced reviews not just for code but also for operations and documentation.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;의사소통-개선하기&quot;&gt;의사소통 개선하기&lt;/h3&gt;
+&lt;h3 id=&quot;improving-communication&quot;&gt;Improving Communication&lt;/h3&gt;
 
-&lt;p&gt;생각보다 어떤 무언가를 한다기보단 의사소통을 개선하는데 꾸준히 노력한 것 같다.&lt;br /&gt;
-슬랙을 통한 의사소통을 더 많이하도록 유도했고, 의사소통에 리액션을 강제?하여 슬랙 리액션을 꼭 달도록 했다.&lt;br /&gt;
-업무 중에 small talk을 계속해서 팀 분위기도 챙기려고 했는데 사실 이건 내 스타일인 것 같기도하고.&lt;/p&gt;
+&lt;p&gt;I focused heavily on improving communication within our team.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Encouraged more conversations via Slack.&lt;/li&gt;
+  &lt;li&gt;Introduced “reaction culture” asking team members to respond to messages using Slack reactions or threads.&lt;/li&gt;
+  &lt;li&gt;Used small talk to lighten the mood and improve team dynamics. It could just my natural style.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;생각보다 더 팀원들 사이의 생각이 달랐다.&lt;br /&gt;
-더해서 ‘안전감’에 대해 회고 시간에 자주 이야기 했는데, 이런 이야기를 한 명 한 명 들어가면서 생각들을 더 잘 얘기할 수 있는 팀이 되었다. 물론 아직은 부족하지만.&lt;/p&gt;
+&lt;p&gt;While there were challenges due to differences in perspectives among team members, we made progress in creating a safer environment for open discussions.&lt;/p&gt;
 
-&lt;h3 id=&quot;스프린트&quot;&gt;스프린트&lt;/h3&gt;
+&lt;h3 id=&quot;sprint&quot;&gt;Sprint&lt;/h3&gt;
 
-&lt;p&gt;내가 올해 만든 팀 문화 중 가장 중요한거라면 스프린트를 바꾼 것 같다.&lt;br /&gt;
-처음 우리팀은 팀 리더가 일을 나누면 각자 알아서 일을 하다가 끝나면 공유했는데, 어떤 팀원은 한 주 내내 혼자 일을 하고 리뷰를 올리기도 했다.&lt;br /&gt;
-리더를 멤버들이 돌아가면서 하기로 정하고 스프린트 주기, 회의 방식, 문서화, 회고, 스토리 포인트 단위의 추정과 일을 쪼개고 나누는 방식들을 도입했다. 물론 하나씩 차근차근.&lt;br /&gt;
-개발보다 문화를 바꾸는게 더 어렵다는 생각도 드는데, 내가 답답하게 일할 수 없다보니 방식을 하나씩 바꾸게 됐다.&lt;br /&gt;
-내가 실질적으로 팀을 이끄는 리더는 아니면서 문화는 내가 바꿔가야 했기 때문에 내 생각보다 더디게 진행되긴 했는데, 우리 팀 리더는 팀 문화에 대한 제안을 드리면 ‘뭐든지 okay’로 답을 주셔서 좋았다.&lt;br /&gt;
-주변에서 나와 비슷한 상황에서 ‘뭐든지 현재대로’를 원하시는 리더로 고생하는 분도 보았기 때문에 리더가 중요하다는 것을 다시 느꼈다.&lt;/p&gt;
+&lt;p&gt;One of the biggest changes I’ve made is improving the way our team handles sprints.
+Previously, the team leader assigned tasks, and members worked independently without much collaboration.&lt;/p&gt;
 
-&lt;p&gt;팀 문화를 바꾸면서 느낀건 생각보다 ‘좋은 팀’을 만드는데는 시간이 제법 걸린다는 것이다.&lt;br /&gt;
-내가 시도한 많은 것들이 우리 팀을 더 좋게 만들었지만, 아직 내가 원하는 좋은 팀이 되기까지 가야할 길은 좀 남은 것 같다.&lt;/p&gt;
+&lt;p&gt;I introduced new practices.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Rotating sprint leadership among team members.&lt;/li&gt;
+  &lt;li&gt;Changing sprint cycles, meeting formats, and documentation methods.&lt;/li&gt;
+  &lt;li&gt;Incorporating sprint retrospectives, story point estimation, and task breakdowns.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h2 id=&quot;새로운-서비스&quot;&gt;새로운 서비스&lt;/h2&gt;
+&lt;p&gt;I’m not a leader, but I had to change team culture.
+Because of this, it went slower than I thought. Still, it was good that our team leader gave me an answer with “anything okay” when I gave a suggestion about the team culture.&lt;br /&gt;
+I felt again that the leader is important because I saw some people around me struggling as a leader who wanted “anything as it is” in a similar situation to me.&lt;/p&gt;
 
-&lt;p&gt;팀을 옮긴게 처음은 아니지만 동기화 서버 개발자로 구르다가 백업 서버를 담당하게 되었다.&lt;br /&gt;
-이직을 생각해볼 때 ‘내가 팀을 옮기게 되면 업무를 따라가는데 얼마나 걸릴까?’라는 생각을 종종 했었다.&lt;br /&gt;
-연간 회고를 준비하면서 최근 설계를 떠올려보면 질문을 하기보단 대부분 설명을 해주고 있는 모습을 볼 때 ‘내가 생각보다 깊이있게 프로젝트를 이해하는데 시간이 오래걸리지 않는구나’를 느꼈다.&lt;/p&gt;
+&lt;p&gt;From this experience, I learned that building a great team takes time. While we’ve made significant progress, but there’s still room for improvement.&lt;/p&gt;
 
-&lt;p&gt;동기화 서버에서 백업 서버를 맡게되면서 했던 사내 부검과 &lt;a href=&quot;/docs/retrospect/theme/sync&quot;&gt;회고&lt;/a&gt; 내용 중 하나는 ‘나는 동기화 서버 개발에 있어서는 프로였다’라는 말이었는데, 이제는 내 도메인이 동기화에서 백업까지 확장된 것 같다.&lt;br /&gt;
-백업이랑 동기화는 비슷하면서도 다른 정책들이 있었는데, 이건 나중에 백업 서비스를 회고하면서 적어봐야겠다.&lt;/p&gt;
+&lt;h2 id=&quot;new-service&quot;&gt;New Service&lt;/h2&gt;
 
-&lt;p&gt;아쉬운 점은 백업이 아닌 gRPC를 비롯한 내가 사용해보지 않은 기술들을 사용하는 새로운 서비스를 경험해보고 싶었는데, 백업 서비스의 요구사항이 많아서 다른 서비스를 하지 못했다.&lt;/p&gt;
+&lt;p&gt;Switching from sync server to backup server was a new challenge.&lt;br /&gt;
+I realized I adapt to new domains faster than I’d expected. Reflecting on recent design meetings, I noticed that I’ve been explaining concepts to others rather than asking questions to others.&lt;/p&gt;
 
-&lt;h2 id=&quot;리팩토링&quot;&gt;리팩토링&lt;/h2&gt;
+&lt;p&gt;Backup and synchronization were similar, but there were different policies, and I’ll write this down later.&lt;br /&gt;
+While I expanded my expertise from sync to backup, I regret not exploring new technologies like gRPC due to the heavy demands of backup service development.&lt;/p&gt;
 
-&lt;p&gt;리팩토링이야 매일같이 하는거지만 올해는 리팩토링에 대해 다시 생각해봤다.&lt;br /&gt;
-새로 맡은 서비스는 워낙 레거시 코드가 많아서 손댈 부분이 많았는데, 각잡고 리팩토링을 한 시간도 많았지만 기존 코드를 손대는 모든 작업에서 리팩토링을 꼭 했던 것 같다.&lt;/p&gt;
+&lt;h2 id=&quot;refactoring&quot;&gt;Refactoring&lt;/h2&gt;
 
-&lt;p&gt;대규모 리팩토링은 이전 팀에서 너무 많이 해서 나한텐 재미없는 작업으로 느껴졌다.&lt;br /&gt;
-파트 리더께서 조금 더 리팩토링에 대해 탄탄하게 정리해보자는 코멘트를 주셨고 리팩토링에 대한 생각들을 정리할 수 있는 시간들이 된 것 같다.&lt;/p&gt;
+&lt;p&gt;It’s refactoring, which I do every day, but this year I’ve thought about refactoring again.&lt;br /&gt;
+The new service had so many legacy codes that there were many things to touch.
+I think I’ve always had refactoring in everything I’ve done with my existing code.&lt;/p&gt;
 
-&lt;h3 id=&quot;복합-리팩토링&quot;&gt;복합 리팩토링&lt;/h3&gt;
+&lt;p&gt;I’ve already done so many big refactoring in my previous team that it felt like a boring task.&lt;br /&gt;
+The part leader gave me a comment to organize more solidly about the refactoring, and I think it’s time to organize my thoughts on the refactoring.&lt;/p&gt;
 
-&lt;p&gt;피쳐 개발에 맞춰 code smell을 해결하는 리팩토링이 아니라 프로젝트의 넓은 범위에 영향을 미치는 리팩토링에 대해 마틴 파울러는 ‘복합 리팩토링(big refactoring)’이라는 표현을 사용한다.&lt;br /&gt;
-리팩토링은 대부분이 리팩토링의 기법들에 대한 내용들이어서 기법이 아니라&lt;a href=&quot;/docs/refactoring/my-refactoring&quot;&gt; 복합 리팩토링에서 해야할 작업들에 대한 생각&lt;/a&gt;을 정리했다.&lt;br /&gt;
-다양한 종류의 사용하지 않는 코드 제거에도 시간을 쓰고 이런 종류의 코드도 제거가 되어야 좋다는 생각을 할 수 있었다.&lt;/p&gt;
+&lt;p&gt;This year I tackled broader changes, including&lt;/p&gt;
 
-&lt;h3 id=&quot;비용을-고려한-리팩토링&quot;&gt;비용을 고려한 리팩토링&lt;/h3&gt;
+&lt;h3 id=&quot;big-refactoring&quot;&gt;Big Refactoring&lt;/h3&gt;
 
-&lt;p&gt;복합 리팩토링을 하면서는 키 설계나 메세지 전달 방식까지 다시 설계하게 되기도 한다.&lt;br /&gt;
-올해는 내가 이런 설계에서 비용을 고려해보기 시작했다는 점에서 새롭다.&lt;br /&gt;
-&lt;strong&gt;하루 수십억 단위의 api call&lt;/strong&gt; 규모의 서비스를 담당하다보니, 모듈 사이에 SQS를 놓을까를 고민하다가 비용을 계산하니 SQS 추가 하나만으로 &lt;strong&gt;연간 억 단위가 되어 설계를 변경&lt;/strong&gt;하기도 했고, 다른 팀원이 제안한 &lt;strong&gt;아이디어에 대해 반대하기 위한 근거 중 하나로 아이디어 적용시 추가되는 수십억 단위의 S3 비용을 계산&lt;/strong&gt;해서 제시하기도 했다.&lt;/p&gt;
+&lt;p&gt;Martin Fowler calls large-scale refactoring that affects a wide part of a project &lt;strong&gt;“big refactoring”&lt;/strong&gt;, rather than just fixing code smells while developing features.&lt;br /&gt;
+Most refactoring discussions focus on techniques, so I organized my thoughts on &lt;strong&gt;what to consider in big refactoring&lt;/strong&gt; &lt;a href=&quot;/docs/refactoring/my-refactoring&quot;&gt;here&lt;/a&gt;.&lt;br /&gt;
+I also spent time removing various types of unused code, realizing that eliminating such code is beneficial.&lt;/p&gt;
 
-&lt;p&gt;이전에도 비용을 고려하긴 했으나 자연스럽게 비용을 근거로 설계를 제시하고 반대했던 모습들을 떠올리면 내가 리팩토링과 설계에 있어서 조금 더 성장했나 하는 생각이 든다.&lt;/p&gt;
+&lt;h3 id=&quot;cost-aware-refactoring&quot;&gt;Cost-Aware Refactoring&lt;/h3&gt;
+
+&lt;p&gt;During big refactoring, I sometimes redesign key architecture or messaging methods.&lt;br /&gt;
+This year, I started considering &lt;strong&gt;cost&lt;/strong&gt; in these designs, which was a new approach for me.&lt;/p&gt;
+
+&lt;p&gt;Managing a service that handles &lt;strong&gt;billions of API calls per day&lt;/strong&gt;, I have a lot to think about the cost.
+I was thinking about whether to put SQS between modules, but when I calculated the cost, it became a billion unit per year with just one additional SQS and changed the design.
+One of the team members suggested the idea during the design meeting. As one of the reasons against it, I also presented the calculation of the billions of S3 costs added when applying the idea.&lt;/p&gt;
+
+&lt;p&gt;I had considered costs before, but naturally using cost calculations as a basis for design decisions and objections made me realize I’ve grown in refactoring and architecture.&lt;/p&gt;
 
 &lt;h3 id=&quot;msa&quot;&gt;MSA&lt;/h3&gt;
 
-&lt;p&gt;feature를 바쁘게 추가하면서 진행해온 작업들을 돌아봤을 때, 거대한 모놀리스인 우리 서비스를 조금이나마 분리할 수 있는 기회들을 내가 놓쳤다는 생각을 했다.&lt;br /&gt;
-한 선배와 &lt;a href=&quot;/docs/design/msa&quot;&gt;MSA&lt;/a&gt;에 대해 이야기 했는데 한 해를 돌아봤을 때 ‘아 이거 MSA’면 좋았을텐데 싶은 생각들이 드는 것들이 있다. 특히나 하반기에 읽은 &lt;strong&gt;마이크로 서비스 도입 이렇게 한다&lt;/strong&gt;를 생각해봤을 때 점진적으로 MSA로 갔으면 좋았을텐데 하는 후회가 든다.&lt;/p&gt;
+&lt;p&gt;Looking back at the features I’ve been busy adding, I feel I missed opportunities to break our &lt;strong&gt;large monolithic service&lt;/strong&gt; into smaller parts.&lt;br /&gt;
+I discussed &lt;a href=&quot;/docs/design/msa&quot;&gt;MSA&lt;/a&gt; with a senior colleague, and in hindsight, I see cases where &lt;strong&gt;MSA would have been a better choice&lt;/strong&gt;. Especially after reading a book &lt;em&gt;How to Adopt Microservices&lt;/em&gt;, I regret not transitioning gradually to MSA.&lt;/p&gt;
 
-&lt;p&gt;지금 팀에선 설계를 내가 많이 맡고 있는데, 내가 연초에 MSA의 장점과 모놀리스에서 MSA로 전환하는 방식들에 대해 제대로 이해하지 못했기 때문에 이런 설계를 내지 못했다는 생각이 들어 아쉽다.&lt;/p&gt;
+&lt;p&gt;I handle a lot of the system design in my team, and I now realize that at the beginning of the year, I didn’t fully understand &lt;strong&gt;the benefits of MSA&lt;/strong&gt; or &lt;strong&gt;how to transition from monolith to MSA&lt;/strong&gt;. That lack of understanding led me to miss designing a better system, which I find disappointing.&lt;/p&gt;
 
-&lt;h2 id=&quot;연사&quot;&gt;연사&lt;/h2&gt;
+&lt;h4 id=&quot;speaking-opportunities&quot;&gt;Speaking Opportunities&lt;/h4&gt;
 
-&lt;p&gt;올해 기회가 되어 슬랙 자동화 봇을 주제로 두 차례의 연사로 설 수 있었다.&lt;/p&gt;
+&lt;p&gt;I had the chance to speak about slack automation bots at two events this year:&lt;/p&gt;
 &lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.salesforce.com/kr/events/sflive-korea-23/&quot;&gt;코엑스에서 열린 salesforce live korea&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://slack-champion-day2023.splashthat.com/&quot;&gt;slack 관계사들을 대상으로하는 slack champion day&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.salesforce.com/kr/events/sflive-korea-23/&quot;&gt;&lt;strong&gt;Salesforce Live Korea&lt;/strong&gt; at coex in seoul&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://slack-champion-day2023.splashthat.com/&quot;&gt;&lt;strong&gt;Slack Champion Day&lt;/strong&gt; Presenting to Slack-related companies&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;재밌고 새로운 경험들을 해볼 수 있는 시간이어서 좋았고, 이런 기회들을 더 잘 만들어갈 수 있었으면 좋겠다는 생각이 든다.&lt;/p&gt;
+&lt;p&gt;These experiences were both fun and fulfilling, and I hope to create more opportunities like this in the future.&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;올해는 리더에 대해서 생각해볼 시간들이 많았다.  &lt;br /&gt;
-팀을 재배치하고 면담을 통해 동기부여를 하는 파트리더의 역할에 대해서 먼저 생각했고.&lt;br /&gt;
-이전 팀 리더, 현재 팀 리더와 다른 팀 리더의 태도들로 만들어지는 팀의 분위기를 내가 더 잘 볼 수 있는 위치가 된 것 같다.&lt;br /&gt;
-그리고 팀 문화와 회의, 설계를 주도하다보니 리더의 모습에 대해서도 더 생각하게 됐다.&lt;/p&gt;
+&lt;p&gt;There was a lot of time to think about leadership this year.  &lt;br /&gt;
+I first thought about the part leader’s role in rearranging the team and motivating through interviews.&lt;br /&gt;
+And I think now I could see the atmosphere of the team. and the atmosphere made by the attitudes of the former team leader, the current team leader, and other team leaders.&lt;br /&gt;
+And as I led the team culture, meetings, and design, I thought more about the leader.&lt;/p&gt;
 
-&lt;p&gt;새로운 경험들을 많이 하게된 해였다.&lt;br /&gt;
-두 차례의 연사 경험, 새로운 팀으로 옮겨와서 맡게된 새로운 역할들.  &lt;br /&gt;
-기대한 새로운 기술들에 대한 개발 경험을 갖지 못한게 아쉽지만 새로운 역할들을 잘 소화해낸 것 같다.&lt;br /&gt;
-작은 팀이지만 팀 문화와 설계를 주도하는 자리에서 일을 해본게 재밌었다. 생각보다 잘 맞는 것 같기도 하고.&lt;/p&gt;
+&lt;p&gt;It was a year where I had many new experiences.&lt;br /&gt;
+Two speaker experience, new roles taken after moving to a new team.  &lt;br /&gt;
+It’s a pity that I couldn’t have the experience of developing new technologies that I expected, but I think I’ve pulled off new roles well.&lt;br /&gt;
+Although it is a small team, it was fun to work in a position where I lead team culture and design. I think it fits for me better than I thought.&lt;/p&gt;
 </description>
         
         <pubDate></pubDate>

@@ -1674,6 +1674,15 @@
     <priority>0.5</priority>
   </url>
   
+  <url>
+    <loc>https://meansoup.github.io/ko/docs/retrospect/2023</loc>
+    
+    <lastmod>2023-12-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
   
   
   

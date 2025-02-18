@@ -4452,1279 +4452,1272 @@
     "relUrl": "/docs/design/eda"
   },"636": {
     "doc": "서버 개발자, 2023 회고",
-    "title": "팀 문화 리딩하기",
-    "content": "올해는 팀을 옮긴 후 팀의 문화를 만드는데 시간을 많이 쏟은 해였다. 팀 문화가 무너지고 정체된 팀에 문화를 만들자며 파트 리더가 나를 현재 팀으로 보냈다. 연간 회고를 하며 작년 회고를 봤을 때, 이전 팀은 팀 문화를 참 잘 만들어가던 팀이었구나 느낀다. 파트 리더는 ‘문화를 같이 잘 만들어 가는 것과 없는 곳에서 문화를 만드는 것은 다르다’고 ‘문화에 적응하는 사람이 있고 이끄는 사람이 있다. 이끌길 바란다’며 문화가 없는 곳에서 만들 수 있는 경험은 값진 경험이라고 하시며 나를 보냈다. 처음 팀에 와서 팀 문화를 보곤 조금은 착잡했는데 한 해를 돌아보면 나한테는 팀 문화를 리딩해보는 경험을 해보는 해가 됐던 것 같다. 리뷰 문화 만들기 . 처음 팀에 왔을땐 개발팀의 기본이라고 생각하는 리뷰 문화조차 제대로 되지 않아 착잡했다. 때문에 내 첫 목표는 리뷰 문화를 만드는 것이었는데 이런건 글로 정리하기 어렵지만 대강 이렇다. | 리뷰 속도와 리뷰의 질에 대한 (수 차례의) 논의 및 회고 | 리뷰 그라운드 룰 세우기 | 운영, 개발, 문서까지 리뷰하기 | . 의사소통 개선하기 . 생각보다 어떤 무언가를 한다기보단 의사소통을 개선하는데 꾸준히 노력한 것 같다. 슬랙을 통한 의사소통을 더 많이하도록 유도했고, 의사소통에 리액션을 강제?하여 슬랙 리액션을 꼭 달도록 했다. 업무 중에 small talk을 계속해서 팀 분위기도 챙기려고 했는데 사실 이건 내 스타일인 것 같기도하고. 생각보다 더 팀원들 사이의 생각이 달랐다. 더해서 ‘안전감’에 대해 회고 시간에 자주 이야기 했는데, 이런 이야기를 한 명 한 명 들어가면서 생각들을 더 잘 얘기할 수 있는 팀이 되었다. 물론 아직은 부족하지만. 스프린트 . 내가 올해 만든 팀 문화 중 가장 중요한거라면 스프린트를 바꾼 것 같다. 처음 우리팀은 팀 리더가 일을 나누면 각자 알아서 일을 하다가 끝나면 공유했는데, 어떤 팀원은 한 주 내내 혼자 일을 하고 리뷰를 올리기도 했다. 리더를 멤버들이 돌아가면서 하기로 정하고 스프린트 주기, 회의 방식, 문서화, 회고, 스토리 포인트 단위의 추정과 일을 쪼개고 나누는 방식들을 도입했다. 물론 하나씩 차근차근. 개발보다 문화를 바꾸는게 더 어렵다는 생각도 드는데, 내가 답답하게 일할 수 없다보니 방식을 하나씩 바꾸게 됐다. 내가 실질적으로 팀을 이끄는 리더는 아니면서 문화는 내가 바꿔가야 했기 때문에 내 생각보다 더디게 진행되긴 했는데, 우리 팀 리더는 팀 문화에 대한 제안을 드리면 ‘뭐든지 okay’로 답을 주셔서 좋았다. 주변에서 나와 비슷한 상황에서 ‘뭐든지 현재대로’를 원하시는 리더로 고생하는 분도 보았기 때문에 리더가 중요하다는 것을 다시 느꼈다. 팀 문화를 바꾸면서 느낀건 생각보다 ‘좋은 팀’을 만드는데는 시간이 제법 걸린다는 것이다. 내가 시도한 많은 것들이 우리 팀을 더 좋게 만들었지만, 아직 내가 원하는 좋은 팀이 되기까지 가야할 길은 좀 남은 것 같다. ",
-    "url": "/docs/retrospect/2023#%ED%8C%80-%EB%AC%B8%ED%99%94-%EB%A6%AC%EB%94%A9%ED%95%98%EA%B8%B0",
+    "title": "Leading Team Culture",
+    "content": "This year, I spent a lot of time building and leading team culture after joining a new team. My manager assigned me to this team, saying, “It’s one thing to join a team with a great culture and another to build one from scratch. Leading in a place without culture is a valuable experience.” . When I first joined, the state of team culture felt discouraging. However, as the year progressed, I realized this was a chance for me to learn how to lead and shape a team culture. Building a Review Culture . When I first joined, even basic code review practices weren’t in place. My initial goal was to establish a proper review culture. Here’s how I approached it. | Conducted discussions and retrospectives on review speed and quality. | Created review ground rules. | Introduced reviews not just for code but also for operations and documentation. | . Improving Communication . I focused heavily on improving communication within our team. | Encouraged more conversations via Slack. | Introduced “reaction culture” asking team members to respond to messages using Slack reactions or threads. | Used small talk to lighten the mood and improve team dynamics. It could just my natural style. | . While there were challenges due to differences in perspectives among team members, we made progress in creating a safer environment for open discussions. Sprint . One of the biggest changes I’ve made is improving the way our team handles sprints. Previously, the team leader assigned tasks, and members worked independently without much collaboration. I introduced new practices. | Rotating sprint leadership among team members. | Changing sprint cycles, meeting formats, and documentation methods. | Incorporating sprint retrospectives, story point estimation, and task breakdowns. | . I’m not a leader, but I had to change team culture. Because of this, it went slower than I thought. Still, it was good that our team leader gave me an answer with “anything okay” when I gave a suggestion about the team culture. I felt again that the leader is important because I saw some people around me struggling as a leader who wanted “anything as it is” in a similar situation to me. From this experience, I learned that building a great team takes time. While we’ve made significant progress, but there’s still room for improvement. ",
+    "url": "/docs/retrospect/2023#leading-team-culture",
     
-    "relUrl": "/docs/retrospect/2023#팀-문화-리딩하기"
+    "relUrl": "/docs/retrospect/2023#leading-team-culture"
   },"637": {
     "doc": "서버 개발자, 2023 회고",
-    "title": "새로운 서비스",
-    "content": "팀을 옮긴게 처음은 아니지만 동기화 서버 개발자로 구르다가 백업 서버를 담당하게 되었다. 이직을 생각해볼 때 ‘내가 팀을 옮기게 되면 업무를 따라가는데 얼마나 걸릴까?’라는 생각을 종종 했었다. 연간 회고를 준비하면서 최근 설계를 떠올려보면 질문을 하기보단 대부분 설명을 해주고 있는 모습을 볼 때 ‘내가 생각보다 깊이있게 프로젝트를 이해하는데 시간이 오래걸리지 않는구나’를 느꼈다. 동기화 서버에서 백업 서버를 맡게되면서 했던 사내 부검과 회고 내용 중 하나는 ‘나는 동기화 서버 개발에 있어서는 프로였다’라는 말이었는데, 이제는 내 도메인이 동기화에서 백업까지 확장된 것 같다. 백업이랑 동기화는 비슷하면서도 다른 정책들이 있었는데, 이건 나중에 백업 서비스를 회고하면서 적어봐야겠다. 아쉬운 점은 백업이 아닌 gRPC를 비롯한 내가 사용해보지 않은 기술들을 사용하는 새로운 서비스를 경험해보고 싶었는데, 백업 서비스의 요구사항이 많아서 다른 서비스를 하지 못했다. ",
-    "url": "/docs/retrospect/2023#%EC%83%88%EB%A1%9C%EC%9A%B4-%EC%84%9C%EB%B9%84%EC%8A%A4",
+    "title": "New Service",
+    "content": "Switching from sync server to backup server was a new challenge. I realized I adapt to new domains faster than I’d expected. Reflecting on recent design meetings, I noticed that I’ve been explaining concepts to others rather than asking questions to others. Backup and synchronization were similar, but there were different policies, and I’ll write this down later. While I expanded my expertise from sync to backup, I regret not exploring new technologies like gRPC due to the heavy demands of backup service development. ",
+    "url": "/docs/retrospect/2023#new-service",
     
-    "relUrl": "/docs/retrospect/2023#새로운-서비스"
+    "relUrl": "/docs/retrospect/2023#new-service"
   },"638": {
     "doc": "서버 개발자, 2023 회고",
-    "title": "리팩토링",
-    "content": "리팩토링이야 매일같이 하는거지만 올해는 리팩토링에 대해 다시 생각해봤다. 새로 맡은 서비스는 워낙 레거시 코드가 많아서 손댈 부분이 많았는데, 각잡고 리팩토링을 한 시간도 많았지만 기존 코드를 손대는 모든 작업에서 리팩토링을 꼭 했던 것 같다. 대규모 리팩토링은 이전 팀에서 너무 많이 해서 나한텐 재미없는 작업으로 느껴졌다. 파트 리더께서 조금 더 리팩토링에 대해 탄탄하게 정리해보자는 코멘트를 주셨고 리팩토링에 대한 생각들을 정리할 수 있는 시간들이 된 것 같다. 복합 리팩토링 . 피쳐 개발에 맞춰 code smell을 해결하는 리팩토링이 아니라 프로젝트의 넓은 범위에 영향을 미치는 리팩토링에 대해 마틴 파울러는 ‘복합 리팩토링(big refactoring)’이라는 표현을 사용한다. 리팩토링은 대부분이 리팩토링의 기법들에 대한 내용들이어서 기법이 아니라 복합 리팩토링에서 해야할 작업들에 대한 생각을 정리했다. 다양한 종류의 사용하지 않는 코드 제거에도 시간을 쓰고 이런 종류의 코드도 제거가 되어야 좋다는 생각을 할 수 있었다. 비용을 고려한 리팩토링 . 복합 리팩토링을 하면서는 키 설계나 메세지 전달 방식까지 다시 설계하게 되기도 한다. 올해는 내가 이런 설계에서 비용을 고려해보기 시작했다는 점에서 새롭다. 하루 수십억 단위의 api call 규모의 서비스를 담당하다보니, 모듈 사이에 SQS를 놓을까를 고민하다가 비용을 계산하니 SQS 추가 하나만으로 연간 억 단위가 되어 설계를 변경하기도 했고, 다른 팀원이 제안한 아이디어에 대해 반대하기 위한 근거 중 하나로 아이디어 적용시 추가되는 수십억 단위의 S3 비용을 계산해서 제시하기도 했다. 이전에도 비용을 고려하긴 했으나 자연스럽게 비용을 근거로 설계를 제시하고 반대했던 모습들을 떠올리면 내가 리팩토링과 설계에 있어서 조금 더 성장했나 하는 생각이 든다. MSA . feature를 바쁘게 추가하면서 진행해온 작업들을 돌아봤을 때, 거대한 모놀리스인 우리 서비스를 조금이나마 분리할 수 있는 기회들을 내가 놓쳤다는 생각을 했다. 한 선배와 MSA에 대해 이야기 했는데 한 해를 돌아봤을 때 ‘아 이거 MSA’면 좋았을텐데 싶은 생각들이 드는 것들이 있다. 특히나 하반기에 읽은 마이크로 서비스 도입 이렇게 한다를 생각해봤을 때 점진적으로 MSA로 갔으면 좋았을텐데 하는 후회가 든다. 지금 팀에선 설계를 내가 많이 맡고 있는데, 내가 연초에 MSA의 장점과 모놀리스에서 MSA로 전환하는 방식들에 대해 제대로 이해하지 못했기 때문에 이런 설계를 내지 못했다는 생각이 들어 아쉽다. ",
-    "url": "/docs/retrospect/2023#%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81",
+    "title": "Refactoring",
+    "content": "It’s refactoring, which I do every day, but this year I’ve thought about refactoring again. The new service had so many legacy codes that there were many things to touch. I think I’ve always had refactoring in everything I’ve done with my existing code. I’ve already done so many big refactoring in my previous team that it felt like a boring task. The part leader gave me a comment to organize more solidly about the refactoring, and I think it’s time to organize my thoughts on the refactoring. This year I tackled broader changes, including . Big Refactoring . Martin Fowler calls large-scale refactoring that affects a wide part of a project “big refactoring”, rather than just fixing code smells while developing features. Most refactoring discussions focus on techniques, so I organized my thoughts on what to consider in big refactoring here. I also spent time removing various types of unused code, realizing that eliminating such code is beneficial. Cost-Aware Refactoring . During big refactoring, I sometimes redesign key architecture or messaging methods. This year, I started considering cost in these designs, which was a new approach for me. Managing a service that handles billions of API calls per day, I have a lot to think about the cost. I was thinking about whether to put SQS between modules, but when I calculated the cost, it became a billion unit per year with just one additional SQS and changed the design. One of the team members suggested the idea during the design meeting. As one of the reasons against it, I also presented the calculation of the billions of S3 costs added when applying the idea. I had considered costs before, but naturally using cost calculations as a basis for design decisions and objections made me realize I’ve grown in refactoring and architecture. MSA . Looking back at the features I’ve been busy adding, I feel I missed opportunities to break our large monolithic service into smaller parts. I discussed MSA with a senior colleague, and in hindsight, I see cases where MSA would have been a better choice. Especially after reading a book How to Adopt Microservices, I regret not transitioning gradually to MSA. I handle a lot of the system design in my team, and I now realize that at the beginning of the year, I didn’t fully understand the benefits of MSA or how to transition from monolith to MSA. That lack of understanding led me to miss designing a better system, which I find disappointing. Speaking Opportunities . I had the chance to speak about slack automation bots at two events this year: . | Salesforce Live Korea at coex in seoul | Slack Champion Day Presenting to Slack-related companies | . These experiences were both fun and fulfilling, and I hope to create more opportunities like this in the future. There was a lot of time to think about leadership this year. I first thought about the part leader’s role in rearranging the team and motivating through interviews. And I think now I could see the atmosphere of the team. and the atmosphere made by the attitudes of the former team leader, the current team leader, and other team leaders. And as I led the team culture, meetings, and design, I thought more about the leader. It was a year where I had many new experiences. Two speaker experience, new roles taken after moving to a new team. It’s a pity that I couldn’t have the experience of developing new technologies that I expected, but I think I’ve pulled off new roles well. Although it is a small team, it was fun to work in a position where I lead team culture and design. I think it fits for me better than I thought. ",
+    "url": "/docs/retrospect/2023#refactoring",
     
-    "relUrl": "/docs/retrospect/2023#리팩토링"
+    "relUrl": "/docs/retrospect/2023#refactoring"
   },"639": {
     "doc": "서버 개발자, 2023 회고",
-    "title": "연사",
-    "content": "올해 기회가 되어 슬랙 자동화 봇을 주제로 두 차례의 연사로 설 수 있었다. | 코엑스에서 열린 salesforce live korea | slack 관계사들을 대상으로하는 slack champion day | . 재밌고 새로운 경험들을 해볼 수 있는 시간이어서 좋았고, 이런 기회들을 더 잘 만들어갈 수 있었으면 좋겠다는 생각이 든다. 올해는 리더에 대해서 생각해볼 시간들이 많았다. 팀을 재배치하고 면담을 통해 동기부여를 하는 파트리더의 역할에 대해서 먼저 생각했고. 이전 팀 리더, 현재 팀 리더와 다른 팀 리더의 태도들로 만들어지는 팀의 분위기를 내가 더 잘 볼 수 있는 위치가 된 것 같다. 그리고 팀 문화와 회의, 설계를 주도하다보니 리더의 모습에 대해서도 더 생각하게 됐다. 새로운 경험들을 많이 하게된 해였다. 두 차례의 연사 경험, 새로운 팀으로 옮겨와서 맡게된 새로운 역할들. 기대한 새로운 기술들에 대한 개발 경험을 갖지 못한게 아쉽지만 새로운 역할들을 잘 소화해낸 것 같다. 작은 팀이지만 팀 문화와 설계를 주도하는 자리에서 일을 해본게 재밌었다. 생각보다 잘 맞는 것 같기도 하고. ",
-    "url": "/docs/retrospect/2023#%EC%97%B0%EC%82%AC",
-    
-    "relUrl": "/docs/retrospect/2023#연사"
-  },"640": {
-    "doc": "서버 개발자, 2023 회고",
     "title": "서버 개발자, 2023 회고",
-    "content": "23년은 새로운 팀으로 옮기며 내 능력들을 테스트해볼 수 있는 시간이었다. 한 해를 돌아보니 생각보다 새롭게 경험한 일들이 많다. 그럼에도 돌아보면 아쉬운 것들도 많고. ",
+    "content": "2023 was a year of testing my abilities as I transitioned to a new team. Looking back, I had many new experiences, but there were also moments I wish had gone differently. ",
     "url": "/docs/retrospect/2023",
     
     "relUrl": "/docs/retrospect/2023"
-  },"641": {
+  },"640": {
     "doc": "DDD의 기둥 Ubiquitous Language",
     "title": "유비쿼터스, Ubiquitous",
     "content": "유비쿼터스라는 단어는 ‘어디에나 있다. 아주 흔하다’ 라는 말을 의미한다. ",
     "url": "/docs/ddd/strategic/ubiquitous#%EC%9C%A0%EB%B9%84%EC%BF%BC%ED%84%B0%EC%8A%A4-ubiquitous",
     
     "relUrl": "/docs/ddd/strategic/ubiquitous#유비쿼터스-ubiquitous"
-  },"642": {
+  },"641": {
     "doc": "DDD의 기둥 Ubiquitous Language",
     "title": "유비쿼터스 언어",
     "content": "유비쿼터스 언어의 의미도 어디에서나 발견되는 언어라는 의미이다. 그러나 유비쿼터스 언어는 팀 내에 공유된 언어로 팀 내에서 어디에서나 발견되는 언어라고 보는 것이 정확하다. DDD의 개념은 실제 도메인 모델을 코드에 녹이는 것이기 때문에 도메인의 용어(유비쿼터스 언어)들이 정의되는 것이 중요하기 때문이다. 따라서 유비쿼터스 언어는 도메인 전문가와 개발자 모두 공유하는 언어이며, 뿐만 아니라 실제로 해당 프로젝트에 참여하는 모든 사람들이 공유하는 언어이다. 팀 내에서 무슨 역할을 맡더라도 프로젝트에 참여하고 있다면 해당 프로젝트의 유비쿼터스 언어를 사용하게 된다. ",
     "url": "/docs/ddd/strategic/ubiquitous#%EC%9C%A0%EB%B9%84%EC%BF%BC%ED%84%B0%EC%8A%A4-%EC%96%B8%EC%96%B4",
     
     "relUrl": "/docs/ddd/strategic/ubiquitous#유비쿼터스-언어"
-  },"643": {
+  },"642": {
     "doc": "DDD의 기둥 Ubiquitous Language",
     "title": "유비쿼터스 언어의 필요성",
     "content": "도메인에 맞는 소프트웨어를 만들려면 도메인을 설명할 수 있는 방법이 필요하다. 모델과 모델들의 관계, 이벤트, 비즈니스, 모델의 변화를 설명할 수 있는 방법들이 필요하다. 이런 설명을 함께 일관되게 사용하기 위해 필요한 것이 유비쿼터스 언어이다. 유비쿼터스 언어를 사용해 비즈니스 개념이나 프로세스를 쉽게 설명할 수 있다면 올바른 방향으로 언어를 결정해나가고 있다고 볼 수 있다. 반대로 설명에 어려움을 느낀다면 무언가 놓치고 있을 가능성이 높다. ",
     "url": "/docs/ddd/strategic/ubiquitous#%EC%9C%A0%EB%B9%84%EC%BF%BC%ED%84%B0%EC%8A%A4-%EC%96%B8%EC%96%B4%EC%9D%98-%ED%95%84%EC%9A%94%EC%84%B1",
     
     "relUrl": "/docs/ddd/strategic/ubiquitous#유비쿼터스-언어의-필요성"
-  },"644": {
+  },"643": {
     "doc": "DDD의 기둥 Ubiquitous Language",
     "title": "유비쿼터스 언어의 특징",
     "content": "유비쿼터스 언어는 팀에 의해 쓰이는 명사, 형용사, 동사, 등의 풍부한 표현을 포함한다. 팀이 사용하는 모든 문서, 소프트웨어, 테스트는 이 언어를 담고 있으며 이 언어에 맞춰진다. 1. 의사소통 . 팀 내에서 사용하는 용어와 비즈니스 용어를 일치시키고 소프트웨어 모델에 반영한다. 개발자, 비즈니스 전문가를 포함한 모든 팀원들이 동일한 언어로 의사소통할 수 있다. 2. 비즈니스 이해 . 개발자들이 비즈니스 전문가와 의사소통하며 비즈니스를 이해하는 속도가 향상된다. 비즈니스 도메인을 더 깊이 이해할 수 있다. 3. 도메인 복잡성 해결 . 유비쿼터스 언어로 생성한 도메인 모델을 통한 추상화로 복잡한 도메인을 더 이해하기 쉽게 만든다. 역할이 비즈니스 로직에 맞게 명확하게 분리됨을 통해 복잡성이 줄고 이해관계자 간의 이해도를 맞출 수 있다. ",
     "url": "/docs/ddd/strategic/ubiquitous#%EC%9C%A0%EB%B9%84%EC%BF%BC%ED%84%B0%EC%8A%A4-%EC%96%B8%EC%96%B4%EC%9D%98-%ED%8A%B9%EC%A7%95",
     
     "relUrl": "/docs/ddd/strategic/ubiquitous#유비쿼터스-언어의-특징"
-  },"645": {
+  },"644": {
     "doc": "DDD의 기둥 Ubiquitous Language",
     "title": "유비쿼터스 언어를 어떻게 만들까",
     "content": ". | 물리적이고 개념적인 도메인 그림을 그리고 이름과 행동을 붙여보기 | 간단한 정의로 구성된 용어집 만들기 . | 맘에 들지 않더라도 용어집 쓰기. 용어집을 씀으로써 추가적인 용어와 구문을 언어로 끄집어낼 수 있다. | . | 일부 팀원이 작성했다면 만들어진 구문을 리뷰하고 동의하지 못하는 경우가 많으므로 변경이 발생하더라도 대응할 수 있게 준비하기 | . 유비쿼터스 언어를 만드는 것은 도메인 모델을 만드는 것과도 관련이 있다. 도메인 모델을 만들 때 프로젝트를 위해 가장 좋은 언어를 완성하기 위해 합의와 타협을 거치며 토론하고 논쟁한다. 때로는 흥정할 수도 있다. 기존 문서의 참고, 비즈니스 지식의 공유, 기술 표준, 어학 사전들을 참조하는 과정도 지난다. 가장 좋은 개념과 용어와 의미가 무엇인지에만 초점을 맞춘다. ",
     "url": "/docs/ddd/strategic/ubiquitous#%EC%9C%A0%EB%B9%84%EC%BF%BC%ED%84%B0%EC%8A%A4-%EC%96%B8%EC%96%B4%EB%A5%BC-%EC%96%B4%EB%96%BB%EA%B2%8C-%EB%A7%8C%EB%93%A4%EA%B9%8C",
     
     "relUrl": "/docs/ddd/strategic/ubiquitous#유비쿼터스-언어를-어떻게-만들까"
-  },"646": {
+  },"645": {
     "doc": "DDD의 기둥 Ubiquitous Language",
     "title": "유비쿼터스 언어 주의사항",
     "content": "보편적으로 사용되고 흔히 보이는 유비쿼터스 언어라는 의미가 엔터프라이즈 전체나 전사적인, 혹은 세계적이거나 보편적인 도메인 언어라는 의미는 아니다. 컨텍스트는 생각보다 작고, 컨텍스트 당 하나의 유비쿼터스 언어가 있다. 유비쿼터스 언어는 바운디드 컨텍스트를 격리시키고 그 안에서 프로젝트를 진행하는 팀 내에서만 유비쿼터스하다. 그러므로 전체 엔터프라이즈나 다른 팀 같이 넓은 범위에서 유비쿼터스 언어를 적용하려고 하면 성공할 수 없고 적절하지 않다. 격리된 컨텍스트 상에서 합의된 유비쿼터스 언어가 아닌 모든 개념을 거부하라. 라고 표현하는데, 이는 모든 도메인 용어들을 합의한 유비쿼터스 언어로 만들자는 말과 동시에 다른 컨텍스트의 유비쿼터스 언어가 합의 없이 침범할 수 없음을 의미한다. ",
     "url": "/docs/ddd/strategic/ubiquitous#%EC%9C%A0%EB%B9%84%EC%BF%BC%ED%84%B0%EC%8A%A4-%EC%96%B8%EC%96%B4-%EC%A3%BC%EC%9D%98%EC%82%AC%ED%95%AD",
     
     "relUrl": "/docs/ddd/strategic/ubiquitous#유비쿼터스-언어-주의사항"
-  },"647": {
+  },"646": {
     "doc": "DDD의 기둥 Ubiquitous Language",
     "title": "유비쿼터스 언어의 변화",
     "content": "언어는 시간이 지남에 따라 크고 작은 변화를 겪으면서 확장되고 변화한다. 언어처럼 유비쿼터스 언어도 성장하고 변화한다. 그렇기 때문에 처음 유비쿼터스 언어를 만드는데 영감을 주었던 결과물들은 시간이 지나면서 쓸모 없어질 가능성이 매우 크다. 그렇기 때문에 결국 유비쿼터스 언어가 가장 지속적으로 유지되고 보장되는 것은 팀원간의 이야기와 코드상의 모델이다. 팀원간의 이야기와 코드가 유비쿼터스 언어의 영속적인 발현이기 때문에 이야기 속의 유비쿼터스 언어에 맞춰 결과물들(그림, 용어집 등의 문서)를 업데이트하기 어렵다면 버릴 수 있어야 한다. 모든 문서를 최신으로 동기화하는 것이 현실적으로 어렵기 때문에 이편이 실용적이며 죄책감을 느낄 필요가 없다. ",
     "url": "/docs/ddd/strategic/ubiquitous#%EC%9C%A0%EB%B9%84%EC%BF%BC%ED%84%B0%EC%8A%A4-%EC%96%B8%EC%96%B4%EC%9D%98-%EB%B3%80%ED%99%94",
     
     "relUrl": "/docs/ddd/strategic/ubiquitous#유비쿼터스-언어의-변화"
-  },"648": {
+  },"647": {
     "doc": "DDD의 기둥 Ubiquitous Language",
     "title": "코드레벨에서의 유비쿼터스 언어",
     "content": "| Possible Viewpoints | Result Code | . | “Who cares? Just code it up.” Um, not even close. | patient.setShotType(ShotTypes.TYPE_FLU); patient.setDose (dose); patient.setNurse(nurse); | . | “We give flu shots to patients.” Better, but misses some important concepts. | patient.giveFlushot(); | . | “Nurses administer flu vaccines to patients in standard doses.” This seems like what we’d like to run with at this time, at least until we learn more. | Vaccine vaccine = vaccines.standardAdultFluDose(); nurse.administerFluVaccine(patient, vaccine); | . 유비쿼터스 언어를 코드레벨에서 적용하는 생각들에 많이 미흡했던 것 같다. 나는 보통 유비쿼터스 언어를 뽑아서 도메인 모델을 만드는데 의의를 많이 뒀었는데, 이번에 다시 Vaughn Vernon의 책을 읽으면서 느낀건 위처럼 코드레벨에서 유비쿼터스 언어를 더 고민할 필요가 있다는 것. reference . | Implement Domain Driven Design, Vaughn Vernon | https://vaadin.com/blog/ddd-part-1-strategic-domain-driven-design | . ",
     "url": "/docs/ddd/strategic/ubiquitous#%EC%BD%94%EB%93%9C%EB%A0%88%EB%B2%A8%EC%97%90%EC%84%9C%EC%9D%98-%EC%9C%A0%EB%B9%84%EC%BF%BC%ED%84%B0%EC%8A%A4-%EC%96%B8%EC%96%B4",
     
     "relUrl": "/docs/ddd/strategic/ubiquitous#코드레벨에서의-유비쿼터스-언어"
-  },"649": {
+  },"648": {
     "doc": "DDD의 기둥 Ubiquitous Language",
     "title": "DDD의 기둥 Ubiquitous Language",
     "content": "It’s one of the two primary pillars of DDD’s strengths. - Vaughn Vernon . Vaughn Vernon의 말처럼 유비쿼터스 언어는 DDD의 가장 강력한 요소 중 하나이며 DDD에서 절대 빠질 수 없는 개념이다. ",
     "url": "/docs/ddd/strategic/ubiquitous",
     
     "relUrl": "/docs/ddd/strategic/ubiquitous"
-  },"650": {
+  },"649": {
     "doc": "kafka 아키텍처 이해하기",
     "title": "메시지 (message)",
     "content": "레코드라고도 부르는 메시지는 카프카를 통해 흐르는 데이터의 기본 요소이다. 메시지는 timestamp, value 그리고 선택적으로 key를 갖는다. 원한다면 custom header를 사용할 수도 있다. key와 value는 각각의 serialize, deserialize를 위해 카프카 특유의 방식으로 상호작용할 수 있다. 메시지가 있다면 브로커에게 메시지를 보내야 한다. ",
     "url": "/docs/message-broker/kafka/architecture#%EB%A9%94%EC%8B%9C%EC%A7%80-message",
     
     "relUrl": "/docs/message-broker/kafka/architecture#메시지-message"
-  },"651": {
+  },"650": {
     "doc": "kafka 아키텍처 이해하기",
     "title": "카프카 아키텍처",
     "content": "| 컴포넌트 | 역할 | . | Producer | 카프카로 메시지를 보낸다 | . | Consumer | 카프카에서 메시지를 조회한다 | . | Topics | 메시지를 브로커에 저장하기 위한 논리적인 이름 | . | ZooKeeper ensemble | 클러스터에서 consensus를 유지하도록 돕는다 | . | Broker | 커밋 로그를 처리한다 (메시지를 disk에 저장한다) | . ",
     "url": "/docs/message-broker/kafka/architecture#%EC%B9%B4%ED%94%84%EC%B9%B4-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98",
     
     "relUrl": "/docs/message-broker/kafka/architecture#카프카-아키텍처"
-  },"652": {
+  },"651": {
     "doc": "kafka 아키텍처 이해하기",
     "title": "Producer &amp; Consumer",
     "content": ". Producer는 메시지를 카프카 topic으로 보내는 도구이다. default producer는 없으나 API, Flume, Connect, Streams 등이 사용될 수 있다. Consumer는 카프카에서 메시지를 검색하는 도구다. consumer는 topic을 구독하고 지속적으로 메시지를 polling 한다. ",
     "url": "/docs/message-broker/kafka/architecture#producer--consumer",
     
     "relUrl": "/docs/message-broker/kafka/architecture#producer--consumer"
-  },"653": {
+  },"652": {
     "doc": "kafka 아키텍처 이해하기",
     "title": "Topic",
     "content": "Topic은 Partition이라는 단위로 구성된다. 즉 1개 이상의 partition이 단일 Topic을 구성한다. 카프카의 실제 작업은 대부분 disk에 실제로 구현되는 partition이다. partition replica 중 하나는 leader가 된다. 예시 . 파티션 3개로 된 토픽이 있고, 각 파티션은 3개의 replica를 갖고 있다. 모든 파티션은 각각 leader replica를 선출했을 것이다. 기본적으로 읽고 쓰기는 leader replica에서 발생하고 나머지 replica들은 follower가 되어 데이터를 업데이트 받는다. ",
     "url": "/docs/message-broker/kafka/architecture#topic",
     
     "relUrl": "/docs/message-broker/kafka/architecture#topic"
-  },"654": {
+  },"653": {
     "doc": "kafka 아키텍처 이해하기",
     "title": "ZooKeeper",
     "content": "ZooKeeper는 discovery, configuration, synchronization service를 고가용성으로 제공하는 분산 저장소다. ZooKeeper는 카프카 생태계를 복잡하게 만드는 원인 중 하나다. 참고사항 . 카프카 요구사항을 단순화하기 위해 ZooKeeper 대신 자체 관리되는 Quorum으로 교체하자는 제안이 있고 kafka 3.대의 버전에서 Zookeeper 의존성에서 탈출했다. Zookeeper를 사용하는 사례 중 하나는 앞서 봤던 leader replica가 어떤 파티션인지 합의하는데 사용하는 것이다. ",
     "url": "/docs/message-broker/kafka/architecture#zookeeper",
     
     "relUrl": "/docs/message-broker/kafka/architecture#zookeeper"
-  },"655": {
+  },"654": {
     "doc": "kafka 아키텍처 이해하기",
     "title": "Page Cache",
     "content": ". 카프카는 수백만 개의 메시지를 빠르게 처리할 수 있는데, 이를 가능하게 만드는 핵심 중 하나는 page cache1이다. broker가 JVM heap에 캐시되지 않도록 하여 크기가 큰 heap으로 인해 발생하는 문제2를 방지한다. ",
     "url": "/docs/message-broker/kafka/architecture#page-cache",
     
     "relUrl": "/docs/message-broker/kafka/architecture#page-cache"
-  },"656": {
+  },"655": {
     "doc": "kafka 아키텍처 이해하기",
     "title": "Commit Log",
     "content": "Kafka에서 Commit Log는 Java의 logger의 로그나, DB의 WAL 처럼 숨겨진 세부정보가 아니다. 오히려 kafka의 중심에 위치하며 사용자들은 offset을 사용해서 메시지가 로그의 어디에 위치하는지 찾을 수 있다. Commit Log는 메시지가 항상 로그 마지막에 추가되는 추가 전용 로그이다. 메시지를 읽을 때 그 메시지를 시스템에서 제거하거나 다른 consumer로부터 제외하지 않는다. ",
     "url": "/docs/message-broker/kafka/architecture#commit-log",
     
     "relUrl": "/docs/message-broker/kafka/architecture#commit-log"
-  },"657": {
+  },"656": {
     "doc": "kafka 아키텍처 이해하기",
     "title": "카프카 상위 수준 뷰",
     "content": ". 상위 수준에서 정리한 카프카 뷰. ",
     "url": "/docs/message-broker/kafka/architecture#%EC%B9%B4%ED%94%84%EC%B9%B4-%EC%83%81%EC%9C%84-%EC%88%98%EC%A4%80-%EB%B7%B0",
     
     "relUrl": "/docs/message-broker/kafka/architecture#카프카-상위-수준-뷰"
-  },"658": {
+  },"657": {
     "doc": "kafka 아키텍처 이해하기",
     "title": "reference",
     "content": ". | Kafka In Action 2장 | . | 운영 체제에서 제공하는 메모리 기술 중 하나로, 디스크로부터 읽은 파일이나 블록들을 메모리에 캐시하여 빠르게 액세스할 수 있도록 하는 기술 &#8617; . | 장시간 또는 빈번한 GC로 인해 일시적인 멈춤(Stop The World)이 발생하는 문제 &#8617; . | . ",
     "url": "/docs/message-broker/kafka/architecture#reference",
     
     "relUrl": "/docs/message-broker/kafka/architecture#reference"
-  },"659": {
+  },"658": {
     "doc": "kafka 아키텍처 이해하기",
     "title": "kafka 아키텍처 이해하기",
     "content": " ",
     "url": "/docs/message-broker/kafka/architecture",
     
     "relUrl": "/docs/message-broker/kafka/architecture"
-  },"660": {
+  },"659": {
     "doc": "kafka producer 이해하기",
     "title": "producer option",
     "content": "| 키 | 용도 | . | bootstrap.servers | 시작 시 연결할 하나 이상의 카프카 브로커 | . | acks | 메시지 전달이 성공하기 위한 producer가 요구하는 복제 확인 (acknowledgement)의 수 | . | key.serializer | 키의 직렬화에 사용되는 클래스 | . | value.serializer | 값의 직렬화에 사용되는 클래스 | . ",
     "url": "/docs/message-broker/kafka/producer#producer-option",
     
     "relUrl": "/docs/message-broker/kafka/producer#producer-option"
-  },"661": {
+  },"660": {
     "doc": "kafka producer 이해하기",
     "title": "bootstrap servers",
     "content": "producer는 할당된 파티션의 leader replica에만 쓸 수 있는데, topic과 bootstrap.servers 밖에 모르기 때문에 알고있는 server에 연결한다. producer는 boootstrap.servers를 시작점으로 사용해 모든 후속 쓰기에 사용하는 브로커와 파티션에 대한 메타데이터를 가져온다. 각 브로커들은 클러스터 안의 다른 브로커들도 알고 있기 때문에 producer는 하나의 브로커를 통해 leader를 찾을 수 있다. ",
     "url": "/docs/message-broker/kafka/producer#bootstrap-servers",
     
     "relUrl": "/docs/message-broker/kafka/producer#bootstrap-servers"
-  },"662": {
+  },"661": {
     "doc": "kafka producer 이해하기",
     "title": "acks",
     "content": "acks는 producer가 완료를 받기 전에 partition leader가 follower(replica)로 부터 얼마나 많은 ack를 받아야 하는지에 대한 속성이다. 이 값은 all, -1, 1, 0을 가질 수 있다. acks 0 . acks가 0인 경우 0개의 replica에 ack를 받기 때문에 가장 적은 대기 시간을 얻을 수 있지만 안전한 배달을 보장하진 않는다. acks all . acks가 all 혹은 -1인 경우 leader replica가 모든 replica 들의 ack를 기다린다는 의미이다. 따라서 가장 느린 대기 시간을 갖게 되지만 안전한 배달을 보장한다. acks 1 . acks가 1인 경우 1개의 replica에 ack를 받는다. 즉 leader replica의 수신을 확인하기 때문에 비교적 적당한 안정성과 대기시간을 가질 수 있다. leader가 follower에게 복사본을 만드는 사이에 다운된다면 메시지를 누락할 수 있다. ",
     "url": "/docs/message-broker/kafka/producer#acks",
     
     "relUrl": "/docs/message-broker/kafka/producer#acks"
-  },"663": {
+  },"662": {
     "doc": "kafka producer 이해하기",
     "title": "serializer",
     "content": "카프카의 메시지는 byte array로 저장되기 때문에 serializer가 필요하다. producer의 serializer와 맞는 consumer의 deserializer가 필요하다. StringSerializer, IntegerSerializer와 같이 기본 제공되는 serializer들이 있으며, customSerializer를 만들 수도 있다. 여기서 key가 같으면 동일한 partition으로 전송한다. | partition 수가 늘어나면 다른 partition으로 갈 수도 있다. | key가 null 인 경우 사용 가능한 partition 중 랜덤으로 선택한다. | . ",
     "url": "/docs/message-broker/kafka/producer#serializer",
     
     "relUrl": "/docs/message-broker/kafka/producer#serializer"
-  },"664": {
+  },"663": {
     "doc": "kafka producer 이해하기",
     "title": "timestamp",
     "content": "최신 버전의 producer에서는 event에 대한 timestamp가 포함되어 있다. message.timestamp.type을 CreateTime으로 설정하면 사용자가 직접 작성하거나 현재 시스템 시간으로 전달할 수 있다. LogAppendTime으로 설정하면 브로커 시간이 사용된다. 메시지 전달이 실패하여 재시도 할 수 있기 때문에, 브로커의 시간을 사용할지 producer의 시간을 사용할지 서비스 특성에 맞게 판단해야 한다. ",
     "url": "/docs/message-broker/kafka/producer#timestamp",
     
     "relUrl": "/docs/message-broker/kafka/producer#timestamp"
-  },"665": {
+  },"664": {
     "doc": "kafka producer 이해하기",
     "title": "reference",
     "content": ". | Kafka In Action 4장 | . ",
     "url": "/docs/message-broker/kafka/producer#reference",
     
     "relUrl": "/docs/message-broker/kafka/producer#reference"
-  },"666": {
+  },"665": {
     "doc": "kafka producer 이해하기",
     "title": "kafka producer 이해하기",
     "content": "Producer는 메시지를 카프카 topic으로 보내는 도구이다. ",
     "url": "/docs/message-broker/kafka/producer",
     
     "relUrl": "/docs/message-broker/kafka/producer"
-  },"667": {
+  },"666": {
     "doc": "apache kafka란?",
     "title": "이벤트 스트리밍",
     "content": "카프카는 스스로를 이벤트 스트리밍 플랫폼이라고 소개하고 있다. 이벤트 스트림이란 사람 몸의 중추 신경계 같은 것으로 이벤트 소스(DB, sensor, devices, cloud service, application)에서 이벤트 스트림 형태로 실시간으로 데이터를 캡처하는 방식이다. 검색을 위해 이벤트 스트림을 영구 저장하고 실시간 이벤트 스트림을 조작하고 처리하는 것과 다른 곳으로 라우팅 하는 것도 포함한다. ",
     "url": "/docs/message-broker/kafka/kafka#%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EC%8A%A4%ED%8A%B8%EB%A6%AC%EB%B0%8D",
     
     "relUrl": "/docs/message-broker/kafka/kafka#이벤트-스트리밍"
-  },"668": {
+  },"667": {
     "doc": "apache kafka란?",
     "title": "카프카의 주요 특징",
     "content": ". | 메시지 큐처럼 레코드를 읽고 쓴다. | 내결함성(falut tolerance)로 이벤트 스트림을 지속적이고 안정적으로 저장한다. | 이벤트 스트림이 발생할 때 처리한다. | . 그 외에도 카프카의 여러 특징들이 있다. | 카프카는 시스템으로 들어오고 시스템에서 나가는 데이터 중개인처럼 행동한다. | 프로듀서와 컨슈머 사이에 느슨한 결합을 생성한다. | 데이터 병렬 처리가 가능하다. | 다수의 컨슈머가 있을 수 있다. | . ",
     "url": "/docs/message-broker/kafka/kafka#%EC%B9%B4%ED%94%84%EC%B9%B4%EC%9D%98-%EC%A3%BC%EC%9A%94-%ED%8A%B9%EC%A7%95",
     
     "relUrl": "/docs/message-broker/kafka/kafka#카프카의-주요-특징"
-  },"669": {
+  },"668": {
     "doc": "apache kafka란?",
     "title": "카프카의 세가지 semantic",
     "content": "1. at-least once semantics . 메시지가 수진 확인될 때까지 재발송된다. 같은 메시지를 한 번 이상 보내어 브로커에 틀림없이 기록되도록 한다. 메시지가 브로커에 쓰였음을 보증받지 못한다면 프로듀서는 메시지를 다시 보낸다. 중복 메시지를 컨슈머가 필터링해야할 수 있지만 가장 안전한 배달방식이다. 2. at-most once semantics . 메시지는 단 한 번 보내며 실패하더라도 재발송하지 않는다. 메시지 전달이 실패하는 경우에도 프로듀서는 다음 메시지로 넘어가고 실패한 메시지를 다시 보내지 않는다. 메시지를 잃어도 괜찮은 경우에 사용할 수 있다. 수신 확인을 하는 것은 결국 시스템 자원을 소모하는 일이고, 메시지를 일부 잃어도 괜찮다면 성능과 비용을 위해 수신확인을 기다리지 않을 수 있다. 3. exactly-once semantics (EOS) . 메시지는 컨슈머에게 단 한 번만 보인다. | 한 번만 발송하는 것이 아니라 한 번만 보이는 것이다. | . 브로커가 하나의 메시지만을 허용하는 방식으로 프로듀서는 at-least once semantics 처럼 수신확인을 하나 컨슈머에게 도달하는 메시지는 하나가 된다. ",
     "url": "/docs/message-broker/kafka/kafka#%EC%B9%B4%ED%94%84%EC%B9%B4%EC%9D%98-%EC%84%B8%EA%B0%80%EC%A7%80-semantic",
     
     "relUrl": "/docs/message-broker/kafka/kafka#카프카의-세가지-semantic"
-  },"670": {
+  },"669": {
     "doc": "apache kafka란?",
     "title": "카프카가 적절한 경우",
     "content": ". | 안정적인 message queue . | kafka 초기의 사용 사례로 일반적인 사례 | . | MSA의 EDA에서의 이벤트 통신 | IoT의 데이터 처리 | . ",
     "url": "/docs/message-broker/kafka/kafka#%EC%B9%B4%ED%94%84%EC%B9%B4%EA%B0%80-%EC%A0%81%EC%A0%88%ED%95%9C-%EA%B2%BD%EC%9A%B0",
     
     "relUrl": "/docs/message-broker/kafka/kafka#카프카가-적절한-경우"
-  },"671": {
+  },"670": {
     "doc": "apache kafka란?",
     "title": "카프카가 적절하지 않을 수 있는 경우",
     "content": ". | 실시간이 아니라 한 달이나 일 년에 한 번 데이터 처리가 필요한 경우 | 메시지가 큰 경우 . | 카프카는 기본적으로 큰 메시지를 보내도록 설계되지 않았다. | 큰 메시지는 메모리 압박이 증가하고 캐시할 수 있는 메시지 수가 줄어 성능이 저하될 수 있다. | . | . ",
     "url": "/docs/message-broker/kafka/kafka#%EC%B9%B4%ED%94%84%EC%B9%B4%EA%B0%80-%EC%A0%81%EC%A0%88%ED%95%98%EC%A7%80-%EC%95%8A%EC%9D%84-%EC%88%98-%EC%9E%88%EB%8A%94-%EA%B2%BD%EC%9A%B0",
     
     "relUrl": "/docs/message-broker/kafka/kafka#카프카가-적절하지-않을-수-있는-경우"
-  },"672": {
+  },"671": {
     "doc": "apache kafka란?",
     "title": "reference",
     "content": ". | https://kafka.apache.org/intro | Kafka In Action 1장 | . | 배치 작업은 enterprise 급일수록 눈처럼 불어나 시스템이 과부하 상태로 빠질 수 있으며 관리를 위한 리소스가 필요하다. &#8617; . | . ",
     "url": "/docs/message-broker/kafka/kafka#reference",
     
     "relUrl": "/docs/message-broker/kafka/kafka#reference"
-  },"673": {
+  },"672": {
     "doc": "apache kafka란?",
     "title": "apache kafka란?",
     "content": "More than 80% of all Fortune 100 companies trust, and use Kafka. - Apache Software Foundation . 카프카는 현재 어떤 산업의 분야에 관계 없이 대부분의 기업에서 사용되고 있다. 카프카를 통해 데이터 플랫폼에 대한 표준이 바뀌고 있는데, 이전엔 ETL과 batch workflow1로 처리하던 작업들이 카프카를 통해 near-real-time 데이터 처리로 가고 있다. 카프카는 작업을 더 명확하고 간단하게 만들면서 MSA와 IoT의 중심에 자리잡고 있다. ",
     "url": "/docs/message-broker/kafka/kafka",
     
     "relUrl": "/docs/message-broker/kafka/kafka"
-  },"674": {
+  },"673": {
     "doc": "kafka consumer 이해하기",
     "title": "consumer option",
     "content": "| 키 | 용도 | . | bootstrap.servers | 시작할 때 연결할 하나 이상의 카프카 브로커 | . | value.deserializer | 값 역직렬화에 필요 | . | key.deserializer | 키 역직력화에 필요 | . | group.id | consumer group에 조인하기 위해 사용되는 ID | . | client.id | 유저를 식별하기 위한 ID | . | heartbeat.interval.ms | consumer가 그룹 코디네이터에게 ping 신호를 보낼 간격 | . ",
     "url": "/docs/message-broker/kafka/consumer#consumer-option",
     
     "relUrl": "/docs/message-broker/kafka/consumer#consumer-option"
-  },"675": {
+  },"674": {
     "doc": "kafka consumer 이해하기",
     "title": "offset",
     "content": "consumer가 브로커에게 보내는 로그의 인덱스 위치로 offset을 사용한다. offset을 통해 로그에서 필요한 메시지의 위치를 알 수 있다. auto.offset.reset을 earliest로 설정하면 처음부터 읽기 때문에 해당 토픽에 대한 모든 메시지를 볼 수 있다. 기본값인 latest로 설정하면 consumer를 시작한 후 보낸 메시지들을 읽는다. topic에 작성된 메시지를 찾기 위해 우선 topic 내에서 파티션을 찾은 다음 인덱스 기반 offset을 찾는다. consumer는 일반적으로 leader replica에서 읽는다. consumer가 어떤 파티션에 연결할지, 파티션의 리더는 어디에 있는지는 각 consumer 그룹에 대해 그룹 코디네이터 역할을 하는 특정 브로커를 통해 알 수 있다. 참고사항 . offset은 항상 각 파티션에 대해 증가한다. 파티션 내에서 각 로그 시퀀스를 갖기 때문에 다른 파티션 간에는 offset 번호가 같아도 괜찮다. 파티션에 offset 0이 표시되면 나중에 해당 메시지가 제거되더라도 offset 번호는 다시 사용되지 않는다. ",
     "url": "/docs/message-broker/kafka/consumer#offset",
     
     "relUrl": "/docs/message-broker/kafka/consumer#offset"
-  },"676": {
+  },"675": {
     "doc": "kafka consumer 이해하기",
     "title": "파티션 수와 consumer",
     "content": "메시지를 읽는데는 파티션의 수도 영향을 미친다. 파티션 수 &lt; consumer 수 . 파티션보다 consumer가 많으면 일부 consumer는 작업을 수행하지 않는다. 여유 consumer는 ready 상태이다. consumer가 예기치 않게 실패하는 경우에도 비슷한 비율의 소비가 필요한 경우가 있다면 consumer가 있을 수 있다. 그룹 코디네이터는 그룹 시작 초기에 어떤 consumer가 어떤 파티션을 읽을지 지정하는 것 뿐만 아니라 consumer가 추가되거나 실패하여 그룹을 종료할 때도 consumer를 할당한다. 참고사항 . Q: 그렇다면 항상 많은 파티션을 사용하면 되는 것 아닌가? . 많은 파티션은 공짜가 아니다. latency를 증가시킬 수 있다. 파티션이 많다면 브로커간에 파티션이 복제될 때까지 기다려야해서 대기시간이 길어질 수 있다. consumer에게 메시지를 전달하기 전에 동기화가 완료된다. consumer에 대해 파티션이 1:1 매핑이 아닌 경우 더 많은 파티션이 할당됨에 따라 메모리 요구가 증가할 수 있다. 파티션 수 &gt; consumer 수 . 하나의 파티션을 두 개의 consumer가 읽을 수 없다. consumer보다 파티션이 많은 경우 필요에 따라 하나의 consumer가 둘 이상의 파티션을 처리한다. 하나의 파티션을 하나의 consumer가 읽는건 하나의 consumer 그룹 내에서의 이야기다. 서로 다른 consumer 그룹에선 각 그룹의 하나의 consumer가 파티션을 읽을 수 있다. 즉 파티션 기준으로 여러 consumer가 있을 수 있지만, 같은 consumer 그룹에서는 하나의 consumer만 있을 수 있다. ",
     "url": "/docs/message-broker/kafka/consumer#%ED%8C%8C%ED%8B%B0%EC%85%98-%EC%88%98%EC%99%80-consumer",
     
     "relUrl": "/docs/message-broker/kafka/consumer#파티션-수와-consumer"
-  },"677": {
+  },"676": {
     "doc": "kafka consumer 이해하기",
     "title": "그룹 코디네이터",
     "content": "그룹 코디네이터는 consumer와 협력해서 특정 consumer 그룹이 읽은 topic 내부의 기록을 유지한다. topic에서 다음 메시지를 읽을 위치를 결정하기 위해 offset을 커밋 좌표로 사용하고 있다. 일반적으로 다른 브로커 서비스에서는 이런 케이스에서 필요한 수만큼 동일한 메시지를 갖는 여러 큐를 갖는다. 그렇지만 kafka는 consumer 그룹마다 코디네이션을 하기 때문에 별도의 논리적인 작업이 필요하다면 새 consumer 그룹을 사용하여 해결할 수 있다. consumer 그룹은 서로 consumer offset에 대한 동일한 코디네이션을 공유하지 않는다. 각 consumer들은 consumer group에 속한다. conumser group의 consumer들은 topic 파티션의 소유권을 공유하며 각 consumer가 해당 토픽의 다른 파티션을 분담하면서 메시지를 읽을 수 있다. 위 그림은 동일한 파티션 집합이 3개의 다른 브로커에 존재하고, kinaction_teamoffka0과 kinaction_teamsetka1이라는 2개의 consumer 그룹이 파티션에서 consume하고 있는 상황이다. 각 그룹의 consumer는 각 브로커의 파티션에서 고유한 데이터 복사본을 가져온다. 다른 그룹이라면 같이 동작하지 않는다. 참고사항 . consumer가 데이터를 사용해도 토픽에서 제거하지 않는다. 그렇기 때문에 consumer group이 다르면 메시지를 가져갈 수 있다. ",
     "url": "/docs/message-broker/kafka/consumer#%EA%B7%B8%EB%A3%B9-%EC%BD%94%EB%94%94%EB%84%A4%EC%9D%B4%ED%84%B0",
     
     "relUrl": "/docs/message-broker/kafka/consumer#그룹-코디네이터"
-  },"678": {
+  },"677": {
     "doc": "kafka consumer 이해하기",
     "title": "heartbeat",
     "content": "consumer가 그룹 코디네이터에게 ping을 하는 것을 heartbeat라고 한다. heartbeat는 consumer가 코디네이터와 통신하여 적절한 시간내에 응답하며 작업하고 있음을 알리는 신호이다. heartbeat가 시간 내에 응답되지 않으면 그룹 코디네이터는 리밸런싱을 시작한다. 리밸런싱이란 consumer간 파티션 소유권을 이전하는 것을 말한다. 참고사항 . heartbeat.interval.ms를 통해 consumer가 heartbeat를 보내는 간격을 설정할 수 있다. heartbeat.interval.ms는 일반적으로 session.timeout.ms의 1/3 이하의 값으로 설정되어야 한다. session.timeout.ms는 클라이언트가 활성화 되어있는지 만료를 체크하는 브로커의 시간이다. ",
     "url": "/docs/message-broker/kafka/consumer#heartbeat",
     
     "relUrl": "/docs/message-broker/kafka/consumer#heartbeat"
-  },"679": {
+  },"678": {
     "doc": "kafka consumer 이해하기",
     "title": "reference",
     "content": ". | Kafka In Action 5장 | https://docs.confluent.io/platform/current/installation/configuration/consumer-configs.html | . ",
     "url": "/docs/message-broker/kafka/consumer#reference",
     
     "relUrl": "/docs/message-broker/kafka/consumer#reference"
-  },"680": {
+  },"679": {
     "doc": "kafka consumer 이해하기",
     "title": "kafka consumer 이해하기",
     "content": "consumer는 카프카에서 데이터를 가져와 다른 시스템이나 애플리케이션에 데이터를 제공한다. consumer는 consumer를 추가/제거 함으로써 처리량에 영향을 주기 때문에 중요하다. consumer가 topic에 대해 Push 받지 않고 pull 해온다는 것이 중요하다. topic을 구독하는 방식을 통해 consumer는 자신의 메세지 소비 비율을 통제한다. 구독 방식을 통해 consumer를 항상 가동할 필요 없이 다운되면 다시 수행할 수 있다. 그러나 장시간 다운되선 안된다. (메시지 유실 가능성) . consumer 클라이언트 시작 시 연결을 시도할 수 있는 브로커를 항상 알아야 한다. 메세지를 생성한 직렬 변환기와 일치하는 키와 값에 대한 역직렬 변환기를 사용해야 한다. ",
     "url": "/docs/message-broker/kafka/consumer",
     
     "relUrl": "/docs/message-broker/kafka/consumer"
-  },"681": {
+  },"680": {
     "doc": "8년차 개발자의 개발 면접 질문 리스트",
     "title": "면접자가 면접관에게 질문할 내용들",
     "content": "질문을 적다보니 질문의 내용이 팀과 기술 스택, 개발 문화로 정리된다. 특별히 서버 개발자라고 특정되는 질문보다는 개발자라면 하는 질문의 내용이 비슷한 것 같다. 팀 . | 팀 구성은 어떻게 되나요? | 팀 내에 서버 팀 인력 구성은 어떻게 되나요? | 여러 프로젝트를 같이 관리하게 되기도 하나요? | 채용된다면 어떤 역할을 기대하나요? | . 팀의 구성과 인력 구조는 팀 내에서 소통해야 할 범위와 의사결정이 어떻게 진행되는지를 알 수 있기 때문에 팀에 대한 질문들이 중요한 것 같다. 기술 스택 . | 어떤 기술 스택을 사용하나요? | 어떤 아키텍처를 사용하고 있고 누가 아키텍처를 그리나요? | 형상관리는 어떻게 하나요? | 팀 내에서 새로운 기술을 도입하는 방식이 궁금합니다. | 스터디를 진행하는지와 방식을 알 수 있을까요? | 테스트는 어떻게 하고 있나요? | . 기술 스택은 일반적으론 모집 공고에 적힌 편이다. 나는 아키텍처에 참여를 많이 하는 편이고 관심이 많아 아키텍처에 대한 질문을 넣었다. 그 외에 팀이 성장하기 위해 스터디를 하는지를 물어보면 좋겠고 테스트가 잘 되는지는 프로젝트에 너무 중요하다. 개발 문화 . | 일이 애자일로 진행되는지 궁금합니다. | 그렇다면 애자일 주기는 어떻게 될까요? | 애자일 팀의 범위는 어떻게 될까요? | 회고는 하고 있는지 궁금합니다. | 애자일 스프린트 리더는 누가 맡을까요? | 코드는 공동 소유하고 있나요? | 리뷰는 어떻게 진행되나요? | 업무 강도는 어떤가요? | . 사실 가장 중요한건 개발 문화가 아닌가 생각이 든다. 기술 스택은 비슷해도 좋고 다르다면 배울 수 있어 더 좋지만 개발 문화가 낙후되었다면 일하는 것도 성장하는 것도 어렵기 때문이다. ",
     "url": "/docs/career/interview-question#%EB%A9%B4%EC%A0%91%EC%9E%90%EA%B0%80-%EB%A9%B4%EC%A0%91%EA%B4%80%EC%97%90%EA%B2%8C-%EC%A7%88%EB%AC%B8%ED%95%A0-%EB%82%B4%EC%9A%A9%EB%93%A4",
     
     "relUrl": "/docs/career/interview-question#면접자가-면접관에게-질문할-내용들"
-  },"682": {
+  },"681": {
     "doc": "8년차 개발자의 개발 면접 질문 리스트",
     "title": "면접 후기",
     "content": "짧은 시간의 면접을 통해 준비한 질문을 다 하기 힘든 경우도 있다. 최근 면접에선 내가 준비한 위 질문들을 면접관들께 모두 할 수 있었고, 잘 모르던 회사에 대해 나름대로 깊이 있게 알 수 있게 되었다. 질문을 하다 보면 면접관들이 답변하신 내용에 재차 질문을 하게 되기도 한다. 면접을 자주 보는 편은 아니지만 앞으로도 이 질문들이 더 영양가 있게 업데이트할 수 있으면 좋겠다. ",
     "url": "/docs/career/interview-question#%EB%A9%B4%EC%A0%91-%ED%9B%84%EA%B8%B0",
     
     "relUrl": "/docs/career/interview-question#면접-후기"
-  },"683": {
+  },"682": {
     "doc": "8년차 개발자의 개발 면접 질문 리스트",
     "title": "8년차 개발자의 개발 면접 질문 리스트",
     "content": "어떤 면접이든 면접을 보게 되면 질문을 받은 후엔 질문을 할 시간을 갖게 된다. 면접을 준비할 땐 당연히 받을 질문을 준비하지만, 내 생각엔 받는 질문보다 할 질문이 더 중요하다. 최근 한 곳에 면접을 보게 되었는데 그 회사의 개발팀 내부 분위기를 잘 모르는 상태로 면접을 보게 됐다. 난 궁금한 게 많았고, 어떤 질문을 하는 것이 좋을까 찾아봤는데 괜찮은 질문 리스트를 찾지 못했다. 개발자라면 마땅히 해볼법하고 해야 할 질문들, 그리고 내가 면접을 준비하며 고민했던 질문 내용들을 리스트업 해본다. ",
     "url": "/docs/career/interview-question",
     
     "relUrl": "/docs/career/interview-question"
-  },"684": {
+  },"683": {
     "doc": "link local ip address 개념 명확하게 이해하기",
     "title": "link local ip address",
     "content": "169.254.0.0/16는 RFC 6890에서 Link Local Special Purpose Address로 정의 되었다. Link Local IP Address는 직접 연결된 하위 네트워크 내에서만 유효한 address이다. link local ip는 DHCP 서버나 수동으로 구성된 ip address를 사용할 수 없을 경우 auto configuration을 위한 목적의 인터페이스이다. 정상적으로 routable ip address를 얻게 된 후에는 해당 address를 사용한다. 참고사항 . | link local ip address는 하위 네트워크에서만 유효하므로 네트워크 인프라에서 해당 block 내의 subnet을 생성하면 안된다. | router는 link local ip address를 대상으로 하는 패킷은 전달할 수 없다. | DNS는 link local ip address를 저장해선 안된다. | 169.254.0.0/24 와 169.254.255.0/24의 각각 256개의 ip는 추후 다른 목적으로 사용하기 위해 예약되었기 때문에 사용할 수 없다. | . ",
     "url": "/docs/internet/link-local#link-local-ip-address",
     
     "relUrl": "/docs/internet/link-local#link-local-ip-address"
-  },"685": {
+  },"684": {
     "doc": "link local ip address 개념 명확하게 이해하기",
     "title": "클라우드와 link local ip address",
     "content": "AWS와 같은 cloud service provider는 클라우드의 물리적인 인프라를 제어하기 때문에 모든 인스턴스에 대해 local access가 가능하도록 구성할 수 있다. 다음과 같은 이유로 link local ip address는 자동구성 서비스에 적합하다. | link local ip address는 source와 destination 모두에서 non-forwardable ip 이다. | 클라우드 서비스 내에서 local network으로 연결되어 바이러스로부터 안전하다. | 사용자가 이 주소를 subnet으로 사용할 수 없다. | . 이런 이유로 NTP(Network Time Protocol), IMDS(Instance Metadata Service) 등 클라우드 상의 가상 컴퓨터에 필요한 서비스를 link local ip address를 통해 제공한다. ",
     "url": "/docs/internet/link-local#%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C%EC%99%80-link-local-ip-address",
     
     "relUrl": "/docs/internet/link-local#클라우드와-link-local-ip-address"
-  },"686": {
+  },"685": {
     "doc": "link local ip address 개념 명확하게 이해하기",
     "title": "IMDS (Instance MetaData Service)",
     "content": "클라우드에서 인스턴스의 메타데이터에 접근할 필요가 있는 경우가 있다. 예를 들면 네트워크 구성, 인스턴스 타입, 가용 영역, 인스턴스 정보 등의 메타데이터가 필요할 수 있다. 대부분의 클라우드 플랫폼에서 169.254.169.254를 통해 IMDS에 접근할 수 있다. 169.254.169.254는 클라우드 인스턴스 내에서 접근 가능한 특별한 ip이다. ",
     "url": "/docs/internet/link-local#imds-instance-metadata-service",
     
     "relUrl": "/docs/internet/link-local#imds-instance-metadata-service"
-  },"687": {
+  },"686": {
     "doc": "link local ip address 개념 명확하게 이해하기",
     "title": "reference",
     "content": ". | 169.254.0.0/16, https://www.baeldung.com/linux/cloud-ip-meaning | link local, https://en.wikipedia.org/wiki/Link-local_address | . ",
     "url": "/docs/internet/link-local#reference",
     
     "relUrl": "/docs/internet/link-local#reference"
-  },"688": {
+  },"687": {
     "doc": "link local ip address 개념 명확하게 이해하기",
     "title": "link local ip address 개념 명확하게 이해하기",
     "content": "ip 주소 중 특정 ip들은 특별한 목적으로 사용되도록 설계 되었다. link local ip address는 특별한 목적으로 설계된 ip block이다. ",
     "url": "/docs/internet/link-local",
     
     "relUrl": "/docs/internet/link-local"
-  },"689": {
+  },"688": {
     "doc": "too many open file 이슈 확인하고 해결하기",
     "title": "too many open files in system",
     "content": "open config.property: too many open files in system . too many open files in system는 linux에서 열린 파일 수가 너무 많아서 더 이상 파일을 열 수 없다는 오류 메시지이다. linux에서는 동시에 열 수 있는 파일 수가 제한되어 있고, 이 제한을 초과하여 파일을 열려고 할 때 오류가 발생한다. 오류가 발생하는 이유는 설정된 자원보다 더 많은 요청을 하기 때문이다. 프로세스가 동시에 많은 파일을 열 때 발생할 수 있는데, 주로 이런 경우는 file open 후 close 하지 않는 코드 상의 버그일 가능성이 높다. 버그인지 아닌지 확인하기 위해 linux의 property를 먼저 확인한다. ",
     "url": "/docs/dev-tools/linux/too_many_open_file#too-many-open-files-in-system",
     
     "relUrl": "/docs/dev-tools/linux/too_many_open_file#too-many-open-files-in-system"
-  },"690": {
+  },"689": {
     "doc": "too many open file 이슈 확인하고 해결하기",
     "title": "file open limit 확인하기",
     "content": "file open limit을 확인할 때 user의 resource limit을 체크하는 ulimit을 사용한다. ulimit에는 두 가지 limit이 있다. | hard limit: -H 옵션으로 접근하며, super user만 수정할 수 있는 limit | soft limit: -S 옵션으로 접근하며, 사용자가 hard limit 내에서 변경할 수 있는 limit | . process는 당연히 둘 중 더 작은 limit인 soft limit으로 resource가 제한된다. ulimit -n # 혹은 ulimit -Sn . 다음은 hard limit을 확인한다. ulimit -Hn . 필요하다면 hard limit 보다 작은 값으로 soft limit을 변경한다. ulimit -n 99999 . hard limit 보다 큰 값으로 soft limit을 변경하려고 하면 에러가 발생한다. ",
     "url": "/docs/dev-tools/linux/too_many_open_file#file-open-limit-%ED%99%95%EC%9D%B8%ED%95%98%EA%B8%B0",
     
     "relUrl": "/docs/dev-tools/linux/too_many_open_file#file-open-limit-확인하기"
-  },"691": {
+  },"690": {
     "doc": "too many open file 이슈 확인하고 해결하기",
     "title": "file open 확인하기",
     "content": "limit을 확인했다면, 어떤 process가 file open을 많이하는지 확인할 필요가 있다. limit이 작고 실제 file open을 많이 하는 케이스도 있겠지만 대부분은 close가 제대로 되지 않으면서 발생하는 케이스가 많다. 어떤 process가 어떤 file을 open 하는지를 보면 이런 이슈를 분리할 수 있다. 정상적인 케이스라면 limit을 늘리면 될 것이고, 그렇지 않다면 버그를 수정하면 된다. 1. file nr . cat /proc/sys/fs/file-nr . file-nr은 3개의 숫자를 갖는다. 순서대로 그 의미는 . | 할당된 file handles 수 | 할당 되었지만 사용되지 않은 file handles 수 | 최대 file handles 수 | . cat /proc/sys/fs/file-nr &amp;&amp; date . 위 명령어를 주기적으로 호출해보면서 file-nr에서 보이는 file 할당 수가 시간이 지날수록 계속 증가한다면 file close가 잘 안되고 있는 것이라고 추정할 수 있다. date와 함께 남기면 시간 별로 file-nr을 추적하기 용이하다. 참고사항 . file-nr의 마지막 값인 최대 file hadles 수는 cat /proc/sys/fs/file-max와도 같은 값이다. 이 값과 ulimit -Hn는 다르다. file-max는 linux 시스템에서 열 수 있는 File descriptor의 최대 수에 대한 설정 값으로 시스템 전체와 모든 프로세스에 적용된다. 반면 ulimit은 사용자나 프로세스 수준의 File descsriptor 제한을 설정한다. 2. lsof . lsof는 list open files 명령어로 open file을 확인할 수 있다. 여기서 pid를 통해 특정 process의 open file을 체크할 수 있다. lsof -p 1234567 # 1234567은 pid로, ps -ef를 통해 이슈가 발생한 pid를 찾아야한다. lsof -p 1234567|wc -l &amp;&amp; date . lsof를 통해 어떤 process가 open file 이슈를 만드는지 그리고 어떤 파일에 대한 open이 계속 남아있고, 증가하는지를 확인할 수 있다. 위와 동일하게 date를 통해 기록을 남기며 특정 process가 이슈를 만드는지 체크할 수 있다. 예시 . lsof -p 1234567 . COMMAND PID USER FD TYPE DEVICE SIZE/OFF NODE NAME app-test- 1234567 user 181r REG 259,1 2 4392717 /app/test/config.property app-test- 1234567 user 182r REG 259,1 2 4392717 /app/test/config.property app-test- 1234567 user 183r REG 259,1 2 4392717 /app/test/config.property app-test- 1234567 user 184r REG 259,1 2 4392717 /app/test/config.property app-test- 1234567 user 185r REG 259,1 2 4392717 /app/test/config.property app-test- 1234567 user 186r REG 259,1 2 4392717 /app/test/config.property app-test- 1234567 user 187r REG 259,1 2 4392717 /app/test/config.property . 이번에 내가 겪은 이슈의 lsof 결과이다. 동일한 파일인 config.property에 대해 open이 반복되고 있었고, close 없이 계속해서 open file 수가 증가했다. FD는 File Descriptor의 약자로 181r의 r은 read file이라는 표현이다. 지금 상황은 config.property를 주기적으로 open하고 close 하지 않는 것으로 분석할 수 있다. ",
     "url": "/docs/dev-tools/linux/too_many_open_file#file-open-%ED%99%95%EC%9D%B8%ED%95%98%EA%B8%B0",
     
     "relUrl": "/docs/dev-tools/linux/too_many_open_file#file-open-확인하기"
-  },"692": {
+  },"691": {
     "doc": "too many open file 이슈 확인하고 해결하기",
     "title": "이슈 처리",
     "content": "이런경우 대부분의 이슈는 반복문 안에서 open file에 대한 close가 의도한대로 동작하지 않아서 발생한다. 이슈 수정 후에 다시 수행하면서 위와 동일한 로직으로 open file이 증가하지 않는 것을 확인할 수 있다. 이번엔 golang에서 만든 코드가 for loop안에 defer close를 잘못 사용하여 발생한 이슈로 close를 적절하게 변경하여 해결했다. ",
     "url": "/docs/dev-tools/linux/too_many_open_file#%EC%9D%B4%EC%8A%88-%EC%B2%98%EB%A6%AC",
     
     "relUrl": "/docs/dev-tools/linux/too_many_open_file#이슈-처리"
-  },"693": {
+  },"692": {
     "doc": "too many open file 이슈 확인하고 해결하기",
     "title": "reference",
     "content": ". | https://docs.kernel.org/admin-guide/sysctl/fs.html#file-max-file-nr | https://www.baeldung.com/linux/error-too-many-open-files | https://www.baeldung.com/linux/soft-limit-hard-limit | . ",
     "url": "/docs/dev-tools/linux/too_many_open_file#reference",
     
     "relUrl": "/docs/dev-tools/linux/too_many_open_file#reference"
-  },"694": {
+  },"693": {
     "doc": "too many open file 이슈 확인하고 해결하기",
     "title": "too many open file 이슈 확인하고 해결하기",
     "content": " ",
     "url": "/docs/dev-tools/linux/too_many_open_file",
     
     "relUrl": "/docs/dev-tools/linux/too_many_open_file"
-  },"695": {
+  },"694": {
     "doc": "객체 지향 설계의 5가지 원칙 SOLID 헷갈리지 않게 예제로 이해하기",
     "title": "SOLID 원칙",
     "content": "우선 SOLID 원칙은 다섯 가지의 객체지향 원칙들의 앞 문자를 따서 만든 원칙이다. | SRP, Single Responsibility Principle, 단일 책임 원칙 | OCP, Open Closed Principle, 개방 폐쇄 원칙 | LSP, Liskov Substitution Principle, 리스코프 치환 원칙 | ISP, Interface Segregation Principle, 인터페이스 분리 원칙 | DIP, Dependency Inversion Principle, 의존 역전 원칙 | . 사실 SOLID 원칙이란 클래스를 어떻게 나누고, 인터페이스로 명세하고 사용하는지에 대한 내용이다. 객체 지향적 개발을 잘 해온 개발자라면 당연한 내용들이어서 ‘이걸 외워야하나?’ 싶었지만 다른 사람들과 얘기할 때 원칙들을 딱 얘기하면 의사소통 비용이 줄어든다. 잘 알고 있는 개념들을 정리하고 자바의 List를 예시로 설명해본다. ",
     "url": "/docs/architecture/solid#solid-%EC%9B%90%EC%B9%99",
     
     "relUrl": "/docs/architecture/solid#solid-원칙"
-  },"696": {
+  },"695": {
     "doc": "객체 지향 설계의 5가지 원칙 SOLID 헷갈리지 않게 예제로 이해하기",
     "title": "SRP, Single Responsibility Principle",
     "content": "단일 책임 원칙은 가장 이해하기 쉬운 원칙이다. 하나의 책임만을 가져야한다는 이름과 아주 걸맞는 원칙이기 때문이다. Class has one job to do. Each change in requirements can be done by changing just one class. - wiki . 클래스는 단 하나의 책임만 가져야 한다. 각 요구사항의 변경은 하나의 클래스의 변경으로 만족되어야 한다. 이 말은 결국 클래스가 단 하나의 책임만 가져야 한다는 말이면서 동시에 하나의 책임이 여러 클래스로 나뉘어선 안된다는 말이다. 결국 여러 책임을 갖지 않도록 하여 결합도를 낮추고, 책임이 온전히 하나의 클래스게 있게 함으로써 응집도를 높히는 원칙이다. 이를 통해 유지보수와 확장이 용이한 구조를 갖는다. 단일 책임 원칙을 지키지 않을 경우 하나의 변경으로 인해 여러 기능에 영향을 미칠 수 있다. 클래스가 단 하나의 책임만 가져야 한다를 어기는 경우 :x: 클래스가 여러 책임을 가짐으로써 하나의 기능 변경으로 인해 여러 기능이 변경될 가능성(위험)이 있다. :x: 클래스를 사용할 때 필요하지 않은 책임까지 갖게된다. 하나의 책임이 여러 클래스로 나뉘어선 안된다 를 어기는 경우 :x: 하나의 기능 변경을 위해 여러 클래스가 바뀌어야 한다. :x: 변경해야 하는 클래스를 놓칠 가능성(위험)이 있다. 객체 지향은 객체를 나누는 것이고, 객체를 나누는 이유는 책임을 명확히하고 재사용하기 위함이다. SRP를 지키지 않는 것은 객체 지향의 이점을 포기하는 것과 같다. 예시 . Java의 ArrayList를 보자. ArrayList는 list 자료구조를 내부적으로 array를 가지고 구현하는 하나의 책임만을 가진다. list에서 제공하는 추가, 삭제, iteration을 구현한다. ArrayList가 array가 아닌 list의 기능을 구현하거나 set 등의 다른 자료구조를 구현했다면 SRP를 위배하는 클래스가 됐을 것이다. ",
     "url": "/docs/architecture/solid#srp-single-responsibility-principle",
     
     "relUrl": "/docs/architecture/solid#srp-single-responsibility-principle"
-  },"697": {
+  },"696": {
     "doc": "객체 지향 설계의 5가지 원칙 SOLID 헷갈리지 않게 예제로 이해하기",
     "title": "OCP, Open Closed Principle",
     "content": "개방 폐쇄 원칙은 내가 맨날 헷갈렸던 원칙이다. “뭘 개방하고 뭘 폐쇄하는데?” 라는 생각을 아주 자주하게 만들었더 원칙. Class is happy (open) to be used by others. Class is not happy (closed) to be changed by others. - wiki . 클래스는 다른 클래스에 의해 사용(확장)되는데 열려 있어야 한다. 클래스는 다른 것들에 의해 변경(수정)되는데 닫혀 있어야 한다. 즉 개방한다는 것은 기능을 추가하는 것에 개방해야한다는 말이고, 폐쇄한다는 것은 기능이 추가될 때 기존의 코드 변경에 폐쇄되어야 한다는 말이다. 이 원칙을 주로 확장으로 표현하는데 이 단어가 나를 더 헷갈리게 만든 것 같다. 원칙적인 OCP는 인터페이스 구현을 통한 확장 뿐 아니라 기능이 추가되는 모든 상황들을 말하고 있다. OCP를 어기는 경우 :x: 클래스간 결합도가 높아지고 코드 변경이 다른 클래스에 영향을 미친다. :x: 재사용성이 감소하고 확장이 어려워진다. 예시 . 다시 ArrayList를 보자. ArrayList는 List 인터페이스를 상속하고 있는데, 이 List 인터페이스에 LinkedList라는 새로운 클래스를 구현하려고 한다. LinkedList 구현으로 인한 기능 추가는 Open이 되며, 구현으로 인해 ArrayList나 List가 수정될 필요는 없으므로 Close한 구조이다. ",
     "url": "/docs/architecture/solid#ocp-open-closed-principle",
     
     "relUrl": "/docs/architecture/solid#ocp-open-closed-principle"
-  },"698": {
+  },"697": {
     "doc": "객체 지향 설계의 5가지 원칙 SOLID 헷갈리지 않게 예제로 이해하기",
     "title": "LSP, Liskov Substitution Principle",
     "content": "“리스코프라는 사람 참 대단하다.” 라는 생각이 들었던 원칙. 굳이 왜 이것만 사람 이름일까 싶긴한데 원칙 자체는 쉽다. Class can be replaced by any of its children. Children classes inherit parent’s behaviours. - wiki . 클래스는 하위 클래스로 대체 될 수 있어야 한다. 즉 하위 클래스는 상위 클래스가 할 수 있는 기능들을 모두 수행할 수 있어야 한다는 말이다. LSP를 어기는 경우 :x: 다형성(Polymorphism)을 보장할 수 없다. :x: 이로 인해 기능을 예측할 수 없고 안정성이 떨어진다. 객체지향에서 가장 중요한 것은 인터페이스를 분리하는 것이고, 이 원칙을 어긴다는 것은 인터페이스를 통해 얻을 수 있는 다형성의 이점을 포기한다는 것이다. LSP를 지키지 않는다는 것은 인터페이스를 사용하지 않는 편이 옳다. 예시 . List와 ArrayList를 보자. 일반적으로 아래와 같이 사용한다. class TestObject { List propertyList; void test(List paramList) { // do something } } . 그치만 이 List들은 ArrayList로 바뀌어도 내부 동작에는 아무런 영향이 없다. 물론 List로 어떤 동작을 하느냐에 따라 어떤 List를 사용하는 것이 성능에 영향을 줄 수는 있지만 동일한 기능들을 수행할 수 있다. class TestObject { ArrayList propertyList; void test(ArrayList paramList) { // do something } } . ",
     "url": "/docs/architecture/solid#lsp-liskov-substitution-principle",
     
     "relUrl": "/docs/architecture/solid#lsp-liskov-substitution-principle"
-  },"699": {
+  },"698": {
     "doc": "객체 지향 설계의 5가지 원칙 SOLID 헷갈리지 않게 예제로 이해하기",
     "title": "ISP, Interface Segregation Principle",
     "content": "“인터페이스를 분리한다는 것은 결국 인터페이스의 기능(책임)을 나눈다는 점에서 SRP에 속한 원칙이 아닌가?” 라는 생각을 했던 원칙. 조금 다른 점은 SRP는 클래스 내부의 책임에 대한 내용이라면 ISP는 인터페이스의 책임에 대한 내용이라고 볼 수 있다. When classes promise each other something, they should separate these promises (interfaces) into many small promises, so it’s easier to understand. - wiki . 클래스가 몇 가지 기능들을 제공하기로 약속되어 있다면 이런 약속들은 이해하기 쉽게 작은 인터페이스들로 나뉘어야 한다는 말이다. 대부분의 객체 지향 언어들은 클래스가 여러 인터페이스를 상속받을 수 있다. 인터페이스를 명확하게 나눔으로써 각 객체가 구현하는 내용들을 명확하게 하고 이해하기 쉽게 한다. 작은 인터페이스들로 나뉘어야 한다를 어기는 경우 :x: 클라이언트가 필요하지 않고 사용하지 않는 함수에도 의존관계를 갖게된다. :x: 인터페이스 변경 시 영향도가 증가한다. :x: 따라서 유연성이 감소하고 테스트가 어려워진다. 결국 다시 인터페이스. 인터페이스를 어떻게 나누어야 올바른지를 제시하는 원칙이다. ISP를 적용하지 않고 인터페이스를 그냥 만든다면 그냥 함수 명세만 적어놓은 것에 불과하다. 예시 . public class ArrayList&lt;E&gt; extends AbstractList&lt;E&gt; implements List&lt;E&gt;, RandomAccess, Cloneable, java.io.Serializable { // ... } . abstract class는 잠시 접어두고 ArrayList는 4가지의 인터페이스를 상속하고 있다. ArrayList는 일단 List라는 약속을 지켜야하고, RandomAccess가 가능해야하고 Clone, Serialize가 가능해야 한다. 이 인터페이스들의 일부가 나뉘어있지 않거나 혹은 전체가 List 인터페이스 속에 있었다고 가정하면 인터페이스 변경에 따라 바뀌어야 할 클래스들이 많아질 것이다. 따라서 명확한 기능에 맞게 인터페이스를 나누는 것이 중요하다. ",
     "url": "/docs/architecture/solid#isp-interface-segregation-principle",
     
     "relUrl": "/docs/architecture/solid#isp-interface-segregation-principle"
-  },"700": {
+  },"699": {
     "doc": "객체 지향 설계의 5가지 원칙 SOLID 헷갈리지 않게 예제로 이해하기",
     "title": "DIP, Dependency Inversion Principle",
     "content": "나는 왜 이게 의존성 역전 원칙인거지? 하는 생각이 많이 들었다. 일반적으로 고수준 클래스가 저수준 클래스에 의존하는데, 이 방향을 interface(추상화)를 통해 의존성 방향을 반대로 한다는 것이다. Layered 아키텍처를 기준으로 생각해보면 고수준이 저수준을 의존하는게 당연하니, 이 방향을 interface로 역전하는 것에 대한 이야기. 나는 MSA가 익숙해서 이게 역전이라고 생각하지 않았던게 이해를 방해했다. When classes talk to each other in a very specific way, they both depend on each other to never change. Instead classes should use promises (interfaces, parents), so classes can change as long as they keep the promise. - wiki . 클래스가 구체적으로 소통한다면 서로에게 의존성이 생기고 바뀔 수 없다. 클래스는 약속을 정의한 인터페이스를 사용하여 약속 안에서 수정 가능하도록 해야한다. 인터페이스를 명확하게 정의하고 인터페이스 안에서 수정이 가능하도록 하자는 방향이다. 여기서 인터페이스란 java interface 뿐 아니라 클라이언트와 약속한 함수 명세들을 의미한다고 보는 편이 맞다. 결국 인터페이스란 클라이언트와의 약속이고, 변경은 최대한 약속을 깨지 않는 선에서 이뤄져야 한다. 인터페이스가 없다면 약속없이 맘대로 쓴다는 것이다. 약속을 정의한 인터페이스를 사용하여 약속 안에서 수정 가능하도록 해야한다를 어기는 경우 :x: 클래스간의 결합도가 높아지고 의존성이 불분명해진다. :x: 변경이 발생할 때마다 클라이언트에도 영향을 줄 수 있다. :x: 따라서 재사용성이 낮아지고 유연성이 떨어진다. 예시 . public interface List&lt;E&gt; extends Collection&lt;E&gt; { Iterator&lt;E&gt; iterator(); // ... } . List 인터페이스는 Iterator 라는 인터페이스에 의존하고 있다. List가 더 고수준이기 때문에 저수준인 Iterator 인터페이스를 의존하는건 당연하지만, CharIterator와 같은 구체적인 클래스에 의존하지 않고 약속된 인터페이스에 의존함으로써 결합도를 낮추고 변경에 유연할 수 있다. ",
     "url": "/docs/architecture/solid#dip-dependency-inversion-principle",
     
     "relUrl": "/docs/architecture/solid#dip-dependency-inversion-principle"
-  },"701": {
+  },"700": {
     "doc": "객체 지향 설계의 5가지 원칙 SOLID 헷갈리지 않게 예제로 이해하기",
     "title": "reference",
     "content": ". | SOLID wiki, https://simple.wikipedia.org/wiki/SOLID_(object-oriented_design) | OCP, https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle | . ",
     "url": "/docs/architecture/solid#reference",
     
     "relUrl": "/docs/architecture/solid#reference"
-  },"702": {
+  },"701": {
     "doc": "객체 지향 설계의 5가지 원칙 SOLID 헷갈리지 않게 예제로 이해하기",
     "title": "객체 지향 설계의 5가지 원칙 SOLID 헷갈리지 않게 예제로 이해하기",
     "content": "SOLID 원칙은 당연하기도 하고 중요하기도 한 객체 지향 설계에서의 기본 원칙이다. SOLID 원칙을 몰랐던 사람은 없겠지만 이걸 헷갈리고 까먹는 사람들은 제법 많다. 나도 그 중 한 명이고. 어떻게 까먹지 않을 수 있을까 고민하다가 예제와 같이 정리해본다. ",
     "url": "/docs/architecture/solid",
     
     "relUrl": "/docs/architecture/solid"
-  },"703": {
+  },"702": {
     "doc": "The easiest way to find root directory in Python",
     "title": "The easiest way to find root directory in Python",
     "content": "rootdir . find rootdir add rootdir path for import . Finding the root directory in Python can be challenging. With the rootdir, you can find the root directory intuitively, quickly, and easily. Usage . | Install rootdir with pip install rootdir | Add __root__.py to your root path. | Import rootdir with import rootdir | Check the root directory with rootdir.root_dir(__file__) | . example . If you need to find the root directory, you can easily do so with the following code. Copy and run the code below to verify its functionality. import rootdir if __name__ == \"__main__\": print(rootdir.root_dir(__file__)) . sample . Refer to the following sample project1 to better understand and efficiently use rootdir. └── example/ ├── a/ │ └── a_1.py ├── b/ │ ├── b_1/ │ │ ├── b_1_1/ │ │ │ └── b_1_1_1.py │ │ └── b_1_2.py │ └── b_2.py ├── main.py └── __root__.py . Once you add __root__.py, you can find the root directory from anywhere using rootdir. For example, in b_1_1_1.py, you can find the rootdir as shown below. import rootdir if __name__ == \"__main__\": print(rootdir.root_dir(__file__)) . You can find the root directory using above code not only in b_1_1_1.py but also in b_1_2.py, b_2.py, or any other file in the project. | You can check the actual sample project and its functionality in the sample project provided by rootdir. &#8617; . | . ",
     "url": "/docs/algorithm/language/python/python-rootdir",
     
     "relUrl": "/docs/algorithm/language/python/python-rootdir"
-  },"704": {
+  },"703": {
     "doc": "The easiest way to import other directory in Python",
     "title": "The easiest way to import other directory in Python",
     "content": "rootdir . find rootdir add rootdir path for import . Importing code from different folders in Python can be very cumbersome. In order to import in Python, you need to find the appropriate path and add it using sys.path.append(...). With the rootdir library, you can add the root directory in an intuitive, fast, and easily. Usage . | Install rootdir with pip install rootdir | Add __root__.py to your root path | Import rootdir with import rootdir | Add the rootdir with rootdir.root_dependency(__file__) | . example . If you have a Python project with a directory structure and need to import code from different directories, you can copy the following code to add the path and perform imports based on the root directory. import rootdir rootdir.root_dependency(__file__) . You can use the same import code regardless of the directory structure, the path of the specific file. With rootdir, you can add the directory by the above code. sample . Refer to the following sample project1 to better understand and efficiently use rootdir. └── example/ ├── a/ │ └── a_1.py ├── b/ │ ├── b_1/ │ │ ├── b_1_1/ │ │ │ └── b_1_1_1.py │ │ └── b_1_2.py │ └── b_2.py ├── main.py └── __root__.py . After adding __root__.py, you can easily add the root directory and perform imports from anywhere using rootdir. For example, in b_1_1_1.py, you can add the directory with rootdir as follows. import rootdir rootdir.root_dependency(__file__) from a.a_1 import print_a_1 if __name__ == \"__main__\": print(rootdir.root_dir(__file__)) print_a_1() . Not only in b_1_1_1.py, but also in b_1_2.py, b_2.py, and any other file in project, you can add rootdir and perform imports in the same way using the above code. You don’t need to add sys.path or calculate path. | You can check the actual sample project and its functionality in the sample project provided by rootdir. &#8617; . | . ",
     "url": "/docs/algorithm/language/python/python-import-rootdir",
     
     "relUrl": "/docs/algorithm/language/python/python-import-rootdir"
-  },"705": {
+  },"704": {
     "doc": "DynamoDB Secondary Index: Considerations and Cost Issues",
     "title": "GSI (Global Secondary Index)",
     "content": "GSI is called ‘Global’ because queries on this index can span all partitions and are not limited to a specific partition. | It can have a partition key and, optionally a sort key, which are different from the table’s original partition key and sort key. | Key values do not need to be unique. | It can be created when the table is created or added to an existing table. | It can be deleted after table creation. | It supports eventual consistency only. | It has separate provisioned throughput settings for read and write operations (RCU, WCU). | Queries return only the projected attributes in the index. | Up to 20 GSIs can be created per table. | . Partitions in GSI . In GSI, key values do not need to be unique. This allows multiple data items to be stored under the same key, which is not possible in the main table. For example, consider a main table with attributes name, age, country, passportNo. To ensure uniqueness, you might set the primary key to passportNo. However, if you need to query by country, you can set country as the primary key of a GSI. This allows you to store and retrieve multiple non-unique data items under the same country key. Is this structure safe? GSI internally shards and partitions based on the key, ensuring safety. Theoretically, you can store unlimited data under the same key. The main table also shard primary key, but the main table cannot have multiple data for the same primary key. GSI CU (Capacity Unit) in GSI . GSI has separate Capacity Units (CUs) from the main table. When reading or writing to GSI, it consumes separate CUs, but this is related to main table operations. For GSI’s RCU, throttling does not affect the main table. However, for GSI’s WCU, if throttling occurs, writes to the main table will also fail. DynamoDB internally writes to both the main table and all related GSIs when data changes1, so a write failure in GSI leads to a failure in the main table. In summary, writes to DynamoDB are tied to writes in GSI. Updates in DynamoDB can result in delete and write operations in GSI. Revisiting the previous example, if the country changes from KR to US, the projected data for the KR key in GSI is deleted, and the data is written to the US key. This results in the consumption of 2 CUs for one write operation in DynamoDB. Since a significant portion of DynamoDB costs comes from CUs, a data structure that uses 3 CUs per write (1 for the main table and 2 for GSI) is not cost-effective. Multiple GSIs can be applied to a DynamoDB table, so cost considerations should be factored into GSI design. ",
     "url": "/docs/aws/dynamo/si#gsi-global-secondary-index",
     
     "relUrl": "/docs/aws/dynamo/si#gsi-global-secondary-index"
-  },"706": {
+  },"705": {
     "doc": "DynamoDB Secondary Index: Considerations and Cost Issues",
     "title": "LSI (Local Secondary Index)",
     "content": "LSI is called ‘Local’ because the index is located within the same table partition as the item with the specified partition key. This means queries are restricted to data with the specified partition key value. | The partition key of an LSI is the same as the table’s partition key. | It can only be created when the table is created. | It cannot be deleted after table creation. | It supports both eventual and strong consistency. | It uses the table’s read and write capacity without separate provisioning. | Queries can return attributes not projected into the index. | All items with the same partition key and their corresponding LSI items are stored within the same partition. The total size of this collection cannot exceed 10GB. | Up to 5 LSIs can be created per table. | . LSI has clear disadvantages and lacks distinct advantages over GSI, so it is not currently recommended. | LSIs cannot be added or deleted after table creation. | They share resources with the main table. | There is a 10GB size limit per partition key. | . Using GSI is generally a better option. | Refer to the relationship between main table and GSI table and the impact of GSI CU shortages on the main table. &#8617; . | . ",
     "url": "/docs/aws/dynamo/si#lsi-local-secondary-index",
     
     "relUrl": "/docs/aws/dynamo/si#lsi-local-secondary-index"
-  },"707": {
+  },"706": {
     "doc": "DynamoDB Secondary Index: Considerations and Cost Issues",
     "title": "DynamoDB Secondary Index: Considerations and Cost Issues",
     "content": "To optimize queries in DynamoDB, it is necessary to utilize Secondary Indexes. In DynamoDB, you can use Secondary Indexes to query data in the table using alternative keys besides the primary key. Secondary Indexes include the following: . | Attributes for the alternative key, primary key attributes, and optionally a subset of other attributes from the base table (projected attributes). | . DynamoDB automatically creates indexes based on the table’s primary key and updates all indexes automatically whenever the table is modified. DynamoDB supports two types of Secondary Indexes: GSI (Global Secondary Index) and LSI (Local Secondary Index). AWS currently advises against using LSI, so this document will focus on the concepts and precautions of using GSI, as well as the reasons for avoiding LSI. ",
     "url": "/docs/aws/dynamo/si",
     
     "relUrl": "/docs/aws/dynamo/si"
-  },"708": {
+  },"707": {
     "doc": "What is DynamoDB Streams and When Should You Use It?",
     "title": "DynamoDB Streams",
     "content": "DynamoDB Streams is a service that captures and delivers changes in DynamoDB. Streams has the following characteristics: . | It keeps track of changes in DynamoDB in chronological order. | You can see what data has changed through Streams Record. | Streams Record stores data for 24 hours. | It can easily integrate with other AWS services. | It is easy to enable/disable without affecting the DynamoDB table. | You can specify the information to deliver . | KEYS_ONLY, NEW_IMAGE, OLD_IMAGE, NEW_AND_OLD_IMAGE | . | . Since you can receive all changes via Streams, there are various ways to utilize Streams. It can be used for data analysis, asynchronous tasks, data replication, backup, event delivery, and more. However, as mentioned earlier, the problem is the cost. Delivering all changes to Streams means additional costs for all changes. ",
     "url": "/docs/aws/dynamo/streams#dynamodb-streams",
     
     "relUrl": "/docs/aws/dynamo/streams#dynamodb-streams"
-  },"709": {
+  },"708": {
     "doc": "What is DynamoDB Streams and When Should You Use It?",
     "title": "When Should You Use It?",
     "content": "If there is no cost pressure, Streams can be conveniently used for all the cases mentioned above, such as data analysis, asynchronous tasks, and data replication. However, considering the steeply increasing cloud costs as usage increases, it may not be appropriate to use Streams a lot simply because the current cost is low. I found a very suitable case for Streams while designing a new system. We designed the user table in DynamoDB considering scalability and were considering statistics for users. To easily extract statistics, a database capable of various queries was necessary. In the case of the user DB, the data cannot increase indefinitely (even if the entire world’s population becomes users, it is only 7 billion). At the same time, the data in the user DB does not change frequently. Therefore, although there may be a lot of accumulated data, the Streams generated during continuous service are not many. Let’s take Instagram as an example. Instagram has about 1.5 billion users and generates about 100 million posts per day. If you store post data in DynamoDB and use Streams, at least 100 million Streams Records will be generated every day, which can be a cost issue. However, considering the 1.5 billion users, most user data is updated during the registration scenario, and changes are infrequent thereafter. If 1.5 billion Streams Records are generated over several years of Instagram service, this would be a very low cost. ",
     "url": "/docs/aws/dynamo/streams#when-should-you-use-it",
     
     "relUrl": "/docs/aws/dynamo/streams#when-should-you-use-it"
-  },"710": {
+  },"709": {
     "doc": "What is DynamoDB Streams and When Should You Use It?",
     "title": "Cost Calculation",
     "content": "We will calculate the cost using the commonly used Streams and Lambda. The costs are organized based on the AWS pricing document1 as of June 24, 2024. The costs are the same in the USA (Oregon), and Europe (Ireland) Korea (Seoul). Streams . | The first 2.5 million DynamoDB Streams read request units per month are free | Thereafter, $0.0217 per 100,000 DynamoDB Streams read request units | Charges for reading data from DynamoDB Streams, but free when invoked from Lambda2 | . Streams incurs no read request costs when used with Lambda. Lambda . Lambda cost calculation is a bit complex. There are separate charges for CPU per second, per request, and memory usage. CPU (x86) charges . | First 6 billion GB-seconds per month: $0.0000166667 per GB-second | Next 9 billion GB-seconds per month: $0.000015 per GB-second | Next 15 billion GB-seconds per month: $0.0000133334 per GB-second | . Per request charge . | $0.20 per 1 million requests | . Memory (MB) per millisecond charges . | 128 MB $0.0000000021 | 512 MB $0.0000000083 | 1,024 MB $0.0000000167 | 1,536 MB $0.0000000250 | 2,048 MB $0.0000000333 | . Cost Example and Calculation . Let’s calculate the cost of linking Instagram’s user DB to a statistics DB using DynamoDB Streams and Lambda. | AWS RDS would be needed, but this cost is not included here. | Scenario: 1.5 billion user data requests are made to Lambda through DynamoDB Streams. | Assumptions: . | Using the cheapest 128 MB memory, assume Lambda runs for 1 second. | . | Total cost: $28,450 . | Streams: $0 | CPU per second cost: $25,000 (0.0000166667 * 1,500,000,000) | Per request cost: $300 (0.20 * 1,500) | Memory cost: $3,150 (0.0000000021 * 1,500,000,000 * 1,000) | . | . In a real service, more Streams Records may be generated due to user changes. However, paying a total of $28,000 for Streams over several years of service is expected to be a very small cost compared to the service scale. Cost Optimization . In Streams, you can save on Lambda costs by receiving records in batches. You can modify the following properties to receive records in batches: . Batch size3: . | The number of records sent to Lambda in each batch. | The maximum is 10,000 records, and multiple records are delivered in a single invocation. | It must not exceed the payload limit of 6MB. | . Batch window3: . | The time to collect records before invoking Lambda. (unit: seconds) | . Let’s assume the batch size is set to 1000 and the batch window is set to 10. If more than 1000 records are collected, Lambda is invoked. If fewer than 1000 records are collected, Lambda is invoked after 10 seconds. It is important to note that batch size and window operate on a per-shard basis within Streams4. If there are 10 shards, the batch window and size apply to each shard individually, so during a 10-second batch window, a total of 10 Lambdas could be invoked becaouse each of the 10 shards collects records. Therefore, sending data in batch sizes does not mean that a Lambda invocation will occur for each batch size of records. | Refer to the Streams pricing document and the Lambda pricing document. &#8617; . | You can check the cost when using Streams with Lambda in the Streams usage document. &#8617; . | Check property at spec for batch window &amp; size. &#8617; &#8617;2 . | Refer to the stackoverflow about Streams shard &amp; Stremas Batch. &#8617; . | . ",
     "url": "/docs/aws/dynamo/streams#cost-calculation",
     
     "relUrl": "/docs/aws/dynamo/streams#cost-calculation"
-  },"711": {
+  },"710": {
     "doc": "What is DynamoDB Streams and When Should You Use It?",
     "title": "What is DynamoDB Streams and When Should You Use It?",
     "content": "As a service reaches maturity, enterprises begin to look for ways to reduce service costs. Since our service has been in the maturity phase for quite some time, we face pressure to reduce costs every year. I often wondered, “Can we use DynamoDB Streams even if it’s great, given our situation?” Then, I found a very suitable case. First, let’s understand what DynamoDB Streams is. ",
     "url": "/docs/aws/dynamo/streams",
     
     "relUrl": "/docs/aws/dynamo/streams"
-  },"712": {
+  },"711": {
     "doc": "10 Things to Consider When Developing a Backup System",
     "title": "Key Considerations in the Backup Domain",
     "content": ". | Distinguishing the Start and End of Backup and Restore | Considering Revisions | Managing Backup Lifecycle | Preventing Data Loss | Focusing on Restore | Locks Might Not Be Necessary | Types of Backups | Considering Timing for Automatic Backups | Understanding Restore Usability | Managing Policies | . Terminology . | Term | Meaning | . | Backup | The process of uploading a user’s data from their device to a server. | . | Automatic Backup | A feature that performs backups automatically based on set conditions. | . | Restore | The process of retrieving a user’s saved data from the server back to their device. | . | Revision | A versioning method to differentiate each backup iteration when backups occur multiple times. | . | Snapshot | The data stored during each backup request from a device. | . | Full Backup | A backup process that uploads all data during each backup session. | . | Incremental Backup | A backup process that uploads only new or modified data since the last backup. | . 1. Distinguishing the Start and End of Backup and Restore . Backups are complete when all data is successfully backed up, and the same applies to restores. You can create an interface to fulfill these functions, but large backups might involve thousands of API calls, potentially taking hours depending on the network. Without clear checkpoints, you won’t know if their backup has finished or if it stopped midway. This is why it’s important to have start and end checkpoints for backups and restores. Without these, it’s difficult to check whether a process has completed or encountered an issue. The checkpoint is also essential for analyzing performance, issues, and usability. These start/end APIs aren’t just for checkpoints. They can also be used for processing snapshots . 2. Considering Revisions . When users request a new backup, it needs to be distinguished from previous backups. For example, if a backup is in progress and the user requests a restore, the system should use the last completed backup, not the current one. If the backup process is interrupted, the incomplete backup must not overwrite the previous, completed one. Therefore, it’s essential to include revision keys in data design, which allows for visibility management and enables async garbage collection (deleting old backups). 3. Managing Backup Lifecycle . Backups involve large amounts of data, so it’s critical to ensure that data deletion happens correctly. If not, this will directly impact costs, as undetected undeleted data accumulates. Backups can be stored from days to years, depending on lifecycle policies. To manage this, async deletions should be executed via batch jobs that are stable and accurate. Given that deletions occur asynchronously, it’s easy to miss them. Missing deletion leads to that much cost and additional work. Due to the nature of backups, snapshots of specific backups are often erased when data is erased. Therefore, it is better to continue the design until deletion by Considering Revisions. 4. Preventing Data Loss . The most fundamental principle of backup system design is to never lose user data. Surprisingly, there are many scenarios where data loss can occur, even in production services. While developing new features, engineers sometimes prioritize cost, efficiency, or operational concerns, leading to decisions that increase the risk of data loss. However, managing user data means ensuring that data is never lost, no matter the circumstances. It’s crucial to design the system not only to avoid losing data, but also to prevent any situation that could lead to human errors resulting in data loss. For instance, allowing batch jobs to directly access the data storage can be dangerous. If the schema or access logic changes, the batch jobs may not reflect those updates. It will potentially result catastrophic data loss. (as has happened to our team in past incidents). The goal is to design a system where there are no issues even without constant monitoring, rather than one that requires attention to avoid problems. 5. Focusing on Restore . Just as preventing data loss is important, ensuring safe data restoration is equally critical. The key difference between backups and synchronization is that backups store data, while synchronization keeps it updated in real time. Backups only upload data. Even with automatic backups, the only time data is downloaded is during a restore request. If data is restored incorrectly, there’s no way to correct it until the user makes another restore request, which could be problematic if the client doesn’t handle exclusions for previously restored items. In some cases, it’s better not to restore data at all than to restore it incorrectly. Synchronization, on the other hand, provides more opportunities to correct datas because data is updated frequently. 6. Locks Might Not Be Necessary . Typically, backups are device-specific, this means that there is no need to consider simultaneous requests from multiple devices. No simultaneous requests mean no simultaneous writes, so locks might not be needed, depending on the design. However, there might be cases where a restore (read) request is made simultaneously with a backup (write) request. In contrast, synchronization often involves simultaneous writes from multiple devices or users, necessitating the use of locks. 7. Types of Backups . Each team might use different terms, but generally, there are two main types of backups1 . | Full Backup – A complete backup regardless of previous backups. | Incremental Backup – A backup that only includes data added or changed since the last backup. | . You should choose the appropriate type based on the backup data’s requirements. For our services, which handle various content with different characteristics, we use both types as needed. 8. Considering Timing for Automatic Backups . Nowadays, many services offer automatic backup options. Automatic backups usually run at times when they won’t impact the user’s experience, typically during the night. If a client is set to run automatic backups at midnight, all backup traffic will be concentrated at that time. Although the client handles the timing, the server should also monitor this. Backup services generally see a significant difference between peak and non-peak API request volumes due to these time-based patterns. 9. Understanding Restore Usability . Restores have their own characteristics. Unlike automatic backups, restore requests typically occur during the day when users are active. Users often perform backups multiple times, but restores may only happen once—or not at all. Therefore, restore requests are much less frequent compared to backups. However, restores are often more important to users than backups, so the restore function needs to be well-managed. | Backup and restore metrics should be managed separately so that restores aren’t overshadowed by backup metrics. | . 10. Managing Policies . Policies are important across all domains. For enterprise-level services, not having policies in place can lead to encountering abusive users with behavior far beyond the norm. For instance, while most users might have around 300 backup items, we’ve seen abusive user trying to store up to 1.5 million items. If policies aren’t established beforehand, it can be difficult to address such cases after the fact, and handling them may require additional work. | Reference: AWS article on types of backups &#8617; . | . ",
     "url": "/docs/career/domain/backup#key-considerations-in-the-backup-domain",
     
     "relUrl": "/docs/career/domain/backup#key-considerations-in-the-backup-domain"
-  },"713": {
+  },"712": {
     "doc": "10 Things to Consider When Developing a Backup System",
     "title": "10 Things to Consider When Developing a Backup System",
     "content": "To build a reliable backup service, it’s crucial to understand the key considerations within the backup domain. While it might seem similar to synchronization in terms of uploading and downloading data from a server, backup services have distinct characteristics. ",
     "url": "/docs/career/domain/backup",
     
     "relUrl": "/docs/career/domain/backup"
-  },"714": {
+  },"713": {
     "doc": "What is HATEOAS? Why and when using HATEOAS, and issues when not in use",
     "title": "non-HATEOAS",
     "content": "1. When the server fills in and returns the data . When retrieving a repository and additional information about a user is needed, the user’s detailed information is added to the repository retrieval API. The client starts by receiving small user information related to the repository. However, over time, the requirements change and data that is not related to the repository query is returned. As these requirements accumulate, the repository retrieval API might evolve into an API that returns multiple pieces of information beyond just repository retrieval. Issues . | The API performs more than its intended function. | The API becomes harder to understand. | The server has to consider various exceptions for multiple domain concepts to support the API. | The server cannot determine which values in the API are being used by the client. | When supporting multiple clients, there may be several APIs that provide similar functions. | . 2. When using APIs with predetermined data for the client . To retrieve a repository and then additional information about a user, the client calls the predetermined API. It might be called as get user api. The process involves calling the predetermined user information retrieval API using the user ID obtained from the repository. The client must hardcode the API endpoint. The client becomes the subject of managing endpoints and relies on endpoints. Issues . | A strong coupling between the client and server emerges due to the endpoint. | The coupling resulting from the client’s endpoint makes server API changes more difficult. | If the server updates the API version, client modifications are required. | There is a need to share and explain the API with the client. | When supporting multiple clients, there is an overhead in explaining the API to each client. | . ",
     "url": "/docs/apis/rest/hateoas#non-hateoas",
     
     "relUrl": "/docs/apis/rest/hateoas#non-hateoas"
-  },"715": {
+  },"714": {
     "doc": "What is HATEOAS? Why and when using HATEOAS, and issues when not in use",
     "title": "HATEOAS",
     "content": "GitHub’s Get Repository Example . { \"id\": 1296269, \"node_id\": \"MDEwOlJlcG9zaXRvcnkxMjk2MjY5\", \"name\": \"Hello-World\", \"full_name\": \"octocat/Hello-World\", \"owner\": { \"login\": \"octocat\", \"id\": 1, \"node_id\": \"MDQ6VXNlcjE=\", \"avatar_url\": \"https://github.com/images/error/octocat_happy.gif\", \"gravatar_id\": \"\", \"url\": \"https://api.github.com/users/octocat\", \"html_url\": \"https://github.com/octocat\", \"followers_url\": \"https://api.github.com/users/octocat/followers\", \"following_url\": \"https://api.github.com/users/octocat/following{/other_user}\", \"gists_url\": \"https://api.github.com/users/octocat/gists{/gist_id}\", \"starred_url\": \"https://api.github.com/users/octocat/starred{/owner}{/repo}\", \"subscriptions_url\": \"https://api.github.com/users/octocat/subscriptions\", \"organizations_url\": \"https://api.github.com/users/octocat/orgs\", \"repos_url\": \"https://api.github.com/users/octocat/repos\", \"events_url\": \"https://api.github.com/users/octocat/events{/privacy}\", \"received_events_url\": \"https://api.github.com/users/octocat/received_events\", \"type\": \"User\", \"site_admin\": false } } . Referring to GitHub’s API, when retrieving a repository, the response includes hypermedia URLs that allow access to the other resource. Even without checking the GitHub API specification, the concise response makes it clear what is included. If each of the owner’s resources is needed, further retrieval can be made via the hypermedia URLs provided in the response. Each API’s provided resources and roles become clearer, and in this way, HATEOAS can serve as self-descriptive API documentation. Between the client and the server, there is only a minimal agreement on which field’s link the client must check to determine the desired state. The client interacts by following the links provided by the server to retrieve the necessary resources. As a result, the coupling between the client and server is minimized, and the server can change the API independently of the client. The downside is that network overhead may occur as the client follows links to check the state. ",
     "url": "/docs/apis/rest/hateoas#hateoas",
     
     "relUrl": "/docs/apis/rest/hateoas#hateoas"
-  },"716": {
+  },"715": {
     "doc": "What is HATEOAS? Why and when using HATEOAS, and issues when not in use",
     "title": "What is HATEOAS? Why and when using HATEOAS, and issues when not in use",
     "content": "HATEOAS is one of the design principles of RESTful web services, which makes RESTful APIs self-descriptive, simplifying and enhancing the scalability of interactions between clients and servers. HATEOAS stands for ‘Hypermedia as the Engine of Application State,’ which is the principle of using hypermedia to dynamically interact between the server and the client. HATEOAS provides hypermedia links related to the resource in the API response, allowing the next actions to be determined dynamically based on the provided hypermedia. To understand why HATEOAS is used, let’s look at the issues that arise when HATEOAS is not used. For comparison, we’ll use the example of implementing GitHub’s repository retrieval API. The key is how the data is delivered when other data is needed in one api. | non-HATEOAS . | When the server fills in and returns the data | When using APIs with predetermined data for the client | . | HATEOAS | . ",
     "url": "/docs/apis/rest/hateoas",
     
     "relUrl": "/docs/apis/rest/hateoas"
-  },"717": {
+  },"716": {
     "doc": "The easiest way to convert epoch time, AI Epoch Time Converter",
     "title": "1. Finding epoch times in beautified json",
     "content": ". { \"id\": \"abc\", \"createdAt\": 1690330000000, \"modifiedAt\": 1700330000000, \"lastAccessedAt\": 1710330000000, \"metadata\" : {} } . ",
     "url": "/docs/tools/site/epoch#1-finding-epoch-times-in-beautified-json",
     
     "relUrl": "/docs/tools/site/epoch#1-finding-epoch-times-in-beautified-json"
-  },"718": {
+  },"717": {
     "doc": "The easiest way to convert epoch time, AI Epoch Time Converter",
     "title": "2. Finding epoch times in multi-line json",
     "content": ". {\"id\": \"abc2\", \"createdAt\": 1690330001000, \"modifiedAt\": 1700330001000, \"lastAccessedAt\": 1710330001000, \"metadata\" : {}} {\"id\": \"abc3\", \"createdAt\": 1690330002000, \"modifiedAt\": 1700330002000, \"lastAccessedAt\": 1710330002000, \"metadata\" : {}} . ",
     "url": "/docs/tools/site/epoch#2-finding-epoch-times-in-multi-line-json",
     
     "relUrl": "/docs/tools/site/epoch#2-finding-epoch-times-in-multi-line-json"
-  },"719": {
+  },"718": {
     "doc": "The easiest way to convert epoch time, AI Epoch Time Converter",
     "title": "3. Finding epoch times in CSV",
     "content": ". a,123,1690330000000,... abced,123456,1710330000000,... b,123456,1720330000000,abcde b,123456,1670330000000,abcde,1680330012000,1690330000000 . ",
     "url": "/docs/tools/site/epoch#3-finding-epoch-times-in-csv",
     
     "relUrl": "/docs/tools/site/epoch#3-finding-epoch-times-in-csv"
-  },"720": {
+  },"719": {
     "doc": "The easiest way to convert epoch time, AI Epoch Time Converter",
     "title": "The easiest way to convert epoch time, AI Epoch Time Converter",
     "content": "An epoch time converter that extracts and converts only the epoch time from a string containing the epoch time into a date and time. If I were to present it more appealingly, I’d call it the AI Epoch Time Converter. When developing, there are many instances where you need to convert epoch time to DateTime. Typically, various websites allow you to input epoch time and output the corresponding DateTime. However, it can be inconvenient to pinpoint and convert just the epoch time from logs or data. It becomes even more cumbersome when you want to review multiple data points and check their values. You can solve this issue through https://meansoup.github.io/epoch/. This site converts and displays all the epoch times contained within a string. ",
     "url": "/docs/tools/site/epoch",
     
     "relUrl": "/docs/tools/site/epoch"
-  },"721": {
+  },"720": {
     "doc": "what is ZGC?",
     "title": "ZGC usage",
     "content": "At its core, ZGC is a concurrent garbage collector, meaning all heavy lifting work is done while Java threads continue to execute. This greatly limits the impact garbage collection will have on your application’s response time. ZGC is a scalable low-latency garbage collector capable of handling heaps ranging from 8MB to 16TB in size, with sub-millisecond max pause times. ZGC’s low latency and ability to scale to handle large live sets would make it a good candidate for web applications. Web applications frequently service many requests simultaneously, often resulting in maintaining larger live sets. Consistent responsiveness also helps with system stability. This pairs well with ZGC’s strengths. On the other hand, while ZGC can operate with heaps as small as 8 MB, it is strongly discouraged to use ZGC in such a scenario. Try them out . Start With the default GC, G1 . | If the Throughput is insufficient . | try enabling Parallel GC | . | If pause times are too long . | try ZGC | . | . ",
     "url": "/docs/java/gc/zgc#zgc-usage",
     
     "relUrl": "/docs/java/gc/zgc#zgc-usage"
-  },"722": {
+  },"721": {
     "doc": "what is ZGC?",
     "title": "ZGC cycle",
     "content": "The ZGC (Z Garbage Collector) performs a few Stop-the-World (STW) pauses, such as Pause Mark Start, Pause Mark End, and Pause Relocate Start. These pauses are brief, typically under a millisecond, and are necessary to ensure consistency and correctness in the garbage collection process. Here’s why these pauses occur. | Pause Name | Purpose | Reason for STW | . | Pause Mark Start | Capture root references | Ensure consistency of the root set before marking starts. | . | Pause Mark End | Finalize marking and process references | Ensure all live objects are identified and prepare for relocation. | . | Pause Relocate Start | Finalize the relocation set and prepare for object movement | Ensure consistency before relocating objects. | . ",
     "url": "/docs/java/gc/zgc#zgc-cycle",
     
     "relUrl": "/docs/java/gc/zgc#zgc-cycle"
-  },"723": {
+  },"722": {
     "doc": "what is ZGC?",
     "title": "Colored Pointers",
     "content": "Colored pointers in ZGC are just normal pointers with extra information embedded in them. This extra information helps ZGC track and manage objects during concurrent garbage collection without stopping the application. It improves the efficiency of garbage collection by allowing ZGC to track live objects, move them, and perform other tasks in the background with minimal impact on performance. | first 16 bits: remain in reserve for future use | last 44 bits: object address (16TB address space) . | 4 bits . | Mark Bits: These bits indicate if an object is marked as live or reachable. ZGC uses two alternating bits (Marked0 and Marked1) to track this. | If the pointer is colored with a “mark bit” ZGC knows this object is in use. | . | Remapped Bit: This bit tells ZGC if the pointer is pointing to an object that has been moved (remapped) during compaction. | If the pointer is colored with a “remapped bit” ZGC knows the object has been moved and will automatically follow the new memory location. | . | Finalizable Bit: This bit indicates if the object is only reachable through a finalizer. Note that finalization was designated as deprecated for removal in JDK 18. | . | . Heap Multi-Mapping . Because ZGC can move the physical location of an object in heap memory while the application is running, multiple paths need to be provided to the current physical location where the object resides. In ZGC, this is accomplished through heap multi-mapping. With multi-mapping, the physical location of an object is mapped to three views in virtual memory, corresponding to each of the pointer’s potential “colors”. This allows a load barrier to locate an object if it has been moved since the last synchronization point. ",
     "url": "/docs/java/gc/zgc#colored-pointers",
     
     "relUrl": "/docs/java/gc/zgc#colored-pointers"
-  },"724": {
+  },"723": {
     "doc": "what is ZGC?",
     "title": "Load Barriers",
     "content": "Why Do We Need a Load Barrier in ZGC? . In ZGC, objects can be moved around in memory during garbage collection (in the compaction phase). If an object is relocated, any reference to it must be updated to point to the new location of the object. Since ZGC performs most of its work concurrently with the application, the load barrier ensures that the program doesn’t accidentally use stale references (outdated memory locations) during this process. How Does It Work? . | When a program loads a reference to an object (say, via a field access or array access), the load barrier intercepts this access. | If the object has been moved during garbage collection (i.e., it’s part of the relocation set), the load barrier ensures that the reference is updated to point to the new location of the object. | This process happens in the background while the application is running, and it ensures that the application always accesses the correct location of the object, even if ZGC has moved it. | . Benefits of Load Barriers in ZGC . | No Application Pause: ZGC can move objects and manage memory without needing to stop the application, thanks to the load barrier. The barrier allows the application to continue running while still being safe and consistent. | Consistency: The load barrier ensures that the program always reads the correct memory location, even when objects are relocated or modified during garbage collection. | Concurrency: ZGC can do concurrent work, like relocating objects, while the application continues to access them as if nothing changed, making garbage collection less intrusive. | . ",
     "url": "/docs/java/gc/zgc#load-barriers",
     
     "relUrl": "/docs/java/gc/zgc#load-barriers"
-  },"725": {
+  },"724": {
     "doc": "what is ZGC?",
     "title": "Regions",
     "content": ". This follows a similar pattern to G1 GC, which also uses memory regions. However, ZGC regions, internally defined as ZPages, are more dynamic, with small, medium, and large sizes; the number of active regions can increase and decrease depending on the needs of the live set. Small Regions . | size: 2MB | Objects less than 1/8th (12.5%) the size of a small region, so less than or equal to 256 KB, are stored in a small region. | . Medium Regions . | size: 32MB (if heap bigger than 1GB) | Objects 1/8th (12.5%) or less in size than the set size of a medium region will be stored there. | . Large Regions . | size: tightly fitted in 2 MB increments to the object’s size. | 13 MB object would be stored in a 14 MB large region. | Any object too large to fit in a medium region will be placed in its own large region. | . ",
     "url": "/docs/java/gc/zgc#regions",
     
     "relUrl": "/docs/java/gc/zgc#regions"
-  },"726": {
+  },"725": {
     "doc": "what is ZGC?",
     "title": "vs G1GC",
     "content": "| Feature | G1GC | ZGC | . | Primary Goal | Low pauses + good throughput | Ultra-low pauses | . | Heap Size | Medium to large (up to ~32 GB+) | Very large (up to 16 TB) | . | Pause Times | Predictable but grow with heap size | Always very low (&lt;10 ms) | . | Compaction | Stop-the-world or incremental | Fully concurrent | . | Throughput | Higher | Slightly lower | . | Concurrent Phases | Partial | Mostly concurrent | . ",
     "url": "/docs/java/gc/zgc#vs-g1gc",
     
     "relUrl": "/docs/java/gc/zgc#vs-g1gc"
-  },"727": {
+  },"726": {
     "doc": "what is ZGC?",
     "title": "reference",
     "content": ". | https://wiki.openjdk.org/display/zgc/Main | https://dev.java/learn/jvm/tool/garbage-collection/zgc-overview/ | https://dev.java/learn/jvm/tool/garbage-collection/zgc-deepdive/ | https://cr.openjdk.org/~pliden/slides/ZGC-PLMeetup-2019.pdf | . ",
     "url": "/docs/java/gc/zgc#reference",
     
     "relUrl": "/docs/java/gc/zgc#reference"
-  },"728": {
+  },"727": {
     "doc": "what is ZGC?",
     "title": "what is ZGC?",
     "content": "Java GC Type . Serial GC Parallel GC CMS GC G1 GC ZGC . The Z Garbage Collector (ZGC) is a scalable low latency garbage collector. ZGC performs all expensive work concurrently, without stopping the execution of application threads for more than a millisecond. It is suitable for applications which require low latency. Pause times are independent of the heap size that is being used. ZGC works well with heap sizes from a few hundred megabytes to 16TB. ZGC was initially introduced as an experimental feature in JDK 11, and was declared Production Ready in JDK 15. In JDK 21 was reimplemented to support generations. ",
     "url": "/docs/java/gc/zgc",
     
     "relUrl": "/docs/java/gc/zgc"
-  },"729": {
+  },"728": {
     "doc": "How to Use Linux grep Like a Terminal Pro",
     "title": "grep Options",
     "content": "Using grep as-is is fine, but there are some options that can make it more useful. Knowing grep and being able to use it efficiently are very different. Creating a File to Test grep options . if __name__ == \"__main__\": with open(\"numbers.txt\", 'w') as fw: for i in range(10000): fw.write(\"numbers: \" + str(i) + \" ...\\n\") . Before learning the options, let’s create a test file for grep. The file will contain numbers from 0 to 9999 for testing. If something is unclear, working with a test file can make it easier to understand. Ignoring Case Sensitivity . grep Num numbers.txt grep -i Num numbers.txt . grep -i ignores case when searching. Limiting the Number of Matches . grep -m 5 1234 numbers.txt . grep -m 1 prints only the first 1 line (max count) that matches. Displaying Line Numbers . grep -n 1234 numbers.txt . grep -n includes the line number where the match is found. Displaying Non-Matching Lines . grep -v 1 numbers.txt . grep -v outputs only the lines that don’t match (vinvert match). Restricting Output to a Specific Range . grep -o 1234 numbers.txt grep -o \".\\{0,3\\}1234.\\{0,3\\}\" numbers.txt . grep -o prints only the matching part of the line (only match). You can use regular expressions with -o to show only the surrounding context of the match. This is especially useful for long lines where you need to extract specific parts. OR Condition . grep -e 1234 -e 5678 numbers.txt . grep -e allows searching using multiple regular expressions, working like an OR condition. Displaying Lines Before and After Matches . grep -A 2 1234 numbers.txt grep -B 2 1234 numbers.txt grep -C 2 1234 numbers.txt . | grep -A 2: Displays 2 lines After the match. | grep -B 2: Displays 2 lines Before the match. | grep -C 2: Displays 2 lines before and after the match. | . Displaying File Names . grep -H 1234 numbers.txt grep -h 1234 numbers* . | grep -H: Includes the file name in the output. | grep -h: Omits the file name from the output. | . By default, the file name is shown when searching multiple files but omitted when searching a single file. Recursive Search . grep -r 1234 . grep -r 1234 . searches recursively in the current directory. Counting Matches . grep -c 1234 numbers.txt . grep -c displays the count of matching lines. ",
     "url": "/docs/dev-tools/linux-commands/grep#grep-options",
     
     "relUrl": "/docs/dev-tools/linux-commands/grep#grep-options"
-  },"730": {
+  },"729": {
     "doc": "How to Use Linux grep Like a Terminal Pro",
     "title": "Advanced grep Usage",
     "content": "Using just grep might make you a beginner in command-line usage. Performance depends on how efficiently you combine grep with other commands. Basic Usage . grep 1234 numbers.txt grep 1234 numbers.txt* . This is the simplest and most commonly used way to use grep. Using with Pipeline . cat numbers.txt | grep 1234 cat numbers.txt | grep 1234 | cut -d ':' -f 2 . You can use grep more efficiently by combining it with other commands via pipelines. Using with tail . tail -f numbers.txt | grep 1234 tail -F numbers.txt | grep 1234 . tail -f and tail -F are used to follow the lines added to a file in real-time. These are commonly used to analyze server logs as they are written. However, it’s nearly impossible to monitor thousands of lines per second. By combining tail and grep, you can analyze only the desired logs in real-time. tail -f Follows the current file. tail -F Follows based on the file name, even if the file is replaced. Logs often roll over to a new file based on time. With -f, if the file name changes due to rolling, no further logs will be shown. -F, on the other hand, continues following logs even after the file name changes. ",
     "url": "/docs/dev-tools/linux-commands/grep#advanced-grep-usage",
     
     "relUrl": "/docs/dev-tools/linux-commands/grep#advanced-grep-usage"
-  },"731": {
+  },"730": {
     "doc": "How to Use Linux grep Like a Terminal Pro",
     "title": "How to Use Linux grep Like a Terminal Pro",
     "content": "grep is one of the most frequently used commands in Linux. For server developers, grep is essential when searching and analyzing logs or data. ",
     "url": "/docs/dev-tools/linux-commands/grep",
     
     "relUrl": "/docs/dev-tools/linux-commands/grep"
-  },"732": {
+  },"731": {
     "doc": "Understanding Different Cassandra Compaction Strategies",
     "title": "Size Tiered (STCS)",
     "content": "The default compaction strategy in Cassandra, best for write-intensive workloads. How It Works . STCS compacts SSTables based on their size and count: . | When a certain number (default: 4) of similar-sized SSTables exist, compaction is triggered. | These SSTables are merged into a single larger SSTable. | If needed, the new larger SSTable is merged into an even bigger SSTable. | . Because of this process, SSTables of various sizes can exist at the same time. Features . | Good for write-heavy workloads. | Default if no better strategy is available. | Merges by size, so data is not grouped, leading to reduced read performance. | Since compaction works based on size, deleted data might not be removed as expected. | Requires extra disk space because both old and new SSTables exist during compaction. | Lower I/O and CPU usage compared to LCS in normal operation. | Works better than LCS on HDD storage. | Can cause CPU spikes during compaction due to large SSTable merges, which led to issues at our company. | . ",
     "url": "/docs/db/cassandra/strategy#size-tiered-stcs",
     
     "relUrl": "/docs/db/cassandra/strategy#size-tiered-stcs"
-  },"733": {
+  },"732": {
     "doc": "Understanding Different Cassandra Compaction Strategies",
     "title": "Leveled (LCS)",
     "content": "Designed to improve the read performance issues of STCS. How It Works . LCS organizes SSTables into levels: . | When Memtable is flushed, data is written to SSTables in Level 0 (L0). | During compaction, L0 SSTables are merged with L1 SSTables. | If necessary, compaction continues into higher levels. | . Unlike L0, SSTables in L1 and higher do not overlap. | This means that read operations only need to check one SSTable per level. | . Features . | Optimized for read-heavy or update/delete-heavy workloads. | Not suitable for pure time-series data. | Not ideal for write-heavy workloads. | Uses about 10% less disk space than STCS. | Requires frequent compaction to remove duplicate and unordered data, leading to higher CPU and I/O usage. | Not recommended for slow storage like HDDs. | . ",
     "url": "/docs/db/cassandra/strategy#leveled-lcs",
     
     "relUrl": "/docs/db/cassandra/strategy#leveled-lcs"
-  },"734": {
+  },"733": {
     "doc": "Understanding Different Cassandra Compaction Strategies",
     "title": "Time Window (TWCS)",
     "content": "Designed for time-series data that uses TTL and remains mostly unchanged. How It Works . TWCS organizes SSTables by time windows: . | Uses predefined time windows. | When Memtable is flushed, data is written to an SSTable. | Multiple SSTables are created during a time window. | Once the time window closes, all SSTables from that window are merged into a single large SSTable using STCS. | The merged SSTable keeps the maximum timestamp. | . Features . | Organizes SSTables by time, allowing for efficient data expiration and deletion. | More efficient disk space reclamation compared to STCS and LCS. | Only one major compaction occurs per time window, making it efficient. | Can suffer performance issues if too much data is written in a single time period. | . ",
     "url": "/docs/db/cassandra/strategy#time-window-twcs",
     
     "relUrl": "/docs/db/cassandra/strategy#time-window-twcs"
-  },"735": {
+  },"734": {
     "doc": "Understanding Different Cassandra Compaction Strategies",
     "title": "Unified (UCS)",
     "content": "Recommended for most workloads, including read-heavy, write-heavy, mixed, and time-series data. | No need for old compaction strategies since UCS can be configured to act like any of them. | It was added in Cassandra 5.0 | . How It Works . UCS performs compaction at the shard level: . | Compaction if there is more than a certain number of SSTables within the shard. | Uses different methods depending on the level: . | Leveled: Works like LCS, moving data from L0 to L1. | Tiered: Works like STCS, stacking SSTables up to a limit before merging. | . | . Features . | Combines the best features of all other CS types. | Optimized for virtually all workloads. | Automatically switches between Tiered (for writes) and Leveled (for reads) depending on workload. | Splits SSTables into shards for independent and parallel compaction. | LCS organizes tokens by levels, while UCS uses shard for efficient parallel compaction. (it looks like grid) | . | Can dynamically switch to another compaction strategy while running. | Requires fine-tuning for optimal performance. | . | See Compaction Strategy for official documentation on different strategies. &#8617; . | . ",
     "url": "/docs/db/cassandra/strategy#unified-ucs",
     
     "relUrl": "/docs/db/cassandra/strategy#unified-ucs"
-  },"736": {
+  },"735": {
     "doc": "Understanding Different Cassandra Compaction Strategies",
     "title": "Understanding Different Cassandra Compaction Strategies",
     "content": "Compaction Strategy (CS)1 A compaction strategy in Cassandra manages the garbage collection (GC) process. There are several strategies to choose from, and selecting the right one for your workload can improve both query and compaction performance. | Size Tiered (STCS) | Leveled (LCS) | Time Window (TWCS) | Unified (UCS) | . ",
     "url": "/docs/db/cassandra/strategy",
     
     "relUrl": "/docs/db/cassandra/strategy"
-  },"737": {
+  },"736": {
     "doc": "About",
     "title": "About",
     "content": "다양한 종류의 데이터 동기화, 백업과 서비스 서버를 개발하고 있습니다. 하루 수 억건에 달하는 트래픽과 이를 처리하는 서버를 설계하고 개발합니다. ",
     "url": "/about/",
     
     "relUrl": "/about/"
-  },"738": {
+  },"737": {
     "doc": "Algorithm",
     "title": "Algorithm",
     "content": " ",
     "url": "/docs/algorithm",
     
     "relUrl": "/docs/algorithm"
-  },"739": {
+  },"738": {
     "doc": "APIs",
     "title": "APIs",
     "content": " ",
     "url": "/docs/apis/",
     
     "relUrl": "/docs/apis/"
-  },"740": {
+  },"739": {
     "doc": "Architecture",
     "title": "Architecture",
     "content": " ",
     "url": "/docs/design/",
     
     "relUrl": "/docs/design/"
-  },"741": {
+  },"740": {
     "doc": "aws",
     "title": "aws",
     "content": "AWS에서 시행하는 training 과정을 수료하면서 정리한 내용. | Developing on AWS | Advanced Developing on AWS | . 그리고 내가 사용하면서 정리한 내용. ",
     "url": "/docs/aws",
     
     "relUrl": "/docs/aws"
-  },"742": {
+  },"741": {
     "doc": "blog",
     "title": "blog",
     "content": " ",
     "url": "/docs/blog",
     
     "relUrl": "/docs/blog"
-  },"743": {
+  },"742": {
     "doc": "career",
     "title": "career",
     "content": " ",
     "url": "/docs/career/",
     
     "relUrl": "/docs/career/"
-  },"744": {
+  },"743": {
     "doc": "Cassandra",
     "title": "Cassandra",
     "content": " ",
     "url": "/docs/db/cassandra",
     
     "relUrl": "/docs/db/cassandra"
-  },"745": {
+  },"744": {
     "doc": "-",
     "title": "-",
     "content": " ",
     "url": "/partition/10",
     
     "relUrl": "/partition/10"
-  },"746": {
+  },"745": {
     "doc": "-",
     "title": "-",
     "content": " ",
     "url": "/partition/20",
     
     "relUrl": "/partition/20"
-  },"747": {
+  },"746": {
     "doc": "-",
     "title": "-",
     "content": " ",
     "url": "/partition/30",
     
     "relUrl": "/partition/30"
-  },"748": {
+  },"747": {
     "doc": "-",
     "title": "-",
     "content": " ",
     "url": "/partition/40",
     
     "relUrl": "/partition/40"
-  },"749": {
+  },"748": {
     "doc": "-",
     "title": "-",
     "content": " ",
     "url": "/partition/50",
     
     "relUrl": "/partition/50"
-  },"750": {
+  },"749": {
     "doc": "-",
     "title": "-",
     "content": " ",
     "url": "/partition/90",
     
     "relUrl": "/partition/90"
-  },"751": {
+  },"750": {
     "doc": "db 개념",
     "title": "db 개념",
     "content": " ",
     "url": "/docs/db/concept",
     
     "relUrl": "/docs/db/concept"
-  },"752": {
+  },"751": {
     "doc": "c++",
     "title": "c++",
     "content": " ",
     "url": "/docs/language/cpp",
     
     "relUrl": "/docs/language/cpp"
-  },"753": {
+  },"752": {
     "doc": "Database",
     "title": "Database",
     "content": " ",
     "url": "/docs/db",
     
     "relUrl": "/docs/db"
-  },"754": {
+  },"753": {
     "doc": "Domain Driven Design",
     "title": "Domain Driven Design",
     "content": "Vaughn Vernon의 IDDD 예제 코드 . | https://github.com/VaughnVernon/IDDD_Samples | . ",
     "url": "/docs/ddd",
     
     "relUrl": "/docs/ddd"
-  },"755": {
+  },"754": {
     "doc": "Tools",
     "title": "Tools",
     "content": " ",
     "url": "/docs/dev-tools/",
     
     "relUrl": "/docs/dev-tools/"
-  },"756": {
+  },"755": {
     "doc": "domain",
     "title": "domain",
     "content": " ",
     "url": "/docs/03.career/domain.html",
     
     "relUrl": "/docs/03.career/domain.html"
-  },"757": {
+  },"756": {
     "doc": "DynamoDB",
     "title": "database option",
     "content": "AWS에는 DynamoDB 외에도 다양한 DB 서비스를 지원하고 있다. RDS: Aurora, PostgreSQL, MySQL, MariaDB, Oracle 등 다양한 관계형 데이터베이스 서비스를 제공한다. RDB를 간편하게 설정하고 크기 조정이 가능하다. DB 관리를 AWS에서 해줘서 서비스에 집중할 수 있다. | ex) 소프트웨어 패치, 데이터베이스 백업 | . Aurora: MySQL, PostgreSQL 호환 RDB로 MySQL보다 최대 5배 빠르며 1/10 수준 비용으로 서비스를 제공함. MySQL, PostgreSQL 보다 더 높은 처리량을 가지며 쉽게 확장/축소할 수 있음. Aurora Serverless 서비스도 있음. Redshift: 완전 관리형 데이터 웨어하우스. (나무위키 웨어하우스 참고. 의사 결정을 위한 데이터 사용) 기존 솔루션 비용의 1/10 미만으로 페타바이트 규모로 확장할 수 있음. 다양한 개방형 형식(csv, json, …) 지원. Neptune: 완전관리형 그래프 데이터베이스. ElastiCache: memCache나 Redis를 관리하는 관리형 상태로 지원하는 서비스. in memory data store, cache를 쉽게 배포/운영할 수 있음. 당연히 메모리를 사용하니까 DB보다 빠른 검색을 지원하고, 성능 향상을 볼 수 있다. Redis나 memcache를 활용하는 것으로 얘네의 장점을 보다 쉽게 적용할 수 있다. ",
     "url": "/docs/aws/dynamo#database-option",
     
     "relUrl": "/docs/aws/dynamo#database-option"
-  },"758": {
+  },"757": {
     "doc": "DynamoDB",
     "title": "DynamoDB 구성",
     "content": "DynamoDB는 테이블, 항목, 속성으로 구성되고 각 항목들은 키 값을 갖는다. | 각각 엑셀의 시트, 행, 열로 생각할 수 있다. | . 스키마가 고정되어 있지 않기 때문에 항목에 속성의 추가가 자유롭다. DynamoDB는 테이블의 항목을 파티션 키에 따라 여러 항목으로 나누고 파티션은 스토리지로 백업되고 리전 내의 복수의 AZ에 자동으로 복제된다. | 파티션 단위로 다른 위치에 저장될 수 있다는 것. | . 데이터에 접근할 때는 파티션 키를 통해 접근하기 때문에 파티션 키는 고유한 값이어야 한다. 정렬 키는 선택적으로 사용되며 동일한 파티션 키를 사용하고 싶다면 정렬 키를 사용하여 파티션 키 + 정렬 키의 값이 고유하도록 구성할 수 있다. | ex) 파티션 키는 sessionId, 정렬 키는 Time으로 동일한 세션에 대해 같은 파티션을 사용하도록 하고 시간에 따라 값을 저장할 수 있다. | . ",
     "url": "/docs/aws/dynamo#dynamodb-%EA%B5%AC%EC%84%B1",
     
     "relUrl": "/docs/aws/dynamo#dynamodb-구성"
-  },"759": {
+  },"758": {
     "doc": "DynamoDB",
     "title": "일관성",
     "content": "DynamoDB는 일관성 수준을 지원한다. 여기서 일관성은 찰나의 시간에 쓰여진 데이터를 받아오는지에 대한 여부이다. 최종적 일관성 - 읽기 작업이 쓰기 작업 이후에 수행되는 경우 약간 오래된 데이터를 반환할 수 있음. 강력한 일관성 - 가장 최신 데이터를 반환. 트랜잭션 - ACID를 요구. 읽고 쓰기가 끝나는 것이 하나의 트랜잭션임을 보장하는 것. (계좌이체) . ",
     "url": "/docs/aws/dynamo#%EC%9D%BC%EA%B4%80%EC%84%B1",
     
     "relUrl": "/docs/aws/dynamo#일관성"
-  },"760": {
+  },"759": {
     "doc": "DynamoDB",
     "title": "처리량",
     "content": "한 번에 들어온 요청에 대해 어느 정도까지 처리할 수 있는지 capacity를 설정할 수 있다. 처리량은 파티션 간에 균등하게 나뉜다. (파티션당 처리량 = capacity / 파티션 수) RCU - 최대 4KB 규모의 객체에 강력한 일관된 읽기를 수행할 수 있는 건수. WCU - 1KB 쓰기를 수행할 수 있는 초당 건수. ",
     "url": "/docs/aws/dynamo#%EC%B2%98%EB%A6%AC%EB%9F%89",
     
     "relUrl": "/docs/aws/dynamo#처리량"
-  },"761": {
+  },"760": {
     "doc": "DynamoDB",
     "title": "글로벌 테이블",
     "content": "하나 이상의 DynamoDB 테이블의 모음으로 단일 AWS 계정이 소유한 복제 테이블이다. 글로벌 테이블에서는 리전당 하나의 복제 테이블만 사용되고 동일한 테이블 이름과 기본 키 스키마를 갖는다. 글로벌 테이블을 사용하면 복제 솔루션을 구축할 필요 없이 완전 관리형 솔루션을 제공한다. DynamoDB에서 해당 리전에 동일한 테이블을 생성하기 위해 모든 작업을 수행하고 진행 중인 데이터 변경을 모두에게 전파한다. 이런 복제에 스트림이 사용된다. 쓰기 일관성에서 동시 업데이트가 발생하는 경우에는 가장 마지막에 설정된 값으로 기록한다. 읽기 일관성에서 최종적 일관성을 지원한다. ",
     "url": "/docs/aws/dynamo#%EA%B8%80%EB%A1%9C%EB%B2%8C-%ED%85%8C%EC%9D%B4%EB%B8%94",
     
     "relUrl": "/docs/aws/dynamo#글로벌-테이블"
-  },"762": {
+  },"761": {
     "doc": "DynamoDB",
     "title": "백업 및 복원",
     "content": "백업, 복원, 특정 시점으로의 복구를 쉽게 할 수 있도록 지원한다. ",
     "url": "/docs/aws/dynamo#%EB%B0%B1%EC%97%85-%EB%B0%8F-%EB%B3%B5%EC%9B%90",
     
     "relUrl": "/docs/aws/dynamo#백업-및-복원"
-  },"763": {
+  },"762": {
     "doc": "DynamoDB",
     "title": "API",
     "content": "제어 작업: DynamoDB 테이블을 생성하고 관리. 데이터 작업: 테이블 데이터에 CRUD 작업을 수행. ",
     "url": "/docs/aws/dynamo#api",
     
     "relUrl": "/docs/aws/dynamo#api"
-  },"764": {
+  },"763": {
     "doc": "DynamoDB",
     "title": "객체 지속성 모델",
     "content": "DynamoDB에 클라이언트 측 객체를 유지할 수 있다. | 테이블에 대한 객체 매핑(클래스 인스턴스)를 지원한다. 객체 지속성 프로그래밍 인터페이스로 이를 지원하는데 이를 통해 CRUD 작업과 쿼리를 실행할 수 있다. | . ",
     "url": "/docs/aws/dynamo#%EA%B0%9D%EC%B2%B4-%EC%A7%80%EC%86%8D%EC%84%B1-%EB%AA%A8%EB%8D%B8",
     
     "relUrl": "/docs/aws/dynamo#객체-지속성-모델"
-  },"765": {
+  },"764": {
     "doc": "DynamoDB",
     "title": "Function",
     "content": "테이블에서 PutItem, GetItem, UpdateItem, DeleteItem으로 항목과 관련한 작업을 수행할 수 있고, Query, Scan 으로 값을 가져올 수 있다. | Query, Scan 작업의 경우 1MB의 데이터라는 기본 페이지 매김 제한으로 반환되는 데이터 양이 제한된다. | Query, Scan 작업의 경우 Limit 파라미터를 통해 반환되는 최대 항목 수를 지정할 수 있다. | . Batch로 데이터를 검색하거나 쓸 때 단일 요청으로 더 높은 처리와 효율적인 시간을 얻어낼 수 있다. 실패시 실패한 테이블과 항목을 재시도한다. BatchGetItem - 여러 테이블에서 최대 100개의 항목으로 이루어진 데이터를 최대 16MB까지 읽음. BatchWriteItem - 여러 테이블에서 최대 25번의 put 또는 delete 요청을 통해 최대 16MB까지 씀. DynamoDB javaSDK method Docs, DynamoDB API reference 참고. ",
     "url": "/docs/aws/dynamo#function",
     
     "relUrl": "/docs/aws/dynamo#function"
-  },"766": {
+  },"765": {
     "doc": "DynamoDB",
     "title": "그외 참고 사항",
     "content": "예약어 자리 표시자 - 표현식에서 속성 이름을 위한 자리 표시자. (AWS Docs 참고) . 리터럴 값 자리 표시자 - 표현식에서 속성 값을 위한 자리 표시자. (AWS Docs 참고) 조건부 쓰기 수행 - ConditionExpression을 만족하면 쓰기를 수행. (AWS Docs 참고) 처리량 예외 처리 - 처리량이 초과하면 provisionedThroughputExceededException으로 알림을 전송하도록 CloudWatch 경보 설정. (AWS Docs 참고) . ",
     "url": "/docs/aws/dynamo#%EA%B7%B8%EC%99%B8-%EC%B0%B8%EA%B3%A0-%EC%82%AC%ED%95%AD",
     
     "relUrl": "/docs/aws/dynamo#그외-참고-사항"
-  },"767": {
+  },"766": {
     "doc": "DynamoDB",
     "title": "효율성 확보",
     "content": "데이터를 고려하여 파티션 키가 분산될 수 있도록 구현한다. | 파티션 키에 따라 파티션이 나뉘며 경우에 따라 어떤 파티션엔 데이터가 적고 어떤 파티션엔 극도로 많아 작업 처리가 느려질 수 있다. 균일하게 파티션을 분배하여 처리를 분산시키는 것이 처리량을 극대화. | . 핫 데이터(자주 사용)와 콜드 데이터(자주 사용하지 않음)을 분리한다. | 자주 사용되는 데이터는 처리량이 더 높은 테이블에 별도로 저장한다거나 오래된 데이터를 다른 스토리지로 이동하는 등의 방식. | . 다수의 속성을 갖는 테이블 대신 일대다 테이블을 사용한다. | 최소한의 정보가 필요한 경우에도 쓸데없이 대량의 데이터를 가져오게 되는 문제를 해결. | 항목 크기가 DynamoDB의 최대 항목 크기를 초과하는 문제를 막을 수 있음. | . 자주 액세스하는 속성을 별도 테이블에 저장한다. | 큰 항목에 자주 액세스 하지만 큰 속성을 다 사용하지 않는다면 자주 사용되는 별도의 테이블을 분리하여 처리량을 개선. | . 로컬 보조 인덱스를 가능한 작게 유지한다. | 로컬 보조 인덱스는 스토리지와 테이블의 처리량을 사용하기 때문에 자주 쿼리하는 속성에 대해서만 생성하도록 함. | 전체 테이블을 포함하지 않는 스파스 인덱스를 사용하여 효율성을 높임. | . 메모리 가속인 DAX(DynamoDB Accelerator)를 추가한다. (app - (DAX) - DynamoDB 구조) . | 캐싱서비스로 밀리초 단위의 응답속도를 마이크로초 단위까지 줄일 수 있음. | DynamoDB와 호환되어 변경사항이 크지 않음. | read가 많은 경우 처리량을 줄여 비용을 절감시킴. | . ",
     "url": "/docs/aws/dynamo#%ED%9A%A8%EC%9C%A8%EC%84%B1-%ED%99%95%EB%B3%B4",
     
     "relUrl": "/docs/aws/dynamo#효율성-확보"
-  },"768": {
+  },"767": {
     "doc": "DynamoDB",
     "title": "DynamoDB",
     "content": "DynamoDB는 완전 관리형 NoSQL DB 서비스으로 NoSQL의 특징을 갖는다. 리전 기반 서비스로 AZ에 문제가 생기더라도 다른쪽에서 정상적으로 동작한다. 완전 관리형 서비스로 사용자가 관리할 것이 거의 없다. | EC2에 os/db 설치 이후 db 서버로 쓸 수도 있지만 이런 서비스를 이용하면 초기세팅/소프트웨어 패치/운영 등을 신경쓰지 않아도 되서 더 편리함. | . 데이터 볼륨이 증가하고 애플리케이션 성능 요구가 증가하면 DynamoDB는 자동 분할로 처리량을 충족하고 규모에 관계없이 낮은 지연 시간(보통 10밀리초 미만)을 유지한다. IAM의 계정 권한 관리로 세분화된 접근 제어가 가능하다. 문서의 저장, 쿼리 및 업데이트를 지원하여 Json 문서를 테이블에 바로 저장할 수 있고 관련한 작업을 효율적으로 진행할 수 있다. ",
     "url": "/docs/aws/dynamo",
     
     "relUrl": "/docs/aws/dynamo"
-  },"769": {
+  },"768": {
     "doc": "envoy proxy",
     "title": "envoy proxy",
     "content": " ",
     "url": "/docs/apis/envoy",
     
     "relUrl": "/docs/apis/envoy"
-  },"770": {
+  },"769": {
     "doc": "error & bug",
     "title": "error & bug",
     "content": " ",
     "url": "/docs/error-bug",
     
     "relUrl": "/docs/error-bug"
-  },"771": {
+  },"770": {
     "doc": "Etc",
     "title": "Etc",
     "content": " ",
     "url": "/docs/etc",
     
     "relUrl": "/docs/etc"
-  },"772": {
+  },"771": {
     "doc": "flutter",
     "title": "flutter",
     "content": " ",
     "url": "/docs/flutter",
     
     "relUrl": "/docs/flutter"
-  },"773": {
+  },"772": {
     "doc": "Garbage Collection",
     "title": "Garbage Collection",
     "content": " ",
     "url": "/docs/java/gc",
     
     "relUrl": "/docs/java/gc"
-  },"774": {
+  },"773": {
     "doc": "GraphQL",
     "title": "GraphQL",
     "content": " ",
     "url": "/docs/apis/graphql",
     
     "relUrl": "/docs/apis/graphql"
-  },"775": {
+  },"774": {
     "doc": "http",
     "title": "http",
     "content": " ",
     "url": "/docs/internet/http",
     
     "relUrl": "/docs/internet/http"
-  },"776": {
+  },"775": {
     "doc": "Intellij",
     "title": "Intellij",
     "content": " ",
     "url": "/docs/dev-tools/intellij",
     
     "relUrl": "/docs/dev-tools/intellij"
-  },"777": {
+  },"776": {
     "doc": "internet",
     "title": "internet",
     "content": " ",
     "url": "/docs/internet",
     
     "relUrl": "/docs/internet"
-  },"778": {
+  },"777": {
     "doc": "이슈",
     "title": "이슈",
     "content": " ",
     "url": "/docs/java/issue",
     
     "relUrl": "/docs/java/issue"
-  },"779": {
+  },"778": {
     "doc": "Java",
     "title": "Java",
     "content": " ",
     "url": "/docs/java",
     
     "relUrl": "/docs/java"
-  },"780": {
+  },"779": {
     "doc": "Spring JPA",
     "title": "Spring JPA",
     "content": " ",
     "url": "/docs/spring/jpa",
     
     "relUrl": "/docs/spring/jpa"
-  },"781": {
+  },"780": {
     "doc": "kafka",
     "title": "kafka",
     "content": " ",
     "url": "/docs/message-broker/kafka",
     
     "relUrl": "/docs/message-broker/kafka"
-  },"782": {
+  },"781": {
     "doc": "kivy",
     "title": "kivy",
     "content": "kivy - interactive applications and games in python second edition . kivy로 간단한 게임을 만들어가는 과정과 이에 대한 설명을 하는 책이다. practice code에서 예제코드를 받을 수 있다. 책과 별개로 공부한 내용과, 책의 내용들을 챕터별로 정리한 것. ",
     "url": "/docs/kivy",
     
     "relUrl": "/docs/kivy"
-  },"783": {
+  },"782": {
     "doc": "kotlin in action 정리하기",
     "title": "kotlin in action 정리하기",
     "content": " ",
     "url": "/docs/kotlin/kotlin-in-action",
     
     "relUrl": "/docs/kotlin/kotlin-in-action"
-  },"784": {
+  },"783": {
     "doc": "Kotlin",
     "title": "Kotlin",
     "content": " ",
     "url": "/docs/kotlin",
     
     "relUrl": "/docs/kotlin"
-  },"785": {
+  },"784": {
     "doc": "language",
     "title": "language",
     "content": " ",
     "url": "/docs/language",
     
     "relUrl": "/docs/language"
-  },"786": {
+  },"785": {
     "doc": "Java 라이브러리",
     "title": "Java 라이브러리",
     "content": " ",
     "url": "/docs/java/library",
     
     "relUrl": "/docs/java/library"
-  },"787": {
+  },"786": {
     "doc": "linux",
     "title": "linux",
     "content": " ",
     "url": "/docs/dev-tools/linux",
     
     "relUrl": "/docs/dev-tools/linux"
-  },"788": {
+  },"787": {
     "doc": "Message Broker",
     "title": "Message Broker",
     "content": " ",
     "url": "/docs/message-broker",
     
     "relUrl": "/docs/message-broker"
-  },"789": {
+  },"788": {
     "doc": "OAuth",
     "title": "OAuth",
     "content": " ",
     "url": "/docs/apis/oauth",
     
     "relUrl": "/docs/apis/oauth"
-  },"790": {
+  },"789": {
     "doc": "oci",
     "title": "oci",
     "content": " ",
     "url": "/docs/oci",
     
     "relUrl": "/docs/oci"
-  },"791": {
+  },"790": {
     "doc": "python",
     "title": "python",
     "content": " ",
     "url": "/docs/49.language/python.html",
     
     "relUrl": "/docs/49.language/python.html"
-  },"792": {
+  },"791": {
     "doc": "Refactoring",
     "title": "Refactoring",
     "content": " ",
     "url": "/docs/refactoring/",
     
     "relUrl": "/docs/refactoring/"
-  },"793": {
+  },"792": {
     "doc": "retrospect",
     "title": "retrospect",
     "content": " ",
     "url": "/docs/retrospect/",
     
     "relUrl": "/docs/retrospect/"
-  },"794": {
+  },"793": {
     "doc": "S3",
     "title": "storage option",
     "content": "AWS에서는 용도에 따라 S3 외에도 다양한 storage 서비스를 제공한다. (storage class 참고) . Glacier: 데이터를 저장하는데 저렴하며 내구성이 우수한 아카이브 스토리지. 저장하는 비용이 저렴하다는 장점이 있고, 데이터를 가져오는데 비용이 많이 들고 데이터를 받아오는데 시간이 오래걸린다는 단점이 있다. 주로 중요하지만 잘 사용하지 않는 데이터를 저장한다. EFS: 전통적인 파일 스토리지. 공유 개념을 지원한다. EBS: 블록 기반의 스토리지. EC2 인스턴스에 외장하드를 네트워크로 붙이는 식으로 사용. Storage Gateway: S3, Glacier, EBS 등의 스토리지 인프라 사이에 원활하고 안전한 통합이 이루어지도록 지원한다. | ex) S3 주 데이터를 저장하고 Glacier에 보관하도록 사용. | . ",
     "url": "/docs/aws/s3#storage-option",
     
     "relUrl": "/docs/aws/s3#storage-option"
-  },"795": {
+  },"794": {
     "doc": "S3",
     "title": "구성요소",
     "content": "S3는 버킷과 객체로 이루어져 있다. 버킷: 버킷은 말 그대로 객체를 담는 바구니다. 전세계적으로 고유한 이름을 가져야 한다. | 3~63자의 사이즈와 a-z, 0-9, ‘-‘만을 사용한다. | . 객체: 버킷에 저장되는 파일로 어떤 종류의 파일도 객체가 될 수 있다. 객체는 고유한 키와 메타데이터를 갖는다. 키를 통해 객체를 업로드/검색한다. 개층구조(폴더의 개념)가 존재하지 않는데, 키에 prefix(/)를 통해 폴더 개념을 지원할 수 있다. | prog/java/collections.jtml을 통해 prog/java의 폴더 개념을 갖도록 객체를 구분. | 실제로는 계층구조가 없지만 사용자가 있는 것처럼 활용. 메타데이터는 시스템 메타데이터와 유저 메타데이터가 있으며 시스템 메타데이터는 생성 날짜, 크기 등의 정보를 포함한다. 객체의 key, metadata 참고. | . ",
     "url": "/docs/aws/s3#%EA%B5%AC%EC%84%B1%EC%9A%94%EC%86%8C",
     
     "relUrl": "/docs/aws/s3#구성요소"
-  },"796": {
+  },"795": {
     "doc": "S3",
     "title": "versioning",
     "content": "S3는 동일한 이름의 파일을 넣으면 덮어쓰게 된다. 이런 문제를 해결하기 위해 versioning을 지원한다. | 각 버킷 &gt; property &gt; versioning 을 하면 version에 따른 동일한 이름의 파일을 저장하도록할 수 있음. | . version id는 객체의 metadata에 존재한다. 기본적으로 S3는 versioning을 비활성화되어 있는데 versioning을 한 번 켜면 끌 수 없으므로 데이터 관리 측면에서 코드상에서 충분히 고려가 되야한다. | 버전 별 데이터가 계속해서 쌓일 수 있음. | . ",
     "url": "/docs/aws/s3#versioning",
     
     "relUrl": "/docs/aws/s3#versioning"
-  },"797": {
+  },"796": {
     "doc": "S3",
     "title": "URL",
     "content": "기본 경로 . | http://s3.[리전 엔드포인트].amazonaws.com/[버킷 이름]/[객체 파일 명] | . 가상 호스팅 . | http://[버킷 이름]s3.amazonaws.com/[객체 파일 명] | . aws의 주소가 들어가서 실 사용자에게 aws 서비스로 오해받을 수도 있을 것이고 이를 해결하기 위한 가상 호스팅도 존재한다. (AWS Virtual Hosting 참고) . ",
     "url": "/docs/aws/s3#url",
     
     "relUrl": "/docs/aws/s3#url"
-  },"798": {
+  },"797": {
     "doc": "S3",
     "title": "객체 작업",
     "content": "Put: 단일 업로드 &lt;= 5GB, 멀티 파트 업로드 &lt;= 5TB 지원. 인터넷은 비교적 신뢰성이 떨어지기 때문에 100 MB를 넘는 경우 멀티 파트 업로드를 권장한다. 멀티 파트 업로드는 각 파트가 개별적으로 업로드 되고 업로드에 실패하면 실패한 파트만 재전송할 수 있다. Get: 완전한 객체 가져오는 것과 필요하다면 바이트 범위를 지정하여 객체의 일부를 가져올 수 있다. Select: S3에서 파일에 대한 format(csv, json)을 지정하여 원하는 값만을 가져올 수 있다. 큰 파일의 일부만 필요한 경우 파일 전체를 받는 낭비를 줄일 수 있다. 성능과 비용에서 효과를 볼 수 있다. (AWS select 참고) . delete: 단일 객체나 여러 객체를 삭제하는데 사용한다. versioning이 활성화 된 경우는 versionId도 같이 명시하여 삭제한다. versioning이 활성화 된 경우에 key만 지정하면 현재 버전의 객체에 delete marker가 추가되고, 삭제 마커가 있는 객체를 검색하려고 하면 404 error가 발생한다. ",
     "url": "/docs/aws/s3#%EA%B0%9D%EC%B2%B4-%EC%9E%91%EC%97%85",
     
     "relUrl": "/docs/aws/s3#객체-작업"
-  },"799": {
+  },"798": {
     "doc": "S3",
     "title": "미리 서명된 URL",
     "content": "기본적으로 객체와 버킷은 모두 private. AWS 보안 자격 증명이나 권한 없이 객체를 업로드 하기를 원하는 경우 미리 서명된 URL을 사용할 수 있다. 다른 작업 수행을 위한 권한을 열지 않고 PUT/GET 에 대한 액세스를 제공. 생성할 때 자격 증명 등의 데이터를 받고, URL을 생성하는 사용자의 권한을 사용하여 액세스함. 지정된 기간 동안만 유효함. (최대 1주) . ",
     "url": "/docs/aws/s3#%EB%AF%B8%EB%A6%AC-%EC%84%9C%EB%AA%85%EB%90%9C-url",
     
     "relUrl": "/docs/aws/s3#미리-서명된-url"
-  },"800": {
+  },"799": {
     "doc": "S3",
     "title": "암호화",
     "content": "전송 데이터 암호화를 할 수 있다. 서버에 저장하는 데이터를 암호화 할 수 있다. | S3가 관리하는 키. | KMS(key 관리 서비스)가 관리하는 키. | 사용자가 설정한 키. | . ",
     "url": "/docs/aws/s3#%EC%95%94%ED%98%B8%ED%99%94",
     
     "relUrl": "/docs/aws/s3#암호화"
-  },"801": {
+  },"800": {
     "doc": "S3",
     "title": "ACL(Access Control List)",
     "content": "S3 ACL에서 객체나 버킷 수준에서 접근 가능한 권한 부여할 수 있다. 버킷의 ACL을 바꾸거나 설정하더라도 그 내부의 객체는 이와 별개이다. ",
     "url": "/docs/aws/s3#aclaccess-control-list",
     
     "relUrl": "/docs/aws/s3#aclaccess-control-list"
-  },"802": {
+  },"801": {
     "doc": "S3",
     "title": "CORS (Cross Origin Resource Sharing)",
     "content": "제한된 리소스를 최초 자원이 서비스된 도메인 밖의 다른 도메인으로부터 요청할 수 있게 허용하는 구조이다. S3에서는 CORS를 지원하며 활성화하여 사용할 수 있다. (AWS CORS 시나리오 및 구성 방법 참고) . ",
     "url": "/docs/aws/s3#cors-cross-origin-resource-sharing",
     
     "relUrl": "/docs/aws/s3#cors-cross-origin-resource-sharing"
-  },"803": {
+  },"802": {
     "doc": "S3",
     "title": "성능 개선 방향",
     "content": "애플리케이션 설계에서 가능한 경우 버킷과 키 이름을 캐시. 가장 가까운 버킷 리전을 선택. S3에 저자된 데이터를 압축하여 전송되는 데이터와 사용되는 스토리지 크기를 줄이는 방향. AWS CloudFront와 같은 CDN(콘텐츠 전송 네트워크)를 통해 효율적으로 콘텐츠 배포. ",
     "url": "/docs/aws/s3#%EC%84%B1%EB%8A%A5-%EA%B0%9C%EC%84%A0-%EB%B0%A9%ED%96%A5",
     
     "relUrl": "/docs/aws/s3#성능-개선-방향"
-  },"804": {
+  },"803": {
     "doc": "S3",
     "title": "무결성 체크",
     "content": "GET/PUT으로 검색한 객체의 MD5 체크섬을 확인하여 전송 중 데이터 손상을 확인한다. | AWS SDK는 PUT 작업시 MD5 체크섬을 자동으로 지정. S3는 MD5 체크섬을 다시 계산하고 이를 지정된 값과 비교. | . ",
     "url": "/docs/aws/s3#%EB%AC%B4%EA%B2%B0%EC%84%B1-%EC%B2%B4%ED%81%AC",
     
     "relUrl": "/docs/aws/s3#무결성-체크"
-  },"805": {
+  },"804": {
     "doc": "S3",
     "title": "오류 코드",
     "content": "S3 응답에 대해 오류 코드가 나온 경우 처리를 해주어야 한다. 400 error - 해당 작업을 수행할 수 없음. 500 error - 해당 작업을 재시도할 수 있음. ",
     "url": "/docs/aws/s3#%EC%98%A4%EB%A5%98-%EC%BD%94%EB%93%9C",
     
     "relUrl": "/docs/aws/s3#오류-코드"
-  },"806": {
+  },"805": {
     "doc": "S3",
     "title": "S3",
     "content": "AWS에서 대표적으로 사용되는 스토리지 서비스로 완전 관리형 서비스이다. 원하는 양의 데이터를 저장할 수 있고 웹기반으로 어디서든 접근할 수 있는 스토리지. 매우 안전하고 안정적이며 확장 가능한 객체 스토리지. (eleven-nine) . 콘텐츠 저장 및 배포, 백업 및 아카이빙, 빅 데이터 분석, 재해 복구, 정적 웹 사이트 호스팅에서 사용될 수 있다. | 리전 기반이어서 정적 호스팅에선 EC2보다 더 안정적으로 지원 가능하다. | . EC2는 AZ 기반이지만 S3는 리전 기반이어서 AZ가 문제가 생겨도 더 안전하게 지원할 수 있다. 또한 CRR(교차 리전 복제)으로 모든 S3 객체를 다른 AWS 리전에 위치한 대산 버킷으로 자동 복제하여 안전성을 보장한다. S3는 객체 스토리지 구조를 갖는다. 전통적인 파일시스템: dir &gt; dir &gt; dir &gt; files 방식의 search. 파일이 많아지고 길어질수록 검색 속도가 늦어짐. 객체 스토리지: dir 구조를 갖지 않고 파일을 찾아감. 파일이 많아져도 균일한 속도를 유지함. ",
     "url": "/docs/aws/s3",
     
     "relUrl": "/docs/aws/s3"
-  },"807": {
+  },"806": {
     "doc": "Service",
     "title": "Service",
     "content": " ",
     "url": "/docs/service",
     
     "relUrl": "/docs/service"
-  },"808": {
+  },"807": {
     "doc": "website",
     "title": "website",
     "content": " ",
     "url": "/docs/dev-tools/site",
     
     "relUrl": "/docs/dev-tools/site"
-  },"809": {
+  },"808": {
     "doc": "슬랙",
     "title": "슬랙",
     "content": " ",
     "url": "/docs/dev-tools/slack",
     
     "relUrl": "/docs/dev-tools/slack"
-  },"810": {
+  },"809": {
     "doc": "Spring",
     "title": "Spring",
     "content": " ",
     "url": "/docs/spring",
     
     "relUrl": "/docs/spring"
-  },"811": {
+  },"810": {
     "doc": "전략적 설계",
     "title": "전략적 설계",
     "content": " ",
     "url": "/docs/ddd/strategic",
     
     "relUrl": "/docs/ddd/strategic"
-  },"812": {
+  },"811": {
     "doc": "전술적 설계",
     "title": "전술적 설계",
     "content": " ",
     "url": "/docs/ddd/tactical",
     
     "relUrl": "/docs/ddd/tactical"
-  },"813": {
+  },"812": {
     "doc": "TDD",
     "title": "TDD",
     "content": " ",
     "url": "/docs/extreme-programming/tdd",
     
     "relUrl": "/docs/extreme-programming/tdd"
-  },"814": {
+  },"813": {
     "doc": "linux commands",
     "title": "linux commands",
     "content": "linux 개발에 유용한 terminal 리스트 . ",
     "url": "/docs/dev-tools/linux-commands",
     
     "relUrl": "/docs/dev-tools/linux-commands"
-  },"815": {
+  },"814": {
     "doc": "Test",
     "title": "Test",
     "content": " ",
     "url": "/docs/test",
     
     "relUrl": "/docs/test"
-  },"816": {
+  },"815": {
     "doc": "주제회고",
     "title": "주제회고",
     "content": " ",
     "url": "/docs/02.retrospect/theme.html",
     
     "relUrl": "/docs/02.retrospect/theme.html"
-  },"817": {
+  },"816": {
     "doc": "Java Tips",
     "title": "Java Tips",
     "content": " ",
     "url": "/docs/java/tip",
     
     "relUrl": "/docs/java/tip"
-  },"818": {
+  },"817": {
     "doc": "vue",
     "title": "vue",
     "content": " ",
